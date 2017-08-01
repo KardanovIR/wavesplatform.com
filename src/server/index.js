@@ -11,24 +11,21 @@ import router from './routes';
 
 
 try {
-	// define
-	const app = new Koa,
-		pug = new Pug({
-			viewPath: './src/server/views',
-			basedir: './src/server/views',
-			app: app
-		});
+    const app = new Koa();
+
+    // @todo is it necessary?
+    new Pug({
+        viewPath: './src/server/views',
+        basedir: './src/server/views',
+        app: app
+    });
 
 
-	app
-		.use(serve('./dist'))
-		.use(router.routes());
-
-		
-	// to init socket.io
-	const server = require('http').Server(app.callback());
-
-	server.listen(3001)
+    app
+        .use(serve('./dist'))
+        .use(router.routes())
+        .listen(3000);
+        
 } catch (err) {
-	console.error(err)
+    console.error(err)
 }

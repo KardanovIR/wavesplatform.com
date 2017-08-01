@@ -1,15 +1,14 @@
 import React from 'react';
-import styles from './styles';
+// import styles from './styles';
 
 
-const Input = ({ children, ...rest }) => (
-    <div className={styles.group}>      
-      <input required className={styles.input} type="text" {...rest} />
-      <span className={styles.highlight} />
-      <span className={styles.bar} />
-      <label className={styles.label}>{ children }</label>
-    </div>
+const Nav = ({ links }) => (
+    <ul>
+        { links.map((link, index) => (
+            <li key={`nav_link_${index}`}><a href={link.href}>{ link.text }</a></li>)
+        ) }
+    </ul>
 )
 
 
-export default Input;
+export default Nav;

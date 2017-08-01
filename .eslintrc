@@ -23,14 +23,11 @@
             "error",
             "unix"
         ],
-        "quotes": [
-            "error",
-            "single"
-        ],
+        "quotes": "off",
         "indent": [
             "error",
-            "tab",
-            { "SwitchCase": 1 }
+            4
+            // { "SwitchCase": 1 }
         ],
         "react/prop-types": [
             "off",
