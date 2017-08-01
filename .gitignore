@@ -1,0 +1,10 @@
+.idea/
+.vscode/
+node_modules/
+.DS_Store/
+dist/
+bld/
+
+npm-debug.log
+yarn-error.log
+prepros.cfg

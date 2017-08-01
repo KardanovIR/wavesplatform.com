@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["es2015", {"modules": false}],
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    "babel-plugin-transform-react-stateless-component-name"
+  ]
+}

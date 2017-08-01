@@ -1,0 +1,74 @@
+@import '~src/public/Palette/index';
+
+
+/* form starting stylings ------------------------------- */
+.group,
+.input,
+.bar {
+    box-sizing: border-box;
+}
+
+
+.group { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.input {
+  font-size: 18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width: 100%;
+  border:none;
+  border-bottom:1px solid $light-grey;
+  border-radius: 0;
+}
+.input:focus {
+    outline:none;
+    border:none;
+}
+
+/* LABEL ======================================= */
+.label 				 {
+  color: $light-grey; 
+  font-size:18px;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.input:focus ~ .label, .input:valid ~ .label 		{
+  top:-20px;
+  font-size:14px;
+  color:$yellow;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+    position:relative;
+    display:block;
+}
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:$yellow; 
+  transition:0.2s ease all; 
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+  width:50%;
+}

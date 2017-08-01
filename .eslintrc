@@ -1,0 +1,65 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "indent": [
+            "error",
+            "tab",
+            { "SwitchCase": 1 }
+        ],
+        "react/prop-types": [
+            "off",
+            {
+                "skipUndeclared": true
+            }
+        ],
+        "react/jsx-no-bind": [
+            "warn",
+            {
+                "ignoreRefs": true,
+                "allowArrowFunctions": false,
+                "allowBind": false
+            }
+        ],
+        "react/jsx-space-before-closing": [
+            "warn",
+            "always"
+        ],
+        "react/jsx-key": "error",
+        "react/no-did-update-set-state": "error",
+        "react/self-closing-comp": "warn",
+        "react/no-string-refs": "error",
+        "react/prefer-stateless-function": "error",
+        "react/jsx-wrap-multilines": "warn",
+        "no-constant-condition": ["error", { "checkLoops": false }]
+    },
+    "globals": {
+        "__dirname": false,
+        "__filename": false
+    }
+}
