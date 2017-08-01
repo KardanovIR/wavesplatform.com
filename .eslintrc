@@ -57,6 +57,8 @@
     },
     "globals": {
         "__dirname": false,
-        "__filename": false
+        "__filename": false,
+        "process": false,
+        "NODE_ENV": false
     }
 }

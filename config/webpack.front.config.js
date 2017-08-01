@@ -2,8 +2,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
 
 
 const includedDirectories = [
@@ -12,13 +12,14 @@ const includedDirectories = [
 ];
 
 
+
 module.exports = {
-    entry: {
+    entry: patchEntriesHotReload({
         main: 'src/public/entries/main',
-        company: 'src/public/entries/company',
+        // company: 'src/public/entries/company',
         developers: 'src/public/entries/developers',
-        product: 'src/public/entries/product',
-    },
+        // product: 'src/public/entries/product',
+    }),
 
     target: 'web',
 
@@ -32,43 +33,39 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/,
-                loader: 'babel-loader',
+                use: [
+                    'react-hot-loader/webpack',
+                    'babel-loader',
+                ],
                 include: includedDirectories
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: {
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                            localIdentName: '[folder]__[local]__[hash:base64:5]'
+                        }
+                    }
+                ],
+                include: includedDirectories
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    {
                         loader: "css-loader",
                         options: {
                             modules: true,
                             localIdentName: '[folder]__[local]__[hash:base64:5]'
                         }
                     },
-                    publicPath: "/dist"
-                }),
-                include: includedDirectories
-            },
-            {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [
-                        {
-                            loader: "css-loader",
-                            options: {
-                                modules: true,
-                                localIdentName: '[folder]__[local]__[hash:base64:5]',
-                                importLoaders: 1
-                            }
-                        },
-                        {
-                            loader: "sass-loader"
-                        }
-                    ],
-                    publicPath: "/dist"
-                }),
+                    'sass-loader'
+                ],
                 include: includedDirectories
             },
             {
@@ -86,19 +83,34 @@ module.exports = {
         ]
     },
 
+    devServer: {
+        host: '0.0.0.0',
+        port: 3000,
+        publicPath: '/',
+        hot: true,
+        historyApiFallback: true,
+        contentBase: './public',
+        proxy: {
+            '*': 'http://0.0.0.0:3001'
+        }
+    },
+
     resolve: {
         modules: [
             path.join(__dirname, '../'),
             'node_modules'
         ],
-        extensions: ['.jsx', '.js', '.tsx', '.ts', '.css', '.scss', '.less', '.json']
+        extensions: ['.jsx', '.js', '.css', '.scss', '.json']
     },
 
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.NODE_ENV': '"development"'
+            'process.env.NODE_ENV': '"development"',
+            'NODE_ENV': '"development"'
         }),
-        new ExtractTextPlugin('styles.css')
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NamedModulesPlugin(),
+        // new ExtractTextPlugin('styles.css')
     ],
 
     devtool: '#inline-source-map'

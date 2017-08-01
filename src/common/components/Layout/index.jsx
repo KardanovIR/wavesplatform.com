@@ -10,6 +10,8 @@ import links from './links';
 const Layout = ({ children }) => (
     <div>
         <Navigation links={links} />
+        <br/>
+        <br/>
         <div>{ children }</div>
         <br/>
         <br/>

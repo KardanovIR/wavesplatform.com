@@ -5,7 +5,6 @@
     "react"
   ],
   "plugins": [
-    "react-hot-loader/babel",
     "babel-plugin-transform-react-stateless-component-name"
   ]
 }

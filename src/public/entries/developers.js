@@ -2,11 +2,14 @@ import React from 'react';
 
 import { run } from '../run';
 
-import Layout from '../../common/components/Layout';
+
+import Developers from '../../common/containers/Developers';
 
 
-run(
-    <Layout>
-        <div>Developers</div>
-    </Layout>
-)
+run(<Developers />);
+
+
+
+if (process.env.NODE_ENV === 'development') {
+    if (module.hot) module.hot.accept('../../common/containers/Developers', () => run(<Developers />))
+}

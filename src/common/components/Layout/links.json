@@ -4,15 +4,7 @@
 		"text": "Main"
 	},
 	{
-		"href": "/product",
-		"text": "Product"
-	},
-	{
 		"href": "/developers",
 		"text": "Developers"
-	},
-	{
-		"href": "/get-client",
-		"text": "Get client"
 	}
 ]

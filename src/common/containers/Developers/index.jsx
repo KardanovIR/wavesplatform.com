@@ -6,7 +6,7 @@ import Layout from '../../components/Layout';
 const Page = () => (
     <Layout>
         <div>
-            Главная страница
+            Разработчикам
         </div>
     </Layout>
 )
