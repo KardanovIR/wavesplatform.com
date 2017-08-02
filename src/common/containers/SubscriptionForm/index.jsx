@@ -78,7 +78,7 @@ class SubscriptionFormContainer extends Component {
         }
     }
 
-    handleAnotherEmailClick = () => {
+    handleStartOver = () => {
         this.setState({ status: 'idle' })
     }
 
@@ -89,7 +89,6 @@ class SubscriptionFormContainer extends Component {
     render() {
         const {
             initialValue,
-            onValidationStart,
             errors,
             showErrors
         } = this.props;
@@ -99,7 +98,7 @@ class SubscriptionFormContainer extends Component {
                 onSubmit={this.handleSubmit}
                 onBlur={this.handleBlur}
                 onEmailChange={this.handleEmailChange}
-                onAnotherEmailClick={this.handleAnotherEmailClick}
+                onStartOver={this.handleStartOver}
                 status={this.state.status}
                 initialEmail={initialValue}
                 errors={errors}

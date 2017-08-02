@@ -31,9 +31,9 @@ class SubscriptionForm extends Component {
         this.props.onEmailChange(e.target.value);
     }
 
-    handleAnotherEmailClick = e => {
+    handleStartOver = e => {
         e.preventDefault();
-        this.props.onAnotherEmailClick();
+        this.props.onStartOver();
     }
 
     render() {
@@ -41,7 +41,7 @@ class SubscriptionForm extends Component {
             errors,
             showErrors,
             status,
-            onAnotherEmailClick
+            onStartOver
         } = this.props;
 
         return (
@@ -72,8 +72,8 @@ class SubscriptionForm extends Component {
                         <div>Спасибо за подписку!</div>
                         <div>Скоро вы вышлем вам первое письмо на {this.state.email}</div>
                         <br/>
-                        {!!onAnotherEmailClick && (
-                            <a href="#" onClick={this.handleAnotherEmailClick}>Подписаться на другой адрес</a>
+                        {!!onStartOver && (
+                            <a href="#" onClick={this.handleStartOver}>Подписаться на другой адрес</a>
                         )}
                     </div>
                 )}
@@ -82,8 +82,8 @@ class SubscriptionForm extends Component {
                     <div>
                         <div>Кажется, что-то пошло не так...</div>
                         <br/>
-                        {!!onAnotherEmailClick && (
-                            <a href="#" onClick={this.handleAnotherEmailClick}>Попробовать ещё раз</a>
+                        {!!onStartOver && (
+                            <a href="#" onClick={this.handleStartOver}>Попробовать ещё раз</a>
                         )}
                     </div>
                 )}
