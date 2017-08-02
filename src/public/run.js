@@ -15,7 +15,14 @@ export const run = (Component, callback = () => {}) => {
         Component,	
         appNode,
         () => {
+            // jss ssr preloaded <style> tag remove
+            const jssPreloadedStyles = document.querySelector('[data-jss-server]');
+            jssPreloadedStyles.parentNode.removeChild(jssPreloadedStyles);
+
+            // @todo remove in production
+            // ssr indicating half-opaque markup
             appNode.style.opacity = '';
+            
             callback();
         }
     )
