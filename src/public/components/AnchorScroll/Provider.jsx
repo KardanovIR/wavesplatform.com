@@ -5,6 +5,9 @@ import { smoothScrollTo } from '../../utils/smoothScroll';
 
 
 class Provider extends Component {
+    static defaultProps = {
+        duration: 1500
+    }
 
     componentDidMount() {
         setTimeout(this.scrollToAnchor, 0);
@@ -15,11 +18,11 @@ class Provider extends Component {
         window.removeEventListener("hashchange", this.scrollToAnchor, false);
     }
 
-    scrollToAnchor() {
+    scrollToAnchor = () => {
         const hash = window.location.hash.substring(1);
         const element = document.querySelector(`[data-anchor='${hash}']`);
         if (element) {
-            setTimeout(() => smoothScrollTo(element, { duration: 1500 }), 0);
+            setTimeout(() => smoothScrollTo(element, { duration: this.props.duration }), 0);
         }
     }
 
