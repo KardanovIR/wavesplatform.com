@@ -4,10 +4,10 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
 // React html component with <html>, <head> etc.
-import Html from '../components/Html';
+import Html from './components/Html';
 
 
-export const run = (Component, scriptName) =>
+export const render = (Component, scriptName) =>
     async ctx => {
         const sheets = new SheetsRegistry()
 

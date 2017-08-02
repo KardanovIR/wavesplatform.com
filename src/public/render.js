@@ -1,6 +1,6 @@
-import 'babel-polyfill'
+import 'babel-polyfill';
 
-import { render } from 'react-dom'
+import { render as reactDomRender } from 'react-dom';
 
 
 
@@ -8,10 +8,10 @@ export const getPreloadedState = () => window.__PRELOADED_STATE || {};
 
 
 
-export const run = (Component, callback = () => {}) => {
+export const render = (Component, callback = () => {}) => {
     const appNode = document.getElementById('app');
 
-    render(
+    reactDomRender(
         Component,	
         appNode,
         () => {

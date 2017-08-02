@@ -4,7 +4,7 @@ import Router from 'koa-router';
 // @TODO replace by React 404
 import notFound from 'src/server/views/404';
 
-import { run } from './run';
+import { render } from '../render';
 
 // page components
 import Main from '../../common/containers/Main';
@@ -15,8 +15,8 @@ import Developers from '../../common/containers/Developers';
 const router = new Router();
 
 router
-    .get('/', run(Main, 'main'))
-    .get('/developers', run(Developers, 'developers'))
+    .get('/', render(Main, 'main'))
+    .get('/developers', render(Developers, 'developers'))
     // .get('/product', async ctx => {
     //     ctx.body = view({ scriptUrl: 'product' });
     // })
