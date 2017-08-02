@@ -9,11 +9,13 @@ export const getPreloadedState = () => window.__PRELOADED_STATE || {};
 
 
 export const run = (Component, callback = () => {}) => {
+    const appNode = document.getElementById('app');
+
     render(
         Component,	
-        document.getElementById('app'),
+        appNode,
         () => {
-            document.querySelector('.loader').style.display = 'none';
+            appNode.style.opacity = '';
             callback();
         }
     )
