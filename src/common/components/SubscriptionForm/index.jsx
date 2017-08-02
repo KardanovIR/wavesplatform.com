@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-// import styles from './styles';
+import styles from './styles';
 
+import ErrorMessage from './lib/ErrorMessage';
 
 
 
 class SubscriptionForm extends Component {
     static defaultProps = {
-        onSubmit: () => {},
-        onEmailChange: () => {}
+        onSubmit: () => { },
+        onEmailChange: () => { },
+        initialEmail: ''
     }
 
     constructor(props) {
         super(props);
         this.state = {
-            email: ''
+            email: this.props.initialEmail
         }
     }
 
@@ -29,24 +31,59 @@ class SubscriptionForm extends Component {
         this.props.onEmailChange(e.target.value);
     }
 
+    handleAnotherEmailClick = e => {
+        e.preventDefault();
+        this.props.onAnotherEmailClick();
+    }
+
     render() {
         const {
             errors,
-            showErrors
+            showErrors,
+            status,
+            onAnotherEmailClick
         } = this.props;
 
-
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input
-                    type="text"
-                    onChange={this.handleChange}
-                />
-                <br/>
-                { showErrors && !!errors.email.length && 'Неверно введён email' }
-                <br/>
-                <button type="submit">Submit</button>
-            </form>
+            <div className={styles.wrapper}>
+                <b>Подписка на рассылку</b>
+                <br />
+                <br />
+
+                {status === 'idle' && (
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                            onBlur={this.props.onBlur}
+                            placeholder="email@domain.com"
+                        />
+                        <br />
+                         {showErrors && <ErrorMessage errors={errors.email} />} 
+                        <br />
+                        <br/>
+                        <button type="submit">Submit</button>
+                    </form>
+                )}
+
+                {status === 'subscribed' && (
+                    <div>
+                        <div>Спасибо за подписку!</div>
+                        <div>Скоро вы вышлем вам первое письмо на {this.state.email}</div>
+                        <br/>
+                        {!!onAnotherEmailClick && (
+                            <a href="#" onClick={this.handleAnotherEmailClick}>Подписаться на другой адрес</a>
+                        )}
+                    </div>
+
+                )}
+
+                {/* <br /> */}
+                {/* <br /> */}
+                {/* Current status: {status} */}
+            </div>
+
         )
     }
 }

@@ -21,6 +21,10 @@ router
     .get('/company', async ctx => {
         ctx.body = view({ scriptUrl: 'company' });
     })
+    .post('/api/subscription', async ctx => {  
+        console.log(ctx.request.body.email);
+        ctx.body = { result: 'success' };
+    })
     .get('*', async ctx => {
         ctx.body = notFound();
     })

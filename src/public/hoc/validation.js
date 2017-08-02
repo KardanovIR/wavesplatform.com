@@ -40,7 +40,7 @@ export const createValidation = fieldRules => WrappedForm =>
             return (
                 <WrappedForm
                     onValidate={this.validate}
-                    onSubmit={this.showErrors}
+                    onValidationStart={this.showErrors}
                     { ...this.state }
                     { ...this.props }
                 />

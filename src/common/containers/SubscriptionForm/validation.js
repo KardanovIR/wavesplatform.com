@@ -8,19 +8,11 @@ import { createValidation } from '../../../public/hoc/validation';
 import { isEmpty, isEmailInvalid } from '../../../public/utils/validation/rules';
 
 
-// generic validation HOC
-const withGenericValidation = createValidation({ email: [isEmpty, isEmailInvalid] })
-
 
 
 // email validation HOC
 const withEmailValidationAdapter = Form =>
     class ValidatedEmailForm extends Component {
-        handleSubmit = state => {
-            this.props.onValidate(state);
-            this.props.onSubmit();
-        }
-
         handleEmailChange = newValue => this.props.onValidate({ email: newValue })
 
         render() {
@@ -31,7 +23,8 @@ const withEmailValidationAdapter = Form =>
 
             return (
                 <Form
-                    onSubmit={this.handleSubmit}
+                    onSubmit={this.props.onValidate}
+                    onBlur={this.props.onValidationStart}
                     onEmailChange={this.handleEmailChange}
                     { ...rest }
                 />
@@ -42,6 +35,6 @@ const withEmailValidationAdapter = Form =>
 
 
 export const withEmailValidation = compose(
-    withGenericValidation,
+    createValidation({ email: [isEmpty, isEmailInvalid] }),
     withEmailValidationAdapter
 );
