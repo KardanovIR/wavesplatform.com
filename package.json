@@ -19,6 +19,7 @@
   "dependencies": {
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
+    "eases": "^1.0.8",
     "email-validator": "^1.1.1",
     "es6-shim": "^0.35.3",
     "koa": "^2.0.0-alpha.7",
