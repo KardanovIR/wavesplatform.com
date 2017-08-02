@@ -7,7 +7,7 @@ import SubscriptionForm from '../../components/SubscriptionForm';
 
 
 // validation
-import { createValidation } from '../../../public/hoc/validation';
+import { withValidation } from '../../../public/hoc/validation';
 import { isEmpty, isEmailInvalid } from '../../../public/utils/validation';
 
 
@@ -114,5 +114,5 @@ class SubscriptionFormContainer extends Component {
 
 export default compose(
     withLocalStorage('subscriptionEmail'),
-    createValidation({ email: [isEmpty, isEmailInvalid] }),
+    withValidation({ email: [isEmpty, isEmailInvalid] }),
 )(SubscriptionFormContainer);

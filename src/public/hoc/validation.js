@@ -17,7 +17,7 @@ import { combineRules } from '../utils/validation';
  *  email: [isEmpty, isEmailInvalid]
  * }
  */
-export const createValidation = fieldRules => WrappedForm =>
+export const withValidation = fieldRules => WrappedForm =>
     class FormWithValidation extends Component {
         constructor(props) {
             super(props);
