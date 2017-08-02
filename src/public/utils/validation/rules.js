@@ -13,7 +13,7 @@ export const isEmpty = value => {
     return !value.length ? EMPTY : '';
 }
 
-export const isValidEmail = value => {
+export const isEmailInvalid = value => {
     return validateEmail(value) ? '' : EMAIL_INVALID;
 }
 
