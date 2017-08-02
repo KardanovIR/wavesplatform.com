@@ -5,7 +5,19 @@ import { map, mapObjIndexed, empty } from 'ramda';
 import { combineRules } from '../utils/validation';
 
 
-export const createValidation = fieldRules => WrappedForm => 
+/**
+ * 
+ * @param {object} fieldRules
+ * object with
+ * keys — form fields
+ * values — array of rules applied to them
+ * Example:
+ * {
+ *  username: [isEmpty],
+ *  email: [isEmpty, isEmailInvalid]
+ * }
+ */
+export const createValidation = fieldRules => WrappedForm =>
     class FormWithValidation extends Component {
         constructor(props) {
             super(props);

@@ -8,7 +8,7 @@ import SubscriptionForm from '../../components/SubscriptionForm';
 
 // validation
 import { createValidation } from '../../../public/hoc/validation';
-import { isEmpty, isEmailInvalid } from '../../../public/utils/validation/rules';
+import { isEmpty, isEmailInvalid } from '../../../public/utils/validation';
 
 
 // for submit
