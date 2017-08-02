@@ -11,6 +11,10 @@ import { createValidation } from '../../../public/hoc/validation';
 import { isEmpty, isEmailInvalid } from '../../../public/utils/validation/rules';
 
 
+// for submit
+import { handleFetchError } from '../../../public/utils/handleFetchError';
+
+
 // localStorage read and write email
 import { withLocalStorage } from '../../../public/hoc/localStorage';
 
@@ -55,6 +59,7 @@ class SubscriptionFormContainer extends Component {
             method: 'POST',
             body: JSON.stringify({ email })
         })
+            .then(handleFetchError)
             .then(() => this.setState({ status: 'subscribed' }))
             .catch(err => {
                 console.warn(err);

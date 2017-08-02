@@ -76,7 +76,16 @@ class SubscriptionForm extends Component {
                             <a href="#" onClick={this.handleAnotherEmailClick}>Подписаться на другой адрес</a>
                         )}
                     </div>
+                )}
 
+                {status === 'error' && (
+                    <div>
+                        <div>Кажется, что-то пошло не так...</div>
+                        <br/>
+                        {!!onAnotherEmailClick && (
+                            <a href="#" onClick={this.handleAnotherEmailClick}>Попробовать ещё раз</a>
+                        )}
+                    </div>
                 )}
 
                 {/* <br /> */}
