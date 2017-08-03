@@ -21,8 +21,8 @@ const Html = ({
                 Raven.config('https://a453204a9f9846feb4855ab716dc2e9f@sentry.io/198370').install();
             `}} /> */}
 
-            <link rel="stylesheet" href="styles.css" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300" />
+            {/* <link rel="stylesheet" href="styles.css" /> */}
+
             <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{ __html: `

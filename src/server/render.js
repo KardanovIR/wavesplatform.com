@@ -7,7 +7,7 @@ import { JssProvider, SheetsRegistry } from 'react-jss';
 import Html from './components/Html';
 
 
-export const render = (Component, scriptName) =>
+export const render = (scriptName, Component = 'span') =>
     async ctx => {
         const sheets = new SheetsRegistry()
 

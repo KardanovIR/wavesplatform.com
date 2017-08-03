@@ -8,15 +8,15 @@ import { render } from '../render';
 
 // page components
 import Main from '../../common/containers/Main';
-import Developers from '../../common/containers/Developers';
+// import Developers from '../../common/containers/Developers';
 
 
 
 const router = new Router();
 
 router
-    .get('/', render(Main, 'main'))
-    .get('/developers', render(Developers, 'developers'))
+    .get('/', render('main', Main))
+    .get('/developers', render('developers'))
     // .get('/product', async ctx => {
     //     ctx.body = view({ scriptUrl: 'product' });
     // })
@@ -24,10 +24,6 @@ router
     //     ctx.body = view({ scriptUrl: 'company' });
     // })
     .post('/api/subscription', async ctx => {
-        console.log(ctx.request.body.email);
-        ctx.body = { result: 'success' };
-    })
-    .post('/api/subscription', async ctx => {  
         console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };
     })

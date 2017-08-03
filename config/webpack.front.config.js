@@ -79,7 +79,18 @@ module.exports = {
             {
                 test: /\.json$/,
                 loader: 'json-loader'
-            }
+            },
+            {
+                test: /\.(woff2?|ttf|eot)(\?.*$|$)/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10000,
+                        name: path.join('fonts', '[name].[ext]'),
+                        emitFile: false
+                    }
+                }
+            },
         ]
     },
 
