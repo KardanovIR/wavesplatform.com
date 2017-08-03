@@ -15,6 +15,12 @@ const Html = ({
 
             <title>{ title }</title>
 
+            {/* sentry enable */}
+            {/* <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossOrigin="anonymous" />
+            <script dangerouslySetInnerHTML={{ __html: `
+                Raven.config('https://a453204a9f9846feb4855ab716dc2e9f@sentry.io/198370').install();
+            `}} /> */}
+
             <link rel="stylesheet" href="styles.css" />
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300" />
             <script
