@@ -27,6 +27,10 @@ router
         console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };
     })
+    .post('/api/subscription', async ctx => {  
+        console.log(ctx.request.body.email);
+        ctx.body = { result: 'success' };
+    })
     .get('*', async ctx => {
         ctx.body = notFound();
     })
