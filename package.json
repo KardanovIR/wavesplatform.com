@@ -19,6 +19,7 @@
   "dependencies": {
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
+    "eases": "^1.0.8",
     "email-validator": "^1.1.1",
     "es6-shim": "^0.35.3",
     "koa": "^2.0.0-alpha.7",
@@ -31,6 +32,7 @@
     "raven": "^2.1.1",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
+    "react-jss": "^7.0.2",
     "reflect-metadata": "^0.1.9"
   },
   "devDependencies": {

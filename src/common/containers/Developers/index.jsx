@@ -5,15 +5,23 @@ import SubscriptionForm from '../SubscriptionForm';
 
 
 
+import Anchor, { AnchorScrollProvider } from '../../../public/components/AnchorScroll';
+
 
 const Page = () => (
     <Layout>
-        <div>
-            Разработчикам
-            <br/>
-            <br/>
-            <SubscriptionForm />
-        </div>
+        <AnchorScrollProvider>
+            <div>
+                Страница для разработчиков
+                <br />
+                <br />
+                <SubscriptionForm />
+                <Anchor style={{ height: "2000px", background: "lightgrey" }} anchor="devs">
+                    Информация разрабам
+                </Anchor>
+                <Anchor style={{ height: "2000px", background: "lightgreen" }} anchor="reasons">Reasons</Anchor>
+            </div>
+        </AnchorScrollProvider>
     </Layout>
 )
 
