@@ -22,7 +22,7 @@ class Provider extends Component {
         const hash = window.location.hash.substring(1);
         const element = document.querySelector(`[data-anchor='${hash}']`);
         if (element) {
-            setTimeout(() => smoothScrollTo(element, { duration: this.props.duration }), 0);
+            smoothScrollTo(element, { duration: this.props.duration });
         }
     }
 
