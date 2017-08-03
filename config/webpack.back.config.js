@@ -5,7 +5,8 @@ const fs = require('fs');
 
 const includedDirectories = [
     path.join(__dirname, '../src/server'),
-    path.join(__dirname, '../src/common')
+    path.join(__dirname, '../src/common'),
+    path.join(__dirname, '../src/public'),
 ];
 
 
@@ -40,10 +41,9 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: {
-                    loader: 'css-loader',
+                    loader: 'css-loader/locals',
                     options: {
                         modules: true,
-                        locals: true,
                         localIdentName: '[folder]__[local]__[hash:base64:5]'
                     }
                 },
@@ -53,10 +53,9 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     {
-                        loader: "css-loader",
+                        loader: "css-loader/locals",
                         options: {
                             modules: true,
-                            locals: true,
                             localIdentName: '[folder]__[local]__[hash:base64:5]',
                             importLoaders: 1
                         }
@@ -81,9 +80,12 @@ module.exports = {
         extensions: ['.pug', '.jsx', '.js', '.tsx', '.ts', '.json', '.css', '.scss']
     },
     externals: nodeModules,
-    // plugins: [
-    // 	new webpack.BannerPlugin('require("source-map-support").install();',
-    // 		{ raw: true, entryOnly: false })
-    // ],
+    plugins: [
+        new webpack.BannerPlugin({
+            banner: 'require("source-map-support/register");', // the banner as string, it will be wrapped in a comment
+            raw: true, // if true, banner will not be wrapped in a comment
+            entryOnly: false, // if true, the banner will only be added to the entry chunks
+        })
+    ],
     devtool: 'inline-source-map'
 };
