@@ -7,7 +7,7 @@ import injectSheet from 'react-jss';
 const styles = theme => {
     return {
         container: {
-            padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+            padding: theme.spacing.unit*2,
             maxWidth: theme.breakpoints.lg,
             margin: '0 auto',
         },

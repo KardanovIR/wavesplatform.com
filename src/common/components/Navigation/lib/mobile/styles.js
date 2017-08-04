@@ -12,7 +12,7 @@ export default theme => ({
     burger: {
         width: 32,
         height: 32,
-        padding: 4
+        padding: theme.spacing.getSpacing(0, .5, 1)
     },
     popover: {
         position: 'absolute',

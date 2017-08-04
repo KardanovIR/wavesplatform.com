@@ -2,19 +2,21 @@ import React from 'react';
 
 
 const Hamburger = fill => (
-	<svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 317.825 317.825" xmlSpace="preserve" width="100%" height="100%">
+	<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		width="100%" height="100%" viewBox="0 0 34 34" xmlSpace="preserve">
 		<g>
 			<g>
-				<g>
-					<g>
-						<path d="M301.934,143.021H15.891C7.119,143.021,0,150.14,0,158.912c0,8.772,7.119,15.891,15.891,15.891      h286.042c8.74,0,15.891-7.119,15.891-15.891C317.825,150.14,310.674,143.021,301.934,143.021z" fill={fill} />
-						<path d="M15.891,79.456h286.042c8.74,0,15.891-7.119,15.891-15.891s-7.151-15.891-15.891-15.891H15.891      C7.119,47.674,0,54.793,0,63.565S7.119,79.456,15.891,79.456z" fill={fill} />
-						<path d="M301.934,238.369H15.891C7.119,238.369,0,245.52,0,254.26c0,8.74,7.119,15.891,15.891,15.891      h286.042c8.74,0,15.891-7.151,15.891-15.891C317.825,245.52,310.674,238.369,301.934,238.369z" fill={fill} />
-					</g>
-				</g>
+				<rect x="5.5" y="15.5" fill={fill} width="23" height="3" />
+			</g>
+			<g>
+				<rect x="5.5" y="22.5" fill={fill} width="23" height="3" />
+			</g>
+			<g>
+				<rect x="5.5" y="8.5" fill={fill} width="23" height="3" />
 			</g>
 		</g>
 	</svg>
 )
+
 
 export default Hamburger;

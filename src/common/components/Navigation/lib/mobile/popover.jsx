@@ -19,8 +19,8 @@ const styles = theme => ({
         position: 'absolute',
         top: 0,
         right: 0,
-        width: 30,
-        height: 30,
+        width: 38,
+        height: 38,
 
         display: 'flex',
         alignItems: 'center',
@@ -33,7 +33,7 @@ const Popover = ({ classes, onClose, children, open }) => (
     <HandleClickOutside onClickOutside={onClose} active={open}>
         <Paper className={classes.body}>
             <div className={classes.close} onClick={onClose}>
-                <Icon name="cross" size={20}  />
+                <Icon name="cross" size={24}  />
             </div>
             {children}
         </Paper>

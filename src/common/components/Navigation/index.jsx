@@ -6,10 +6,14 @@ import injectSheet from 'react-jss';
 import MobileNav from './lib/mobile';
 import DesktopNav from './lib/desktop';
 
+import Icon from '../Icon';
+
 
 const Nav = ({ classes, links }) => (
     <nav className={classes.wrapper}>
-        <div className={classes.logo}>L</div>
+        <div className={classes.logo}>
+            <Icon name="logo" size={40} />
+        </div>
 
         <div className={classes.navContainer}>
 

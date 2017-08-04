@@ -8,7 +8,8 @@ export default theme => ({
     },
     logo: {
         float: 'left',
-        background: 'green'
+        height: 40,
+        width: 40
     },
     link: {
         color: 'green',

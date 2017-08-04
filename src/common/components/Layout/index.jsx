@@ -14,9 +14,6 @@ const Layout = ({ children }) => (
     <ThemeProvider>
         <Wrapper>
             <Navigation links={links} />
-            <div style={{borderTop: '1px dashed #acacac', color: '#acacac'}}>
-                Здесь кончается навигация
-            </div>
             <br />
             <br />
             <div>{children}</div>
