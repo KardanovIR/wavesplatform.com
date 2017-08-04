@@ -7,6 +7,7 @@ const includedDirectories = [
     path.join(__dirname, '../src/server'),
     path.join(__dirname, '../src/common'),
     path.join(__dirname, '../src/public'),
+    /flexboxgrid/
 ];
 
 

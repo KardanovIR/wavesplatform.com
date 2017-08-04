@@ -8,7 +8,8 @@ const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
 
 const includedDirectories = [
     path.join(__dirname, '../src/public'),
-    path.join(__dirname, '../src/common')
+    path.join(__dirname, '../src/common'),
+    /flexboxgrid/
 ];
 
 
