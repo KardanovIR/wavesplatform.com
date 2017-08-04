@@ -15,7 +15,7 @@ import Main from '../../common/containers/Main';
 const router = new Router();
 
 router
-    .get('/', render('main', Main))
+    .get('/', render('main'))
     .get('/developers', render('developers'))
     // .get('/product', async ctx => {
     //     ctx.body = view({ scriptUrl: 'product' });

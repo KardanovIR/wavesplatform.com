@@ -17,7 +17,7 @@ const styles = theme => {
             }
         },
         content: {
-            background: '#efefef'
+            // background: '#efefef'
         }
     }
 }

@@ -10,9 +10,9 @@ export default {
         position: 'relative'
     },
     burger: {
-        width: 40,
-        height: 40,
-        background: 'blue'
+        width: 32,
+        height: 32,
+        padding: 4
     },
     popover: {
         position: 'absolute',

@@ -9,6 +9,7 @@ import { Transition } from 'react-transition-group';
 
 import cn from 'classnames';
 
+import Icon from '../../../Icon';
 
 
 class MobileNav extends Component {
@@ -32,19 +33,22 @@ class MobileNav extends Component {
 
         return (
             <div className={classes.wrapper}>
-                <div className={classes.burger} onClick={this.handleClick}>B</div>
+                <div className={classes.burger} onClick={this.handleClick}>
+                    <Icon name="hamburger" size={32}  />
+                </div>
+                
 
                 <Transition in={this.state.open} timeout={300}>
                     {status => (
                         <div className={cn(classes.popover, classes[`${status}Popover`])}>
                             <Popover open={this.state.open} onClose={this.handleClose}>
+                                <br/>
                                 123
                                 <br />
                                 <br />
-                                <br />
-                                <br />
-                                <br />
                                 234
+                                <br />
+                                <br/>
                             </Popover>
                         </div>
                     )}
