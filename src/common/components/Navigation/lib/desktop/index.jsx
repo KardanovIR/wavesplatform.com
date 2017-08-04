@@ -3,13 +3,8 @@ import styles from './styles';
 
 import injectSheet from 'react-jss';
 
-import Popover from './popover';
 
-import { Transition } from 'react-transition-group';
 
-import cn from 'classnames';
-
-import Icon from '../../../Icon';
 
 
 class MobileNav extends Component {

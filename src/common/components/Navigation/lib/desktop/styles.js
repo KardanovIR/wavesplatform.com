@@ -1,10 +1,3 @@
-const hidden = {
-    position: 'absolute',
-    top: -9999,
-    left: -9999
-}
-
-
 export default {
     wrapper: {
         position: 'relative'
