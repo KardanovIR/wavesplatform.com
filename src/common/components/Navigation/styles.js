@@ -1,4 +1,4 @@
-export default {
+export default theme => ({
     wrapper: {
         '&:after': {
             content: '""',
@@ -18,5 +18,17 @@ export default {
     },
     navContainer: {
         float: 'right'
+    },
+    mobileNav: {
+        display: 'block',
+        [theme.mixins.atMedia('md')]: {
+            display: 'none'
+        }
+    },
+    desktopNav: {
+        display: 'none',
+        [theme.mixins.atMedia('md')]: {
+            display: 'block'
+        }
     }
-} 
+} )

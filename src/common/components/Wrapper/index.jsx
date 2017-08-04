@@ -11,7 +11,12 @@ const styles = theme => {
             maxWidth: theme.breakpoints.lg,
             margin: '0 auto',
         },
-        [`@media (min-width: ${theme.breakpoints.lg}px)`]: {
+        [theme.mixins.atMedia('md')]: {
+            container: {
+                paddingTop: `${theme.spacing.unit*6}px`,
+            }
+        },
+        [theme.mixins.atMedia('lg')]: {
             container: {
                 paddingTop: `${theme.spacing.unit*10}px`,
             }

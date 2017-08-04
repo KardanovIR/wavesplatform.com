@@ -5,13 +5,15 @@ export const base = {
     fontFamily: 'TTNorms, arial, sans-serif',
     fontSize: 15,
     fontStyle: 'normal',
-    lineHeight: 1.76,
-    margin: 0
+    lineHeight: 1.53,
+    margin: 0,
+    fontVariantLigatures: 'none'
 }
 
 
 const display = {
     fontWeight: 500,
+    letterSpacing: '-1px'
 }
 
 
@@ -20,7 +22,7 @@ export const display4 = {
 
     fontSize: 28,
     lineHeight: 1.11,
-    letterSpacing: '-2px',
+    letterSpacing: '-1px',
     fontWeight: 700,
 }
 
@@ -29,8 +31,7 @@ export const display3 = {
     ...display,
 
     fontSize: 28,
-    lineHeight: 1.61,
-    letterSpacing: '-0.8px',
+    lineHeight: 1.18
 }
 
 export const display2 = {
@@ -38,7 +39,7 @@ export const display2 = {
     ...display,
 
     fontSize: 24,
-    lineHeight: 1.32,
+    lineHeight: 1.25,
 }
 
 export const display1 = {
@@ -46,7 +47,7 @@ export const display1 = {
     ...display,
 
     fontSize: 18,
-    lineHeight: 1.32,
+    lineHeight: 1.83,
 }
 
 export const body = base
@@ -59,7 +60,7 @@ export const quote = {
 export const numeral = {
     fontFamily: 'arial, sans-serif',
     fontSize: 20,
-    lineHeight: 1.33,
+    lineHeight: 'normal',
     fontStyle: 'normal',
 }
 
@@ -67,7 +68,7 @@ export const button = {
     fontSize: 13,
     textTransforn: 'uppercase',
     lineHeight: 'normal',
-    letterSpacing: '0.1px',
+    letterSpacing: '1px',
 }
 
 
@@ -83,12 +84,12 @@ const typography = {
     button,
 
     [`@media (min-width: ${breakpoints.md}px)`]: {
-        display1: { fontSize: 24 },
-        display2: { fontSize: 34 },
-        display3: { fontSize: 44 },
         display4: { fontSize: 64 },
-        body: { fontSize: 17 },
-        quote: { fontSize: 17 },
+        display3: { fontSize: 44, lineHeight: 1.11, letterSpacing: 'normal' },
+        display2: { fontSize: 34, lineHeight: 1.18, letterSpacing: 'normal' },
+        display1: { fontSize: 24, lineHeight: 1.33, letterSpacing: 'normal' },
+        body: { fontSize: 17, lineHeight: 1.76 },
+        quote: { fontSize: 17, lineHeight: 1.76 },
         numeral: { fontSize: 30 },
         button: { fontSize: 15 },
     }

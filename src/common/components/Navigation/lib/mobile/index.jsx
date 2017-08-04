@@ -22,7 +22,7 @@ class MobileNav extends Component {
         this.setState({
             open: true
         })
-    
+
     handleClose = () =>
         this.setState({
             open: false
@@ -34,21 +34,25 @@ class MobileNav extends Component {
         return (
             <div className={classes.wrapper}>
                 <div className={classes.burger} onClick={this.handleClick}>
-                    <Icon name="hamburger" size={32}  />
+                    <Icon name="hamburger" size={32} />
                 </div>
-                
+
 
                 <Transition in={this.state.open} timeout={300}>
                     {status => (
                         <div className={cn(classes.popover, classes[`${status}Popover`])}>
                             <Popover open={this.state.open} onClose={this.handleClose}>
-                                <br/>
-                                123
-                                <br />
-                                <br />
-                                234
-                                <br />
-                                <br/>
+                                <div className={classes.linksWrapper}>
+                                    {links.map((link, index) => (
+                                        <a
+                                            key={`mobile_nav_link${index}`}
+                                            href={link.href}
+                                            className={classes.link}
+                                        >
+                                            {link.text}
+                                        </a>
+                                    ))}
+                                </div>
                             </Popover>
                         </div>
                     )}

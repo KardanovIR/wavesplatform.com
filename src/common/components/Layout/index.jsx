@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
     <ThemeProvider>
         <Wrapper>
             <Navigation links={links} />
-            <div style={{background: '#efefef'}}>
+            <div style={{borderTop: '1px dashed #acacac', color: '#acacac'}}>
                 Здесь кончается навигация
             </div>
             <br />

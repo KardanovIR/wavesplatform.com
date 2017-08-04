@@ -14,11 +14,11 @@ import injectSheet, { ThemeProvider } from 'react-jss';
 // global styles
 const styles = {
     ...typeface,
-    // '@global body': {
-        // ...base,
-        // margin: 0,
-        // padding: 0
-    // }
+    '@global body': {
+        ...base,
+        margin: 0,
+        padding: 0
+    }
 }
 
 
