@@ -1,4 +1,5 @@
 export const primary = {
+    0: 'white',
     500: '#1360db'
 }
 
@@ -14,13 +15,19 @@ export const danger = {
     500: '#cc1442'
 }
 
+export const gray = {
+    500: '#999'
+}
+
+
 
 
 const palette = {
     primary,
     secondary,
     success,
-    danger
+    danger,
+    gray
 }
 
 export { palette }

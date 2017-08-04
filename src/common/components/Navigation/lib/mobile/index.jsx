@@ -5,6 +5,11 @@ import injectSheet from 'react-jss';
 
 import Popover from './popover';
 
+import { Transition } from 'react-transition-group';
+
+import cn from 'classnames';
+
+
 
 class MobileNav extends Component {
     state = {
@@ -12,11 +17,15 @@ class MobileNav extends Component {
         // anchorEl: undefined
     }
 
-    handleClick = e =>
-        this.setState(prevState => ({
-            open: !prevState.open,
-            // anchorEl: e.currentTarget
-        }))
+    handleClick = () =>
+        this.setState({
+            open: true
+        })
+    
+    handleClose = () =>
+        this.setState({
+            open: false
+        })
 
     render() {
         const { classes, links } = this.props;
@@ -25,18 +34,22 @@ class MobileNav extends Component {
             <div className={classes.wrapper}>
                 <div className={classes.burger} onClick={this.handleClick}>B</div>
 
-                {this.state.open && (
-                    <Popover onClose={this.handleClick}>
-                        123
-                </Popover>
-                )}
+                <Transition in={this.state.open} timeout={300}>
+                    {status => (
+                        <div className={cn(classes.popover, classes[`${status}Popover`])}>
+                            <Popover open={this.state.open} onClose={this.handleClose}>
+                                123
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                234
+                            </Popover>
+                        </div>
+                    )}
+                </Transition>
 
-                {/* <div className={classes.navContainer}>
-
-                <div className={classes.mobileNav}>
-                    <MobileNav />
-                </div>
-            </div> */}
             </div>
         )
     }

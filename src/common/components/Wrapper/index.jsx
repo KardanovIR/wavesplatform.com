@@ -23,9 +23,11 @@ const styles = theme => {
 }
 
 
-const Wrapper = ({ classes, ...rest, }) => (
+const Wrapper = ({ classes, children }) => (
     <div className={classes.container}>
-        <div className={classes.content} {...rest} />
+        <div className={classes.content}>
+            { children }
+        </div>
     </div>
 )
 
