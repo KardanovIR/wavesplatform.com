@@ -7,7 +7,7 @@ import MobileNav from './lib/mobile';
 
 
 const Nav = ({ classes }) => (
-    <nav>
+    <nav className={classes.wrapper}>
         <div className={classes.logo}>L</div>
 
         <div className={classes.navContainer}>
