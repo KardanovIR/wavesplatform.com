@@ -4,7 +4,7 @@ import React from 'react';
 import ThemeProvider from '../../components/ThemeProvider';
 import Layout from '../../components/Layout';
 // import Typography from '../../components/Typography';
-// import { Row, Col } from '../../components/Grid';
+import { Row, Col } from '../../components/Grid';
 // import Button from '../../components/Button';
 
 
@@ -13,6 +13,7 @@ import Layout from '../../components/Layout';
 import MainScreen from './lib/MainScreen';
 import Description from './lib/Description';
 import WavesClient from './lib/WavesClient';
+import Wallet from './lib/Wallet';
 
 
 // styles
@@ -25,12 +26,13 @@ const PageLayout = ({ classes }) => (
         <MainScreen />
         <Description />
         <WavesClient />
+        <Wallet />
     </Layout>
 );
 
 
 // const Page =  injectSheet(styles)(PageLayout);
-const Page =  PageLayout;
+const Page = PageLayout;
 
 
 const App = () => (
