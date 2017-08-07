@@ -1,7 +1,4 @@
 import React from 'react';
-// import styles from './styles';
-
-import ThemeProvider from '../ThemeProvider';
 
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
@@ -11,7 +8,7 @@ import links from './links';
 
 
 const Layout = ({ children }) => (
-    <ThemeProvider>
+    <div>
         <Wrapper>
             <Navigation links={links} />
             <br />
@@ -19,9 +16,15 @@ const Layout = ({ children }) => (
             <div>{children}</div>
             <br />
             <br />
-            <footer>This is a footer</footer>
         </Wrapper>
-    </ThemeProvider>
+        <footer style={{ background: '#acacac' }}>
+            <br />
+            <br />
+            This is a footer
+            <br />
+            <br />
+        </footer>
+    </div>
 )
 
 

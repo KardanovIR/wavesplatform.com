@@ -11,7 +11,7 @@ const styles = theme => ({
         display: 'flex',
         flexWrap: 'wrap',
         width: 'auto',
-        row: {
+        '& $row': {
             margin: theme.spacing.getSpacing(0 -1)
         }
     }
