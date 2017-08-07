@@ -1,4 +1,5 @@
 const breakpoints = {
+    names: ['xs', 'sm', 'md', 'lg', 'xl'],
     xs: 360,
     sm: 600,
     md: 960,
