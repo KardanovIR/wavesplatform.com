@@ -18,6 +18,7 @@ export const danger = {
 export const gray = {
     0: '#fff',
     50: '#f0f0f0',
+    300: '#bbb',
     500: '#999',
     900: '#333',
 }

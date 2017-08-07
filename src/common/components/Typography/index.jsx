@@ -1,10 +1,17 @@
 import React from 'react';
 
+import cn from 'classnames';
+
 import injectSheet from 'react-jss';
 
 
 
-const styles = theme => theme.typography;
+const styles = theme => ({
+    ...theme.typography,
+    colored: {
+        color: ({ color }) => theme.palette.getColor(color)
+    }
+})
 
 
 
@@ -19,7 +26,7 @@ const Typography = ({
     const Tag = tagName || tagMap[type];
 
     return (
-        <Tag className={classes[type] + ' ' + className}>
+        <Tag className={cn(classes[type], classes.colored, className)}>
             {children}
         </Tag>
     )
@@ -38,7 +45,8 @@ Typography.defaultProps = {
         'quote': 'span',
         'numeral': 'span'
     },
-    className: ''
+    className: '',
+    color: 'gray-900'
 }
 
 

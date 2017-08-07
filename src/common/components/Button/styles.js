@@ -23,7 +23,7 @@ const styles = theme => ({
         cursor: 'pointer',
         borderRadius: theme.spacing.radius,
         backgroundColor: ({ color }) => theme.palette.getColor(color),
-        padding: theme.spacing.getSpacing(1, 3),
+        padding: theme.spacing.getSpacing(1.5, 4),
 
         transition: theme.transitions.create('opacity'),
 

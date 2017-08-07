@@ -81,6 +81,24 @@ module.exports = {
                     }
                 }
             },
+            {
+                test: /\.svg$/,
+                use: {
+                    loader: 'svg-url-loader',
+                    options: {
+                        emitFile: false
+                    }
+                }
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        emitFile: false
+                    }
+                }
+            },
         ]
     },
     resolve: {

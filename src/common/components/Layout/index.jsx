@@ -5,6 +5,14 @@ import Navigation from '../Navigation';
 
 import links from './links';
 
+import injectSheet from 'react-jss';
+
+
+const styles = {
+    root: {
+        overflowX: 'hidden'
+    }
+}
 
 
 const Layout = ({ children }) => (
@@ -28,4 +36,4 @@ const Layout = ({ children }) => (
 )
 
 
-export default Layout;
+export default injectSheet(styles)(Layout);
