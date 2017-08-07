@@ -2,6 +2,15 @@ const typeface = {
     '@font-face': [
         {
             fontFamily: 'TTNorms',
+            src: `url(${require('./fonts/TTNorms-Bold.woff2')})`,
+            fallbacks: [
+                { src: `url(${require('./fonts/TTNorms-Bold.woff')}) format(woff)` }
+            ],
+            fontWeight: 700,
+            fontStyle: 'normal'
+        },
+        {
+            fontFamily: 'TTNorms',
             src: `url(${require('./fonts/TTNorms-Medium.woff2')})`,
             fallbacks: [
                 { src: `url(${require('./fonts/TTNorms-Medium.woff')}) format(woff)` }

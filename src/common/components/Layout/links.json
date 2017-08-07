@@ -1,10 +1,14 @@
 [
 	{
 		"href": "/",
-		"text": "Main"
+		"text": "Product"
 	},
 	{
-		"href": "/developers",
+		"href": "/",
 		"text": "Developers"
+	},
+	{
+		"href": "/",
+		"text": "Company"
 	}
 ]

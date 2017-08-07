@@ -3,15 +3,29 @@ import styles from './styles';
 
 import injectSheet from 'react-jss';
 
+import MobileNav from './lib/mobile';
+import DesktopNav from './lib/desktop';
+
+import Icon from '../Icon';
+
 
 const Nav = ({ classes, links }) => (
-    <ul>
-        { links.map((link, index) => (
-            <li key={`nav_link_${index}`}>
-                <a href={link.href} className={classes.link}>{ link.text }</a>
-            </li>
-        )) }
-    </ul>
+    <nav className={classes.wrapper}>
+        <div className={classes.logo}>
+            <Icon name="logo" size={40} />
+        </div>
+
+        <div className={classes.navContainer}>
+
+            <div className={classes.mobileNav}>
+                <MobileNav links={links} />
+            </div>
+
+            <div className={classes.desktopNav}>
+                <DesktopNav links={links} />
+            </div>
+        </div>
+    </nav> 
 )
 
 

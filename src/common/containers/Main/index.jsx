@@ -2,31 +2,19 @@ import React from 'react';
 
 import Layout from '../../components/Layout';
 
-// body styles
-import { base } from '../../theme/typography';
-import theme, { typeface } from '../../theme';
+import Typography from '../../components/Typography';
 
-// typography
-import injectSheet, { ThemeProvider } from 'react-jss';
-
-
-
-const styles = {
-    ...typeface,
-    '@global body': base,
-}
 
 
 const Page = () => (
-    <ThemeProvider theme={theme}>
         <Layout>
             <div>
-                Главная страница
+                 <Typography type="display4"> 
+                     Главная страница 
+                 </Typography> 
             </div>
         </Layout>
-    </ThemeProvider>
-
 )
 
 
-export default injectSheet(styles)(Page);
+export default Page;
