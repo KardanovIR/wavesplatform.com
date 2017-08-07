@@ -13,17 +13,15 @@ const styles = theme => {
         },
         [theme.mixins.atMedia('md')]: {
             container: {
-                paddingTop: `${theme.spacing.unit*6}px`,
+                padding: theme.spacing.getSpacing(5, 6)
             }
         },
         [theme.mixins.atMedia('lg')]: {
             container: {
-                paddingTop: `${theme.spacing.unit*10}px`,
+                padding: theme.spacing.getSpacing(8, 9)
             }
         },
-        content: {
-            // background: '#efefef'
-        }
+        content: { }
     }
 }
 
