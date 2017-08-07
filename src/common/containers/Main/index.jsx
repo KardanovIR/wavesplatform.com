@@ -12,6 +12,7 @@ import Layout from '../../components/Layout';
 // lib
 import MainScreen from './lib/MainScreen';
 import Description from './lib/Description';
+import WavesClient from './lib/WavesClient';
 
 
 // styles
@@ -23,6 +24,7 @@ const PageLayout = ({ classes }) => (
     <Layout>
         <MainScreen />
         <Description />
+        <WavesClient />
     </Layout>
 );
 

@@ -6,15 +6,8 @@ const styles = theme => ({
     root: {
         paddingTop: theme.spacing.unit * 10
     },
-    title: {
-        marginBottom: theme.spacing.unit * 4
-    },
-    text: {
-        marginBottom: theme.spacing.unit * 5
-    },
-    buttonWrapper: {
-        display: 'inline-block',
-        margin: theme.spacing.getSpacing(0, 1, 16, 0)
+    titleTextCtaWrapper: {
+        marginBottom: theme.spacing.unit * 16
     },
     imageWrapper: {
         position: 'relative',

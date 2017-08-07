@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
+import TitleTextCTA from 'src/common/components/TitleTextCTA';
+
 import { Row, Col } from 'src/common/components/Grid';
 
 import Button from 'src/common/components/Button';
@@ -19,32 +21,18 @@ const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
 
-            <div className={classes.title}>
-                <Typography type="display4">
-                    Decentralized blockchain platform
-                </Typography>
-            </div>
-
-
-            <div className={classes.text}>
-                <Typography type="body">
-                    Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets
-                </Typography>
-            </div>
-
-
-            <div>
-                <div className={classes.buttonWrapper}>
-                    <Button>Get Client</Button>
-                </div>
-
-                <div className={classes.buttonWrapper}>
-                    <Button color="gray-50">Get Waves</Button>
-                </div>
+            <div className={classes.titleTextCtaWrapper}>
+                <TitleTextCTA
+                    title="Decentralized blockchain platform"
+                    text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
+                    buttons={[
+                        <Button key="main_cta_button">Get Client</Button>,
+                        <Button key="secondary_cta_button" color="gray-50">Get Waves</Button>
+                    ]}
+                />
             </div>
 
             <NumbersMain />
-
         </Col>
         <Col xs={12} md={6}>
             <Row>
