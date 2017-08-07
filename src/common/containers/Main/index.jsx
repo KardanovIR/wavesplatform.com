@@ -5,6 +5,11 @@ import Layout from '../../components/Layout';
 import Typography from '../../components/Typography';
 import { Row, Col } from '../../components/Grid';
 
+
+import Button from '../../components/Button';
+
+
+
 import NumbersMain from '../NumbersMain';
 
 
@@ -33,9 +38,9 @@ const PageLayout = ({ classes }) => (
                 <Typography type="body">
                     Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets
                     </Typography>
-                <Typography type="body">
-                    Get Client
-                    </Typography>
+                <br />
+                <br />
+                <Button>Get Client</Button>
                 <br />
                 <br />
                 <NumbersMain />

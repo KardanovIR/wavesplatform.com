@@ -66,7 +66,7 @@ export const numeral = {
 
 export const button = {
     fontSize: 13,
-    textTransforn: 'uppercase',
+    textTransform: 'uppercase',
     lineHeight: 'normal',
     letterSpacing: '1px',
 }

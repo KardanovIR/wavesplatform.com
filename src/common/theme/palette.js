@@ -30,7 +30,8 @@ const palette = {
     secondary,
     success,
     danger,
-    gray
+    gray,
+    getColor: color => palette[color.split('-')[0]][color.split('-')[1]]
 }
 
 export { palette }

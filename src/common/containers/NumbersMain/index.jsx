@@ -15,7 +15,7 @@ const styles = theme => ({
 
 
 const ColNumber = injectSheet(styles)(({ classes, children }) => 
-    <Col className={classes.numberWrapper} xs={12} md={6}>{ children }</Col>)
+    <Col className={classes.numberWrapper} xs={6}>{ children }</Col>)
 
 
 
