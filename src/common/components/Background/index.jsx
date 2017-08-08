@@ -10,12 +10,12 @@ const styles = {
     },
     background: {
         position: 'absolute',
-        width: 3000,
+        width: '100vw',
         height: '100%',
 
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%) rotate(-3deg)',
+        transform: 'translate(-50%, -50%) skewY(-3deg)',
 
         zIndex: -1
     }
