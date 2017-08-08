@@ -19,12 +19,12 @@ const MainScreen = ({ classes }) => (
             Decentralized Exchange (DEX)
         </Typography>
         <Row className={classes.root}>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={6}>
                 <div className={classes.imageWrapper}>
                     <div className={classes.image} />
                 </div>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={6}>
                 <Row className={classes.root}>
                     <Col xs={12} md={6}>
                         <Article
