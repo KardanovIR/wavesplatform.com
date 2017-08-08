@@ -14,6 +14,8 @@ import MainScreen from './lib/MainScreen';
 import Description from './lib/Description';
 import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
+import DEX from './lib/DEX';
+
 
 
 // styles
@@ -27,6 +29,7 @@ const PageLayout = ({ classes }) => (
         <Description />
         <WavesClient />
         <Wallet />
+        <DEX />
     </Layout>
 );
 
