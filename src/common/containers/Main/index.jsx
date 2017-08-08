@@ -16,6 +16,7 @@ import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
 import DEX from './lib/DEX';
 import Feedback from './lib/Feedback';
+import Facts from './lib/Facts';
 
 
 
@@ -81,6 +82,7 @@ const PageLayout = ({ classes: c }) => (
             avatar={<div style={{ height: 90, background: 'red' }} />}
         />
         <br />
+        <Facts />
         <br />
         <Feedback
             image={<div style={{ height: '100%', background: 'lightgreen' }} />}
