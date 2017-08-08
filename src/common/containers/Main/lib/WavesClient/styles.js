@@ -1,5 +1,8 @@
 import mockup from './img/mockup.png';
 
+import placeholder from 'src/common/styles/placeholder';
+
+
 
 const styles = theme => ({
     root: {
@@ -9,6 +12,7 @@ const styles = theme => ({
         position: 'relative',
         overflow: 'visible',
         paddingTop: '90%',
+        ...placeholder
     },
     image: {
         position: 'absolute',

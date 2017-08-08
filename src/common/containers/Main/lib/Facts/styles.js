@@ -12,8 +12,8 @@ const styles = theme => ({
         margin: '0 auto'
     },
     wrapper: {
-        borderTop: `1px solid ${theme.palette.gray[300]}`,
-        borderBottom: `1px solid ${theme.palette.gray[300]}`,
+        borderTop: `1px solid ${theme.palette.gray[50]}`,
+        borderBottom: `1px solid ${theme.palette.gray[50]}`,
     },
     [theme.mixins.atMedia('lg')]: {
         withMargin: {

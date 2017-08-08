@@ -1,6 +1,8 @@
 import mockup from './img/mockup.png';
 import deloitteLogo from './img/deloitte_logo.svg';
 
+import placeholder from 'src/common/styles/placeholder';
+
 
 const styles = theme => ({
     root: {
@@ -13,7 +15,7 @@ const styles = theme => ({
         position: 'relative',
         paddingTop: '75%',
         overflow: 'visible',
-        
+        ...placeholder,
     },
     image: {
         width: '90%',

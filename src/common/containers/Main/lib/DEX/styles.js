@@ -1,5 +1,7 @@
 import mockup from './img/mockup.png';
 
+import placeholder from 'src/common/styles/placeholder';
+
 
 const styles = theme => ({
     root: {
@@ -8,10 +10,14 @@ const styles = theme => ({
     title: {
         marginBottom: theme.spacing.unit * 4
     },
+    article: {
+        marginBottom: theme.spacing.unit * 4
+    },
     imageWrapper: {
         position: 'relative',
         paddingTop: '75%',
         overflow: 'visible',
+        ...placeholder
     },
     image: {
         width: '90%',
