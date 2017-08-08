@@ -20,7 +20,6 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
         };
 
         styles[`${breakpoint}-offset-${size}`] = {
-            // paddingLeft: `calc(${theme.spacing.unit * GUTTER_UNITS/2}px + ${width})`
             marginLeft: width
         };
     }

@@ -35,7 +35,7 @@ const Feedback = ({
             />
             <br/>
         </Col>
-        <Col xs={12} sm={5} smOffset={1}>
+        <Col xs={12} sm={6}>
             <Typography type="display2">
                 {title}
             </Typography>
