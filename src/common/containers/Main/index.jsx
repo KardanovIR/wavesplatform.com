@@ -18,6 +18,8 @@ import DEX from './lib/DEX';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
 import PlannedFeatures from './lib/PlannedFeatures';
+import JoinUs from './lib/JoinUs';
+import Subscribe from './lib/Subscribe';
 
 
 
@@ -97,6 +99,10 @@ const PageLayout = ({ classes: c }) => (
         />
 
         <PlannedFeatures />
+
+        <JoinUs />
+
+        <Subscribe />
 
     </Layout>
 );

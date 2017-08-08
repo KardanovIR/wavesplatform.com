@@ -2,6 +2,7 @@ import React from 'react';
 
 import Typography from 'src/common/components/Typography';
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
+import BlockQuote from 'src/common/components/BlockQuote';
 
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -37,13 +38,10 @@ const MainScreen = ({ classes }) => (
         <Col xs={12} md={6}>
             <Row>
                 <Col xs={12} className={classes.swappedToBottom}>
-                    <div className={classes.deloitte}>
+                    <BlockQuote align="right">
                         <div className={classes.deloitteLogo} />
-                        <Typography type="quote" color="gray-300">
-                            <div>In cooperation with our strategic partner Deloitte, we are changing the future of blockchain and creating the new economy</div>
-                        </Typography>
-                    </div>
-
+                        <div>In cooperation with our strategic partner Deloitte, we are changing the future of blockchain and creating the new economy</div>
+                    </BlockQuote>
                 </Col>
                 <Col xs={12} className={classes.swappedToTop + ' ' + classes.imageWrapper}>
                     <div className={classes.image} />

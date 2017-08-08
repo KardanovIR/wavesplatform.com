@@ -10,7 +10,7 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit*2
     },
     article: {
-        marginBottom: theme.spacing.unit*4
+        marginBottom: theme.spacing.unit*2
     }
 })
 
