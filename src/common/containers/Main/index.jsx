@@ -17,6 +17,7 @@ import Wallet from './lib/Wallet';
 import DEX from './lib/DEX';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
+import PlannedFeatures from './lib/PlannedFeatures';
 
 
 
@@ -94,6 +95,8 @@ const PageLayout = ({ classes: c }) => (
             signature="MobileGo Team"
             avatar={<div style={{ height: 90, background: 'green' }} />}
         />
+
+        <PlannedFeatures />
 
     </Layout>
 );

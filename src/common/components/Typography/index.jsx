@@ -10,6 +10,12 @@ const styles = theme => ({
     ...theme.typography,
     colored: {
         color: ({ color }) => theme.palette.getColor(color)
+    },
+    'align-right': {
+        textAlign: 'right'
+    },
+    'align-center': {
+        textAlign: 'center'
     }
 })
 
@@ -17,16 +23,26 @@ const styles = theme => ({
 
 const Typography = ({
     classes,
-    className,
+    className: classNameProp,
     type,
     tagName,
     tagMap,
-    children
+    children,
+    align
 }) => {
     const Tag = tagName || tagMap[type];
 
+    const className = cn(
+        classes[type],
+        classes.colored,
+        {
+            [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align
+        },
+        classNameProp
+    );
+
     return (
-        <Tag className={cn(classes[type], classes.colored, className)}>
+        <Tag className={className}>
             {children}
         </Tag>
     )
@@ -46,7 +62,8 @@ Typography.defaultProps = {
         'numeral': 'div'
     },
     className: '',
-    color: 'gray-900'
+    color: 'gray-900',
+    align: 'auto'
 }
 
 
