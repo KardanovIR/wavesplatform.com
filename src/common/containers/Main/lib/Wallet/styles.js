@@ -6,7 +6,7 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit * 3
     },
     background: {
-        backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0), ${theme.palette.gray[300]})`
+        backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0) 25%, ${theme.palette.gray[50]})`
     },
     [theme.mixins.atMedia('md')]: {
         root: {
