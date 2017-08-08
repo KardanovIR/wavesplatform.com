@@ -60,17 +60,21 @@ const FeedbackQuote = ({
     signature,
 }) => (
         <div className={classes.wrapper}>
-            <div className={classes.avatarWrapper}>
-                {avatar}
-            </div>
+            {avatar && (
+                <div className={classes.avatarWrapper}>
+                    {avatar}
+                </div>
+            )}
             <div>
                 <Typography type="quote" className={classes.quote}>
                     {children}
                 </Typography>
-                <br />
-                <Typography type="body">
-                    — {signature}
-                </Typography>
+                {signature && (
+                    <Typography type="body">
+                        <br />
+                        — {signature}
+                    </Typography>
+                )}
             </div>
         </div>
     )

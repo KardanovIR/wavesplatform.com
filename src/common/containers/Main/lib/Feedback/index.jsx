@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
@@ -13,30 +14,53 @@ import styles from './styles';
 
 
 
-const Description = ({ classes }) => (
+const Feedback = ({
+    classes,
+    image,
+    logo,
+    description,
+    website,
+    title,
+    quote,
+    signature,
+    avatar
+}) => (
     <Row className={classes.root}>
         <Col xs={12} sm={6} md={4}>
             <Image
-                logo={<div style={{ height: 20, background: 'red' }} />}
-                description="Worldwide coworking spaces for Tech Community"
-                website="primalbase.com"
+                image={image}
+                logo={logo}
+                description={description}
+                website={website}
             />
             <br/>
         </Col>
         <Col xs={12} sm={6} md={8}>
             <Typography type="display2">
-                Primalbase crowdsale ends after one day and over 3 000 BTC raised
+                {title}
             </Typography>
             <br />
             <Quote
-                avatar={<div style={{ height: 90, background: 'red' }} />}
-                signature="Primalbase Team"
+                avatar={avatar}
+                signature={signature}
             >
-                We are very grateful to all who participated early and provided strong support to this project. If you were unable to secure your token in time, please stay subscribed to our mailing list to keep informed about project developments and expansions. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants
+                {quote}
             </Quote>
         </Col>
     </Row>
 );
 
+Feedback.propTypes = {
+    image: PropTypes.node.isRequired,
+    logo: PropTypes.node.isRequired,
+    description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    quote: PropTypes.string.isRequired,
+    
+    signature: PropTypes.string,
+    website: PropTypes.string,
+    avatar: PropTypes.node,
+};
 
-export default injectSheet(styles)(Description);
+
+export default injectSheet(styles)(Feedback);

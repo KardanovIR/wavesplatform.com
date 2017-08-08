@@ -1,11 +1,8 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import cn from 'classnames';
 
 import Typography from 'src/common/components/Typography';
-
-
 
 
 const styles = theme => ({
@@ -14,7 +11,14 @@ const styles = theme => ({
         position: 'relative',
 
         paddingBottom: '110%',
-        background: theme.palette.primary[500],
+        background: theme.palette.gray[50],
+    },
+    imageWrapper: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
     },
     shade: {
         position: 'absolute',
@@ -50,12 +54,15 @@ const styles = theme => ({
 
 const CompanyImage = ({
     classes,
-    // className,
+    image,
     logo,
     website,
     description
 }) => (
         <div className={classes.wrapper}>
+            <div className={classes.imageWrapper}>
+                {image}
+            </div>
             <div className={classes.shade}>
                 <div className={classes.block}>
                     {logo}
