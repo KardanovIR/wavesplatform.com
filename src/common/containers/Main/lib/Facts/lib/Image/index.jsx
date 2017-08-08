@@ -10,7 +10,7 @@ const styles = theme => ({
         overflow: 'hidden',
         position: 'relative',
 
-        paddingBottom: '90%',
+        paddingBottom: '110%',
         background: theme.palette.gray[50],
     },
     imageWrapper: {
@@ -25,7 +25,7 @@ const styles = theme => ({
         bottom: 0,
         left: 0,
         right: 0,
-        padding: theme.spacing.getSpacing(4, 3, 3),
+        padding: theme.spacing.getSpacing(6, 4, 4),
         zIndex: 0,
 
         '&:before': {
@@ -47,11 +47,6 @@ const styles = theme => ({
     block: {
         marginBottom: theme.spacing.unit * 2,
         zIndex: 1
-    },
-    [theme.mixins.atMedia('md')]: {
-        shade: {
-            padding: theme.spacing.getSpacing(6, 4, 4)
-        }
     }
 })
 

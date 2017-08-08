@@ -22,20 +22,31 @@ const Column = ({
     md,
     lg,
     xl,
+
+    xsOffset,
+    smOffset,
+    mdOffset,
+    lgOffset,
+    xlOffset,
 }) => {
     const className = cn(
         classes.col,
         {
             [classes['xs']]: xs === true,
-            [classes[`xs-${xs}`]]: xs && xs !== true,
+            [classes[`xs-${String(xs)}`]]: xs && xs !== true,
             [classes['sm']]: sm === true,
-            [classes[`sm-${sm}`]]: sm && sm !== true,
+            [classes[`sm-${String(sm)}`]]: sm && sm !== true,
             [classes['md']]: md === true,
-            [classes[`md-${md}`]]: md && md !== true,
+            [classes[`md-${String(md)}`]]: md && md !== true,
             [classes['lg']]: lg === true,
-            [classes[`lg-${lg}`]]: lg && lg !== true,
+            [classes[`lg-${String(lg)}`]]: lg && lg !== true,
             [classes['xl']]: xl === true,
-            [classes[`xl-${xl}`]]: xl && xl !== true,
+            [classes[`xl-${String(xl)}`]]: xl && xl !== true,
+            [classes[`xs-offset-${String(xsOffset)}`]]: xsOffset,
+            [classes[`sm-offset-${String(smOffset)}`]]: smOffset,
+            [classes[`md-offset-${String(mdOffset)}`]]: mdOffset,
+            [classes[`lg-offset-${String(lgOffset)}`]]: lgOffset,
+            [classes[`xl-offset-${String(xlOffset)}`]]: xlOffset,
         },
         classNameProp,
     );
@@ -46,6 +57,10 @@ const Column = ({
             {children}
         </div>
     );
+}
+
+Column.defaultProps = {
+    className: ''
 }
 
 

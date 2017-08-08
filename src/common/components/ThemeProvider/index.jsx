@@ -18,6 +18,9 @@ const styles = {
         ...base,
         margin: 0,
         padding: 0
+    },
+    '@global #app': {
+        overflowX: 'hidden'
     }
 }
 

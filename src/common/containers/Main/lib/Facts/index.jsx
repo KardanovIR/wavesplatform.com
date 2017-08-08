@@ -26,7 +26,7 @@ const Feedback = ({
     avatar
 }) => (
     <Row className={classes.root}>
-        <Col xs={12} sm={6} className={classes.imageCol}>
+        <Col xs={12} sm={6} md={4}>
             <Image
                 image={image}
                 logo={logo}
@@ -35,7 +35,7 @@ const Feedback = ({
             />
             <br/>
         </Col>
-        <Col xs={12} sm={5} smOffset={1}>
+        <Col xs={12} sm={6} md={8}>
             <Typography type="display2">
                 {title}
             </Typography>
@@ -56,7 +56,7 @@ Feedback.propTypes = {
     description: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     quote: PropTypes.string.isRequired,
-
+    
     signature: PropTypes.string,
     website: PropTypes.string,
     avatar: PropTypes.node,

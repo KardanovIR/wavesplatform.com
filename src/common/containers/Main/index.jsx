@@ -72,7 +72,7 @@ const PageLayout = ({ classes: c }) => (
 
         <Feedback
             image={<div style={{ height: '100%', background: 'lightblue' }} />}
-            logo={<div style={{ height: 20, width: 100, background: 'lightred' }} />}
+            logo={<div style={{ height: 20, width: 100, background: 'red' }} />}
             description="Worldwide coworking spaces for Tech Community"
             website="primalbase.com"
             title="Primalbase crowdsale ends after one day and over 3 000 BTC raised"
