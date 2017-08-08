@@ -41,9 +41,9 @@ Typography.defaultProps = {
         'display3': 'h2',
         'display2': 'h3',
         'display1': 'h4',
-        'body': 'span',
-        'quote': 'span',
-        'numeral': 'span'
+        'body': 'div',
+        'quote': 'div',
+        'numeral': 'div'
     },
     className: '',
     color: 'gray-900'

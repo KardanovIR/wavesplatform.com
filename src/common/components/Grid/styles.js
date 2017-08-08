@@ -13,7 +13,7 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
         styles[`${breakpoint}-${size}`] = {
             flexBasis: width,
             maxWidth: width,
-            padding: theme.spacing.getSpacing(0, 1)
+            padding: theme.spacing.getSpacing(0, 1.5)
         };
     }
 

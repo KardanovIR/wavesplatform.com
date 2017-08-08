@@ -15,6 +15,7 @@ import Description from './lib/Description';
 import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
 import DEX from './lib/DEX';
+import Feedback from './lib/Feedback';
 
 
 
@@ -30,6 +31,7 @@ const PageLayout = ({ classes }) => (
         <WavesClient />
         <Wallet />
         <DEX />
+        <Feedback />
     </Layout>
 );
 
