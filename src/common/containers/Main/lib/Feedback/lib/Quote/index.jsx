@@ -1,10 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-// import cn from 'classnames';
-
 import Typography from 'src/common/components/Typography';
-// import { Row, Column } from 'src/common/components/Grid';
 
 
 const quoteStyles = {
@@ -45,10 +42,6 @@ const styles = theme => ({
             display: 'block'
         }
     }
-    // block: {
-    //     marginBottom: theme.spacing.unit * 2,
-    //     zIndex: 1
-    // }
 })
 
 
