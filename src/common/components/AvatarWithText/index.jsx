@@ -11,7 +11,6 @@ const styles = theme => ({
     wrapper: {
         display: 'flex',
         flexWrap: 'nowrap',
-        // alignContent: 'center'
         alignItems: 'center'
     },
     avatarWrapper: {
@@ -20,12 +19,9 @@ const styles = theme => ({
 
         margin: theme.spacing.getSpacing(0, 3, 0, 1),
         background: 'lightgrey',
-        borderRadius: '50%'
+        borderRadius: '50%',
+        overflow: 'hidden',
     },
-    textWrapper: {
-
-    },
-
     [theme.mixins.atMedia('md')]: {
         wrapper: {
             flexWrap: 'wrap',
@@ -35,10 +31,12 @@ const styles = theme => ({
         avatarWrapper: {
             height: theme.spacing.unit*10,
             flexBasis: theme.spacing.unit*10,
-            margin: theme.spacing.getSpacing(0, 0, 5, 0)
+            margin: theme.spacing.getSpacing(0, 0, 3, 0)
+        },
+        textWrapper: {
+            width: '100%'
         }
     }
-    
 })
 
 

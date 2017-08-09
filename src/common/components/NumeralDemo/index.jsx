@@ -8,13 +8,25 @@ import Icon from '../Icon';
 
 const styles = theme => ({
     wrapper: {
-        display: 'flex'
+        display: 'flex',
+        flexWrap: 'wrap'
     },
     icon: {
         width: 30,
         background: '#fafafa',
         borderRadius: '50%',
-        paddingRight: theme.spacing.unit
+        margin: theme.spacing.getSpacing(0, 0, 1, 0)
+    },
+    text: {
+        width: '100%'
+    },
+    [theme.mixins.atMedia('sm')]: {
+        wrapper: {
+            flexWrap: 'nowrap'
+        },
+        icon: {
+            margin: theme.spacing.getSpacing(0, 1, 0, 0)
+        },
     }
 })
 
@@ -25,12 +37,12 @@ const NumeralDemo = ({ classes, iconName, number, text }) => (
         <div className={classes.icon}>
             <Icon name={iconName} size={30} />
         </div>
-        <div>
+        <div className={classes.text}>
             <Typography type="numeral" tagName="div">
                 <span dangerouslySetInnerHTML={{ __html: number.toLocaleString('en').replace(/,/g, '&thinsp;') }} />
             </Typography>
             <Typography type="body" tagName="div">
-                { text }
+                {text}
             </Typography>
         </div>
     </div>

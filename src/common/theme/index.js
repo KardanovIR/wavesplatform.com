@@ -2,16 +2,21 @@ export { default as typeface } from './typeface';
 
 
 import palette from './palette';
-import typography from './typography';
 import breakpoints from './breakpoints';
-import spacing from './spacing';
 import mixins from './mixins';
 import transitions from './transitions';
+
+import createTypography from './typography';
+import createSpacing from './spacing';
+
+
+
+const spacing = createSpacing();
 
 
 const theme = {
     palette,
-    typography,
+    typography: createTypography({ spacingUnit: spacing.unit }),
     breakpoints,
     spacing,
     mixins,

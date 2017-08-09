@@ -126,5 +126,5 @@ module.exports = {
         // new ExtractTextPlugin('styles.css')
     ],
 
-    devtool: '#inline-source-map'
+    devtool: '#eval-source-map'
 };

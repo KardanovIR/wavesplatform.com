@@ -1,6 +1,6 @@
 const getFontColor = color => {
     // console.log(color)
-    if ( parseInt(color.split('-')[1]) > 400 ) {
+    if (parseInt(color.split('-')[1]) > 400) {
         return 'gray-0'
     } else {
         return 'gray-900'
@@ -9,13 +9,12 @@ const getFontColor = color => {
 
 
 const styles = theme => ({
-    root: {
+    button: {
         // RESET default browser styles
         background: 'none',
         border: 0,
         outline: 'none',
         font: 'inherit',
-        lineHeight: 'normal',
         '-webkit-user-select': 'none',
         '-moz-user-select': 'none',
         '-ms-user-select': 'none',
@@ -23,12 +22,16 @@ const styles = theme => ({
         cursor: 'pointer',
         borderRadius: theme.spacing.radius,
         backgroundColor: ({ color }) => theme.palette.getColor(color),
-        padding: theme.spacing.getSpacing(1.5, 4),
+
+        height: theme.spacing.inputHeight,
+        lineHeight: `${theme.spacing.inputHeight}px`,
+
+        padding: theme.spacing.getSpacing(0, 4),
 
         transition: theme.transitions.create('opacity'),
 
         '&:disabled': {
-            opacity: 0.3,
+            opacity: 0.6,
             pointerEvents: 'none'
         },
 
@@ -43,12 +46,21 @@ const styles = theme => ({
     content: {
         display: 'flex'
     },
+    contentHidden: {
+        opacity: 0
+    },
     icon: {
         marginRight: theme.spacing.unit / 2
     },
     text: {
         ...theme.typography.button,
         color: ({ color }) => theme.palette.getColor(getFontColor(color)),
+    },
+    spinner: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
     }
 })
 

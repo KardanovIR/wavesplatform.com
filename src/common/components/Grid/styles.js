@@ -1,4 +1,6 @@
 const getStylesForBreakpoint = (theme, breakpoint) => {
+    const GUTTER_UNITS = 3;
+
     const styles = {
         [breakpoint]: {
             flexBasis: 0,
@@ -8,12 +10,17 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
     };
 
     for (let size = 1; size <= 12; size++) {
+        // 6 significant digits
         const width = `${Math.round(size / 12 * Math.pow(10, 6)) / Math.pow(10, 4)}%`;
 
         styles[`${breakpoint}-${size}`] = {
             flexBasis: width,
             maxWidth: width,
-            padding: theme.spacing.getSpacing(0, 1)
+            padding: theme.spacing.getSpacing(0, GUTTER_UNITS/2)
+        };
+
+        styles[`${breakpoint}-offset-${size}`] = {
+            marginLeft: width
         };
     }
 
