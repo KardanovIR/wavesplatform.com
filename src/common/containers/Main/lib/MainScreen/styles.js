@@ -25,7 +25,7 @@ const styles = theme => ({
         height: '115%',
         position: 'absolute',
         zIndex: -1,
-        top: -50,
+        top: 0,
         right: -100,
 
         background: `url(${mockup}) no-repeat`,
@@ -46,9 +46,13 @@ const styles = theme => ({
         backgroundSize: '100%',
         marginBottom: theme.spacing.unit
     },
+    swappedToBottom: {
+        marginBottom: theme.spacing.unit * 2
+    },
     [theme.mixins.atMedia('md')]: {
         swappedToBottom: {
-            order: 1
+            order: 1,
+            maring: 0
         },
         swappedToTop: {
             order: 0
