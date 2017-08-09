@@ -1,3 +1,6 @@
+import flexCentered from 'src/common/styles/flexCentered';
+
+
 const styles = theme => ({
     root: {
         padding: theme.spacing.getSpacing(5, 0, 5),
@@ -7,6 +10,7 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit * 4
     },
     iconWrapper: {
+        ...flexCentered,
         float: 'left',
         width: 40,
         height: 40,

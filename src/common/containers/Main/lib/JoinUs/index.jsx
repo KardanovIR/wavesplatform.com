@@ -25,22 +25,22 @@ const MainScreen = ({ classes }) => (
             />
             <div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
                 <div className={classes.iconWrapper}>
-                    <Icon name="hamburger" size={40} color="gray-0" />
+                    <Icon name="hamburger" size={24} color="gray-0" />
                 </div>
             </div>
         </Col>
