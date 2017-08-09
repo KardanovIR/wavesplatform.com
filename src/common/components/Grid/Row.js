@@ -10,11 +10,7 @@ const styles = theme => ({
         boxSizing: 'border-box',
         display: 'flex',
         flexWrap: 'wrap',
-        width: 'auto',
         margin: theme.spacing.getSpacing(0, -1)
-        // '& $row': {
-        //     margin: theme.spacing.getSpacing(0, -1)
-        // }
     },
     centered: {
         justifyContent: 'center'

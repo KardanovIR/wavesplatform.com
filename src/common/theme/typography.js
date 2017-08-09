@@ -47,7 +47,7 @@ export const display1 = {
     ...display,
 
     fontSize: 18,
-    lineHeight: 1.83,
+    lineHeight: 1.4,
 }
 
 export const body = base
@@ -95,7 +95,7 @@ const creatyTypography = ({ spacingUnit = 8 }) => ({
         marginBottom: spacingUnit * 1.5
     },
     'margin-display1': {
-        marginBottom: spacingUnit / 2
+        marginBottom: spacingUnit
     },
     'margin-body': {
         marginBottom: spacingUnit
