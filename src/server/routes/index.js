@@ -9,7 +9,7 @@ import { render } from '../render';
 // page components
 import Main from '../../common/containers/Main';
 import Product from '../../common/containers/Product';
-// import Developers from '../../common/containers/Developers';
+import Developers from '../../common/containers/Developers';
 
 
 
@@ -18,7 +18,7 @@ const router = new Router();
 router
     .get('/', render('main', Main))
     .get('/product', render('product', Product))
-    .get('/developers', render('developers'))
+    .get('/developers', render('developers', Product))
     // .get('/product', async ctx => {
     //     ctx.body = view({ scriptUrl: 'product' });
     // })

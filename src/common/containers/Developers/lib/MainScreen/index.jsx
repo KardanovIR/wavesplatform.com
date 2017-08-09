@@ -15,7 +15,7 @@ const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
             <Typography type="display4" margin>
-                Product page
+                Developers page
             </Typography>
             <AvatarWithText
                 avatar={<div style={{background: 'pink', height: '100%'}} />}
