@@ -41,7 +41,7 @@ const Typography = ({
 
 
 Typography.defaultProps = {
-    type: 'body1',
+    type: 'body',
     tagName: '',
     tagMap: {
         'display4': 'h1',

@@ -1,12 +1,16 @@
 import React from 'react';
 // import styles from './styles';
 
+import Typography from 'src/common/components/Typography';
+
+
 
 import { EMPTY, EMAIL_INVALID } from '../../../../public/utils/validation/rules';
 
 
-const Empty = () => <span>Пожалуйста, введите email</span>
-const EmailInvalid = () => <span>Неверный адрес email</span>
+
+const Empty = () => <Typography color="gray-0">Пожалуйста, введите email</Typography>
+const EmailInvalid = () => <Typography color="gray-0">Неверный адрес email</Typography>
 
 
 const ErrorMessage = ({ errors }) => {

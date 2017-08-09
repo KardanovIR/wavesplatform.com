@@ -67,7 +67,7 @@ export const numeral = {
 export const button = {
     fontSize: 13,
     textTransform: 'uppercase',
-    lineHeight: 'normal',
+    lineHeight: '13px',
     letterSpacing: '1px',
 }
 
@@ -86,10 +86,10 @@ const creatyTypography = ({ spacingUnit = 8 }) => ({
 
     // default margins
     'margin-display4': {
-        marginBottom: spacingUnit * 2.5
+        marginBottom: spacingUnit * 3
     },
     'margin-display3': {
-        marginBottom: spacingUnit * 2
+        marginBottom: spacingUnit * 2.5
     },
     'margin-display2': {
         marginBottom: spacingUnit * 1.5
@@ -109,8 +109,6 @@ const creatyTypography = ({ spacingUnit = 8 }) => ({
     //     marginBottom: spacingUnit * 2
     // },
 
-
-
     [`@media (min-width: ${breakpoints.md}px)`]: {
         display4: { fontSize: 64 },
         display3: { fontSize: 44, lineHeight: 1.11, letterSpacing: 'normal' },
@@ -122,16 +120,16 @@ const creatyTypography = ({ spacingUnit = 8 }) => ({
         button: { fontSize: 15 },
 
         'margin-display4': {
-            marginBottom: spacingUnit * 4
+            marginBottom: spacingUnit * 5
         },
         'margin-display3': {
-            marginBottom: spacingUnit * 3
+            marginBottom: spacingUnit * 3.5
         },
         'margin-display2': {
-            marginBottom: spacingUnit * 2
+            marginBottom: spacingUnit * 2.5
         },
         'margin-display1': {
-            marginBottom: spacingUnit * 1.5
+            marginBottom: spacingUnit * 2
         },
         'margin-body': {
             marginBottom: spacingUnit * 1.5

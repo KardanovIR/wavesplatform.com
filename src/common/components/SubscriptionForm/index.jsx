@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+
+import injectSheet from 'react-jss';
 import styles from './styles';
+
+import Button from 'src/common/components/Button';
+import Input from 'src/common/components/Input';
 
 import ErrorMessage from './lib/ErrorMessage';
 
@@ -38,32 +43,42 @@ class SubscriptionForm extends Component {
 
     render() {
         const {
+            classes,
             errors,
             showErrors,
             status,
-            onStartOver
+            onStartOver,
         } = this.props;
 
-        return (
-            <div className={styles.wrapper}>
-                <b>Подписка на рассылку</b>
-                <br />
-                <br />
+        const invalid = !!(showErrors && errors.email.length);
 
+        return (
+            <div className={classes.wrapper}>
                 {status === 'idle' && (
                     <form onSubmit={this.handleSubmit}>
-                        <input
-                            type="text"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            onBlur={this.props.onBlur}
-                            placeholder="email@domain.com"
-                        />
-                        <br />
-                         {showErrors && <ErrorMessage errors={errors.email} />} 
-                        <br />
-                        <br/>
-                        <button type="submit">Submit</button>
+                        <div className={classes.inputs}>                           
+                            <div className={classes.inputWrapper}>
+                                <Input
+                                    className={classes.input} 
+                                    type="text"
+                                    value={this.state.email}
+                                    onChange={this.handleChange}
+                                    onBlur={this.props.onBlur}
+                                    placeholder="Email"
+                                    invalid={invalid}
+                                />
+                            </div>
+
+                            <div className={classes.buttonWrapper}>
+                                <Button type="submit" disabled={invalid}>
+                                    <span className={classes.buttonFull}>Submit</span>
+                                    <span className={classes.buttonIcon}>S</span>
+                                </Button>
+                            </div>
+                        </div>
+
+                        {showErrors && <ErrorMessage errors={errors.email} />}
+
                     </form>
                 )}
 
@@ -71,7 +86,7 @@ class SubscriptionForm extends Component {
                     <div>
                         <div>Спасибо за подписку!</div>
                         <div>Скоро вы вышлем вам первое письмо на {this.state.email}</div>
-                        <br/>
+                        <br />
                         {!!onStartOver && (
                             <a href="#" onClick={this.handleStartOver}>Подписаться на другой адрес</a>
                         )}
@@ -81,7 +96,7 @@ class SubscriptionForm extends Component {
                 {status === 'error' && (
                     <div>
                         <div>Кажется, что-то пошло не так...</div>
-                        <br/>
+                        <br />
                         {!!onStartOver && (
                             <a href="#" onClick={this.handleStartOver}>Попробовать ещё раз</a>
                         )}
@@ -98,4 +113,4 @@ class SubscriptionForm extends Component {
 }
 
 
-export default SubscriptionForm;
+export default injectSheet(styles)(SubscriptionForm);

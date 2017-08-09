@@ -18,10 +18,10 @@ const styles = theme => ({
 
 const Article = ({ classes, title, text }) => (
     <div className={classes.article}>
-        <Typography type="display1" tagName="div" className={classes.title}>
+        <Typography type="body" tagName="div" margin>
             { title }
         </Typography>
-        <Typography type="bdy" tagName="div">
+        <Typography type="body" tagName="div">
             { text }
         </Typography>
     </div>

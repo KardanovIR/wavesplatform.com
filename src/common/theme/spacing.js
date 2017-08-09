@@ -13,12 +13,13 @@ const getSpacing = unit => (top, right, bottom, left) => {
 
 
 
-const createSpacing = (unit, radius) => ({
+const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
     unit,
     radius,
+    inputHeight,
     getSpacing: getSpacing(unit)
 })
 
 
 
-export default createSpacing(8, 4);
+export default createSpacing;

@@ -12,6 +12,9 @@ const styles = theme => ({
     root: {
         ...theme.typography.body,
 
+        height: theme.spacing.inputHeight,
+        lineHeight: `${theme.spacing.inputHeight}px`,
+
         // RESET default browser styles
         margin: 0,
         outline: 'none',
@@ -21,14 +24,14 @@ const styles = theme => ({
         verticalAlign: 'middle',
         whiteSpace: 'normal',
         background: 'none',
-        lineHeight: 1,
 
         borderRadius: theme.spacing.radius,
 
         backgroundColor: ({ color }) => theme.palette.getColor(color),
         color: ({ color }) => theme.palette.getColor(getFontColor(color)),
 
-        padding: theme.spacing.getSpacing(1.5, 1.5),
+        boxSizing: 'border-box',
+        padding: theme.spacing.getSpacing(0, 1.5),
 
         transition: theme.transitions.create('opacity'),
     },
@@ -37,7 +40,7 @@ const styles = theme => ({
         pointerEvents: 'none'
     },
     invalid: {
-        border: '1px solid red'
+        boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
     }
 })
 

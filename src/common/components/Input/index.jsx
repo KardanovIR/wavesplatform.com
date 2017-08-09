@@ -19,7 +19,7 @@ class Input extends PureComponent {
             disabled,
             invalid,
             theme, // eslint-disable-line
-            // theme, // eslint-disable-line
+            sheet, // eslint-disable-line
             ...rest
         } = this.props;
 
