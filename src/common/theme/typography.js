@@ -73,7 +73,7 @@ export const button = {
 
 
 
-const typography = {
+const creatyTypography = ({ spacingUnit = 8 }) => ({
     display1,
     display2,
     display3,
@@ -82,6 +82,34 @@ const typography = {
     quote,
     numeral,
     button,
+
+
+    // default margins
+    'margin-display4': {
+        marginBottom: spacingUnit * 2.5
+    },
+    'margin-display3': {
+        marginBottom: spacingUnit * 2
+    },
+    'margin-display2': {
+        marginBottom: spacingUnit * 1.5
+    },
+    'margin-display1': {
+        marginBottom: spacingUnit / 2
+    },
+    'margin-body': {
+        marginBottom: spacingUnit
+    },
+    'margin-quote': {
+        marginBottom: spacingUnit
+    },
+
+    // pairings
+    // 'margin-display4-body': {
+    //     marginBottom: spacingUnit * 2
+    // },
+
+
 
     [`@media (min-width: ${breakpoints.md}px)`]: {
         display4: { fontSize: 64 },
@@ -92,8 +120,28 @@ const typography = {
         quote: { fontSize: 17, lineHeight: 1.76 },
         numeral: { fontSize: 30 },
         button: { fontSize: 15 },
-    }
-}
 
-export { typography }
-export default typography
+        'margin-display4': {
+            marginBottom: spacingUnit * 4
+        },
+        'margin-display3': {
+            marginBottom: spacingUnit * 3
+        },
+        'margin-display2': {
+            marginBottom: spacingUnit * 2
+        },
+        'margin-display1': {
+            marginBottom: spacingUnit * 1.5
+        },
+        'margin-body': {
+            marginBottom: spacingUnit * 1.5
+        },
+        'margin-quote': {
+            marginBottom: spacingUnit * 1.5
+        },
+    }
+})
+
+
+export { creatyTypography }
+export default creatyTypography

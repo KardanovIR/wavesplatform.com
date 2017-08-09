@@ -22,6 +22,9 @@ const Subscribe = ({ classes }) => (
             <Typography type="body" className={classes.text} color="gray-0">
                 We do more than just develop more the technical aspect of the platform, we also participate actively in integrating blockchain economy in the real world. Subscribe to our news to keep up to date with all the most interesting happenings.
             </Typography>
+            <Typography type="body" className={classes.text} color="gray-0">
+                We do more than just develop more the technical aspect of the platform, we also participate actively in integrating blockchain economy in the real world. Subscribe to our news to keep up to date with all the most interesting happenings.
+            </Typography>
              <Input />
              <Button>Subscribe</Button> 
         </div>
