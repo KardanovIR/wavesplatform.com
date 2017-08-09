@@ -7,18 +7,18 @@ import cn from 'classnames';
 
 const styles = theme => ({
     root: {
-        padding: theme.spacing.getSpacing(2),
+        padding: theme.spacing.getSpacing(2.5, 3),
         borderRadius: theme.spacing.radius,
     },
     light: {
         border: `1px solid ${theme.palette.gray[300]}`
     },
     dark: {
-        background: theme.palette.gray[300]
+        background: theme.palette.gray[900]
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            padding: theme.spacing.getSpacing(4),
+            padding: theme.spacing.getSpacing(4, 5, 4.5),
             borderRadius: theme.spacing.radius,
         },
     }
@@ -33,7 +33,7 @@ const Panel = ({
     dark
 }) => (
         <div
-            className={cn(classes.wrapper, {
+            className={cn(classes.root, {
                 [classes.light]: !dark,
                 [classes.dark]: dark,
             }, className)}
@@ -42,6 +42,6 @@ const Panel = ({
         </div>
     )
 
-    
+
 
 export default injectSheet(styles)(Panel);

@@ -3,8 +3,10 @@ import React from 'react';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
-// import Typography from 'src/common/components/Typography';
-// import { Row, Col } from 'src/common/components/Grid';
+
+import Typography from 'src/common/components/Typography';
+import Panel from 'src/common/components/Panel';
+import { Row, Col } from 'src/common/components/Grid';
 // import Button from 'src/common/components/Button';
 
 
@@ -53,31 +55,22 @@ const PageLayout = ({ classes }) => (
         {/* <Description /> */}
         {/* <WavesClient /> */}
 
-        
+        <Row>
+            <Col xs={12} md={6}>
+                <Panel dark>
+                    <Typography type="display1" margin>
+                        MainNet
+                    </Typography>
+                    <Typography type="body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis autem eum modi magni ut dignissimos atque sapiente pariatur illum.
+                    </Typography>
+                </Panel>
+            </Col>
+        </Row>
 
-        <Feedback
-            image={<div style={{ height: '100%', background: 'lightblue' }} />}
-            logo={<div style={{ height: 20, width: 100, background: 'red' }} />}
-            description="Worldwide coworking spaces for Tech Community"
-            website="primalbase.com"
-            title="Primalbase crowdsale ends after one day and over 3 000 BTC raised"
-            quote="We are very grateful to all who participated early and provided strong support to this project. If you were unable to secure your token in time, please stay subscribed to our mailing list to keep informed about project developments and expansions. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants"
-            signature="Primalbase Team"
-            avatar={<div style={{ height: 90, background: 'red' }} />}
-        />
-        <br />
-         <Facts /> 
-        <br />
-        <Feedback
-            image={<div style={{ height: '100%', background: 'lightgreen' }} />}
-            logo={<div style={{ height: 20, width: 100, background: 'lightgreen' }} />}
-            description="The Crypto-Centric Mobile Gaming Platform and Store"
-            website="mobilego.io"
-            title="MobileGo becomes largest blockchain crowdsale in history!"
-            quote="	There are advances being made in science and technology everyday, and a good example of this is the LCD monitor. LCD monitors have several benefits over the old chunky computer monitors that most users are familiar with. Old computer monitors, take up quite a bit of desktop space, put out a ton of heat, drain a ton of energy, and most often have low picture quality and resolution. Modern advances with the LCD computer monitors have changed"
-            signature="MobileGo Team"
-            avatar={<div style={{ height: 90, background: 'green' }} />}
-        />
+        <br/>
+        <br/>
+        <br/>
 
     </Layout>
 );
