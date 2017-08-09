@@ -28,7 +28,7 @@ const MainScreen = ({ classes }) => (
                     text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
                     buttons={[
                         <Button key="main_cta_button">Get Client</Button>,
-                        <Button key="secondary_cta_button" color="gray-50">Get Waves</Button>
+                        <Button className={classes.secondaryButton} key="secondary_cta_button" color="gray-50">Get Waves</Button>
                     ]}
                 />
             </div>

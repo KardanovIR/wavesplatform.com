@@ -1,23 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import cn from 'classnames';
 
 import injectSheet from 'react-jss';
+import styles from './styles';
 
-
-
-const styles = theme => ({
-    ...theme.typography,
-    colored: {
-        color: ({ color }) => theme.palette.getColor(color)
-    },
-    'align-right': {
-        textAlign: 'right'
-    },
-    'align-center': {
-        textAlign: 'center'
-    }
-})
 
 
 
@@ -28,7 +16,8 @@ const Typography = ({
     tagName,
     tagMap,
     children,
-    align
+    align,
+    margin
 }) => {
     const Tag = tagName || tagMap[type];
 
@@ -36,7 +25,9 @@ const Typography = ({
         classes[type],
         classes.colored,
         {
-            [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align
+            [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align,
+            [classes[`margin-${String(type)}`]]: margin === true,
+            [classes[`margin-${String(type)}-${String(margin)}`]]: margin && margin !== true
         },
         classNameProp
     );
@@ -64,6 +55,21 @@ Typography.defaultProps = {
     className: '',
     color: 'gray-900',
     align: 'auto'
+}
+
+const types = [
+    'display4',
+    'display3',
+    'display2',
+    'display1',
+    'body',
+    'quote',
+    'numeral'
+]
+
+Typography.propTypes = {
+    type: PropTypes.oneOf(types).isRequired,
+    margin: PropTypes.oneOf([true, ...types])
 }
 
 
