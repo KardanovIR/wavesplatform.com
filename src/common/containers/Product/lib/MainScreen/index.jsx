@@ -1,16 +1,9 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
-import TitleTextCTA from 'src/common/components/TitleTextCTA';
-import BlockQuote from 'src/common/components/BlockQuote';
+import AvatarWIthText from 'src/common/components/AvatarWIthText';
 
 import { Row, Col } from 'src/common/components/Grid';
-
-import Button from 'src/common/components/Button';
-
-import NumbersMain from 'src/common/containers/NumbersMain';
-
-
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -21,32 +14,26 @@ import styles from './styles';
 const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
-
-            <div className={classes.titleTextCtaWrapper}>
-                <TitleTextCTA
-                    title="Decentralized blockchain platform"
-                    text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
-                    buttons={[
-                        <Button key="main_cta_button">Get Client</Button>,
-                        <Button className={classes.secondaryButton} key="secondary_cta_button" color="gray-50">Get Waves</Button>
-                    ]}
-                />
-            </div>
-
-            <NumbersMain />
+            <Typography type="display4" margin>
+                Product page
+            </Typography>
+            <AvatarWIthText
+                avatar={<div style={{background: 'pink', height: '100%'}} />}
+                text="Wallet"
+            />
+            <AvatarWIthText
+                avatar={<div style={{background: 'pink', height: '100%'}} />}
+                text="Decentralized exchange"
+            />
+            <AvatarWIthText
+                avatar={<div style={{background: 'pink', height: '100%'}} />}
+                text="Issuing tokens"
+            />
         </Col>
         <Col xs={12} md={6}>
-            <Row>
-                <Col xs={12} className={classes.swappedToBottom}>
-                    <BlockQuote align="right">
-                        <div className={classes.deloitteLogo} />
-                        <div>In cooperation with our strategic partner Deloitte, we are changing the future of blockchain and creating the new economy</div>
-                    </BlockQuote>
-                </Col>
-                <Col xs={12} className={classes.swappedToTop + ' ' + classes.imageWrapper}>
-                    <div className={classes.image} />
-                </Col>
-            </Row>
+            <div className={classes.imageWrapper}>
+                <div className={classes.image} />
+            </div>
         </Col>
     </Row>
 );
