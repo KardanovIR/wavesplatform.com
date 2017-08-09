@@ -19,7 +19,7 @@ module.exports = {
         main: 'src/public/entries/main',
         // company: 'src/public/entries/company',
         developers: 'src/public/entries/developers',
-        // product: 'src/public/entries/product',
+        product: 'src/public/entries/product',
     }),
 
     target: 'web',
