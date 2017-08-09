@@ -8,9 +8,13 @@ export default theme => ({
     icon: {
         ...flexCentered,
         display: 'block',
-        width: 40,
-        height: 40,
-        margin: '0 auto'
+        width: 30,
+        height: 30,
+        margin: '0 auto',
+        transition: theme.transitions.create('opacity'),
+        '&:hover': {
+            opacity: 0.6
+        }
     },
     [theme.mixins.atMedia('md')]: {
         wrapper: {

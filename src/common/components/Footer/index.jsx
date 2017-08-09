@@ -17,7 +17,7 @@ import FooterNav from './lib/FooterNav';
 const Footer = ({ classes, links }) => (
     <Background className={classes.background} skewed={false}>
         <footer className={classes.root}>
-            <Row>
+            <Row className={classes.row}>
                 <Col xs={12} sm={12} md={6} className={classes.social}>
                     <Social />
                 </Col>
@@ -28,19 +28,21 @@ const Footer = ({ classes, links }) => (
                 </Col>
 
                 <Col xs={12} md={6} className={classes.language}>
-                    <Typography color="gray-50" type="body">
+                    <Typography color="gray-300" type="body">
                         English
                     </Typography>
                 </Col>
 
                 <Col xs={12} md={6} className={classes.copyright}>
-                    <Typography color="gray-300" type="body">
+                    <Typography color="gray-500" type="body">
                         © Waves Platform
                     </Typography>
                 </Col>
 
                 <Col xs={12} md={1} className={classes.logo}>
-                    <Icon name="logo" size={40} />
+                    <a href="/">
+                        <Icon name="logo" size={40} />
+                    </a>
                 </Col>
             </Row>
         </footer>

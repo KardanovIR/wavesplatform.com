@@ -12,7 +12,9 @@ import Icon from '../Icon';
 const Nav = ({ classes, links }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
-            <Icon name="logo" size={40} />
+            <a href="/">
+                <Icon name="logo" size={40} />
+            </a>
         </div>
 
         <div className={classes.navContainer}>

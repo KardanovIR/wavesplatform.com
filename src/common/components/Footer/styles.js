@@ -1,16 +1,13 @@
 import flexCentered from '../../styles/flexCentered';
 
-const addPadding = theme => ({
-    padding: theme.spacing.getSpacing(2, 0),
-    [theme.mixins.atMedia('md')]: {
-        padding: theme.spacing.getSpacing(2, 0), 
-    }
-})
 
 export default theme => ({
     root: {
         marginTop: -50,
         padding: theme.spacing.getSpacing(6, 0, 4)
+    },
+    row: {
+        alignItems: 'center'
     },
     background: {
         background: theme.palette.gray[900],
@@ -20,7 +17,6 @@ export default theme => ({
     // blocks
     social: {
         marginBottom: theme.spacing.unit * 4,
-        // ...addPadding(theme),
     },
     nav: {
         marginBottom: theme.spacing.unit * 3

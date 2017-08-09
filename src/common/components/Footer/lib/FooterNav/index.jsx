@@ -3,18 +3,22 @@ import styles from './styles';
 
 import injectSheet from 'react-jss';
 
+import Typography from 'src/common/components/Typography';
+
 
 
 const FooterNav = ({ classes, links }) => (
     <div>
         {links.map((link, index) => (
-            <a
-                key={`desktop_nav_link${index}`}
-                href={link.href}
-                className={classes.link}
-            >
-                {link.text}
-            </a>
+            <Typography key={`desktop_nav_link${index}`} tagName="span" color="gray-50">
+                <a
+                    key={`desktop_nav_link${index}`}
+                    href={link.href}
+                    className={classes.link}
+                >
+                    {link.text}
+                </a>
+            </Typography>
         ))}
     </div>
 )
