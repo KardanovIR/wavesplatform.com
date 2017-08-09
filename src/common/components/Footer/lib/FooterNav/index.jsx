@@ -5,7 +5,7 @@ import injectSheet from 'react-jss';
 
 
 
-const DexktopNav = ({ classes, links }) => (
+const FooterNav = ({ classes, links }) => (
     <div>
         {links.map((link, index) => (
             <a
@@ -21,4 +21,4 @@ const DexktopNav = ({ classes, links }) => (
 
 
 
-export default injectSheet(styles)(DexktopNav);
+export default injectSheet(styles)(FooterNav);

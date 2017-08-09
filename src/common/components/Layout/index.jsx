@@ -2,6 +2,7 @@ import React from 'react';
 
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
+import Footer from '../Footer';
 
 import links from './links';
 
@@ -16,23 +17,11 @@ const styles = {
 
 
 const Layout = ({ children }) => (
-    <div>
-        <Wrapper>
-            <Navigation links={links} />
-            <br />
-            <br />
-            <div>{children}</div>
-            <br />
-            <br />
-        </Wrapper>
-        <footer style={{ background: '#acacac' }}>
-            <br />
-            <br />
-            This is a footer
-            <br />
-            <br />
-        </footer>
-    </div>
+    <Wrapper>
+        <Navigation links={links} />
+        <div>{children}</div>
+        <Footer links={links} />
+    </Wrapper>
 )
 
 
