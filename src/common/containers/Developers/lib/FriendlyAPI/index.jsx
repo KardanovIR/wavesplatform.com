@@ -45,12 +45,10 @@ const FriendlyAPI = ({ classes }) => (
                 </IconButton>
             </Margin>
             <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="github" color="gray-300">
+                <IconButton iconName="swagger" color="gray-300">
                     Swagger
                 </IconButton>
             </Margin>
-
-
         </Col>
         <Col xs={12} md={6}>
         </Col>

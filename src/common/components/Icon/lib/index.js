@@ -11,6 +11,7 @@ export default {
     hamburger: CustomIcon,
     cross: CustomIcon,
     logo: CustomIcon,
+    swagger: CustomIcon,
 
     // social
     twitter: FaTwitter,
