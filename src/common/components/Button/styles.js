@@ -53,7 +53,7 @@ const styles = theme => ({
         opacity: 0
     },
     icon: {
-        marginRight: theme.spacing.unit * 2
+        marginRight: theme.spacing.unit * 1.5
     },
     text: {
         ...theme.typography.button,

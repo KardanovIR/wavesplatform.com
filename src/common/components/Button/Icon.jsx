@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 import Button from './';
 import Icon from 'src/common/components/Icon';
@@ -13,5 +15,9 @@ const IconButton = ({ iconName, ...rest }) =>
         { ...rest}
     />
 
+
+IconButton.PropTypes = {
+    iconName: PropTypes.string.isRequired,
+}
 
 export default IconButton;

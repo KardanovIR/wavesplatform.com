@@ -27,6 +27,11 @@ const styles = theme => ({
         backgroundSize: '100%',
         transform: 'rotate(-6deg)',
         marginBottom: theme.spacing.unit * 2
+    },
+    [theme.mixins.atMedia('md')]: {
+        buttonWrapper: {
+            display: 'inline-block'
+        }
     }
 })
 

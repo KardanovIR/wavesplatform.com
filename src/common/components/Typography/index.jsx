@@ -16,8 +16,7 @@ const Typography = ({
     tagName,
     tagMap,
     children,
-    align,
-    margin
+    align
 }) => {
     const Tag = tagName || tagMap[type];
 
@@ -26,8 +25,8 @@ const Typography = ({
         classes.colored,
         {
             [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align,
-            [classes[`margin-${String(type)}`]]: margin === true,
-            [classes[`margin-${String(type)}-${String(margin)}`]]: margin && margin !== true
+            // [classes[`margin-${String(type)}`]]: margin === true,
+            // [classes[`margin-${String(type)}-${String(margin)}`]]: margin && margin !== true
         },
         classNameProp
     );
@@ -69,7 +68,7 @@ const types = [
 
 Typography.propTypes = {
     type: PropTypes.oneOf(types).isRequired,
-    margin: PropTypes.oneOf([true, ...types])
+    // margin: PropTypes.oneOf([true, ...types])
 }
 
 

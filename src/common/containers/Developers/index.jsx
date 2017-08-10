@@ -14,10 +14,8 @@ import { Row, Col } from 'src/common/components/Grid';
 // lib
 import MainScreen from './lib/MainScreen';
 import FriendlyAPI from './lib/FriendlyAPI';
-// import Description from './lib/Description';
-// import WavesClient from './lib/WavesClient';
-// import Wallet from './lib/Wallet';
-// import DEX from './lib/DEX';
+import WavesNode from './lib/WavesNode';
+import DEX from './lib/DEX';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
 // import PlannedFeatures from './lib/PlannedFeatures';
@@ -54,6 +52,8 @@ const PageLayout = ({ classes }) => (
     <Layout>
         <MainScreen />
         <FriendlyAPI />
+        <WavesNode />
+        <DEX />
 
         <Row>
             <Col xs={12} md={6}>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
 
@@ -7,7 +8,7 @@ import styles from './styles';
 
 
 
-const Spaced = ({
+const Margin = ({
     classes,
     className: classNameProp,
     theme,	// eslint-disable-line
@@ -17,6 +18,9 @@ const Spaced = ({
     right,
     bottom,
     left,
+    
+    display,
+
     ...rest
 }) => {
     const className = classNames({
@@ -28,6 +32,7 @@ const Spaced = ({
         [classes[`margin-bottom-${String(bottom)}`]]: typeof bottom === 'number',
         [classes['margin-left-2']]: left === true,
         [classes[`margin-left-${String(left)}`]]: typeof left === 'number',
+        [classes['inline-block']]: display === 'inline-block'
     }, classNameProp);
 
 
@@ -35,4 +40,13 @@ const Spaced = ({
 }
 
 
-export default injectSheet(styles)(Spaced);
+Margin.defaultProps = {
+    bottom: true
+}
+
+Margin.protTypes = {
+    display: PropTypes.oneOf(['inline-block'])
+}
+
+
+export default injectSheet(styles)(Margin);
