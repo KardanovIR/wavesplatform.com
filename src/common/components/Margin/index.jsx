@@ -23,12 +23,17 @@ const Margin = ({
 
     ...rest
 }) => {
+    const noMarginSpecified = typeof top === 'undefined'
+        && typeof right === 'undefined'
+        && typeof bottom === 'undefined'
+        && typeof left === 'undefined';
+
     const className = classNames({
         [classes['margin-top-2']]: top === true,
         [classes[`margin-top-${String(top)}`]]: typeof top === 'number',
         [classes['margin-right-2']]: right === true,
         [classes[`margin-right-${String(right)}`]]: typeof right === 'number',
-        [classes['margin-bottom-2']]: bottom === true,
+        [classes['margin-bottom-2']]: bottom === true || noMarginSpecified,
         [classes[`margin-bottom-${String(bottom)}`]]: typeof bottom === 'number',
         [classes['margin-left-2']]: left === true,
         [classes[`margin-left-${String(left)}`]]: typeof left === 'number',
@@ -37,11 +42,6 @@ const Margin = ({
 
 
     return <div className={className} { ...rest } />
-}
-
-
-Margin.defaultProps = {
-    bottom: true
 }
 
 Margin.protTypes = {

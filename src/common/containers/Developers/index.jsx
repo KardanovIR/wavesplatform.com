@@ -16,8 +16,9 @@ import MainScreen from './lib/MainScreen';
 import FriendlyAPI from './lib/FriendlyAPI';
 import WavesNode from './lib/WavesNode';
 import DEX from './lib/DEX';
-import Feedback from './lib/Feedback';
-import Facts from './lib/Facts';
+import WavesNetwork from './lib/WavesNetwork';
+import Community from './lib/Community';
+
 // import PlannedFeatures from './lib/PlannedFeatures';
 // import JoinUs from './lib/JoinUs';
 // import Subscribe from './lib/Subscribe';
@@ -54,19 +55,8 @@ const PageLayout = ({ classes }) => (
         <FriendlyAPI />
         <WavesNode />
         <DEX />
-
-        <Row>
-            <Col xs={12} md={6}>
-                <Panel dark>
-                    <Typography type="display1" margin>
-                        MainNet
-                    </Typography>
-                    <Typography type="body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis autem eum modi magni ut dignissimos atque sapiente pariatur illum.
-                    </Typography>
-                </Panel>
-            </Col>
-        </Row>
+        <WavesNetwork />
+        <Community />
 
         <br/>
         <br/>

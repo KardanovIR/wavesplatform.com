@@ -30,7 +30,8 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         buttonWrapper: {
-            display: 'inline-block'
+            display: 'inline-block',
+            verticalAlign: 'middle'
         }
     }
 })

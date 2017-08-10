@@ -12,7 +12,8 @@ import injectSheet from 'react-jss';
 const styles = theme => ({
     [theme.mixins.atMedia('md')]: {
         buttonWrapper: {
-            display: 'inline-block'
+            display: 'inline-block',
+            verticalAlign: 'middle'
         }
     }
 })
@@ -21,7 +22,7 @@ const styles = theme => ({
 const FriendlyAPI = ({ classes }) => (
     <Row>
         <Col xs={12} md={8} lg={7}>
-            <Typography type="display1" margin>
+            <Typography type="display2" margin>
                 Developer-Friendly API
             </Typography>
             <Typography type="body" margin>

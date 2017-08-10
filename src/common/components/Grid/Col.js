@@ -28,6 +28,11 @@ const Column = ({
     mdOffset,
     lgOffset,
     xlOffset,
+
+    theme, 	// eslint-disable-line
+    sheet,	// eslint-disable-line
+
+    ...rest
 }) => {
     const className = cn(
         classes.col,
@@ -53,7 +58,7 @@ const Column = ({
 
 
     return (
-        <div className={className}>
+        <div className={className} { ...rest }>
             {children}
         </div>
     );

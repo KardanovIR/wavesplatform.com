@@ -50,6 +50,10 @@ const styles = theme => ({
     },
     'align-center': {
         textAlign: 'center'
+    },
+    
+    noMargin: {
+        margin: '0 !important'
     }
 })
 

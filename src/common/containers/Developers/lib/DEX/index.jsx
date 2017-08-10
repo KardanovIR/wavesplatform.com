@@ -17,9 +17,10 @@ import styles from './styles';
 
 const MainScreen = ({ classes }) => (
     <div>
-        <Typography type="display2" margin>
+        <Typography type="display2">
             Decentralized Exchange (DEX)
         </Typography>
+        <Margin bottom={4} />
         <Row className={classes.root}>
             <Col xs={12} sm={6}>
                 <div className={classes.imageWrapper}>
@@ -27,21 +28,17 @@ const MainScreen = ({ classes }) => (
                 </div>
             </Col>
             <Col xs={12} sm={6}>
-                <Typography type="body" margin>
+                <Typography type="body">
                     Our nodes contain an order matcher which is used as decentralized exchange — it enables token trades that don’t require transferring them from the blockchain to a centralized exchange. All operations within the DEX are secure and validated by blockchain nodes.
                 </Typography>
-                <Typography type="body" margin>
+                <Typography type="body">
                     Since the DEX is open source and a part of every node, each user can run their own instance of the DEX.
                 </Typography>
-                <Typography type="body" margin>
+                <Typography type="body">
                     The matcher exposes its own REST API for accessing the order book and submitting orders. This allows users to implement any kind of trading UI or trading robots.
                 </Typography>
 
-                <Margin bottom={3}>
-                    <Typography type="body" margin>
-                        Decentralized Exchange (DEX)
-                    </Typography>
-                </Margin>
+                <Margin bottom={4} />
 
                 <IconButton iconName="github">DEX API</IconButton>
             </Col>
