@@ -11,7 +11,7 @@ export const getPreloadedState = () => window.__PRELOADED_STATE || {};
 export const render = (Component, callback = () => {}) => {
     const appNode = document.getElementById('app');
 
-    reactDomRender(
+    return reactDomRender(
         Component,	
         appNode,
         () => {

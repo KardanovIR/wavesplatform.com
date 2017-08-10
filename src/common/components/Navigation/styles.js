@@ -1,5 +1,6 @@
 export default theme => ({
     wrapper: {
+        marginBottom: theme.spacing.unit*4,
         '&:after': {
             content: '""',
             display: 'block',

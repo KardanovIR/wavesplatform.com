@@ -7,18 +7,18 @@ import notFound from 'src/server/views/404';
 import { render } from '../render';
 
 // page components
-import Main from '../../common/containers/Main';
-import Product from '../../common/containers/Product';
-import Developers from '../../common/containers/Developers';
+// import Main from '../../common/containers/Main';
+// import Product from '../../common/containers/Product';
+// import Developers from '../../common/containers/Developers';
 
 
 
 const router = new Router();
 
 router
-    .get('/', render('main', Main))
-    .get('/product', render('product', Product))
-    .get('/developers', render('developers', Product))
+    .get('/', render('main'))
+    .get('/product', render('product'))
+    .get('/developers', render('developers'))
     // .get('/product', async ctx => {
     //     ctx.body = view({ scriptUrl: 'product' });
     // })

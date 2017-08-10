@@ -13,6 +13,7 @@ import { Row, Col } from 'src/common/components/Grid';
 
 // lib
 import MainScreen from './lib/MainScreen';
+import FriendlyAPI from './lib/FriendlyAPI';
 // import Description from './lib/Description';
 // import WavesClient from './lib/WavesClient';
 // import Wallet from './lib/Wallet';
@@ -52,8 +53,7 @@ const styles = theme => ({
 const PageLayout = ({ classes }) => (
     <Layout>
         <MainScreen />
-        {/* <Description /> */}
-        {/* <WavesClient /> */}
+        <FriendlyAPI />
 
         <Row>
             <Col xs={12} md={6}>
