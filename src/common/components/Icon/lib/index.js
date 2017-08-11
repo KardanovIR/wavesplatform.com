@@ -9,9 +9,9 @@ import FaPaperPlane from 'react-icons/lib/fa/paper-plane';
 import FaVk from 'react-icons/lib/fa/vk';
 import FaWeibo from 'react-icons/lib/fa/weibo';
 import FaWechat from 'react-icons/lib/fa/wechat';
-import FaReddit from 'react-icons/lib/fa/reddit';
+import FaRedditAlien from 'react-icons/lib/fa/reddit-alien';
 import FaMedium from 'react-icons/lib/fa/medium';
-import FaYoutube from 'react-icons/lib/fa/youtube';
+import FaYoutubePlay from 'react-icons/lib/fa/youtube-play';
 
 
 export default {
@@ -29,8 +29,8 @@ export default {
     telegram: FaPaperPlane,
     vkontakte: FaVk,
     wechat: FaWechat,
-    reddit: FaReddit,
+    reddit: FaRedditAlien,
     weibo: FaWeibo,
     medium: FaMedium,
-    youtube: FaYoutube,
+    youtube: FaYoutubePlay,
 }
