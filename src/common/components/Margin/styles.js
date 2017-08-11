@@ -17,6 +17,9 @@ const createClassesForSide = theme => side => ({
         [`margin${capitalize(side)}`]: theme.spacing.unit * 2
     },
     [`margin-${side}-4`]: {
+        [`margin${capitalize(side)}`]: theme.spacing.unit * 3
+    },
+    [`margin-${side}-5`]: {
         [`margin${capitalize(side)}`]: theme.spacing.unit * 4
     },
 
@@ -32,6 +35,9 @@ const createClassesForSide = theme => side => ({
         },
         [`margin-${side}-4`]: {
             [`margin${capitalize(side)}`]: theme.spacing.unit * 6
+        },
+        [`margin-${side}-5`]: {
+            [`margin${capitalize(side)}`]: theme.spacing.unit * 8
         },
     }
 })

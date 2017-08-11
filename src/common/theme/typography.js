@@ -78,12 +78,12 @@ const creatyTypography = () => ({
     display4: combineMobileDesktopStyles(display4, {
         fontSize: 64
     }),
-    display3: combineMobileDesktopStyles(display4, {
+    display3: combineMobileDesktopStyles(display3, {
         fontSize: 44,
         lineHeight: 1.11,
         letterSpacing: 'normal'
     }),
-    display2: combineMobileDesktopStyles(display4, {
+    display2: combineMobileDesktopStyles(display2, {
         fontSize: 34,
         lineHeight: 1.18,
         letterSpacing: 'normal'
