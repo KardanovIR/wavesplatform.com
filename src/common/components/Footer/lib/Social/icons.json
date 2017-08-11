@@ -1,46 +1,46 @@
 [
 	{
-		"name": "hamburger",
+		"name": "telegram",
+		"href": "https://telegram.com" 
+	},
+	{
+		"name": "slack",
+		"href": "https://slack.com" 
+	},
+	{
+		"name": "facebook",
+		"href": "https://facebook.com" 
+	},
+	{
+		"name": "twitter",
+		"href": "https://twitter.com" 
+	},
+	{
+		"name": "bitcoin",
 		"href": "https://google.com" 
 	},
 	{
-		"name": "cross",
+		"name": "vkontakte",
+		"href": "https://vk.com" 
+	},
+	{
+		"name": "medium",
+		"href": "https://medium.com" 
+	},
+	{
+		"name": "reddit",
+		"href": "https://reddit.com" 
+	},
+	{
+		"name": "youtube",
+		"href": "https://youtube.com" 
+	},
+	{
+		"name": "weibo",
 		"href": "https://google.com" 
 	},
 	{
-		"name": "hamburger",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "cross",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "hamburger",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "cross",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "hamburger",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "cross",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "hamburger",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "cross",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "hamburger",
+		"name": "wechat",
 		"href": "https://google.com" 
 	}
 ]

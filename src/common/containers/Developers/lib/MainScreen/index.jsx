@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
-import AvatarWithText from 'src/common/components/AvatarWithText';
-
 import { Row, Col } from 'src/common/components/Grid';
 
 import injectSheet from 'react-jss';
@@ -15,20 +13,11 @@ const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
             <Typography type="display4" margin>
-                Developers page
+                Build unstoppable applications
             </Typography>
-            <AvatarWithText
-                avatar={<div style={{background: 'pink', height: '100%'}} />}
-                text="Wallet"
-            />
-            <AvatarWithText
-                avatar={<div style={{background: 'pink', height: '100%'}} />}
-                text="Decentralized exchange"
-            />
-            <AvatarWithText
-                avatar={<div style={{background: 'pink', height: '100%'}} />}
-                text="Issuing tokens"
-            />
+            <Typography type="body">
+                These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. 
+            </Typography>
         </Col>
         <Col xs={12} md={6}>
             <div className={classes.imageWrapper}>

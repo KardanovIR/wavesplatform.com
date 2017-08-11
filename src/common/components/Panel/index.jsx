@@ -7,7 +7,7 @@ import cn from 'classnames';
 
 const styles = theme => ({
     root: {
-        padding: theme.spacing.getSpacing(2.5, 3),
+        padding: theme.spacing.getSpacing(2.5, 2),
         borderRadius: theme.spacing.radius,
     },
     light: {

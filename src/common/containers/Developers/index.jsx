@@ -3,81 +3,62 @@ import React from 'react';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
-
-import Typography from 'src/common/components/Typography';
-import Panel from 'src/common/components/Panel';
-import { Row, Col } from 'src/common/components/Grid';
-// import Button from 'src/common/components/Button';
+// import { Row, Col } from 'src/common/components/Grid';
 
 
 
 // lib
 import MainScreen from './lib/MainScreen';
-// import Description from './lib/Description';
-// import WavesClient from './lib/WavesClient';
-// import Wallet from './lib/Wallet';
-// import DEX from './lib/DEX';
-import Feedback from './lib/Feedback';
-import Facts from './lib/Facts';
-// import PlannedFeatures from './lib/PlannedFeatures';
-// import JoinUs from './lib/JoinUs';
-// import Subscribe from './lib/Subscribe';
+import FriendlyAPI from './lib/FriendlyAPI';
+import WavesNode from './lib/WavesNode';
+import DEX from './lib/DEX';
+import WavesNetwork from './lib/WavesNetwork';
+import Community from './lib/Community';
 
 
 
 // styles
 import injectSheet from 'react-jss';
-// import cn from 'classnames';
 
 
 const styles = theme => ({
-    padded: {
+    section: {
         padding: theme.spacing.getSpacing(5, 0)
-    },
-    centered: {
-        textAlign: 'center'
-    },
-    marginSmall: {
-        marginBottom: theme.spacing.unit
-    },
-    marginMedium: {
-        marginBottom: theme.spacing.unit * 2
-    },
-    marginBig: {
-        marginBottom: theme.spacing.unit * 4
     }
 })
 
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        <MainScreen />
-        {/* <Description /> */}
-        {/* <WavesClient /> */}
+        <div className={classes.section}>
+            <MainScreen />
+        </div>
 
-        <Row>
-            <Col xs={12} md={6}>
-                <Panel dark>
-                    <Typography type="display1" margin>
-                        MainNet
-                    </Typography>
-                    <Typography type="body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis autem eum modi magni ut dignissimos atque sapiente pariatur illum.
-                    </Typography>
-                </Panel>
-            </Col>
-        </Row>
+        <div className={classes.section}>
+            <FriendlyAPI />
+        </div>
 
-        <br/>
-        <br/>
-        <br/>
+        <div className={classes.section}>
+            <WavesNode />
+        </div>
+
+        <div className={classes.section}>
+            <DEX />
+        </div>
+
+        <div className={classes.section}>
+            <WavesNetwork />
+        </div>
+
+        <div className={classes.section}>
+            <Community />
+        </div>
 
     </Layout>
 );
 
 
 const Page = injectSheet(styles)(PageLayout);
-// const Page = PageLayout;
 
 
 const App = () => (

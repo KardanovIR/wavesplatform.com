@@ -1,24 +1,30 @@
 import mockup from './img/mockup.png';
-import deloitteLogo from './img/deloitte_logo.svg';
 
 import placeholder from 'src/common/styles/placeholder';
 
 
 const styles = theme => ({
     root: {
+        flexDirection: 'row-reverse'
+    },
+    title: {
+        marginBottom: theme.spacing.unit * 4
+    },
+    article: {
+        marginBottom: theme.spacing.unit * 4
     },
     imageWrapper: {
         position: 'relative',
         paddingTop: '75%',
         overflow: 'visible',
-        ...placeholder,
+        ...placeholder
     },
     image: {
         width: '90%',
         height: '115%',
         position: 'absolute',
         zIndex: -1,
-        top: 0,
+        top: -50,
         right: -100,
 
         background: `url(${mockup}) no-repeat`,
@@ -26,18 +32,7 @@ const styles = theme => ({
         transform: 'rotate(-6deg)',
         marginBottom: theme.spacing.unit * 2
     },
-    // [theme.mixins.atMedia('md')]: {
-    //     swappedToBottom: {
-    //         order: 1,
-    //         maring: 0
-    //     },
-    //     swappedToTop: {
-    //         order: 0
-    //     },
-    //     secondaryButton: {
-    //         display: 'inline-block'
-    //     }
-    // }
+    [theme.mixins.atMedia('md')]: {}
 })
 
 export default styles;

@@ -1,40 +1,29 @@
 import React from 'react';
 
-import { compose } from 'ramda';
-import injectSheet, { withTheme } from 'react-jss';
-import cn from 'classnames';
+import { withTheme } from 'react-jss';
 
 import IconsMap from './lib';
 
 
-
-const styles = {
-    wrapper: {
-        width: props => props.size,
-        height: props => props.size,
-    }
-}
-
-
-const Icon = ({ classes, theme, className, name, color }) => {
+const Icon = ({ color, theme, name, ...rest }) => {
     const IconComponent = IconsMap[name];
+    
+    if (process.env.NODE_ENV !== 'production') {
+        if (!IconComponent) console.warn(`Icon '${name}' not found. Please check icon imports`);
+    }
 
-    return (
-        <div className={cn(classes.wrapper, className)}>
-            <IconComponent fill={theme.palette[color.split('-')[0]][color.split('-')[1]]} />
-        </div> 
-    )
+    const passedColor = color !== 'inherit'
+        ? theme.palette[color.split('-')[0]][color.split('-')[1]]
+        : undefined;
+
+    return <IconComponent color={passedColor} name={name} { ...rest } />;
 }
 
 
 Icon.defaultProps = {
     size: 34,
-    color: 'gray-500',
-    className: ''
+    color: 'inherit'
 }
 
 
-export default compose(
-    injectSheet(styles),
-    withTheme
-)(Icon);
+export default withTheme(Icon);

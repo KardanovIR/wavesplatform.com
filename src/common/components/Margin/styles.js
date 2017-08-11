@@ -45,6 +45,9 @@ export default theme => {
     directions.forEach(side => styles = {
         ...styles,
         ...stylesCreator(side),
+        'inline-block': {
+            display: 'inline-block'
+        }
     });
 
     return styles;

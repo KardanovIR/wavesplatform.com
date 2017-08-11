@@ -77,15 +77,15 @@ const Button = props => {
             )}
 
             <div className={contentWrapperClasses}>
-                {children &&
-                    <span className={classes.children}>
-                        {children}
+                {icon &&
+                    <span className={classes.icon}>
+                        {icon}
                     </span>
                 }
 
-                {icon &&
-                    <span>
-                        {icon}
+                {children &&
+                    <span className={classes.children}>
+                        {children}
                     </span>
                 }
             </div>

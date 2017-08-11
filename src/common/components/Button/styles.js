@@ -44,17 +44,20 @@ const styles = theme => ({
         }
     },
     content: {
-        display: 'flex'
+        display: 'flex',
+        justiryContent: 'center',
+        alignItems: 'center',
+        color: ({ color }) => theme.palette.getColor(getFontColor(color)),
     },
     contentHidden: {
         opacity: 0
     },
     icon: {
-        marginRight: theme.spacing.unit / 2
+        marginRight: theme.spacing.unit * 1.5
     },
     text: {
         ...theme.typography.button,
-        color: ({ color }) => theme.palette.getColor(getFontColor(color)),
+        // color: ({ color }) => theme.palette.getColor(getFontColor(color)),
     },
     spinner: {
         position: 'absolute',
