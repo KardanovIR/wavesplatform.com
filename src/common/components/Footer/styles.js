@@ -3,7 +3,8 @@ import flexCentered from '../../styles/flexCentered';
 
 export default theme => ({
     root: {
-        position: 'relative'
+        position: 'relative',
+        marginTop: theme.spacing.unit * 6
     },
     footer: {
         padding: theme.spacing.getSpacing(6, 0, 4),
@@ -51,10 +52,18 @@ export default theme => ({
         }
     },
 
+    [theme.mixins.atMedia('sm')]: {
+        root: {
+            marginTop: theme.spacing.unit * 8
+        },
+    },
+
     [theme.mixins.atMedia('md')]: {
+        root: {
+            marginTop: theme.spacing.unit * 16
+        },
         footer: {
-            padding: theme.spacing.getSpacing(6, 0, 6),
-            marginTop: theme.spacing.unit*2
+            padding: theme.spacing.getSpacing(6, 0, 6)
         },
         social: {
             order: 1,
@@ -84,8 +93,8 @@ export default theme => ({
     },
 
     [theme.mixins.atMedia('lg')]: {
-        footer: {
-            marginTop: theme.spacing.unit*3
-        }
+        root: {
+            marginTop: theme.spacing.unit * 20
+        },
     }
 })
