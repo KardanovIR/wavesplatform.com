@@ -32,10 +32,11 @@ const Background = ({
     classes,
     children,
     className,
+    wrapperClassName,
     style,
     skewed
 }) => (
-    <div className={classes.wrapper}>
+    <div className={cn(classes.wrapper, wrapperClassName)}>
         <div
             className={cn(
                 classes.background,
@@ -51,6 +52,7 @@ const Background = ({
 
 Background.defaultProps = {
     className: '',
+    wrapperClassName: '',
     skewed: true
 }
 

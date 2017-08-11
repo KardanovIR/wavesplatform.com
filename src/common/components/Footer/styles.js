@@ -3,15 +3,25 @@ import flexCentered from '../../styles/flexCentered';
 
 export default theme => ({
     root: {
-        marginTop: -50,
-        padding: theme.spacing.getSpacing(6, 0, 4)
+        position: 'relative'
+    },
+    footer: {
+        padding: theme.spacing.getSpacing(6, 0, 4),
+        background: theme.palette.gray[900],
     },
     row: {
         alignItems: 'center'
     },
     background: {
         background: theme.palette.gray[900],
-        borderTop: `1px solid ${theme.palette.gray[300]}`
+        transformOrigin: 'left top'
+    },
+    backgroundWrapper: {
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        left: 0,
+        bottom: '35%'
     },
 
     // blocks
@@ -42,8 +52,9 @@ export default theme => ({
     },
 
     [theme.mixins.atMedia('md')]: {
-        root: {
-            padding: theme.spacing.getSpacing(8, 0, 6)
+        footer: {
+            padding: theme.spacing.getSpacing(6, 0, 6),
+            marginTop: theme.spacing.unit*2
         },
         social: {
             order: 1,
@@ -71,4 +82,10 @@ export default theme => ({
             float: 'right',
         },
     },
+
+    [theme.mixins.atMedia('lg')]: {
+        footer: {
+            marginTop: theme.spacing.unit*3
+        }
+    }
 })

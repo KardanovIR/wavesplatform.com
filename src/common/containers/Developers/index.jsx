@@ -31,32 +31,40 @@ import injectSheet from 'react-jss';
 
 
 const styles = theme => ({
-    padded: {
+    section: {
         padding: theme.spacing.getSpacing(5, 0)
     },
-    centered: {
-        textAlign: 'center'
-    },
-    marginSmall: {
-        marginBottom: theme.spacing.unit
-    },
-    marginMedium: {
-        marginBottom: theme.spacing.unit * 2
-    },
-    marginBig: {
-        marginBottom: theme.spacing.unit * 4
-    }
+    // centered: {
+    //     textAlign: 'center'
+    // },
 })
 
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        <MainScreen />
-        <FriendlyAPI />
-        <WavesNode />
-        <DEX />
-        <WavesNetwork />
-        <Community />
+        <div className={classes.section}>
+            <MainScreen />
+        </div>
+
+        <div className={classes.section}>
+            <FriendlyAPI />
+        </div>
+
+        <div className={classes.section}>
+            <WavesNode />
+        </div>
+
+        <div className={classes.section}>
+            <DEX />
+        </div>
+
+        <div className={classes.section}>
+            <WavesNetwork />
+        </div>
+
+        <div className={classes.section}>
+            <Community />
+        </div>
 
         <br/>
         <br/>
