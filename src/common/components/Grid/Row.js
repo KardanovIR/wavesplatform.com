@@ -1,6 +1,7 @@
 import React from 'react';
-import injectSheet from 'react-jss';
+import PropTypes from 'prop-types';
 
+import injectSheet from 'react-jss';
 import cn from 'classnames';
 
 
@@ -14,6 +15,12 @@ const styles = theme => ({
     },
     centered: {
         justifyContent: 'center'
+    },
+    'direction-row-reverse': {
+        flexDirection: 'row-reverse'
+    },
+    'align-items-center': {
+        alignItems: 'center'
     }
 });
 
@@ -23,12 +30,16 @@ const Row = ({
     classes,
     className: classNameProp,
     children,
-    centered
+    centered,
+    direction,
+    alignItems
 }) => {
     const className = cn(
         classes.row,
         {
-            [classes.centered]: centered
+            [classes.centered]: centered,
+            [classes[`direction-${direction}`]]: direction,
+            [classes[`align-items-${alignItems}`]]: alignItems
         },
         classNameProp
     );
@@ -38,6 +49,12 @@ const Row = ({
             {children}
         </div>
     )
+}
+
+
+Row.propTypes = {
+    direction: PropTypes.oneOf(['row-reverse']),
+    alignItems: PropTypes.oneOf(['center'])
 }
 
 Row.defaultProps = {

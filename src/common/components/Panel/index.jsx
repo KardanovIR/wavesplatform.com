@@ -4,11 +4,11 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 
 
-
 const styles = theme => ({
     root: {
         padding: theme.spacing.getSpacing(2.5, 2),
         borderRadius: theme.spacing.radius,
+        boxSizing: 'border-box'
     },
     light: {
         border: `1px solid ${theme.palette.gray[300]}`
@@ -26,22 +26,30 @@ const styles = theme => ({
 
 
 
-const Panel = ({
+export const Panel = ({
     classes,
     className,
-    children,
-    dark
+    dark,
+
+    sheet,	// eslint-disable-line
+    theme,	// eslint-disable-line
+
+    element: Element,
+    
+    ...rest
 }) => (
-        <div
+        <Element
             className={cn(classes.root, {
                 [classes.light]: !dark,
                 [classes.dark]: dark,
             }, className)}
-        >
-            {children}
-        </div>
+            { ...rest }
+         />
     )
 
+Panel.defaultProps = {
+    element: 'div'
+}
 
 
-export default injectSheet(styles)(Panel);
+export default injectSheet(styles)(Panel)

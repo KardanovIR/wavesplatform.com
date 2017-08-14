@@ -66,10 +66,10 @@ const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
     },
 
     numeral: {
-        '& + $body': combineMobileDesktopStyles(
-            { marginTop: unit * 1 },
-            { marginTop: unit * 1.5 }
-        )
+        // '& + $body': combineMobileDesktopStyles(
+        //     { marginTop: unit * 1 },
+        //     { marginTop: unit * 1.5 }
+        // )
     },
 
 })

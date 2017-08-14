@@ -13,21 +13,25 @@ import styles from './styles';
 
 
 const MainScreen = ({ classes }) => (
-    <Row className={classes.root}>
-        <Col xs={12} md={6}>
-            <Typography type="display4" margin>
-                Use blockchain — it’s easy with Waves
-            </Typography>
-            <Typography type="body" margin>
-                Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange.
-            </Typography>
-
-            <Margin bottom={4} />
-        </Col>
+    <Row className={classes.root} direction="row-reverse" alignItems="center">
         <Col xs={12} md={6}>
             <div className={classes.imageWrapper}>
                 <div className={classes.image} />
             </div>
+        </Col>
+        <Col xs={12} md={6}>
+            <Typography type="display2" margin>
+                Online wallet
+            </Typography>
+            <Typography type="body" margin>
+                You do not have to download the client, use online wallet
+            </Typography>
+
+            <Margin />
+
+            <Button>
+                Use the online wallet
+            </Button>
         </Col>
     </Row>
 );

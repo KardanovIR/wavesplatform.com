@@ -4,7 +4,7 @@ import placeholder from 'src/common/styles/placeholder';
 
 const styles = theme => ({
     root: {
-        paddingTop: theme.spacing.unit * 10
+        // paddingTop: theme.spacing.unit * 10
     },
     imageWrapper: {
         position: 'relative',
@@ -25,12 +25,12 @@ const styles = theme => ({
         transform: 'rotate(-6deg)',
         marginBottom: theme.spacing.unit * 2
     },
-    [theme.mixins.atMedia('md')]: {
-        buttonWrapper: {
-            display: 'inline-block',
-            verticalAlign: 'middle'
-        }
-    }
+    // [theme.mixins.atMedia('md')]: {
+    //     buttonWrapper: {
+    //         display: 'inline-block',
+    //         verticalAlign: 'middle'
+    //     }
+    // }
 })
 
 export default styles;
