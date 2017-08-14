@@ -4,7 +4,7 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
-// import Typography from 'src/common/components/Typography';
+import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
 import Link from 'src/common/components/Link';
@@ -25,6 +25,7 @@ import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
 
 
+import IssuingTokens from './lib/IssuingTokens';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
 // import PlannedFeatures from './lib/PlannedFeatures';
@@ -130,6 +131,23 @@ const PageLayout = ({ classes }) => (
         />
 
         <Background className={cn(classes.backgroundColor, classes.padded)}>
+
+            <IssuingTokens />
+
+            <Margin bottom={2} /> 
+            <div className={classes.divider} />
+            <Margin bottom={4} />
+
+            <Margin bottom={4}>
+                <Typography
+                    type="quote"
+                    align="center"
+                    color="gray-500"
+                >
+                    Companies that have released their own tokens on Waves:
+                </Typography>
+            </Margin>
+            
             <Feedback
                 image={<div style={{ height: '100%', background: 'lightblue' }} />}
                 logo={<div style={{ height: 20, width: 100, background: 'red' }} />}
@@ -151,6 +169,8 @@ const PageLayout = ({ classes }) => (
                 signature="MobileGo Team"
                 avatar={<div style={{ height: 90, background: 'green' }} />}
             />
+
+            <Margin bottom={4} />
         </Background>
 
 
@@ -177,7 +197,6 @@ const PageLayout = ({ classes }) => (
 
 
 const Page = injectSheet(styles)(PageLayout);
-// const Page = PageLayout;
 
 
 const App = () => (
