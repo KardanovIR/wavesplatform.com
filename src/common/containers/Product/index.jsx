@@ -24,13 +24,9 @@ import DEX from './lib/DEX';
 import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
 
-
 import IssuingTokens from './lib/IssuingTokens';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
-// import PlannedFeatures from './lib/PlannedFeatures';
-// import JoinUs from './lib/JoinUs';
-// import Subscribe from './lib/Subscribe';
 
 
 
