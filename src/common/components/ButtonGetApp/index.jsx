@@ -20,7 +20,7 @@ const styles = (theme) => ({
     },
     text: {
         ...theme.typography.button,
-        lineHeight: 1.2,
+        lineHeight: 1.3,
         textTransform: 'none'
     }
 })
