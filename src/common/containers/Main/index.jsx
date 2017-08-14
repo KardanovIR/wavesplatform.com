@@ -4,6 +4,7 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Typography from 'src/common/components/Typography';
+import Background from 'src/common/components/Background';
 import { Row, Col } from 'src/common/components/Grid';
 // import Button from 'src/common/components/Button';
 
@@ -46,6 +47,11 @@ const styles = theme => ({
     },
     movedDown: {
         marginBottom: -theme.spacing.unit * 15
+    },
+    footerDivider: {
+        height: 1,
+        background: theme.palette.gray[500],
+        zIndex: 1
     }
 })
 
@@ -107,7 +113,9 @@ const PageLayout = ({ classes: c }) => (
 
         <div className={c.movedDown}>
             <Subscribe />
+            <Background className={c.footerDivider} skewed={false} />
         </div>
+        
         
     </Layout>
 );
