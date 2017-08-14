@@ -43,6 +43,9 @@ const styles = theme => ({
     },
     marginBig: {
         marginBottom: theme.spacing.unit * 4
+    },
+    movedDown: {
+        marginBottom: -theme.spacing.unit * 15
     }
 })
 
@@ -102,14 +105,15 @@ const PageLayout = ({ classes: c }) => (
 
         <JoinUs />
 
-        <Subscribe />
-
+        <div className={c.movedDown}>
+            <Subscribe />
+        </div>
+        
     </Layout>
 );
 
 
 const Page = injectSheet(styles)(PageLayout);
-// const Page = PageLayout;
 
 
 const App = () => (
