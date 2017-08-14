@@ -15,7 +15,7 @@ import styles from './styles';
 const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
-            <Typography type="display2" margin>
+            <Typography type="display4" margin>
                 Use blockchain — it’s easy with Waves
             </Typography>
             <Typography type="body" margin>

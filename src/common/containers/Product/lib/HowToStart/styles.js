@@ -1,6 +1,6 @@
 const styles = theme => ({
     root: {
-        padding: theme.spacing.getSpacing(10, 0),
+        // padding: theme.spacing.getSpacing(10, 0),
         textAlign: 'center'
     },
     title: {

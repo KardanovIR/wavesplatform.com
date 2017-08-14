@@ -17,6 +17,7 @@ import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
 import OnlineWallet from './lib/OnlineWallet';
 import HowToStart from './lib/HowToStart';
+import DEX from './lib/DEX';
 
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
@@ -44,15 +45,6 @@ const styles = theme => ({
     centered: {
         textAlign: 'center'
     },
-    // marginSmall: {
-    //     marginBottom: theme.spacing.unit
-    // },
-    // marginMedium: {
-    //     marginBottom: theme.spacing.unit * 2
-    // },
-    // marginBig: {
-    //     marginBottom: theme.spacing.unit * 4
-    // }
 })
 
 
@@ -66,9 +58,19 @@ const PageLayout = ({ classes }) => (
         <MobileWallet />
         <OnlineWallet />
 
-        <Background className={cn(classes.backgroundColor, classes.padded)}>
+        <Background className={cn(classes.backgroundGradient, classes.padded)}>
             <HowToStart />
         </Background>
+
+
+        <Background className={cn(classes.backgroundColor, classes.padded)}>
+            <DEX />
+        </Background>
+
+        <br />
+        <br />
+        <br />
+        <br />
 
         <Background className={cn(classes.backgroundColor, classes.padded)}>
             <Feedback
