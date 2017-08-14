@@ -4,8 +4,8 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
-// import Typography from 'src/common/components/Typography';
-// import { Row, Col } from 'src/common/components/Grid';
+import Typography from 'src/common/components/Typography';
+import { Row, Col } from 'src/common/components/Grid';
 // import Button from 'src/common/components/Button';
 
 
@@ -15,6 +15,7 @@ import MainScreen from './lib/MainScreen';
 // import Description from './lib/Description';
 // import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
+import Interest from './lib/Interest';
 // import DEX from './lib/DEX';
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
@@ -35,10 +36,10 @@ const styles = theme => ({
     },
     background: {
         background: theme.palette.gray[50]
-    }
-    // centered: {
-    //     textAlign: 'center'
-    // },
+    },
+    centered: {
+        textAlign: 'center'
+    },
     // marginSmall: {
     //     marginBottom: theme.spacing.unit
     // },
@@ -55,6 +56,8 @@ const PageLayout = ({ classes }) => (
     <Layout>
         <MainScreen />
         <Wallet />
+
+        <Interest />
 
         <Background className={cn(classes.background, classes.padded)}>
             <Feedback

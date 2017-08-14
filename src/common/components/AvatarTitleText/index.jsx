@@ -43,7 +43,7 @@ const AvatarWithText = ({
             <div className={classes.avatarWrapper}>
                 {avatar}
             </div>
-            <Margin bottom={3} />
+            <Margin bottom={2} />
             <Typography type="display1" tagName="div">
                 {title}
             </Typography>
