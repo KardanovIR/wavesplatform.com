@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
-import Button from 'src/common/components/Button';
+import ButtonGetApp from 'src/common/components/ButtonGetApp';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -30,14 +30,10 @@ const MainScreen = ({ classes }) => (
             <Margin />
 
             <Margin bottom={2} right={1} className={classes.buttonWrapper}>
-                <Button>
-                    Google play
-                </Button>
+                <ButtonGetApp type="google-play" />
             </Margin>
             <Margin bottom={2} right={1} className={classes.buttonWrapper}>
-                <Button>
-                    Appstore
-                </Button>
+                <ButtonGetApp type="app-store" />
             </Margin>
         </Col>
     </Row>

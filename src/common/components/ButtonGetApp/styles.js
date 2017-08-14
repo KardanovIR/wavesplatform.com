@@ -18,9 +18,7 @@ const styles = theme => ({
         '-webkit-user-select': 'none',
         '-moz-user-select': 'none',
         '-ms-user-select': 'none',
-        textDecoration: 'none',
-        
-        display: 'inline-block',
+
         cursor: 'pointer',
         borderRadius: theme.spacing.radius,
         backgroundColor: ({ color }) => theme.palette.getColor(color),
@@ -59,6 +57,7 @@ const styles = theme => ({
     },
     text: {
         ...theme.typography.button,
+        // color: ({ color }) => theme.palette.getColor(getFontColor(color)),
     },
     spinner: {
         position: 'absolute',
