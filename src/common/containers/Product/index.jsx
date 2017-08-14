@@ -105,6 +105,7 @@ const PageLayout = ({ classes }) => (
                 </Col>
                 <Col xs={12} md={4}>
                      <DEXTopPairs /> 
+                     <Margin bottom={4} />
                 </Col>
             </Row>
 
