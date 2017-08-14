@@ -23,22 +23,6 @@ const MainScreen = ({ classes }) => (
             </Typography>
 
             <Margin bottom={4} />
-
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <Button>
-                    Documentation
-                </Button>
-            </Margin>
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <Button color="gray-300">
-                    Client
-                </Button>
-            </Margin>
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <Button color="gray-300">
-                    Swagger
-                </Button>
-            </Margin>
         </Col>
         <Col xs={12} md={6}>
             <div className={classes.imageWrapper}>
