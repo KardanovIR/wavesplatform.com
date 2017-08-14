@@ -12,11 +12,12 @@ import { Row, Col } from 'src/common/components/Grid';
 
 // lib
 import MainScreen from './lib/MainScreen';
-// import Description from './lib/Description';
-// import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
-// import DEX from './lib/DEX';
+import MobileWallet from './lib/MobileWallet';
+import OnlineWallet from './lib/OnlineWallet';
+import HowToStart from './lib/HowToStart';
+
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
 // import PlannedFeatures from './lib/PlannedFeatures';
@@ -34,8 +35,11 @@ const styles = theme => ({
     padded: {
         padding: theme.spacing.getSpacing(5, 0)
     },
-    background: {
+    backgroundColor: {
         background: theme.palette.gray[50]
+    },
+    backgroundGradient: {
+        backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0) 25%, ${theme.palette.gray[50]})`
     },
     centered: {
         textAlign: 'center'
@@ -59,7 +63,14 @@ const PageLayout = ({ classes }) => (
 
         <Interest />
 
-        <Background className={cn(classes.background, classes.padded)}>
+        <MobileWallet />
+        <OnlineWallet />
+
+        <Background className={cn(classes.backgroundColor, classes.padded)}>
+            <HowToStart />
+        </Background>
+
+        <Background className={cn(classes.backgroundColor, classes.padded)}>
             <Feedback
                 image={<div style={{ height: '100%', background: 'lightblue' }} />}
                 logo={<div style={{ height: 20, width: 100, background: 'red' }} />}

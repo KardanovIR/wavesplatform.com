@@ -2,14 +2,13 @@ import React from 'react';
 import injectSheet from 'react-jss';
 
 import cn from 'classnames';
-import { compose } from 'ramda';
-
 
 
 const styles = theme => ({
     root: {
         padding: theme.spacing.getSpacing(2.5, 2),
         borderRadius: theme.spacing.radius,
+        boxSizing: 'border-box'
     },
     light: {
         border: `1px solid ${theme.palette.gray[300]}`
