@@ -85,6 +85,7 @@ const Facts = ({
                     </Row>
                 </Col>
             </Row>
+
         </div>
     );
 

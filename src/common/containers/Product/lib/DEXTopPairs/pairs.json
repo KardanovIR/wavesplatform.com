@@ -1,0 +1,52 @@
+[
+	{
+		"pair": ["waves", "btc"],
+		"volume": 322041,
+		"direction": "up"
+	},
+	{
+		"pair": ["eth", "btc"],
+		"volume": 49384,
+		"direction": "down"
+	},
+	{
+		"pair": ["waves", "btc"],
+		"volume": 322041,
+		"direction": "up"
+	},
+	{
+		"pair": ["eth", "btc"],
+		"volume": 49384,
+		"direction": "down"
+	},
+	{
+		"pair": ["waves", "btc"],
+		"volume": 322041,
+		"direction": "up"
+	},
+	{
+		"pair": ["eth", "btc"],
+		"volume": 49384,
+		"direction": "down"
+	},
+	{
+		"pair": ["waves", "btc"],
+		"volume": 322041,
+		"direction": "up"
+	},
+	{
+		"pair": ["eth", "btc"],
+		"volume": 49384,
+		"direction": "down"
+	},
+	{
+		"pair": ["waves", "btc"],
+		"volume": 322041,
+		"direction": "up"
+	},
+	{
+		"pair": ["eth", "btc"],
+		"volume": 49384,
+		"direction": "down"
+	}
+]

@@ -4,9 +4,9 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
-import Typography from 'src/common/components/Typography';
+// import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
-// import Button from 'src/common/components/Button';
+import Margin from 'src/common/components/Margin';
 
 
 
@@ -17,7 +17,12 @@ import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
 import OnlineWallet from './lib/OnlineWallet';
 import HowToStart from './lib/HowToStart';
+
+// DEX blocks
 import DEX from './lib/DEX';
+import DEXFeatures from './lib/DEXFeatures';
+import DEXTopPairs from './lib/DEXTopPairs';
+
 
 import Feedback from './lib/Feedback';
 import Facts from './lib/Facts';
@@ -45,6 +50,11 @@ const styles = theme => ({
     centered: {
         textAlign: 'center'
     },
+    divider: {
+        height: 1,
+        width: '100%',
+        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0), ${theme.palette.gray[300]} 50%, rgba(255,255,255,0));`
+    },
 })
 
 
@@ -65,6 +75,20 @@ const PageLayout = ({ classes }) => (
 
         <Background className={cn(classes.backgroundColor, classes.padded)}>
             <DEX />
+
+            <Margin bottom={4} />
+            <div className={classes.divider} />
+            <Margin bottom={3} />
+
+            <Row>
+                <Col xs={12} md={8}>
+                    <DEXFeatures />
+                </Col>
+                <Col xs={12} md={4}>
+                     <DEXTopPairs /> 
+                </Col>
+            </Row>
+
         </Background>
 
         <br />

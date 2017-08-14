@@ -1,11 +1,11 @@
 const styles = theme => ({
     root: {
-        // padding: theme.spacing.getSpacing(5, 0, 5)
+        paddingBottom: 0
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            // padding: theme.spacing.getSpacing(20, 0, 15)
-        },
+            marginTop: theme.spacing.unit * 12
+        }
     }
 })
 

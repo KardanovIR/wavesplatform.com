@@ -12,7 +12,7 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const Wallet = ({ classes }) => (
     <div className={classes.root}>
         <Row>
             <Col xs={12}>
@@ -48,4 +48,4 @@ const MainScreen = ({ classes }) => (
 );
 
 
-export default injectSheet(styles)(MainScreen);
+export default injectSheet(styles)(Wallet);
