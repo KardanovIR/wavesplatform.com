@@ -40,6 +40,14 @@ const HowToStart = ({ classes }) => (
                 </Step>
             </Margin>
         </Col>
+        <Col xs={12}>
+            <Margin bottom={3}>
+                <Typography className={classes.quote} type="quote" color="gray-500">
+                    <span>To complete your first operation on the DEX, you need 0.003 Waves, which you can buy directly with $ or €, or get them for free on the</span>
+                    <Link href="#">Waves faucet.</Link>
+                </Typography>
+            </Margin>
+        </Col>
     </Row>
 );
 

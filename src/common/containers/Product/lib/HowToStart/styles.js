@@ -7,6 +7,10 @@ const styles = theme => ({
         maxWidth: 400,
         display: 'inline-block'
     },
+    quote: {
+        maxWidth: 650,
+        display: 'inline-block'
+    },
     column: {
         display: 'flex',
     },
