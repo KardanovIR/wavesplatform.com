@@ -2,11 +2,12 @@ const styles = theme => ({
     root: {
         padding: theme.spacing.getSpacing(5, 0, 5)
     },
-    feature: {
-        marginBottom: theme.spacing.unit * 3
+    column: {
+        display: 'flex',
+        marginBottom: theme.spacing.unit * 2
     },
-    background: {
-        backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0) 25%, ${theme.palette.gray[50]})`
+    panel: {
+        flex: 1
     },
     [theme.mixins.atMedia('md')]: {
         root: {
