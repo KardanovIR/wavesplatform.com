@@ -11,6 +11,8 @@ import Background from 'src/common/components/Background';
 // lib
 import MainScreen from './lib/MainScreen';
 import Team from './lib/Team';
+import Whitepaper from './lib/Whitepaper';
+import Media from './lib/Media';
 
 
 
@@ -24,7 +26,8 @@ import Team from './lib/Team';
 
 // @todo remove
 // --== MOCK ==--
-import members from './members';
+import members from './__mocks/members';
+import media from './__mocks/media';
 
 
 
@@ -60,11 +63,18 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        {/* <div className={classes.section}>
-            <WavesNode />
+        <div className={classes.section}>
+            <Whitepaper />
         </div>
 
-        <div className={classes.section}>
+
+        <Background className={classes.backgroundColor}>
+            <div className={classes.section}>
+                <Media members={members} />
+            </div>
+        </Background>
+
+        { /*<div className={classes.section}>
             <DEX />
         </div>
 
