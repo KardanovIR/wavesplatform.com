@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Typography from 'src/common/components/Typography';
 import Icon from 'src/common/components/Icon';
 import Link from 'src/common/components/Link';
-// import Margin from 'src/common/components/Margin';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -25,7 +24,7 @@ const Member = ({
 
             <div className={classes.overlay}>
                 <div className={classes.social}>
-                    { social.map((contact, index) => (
+                    { social.map(contact => (
                         <Link
                             target="_blank"
                             href={contact.url}

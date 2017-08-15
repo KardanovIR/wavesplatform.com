@@ -18,15 +18,6 @@ const styles = theme => ({
     link: {
         ...theme.typography.display1
     }
-    // [theme.mixins.atMedia('md')]: {
-    //     link: {
-    //         opacity: 0.6,
-    //         transition: theme.transitions.create('opacity'),
-    //         '&:hover': {
-    //             opacity: 1
-    //         }
-    //     }
-    // }
 })
 
 export default styles;

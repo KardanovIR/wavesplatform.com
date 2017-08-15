@@ -4,17 +4,14 @@ import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
-import injectSheet from 'react-jss';
-import styles from './styles';
-
 import Member from './lib/Member';
 
 
+
 const Team = ({
-    classes,
     members,
 }) => (
-    <div className={classes.root}>
+    <div>
         <Row>
             <Col xs={12}>
                 <Typography type="display3">
@@ -35,4 +32,4 @@ const Team = ({
 );
 
 
-export default injectSheet(styles)(Team);
+export default Team;

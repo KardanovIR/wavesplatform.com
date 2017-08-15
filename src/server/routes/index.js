@@ -21,12 +21,6 @@ router
     .get('/product', render('product'))
     .get('/developers', render('developers'))
     .get('/company', render('company'))
-    // .get('/product', async ctx => {
-    //     ctx.body = view({ scriptUrl: 'product' });
-    // })
-    // .get('/company', async ctx => {
-    //     ctx.body = view({ scriptUrl: 'company' });
-    // })
     .post('/api/subscription', async ctx => {
         console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };

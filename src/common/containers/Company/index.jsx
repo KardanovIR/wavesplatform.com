@@ -25,7 +25,6 @@ import members from './__mocks/members';
 
 // styles
 import injectSheet from 'react-jss';
-// import cn from 'classnames';
 
 
 const styles = theme => ({
@@ -70,18 +69,6 @@ const PageLayout = ({ classes }) => (
         <div className={classes.section}>
             <Careers />
         </div>
-
-        { /*<div className={classes.section}>
-            <DEX />
-        </div>
-
-        <div className={classes.section}>
-            <WavesNetwork />
-        </div>
-
-        <div className={classes.section}>
-            <Community />
-        </div> */}
 
     </Layout>
 );

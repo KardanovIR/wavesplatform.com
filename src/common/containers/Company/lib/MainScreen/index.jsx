@@ -13,13 +13,13 @@ import styles from './styles';
 const MainScreen = ({ classes }) => (
     <div className={classes.root}>
         <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={8} lg={6}>
                 <Typography type="display4">
                     We change lives of the people
                 </Typography>
                 <Margin bottom={5} />
             </Col>
-            <Col xs={12} md={6} />
+            <Col xs={12} md={4} lg={6} />
         </Row>
         <Row>
             <Col xs={12} md={6}>
