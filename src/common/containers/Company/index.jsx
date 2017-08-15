@@ -13,6 +13,7 @@ import MainScreen from './lib/MainScreen';
 import Team from './lib/Team';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
+import Careers from './lib/Careers';
 
 
 
@@ -27,7 +28,6 @@ import Media from './lib/Media';
 // @todo remove
 // --== MOCK ==--
 import members from './__mocks/members';
-import media from './__mocks/media';
 
 
 
@@ -73,6 +73,11 @@ const PageLayout = ({ classes }) => (
                 <Media members={members} />
             </div>
         </Background>
+
+
+        <div className={classes.section}>
+            <Careers />
+        </div>
 
         { /*<div className={classes.section}>
             <DEX />
