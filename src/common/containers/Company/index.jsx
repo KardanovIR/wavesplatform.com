@@ -4,7 +4,6 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
-// import { Row, Col } from 'src/common/components/Grid';
 
 
 
@@ -43,9 +42,7 @@ const styles = theme => ({
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        <div className={classes.section}>
-            <MainScreen />
-        </div>
+        <MainScreen />
 
         <Background className={classes.backgroundColor}>
             <div className={classes.section}>
