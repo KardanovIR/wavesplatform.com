@@ -13,7 +13,7 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const DEX = ({ classes }) => (
     <div>
         <Margin bottom={5}>
             <Typography type="display3" tagName="div" className={classes.title}>
@@ -25,6 +25,7 @@ const MainScreen = ({ classes }) => (
                 <div className={classes.imageWrapper}>
                     <div className={classes.image} />
                 </div>
+                <Margin />
             </Col>
             <Col xs={12} sm={6}>
                 <Row className={classes.root}>
@@ -60,4 +61,4 @@ const MainScreen = ({ classes }) => (
 );
 
 
-export default injectSheet(styles)(MainScreen);
+export default injectSheet(styles)(DEX);
