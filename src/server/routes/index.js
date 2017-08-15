@@ -10,6 +10,7 @@ import { render } from '../render';
 // import Main from '../../common/containers/Main';
 // import Product from '../../common/containers/Product';
 // import Developers from '../../common/containers/Developers';
+// import Company from '../../common/containers/Company';
 
 
 
@@ -19,12 +20,7 @@ router
     .get('/', render('main'))
     .get('/product', render('product'))
     .get('/developers', render('developers'))
-    // .get('/product', async ctx => {
-    //     ctx.body = view({ scriptUrl: 'product' });
-    // })
-    // .get('/company', async ctx => {
-    //     ctx.body = view({ scriptUrl: 'company' });
-    // })
+    .get('/company', render('company'))
     .post('/api/subscription', async ctx => {
         console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };

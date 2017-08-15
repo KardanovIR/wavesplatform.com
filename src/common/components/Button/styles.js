@@ -49,6 +49,7 @@ const styles = theme => ({
         display: 'flex',
         justiryContent: 'center',
         alignItems: 'center',
+        height: '100%',
         color: ({ color }) => theme.palette.getColor(getFontColor(color)),
     },
     contentHidden: {
