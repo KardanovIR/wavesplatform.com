@@ -18,7 +18,7 @@ import styles from './styles';
 
 
 const MainScreen = ({ classes }) => (
-    <Row className={classes.root}>
+    <Row className={classes.root} alignItems="center">
         <Col xs={12} sm={6}>
             <div className={classes.imageWrapper}>
                 <div className={classes.image} />

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
-// import TitleTextCTA from 'src/common/components/TitleTextCTA';
+import Margin from 'src/common/components/Margin';
 import Article from 'src/common/components/Article';
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -15,9 +15,11 @@ import styles from './styles';
 
 const MainScreen = ({ classes }) => (
     <div>
-        <Typography type="display3" tagName="div" className={classes.title}>
-            Decentralized Exchange (DEX)
-        </Typography>
+        <Margin bottom={5}>
+            <Typography type="display3" tagName="div" className={classes.title}>
+                Decentralized Exchange (DEX)
+            </Typography>
+        </Margin>
         <Row className={classes.root}>
             <Col xs={12} sm={6}>
                 <div className={classes.imageWrapper}>

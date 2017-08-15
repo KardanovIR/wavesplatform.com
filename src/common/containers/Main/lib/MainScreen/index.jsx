@@ -19,20 +19,17 @@ import styles from './styles';
 
 
 const MainScreen = ({ classes }) => (
-    <Row className={classes.root}>
+    <Row>
         <Col xs={12} md={6}>
-
             <div className={classes.titleTextCtaWrapper}>
                 <TitleTextCTA
                     title="Decentralized blockchain platform"
                     text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
                     buttons={[
-                        <Button key="main_cta_button">Get Client</Button>,
-                        <Button className={classes.secondaryButton} key="secondary_cta_button" color="gray-50">Get Waves</Button>
+                        <Button key="main_cta_button" href="/get-waves">Get Waves</Button>,
                     ]}
                 />
             </div>
-
             <NumbersMain />
         </Col>
         <Col xs={12} md={6}>

@@ -5,9 +5,6 @@ import placeholder from 'src/common/styles/placeholder';
 
 
 const styles = theme => ({
-    root: {
-        paddingTop: theme.spacing.unit * 10
-    },
     titleTextCtaWrapper: {
         marginBottom: theme.spacing.unit * 16
     },
