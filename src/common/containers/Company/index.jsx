@@ -17,14 +17,6 @@ import Careers from './lib/Careers';
 
 
 
-// import FriendlyAPI from './lib/FriendlyAPI';
-// import WavesNode from './lib/WavesNode';
-// import DEX from './lib/DEX';
-// import WavesNetwork from './lib/WavesNetwork';
-// import Community from './lib/Community';
-
-
-
 // @todo remove
 // --== MOCK ==--
 import members from './__mocks/members';
