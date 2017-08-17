@@ -31,7 +31,7 @@ const MainScreen = ({ classes }) => (
                     titleType="display3"
                     text="The current version of the Waves client is a wallet, decentralized exchange, and a tool to release tokens."
                     buttons={[
-                        <Button key="main_cta_button">Get Client</Button>,
+                        <Button withLoader key="main_cta_button" href="#">Get Client</Button>,
                     ]}
                 />
             </div>

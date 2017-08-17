@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Spinner from 'src/common/components/Spinner';
@@ -25,74 +25,87 @@ const AnchorElement = ({ children, ...rest }) => (
 );
 
 
-const Button = props => {
+class Button extends Component {
+    state = { loading: false }
 
-    const {
-        // big,
-        // small,
-        type,
-        href,
-        icon,
-        classes,
-        className,
-        color,
+    handleClick = e => {
+        if (this.props.withLoader) {
+            this.setState({ loading: true });
+        }
+        this.props.onClick(e);
+    }
 
-        children,
-        loading,
+    render() {
 
-        theme, // eslint-disable-line
-        sheet, // eslint-disable-line
+        const {
+            // big,
+            // small,
+            type,
+            href,
+            icon,
+            classes,
+            className,
+            color,
 
-        ...others,
-	} = props;
+            children,
+            loading,
 
-    const buttonElementClasses = classnames(classes.button, {
-        // [classes.small]: small,
-        // [classes.big]: big,
-        // [classes.default]: !primary,
-        // [classes.primary]: primary,
-    }, className);
+            withLoader,	// eslint-disable-line
+            theme,      // eslint-disable-line
+            sheet,      // eslint-disable-line
 
-    const contentWrapperClasses = classnames(
-        classes.content,
-        classes.text,
-        { [classes.contentHidden]: loading }
-    );
+            ...others,
+    } = this.props;
+        
+        const showLoader = loading || this.state.loading;
+
+        const buttonElementClasses = classnames(classes.button, {
+            // [classes.small]: small,
+            // [classes.big]: big,
+            // [classes.default]: !primary,
+            // [classes.primary]: primary,
+        }, className);
+
+        const contentWrapperClasses = classnames(
+            classes.content,
+            classes.text,
+            { [classes.contentHidden]: showLoader }
+        );
+
+        const Element = href ? AnchorElement : ButtonElement;
+
+        const elementProps = {
+            ...others,
+            href,
+            className: buttonElementClasses,
+            type: !href ? type : null,
+        };
 
 
-    const Element = href ? AnchorElement : ButtonElement;
+        return (
+            <Element {...elementProps} onClick={this.handleClick}>
 
-    const elementProps = {
-        ...others,
-        href,
-        className: buttonElementClasses,
-        type: !href ? type : null,
-    };
+                {showLoader && (
+                    <Spinner dark={color.split('-')[1] < 500} className={classes.spinner} />
+                )}
 
+                <div className={contentWrapperClasses}>
+                    {icon &&
+                        <span className={classes.icon}>
+                            {icon}
+                        </span>
+                    }
 
-    return (
-        <Element {...elementProps}>
+                    {children &&
+                        <span className={classes.children}>
+                            {children}
+                        </span>
+                    }
+                </div>
 
-            {loading && (
-                <Spinner dark={color.split('-')[1] > 500} className={classes.spinner} />
-            )}
-
-            <div className={contentWrapperClasses}>
-                {icon &&
-                    <span className={classes.icon}>
-                        {icon}
-                    </span>
-                }
-
-                {children &&
-                    <span className={classes.children}>
-                        {children}
-                    </span>
-                }
-            </div>
-
-        </Element>
-    )
+            </Element>
+        )
+    }
 };
 
 
@@ -105,6 +118,7 @@ Button.defaultProps = {
     // active: false,
     loading: false,
     color: 'primary-500',
+    onClick: () => {}
     // primary: false
 };
 

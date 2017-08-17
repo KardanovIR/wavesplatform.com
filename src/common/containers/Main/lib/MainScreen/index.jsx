@@ -26,7 +26,7 @@ const MainScreen = ({ classes }) => (
                     title="Decentralized blockchain platform"
                     text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
                     buttons={[
-                        <Button loading key="main_cta_button" href="/get-waves">Get Waves</Button>,
+                        <Button withLoader key="main_cta_button" href="/get-waves">Get Waves</Button>,
                     ]}
                 />
             </div>

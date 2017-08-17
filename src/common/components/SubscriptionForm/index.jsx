@@ -70,7 +70,7 @@ class SubscriptionForm extends Component {
                             </div>
 
                             <div className={classes.buttonWrapper}>
-                                <Button type="submit" disabled={invalid}>
+                                <Button loading={status==="pending"} type="submit" disabled={invalid}>
                                     <span className={classes.buttonFull}>Submit</span>
                                     <span className={classes.buttonIcon}>S</span>
                                 </Button>
