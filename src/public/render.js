@@ -4,7 +4,7 @@ import { render as reactDomRender } from 'react-dom';
 
 
 
-export const getPreloadedState = () => window.__PRELOADED_STATE || {};
+export const getInitialState = () => window.__INITIAL_STATE || {};
 
 
 

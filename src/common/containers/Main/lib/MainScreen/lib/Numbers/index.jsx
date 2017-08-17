@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Row, Col } from '../../components/Grid';
-import NumeralDemo from '../../components/NumeralDemo';
+import { Row, Col } from 'src/common/components/Grid';
+import NumeralDemo from 'src/common/components/NumeralDemo';
 
 
 import injectSheet from 'react-jss';
@@ -19,34 +19,39 @@ const ColNumber = injectSheet(styles)(({ classes, children }) =>
 
 
 
-const NumbersMain = () => (
+const NumbersMain = ({
+    wavesBtcRate,
+    dexVolume,
+    dexWallets,
+    dexAssets,
+}) => wavesBtcRate && dexVolume && dexWallets && dexAssets ? (
     <Row>
         <ColNumber >
             <NumeralDemo
-                number={0.00110862}
+                number={wavesBtcRate}
                 text="Waves token value"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
-                number={1031819.67}
-                text="24h DEX value"
+                number={dexVolume}
+                text="24h DEX volume"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
-                number={72237}
+                number={dexWallets}
                 text="Wallets created"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
-                number={3110}
+                number={dexAssets}
                 text="tokens issued"
             />
         </ColNumber>
     </Row>
-)
+) : null;
 
 
 export default NumbersMain;

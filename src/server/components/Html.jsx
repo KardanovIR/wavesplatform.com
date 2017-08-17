@@ -4,7 +4,7 @@ import React from 'react';
 const Html = ({
     title,
     content,
-    preloadedState,
+    initialState,
     script,
     style
 }) => (
@@ -26,7 +26,7 @@ const Html = ({
             <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{ __html: `
-                    window.__PRELOADED_STATE = ${JSON.stringify(preloadedState)}
+                    window.__INITIAL_STATE = ${JSON.stringify(initialState)}
                 ` }}
             />
 
@@ -43,7 +43,7 @@ const Html = ({
 
 
 Html.defaultProps = {
-    preloadedState: {}
+    initialState: {}
 }
 
 

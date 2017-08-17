@@ -7,14 +7,14 @@ import Panel from 'src/common/components/Panel';
 
 import PairVolume from './lib/PairVolume';
 
-import pairs from './pairs';
+// import pairs from './pairs';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
 
 
 
-const DEXTopPairs = ({ classes }) => (
+const DEXTopPairs = ({ classes, pairs }) => (
     <Panel className={classes.root}>
         {pairs.map((pair, index) => (
             <Margin key={`top_pair_${index}`} bottom={2}>

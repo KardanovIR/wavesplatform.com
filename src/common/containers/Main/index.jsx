@@ -100,11 +100,14 @@ const styles = theme => ({
 })
 
 
-const PageLayout = ({ classes }) => (
+const PageLayout = ({
+    initialState,
+    classes
+}) => (
     <Layout>
 
         <div className={classes.paddedBottom}>
-            <MainScreen />
+            <MainScreen dexData={initialState.dexData} />
         </div>
 
         <Background className={classes.backgroundColor}>
@@ -189,9 +192,9 @@ const PageLayout = ({ classes }) => (
 const Page = injectSheet(styles)(PageLayout);
 
 
-const App = () => (
+const App = props => (
     <ThemeProvider>
-        <Page />
+        <Page { ...props } />
     </ThemeProvider>
 )
 

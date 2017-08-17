@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { render } from '../render';
+import { render, getInitialState } from '../render';
 
 
 import Product from '../../common/containers/Product';
 
 
-render(<Product />);
+render(<Product initialState={getInitialState()} />);
 
 
 

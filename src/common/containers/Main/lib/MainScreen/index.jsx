@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Typography from 'src/common/components/Typography';
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
 import BlockQuote from 'src/common/components/BlockQuote';
 
@@ -8,7 +7,8 @@ import { Row, Col } from 'src/common/components/Grid';
 
 import Button from 'src/common/components/Button';
 
-import NumbersMain from 'src/common/containers/NumbersMain';
+
+import Numbers from './lib/Numbers';
 
 
 
@@ -18,7 +18,10 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const MainScreen = ({
+    classes,
+    dexData,
+}) => (
     <Row>
         <Col xs={12} md={6}>
             <div className={classes.titleTextCtaWrapper}>
@@ -30,7 +33,7 @@ const MainScreen = ({ classes }) => (
                     ]}
                 />
             </div>
-            <NumbersMain />
+            <Numbers { ...dexData } />
         </Col>
         <Col xs={12} md={6}>
             <Row>

@@ -12,7 +12,7 @@ import { isEmpty, isEmailInvalid } from '../../../public/utils/validation';
 
 
 // for submit
-import { handleFetchError } from '../../../public/utils/handleFetchError';
+import { handleFetchError } from '../../../common/utils/handleFetchError';
 
 
 // localStorage read and write email

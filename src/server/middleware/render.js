@@ -4,7 +4,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
 // React html component with <html>, <head> etc.
-import Html from './components/Html';
+import Html from 'src/server/components/Html';
 
 
 export const render = (scriptName, Component = 'span') =>
@@ -13,7 +13,7 @@ export const render = (scriptName, Component = 'span') =>
 
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
-                <Component />
+                <Component initialState={ctx.state.initialState} />
             </JssProvider>
         )
 
@@ -22,6 +22,7 @@ export const render = (scriptName, Component = 'span') =>
                 script={scriptName}
                 content={content}
                 style={sheets.toString()}
+                initialState={ctx.state.initialState}
             />
         )}`;
     }

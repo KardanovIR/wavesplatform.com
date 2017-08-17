@@ -56,7 +56,7 @@ const styles = theme => ({
 })
 
 
-const PageLayout = ({ classes }) => (
+const PageLayout = ({ classes, initialState }) => (
     <Layout>
         <MainScreen />
         <Wallet />
@@ -100,7 +100,7 @@ const PageLayout = ({ classes }) => (
                     <DEXFeatures />
                 </Col>
                 <Col xs={12} md={4}>
-                     <DEXTopPairs /> 
+                     <DEXTopPairs pairs={initialState.dexTopPairs} /> 
                      <Margin bottom={4} />
                 </Col>
             </Row>
@@ -196,9 +196,9 @@ const PageLayout = ({ classes }) => (
 const Page = injectSheet(styles)(PageLayout);
 
 
-const App = () => (
+const App = props => (
     <ThemeProvider>
-        <Page />
+        <Page { ...props } />
     </ThemeProvider>
 )
 
