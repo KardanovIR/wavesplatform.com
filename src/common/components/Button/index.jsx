@@ -35,6 +35,7 @@ const Button = props => {
         icon,
         classes,
         className,
+        color,
 
         children,
         loading,
@@ -73,7 +74,7 @@ const Button = props => {
         <Element {...elementProps}>
 
             {loading && (
-                <Spinner className={classes.spinner} />
+                <Spinner dark={color.split('-')[1] > 500} className={classes.spinner} />
             )}
 
             <div className={contentWrapperClasses}>

@@ -21,6 +21,8 @@ const styles = theme => ({
         textDecoration: 'none',
         
         display: 'inline-block',
+        position: 'relative',
+
         cursor: 'pointer',
         borderRadius: theme.spacing.radius,
         backgroundColor: ({ color }) => theme.palette.getColor(color),
@@ -65,7 +67,9 @@ const styles = theme => ({
         position: 'absolute',
         top: '50%',
         left: '50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        height: 24,
+        width: 24
     }
 })
 
