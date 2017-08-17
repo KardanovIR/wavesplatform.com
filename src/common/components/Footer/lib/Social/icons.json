@@ -1,46 +1,34 @@
 [
 	{
 		"name": "telegram",
-		"href": "https://telegram.com" 
+		"href": "https://telegram.me/wavesnews"
 	},
 	{
 		"name": "slack",
-		"href": "https://slack.com" 
+		"href": "http://wavesplatform.herokuapp.com/"
 	},
 	{
 		"name": "facebook",
-		"href": "https://facebook.com" 
+		"href": "https://www.facebook.com/wavesplatform"
 	},
 	{
 		"name": "twitter",
-		"href": "https://twitter.com" 
-	},
-	{
-		"name": "bitcoin",
-		"href": "https://google.com" 
+		"href": "https://twitter.com/wavesplatform"
 	},
 	{
 		"name": "vkontakte",
-		"href": "https://vk.com" 
+		"href": "https://vk.com/wavesplatform"
 	},
 	{
 		"name": "medium",
-		"href": "https://medium.com" 
+		"href": "https://blog.wavesplatform.com/"
 	},
 	{
 		"name": "reddit",
-		"href": "https://reddit.com" 
+		"href": "https://www.reddit.com/r/Wavesplatform/"
 	},
 	{
 		"name": "youtube",
-		"href": "https://youtube.com" 
-	},
-	{
-		"name": "weibo",
-		"href": "https://google.com" 
-	},
-	{
-		"name": "wechat",
-		"href": "https://google.com" 
+		"href": "https://www.youtube.com/channel/UCYDQN4Fo4rGnOZ22L5plNIw"
 	}
 ]
