@@ -35,21 +35,35 @@ const FriendlyAPI = ({ classes }) => (
                 </Typography>
             </Margin>
 
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="github">
+            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <IconButton
+                    href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+                    target="_blank"
+                    iconName="github"
+                >
                     Documentation
                 </IconButton>
             </Margin>
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="github" color="gray-300">
+            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <IconButton
+                    href="https://github.com/wavesplatform/WavesGUI"
+                    target="_blank"
+                    iconName="github"
+                    color="gray-300"
+                >
                     Client
                 </IconButton>
             </Margin>
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="swagger" color="gray-300">
+            {/* <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <IconButton
+                    href="https://github.com/wavesplatform/WavesGUI"
+                    target="_blank"
+                    iconName="swagger"
+                    color="gray-300"
+                >
                     Swagger
                 </IconButton>
-            </Margin>
+            </Margin> */}
         </Col>
         <Col xs={12} md={6}>
         </Col>

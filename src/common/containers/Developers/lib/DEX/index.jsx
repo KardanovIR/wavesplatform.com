@@ -40,7 +40,13 @@ const MainScreen = ({ classes }) => (
 
                 <Margin bottom={4} />
 
-                <IconButton iconName="github">DEX API</IconButton>
+                <IconButton
+                    href="https://github.com/wavesplatform/Waves/wiki/Matcher"
+                    target="_blank"
+                    iconName="github"
+                >
+                    DEX API
+                </IconButton>
             </Col>
         </Row>
     </div >

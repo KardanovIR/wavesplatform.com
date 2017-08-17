@@ -36,11 +36,25 @@ const MainScreen = ({ classes }) => (
 
             <Margin bottom={4} />
 
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="github">Waves Node</IconButton>
+            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <IconButton
+                    href="https://github.com/wavesplatform/Waves"
+                    target="_blank"
+                    iconName="github"
+                    color="gray-300"
+                >
+                    Waves Node
+                </IconButton>
             </Margin>
-            <Margin bottom={3} right={3} className={classes.buttonWrapper}>
-                <IconButton iconName="github" color="gray-300">How to install</IconButton>
+            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <IconButton
+                    href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+                    target="_blank"
+                    iconName="github"
+                    color="gray-300"
+                >
+                    How to install
+                </IconButton>
             </Margin>
         </Col>
     </Row>
