@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.front.config.js",
-    "build": "webpack -w --config ./config/webpack.back.config.js",
+    "build:be": "webpack --config ./config/webpack.back.config.js",
     "server": "nodemon dist/app.js",
     "build:fe": "webpack --config ./config/webpack.front.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
