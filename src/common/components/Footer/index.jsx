@@ -3,7 +3,8 @@ import styles from './styles';
 
 import injectSheet from 'react-jss';
 
-import Icon from '../Icon';
+import Logo from 'src/common/components/Logo';
+
 
 import { Row, Col } from 'src/common/components/Grid';
 import Background from 'src/common/components/Background';
@@ -43,7 +44,7 @@ const Footer = ({ classes, links }) => (
 
                     <Col xs={12} md={1} className={classes.logo}>
                         <a href="/">
-                            <Icon name="logo" size={40} />
+                            <Logo />
                         </a>
                     </Col>
                 </Row>

@@ -1,6 +1,5 @@
 import Hamburger from './Hamburger';
 import Cross from './Cross';
-import Logo from './Logo';
 import Swagger from './Swagger';
 import GooglePlay from './GooglePlay';
 import MainWallet from './MainWallet';
@@ -12,7 +11,6 @@ import MainDollar from './MainDollar';
 export default {
     hamburger: Hamburger,
     cross: Cross,
-    logo: Logo,
     swagger: Swagger,
     googlePlay: GooglePlay,
     mainWallet: MainWallet,

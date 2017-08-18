@@ -2,6 +2,7 @@ import React from 'react';
 
 
 import Typography from 'src/common/components/Typography';
+import Icon from './Icon';
 import AvatarWithText from 'src/common/components/AvatarWithText';
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -24,50 +25,43 @@ const PlannedFeatures = ({ classes }) => (
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="ux" />}
                     text="New UX & UI"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="dex" />}
                     text="Expanded statistics on released tokens"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="mess" />}
                     text="Blockchain messenger"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="multi" />}
                     text="Multisignature"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="smart" />}
                     text="Smart contracts"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
+                    avatar={<Icon name="fiat" />}
                     text="New fiat and cryptocurrency gateways"
-                />
-            </ColFeature>
-            <ColFeature className={classes.feature}>
-                <AvatarWithText
-                    centered
-                    avatar={<div style={{ background: 'lightcyan', height: '100%' }} />}
-                    text="Tokenomica platform"
                 />
             </ColFeature>
         </Row>

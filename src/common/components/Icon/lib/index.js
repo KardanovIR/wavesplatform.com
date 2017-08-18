@@ -18,7 +18,6 @@ import FaApple from 'react-icons/lib/fa/apple';
 export default {
     hamburger: CustomIcon,
     cross: CustomIcon,
-    logo: CustomIcon,
     swagger: CustomIcon,
     googlePlay: CustomIcon,
     mainWallet: CustomIcon,
