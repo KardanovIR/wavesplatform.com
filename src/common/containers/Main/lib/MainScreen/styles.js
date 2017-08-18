@@ -8,8 +8,11 @@ const styles = theme => ({
     titleTextCtaWrapper: {
         marginBottom: theme.spacing.unit * 16
     },
-    secondaryButton: {
+    primaryButton: {
         display: 'none'
+    },
+    secondaryButton: {
+        marginLeft: -theme.spacing.unit * 2
     },
     imageWrapper: {
         position: 'relative',
@@ -54,8 +57,11 @@ const styles = theme => ({
         swappedToTop: {
             order: 0
         },
-        secondaryButton: {
+        primaryButton: {
             display: 'inline-block'
+        },
+        secondaryButton: {
+            margin: 0
         }
     }
 })

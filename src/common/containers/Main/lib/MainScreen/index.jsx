@@ -28,9 +28,10 @@ const MainScreen = ({
                 <TitleTextCTA
                     title="Decentralized blockchain platform"
                     text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
+                    inverted
                     buttons={[
-                        <Button withLoader key="main_cta_button" href="/download">Get Client</Button>,
-                        <Button withLoader secondary key="main_cta_button2" href="/download">Get Waves</Button>,
+                        <Button withLoader className={classes.primaryButton} key="main_cta_button" href="/download">Get Client</Button>,
+                        <Button withLoader className={classes.secondaryButton} secondary key="main_cta_button2" href="/download">Get Waves</Button>,
                     ]}
                 />
             </div>
@@ -45,7 +46,7 @@ const MainScreen = ({
                     </BlockQuote>
                 </Col>
                 <Col xs={12} className={classes.swappedToTop + ' ' + classes.imageWrapper}>
-                    <div className={classes.image} />
+                    {/* <div className={classes.image} /> */}
                 </Col>
             </Row>
         </Col>

@@ -53,7 +53,7 @@ const Background = ({
 Background.defaultProps = {
     className: '',
     wrapperClassName: '',
-    skewed: true
+    skewed: false
 }
 
 

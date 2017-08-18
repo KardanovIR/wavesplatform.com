@@ -47,9 +47,12 @@ const styles = theme => ({
             theme.spacing.numeral
         ]
     },
-    colored: {
-        color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
+    inverted: {
+        color: theme.palette.gray[0]
     },
+    // colored: {
+    //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
+    // },
     'align-right': {
         textAlign: 'right'
     },

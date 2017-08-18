@@ -16,18 +16,19 @@ const TitleTextCTA = ({
     title,
     titleType,
     text,
+    inverted,
     buttons
 }) => (
         <div className={className}>
             <div className={classes.title}>
-                <Typography type={titleType}>
+                <Typography inverted={inverted} type={titleType}>
                     {title}
                 </Typography>
             </div>
 
 
             <div className={classes.text}>
-                <Typography type="body">
+                <Typography inverted={inverted} type="body">
                     {text}
                 </Typography>
             </div>
