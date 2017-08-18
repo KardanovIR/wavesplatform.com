@@ -7,12 +7,12 @@ import injectSheet from 'react-jss';
 
 const styles = theme => ({
     link: {
-        color: 'inherit',
+        color: theme.palette.primary[500],
         '&:hover': {
-            color: theme.palette.secondary[500]
+            color: theme.palette.primary[300]
         },
         '&:active': {
-            color: theme.palette.secondary[500]
+            color: theme.palette.primary[300]
         },
     }
 })
@@ -32,6 +32,7 @@ const Link = ({
         <a className={className} { ...rest } />
     )
 }
+
 
 
 export default injectSheet(styles)(Link);

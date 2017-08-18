@@ -5,6 +5,12 @@ const styles = theme => ({
             theme.spacing.body
         ]
     },
+    body2: {
+        extend: [
+            theme.typography.body2,
+            theme.spacing.body
+        ]
+    },
     display4: {
         extend: [
             theme.typography.display4,

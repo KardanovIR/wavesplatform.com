@@ -38,14 +38,12 @@ class Button extends Component {
     render() {
 
         const {
-            // big,
-            // small,
             type,
             href,
             icon,
             classes,
             className,
-            color,
+            secondary,
 
             children,
             loading,
@@ -60,15 +58,15 @@ class Button extends Component {
         const showLoader = loading || this.state.loading;
 
         const buttonElementClasses = classnames(classes.button, {
-            // [classes.small]: small,
+            [classes.secondary]: secondary,
             // [classes.big]: big,
             // [classes.default]: !primary,
             // [classes.primary]: primary,
         }, className);
 
         const contentWrapperClasses = classnames(
-            classes.content,
             classes.text,
+            classes.content,
             { [classes.contentHidden]: showLoader }
         );
 
@@ -86,7 +84,7 @@ class Button extends Component {
             <Element {...elementProps} onClick={this.handleClick}>
 
                 {showLoader && (
-                    <Spinner dark={color.split('-')[1] < 500} className={classes.spinner} />
+                    <Spinner dark={secondary} className={classes.spinner} />
                 )}
 
                 <div className={contentWrapperClasses}>
@@ -106,7 +104,7 @@ class Button extends Component {
             </Element>
         )
     }
-};
+}
 
 
 Button.defaultProps = {
@@ -117,7 +115,7 @@ Button.defaultProps = {
     disabled: false,
     // active: false,
     loading: false,
-    color: 'primary-500',
+    color: 'primary-900',
     onClick: () => {}
     // primary: false
 };

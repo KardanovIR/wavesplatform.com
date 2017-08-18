@@ -15,7 +15,7 @@ const creatyTypography = (palette) => {
 
     const base = {
         ...global,
-        color: palette.primary[900]
+        color: palette.gray[800]
     }
 
     const display = {
@@ -79,11 +79,22 @@ const creatyTypography = (palette) => {
                 lineHeight: 1.59,
             }
         ),
+        body2: combineMobileDesktopStyles(
+            {
+                ...base,
+                fontSize: 17,
+                lineHeight: 1.35,
+            },
+            {
+                fontSize: 20,
+                lineHeight: 1.59,
+            }
+        ),
         quote: combineMobileDesktopStyles(
             {
                 ...base,
                 fontStyle: 'italic',
-                color: palette.primary[300]
+                color: palette.gray[300]
             },
             {
                 fontSize: 17,
@@ -92,12 +103,11 @@ const creatyTypography = (palette) => {
         ),
         button: combineMobileDesktopStyles(
             {
-                ...display,
+                ...global,
                 fontSize: 13,
                 textTransform: 'uppercase',
                 lineHeight: 'normal',
                 letterSpacing: '1px',
-                color: palette.primary[300]
             },
             {
                 fontSize: 15,
