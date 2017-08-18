@@ -16,7 +16,7 @@ const spacing = createSpacing();
 
 const theme = {
     palette,
-    typography: createTypography({ spacingUnit: spacing.unit }),
+    typography: createTypography(palette),
     breakpoints,
     spacing,
     mixins,

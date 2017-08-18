@@ -1,6 +1,9 @@
 export const primary = {
     0: 'white',
-    500: '#1360db'
+    300: '#6579a7',
+    500: '##699eff',
+    700: '#263f6f',
+    900: '#0a1b43',
 }
 
 export const secondary = {
