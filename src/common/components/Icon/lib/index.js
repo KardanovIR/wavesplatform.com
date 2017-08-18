@@ -21,6 +21,10 @@ export default {
     logo: CustomIcon,
     swagger: CustomIcon,
     googlePlay: CustomIcon,
+    mainWallet: CustomIcon,
+    mainBitcoin: CustomIcon,
+    mainToken: CustomIcon,
+    mainDollar: CustomIcon,
 
     // social
     twitter: FaTwitter,

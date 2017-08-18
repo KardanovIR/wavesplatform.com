@@ -106,7 +106,7 @@ const creatyTypography = (palette) => {
                 ...global,
                 fontSize: 13,
                 textTransform: 'uppercase',
-                lineHeight: 'normal',
+                lineHeight: 1,
                 letterSpacing: '1px',
             },
             {
@@ -117,7 +117,7 @@ const creatyTypography = (palette) => {
             {
                 fontFamily: 'arial, sans-serif',
                 fontSize: 20,
-                lineHeight: 'normal',
+                lineHeight: 1,
                 fontStyle: 'normal',
                 color: palette.primary[700]
             },
