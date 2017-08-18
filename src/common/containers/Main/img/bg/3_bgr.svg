@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1768" height="767" viewBox="0 0 1768 767">
+  <defs>
+    <linearGradient id="3_bgr-a" x1="78.106%" x2="52.649%" y1="-119.468%" y2="59.813%">
+      <stop offset="0%" stop-color="#00F2FF" stop-opacity=".8"/>
+      <stop offset="44.983%" stop-color="#00F2FF" stop-opacity=".31"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="3_bgr-b" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
+      <stop offset="0%" stop-color="#0053FF"/>
+      <stop offset="43.646%" stop-color="#0086FF" stop-opacity=".4"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="3_bgr-c" x1="53.318%" x2="50%" y1="-54.003%" y2="98.89%">
+      <stop offset="0%" stop-color="#1C00FF" stop-opacity=".09"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="3_bgr-d" cx="-4.449%" cy="37.693%" r="16.065%" fx="-4.449%" fy="37.693%" gradientTransform="matrix(.355 0 0 1 -.029 0)">
+      <stop offset="0%" stop-color="#0053FF" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-45 -101)">
+    <polygon fill="url(#3_bgr-a)" points="70.889 224.812 1906.416 225.782 1850.007 879.512 25.567 879.512" opacity=".5" transform="rotate(-5 965.992 552.162)"/>
+    <polygon fill="url(#3_bgr-b)" points="70.889 274.812 1906.416 275.782 1850.007 929.512 25.567 929.512" opacity=".5" transform="rotate(-5 965.992 602.162)"/>
+    <polygon fill="url(#3_bgr-c)" points="1218.113 177.137 2396.113 177.137 2358.876 608.542 1180.876 608.542" transform="rotate(-5 1788.494 392.84)"/>
+    <polygon fill="url(#3_bgr-d)" points="1078.113 52.137 2256.113 52.137 2218.876 483.542 1040.876 483.542" transform="rotate(-5 1648.494 267.84)"/>
+  </g>
+</svg>

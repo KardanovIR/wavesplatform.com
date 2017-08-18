@@ -46,14 +46,15 @@ export default theme => ({
     bg: {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top right',
+        transform: 'translateX(-50%)',
+        top: 0,
     },
     bgMain: {
         composes: '$bg',
         backgroundImage: `url(${require('./img/bg/1_bgr.svg')})`,
-        backgroundPosition: 'top right',
         top: -100,
         height: 'calc(900px - 50vw)',
-        transform: 'translateX(-50%)',
         [theme.mixins.atMedia('md')]: {
             backgroundPosition: 'top center',
             top: -200,
@@ -63,6 +64,23 @@ export default theme => ({
             top: -230,
             height: 900
         }
+    },
+    bgClient: {
+        composes: '$bg',
+        top: -100,
+        backgroundSize: '100%',
+        backgroundImage: `url(${require('./img/bg/2_bgr.svg')})`,
+    },
+    bgWallet: {
+        composes: '$bg',
+        backgroundSize: '100%',
+        top: -150,
+        // height: '50%',
+        backgroundImage: `url(${require('./img/bg/3_bgr.svg')})`,
+    },
+    bgDex: {
+        composes: '$bg',
+        backgroundImage: `url(${require('./img/bg/3_bgr.svg')})`,
     },
 
     backgroundColor: {

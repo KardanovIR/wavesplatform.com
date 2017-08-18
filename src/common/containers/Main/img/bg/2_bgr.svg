@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1586" height="625" viewBox="0 0 1586 625">
+  <defs>
+    <linearGradient id="2_bgr-a" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
+      <stop offset="0%" stop-color="#0053FF"/>
+      <stop offset="43.646%" stop-color="#0086FF" stop-opacity=".4"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="2_bgr-b" x1="53.318%" x2="50%" y1="-54.003%" y2="98.89%">
+      <stop offset="0%" stop-color="#0053FF" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-41 -64)">
+    <polygon fill="url(#2_bgr-a)" points="63.547 156.518 1712.616 157.39 1661.936 744.712 22.829 744.712" opacity=".5" transform="rotate(-5 867.723 450.615)"/>
+    <polygon fill="url(#2_bgr-b)" points="1212.113 52.137 2390.113 52.137 2352.876 483.542 1174.876 483.542" transform="rotate(-5 1782.494 267.84)"/>
+  </g>
+</svg>

@@ -3,6 +3,7 @@ import React from 'react';
 
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
 import AvatarWithText from 'src/common/components/AvatarWithText';
+import WalletIcon from './Icon';
 import { Row, Col } from 'src/common/components/Grid';
 
 
@@ -29,31 +30,31 @@ const Wallet = ({ classes }) => (
         <Row>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<div style={{ background: 'lightcyan' }} />}
+                    avatar={<WalletIcon name="secure" />}
                     text="Take advantage of our platform’s high security"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<div style={{ background: 'lightcyan' }} />}
+                    avatar={<WalletIcon name="interest" />}
                     text="Get interest on your Waves account balance"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<div style={{ background: 'lightcyan' }} />}
+                    avatar={<WalletIcon name="transfer" />}
                     text="Transfer funds from person to person"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<div style={{ background: 'lightcyan' }} />}
+                    avatar={<WalletIcon name="mining" />}
                     text="Start mining — it’s easy with Waves"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<div style={{ background: 'lightcyan' }} />}
+                    avatar={<WalletIcon name="wallet" />}
                     text="Create a multiple-currency wallet"
                 />
             </ColFeature>

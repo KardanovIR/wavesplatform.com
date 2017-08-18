@@ -47,25 +47,25 @@ const PageLayout = ({
             </div>
 
 
-            <Background skewed={true} className={classes.backgroundColor}>
+            <Background className={classes.bgClient}>
                 <div className={classes.section}>
                     <WavesClient />
                 </div>
             </Background>
 
 
-
-
             <Row centered>
                 <Col xs={12} md={10}>
-                    <Background className={classes.backgroundGradient}>
-                        <div className={classes.sectionNarrow}>
+                     <Background className={classes.bgWallet}>
+                        <div className={classes.section}>
                             <Wallet />
                         </div>
+                    </Background>
+                    <Background className={classes.bgDex}>
                         <div className={classes.sectionNarrow}>
                             <DEX />
                         </div>
-                    </Background>
+                    </Background> 
                 </Col>
             </Row>
 
