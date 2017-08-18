@@ -46,16 +46,32 @@ const styles = theme => ({
         backgroundSize: '100%',
         marginBottom: theme.spacing.unit
     },
-    swappedToBottom: {
-        marginBottom: theme.spacing.unit * 2
+
+
+    // order
+    titleTextCtaCol: {
+        order: 1
+    },
+    numbersCol: {
+        marginTop: theme.spacing.unit*6,
+        order: 2
+    },
+    imageCol: {
+        order: 3,
+        marginBottom: theme.spacing.unit*4
+    },
+    deloitteCol: {
+        order: 4,
+        display: 'flex',
+        alignItems: 'flex-end',
+        paddingBottom: theme.spacing.unit*4
     },
     [theme.mixins.atMedia('md')]: {
-        swappedToBottom: {
-            order: 1,
-            maring: 0
+        numbersCol: {
+            order: 3
         },
-        swappedToTop: {
-            order: 0
+        imageCol: {
+            order: 2
         },
         primaryButton: {
             display: 'inline-block'

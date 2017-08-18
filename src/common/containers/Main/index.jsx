@@ -36,7 +36,7 @@ const PageLayout = ({
     initialState,
     classes
 }) => (
-    <Layout>
+    <Layout invertedNavigation>
 
         <Background className={classes.bgMain}>
             <div className={classes.paddedBottom}>

@@ -9,7 +9,7 @@ import DesktopNav from './lib/desktop';
 import Icon from 'src/common/components/Icon';
 
 
-const Nav = ({ classes, links }) => (
+const Nav = ({ classes, links, inverted }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
             <a href="/">
@@ -20,11 +20,11 @@ const Nav = ({ classes, links }) => (
         <div className={classes.navContainer}>
 
              <div className={classes.mobileNav}>
-                <MobileNav links={links} />
+                <MobileNav inverted links={links} />
             </div>
 
             <div className={classes.desktopNav}>
-                <DesktopNav links={links} />
+                <DesktopNav inverted links={links} />
             </div> 
         </div>
     </nav> 

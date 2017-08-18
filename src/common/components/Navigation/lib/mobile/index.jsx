@@ -29,12 +29,12 @@ class MobileNav extends Component {
         })
 
     render() {
-        const { classes, links } = this.props;
+        const { classes, links, inverted } = this.props;
 
         return (
             <div className={classes.wrapper}>
                 <div className={classes.burger} onClick={this.handleClick}>
-                    <Icon name="hamburger" size={32} />
+                    <Icon name="hamburger" size={32} color={inverted ? 'gray-0' : 'gray-800'} />
                 </div>
 
 

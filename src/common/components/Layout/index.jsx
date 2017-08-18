@@ -31,10 +31,14 @@ const styles = theme => ({
 })
 
 
-const Layout = ({ children, classes }) => (
+const Layout = ({
+    children,
+    invertedNavigation,
+    classes
+}) => (
     <Wrapper>
         <div className={classes.navigationWrapper}>
-            <Navigation links={links} />
+            <Navigation inverted={invertedNavigation} links={links} />
         </div>
         <div>{children}</div>
         <Footer links={links} />

@@ -49,12 +49,19 @@ export default theme => ({
     },
     bgMain: {
         composes: '$bg',
-        backgroundImage: `url(${require('./img/bg/1_bgr.png')})`,
-        top: 60,
-        height: 'calc(1500px - 150vw)',
-        [theme.mixins.atMedia('sm')]: {
-            top: 60,
-            height: 650,
+        backgroundImage: `url(${require('./img/bg/1_bgr.svg')})`,
+        backgroundPosition: 'top right',
+        top: -100,
+        height: 'calc(900px - 50vw)',
+        transform: 'translateX(-50%)',
+        [theme.mixins.atMedia('md')]: {
+            backgroundPosition: 'top center',
+            top: -200,
+            height: 950,
+        },
+        [theme.mixins.atMedia('lg')]: {
+            top: -230,
+            height: 900
         }
     },
 
