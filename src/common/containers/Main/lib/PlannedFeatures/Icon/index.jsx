@@ -10,6 +10,8 @@ const styles = {
         height: '100%',
         backgroundSize: '100%',
         backgroundRepeat: 'no-repeat',
+        borderRadius: '50%',
+        boxShadow: '0 2px 10px 0 rgba(0, 0, 0, 0.1)',
     },
     dex: {
         backgroundImage: `url(${require('./plans_dex.svg')})`

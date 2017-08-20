@@ -1,15 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="107" viewBox="0 0 107 107">
-  <defs>
-    <circle id="plans_multi-b" cx="43.5" cy="43.5" r="43.5"/>
-    <filter id="plans_multi-a" width="136.8%" height="136.8%" x="-18.4%" y="-16.1%" filterUnits="objectBoundingBox">
-      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.403921569   0 0 0 0 0.647058824   0 0 0 0 1  0 0 0 0.2 0"/>
-    </filter>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(10 8)">
-    <use fill="#000" filter="url(#plans_multi-a)" xlink:href="#plans_multi-b"/>
-    <use fill="#FFF" xlink:href="#plans_multi-b"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="43.5" cy="43.5" r="43.5" fill="#FFF"/>
     <path fill="#4F89DC" d="M65,43.5 C65,55.374 55.374,65 43.5,65 C31.626,65 22,55.374 22,43.5 C22,31.626 31.626,22 43.5,22 C55.374,22 65,31.626 65,43.5"/>
     <path fill="#0044BA" fill-rule="nonzero" d="M42.001,43.0171 C42.001,47.1592204 45.3592661,50.5171 49.501,50.5171 C50.3294271,50.5171 51.001,49.8455271 51.001,49.0171 C51.001,48.1886729 50.3294271,47.5171 49.501,47.5171 C47.0160431,47.5171 45.001,45.5022889 45.001,43.0171 C45.001,42.1886729 44.3294271,41.5171 43.501,41.5171 C42.6725729,41.5171 42.001,42.1886729 42.001,43.0171 Z"/>
     <path fill="#A2E0F5" fill-rule="nonzero" d="M39.001,43.0171 C39.001,40.5325271 41.0164271,38.5171 43.501,38.5171 C45.9855729,38.5171 48.001,40.5325271 48.001,43.0171 C48.001,43.8455271 48.6725729,44.5171 49.501,44.5171 C50.3294271,44.5171 51.001,43.8455271 51.001,43.0171 C51.001,38.8756729 47.6424271,35.5171 43.501,35.5171 C39.3595729,35.5171 36.001,38.8756729 36.001,43.0171 C36.001,43.8455271 36.6725729,44.5171 37.501,44.5171 C38.3294271,44.5171 39.001,43.8455271 39.001,43.0171 Z"/>

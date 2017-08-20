@@ -1,15 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="107" viewBox="0 0 107 107">
-  <defs>
-    <circle id="plans_mess-b" cx="43.5" cy="43.5" r="43.5"/>
-    <filter id="plans_mess-a" width="136.8%" height="136.8%" x="-18.4%" y="-16.1%" filterUnits="objectBoundingBox">
-      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.403921569   0 0 0 0 0.647058824   0 0 0 0 1  0 0 0 0.2 0"/>
-    </filter>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(10 8)">
-    <use fill="#000" filter="url(#plans_mess-a)" xlink:href="#plans_mess-b"/>
-    <use fill="#FFF" xlink:href="#plans_mess-b"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="43.5" cy="43.5" r="43.5" fill="#FFF"/>
     <path fill="#0044BA" d="M54,38.2925 C54,39.0715 53.938,39.8375 53.815,40.5855 C52.622,47.9435 45.772,53.5845 37.5,53.5845 C28.387,53.5845 21,46.7385 21,38.2925 C21,29.8465 28.387,23.0005 37.5,23.0005 C46.612,23.0005 54,29.8465 54,38.2925"/>
     <path fill="#4F89DC" d="M44.7314,60.8291 L54.7104,44.2191 C54.7104,44.2191 37.4874,42.3171 42.3164,43.9271 C47.1464,45.5361 44.7314,60.8291 44.7314,60.8291"/>
     <path fill="#4F89DC" d="M32,45.293 C32,46.072 32.063,46.838 32.184,47.585 C33.378,54.943 40.228,60.585 48.5,60.585 C57.612,60.585 65,53.738 65,45.293 C65,36.847 57.612,30 48.5,30 C39.387,30 32,36.847 32,45.293"/>

@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-import TitleTextCTA from 'src/common/components/TitleTextCTA';
+import Typography from 'src/common/components/Typography';
+import Margin from 'src/common/components/Margin';
 import AvatarWithText from 'src/common/components/AvatarWithText';
 import WalletIcon from './Icon';
 import { Row, Col } from 'src/common/components/Grid';
@@ -18,13 +19,15 @@ const ColFeature = ({ children, className }) =>
 
 const Wallet = ({ classes }) => (
     <div className={classes.root}>
-        <Row>
+        <Row centered>
             <Col xs={12} sm={6}>
-                <TitleTextCTA
-                    title="Wallet"
-                    titleType="display2"
-                    text="Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets."
-                />
+                <Typography type="display2" align="center">
+                    Wallet
+                </Typography>
+                <Typography type="body" align="center">
+                    Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets."
+                </Typography>
+                <Margin bottom={4} />
             </Col>
         </Row>
         <Row>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="43.5" cy="43.5" r="43.5" fill="#000"/>
+        <circle cx="33" cy="32" r="3" fill="#FFF"/>
+        <circle cx="24" cy="32" r="3" fill="#FFF"/>
+        <circle cx="24" cy="50" r="3" fill="#FFF"/>
+        <circle cx="33" cy="50" r="3" fill="#FFF"/>
+        <circle cx="42" cy="59" r="3" fill="#FFF"/>
+        <circle cx="51" cy="59" r="3" fill="#FFF"/>
+        <circle cx="60" cy="59" r="3" fill="#FFF"/>
+        <circle cx="51" cy="50" r="3" fill="#FFF"/>
+        <circle cx="60" cy="50" r="3" fill="#FFF"/>
+        <circle cx="51" cy="41" r="3" fill="#FFF"/>
+        <circle cx="51" cy="23" r="3" fill="#FFF"/>
+        <circle cx="60" cy="41" r="3" fill="#FFF"/>
+    </g>
+</svg>

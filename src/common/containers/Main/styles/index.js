@@ -1,4 +1,10 @@
 export default theme => ({
+    desktopOnly: {
+        display: 'none',
+        [theme.mixins.atMedia('md')]: {
+            display: 'block'
+        }
+    },
     paddedTop: {
         paddingTop: theme.spacing.unit * 5,
         [theme.mixins.atMedia('md')]: {
@@ -52,7 +58,8 @@ export default theme => ({
     },
     bgMain: {
         composes: '$bg',
-        backgroundImage: `url(${require('./img/bg/1_bgr.svg')})`,
+        backgroundImage: `url(${require('../img/bg/1_bgr.svg')})`,
+        backgroundSize: 'cover',
         top: -100,
         height: 'calc(900px - 50vw)',
         [theme.mixins.atMedia('md')]: {
@@ -66,21 +73,49 @@ export default theme => ({
         }
     },
     bgClient: {
-        composes: '$bg',
+        composes: [
+            '$bg',
+            '$desktopOnly'
+        ],
         top: -100,
         backgroundSize: '100%',
-        backgroundImage: `url(${require('./img/bg/2_bgr.svg')})`,
+        backgroundImage: `url(${require('../img/bg/2_bgr.svg')})`,
     },
     bgWallet: {
-        composes: '$bg',
+        composes: [
+            '$bg',
+            '$desktopOnly'
+        ],
+        minWidth: 2500,
         backgroundSize: '100%',
-        top: -150,
-        // height: '50%',
-        backgroundImage: `url(${require('./img/bg/3_bgr.svg')})`,
+        top: -200,
+        backgroundImage: `url(${require('../img/bg/3_bgr.svg')})`,
     },
     bgDex: {
-        composes: '$bg',
-        backgroundImage: `url(${require('./img/bg/3_bgr.svg')})`,
+        composes: [
+            '$bg',
+            '$desktopOnly'
+        ],
+        minWidth: 2500,
+        top: 'unset',  // bind to bottom
+        bottom: -200,
+        height: '120%',
+        backgroundSize: '100%',
+        backgroundImage: `url(${require('../img/bg/4_bgr.svg')})`,
+        backgroundPosition: 'bottom center',
+    },
+    bgFeatures: {
+        backgroundColor: '#d8e7fc',
+        top: 'calc(50% - 24px)',
+        [theme.mixins.atMedia('md')]: {
+            backgroundColor: 'unset',
+            minWidth: 2500,
+            transform: 'translate(-50%, -50%)',
+            backgroundRepeat: 'no-repeat',
+            height: '140%',
+            backgroundSize: '100%',
+            backgroundImage: `url(${require('../img/bg/5_bgr.svg')})`,
+        },
     },
 
     backgroundColor: {

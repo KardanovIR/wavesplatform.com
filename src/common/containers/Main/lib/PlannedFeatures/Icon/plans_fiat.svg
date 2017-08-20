@@ -1,15 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="107" viewBox="0 0 107 107">
-  <defs>
-    <circle id="plans_fiat-b" cx="43.5" cy="43.5" r="43.5"/>
-    <filter id="plans_fiat-a" width="136.8%" height="136.8%" x="-18.4%" y="-16.1%" filterUnits="objectBoundingBox">
-      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
-      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.403921569   0 0 0 0 0.647058824   0 0 0 0 1  0 0 0 0.2 0"/>
-    </filter>
-  </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(10 8)">
-    <use fill="#000" filter="url(#plans_fiat-a)" xlink:href="#plans_fiat-b"/>
-    <use fill="#FFF" xlink:href="#plans_fiat-b"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 87 87">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="43.5" cy="43.5" r="43.5" fill="#FFF"/>
     <path fill="#4F89DC" d="M65,31 L65,57 C65,59.2 63.2,61 61,61 L26,61 C23.8,61 22,59.2 22,57 L22,31 C22,28.8 23.8,27 26,27 L61,27 C63.2,27 65,28.8 65,31"/>
     <path fill="#0044BA" d="M22 37L22 31.2105263C22 28.8947368 23.8 27 26 27L30.25 27 61 27M60 31C61.104 31 62 31.896 62 33 62 34.104 61.104 35 60 35 58.896 35 58 34.104 58 33 58 31.896 58.896 31 60 31M60 53C61.104 53 62 53.896 62 55 62 56.104 61.104 57 60 57 58.896 57 58 56.104 58 55 58 53.896 58.896 53 60 53"/>
     <path fill="#0044BA" d="M28 31C29.104 31 30 31.896 30 33 30 34.104 29.104 35 28 35 26.896 35 26 34.104 26 33 26 31.896 26.896 31 28 31M29 53C30.104 53 31 53.896 31 55 31 56.104 30.104 57 29 57 27.896 57 27 56.104 27 55 27 53.896 27.896 53 29 53"/>

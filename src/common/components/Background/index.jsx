@@ -23,7 +23,7 @@ const styles = {
         zIndex: -1
     },
     skewed: {
-        transform: 'translate(-50%, -50%) skewY(-3deg)',
+        transform: 'translate(-50%, -50%) skewY(-5deg)',
     }
 }
 
