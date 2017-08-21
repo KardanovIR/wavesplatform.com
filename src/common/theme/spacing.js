@@ -27,11 +27,30 @@ const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
         '& + $body': combineMobileDesktopStyles(
             { marginTop: unit * 1 },
             { marginTop: unit * 1.5 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
+            { marginTop: unit * 1.5 },
+            { marginTop: unit * 2.5 }
+        )
+    },
+
+    body2: {
+        '& + $body': combineMobileDesktopStyles(
+            { marginTop: unit * 1 },
+            { marginTop: unit * 1.5 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
+            { marginTop: unit * 1.5 },
+            { marginTop: unit * 2.5 }
         )
     },
 
     display4: {
         '& + $body': combineMobileDesktopStyles(
+            { marginTop: unit * 3 },
+            { marginTop: unit * 5 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
             { marginTop: unit * 3 },
             { marginTop: unit * 5 }
         )
@@ -41,11 +60,19 @@ const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
         '& + $body': combineMobileDesktopStyles(
             { marginTop: unit * 2.5 },
             { marginTop: unit * 3.5 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
+            { marginTop: unit * 3 },
+            { marginTop: unit * 5 }
         )
     },
 
     display2: {
         '& + $body': combineMobileDesktopStyles(
+            { marginTop: unit * 1.5 },
+            { marginTop: unit * 2.5 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
             { marginTop: unit * 1.5 },
             { marginTop: unit * 2.5 }
         )
@@ -55,6 +82,10 @@ const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
         '& + $body': combineMobileDesktopStyles(
             { marginTop: unit * 1 },
             { marginTop: unit * 2 }
+        ),
+        '& + $body2': combineMobileDesktopStyles(
+            { marginTop: unit * 1.5 },
+            { marginTop: unit * 2.5 }
         )
     },
 

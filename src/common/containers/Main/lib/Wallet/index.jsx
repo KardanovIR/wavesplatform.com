@@ -24,7 +24,7 @@ const Wallet = ({ classes }) => (
                 <Typography type="display2" align="center">
                     Wallet
                 </Typography>
-                <Typography type="body" align="center">
+                <Typography type="body2" align="center">
                     Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets."
                 </Typography>
                 <Margin bottom={4} />
@@ -35,30 +35,35 @@ const Wallet = ({ classes }) => (
                 <AvatarWithText
                     avatar={<WalletIcon name="secure" />}
                     text="Take advantage of our platform’s high security"
+                    centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     avatar={<WalletIcon name="interest" />}
                     text="Get interest on your Waves account balance"
+                    centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     avatar={<WalletIcon name="transfer" />}
                     text="Transfer funds from person to person"
+                    centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     avatar={<WalletIcon name="mining" />}
                     text="Start mining — it’s easy with Waves"
+                    centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     avatar={<WalletIcon name="wallet" />}
                     text="Create a multiple-currency wallet"
+                    centered
                 />
             </ColFeature>
         </Row>

@@ -21,9 +21,9 @@ const styles = theme => ({
         left: -100,
 
         width: '90%',
-        paddingTop: '75%',
+        paddingTop: '60%',
 
-        background: `url(${mockup}) no-repeat`,
+        // background: `url(${mockup}) no-repeat`,
         backgroundSize: '100%',
         transform: 'rotate(-6deg)',
         marginBottom: theme.spacing.unit * 2

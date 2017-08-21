@@ -52,6 +52,7 @@ Typography.defaultProps = {
         'display2': 'h3',
         'display1': 'h4',
         'body': 'div',
+        'body2': 'div',
         'quote': 'div',
         'numeral': 'div'
     },
@@ -65,6 +66,7 @@ const types = [
     'display2',
     'display1',
     'body',
+    'body2',
     'quote',
     'numeral'
 ]

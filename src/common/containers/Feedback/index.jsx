@@ -18,7 +18,7 @@ const FeedbackContainer = ({
     <div>
         <Feedback
             image={<div className={classes.primalbaseAva} />}
-            logo={<div style={{ height: 20, width: 100, background: 'red' }} />}
+            logo={<div className={classes.primalbaseLogo} />}
             avatar={<div className={classes.primalbaseAva} />}
             description="Worldwide coworking spaces for Tech Community"
             title="Primalbase crowdsale ends after one day and over 3 000 BTC raised"

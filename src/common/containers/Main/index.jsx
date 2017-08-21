@@ -39,7 +39,7 @@ const PageLayout = ({
         <Layout invertedNavigation>
 
             <Background className={classes.bgMain}>
-                    <MainScreen dexData={initialState.dexData} />
+                <MainScreen dexData={initialState.dexData} />
             </Background>
 
             <div className={classes.sectionNarrow}>
@@ -54,20 +54,16 @@ const PageLayout = ({
             </Background>
 
 
-            <Row centered>
-                <Col xs={12} md={10}>
-                     <Background className={classes.bgWallet}>
-                        <div className={classes.section}>
-                            <Wallet />
-                        </div>
-                    </Background>
-                    <Background className={classes.bgDex}>
-                        <div className={classes.section}>
-                            <DEX />
-                        </div>
-                    </Background> 
-                </Col>
-            </Row>
+            <Background className={classes.bgWallet}>
+                <div className={classes.section}>
+                    <Wallet />
+                </div>
+            </Background>
+            <Background className={classes.bgDex}>
+                <div className={classes.section}>
+                    <DEX />
+                </div>
+            </Background>
 
             <div className={classes.paddedTop}>
                 <IssuingTokens />
