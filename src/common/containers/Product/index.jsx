@@ -46,14 +46,22 @@ const PageLayout = ({ classes, initialState }) => (
             </div>
         </Background>
 
-        <div className={classes.section}>
+        <Background className={classes.bgInterest} skewed={true}>
             <Wallet />
-        </div>
-        
-        <Interest />
+            <div className={classes.section}>
+                <Interest />
+            </div>
+        </Background>
 
-        <MobileWallet />
-        <OnlineWallet />
+
+        <div className={classes.sectionNarrow}>
+            <MobileWallet />
+        </div>
+
+        <div className={classes.sectionNarrow}>
+            <OnlineWallet />
+        </div>
+
 
         <Background className={cn(classes.backgroundGradient, classes.padded)}>
             <HowToBlock

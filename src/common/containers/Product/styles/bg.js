@@ -23,6 +23,9 @@ export default theme => ({
             minHeight: 750
         }
     },
+    bgInterest: {
+        backgroundImage: 'linear-gradient(25deg, rgba(0, 242, 255, 0.05) 0%, rgba(28, 0, 255, 0.05) 25%, rgba(255, 255, 255, 0) 50%)'
+    },
     bgClient: {
         composes: [
             '$bg',

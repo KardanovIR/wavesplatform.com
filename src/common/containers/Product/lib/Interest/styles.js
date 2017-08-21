@@ -5,9 +5,6 @@ import mining from './img/mining.svg';
 
 
 const styles = theme => ({
-    root: {
-        padding: theme.spacing.getSpacing(5, 0, 5)
-    },
     column: {
         display: 'flex',
         marginBottom: theme.spacing.unit * 2
@@ -34,9 +31,6 @@ const styles = theme => ({
         backgroundImage: `url(${mining})`,
     },
     [theme.mixins.atMedia('md')]: {
-        root: {
-            padding: theme.spacing.getSpacing(20, 0, 15)
-        },
         feature: {
             marginBottom: theme.spacing.unit * 6
         }

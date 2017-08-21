@@ -14,7 +14,7 @@ import styles from './styles';
 
 
 const MainScreen = ({ classes }) => (
-    <div className={classes.root}>
+    <div>
         <Row centered>
             <Col xs={12} md={6}>
                 <Typography type="display2" align="center">Get interest on your Waves account balance</Typography>

@@ -6,7 +6,10 @@ export default theme => ({
         borderRadius: theme.spacing.radius,
         boxSizing: 'border-box'
     },
-    light: shadow,
+    light: {
+        ...shadow,
+        background: theme.palette.gray[0]
+    },
     dark: {
         background: theme.palette.gray[900]
     },

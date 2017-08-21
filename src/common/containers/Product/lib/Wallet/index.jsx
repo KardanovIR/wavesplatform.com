@@ -13,7 +13,6 @@ import styles from './styles';
 
 
 const Wallet = ({ classes }) => (
-    <div className={classes.root}>
         <Row>
             <Col xs={12}>
                 <Typography type="display3">Wallet</Typography>
@@ -44,7 +43,6 @@ const Wallet = ({ classes }) => (
                 <Margin bottom={5} />
             </Col>
         </Row>
-    </div>
 );
 
 

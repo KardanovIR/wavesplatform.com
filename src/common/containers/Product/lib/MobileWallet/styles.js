@@ -1,4 +1,4 @@
-import mockup from './img/mockup.png';
+// import mockup from './img/mockup.png';
 import placeholder from 'src/common/styles/placeholder';
 
 
@@ -19,7 +19,7 @@ const styles = theme => ({
         zIndex: -1,
         top: 0,
 
-        background: `url(${mockup}) no-repeat`,
+        // background: `url(${mockup}) no-repeat`,
         backgroundSize: '100%',
         transform: 'rotate(-6deg)',
         marginBottom: theme.spacing.unit * 2
