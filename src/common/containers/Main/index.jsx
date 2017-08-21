@@ -91,7 +91,9 @@ const PageLayout = ({
             </div>
 
             <div className={classes.movedDown}>
-                <Subscribe />
+                <Background className={classes.bgSubscription} skewed={true}>
+                    <Subscribe />
+                </Background>
                 <Background className={classes.footerDivider} skewed={false} />
             </div>
 
