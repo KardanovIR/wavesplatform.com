@@ -5,6 +5,7 @@ import styles from './styles';
 
 import Button from 'src/common/components/Button';
 import Input from 'src/common/components/Input';
+import Icon from 'src/common/components/Icon';
 
 import ErrorMessage from './lib/ErrorMessage';
 
@@ -70,9 +71,9 @@ class SubscriptionForm extends Component {
                             </div>
 
                             <div className={classes.buttonWrapper}>
-                                <Button loading={status==="pending"} type="submit" secondaty disabled={invalid}>
+                                <Button className={classes.button} loading={status==="pending"} type="submit" secondary disabled={invalid}>
                                     <span className={classes.buttonFull}>Submit</span>
-                                    <span className={classes.buttonIcon}>S</span>
+                                    <span className={classes.buttonIcon}><Icon name="send" size={26} /></span>
                                 </Button>
                             </div>
                         </div>

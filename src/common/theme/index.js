@@ -1,26 +1,29 @@
 export { default as typeface } from './typeface';
 
-
+// directly imported objects
 import palette from './palette';
-import breakpoints from './breakpoints';
-import mixins from './mixins';
 import transitions from './transitions';
 
+// factory functions
+import createBreakpoints from './breakpoints';
+import createMixins from './mixins';
 import createTypography from './typography';
 import createSpacing from './spacing';
 
 
-
+// create theme fields
 const spacing = createSpacing();
+const breakpoints = createBreakpoints();
+const typography = createTypography(palette);
+const mixins = createMixins(breakpoints);
 
 
-const theme = {
+
+export default {
     palette,
-    typography: createTypography(palette),
     breakpoints,
+    typography,
     spacing,
     mixins,
-    transitions
-}
-
-export default theme;
+    transitions,
+};

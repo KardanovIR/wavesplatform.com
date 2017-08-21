@@ -42,11 +42,21 @@ export default theme => ({
             padding: theme.spacing.getSpacing(20, 0),
         }
     },
-    
+
     marginSmall: {
         marginBottom: theme.spacing.unit
     },
-    movedDown: {
-        marginBottom: -theme.spacing.unit * 15
+
+    footerMarginCompensate: {
+        marginBottom: -theme.spacing.unit * 8,
+        [theme.mixins.atMedia('sm')]: {
+            marginBottom: - theme.spacing.unit * 13
+        },
+        [theme.mixins.atMedia('md')]: {
+            marginBottom: - theme.spacing.unit * 15
+        },
+        [theme.mixins.atMedia('lg')]: {
+            marginBottom: - theme.spacing.unit * 25
+        },
     },
 })

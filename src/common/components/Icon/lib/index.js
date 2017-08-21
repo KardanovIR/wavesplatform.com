@@ -13,6 +13,7 @@ import FaRedditAlien from 'react-icons/lib/fa/reddit-alien';
 import FaMedium from 'react-icons/lib/fa/medium';
 import FaYoutubePlay from 'react-icons/lib/fa/youtube-play';
 import FaApple from 'react-icons/lib/fa/apple';
+import MdSend from 'react-icons/lib/md/send';
 
 
 export default {
@@ -39,4 +40,5 @@ export default {
     medium: FaMedium,
     youtube: FaYoutubePlay,
     apple: FaApple,
+    send: MdSend
 }

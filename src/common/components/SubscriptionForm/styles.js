@@ -13,13 +13,21 @@ export default theme => ({
     input: {
         width: '100%'
     },
+
+
     buttonWrapper: {
         flex: '0 0'
     },
     buttonFull: {
         display: 'none'
     },
-    [theme.mixins.atMedia('sm')]: {
+
+    [theme.breakpoints.down('sm')]: {
+        button: {
+            padding: theme.spacing.getSpacing(0, 1.5, 0, 2)
+        },
+    },
+    [theme.breakpoints.up('sm')]: {
         buttonIcon: {
             display: 'none'
         },

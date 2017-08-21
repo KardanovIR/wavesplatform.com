@@ -14,10 +14,5 @@ export default theme => ({
     },
     centered: {
         textAlign: 'center'
-    },
-    footerDivider: {
-        height: 1,
-        background: theme.palette.gray[500],
-        zIndex: 1
     }
 })

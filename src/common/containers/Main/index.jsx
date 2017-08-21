@@ -90,13 +90,11 @@ const PageLayout = ({
                 <JoinUs />
             </div>
 
-            <div className={classes.movedDown}>
+            <div className={classes.footerMarginCompensate}>
                 <Background className={classes.bgSubscription} skewed={true}>
                     <Subscribe />
                 </Background>
-                <Background className={classes.footerDivider} skewed={false} />
             </div>
-
 
         </Layout>
     );

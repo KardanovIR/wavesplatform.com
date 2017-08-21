@@ -1,8 +1,10 @@
-import breakpoints from '../breakpoints';
+import createBreakpoints from '../breakpoints';
 
-export const combineMobileDesktopStyles = (mobileStyles, desktopStyles) => ({
+const createStylesCombiner = breakpoints => (mobileStyles, desktopStyles) => ({
     ...mobileStyles,
     [`@media (min-width: ${breakpoints.md}px)`]: {
         ...desktopStyles
     }
 });
+
+export const combineMobileDesktopStyles = createStylesCombiner(createBreakpoints())

@@ -69,14 +69,13 @@ export default theme => ({
     },
     bgSubscription: {
         backgroundColor: '#274676',
-        // top: 'calc(50% - 24px)',
         [theme.mixins.atMedia('md')]: {
             backgroundColor: 'unset',
             minWidth: 2500,
             transform: 'translate(-50%, -50%)',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
-            // height: '140%',
+            height: '150%',
             backgroundSize: '100%',
             backgroundImage: `url(${require('../img/bg/6_bgr.svg')})`,
         },
