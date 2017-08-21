@@ -1,12 +1,14 @@
 import compose from 'koa-compose';
 
 import { getDexTopPairs } from '../middleware/getDexTopPairs';
+import { getDexData } from '../middleware/getDexData';
 import { render } from '../middleware/render';
 
-// import Main from '../../common/containers/Product';
+// import Product from '../../common/containers/Product';
 
 
 export default compose([
-    getDexTopPairs,
+    // getDexTopPairs,
+    getDexData,
     render('product'),
 ])

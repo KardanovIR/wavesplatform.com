@@ -3,8 +3,6 @@ import React from 'react';
 import Feedback from 'src/common/components/Feedback';
 import Margin from 'src/common/components/Margin';
 
-import Facts from 'src/common/containers/Facts';
-
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -15,7 +13,8 @@ import mobileGoPhoto from './img/mobile_go_photo.jpg';
 
 
 const FeedbackContainer = ({
-    classes
+    classes,
+    children,
 }) => (
     <div>
         <Feedback
@@ -30,7 +29,7 @@ const FeedbackContainer = ({
 
         <Margin bottom={4} />
         
-        <Facts />
+        { children }
 
         <Margin bottom={4} />
 
@@ -46,7 +45,6 @@ const FeedbackContainer = ({
         />
     </div>
 );
-
 
 
 export default injectSheet(styles)(FeedbackContainer);

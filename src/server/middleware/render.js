@@ -25,4 +25,6 @@ export const render = (scriptName, Component = 'span') =>
                 initialState={ctx.state.initialState}
             />
         )}`;
+
+        console.log(ctx.body);
     }

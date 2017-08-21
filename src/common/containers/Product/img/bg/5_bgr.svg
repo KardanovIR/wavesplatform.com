@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1086" viewBox="0 0 2560 1086">
+  <defs>
+    <linearGradient id="5_bgr-a" x1="50%" x2="52.22%" y1="79.509%" y2="-26.769%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00FFE2" stop-opacity=".1"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-b" x1="50.018%" x2="52.247%" y1="98.533%" y2="-27.44%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#006CFF" stop-opacity=".39"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-c" x1="50.018%" x2="52.288%" y1="98.533%" y2="-29.774%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#00AEFF" stop-opacity=".12"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-d" x1="50.018%" x2="52.269%" y1="98.533%" y2="-28.691%">
+      <stop offset="0%" stop-color="#EEE" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0014FF" stop-opacity=".11"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-e" x1="44.73%" x2="50%" y1="-38.038%" y2="98.89%">
+      <stop offset="0%" stop-color="#0035FF" stop-opacity=".07"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-f" x1="49.333%" x2="50.833%" y1="-1.985%" y2="68.98%">
+      <stop offset="0%" stop-color="#0B00FF" stop-opacity=".43"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-g" x1="49.333%" x2="50.833%" y1="-1.985%" y2="68.98%">
+      <stop offset="0%" stop-color="#004AFF" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="5_bgr-h" x1="49.333%" x2="50.833%" y1="-1.985%" y2="68.98%">
+      <stop offset="0%" stop-color="#00C7FF" stop-opacity=".43"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(-969 -125)">
+    <rect width="3000" height="800" x="749" y="294" fill="url(#5_bgr-a)" opacity=".6" transform="rotate(-5 2249 694)"/>
+    <rect width="3000" height="800" x="749" y="269" fill="url(#5_bgr-b)" opacity=".6" transform="rotate(-5 2249 669)"/>
+    <rect width="3000" height="800" x="749" y="139" fill="url(#5_bgr-c)" opacity=".6" transform="rotate(175 2249 539)"/>
+    <rect width="3000" height="800" x="749" y="399" fill="url(#5_bgr-d)" opacity=".6" transform="rotate(-5 2249 799)"/>
+    <polygon fill="url(#5_bgr-e)" points="2610.825 163.403 3788.825 163.403 3739.387 734.276 2561.387 734.276" transform="rotate(-5 3175.106 448.84)"/>
+    <polygon fill="url(#5_bgr-e)" points="873.1 375.77 2216.711 375.77 2160.322 1026.9 816.711 1026.9" transform="rotate(175 1516.711 701.335)"/>
+    <polygon fill="url(#5_bgr-f)" points="99.365 407.803 1277.365 407.803 1209.624 1187.876 31.624 1187.876" opacity=".2" transform="rotate(-5 654.494 797.84)"/>
+    <polygon fill="url(#5_bgr-g)" points="407.365 543.803 1585.365 543.803 1517.624 1323.876 339.624 1323.876" opacity=".2" transform="rotate(-5 962.494 933.84)"/>
+    <polygon fill="url(#5_bgr-h)" points="2896.365 52.803 4074.365 52.803 4006.624 832.876 2828.624 832.876" opacity=".2" transform="rotate(175 3451.494 442.84)"/>
+  </g>
+</svg>

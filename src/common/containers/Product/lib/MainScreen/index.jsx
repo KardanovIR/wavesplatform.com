@@ -15,10 +15,10 @@ import styles from './styles';
 const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
-            <Typography type="display4" margin>
+            <Typography inverted type="display4">
                 Use blockchain — it’s easy with Waves
             </Typography>
-            <Typography type="body" margin>
+            <Typography inverted type="body2">
                 Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange.
             </Typography>
 

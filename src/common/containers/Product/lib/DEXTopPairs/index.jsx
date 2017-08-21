@@ -26,5 +26,9 @@ const DEXTopPairs = ({ classes, pairs }) => (
     </Panel>
 );
 
+DEXTopPairs.defaultProps = {
+    pairs: []
+}
+
 
 export default injectSheet(styles)(DEXTopPairs);

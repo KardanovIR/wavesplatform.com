@@ -4,18 +4,12 @@ import injectSheet from 'react-jss';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 
-import cn from 'classnames';
-
 
 
 const styles = theme => ({
-    // wrapper: {},
     avatarWrapper: {
         width: theme.spacing.unit * 5,
         height: theme.spacing.unit * 5,
-        background: 'lightgrey',
-        borderRadius: '50%',
-        overflow: 'hidden',
     },
     [theme.mixins.atMedia('md')]: {
         wrapper: {

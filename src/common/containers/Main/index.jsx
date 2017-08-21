@@ -5,6 +5,7 @@ import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
 import Margin from 'src/common/components/Margin';
+import Facts from 'src/common/components/Facts';
 
 
 // containers
@@ -68,7 +69,9 @@ const PageLayout = ({
             </div>
 
             <div className={classes.section}>
-                <Feedback />
+                <Feedback>
+                    <Facts tokens={initialState.dexData.dexAssets} />
+                </Feedback>
             </div>
 
             <Margin bottom={4} />

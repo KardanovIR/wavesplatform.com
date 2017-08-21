@@ -11,8 +11,9 @@ import styles from './styles';
 
 
 
-const Facts = ({
+const DEX = ({
     classes,
+    dexData,
 }) => (
         <div>
             <Row className={classes.row}>
@@ -72,14 +73,16 @@ const Facts = ({
                     <Row>
                         <Col xs={6}>
                             <NumeralDemo
-                                number={0.00110862}
-                                text="Waves token value"
+                                iconName="mainBitcoin"
+                                number={dexData.wavesBtcRate}
+                                text="Waves price"
                             />
                         </Col>
                         <Col xs={6}>
                             <NumeralDemo
-                                number={0.00110862}
-                                text="Waves token value"
+                                iconName="mainDollar"
+                                number={dexData.dexVolume}
+                                text="24h DEX volume"
                             />
                         </Col>
                     </Row>
@@ -90,4 +93,4 @@ const Facts = ({
     );
 
 
-export default injectSheet(styles)(Facts);
+export default injectSheet(styles)(DEX);
