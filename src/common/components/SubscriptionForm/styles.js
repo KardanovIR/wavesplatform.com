@@ -14,6 +14,9 @@ export default theme => ({
         width: '100%'
     },
 
+    textGray: {
+        color: theme.palette.gray[100]
+    },
 
     buttonWrapper: {
         flex: '0 0'

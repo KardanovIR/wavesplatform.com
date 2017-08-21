@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import BlockQuote from 'src/common/components/BlockQuote';
+import Typography from 'src/common/components/Typography';
 import Article from 'src/common/components/Article';
 import Link from 'src/common/components/Link';
 import Icon from 'src/common/components/Icon';
@@ -15,6 +15,7 @@ import flexCentered from 'src/common/styles/flexCentered';
 
 
 import links from './links';
+import JoinIcon from './Icon'
 
 
 const socialButtonStyles = theme => ({
@@ -46,13 +47,16 @@ const MainScreen = ({ classes }) => (
                 text="Waves brings together blockchain enthusiasts, project founders from all sorts of sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world."
             />
             <div>
-                { links.map(link => <SocialButton key={`social_${link.name}`} { ...link } />) }
+                {links.map(link => <SocialButton key={`social_${link.name}`} { ...link } />)}
             </div>
         </Col>
-        <Col xs={12} sm={4} smOffset={1}>
-            <BlockQuote>
+        <Col xs={12} sm={4} smOffset={1} className={classes.quoteWrapper}>
+            <div className={classes.iconWrapper}>
+                <JoinIcon />
+            </div>
+            <Typography type="quote">
                 Read the latest news and articles, and find out all about events happening on the Waves Platform, with our community-centered <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link>
-            </BlockQuote>
+            </Typography>
         </Col>
     </Row>
 

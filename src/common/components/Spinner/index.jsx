@@ -39,11 +39,11 @@ const styles = theme => ({
         strokeDashoffset: 0,
         animation: 'dash 2.5s ease-in-out infinite',
         strokeLinecap: 'round',
-        stroke: theme.palette.gray[50]
+        stroke: theme.palette.gray[0]
     },
 
     dark: {
-        stroke: theme.palette.gray[900]
+        stroke: theme.palette.gray[300]
     },
 
     '@keyframes rotate': {

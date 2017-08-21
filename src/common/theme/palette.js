@@ -25,10 +25,29 @@ export const gray = {
     0: '#fff',
     50: '#f9f7ff',
     100: '#d8dbed',
+    200: '#9cb4e1',
     300: '#6479a1',
     500: '#6a7689',
     700: '#48576f',
     800: '#2d374b',
+}
+
+export const cyan = {
+    300: '#c0eff8',
+}
+
+
+function hexToRgbA(hex, opacity = 1) {
+    var c;
+    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+        c = hex.substring(1).split('');
+        if (c.length == 3) {
+            c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+        }
+        c = '0x' + c.join('');
+        return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',')},${opacity})`;
+    }
+    throw new Error('Bad Hex');
 }
 
 
@@ -39,7 +58,9 @@ const palette = {
     success,
     danger,
     gray,
-    getColor: color => palette[color.split('-')[0]][color.split('-')[1]]
+    cyan,
+    getColor: color => palette[color.split('-')[0]][color.split('-')[1]],
+    opaque: hexToRgbA
 }
 
 export { palette }

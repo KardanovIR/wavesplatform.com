@@ -59,8 +59,6 @@ class Button extends Component {
 
         const buttonElementClasses = classnames(classes.button, {
             [classes.secondary]: secondary,
-            // [classes.big]: big,
-            // [classes.default]: !primary,
             // [classes.primary]: primary,
         }, className);
 

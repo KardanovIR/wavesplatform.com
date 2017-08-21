@@ -10,7 +10,7 @@ const styles = theme => ({
         overflow: 'hidden',
         position: 'relative',
 
-        paddingBottom: '90%',
+        paddingBottom: '80%',
         background: theme.palette.gray[50],
     },
     imageWrapper: {

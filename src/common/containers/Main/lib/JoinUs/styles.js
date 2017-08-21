@@ -4,7 +4,15 @@ const styles = theme => ({
         flexDirection: 'row-reverse'
     },
     article: {
-        marginBottom: theme.spacing.unit * 4
+        marginBottom: theme.spacing.unit * 6
+    },
+    quoteWrapper: {
+        display: 'flex'
+    },
+    iconWrapper: {
+        flex: 0,
+        flexBasis: 41,
+        marginRight: theme.spacing.unit * 3
     },
     [theme.mixins.atMedia('md')]: {
         root: {
@@ -15,6 +23,9 @@ const styles = theme => ({
         },
         feature: {
             marginBottom: theme.spacing.unit * 6
+        },
+        iconWrapper: {
+            marginRight: theme.spacing.unit * 4
         }
     }
 })

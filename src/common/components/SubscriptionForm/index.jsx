@@ -4,6 +4,9 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 import Button from 'src/common/components/Button';
+import Typography from 'src/common/components/Typography';
+import Margin from 'src/common/components/Margin';
+import Link from 'src/common/components/Link';
 import Input from 'src/common/components/Input';
 import Icon from 'src/common/components/Icon';
 
@@ -55,12 +58,12 @@ class SubscriptionForm extends Component {
 
         return (
             <div className={classes.wrapper}>
-                {status === 'idle' && (
+                {(status === 'idle' || status === 'pending') && (
                     <form onSubmit={this.handleSubmit}>
-                        <div className={classes.inputs}>                           
+                        <div className={classes.inputs}>
                             <div className={classes.inputWrapper}>
                                 <Input
-                                    className={classes.input} 
+                                    className={classes.input}
                                     type="text"
                                     value={this.state.email}
                                     onChange={this.handleChange}
@@ -71,7 +74,7 @@ class SubscriptionForm extends Component {
                             </div>
 
                             <div className={classes.buttonWrapper}>
-                                <Button className={classes.button} loading={status==="pending"} type="submit" secondary disabled={invalid}>
+                                <Button className={classes.button} loading={status === "pending"} type="submit" secondary disabled={invalid}>
                                     <span className={classes.buttonFull}>Submit</span>
                                     <span className={classes.buttonIcon}><Icon name="send" size={26} /></span>
                                 </Button>
@@ -85,28 +88,30 @@ class SubscriptionForm extends Component {
 
                 {status === 'subscribed' && (
                     <div>
-                        <div>Спасибо за подписку!</div>
-                        <div>Скоро вы вышлем вам первое письмо на {this.state.email}</div>
-                        <br />
-                        {!!onStartOver && (
-                            <a href="#" onClick={this.handleStartOver}>Подписаться на другой адрес</a>
-                        )}
+                        <Typography type="quote" inverted align="center" className={classes.textGray}>
+                            Thanks for subscribing! We will soon post you at <Typography inverted tagName="span">{this.state.email}</Typography>.
+                             <span dangerouslySetInnerHTML={{ __html: '&nbsp;' }} />
+                        </Typography>
+                        <Margin bottom={1} />
+                        <Typography type="body" inverted align="center">
+                            <Link className={classes.textGray} pseudo inverted onClick={this.handleStartOver}>Another email</Link>
+                        </Typography>
                     </div>
                 )}
 
                 {status === 'error' && (
                     <div>
-                        <div>Кажется, что-то пошло не так...</div>
-                        <br />
+                        <Typography type="quote" inverted align="center" className={classes.textGray}>
+                            Sorry, something went wrong...
+                        </Typography>
                         {!!onStartOver && (
-                            <a href="#" onClick={this.handleStartOver}>Попробовать ещё раз</a>
+                            <Typography type="body" inverted align="center">
+                                <Margin top={1} />
+                                <Link className={classes.textGray} pseudo inverted onClick={this.handleStartOver}>Try again</Link>
+                            </Typography>
                         )}
                     </div>
                 )}
-
-                {/* <br /> */}
-                {/* <br /> */}
-                {/* Current status: {status} */}
             </div>
 
         )

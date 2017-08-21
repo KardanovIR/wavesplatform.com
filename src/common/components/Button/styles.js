@@ -57,7 +57,7 @@ const styles = theme => ({
             color: theme.palette.gray[300]
         },
         '&$button:hover': {
-            backgroundColor: theme.palette.gray[50],
+            backgroundColor: theme.palette.cyan[300],
         },
     },
     content: {
