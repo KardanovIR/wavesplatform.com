@@ -27,6 +27,10 @@ const styles = theme => ({
         borderBottomStyle: 'dashed !important',
     },
 
+    noDecoration: {
+        border: 0
+    },
+
     inverted: {
         color: theme.palette.gray[0],
         borderColor: theme.palette.opaque(theme.palette.gray[50], 0.5),
@@ -48,6 +52,7 @@ const Link = ({
     className: classNameProp,
     inverted,
     pseudo,
+    textDecoration,
     sheet, // eslint-disable-line
     theme, // eslint-disable-line
     ...rest
@@ -57,6 +62,7 @@ const Link = ({
         {
             [classes.inverted]: inverted,
             [classes.pseudo]: pseudo,
+            [classes.noDecoration]: !textDecoration,
         },
         classNameProp
     );
@@ -68,6 +74,10 @@ const Link = ({
     )
 }
 
+
+Link.defaultProps = {
+    textDecoration: true
+}
 
 
 export default injectSheet(styles)(Link);

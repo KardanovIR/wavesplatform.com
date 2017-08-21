@@ -12,12 +12,12 @@ import Logo from 'src/common/components/Logo';
 const Nav = ({ classes, links, inverted }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
-            <a href="/">
+            <a href="/" className={classes.logo}>
                 <span className={classes.mobileOnly}>
-                    <Logo />
+                    <Logo desktop={false} />
                 </span>
                 <span className={classes.desktopOnly}>
-                    <Logo full />
+                    <Logo />
                 </span>
             </a>
         </div>

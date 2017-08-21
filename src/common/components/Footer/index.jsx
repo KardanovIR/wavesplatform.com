@@ -45,7 +45,7 @@ const Footer = ({ classes, links }) => (
 
                     <Col xs={12} md={1} className={classes.logo}>
                         <a href="/" className={classes.logoLink}>
-                            <Logo />
+                            <Logo full={false} />
                         </a>
                     </Col>
                 </Row>
