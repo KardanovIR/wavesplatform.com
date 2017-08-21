@@ -12,10 +12,9 @@ const styles = theme => ({
         flexWrap: 'wrap'
     },
     icon: {
-        width: 30,
-        background: '#fafafa',
-        borderRadius: '50%',
-        margin: theme.spacing.getSpacing(0, 0, 1, 0)
+        flexBasis: 27,
+        height: 27,
+        margin: theme.spacing.getSpacing(0, 0, 1.5, 0)
     },
     text: {
         width: '100%'
@@ -25,17 +24,28 @@ const styles = theme => ({
             flexWrap: 'nowrap'
         },
         icon: {
-            margin: theme.spacing.getSpacing(0, 1, 0, 0)
+            flexBasis: 20,
+            height: 20,
+            margin: theme.spacing.getSpacing(0, 1.5, 0, 0)
+        },
+        text: {
+            width: 'auto'
+        },
+    },
+    [theme.mixins.atMedia('md')]: {
+        icon: {
+            flexBasis: 27,
+            height: 27,
         },
     }
 })
 
 
 
-const NumeralDemo = ({ classes, iconName, number, text }) => (
+const NumeralDemo = ({ classes, iconName, iconColor, number, text }) => (
     <div className={classes.wrapper}>
         <div className={classes.icon}>
-            <Icon name={iconName} size={30} />
+            <Icon name={iconName} color={iconColor} />
         </div>
         <div className={classes.text}>
             <Typography type="numeral" tagName="div">
@@ -49,7 +59,7 @@ const NumeralDemo = ({ classes, iconName, number, text }) => (
 )
 
 NumeralDemo.defaultProps = {
-    iconName: 'hamburger',
+    iconColor: 'primary-500',
     number: '123123',
     text: 'Waves token value'
 }

@@ -33,7 +33,7 @@ const Feedback = ({
                 description={description}
                 website={website}
             />
-            <br/>
+            <br />
         </Col>
         <Col xs={12} sm={6}>
             <Typography type="display2">

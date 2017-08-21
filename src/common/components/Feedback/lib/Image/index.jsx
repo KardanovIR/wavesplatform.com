@@ -10,7 +10,7 @@ const styles = theme => ({
         overflow: 'hidden',
         position: 'relative',
 
-        paddingBottom: '90%',
+        paddingBottom: '80%',
         background: theme.palette.gray[50],
     },
     imageWrapper: {
@@ -39,8 +39,7 @@ const styles = theme => ({
             right: 0,
             zIndex: -1,
 
-            background: theme.palette.gray[900],
-            opacity: 0.7,
+            background: theme.palette.primary[500],
             transform: 'skewY(-3deg)'
         }
     },
@@ -61,7 +60,6 @@ const CompanyImage = ({
     classes,
     image,
     logo,
-    website,
     description
 }) => (
         <div className={classes.wrapper}>
@@ -72,11 +70,8 @@ const CompanyImage = ({
                 <div className={classes.block}>
                     {logo}
                 </div>
-                <Typography type="body" color="gray-0">
+                <Typography type="body" inverted>
                     {description}
-                </Typography>
-                <Typography type="body" color="gray-300">
-                    {website}
                 </Typography>
             </div>
         </div>

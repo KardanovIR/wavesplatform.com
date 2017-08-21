@@ -25,14 +25,18 @@ const styles = theme => ({
 
         cursor: 'pointer',
         borderRadius: theme.spacing.radius,
-        backgroundColor: ({ color }) => theme.palette.getColor(color),
 
         height: theme.spacing.inputHeight,
         lineHeight: `${theme.spacing.inputHeight}px`,
 
         padding: theme.spacing.getSpacing(0, 4),
 
-        transition: theme.transitions.create('opacity'),
+
+        backgroundColor: theme.palette.primary[900],
+
+        transition: theme.transitions.create('background-color'),
+
+        boxShadow: '0 2px 4px 0 rgba(39, 47, 89, 0.25)',
 
         '&:disabled': {
             opacity: 0.6,
@@ -40,19 +44,34 @@ const styles = theme => ({
         },
 
         '&:hover': {
-            opacity: 0.8
+            backgroundColor: theme.palette.primary[700],
+        },
+        '&:focus': {
+            backgroundColor: theme.palette.primary[700],
         },
 
         '&:active': {
             transform: 'translateY(1px)'
-        }
+        },
+    },
+    secondary: {
+        backgroundColor: theme.palette.gray[0],
+        '& $content': {
+            color: theme.palette.gray[300]
+        },
+        '&$button:hover': {
+            backgroundColor: theme.palette.cyan[300],
+        },
+        '&$button:focus': {
+            backgroundColor: theme.palette.cyan[300],
+        },
     },
     content: {
         display: 'flex',
-        justiryContent: 'center',
+        justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
-        color: ({ color }) => theme.palette.getColor(getFontColor(color)),
+        color: theme.palette.gray[0],
     },
     contentHidden: {
         opacity: 0
@@ -60,9 +79,7 @@ const styles = theme => ({
     icon: {
         marginRight: theme.spacing.unit * 1.5
     },
-    text: {
-        ...theme.typography.button,
-    },
+    text: theme.typography.button,
     spinner: {
         position: 'absolute',
         top: '50%',

@@ -18,9 +18,6 @@ const styles = theme => ({
         height: theme.spacing.unit*7,
 
         margin: theme.spacing.getSpacing(0, 3, 0, 1),
-        background: 'lightgrey',
-        borderRadius: '50%',
-        overflow: 'hidden',
     },
     [theme.mixins.atMedia('md')]: {
         wrapper: {

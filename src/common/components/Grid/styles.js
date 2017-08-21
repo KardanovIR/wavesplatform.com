@@ -34,10 +34,10 @@ export const getColumnStyles = theme => {
             boxSizing: 'border-box',
             flex: '0 0 auto',
         },
-        ...getStylesForBreakpoint(theme, theme.breakpoints.names[0])
+        ...getStylesForBreakpoint(theme, theme.breakpoints.keys[0])
     }
 
-    theme.breakpoints.names.slice(1).forEach(breakpoint => {
+    theme.breakpoints.keys.slice(1).forEach(breakpoint => {
         styles[theme.mixins.atMedia(breakpoint)] = getStylesForBreakpoint(theme, breakpoint);
     })
 

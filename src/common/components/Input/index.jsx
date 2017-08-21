@@ -12,6 +12,7 @@ class Input extends PureComponent {
     focus = () => this.input.focus()
     blur = () => this.input.blur()
 
+
     render() {
         const {
             classes,
@@ -22,6 +23,7 @@ class Input extends PureComponent {
             sheet, // eslint-disable-line
             ...rest
         } = this.props;
+
 
         const className = cn(
             classes.root,
@@ -44,7 +46,8 @@ class Input extends PureComponent {
 
 
 Input.defaultProps = {
-    color: 'gray-50',
+    // backgroundColor: 'gray-300',
+    // color: 'primary-900',
     type: "text",
     className: '',
     invalid: false

@@ -21,7 +21,7 @@ const Icon = ({ color, theme, name, ...rest }) => {
 
 
 Icon.defaultProps = {
-    size: 34,
+    size: '100%',
     color: 'inherit'
 }
 

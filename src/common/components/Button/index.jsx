@@ -38,14 +38,12 @@ class Button extends Component {
     render() {
 
         const {
-            // big,
-            // small,
             type,
             href,
             icon,
             classes,
             className,
-            color,
+            secondary,
 
             children,
             loading,
@@ -60,15 +58,13 @@ class Button extends Component {
         const showLoader = loading || this.state.loading;
 
         const buttonElementClasses = classnames(classes.button, {
-            // [classes.small]: small,
-            // [classes.big]: big,
-            // [classes.default]: !primary,
+            [classes.secondary]: secondary,
             // [classes.primary]: primary,
         }, className);
 
         const contentWrapperClasses = classnames(
-            classes.content,
             classes.text,
+            classes.content,
             { [classes.contentHidden]: showLoader }
         );
 
@@ -86,7 +82,7 @@ class Button extends Component {
             <Element {...elementProps} onClick={this.handleClick}>
 
                 {showLoader && (
-                    <Spinner dark={color.split('-')[1] < 500} className={classes.spinner} />
+                    <Spinner dark={secondary} className={classes.spinner} />
                 )}
 
                 <div className={contentWrapperClasses}>
@@ -106,35 +102,26 @@ class Button extends Component {
             </Element>
         )
     }
-};
+}
 
 
 Button.defaultProps = {
     type: 'button',
     className: '',
-    // small: false,
-    // big: false,
     disabled: false,
-    // active: false,
     loading: false,
-    color: 'primary-500',
     onClick: () => {}
-    // primary: false
 };
 
 
 Button.propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
-    color: PropTypes.string,
-    // small: PropTypes.bool,
-    // big: PropTypes.bool,
     href: PropTypes.string,
+    secondary: PropTypes.bool,
     children: PropTypes.node,
     disabled: PropTypes.bool,
-    // active: PropTypes.bool,
     loading: PropTypes.bool,
-    // primary: PropTypes.bool,
     icon: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,

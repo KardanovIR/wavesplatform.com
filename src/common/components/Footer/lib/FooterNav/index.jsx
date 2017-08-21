@@ -4,6 +4,7 @@ import styles from './styles';
 import injectSheet from 'react-jss';
 
 import Typography from 'src/common/components/Typography';
+import Link from 'src/common/components/Link';
 
 
 

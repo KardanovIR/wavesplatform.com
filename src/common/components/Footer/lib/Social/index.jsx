@@ -21,11 +21,11 @@ const Social = ({ classes }) => (
                     href={icon.href}
                     target="_blank"
                     className={classes.icon}
+                    textDecoration={false}
                 >
                     <Icon name={icon.name} size={20} />
                 </Link>
             </Col>
-
         ))}
     </Row>
 )

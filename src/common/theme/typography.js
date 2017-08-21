@@ -1,113 +1,132 @@
 import { combineMobileDesktopStyles } from './utils/combineMobileDesktopStyles';
 
 
-export const base = {
+export const global = {
     fontFamily: 'TTNorms, arial, sans-serif',
     fontSize: 15,
     fontStyle: 'normal',
-    lineHeight: 1.53,
+    lineHeight: 1.67,
     margin: 0,
-    fontVariantLigatures: 'none'
+    fontVariantLigatures: 'none',
+};
+
+
+const creatyTypography = (palette) => {
+
+    const base = {
+        ...global,
+        color: palette.gray[800]
+    }
+
+    const display = {
+        fontWeight: 500,
+        color: palette.primary[700]
+    };
+
+    return {
+        display4: combineMobileDesktopStyles(
+            {
+                ...base,
+                ...display,
+                fontSize: 28,
+                lineHeight: 1.11,
+                fontWeight: 700,
+            },
+            {
+                fontSize: 64
+            }
+        ),
+        display3: combineMobileDesktopStyles(
+            {
+                ...base,
+                ...display,
+                fontSize: 28,
+                lineHeight: 1.36,
+            },
+            {
+                fontSize: 44,
+                lineHeight: 1.23,
+            }
+        ),
+        display2: combineMobileDesktopStyles(
+            {
+                ...base,
+                ...display,
+                fontSize: 24,
+                lineHeight: 1.42,
+            },
+            {
+                fontSize: 34,
+                lineHeight: 1.29,
+            }
+        ),
+        display1: combineMobileDesktopStyles(
+            {
+                ...base,
+                ...display,
+                fontSize: 18,
+                lineHeight: 1.56,
+            },
+            {
+                fontSize: 24,
+                lineHeight: 1.42,
+            }
+        ),
+        body: combineMobileDesktopStyles(
+            base,
+            {
+                fontSize: 17,
+                lineHeight: 1.59,
+            }
+        ),
+        body2: combineMobileDesktopStyles(
+            {
+                ...base,
+                fontSize: 17,
+                lineHeight: 1.35,
+            },
+            {
+                fontSize: 20,
+                lineHeight: 1.59,
+            }
+        ),
+        quote: combineMobileDesktopStyles(
+            {
+                ...base,
+                fontStyle: 'italic',
+                color: palette.gray[300]
+            },
+            {
+                fontSize: 17,
+                lineHeight: 1.59,
+            }
+        ),
+        button: combineMobileDesktopStyles(
+            {
+                ...global,
+                fontSize: 13,
+                textTransform: 'uppercase',
+                lineHeight: 1,
+                letterSpacing: '1px',
+            },
+            {
+                fontSize: 15,
+            }
+        ),
+        numeral: combineMobileDesktopStyles(
+            {
+                fontFamily: 'arial, sans-serif',
+                fontSize: 20,
+                lineHeight: 1,
+                fontStyle: 'normal',
+                color: palette.primary[700]
+            },
+            {
+                fontSize: 30,
+            }
+        ),
+    }
 }
-
-
-const display = {
-    fontWeight: 500,
-    letterSpacing: '-1px'
-}
-
-
-export const display4 = {
-    ...base,
-
-    fontSize: 28,
-    lineHeight: 1.11,
-    letterSpacing: '-1px',
-    fontWeight: 700,
-}
-
-export const display3 = {
-    ...base,
-    ...display,
-
-    fontSize: 28,
-    lineHeight: 1.18
-}
-
-export const display2 = {
-    ...base,
-    ...display,
-
-    fontSize: 24,
-    lineHeight: 1.25,
-}
-
-export const display1 = {
-    ...base,
-    ...display,
-
-    fontSize: 18,
-    lineHeight: 1.4,
-}
-
-export const body = base
-
-export const quote = {
-    ...body,
-    fontStyle: 'italic'
-}
-
-export const numeral = {
-    fontFamily: 'arial, sans-serif',
-    fontSize: 20,
-    lineHeight: 'normal',
-    fontStyle: 'normal',
-}
-
-export const button = {
-    fontSize: 13,
-    textTransform: 'uppercase',
-    lineHeight: '13px',
-    letterSpacing: '1px',
-}
-
-
-
-
-const creatyTypography = () => ({
-    display4: combineMobileDesktopStyles(display4, {
-        fontSize: 64
-    }),
-    display3: combineMobileDesktopStyles(display3, {
-        fontSize: 44,
-        lineHeight: 1.11,
-        letterSpacing: 'normal'
-    }),
-    display2: combineMobileDesktopStyles(display2, {
-        fontSize: 34,
-        lineHeight: 1.18,
-        letterSpacing: 'normal'
-    }),
-    display1: combineMobileDesktopStyles(display1, {
-        fontSize: 24,
-        lineHeight: 1.33,
-        letterSpacing: 'normal'
-    }),
-    body: combineMobileDesktopStyles(body, {
-        fontSize: 17,
-        lineHeight: 1.76
-    }),
-    quote: combineMobileDesktopStyles(quote, {
-        fontSize: 17,
-        lineHeight: 1.76
-    }),
-    numeral: combineMobileDesktopStyles(numeral, {
-        fontSize: 30,
-    }),
-    button: combineMobileDesktopStyles(button, {
-        fontSize: 15,
-    }),
-})
 
 
 export { creatyTypography }

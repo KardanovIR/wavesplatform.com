@@ -3,7 +3,7 @@ import React from 'react';
 
 
 // body styles
-import { base } from '../../theme/typography';
+import { global } from '../../theme/typography';
 import theme, { typeface } from '../../theme';
 
 // typography
@@ -15,7 +15,7 @@ import injectSheet, { ThemeProvider } from 'react-jss';
 const styles = {
     ...typeface,
     '@global body': {
-        ...base,
+        ...global,
         margin: 0,
         padding: 0
     },

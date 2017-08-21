@@ -21,13 +21,13 @@ export default theme => ({
     navContainer: {
         float: 'right'
     },
-    mobileNav: {
+    mobileOnly: {
         display: 'block',
         [theme.mixins.atMedia('md')]: {
             display: 'none'
         }
     },
-    desktopNav: {
+    desktopOnly: {
         display: 'none',
         [theme.mixins.atMedia('md')]: {
             display: 'block'

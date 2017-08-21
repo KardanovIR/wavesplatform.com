@@ -30,24 +30,28 @@ const NumbersMain = ({
             <NumeralDemo
                 number={wavesBtcRate}
                 text="Waves token value"
+                iconName="mainBitcoin"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
                 number={dexVolume}
                 text="24h DEX volume"
+                iconName="mainDollar"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
                 number={dexWallets}
                 text="Wallets created"
+                iconName="mainWallet"
             />
         </ColNumber>
         <ColNumber xs={12} md={6}>
             <NumeralDemo
                 number={dexAssets}
                 text="tokens issued"
+                iconName="mainToken"
             />
         </ColNumber>
     </Row>

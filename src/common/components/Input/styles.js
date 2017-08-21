@@ -1,19 +1,11 @@
-const getFontColor = color => {
-    // console.log(color)
-    if (parseInt(color.split('-')[1]) > 400) {
-        return 'gray-0'
-    } else {
-        return 'gray-900'
-    }
-}
-
-
 const styles = theme => ({
     root: {
         ...theme.typography.body,
 
         height: theme.spacing.inputHeight,
         lineHeight: `${theme.spacing.inputHeight}px`,
+
+        fontWeight: 500,
 
         // RESET default browser styles
         margin: 0,
@@ -27,13 +19,30 @@ const styles = theme => ({
 
         borderRadius: theme.spacing.radius,
 
-        backgroundColor: ({ color }) => theme.palette.getColor(color),
-        color: ({ color }) => theme.palette.getColor(getFontColor(color)),
+        backgroundColor: theme.palette.gray[300],
+        color: theme.palette.primary[900],
 
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
-        transition: theme.transitions.create('opacity'),
+        transition: theme.transitions.create('background-color'),
+
+        '&:focus': {
+            backgroundColor: theme.palette.gray[200],
+        },
+
+        '&::-webkit-input-placeholder': {
+            color: theme.palette.primary[900]
+        },
+        '&::-moz-placeholder': {
+            color: theme.palette.primary[900]
+        },
+        '&:-ms-placeholder': {
+            color: theme.palette.primary[900]
+        },
+        '&::-ms-input-placeholder': {
+            color: theme.palette.primary[900]
+        },
     },
     disabled: {
         opacity: 0.6,
@@ -41,7 +50,7 @@ const styles = theme => ({
     },
     invalid: {
         boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
-    }
+    },
 })
 
 

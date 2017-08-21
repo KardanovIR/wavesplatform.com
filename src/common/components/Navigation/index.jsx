@@ -6,28 +6,33 @@ import injectSheet from 'react-jss';
 import MobileNav from './lib/mobile';
 import DesktopNav from './lib/desktop';
 
-import Icon from 'src/common/components/Icon';
+import Logo from 'src/common/components/Logo';
 
 
-const Nav = ({ classes, links }) => (
+const Nav = ({ classes, links, inverted }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
-            <a href="/">
-                 <Icon name="logo" size={40} /> 
+            <a href="/" className={classes.logo}>
+                <span className={classes.mobileOnly}>
+                    <Logo desktop={false} />
+                </span>
+                <span className={classes.desktopOnly}>
+                    <Logo />
+                </span>
             </a>
         </div>
 
         <div className={classes.navContainer}>
 
-             <div className={classes.mobileNav}>
-                <MobileNav links={links} />
+            <div className={classes.mobileOnly}>
+                <MobileNav inverted links={links} />
             </div>
 
-            <div className={classes.desktopNav}>
-                <DesktopNav links={links} />
-            </div> 
+            <div className={classes.desktopOnly}>
+                <DesktopNav inverted links={links} />
+            </div>
         </div>
-    </nav> 
+    </nav>
 )
 
 

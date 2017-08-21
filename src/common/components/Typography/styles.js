@@ -5,6 +5,12 @@ const styles = theme => ({
             theme.spacing.body
         ]
     },
+    body2: {
+        extend: [
+            theme.typography.body2,
+            theme.spacing.body
+        ]
+    },
     display4: {
         extend: [
             theme.typography.display4,
@@ -41,10 +47,12 @@ const styles = theme => ({
             theme.spacing.numeral
         ]
     },
-
-    colored: {
-        color: ({ color }) => theme.palette.getColor(color)
+    inverted: {
+        color: theme.palette.gray[0]
     },
+    // colored: {
+    //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
+    // },
     'align-right': {
         textAlign: 'right'
     },

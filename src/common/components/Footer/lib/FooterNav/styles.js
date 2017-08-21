@@ -1,15 +1,19 @@
 export default theme => ({
     link: {
         textDecoration: 'none',
-        color: 'inherit',
+        color: theme.palette.gray[500],
         display: 'inline-block',
-        padding: theme.spacing.getSpacing(1, 3),
+        padding: theme.spacing.getSpacing(1, 1),
         transition: theme.transitions.create(
-            'opacity',
+            'color',
             theme.transitions.durationShort
         ),
         '&:hover': {
-            opacity: '.7'
+            color: theme.palette.gray[0]
+        },
+
+        [theme.breakpoints.up('sm')]: {
+            padding: theme.spacing.getSpacing(1, 3),
         }
     },
 })

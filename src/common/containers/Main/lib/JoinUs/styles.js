@@ -1,22 +1,18 @@
-import flexCentered from 'src/common/styles/flexCentered';
-
-
 const styles = theme => ({
     root: {
         padding: theme.spacing.getSpacing(5, 0, 5),
         flexDirection: 'row-reverse'
     },
     article: {
-        marginBottom: theme.spacing.unit * 4
+        marginBottom: theme.spacing.unit * 6
+    },
+    quoteWrapper: {
+        display: 'flex'
     },
     iconWrapper: {
-        ...flexCentered,
-        float: 'left',
-        width: 40,
-        height: 40,
-        background: theme.palette.gray[900],
-        marginRight: theme.spacing.unit * 2,
-        borderRadius: '50%'
+        flex: 0,
+        flexBasis: 41,
+        marginRight: theme.spacing.unit * 3
     },
     [theme.mixins.atMedia('md')]: {
         root: {
@@ -27,6 +23,9 @@ const styles = theme => ({
         },
         feature: {
             marginBottom: theme.spacing.unit * 6
+        },
+        iconWrapper: {
+            marginRight: theme.spacing.unit * 4
         }
     }
 })

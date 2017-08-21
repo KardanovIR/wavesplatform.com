@@ -3,7 +3,8 @@ import styles from './styles';
 
 import injectSheet from 'react-jss';
 
-import Icon from '../Icon';
+import Logo from 'src/common/components/Logo';
+
 
 import { Row, Col } from 'src/common/components/Grid';
 import Background from 'src/common/components/Background';
@@ -16,7 +17,8 @@ import FooterNav from './lib/FooterNav';
 
 const Footer = ({ classes, links }) => (
     <div className={classes.root}>
-        <Background className={classes.background} wrapperClassName={classes.backgroundWrapper} />
+        <Background className={classes.background} skewed wrapperClassName={classes.backgroundWrapper} />
+        <Background className={classes.background2} skewed wrapperClassName={classes.backgroundWrapper} />
         <Background className={classes.background} skewed={false}>
             <footer className={classes.footer}>
                 <Row className={classes.row}>
@@ -30,20 +32,20 @@ const Footer = ({ classes, links }) => (
                     </Col>
 
                     <Col xs={12} md={6} className={classes.language}>
-                        <Typography color="gray-300" type="body">
+                        <Typography type="body" className={classes.textGray}>
                             English
                         </Typography>
                     </Col>
 
                     <Col xs={12} md={6} className={classes.copyright}>
-                        <Typography color="gray-500" type="body">
+                        <Typography className={classes.textDarkGray} type="body">
                             © Waves Platform
                         </Typography>
                     </Col>
 
                     <Col xs={12} md={1} className={classes.logo}>
-                        <a href="/">
-                            <Icon name="logo" size={40} />
+                        <a href="/" className={classes.logoLink}>
+                            <Logo full={false} />
                         </a>
                     </Col>
                 </Row>

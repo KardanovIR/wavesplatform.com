@@ -9,8 +9,8 @@ import { EMPTY, EMAIL_INVALID } from '../../../../public/utils/validation/rules'
 
 
 
-const Empty = () => <Typography color="gray-0">Пожалуйста, введите email</Typography>
-const EmailInvalid = () => <Typography color="gray-0">Неверный адрес email</Typography>
+const Empty = () => <Typography inverted>Please enter an email address</Typography>
+const EmailInvalid = () => <Typography inverted>Invalid email address</Typography>
 
 
 const ErrorMessage = ({ errors }) => {

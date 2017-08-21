@@ -8,17 +8,13 @@ import cn from 'classnames';
 
 
 const styles = theme => ({
-    wrapper: {
-        borderColor: theme.palette.gray[300],
-        color: theme.palette.gray[300],
-    },
     'wrapper-left': {
-        borderLeft: '6px solid',
+        borderLeft: `6px solid ${theme.palette.cyan[300]}`,
         padding: theme.spacing.getSpacing(0, 0, 0, 2)
     },
     'wrapper-right': {
         textAlign: 'right',
-        borderRight: '6px solid',
+        borderRight: `6px solid ${theme.palette.cyan[300]}`,
         padding: theme.spacing.getSpacing(0, 2, 0, 0)
     },
     [theme.mixins.atMedia('md')]: {
@@ -39,8 +35,8 @@ const BlockQuote = ({
     children,
     align
 }) => (
-        <div className={cn(classes.wrapper, classes[`wrapper-${align}`], className)}>
-            <Typography type="quote" color="gray-300">
+        <div className={cn(classes[`wrapper-${align}`], className)}>
+            <Typography type="quote">
                 {children}
             </Typography>
         </div>

@@ -14,7 +14,7 @@ const IssuingTokens = () => (
                 Issuing your tokens
             </Typography>
 
-            <Typography type="body" align="center">
+            <Typography type="body2" align="center">
                 Releasing tokens allows any business to use their own internal digital currency, using blockchain to pay for goods and services within their projects.
             </Typography>
 
