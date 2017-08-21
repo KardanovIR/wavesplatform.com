@@ -108,29 +108,20 @@ class Button extends Component {
 Button.defaultProps = {
     type: 'button',
     className: '',
-    // small: false,
-    // big: false,
     disabled: false,
-    // active: false,
     loading: false,
-    color: 'primary-900',
     onClick: () => {}
-    // primary: false
 };
 
 
 Button.propTypes = {
     type: PropTypes.string,
     className: PropTypes.string,
-    color: PropTypes.string,
-    // small: PropTypes.bool,
-    // big: PropTypes.bool,
     href: PropTypes.string,
+    secondary: PropTypes.bool,
     children: PropTypes.node,
     disabled: PropTypes.bool,
-    // active: PropTypes.bool,
     loading: PropTypes.bool,
-    // primary: PropTypes.bool,
     icon: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element,

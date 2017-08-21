@@ -46,6 +46,9 @@ const styles = theme => ({
         '&:hover': {
             backgroundColor: theme.palette.primary[700],
         },
+        '&:focus': {
+            backgroundColor: theme.palette.primary[700],
+        },
 
         '&:active': {
             transform: 'translateY(1px)'
@@ -57,6 +60,9 @@ const styles = theme => ({
             color: theme.palette.gray[300]
         },
         '&$button:hover': {
+            backgroundColor: theme.palette.cyan[300],
+        },
+        '&$button:focus': {
             backgroundColor: theme.palette.cyan[300],
         },
     },

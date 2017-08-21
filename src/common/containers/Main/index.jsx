@@ -5,8 +5,7 @@ import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
 import Margin from 'src/common/components/Margin';
-import { Row, Col } from 'src/common/components/Grid';
-// import Button from 'src/common/components/Button';
+
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
@@ -28,7 +27,6 @@ import Subscribe from './lib/Subscribe';
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
-// import cn from 'classnames';
 
 
 

@@ -1,13 +1,3 @@
-// const getFontColor = color => {
-//     // console.log(color)
-//     if (parseInt(color.split('-')[1]) > 400) {
-//         return 'gray-0'
-//     } else {
-//         return 'gray-900'
-//     }
-// }
-
-
 const styles = theme => ({
     root: {
         ...theme.typography.body,
@@ -35,7 +25,7 @@ const styles = theme => ({
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
-        // transition: theme.transitions.create('opacity'),
+        transition: theme.transitions.create('background-color'),
 
         '&:focus': {
             backgroundColor: theme.palette.gray[200],
