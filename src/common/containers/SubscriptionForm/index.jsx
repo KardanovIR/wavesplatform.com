@@ -71,6 +71,7 @@ class SubscriptionFormContainer extends Component {
 
     handleSubmit = formData => {
         this.props.onValidate(formData);
+        this.props.onValidationStart();
 
         if (!this.props.errors.email.length) {
             this.sendForm(formData.email);
