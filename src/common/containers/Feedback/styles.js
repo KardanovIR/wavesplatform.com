@@ -31,6 +31,9 @@ const styles = theme => ({
         height: 37,
         backgroundImage: `url(${mobileGoLogo})`
     },
+    image: {
+        width: '100%',
+    }
 })
 
 export default styles;

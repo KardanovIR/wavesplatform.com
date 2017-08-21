@@ -10,6 +10,8 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 
+import primalbasePhoto from './img/primalbase_photo.jpg';
+import mobileGoPhoto from './img/mobile_go_photo.jpg';
 
 
 const FeedbackContainer = ({
@@ -17,7 +19,7 @@ const FeedbackContainer = ({
 }) => (
     <div>
         <Feedback
-            image={<div className={classes.primalbaseAva} />}
+            image={<img className={classes.image} src={primalbasePhoto} alt="primalbase"/>}
             logo={<div className={classes.primalbaseLogo} />}
             avatar={<div className={classes.primalbaseAva} />}
             description="Worldwide coworking spaces for Tech Community"
@@ -33,7 +35,7 @@ const FeedbackContainer = ({
         <Margin bottom={4} />
 
         <Feedback
-            image={<div style={{ height: '100%', background: 'lightgreen' }} />}
+            image={<img className={classes.image} src={mobileGoPhoto} alt="mobile_go"/>}
             logo={<div className={classes.mobileGoLogo} />}
             avatar={<div className={classes.mobileGoAva} />}
             description="The Crypto-Centric Mobile Gaming Platform and Store"

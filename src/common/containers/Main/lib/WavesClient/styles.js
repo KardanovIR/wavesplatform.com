@@ -1,6 +1,6 @@
 import mockup from './img/mockup.png';
 
-import placeholder from 'src/common/styles/placeholder';
+// import placeholder from 'src/common/styles/placeholder';
 
 
 
@@ -11,8 +11,8 @@ const styles = theme => ({
     imageWrapper: {
         position: 'relative',
         overflow: 'visible',
-        paddingTop: '90%',
-        ...placeholder
+        paddingTop: '66%',
+        // ...placeholder
     },
     image: {
         position: 'absolute',
