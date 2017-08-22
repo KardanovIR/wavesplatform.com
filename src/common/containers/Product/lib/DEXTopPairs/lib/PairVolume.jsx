@@ -6,25 +6,6 @@ import injectSheet from 'react-jss';
 
 
 
-// const arrowStyles = theme => ({
-//     up: {
-//         color: theme.palette.success[500]
-//     },
-//     down: {
-//         color: theme.palette.danger[500]
-//     }
-// })
-
-// const Arrow = injectSheet(arrowStyles)(
-//     ({ direction, classes }) =>
-//         direction === "down"
-//         ? <span dangerouslySetInnerHTML={{__html: "&nbsp;&darr;"}} className={classes.down} />
-//         : <span dangerouslySetInnerHTML={{__html: "&nbsp;&uarr;"}} className={classes.up} /> 
-// )
-
-
-
-
 const styles = {
     wrapper: {
         display: 'flex',
@@ -49,13 +30,11 @@ const PairVolume = ({
     classes,
     assets,
     volume,
-    // direction,
 }) => (
         <div className={classes.wrapper}>
             <Typography className={classes.assets}>{assets[0]}/{assets[1]}</Typography>
             <Typography type="numeral" align="right" className={classes.volume} noMargin>
                 ${volume.toLocaleString('ru')}
-                {/* <Arrow direction={direction} /> */}
             </Typography>
         </div>
     );
