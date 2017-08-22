@@ -8,7 +8,7 @@ import Html from 'src/server/components/Html';
 
 
 export const render = (scriptName, Component = 'span') =>
-    async ctx => {
+    async (ctx, next) => {
         const sheets = new SheetsRegistry()
 
         const content = renderToStaticMarkup(
@@ -25,6 +25,4 @@ export const render = (scriptName, Component = 'span') =>
                 initialState={ctx.state.initialState}
             />
         )}`;
-
-        console.log(ctx.body);
     }

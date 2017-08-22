@@ -11,8 +11,7 @@ export default theme => ({
         background: theme.palette.gray[0],
     },
     dark: {
-        // background: theme.palette.primary[700],
-        background: theme.palette.gray[800],
+        background: theme.palette.primary[700],
         color: theme.palette.gray[50],
     },
     [theme.mixins.atMedia('md')]: {

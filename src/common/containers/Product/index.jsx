@@ -110,23 +110,22 @@ const PageLayout = ({ classes, initialState }) => (
             ]}
             quote={<span>To complete your first operation on the DEX, you need 0.003 Waves, which you can buy directly with $ or €, or get them for free on the <Link href="#">Waves faucet.</Link></span>}
         /> */}
+        <div className={classes.section}>
+            <HowToStart />
+        </div>
+
+        <div className={classes.section}>
+            <IssuingTokens />
+        </div>
 
 
-        <IssuingTokens />
-
-        <Margin bottom={2} />
-        <div className={classes.divider} />
-        <Margin bottom={4} />
-
-        <Margin bottom={4}>
-            <Typography
-                type="quote"
-                align="center"
-                color="gray-500"
-            >
-                Companies that have released their own tokens on Waves:
-                </Typography>
-        </Margin>
+        <Typography
+            type="quote"
+            align="center"
+            color="gray-500"
+        >
+            Companies that have released their own tokens on Waves:
+        </Typography>
 
         <div className={classes.section}>
             <Feedback>

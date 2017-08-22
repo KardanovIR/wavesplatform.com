@@ -8,7 +8,7 @@ import { render } from '../middleware/render';
 
 
 export default compose([
-    // getDexTopPairs,
+    getDexTopPairs,
     getDexData,
     render('product'),
 ])

@@ -22,7 +22,7 @@ const HowToBlock = ({
     <Row className={classes.root}>
         <Col xs={12}>
             <Typography className={classes.title} type="display2">{ title }</Typography>
-            <Margin bottom={3} />
+            <Margin bottom={4} />
         </Col>
         { steps.map((step, index) => (
             <Col key={`step_${index}`} xs={12} md={4} className={classes.column}>

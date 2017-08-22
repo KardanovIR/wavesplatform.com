@@ -1,7 +1,6 @@
 const styles = theme => ({
     root: {
-        paddingBottom: 0,
-
+        paddingBottom: theme.spacing.unit * 2,
     },
     headers: {
         display: 'flex',

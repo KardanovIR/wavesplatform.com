@@ -60,6 +60,7 @@
     "react-hot-loader": "next",
     "sass-loader": "^6.0.2",
     "style-loader": "^0.18.2",
+    "svg-react-loader": "^0.4.4",
     "svg-url-loader": "^1.1.1",
     "url-loader": "^0.5.7",
     "webpack": "^3.4.1",

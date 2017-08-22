@@ -3,16 +3,18 @@ import React from 'react';
 import AvatarTitleText from 'src/common/components/AvatarTitleText';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
+import IconProduct from 'src/common/components/IconProduct';
+
 
 import { Row, Col } from 'src/common/components/Grid';
 
 
 import injectSheet from 'react-jss';
-import styles from './styles';
+// import styles from './styles';
 
 
 
-const Wallet = ({ classes }) => (
+const Wallet = () => (
         <Row>
             <Col xs={12}>
                 <Typography type="display3">Wallet</Typography>
@@ -20,7 +22,8 @@ const Wallet = ({ classes }) => (
             </Col>
             <Col xs={12} md={4}>
                 <AvatarTitleText
-                    avatar={<div className={classes.wallet} />}
+                    // avatar={<div className={classes.wallet} />}
+                    avatar={<IconProduct name="wallet" circle />}
                     title="Create a multiple-currency wallet"
                     text="In addition to Waves tokens, 3,110 other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding."
                 />
@@ -28,7 +31,7 @@ const Wallet = ({ classes }) => (
             </Col>
             <Col xs={12} md={4}>
                 <AvatarTitleText
-                    avatar={<div className={classes.transfer} />}
+                    avatar={<IconProduct name="transaction" circle />}
                     title="Transfer funds from person to person"
                     text="Waves has a high network speed with hundreds of transactions per second and a small commission, which makes it as convenient as possible to transfer cryptocurrency between network members instantly."
                 />
@@ -36,7 +39,7 @@ const Wallet = ({ classes }) => (
             </Col>
             <Col xs={12} md={4}>
                 <AvatarTitleText
-                    avatar={<div className={classes.security} />}
+                    avatar={<IconProduct name="shield" circle />}
                     title="Take advantage of our platform’s high security"
                     text="Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets. Your tokens are stored on a blockchain that only you can access."
                 />
@@ -46,4 +49,5 @@ const Wallet = ({ classes }) => (
 );
 
 
-export default injectSheet(styles)(Wallet);
+// export default injectSheet(styles)(Wallet);
+export default Wallet;
