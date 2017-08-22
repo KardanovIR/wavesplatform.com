@@ -8,10 +8,12 @@ export default theme => ({
     },
     light: {
         ...shadow,
-        background: theme.palette.gray[0]
+        background: theme.palette.gray[0],
     },
     dark: {
-        background: theme.palette.gray[900]
+        // background: theme.palette.primary[700],
+        background: theme.palette.gray[800],
+        color: theme.palette.gray[50],
     },
     [theme.mixins.atMedia('md')]: {
         root: {

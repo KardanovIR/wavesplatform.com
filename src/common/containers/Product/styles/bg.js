@@ -24,66 +24,74 @@ export default theme => ({
         }
     },
     bgInterest: {
+        composes: '$desktopOnly',
         backgroundImage: 'linear-gradient(25deg, rgba(0, 242, 255, 0.05) 0%, rgba(28, 0, 255, 0.05) 25%, rgba(255, 255, 255, 0) 50%)'
     },
-    bgClient: {
-        composes: [
-            '$bg',
-            '$desktopOnly'
-        ],
-        top: -100,
-        backgroundSize: '100%',
-        backgroundImage: `url(${require('../img/bg/2_bgr.svg')})`,
-    },
-    bgWallet: {
-        composes: [
-            '$bg',
-            '$desktopOnly'
-        ],
-        minWidth: 2500,
-        backgroundSize: '100%',
-        top: -200,
-        backgroundImage: `url(${require('../img/bg/3_bgr.svg')})`,
+    bgHowToStart: {
+        composes: '$desktopOnly',
+        backgroundImage: 'linear-gradient(-155deg, rgba(0, 134, 255, 0.1) 0%, rgba(255, 255, 255, 0) 35%)'
     },
     bgDex: {
         composes: [
             '$bg',
             '$desktopOnly'
         ],
+        transform: 'translateX(-50%) rotate(180deg)',
         minWidth: 2500,
-        top: 'unset',  // bind to bottom
-        bottom: -200,
-        height: '120%',
+        // top: 'unset',  // bind to bottom
+        // bottom: -200,
+        top: -200,
+        height: '140%',
         backgroundSize: '100%',
         backgroundImage: `url(${require('../img/bg/4_bgr.svg')})`,
-        backgroundPosition: 'bottom center',
+        backgroundPosition: 'center bottom',
     },
-    bgFeatures: {
-        backgroundColor: '#d8e7fc',
-        top: 'calc(50% - 24px)',
-        [theme.mixins.atMedia('md')]: {
-            backgroundColor: 'unset',
-            minWidth: 2500,
-            transform: 'translate(-50%, -50%)',
-            backgroundRepeat: 'no-repeat',
-            height: '140%',
-            backgroundSize: '100%',
-            backgroundImage: `url(${require('../img/bg/5_bgr.svg')})`,
-        },
-    },
-    bgSubscription: {
-        backgroundColor: '#274676',
-        [theme.mixins.atMedia('md')]: {
-            backgroundColor: 'unset',
-            minWidth: 2500,
-            transform: 'translate(-50%, -50%)',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center center',
-            height: '150%',
-            backgroundSize: '100%',
-            backgroundImage: `url(${require('../img/bg/6_bgr.svg')})`,
-        },
-    },
+    // bgClient: {
+    //     composes: [
+    //         '$bg',
+    //         '$desktopOnly'
+    //     ],
+    //     top: -100,
+    //     backgroundSize: '100%',
+    //     backgroundImage: `url(${require('../img/bg/2_bgr.svg')})`,
+    // },
+    // bgWallet: {
+    //     composes: [
+    //         '$bg',
+    //         '$desktopOnly'
+    //     ],
+    //     minWidth: 2500,
+    //     backgroundSize: '100%',
+    //     top: -200,
+    //     backgroundImage: `url(${require('../img/bg/3_bgr.svg')})`,
+    // },
+    
+    // bgFeatures: {
+    //     backgroundColor: '#d8e7fc',
+    //     top: 'calc(50% - 24px)',
+    //     [theme.mixins.atMedia('md')]: {
+    //         backgroundColor: 'unset',
+    //         minWidth: 2500,
+    //         transform: 'translate(-50%, -50%)',
+    //         backgroundRepeat: 'no-repeat',
+    //         height: '140%',
+    //         backgroundSize: '100%',
+    //         backgroundImage: `url(${require('../img/bg/5_bgr.svg')})`,
+    //     },
+    // },
+    // bgSubscription: {
+    //     backgroundColor: '#274676',
+    //     [theme.mixins.atMedia('md')]: {
+    //         backgroundColor: 'unset',
+    //         minWidth: 2500,
+    //         transform: 'translate(-50%, -50%)',
+    //         backgroundRepeat: 'no-repeat',
+    //         backgroundPosition: 'center center',
+    //         height: '150%',
+    //         backgroundSize: '100%',
+    //         backgroundImage: `url(${require('../img/bg/6_bgr.svg')})`,
+    //     },
+    // },
 
     backgroundColor: {
         background: theme.palette.gray[50]

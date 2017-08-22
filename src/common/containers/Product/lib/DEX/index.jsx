@@ -8,6 +8,7 @@ import NumeralDemo from 'src/common/components/NumeralDemo';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
+import cn from 'classnames';
 
 
 
@@ -16,7 +17,7 @@ const DEX = ({
     dexData,
 }) => (
         <div>
-            <Row className={classes.row}>
+            <Row>
 
                 <Col xs={12} className={classes.withMargin}>
                     <Typography type="display3" className={classes.title}>
@@ -34,7 +35,7 @@ const DEX = ({
                 </Col>
 
 
-                <Col xs={12} md={3} lg={4} className={classes.column}>
+                <Col xs={12} md={3} lg={3} className={classes.column}>
                     <div className={classes.columnContent}>
                         <Typography type="body" className={classes.topParagraph}>
                             By trading on a centralized exchange, you risk losing your funds in the event of hacking, which has happened on almost all popular exchanges.
@@ -46,14 +47,14 @@ const DEX = ({
 
                 </Col>
 
-                <Col xs={12} md={6} lg={4} className={classes.column}>
+                <Col xs={12} md={6} lgOffset={1} lg={4} className={classes.column}>
                     <div className={classes.imageWrapper}>
                         <div className={classes.image} />
                     </div>
                 </Col>
 
-                <Col xs={12} md={3} lg={4} className={classes.column}>
-                    <div className={classes.columnContent}>
+                <Col xs={12} md={3} lgOffset={1} lg={3} className={classes.column}>
+                    <div className={cn(classes.columnContent, classes.columnRight)}>
                         <Typography type="body" className={classes.topParagraph}>
                             The DEX is powered by a matcher, which stores user orders and sends token exchange transactions for fulfilled orders.
                         </Typography>

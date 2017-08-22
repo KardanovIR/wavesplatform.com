@@ -17,9 +17,6 @@ const styles = theme => ({
         display: 'inline-block',
         width: theme.spacing.unit*7,
         height: theme.spacing.unit*7,
-        background: theme.palette.gray[50],
-        borderRadius: '50%',
-        overflow: 'hidden',
         marginBottom: theme.spacing.unit*2
     },
     [theme.mixins.atMedia('md')]: {
@@ -41,7 +38,7 @@ const Step = ({ avatar, children, classes }) => (
         <div className={classes.avatar}>
             { avatar }
         </div>
-        <Typography color="gray-50">
+        <Typography inverted>
             { children }
         </Typography>
     </Panel>

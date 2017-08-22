@@ -8,8 +8,8 @@ import Margin from 'src/common/components/Margin';
 
 const styles = theme => ({
     avatarWrapper: {
-        width: theme.spacing.unit * 5,
-        height: theme.spacing.unit * 5,
+        width: theme.spacing.unit * 7,
+        height: theme.spacing.unit * 7,
     },
     [theme.mixins.atMedia('md')]: {
         wrapper: {
@@ -18,8 +18,8 @@ const styles = theme => ({
             textAlign: ({ centered }) => centered ? 'center' : 'auto'
         },
         avatarWrapper: {
-            height: theme.spacing.unit * 8,
-            width: theme.spacing.unit * 8,
+            height: theme.spacing.unit * 10,
+            width: theme.spacing.unit * 10,
         },
     }
 })

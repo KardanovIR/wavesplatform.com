@@ -32,6 +32,15 @@ export default theme => ({
             padding: theme.spacing.getSpacing(10, 0),
         }
     },
+    sectionWide: {
+        padding: theme.spacing.getSpacing(8, 0),
+        [theme.mixins.atMedia('md')]: {
+            padding: theme.spacing.getSpacing(15, 0),
+        },
+        [theme.mixins.atMedia('lg')]: {
+            padding: theme.spacing.getSpacing(20, 0),
+        }
+    },
 
     withBackground: {
         padding: theme.spacing.getSpacing(8, 0),
