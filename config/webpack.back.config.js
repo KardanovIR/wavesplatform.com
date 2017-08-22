@@ -54,23 +54,6 @@ module.exports = {
                 include: includedDirectories
             },
             {
-                test: /\.scss$/,
-                use: [
-                    {
-                        loader: "css-loader/locals",
-                        options: {
-                            modules: true,
-                            localIdentName: '[folder]__[local]__[hash:base64:5]',
-                            importLoaders: 1
-                        }
-                    },
-                    {
-                        loader: "sass-loader"
-                    }
-                ],
-                include: includedDirectories
-            },
-            {
                 test: /\.json$/,
                 loader: 'json-loader'
             },

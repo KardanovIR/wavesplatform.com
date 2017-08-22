@@ -5,6 +5,7 @@
     "react"
   ],
   "plugins": [
-    "babel-plugin-transform-react-stateless-component-name"
+    "babel-plugin-transform-react-stateless-component-name",
+    "ramda"
   ]
 }

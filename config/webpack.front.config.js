@@ -11,7 +11,6 @@ const createUrlLoaders = require('./lib/createUrlLoaders');
 const includedDirectories = [
     path.join(__dirname, '../src/public'),
     path.join(__dirname, '../src/common'),
-    /flexboxgrid/
 ];
 
 
@@ -54,21 +53,6 @@ module.exports = {
                             localIdentName: '[folder]__[local]__[hash:base64:5]'
                         }
                     }
-                ],
-                include: includedDirectories
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: true,
-                            localIdentName: '[folder]__[local]__[hash:base64:5]'
-                        }
-                    },
-                    'sass-loader'
                 ],
                 include: includedDirectories
             },

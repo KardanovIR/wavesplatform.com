@@ -10,6 +10,7 @@ Raven.config('https://ace191c88ed04623811498c5c845165d:d67b1a9a4ca24702837aaa924
 
 
 import router from './routes';
+import { readAssets } from './middleware/readAssets';
 
 
 
@@ -37,6 +38,7 @@ app
     })
     .use(bodyParser())
     .use(serve('./dist'))
+    .use(readAssets)
     .use(router.routes())
     // .on('error', err => {
 -    //     Raven.captureException(err, (err, eventId) => {

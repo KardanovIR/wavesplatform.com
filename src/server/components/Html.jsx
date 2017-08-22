@@ -6,6 +6,7 @@ const Html = ({
     content,
     initialState,
     script,
+    vendorChunk,
     style
 }) => (
     <html lang="en">
@@ -36,7 +37,8 @@ const Html = ({
         </head>
         <body>
             <div style={{ opacity: ".4" }} id="app" dangerouslySetInnerHTML={{ __html: content }} />
-            <script type="text/javascript" src={`${script}.js`} />
+            { vendorChunk && <script type="text/javascript" src={vendorChunk} /> }
+            <script type="text/javascript" src={script} />
         </body>
     </html>
 )

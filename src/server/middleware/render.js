@@ -8,18 +8,44 @@ import Html from 'src/server/components/Html';
 
 
 export const render = (scriptName, Component = 'span') =>
-    async (ctx, next) => {
-        const sheets = new SheetsRegistry()
+    async ctx => {
+
+        // enable SSR only for production
+        let RenderedComponent;
+        if (process.env.NODE_ENV === 'production') {
+            RenderedComponent = Component;
+        } else {
+            RenderedComponent = 'span';
+        }
+
+
+        // component markup and styles
+        const sheets = new SheetsRegistry();
 
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
-                <Component initialState={ctx.state.initialState} />
+                <RenderedComponent initialState={ctx.state.initialState} />
             </JssProvider>
         )
 
+
+        // script paths
+        let vendorChunk;
+        let script;
+
+        if (process.env.NODE_ENV === 'production') {
+            // read file path fron assets
+            script = ctx.state.assets[scriptName].js;
+            vendorChunk = ctx.state.assets.vendor.js;
+        } else {
+            script = `/${scriptName}.js`;
+        }
+
+
         ctx.body = `<!DOCTYPE html>${renderToStaticMarkup(
             <Html
-                script={scriptName}
+                script={script}
+                vendorChunk={vendorChunk}
                 content={content}
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
