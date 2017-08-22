@@ -2,6 +2,8 @@ const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 
+const createUrlLoaders = require('./lib/createUrlLoaders');
+
 
 const includedDirectories = [
     path.join(__dirname, '../src/server'),
@@ -29,6 +31,7 @@ module.exports = {
     },
     module: {
         rules: [
+            ...createUrlLoaders({ emitFile: false }),
             {
                 test: /\.pug?$/,
                 loader: 'pug-loader',
@@ -70,34 +73,6 @@ module.exports = {
             {
                 test: /\.json$/,
                 loader: 'json-loader'
-            },
-            {
-                test: /\.(woff2?|ttf|eot)(\?.*$|$)/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 10000,
-                        name: path.join('fonts', '[name].[ext]')
-                    }
-                }
-            },
-            {
-                test: /\.svg$/,
-                use: {
-                    loader: 'svg-url-loader',
-                    options: {
-                        emitFile: false
-                    }
-                }
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        emitFile: false
-                    }
-                }
             },
         ]
     },
