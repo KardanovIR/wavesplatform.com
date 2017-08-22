@@ -9,7 +9,7 @@ import DesktopNav from './lib/desktop';
 import Logo from 'src/common/components/Logo';
 
 
-const Nav = ({ classes, links, inverted }) => (
+const Nav = ({ classes, links, activeLink, inverted }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
             <a href="/" className={classes.logo}>
@@ -25,11 +25,11 @@ const Nav = ({ classes, links, inverted }) => (
         <div className={classes.navContainer}>
 
             <div className={classes.mobileOnly}>
-                <MobileNav inverted links={links} />
+                <MobileNav inverted links={links} activeLink={activeLink} />
             </div>
 
             <div className={classes.desktopOnly}>
-                <DesktopNav inverted links={links} />
+                <DesktopNav inverted={inverted} links={links} activeLink={activeLink} />
             </div>
         </div>
     </nav>

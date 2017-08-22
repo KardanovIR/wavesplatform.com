@@ -37,7 +37,7 @@ import styles from './styles';
 
 
 const PageLayout = ({ classes, initialState }) => (
-    <Layout>
+    <Layout invertedNavigation>
         <Background className={classes.bgMain}>
             <div className={classes.paddedBottom}>
                 <MainScreen />

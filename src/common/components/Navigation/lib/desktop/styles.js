@@ -12,4 +12,7 @@ export default theme => ({
             opacity: '.7'
         }
     },
+    active: {
+        // @TODO
+    }
 })
