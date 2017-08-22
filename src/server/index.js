@@ -38,7 +38,11 @@ app
     .use(bodyParser())
     .use(serve('./dist'))
     .use(router.routes())
-    
+    // .on('error', err => {
+-    //     Raven.captureException(err, (err, eventId) => {
+-    //         console.log('Reported error ' + eventId);
+-    //     })
+-    // })
 
 
 app.listen(3001);

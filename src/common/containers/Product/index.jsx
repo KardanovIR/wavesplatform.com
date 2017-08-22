@@ -7,9 +7,7 @@ import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
-import Link from 'src/common/components/Link';
 import Facts from 'src/common/components/Facts';
-import Button from 'src/common/components/Button';
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
@@ -35,7 +33,6 @@ import IssuingTokens from './lib/IssuingTokens';
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
-import cn from 'classnames';
 
 
 
