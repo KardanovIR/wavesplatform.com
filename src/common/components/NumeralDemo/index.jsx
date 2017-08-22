@@ -49,7 +49,7 @@ const NumeralDemo = ({ classes, iconName, iconColor, number, text }) => (
         </div>
         <div className={classes.text}>
             <Typography type="numeral" tagName="div">
-                <span dangerouslySetInnerHTML={{ __html: number.toLocaleString('en').replace(/,/g, '&thinsp;') }} />
+                <span dangerouslySetInnerHTML={{ __html: number.toLocaleString('en', {maximumFractionDigits: 8}).replace(/,/g, '&thinsp;') }} />
             </Typography>
             <Typography type="body" tagName="div">
                 {text}

@@ -11,7 +11,8 @@ const styles = theme => ({
         position: 'relative',
 
         paddingBottom: '80%',
-        background: theme.palette.gray[50],
+        boxSizing: 'border-box',
+        minHeight: 300
     },
     imageWrapper: {
         position: 'absolute',

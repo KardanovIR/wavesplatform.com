@@ -5,6 +5,8 @@ const webpack = require('webpack');
 
 const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
 
+const createUrlLoaders = require('./lib/createUrlLoaders');
+
 
 const includedDirectories = [
     path.join(__dirname, '../src/public'),
@@ -32,6 +34,7 @@ module.exports = {
 
     module: {
         rules: [
+            ...createUrlLoaders({ emitFile: true }),
             {
                 test: /\.jsx?$/,
                 use: [
@@ -70,27 +73,8 @@ module.exports = {
                 include: includedDirectories
             },
             {
-                test: /\.svg$/,
-                loader: 'svg-url-loader'
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/,
-                loader: "url-loader"
-            },
-            {
                 test: /\.json$/,
                 loader: 'json-loader'
-            },
-            {
-                test: /\.(woff2?|ttf|eot)(\?.*$|$)/,
-                use: {
-                    loader: 'url-loader',
-                    options: {
-                        limit: 10000,
-                        name: path.join('fonts', '[name].[ext]'),
-                        emitFile: false
-                    }
-                }
             },
         ]
     },

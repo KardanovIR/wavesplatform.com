@@ -1,4 +1,4 @@
-import mockup from './img/mockup.png';
+// import mockup from './img/mockup.png';
 
 // import placeholder from 'src/common/styles/placeholder';
 

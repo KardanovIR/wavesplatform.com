@@ -9,13 +9,13 @@ import cn from 'classnames';
 
 
 const styles = theme => ({
-    // wrapper: {},
     avatarWrapper: {
-        width: theme.spacing.unit * 5,
+        width: theme.spacing.unit * 7,
+        height: theme.spacing.unit * 7,
+    },
+    small: {
         height: theme.spacing.unit * 5,
-        background: 'lightgrey',
-        borderRadius: '50%',
-        overflow: 'hidden',
+        width: theme.spacing.unit * 5,
     },
     [theme.mixins.atMedia('md')]: {
         wrapper: {
@@ -24,8 +24,12 @@ const styles = theme => ({
             textAlign: ({ centered }) => centered ? 'center' : 'auto'
         },
         avatarWrapper: {
-            height: theme.spacing.unit * 8,
-            width: theme.spacing.unit * 8,
+            height: theme.spacing.unit * 10,
+            width: theme.spacing.unit * 10,
+        },
+        small: {
+            height: theme.spacing.unit * 6,
+            width: theme.spacing.unit * 6,
         },
     }
 })
@@ -36,11 +40,20 @@ const AvatarWithText = ({
     classes,
     className,
     avatar,
+    small,
     text,
     title
-}) => (
+}) => {
+    const wrapperClasses = cn(
+        classes.avatarWrapper,
+        {
+            [classes.small]: small
+        }
+    );
+
+    return (
         <div className={className}>
-            <div className={classes.avatarWrapper}>
+            <div className={wrapperClasses}>
                 {avatar}
             </div>
             <Margin bottom={2} />
@@ -52,6 +65,7 @@ const AvatarWithText = ({
             </Typography>
         </div>
     )
+}
 
 
 AvatarWithText.defaultProps = {

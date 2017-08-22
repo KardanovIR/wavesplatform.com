@@ -23,7 +23,7 @@ const MainScreen = ({ classes }) => (
             <Typography type="display2" margin>
                 Mobile wallet
             </Typography>
-            <Typography type="body" margin>
+            <Typography type="body2" margin>
                 Don’t forget to download the mobile wallet for iOS & Android.
             </Typography>
 

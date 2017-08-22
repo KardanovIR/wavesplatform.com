@@ -23,7 +23,7 @@ const MainScreen = ({ classes }) => (
             <Typography type="display2" margin>
                 Online wallet
             </Typography>
-            <Typography type="body" margin>
+            <Typography type="body2" margin>
                 You do not have to download the client, use online wallet
             </Typography>
 

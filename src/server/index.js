@@ -25,13 +25,24 @@ new Pug({
 
 
 app
+    .use(async (ctx, next) => {
+        try {
+            await next();
+        } catch (err) {
+            ctx.status = err.status || 500;
+            ctx.body = err.message;
+            ctx.app.emit('error', err, ctx);
+            console.error(err);
+        }
+    })
     .use(bodyParser())
     .use(serve('./dist'))
     .use(router.routes())
     // .on('error', err => {
-    //     Raven.captureException(err, (err, eventId) => {
-    //         console.log('Reported error ' + eventId);
-    //     })
-    // })
+-    //     Raven.captureException(err, (err, eventId) => {
+-    //         console.log('Reported error ' + eventId);
+-    //     })
+-    // })
+
 
 app.listen(3001);

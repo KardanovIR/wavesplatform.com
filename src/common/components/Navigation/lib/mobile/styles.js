@@ -19,7 +19,7 @@ export default theme => ({
         right: 0,
         top: 0,
         opacity: 0,
-        transition: '200ms opacity ease-in-out, 200ms transform ease-in-out',
+        transition: theme.transitions.create(['opacity', 'transform']),
         transform: 'scale(0.9)',
         transformOrigin: 'right top'
     },

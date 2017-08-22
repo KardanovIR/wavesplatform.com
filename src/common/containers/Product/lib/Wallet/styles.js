@@ -1,12 +1,27 @@
+import bgImage from 'src/common/styles/bgImage';
+import shadow from 'src/common/styles/shadow';
+
+
 const styles = theme => ({
-    root: {
-        // padding: theme.spacing.getSpacing(5, 0, 5)
+    icon: {
+        ...shadow,
+        borderRadius: '50%',
     },
-    [theme.mixins.atMedia('md')]: {
-        root: {
-            // padding: theme.spacing.getSpacing(20, 0, 15)
-        },
-    }
+    security: {
+        composes: '$icon',
+        ...bgImage,
+        backgroundImage: `url(${security})`
+    },
+    wallet: {
+        composes: '$icon',
+        ...bgImage,
+        backgroundImage: `url(${wallet})`
+    },
+    transfer: {
+        composes: '$icon',
+        ...bgImage,
+        backgroundImage: `url(${transfer})`
+    },
 })
 
 export default styles;
