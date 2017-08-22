@@ -2,7 +2,7 @@ import shadow from 'src/common/styles/shadow';
 
 export default theme => ({
     root: {
-        padding: theme.spacing.getSpacing(2.5, 2),
+        padding: theme.spacing.getSpacing(3, 2.5),
         borderRadius: theme.spacing.radius,
         boxSizing: 'border-box'
     },
@@ -16,7 +16,7 @@ export default theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            padding: theme.spacing.getSpacing(4, 5, 4.5),
+            padding: theme.spacing.getSpacing(5, 5, 5.5),
             borderRadius: theme.spacing.radius,
         },
     }
