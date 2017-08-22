@@ -4,13 +4,8 @@ import AvatarTitleText from 'src/common/components/AvatarTitleText';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import IconProduct from 'src/common/components/IconProduct';
-
-
 import { Row, Col } from 'src/common/components/Grid';
 
-
-import injectSheet from 'react-jss';
-// import styles from './styles';
 
 
 
@@ -22,7 +17,6 @@ const Wallet = () => (
             </Col>
             <Col xs={12} md={4}>
                 <AvatarTitleText
-                    // avatar={<div className={classes.wallet} />}
                     avatar={<IconProduct name="wallet" circle />}
                     title="Create a multiple-currency wallet"
                     text="In addition to Waves tokens, 3,110 other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding."
@@ -49,5 +43,4 @@ const Wallet = () => (
 );
 
 
-// export default injectSheet(styles)(Wallet);
 export default Wallet;
