@@ -2,6 +2,7 @@ import 'babel-polyfill';
 
 import Koa from 'koa';
 import serve from 'koa-static';
+import mount from 'koa-mount';
 import Pug from 'koa-pug';
 import bodyParser from 'koa-bodyparser';
 
@@ -37,7 +38,7 @@ app
         }
     })
     .use(bodyParser())
-    .use(serve('./dist'))
+    .use(mount('/static', serve('./dist')))
     .use(readAssets)
     .use(router.routes())
     // .on('error', err => {

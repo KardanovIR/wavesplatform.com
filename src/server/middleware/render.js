@@ -35,10 +35,10 @@ export const render = (scriptName, Component = 'span') =>
 
         if (process.env.NODE_ENV === 'production') {
             // read file path fron assets
-            script = ctx.state.assets[scriptName].js;
-            vendorChunk = ctx.state.assets.vendor.js;
+            script = '/static' + ctx.state.assets[scriptName].js;
+            vendorChunk = '/static' + ctx.state.assets.vendor.js;
         } else {
-            script = `/${scriptName}.js`;
+            script = `/static/${scriptName}.js`;
         }
 
 

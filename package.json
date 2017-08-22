@@ -26,6 +26,7 @@
     "koa": "^2.0.0-alpha.7",
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
+    "koa-mount": "^3.0.0",
     "koa-pug": "^3.0.0-2",
     "koa-router": "^7.0.1",
     "koa-static": "^3.0.0",

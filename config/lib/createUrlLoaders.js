@@ -6,6 +6,7 @@ module.exports = ({ emitFile = true, limit = 8192 }) => ([
         use: {
             loader: 'url-loader',
             options: {
+                publicPath: 'static/',
                 name: path.join('fonts', '[name].[ext]'),
                 limit,
                 emitFile
@@ -17,6 +18,7 @@ module.exports = ({ emitFile = true, limit = 8192 }) => ([
         use: {
             loader: 'svg-url-loader',
             options: {
+                publicPath: 'static/',
                 name: path.join('images', '[name].[ext]'),
                 limit,
                 emitFile
@@ -28,6 +30,7 @@ module.exports = ({ emitFile = true, limit = 8192 }) => ([
         use: {
             loader: 'url-loader',
             options: {
+                publicPath: 'static/',
                 name: path.join('images', '[name].[ext]'),
                 limit,
                 emitFile,
