@@ -13,10 +13,7 @@ import Icon from '../../../Icon';
 
 
 class MobileNav extends Component {
-    state = {
-        open: false,
-        // anchorEl: undefined
-    }
+    state = { open: false }
 
     handleClick = () =>
         this.setState({

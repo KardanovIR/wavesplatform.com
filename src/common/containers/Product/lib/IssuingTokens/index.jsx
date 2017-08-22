@@ -33,7 +33,7 @@ const IssuingTokens = ({ classes }) => (
             </Col>
             <Col xs={12} md={3} mdOffset={1}>
                 <AvatarTitleText
-                    avatar={<IconProduct name="noLimits" />}
+                    avatar={<IconProduct name="star" />}
                     small
                     text="The role of the released token is determined depending on the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralized voting or a rating system."
                 />

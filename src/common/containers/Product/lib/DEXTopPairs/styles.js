@@ -12,7 +12,7 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            marginTop: theme.spacing.unit * 12
+            marginTop: theme.spacing.unit * 14
         }
     }
 })

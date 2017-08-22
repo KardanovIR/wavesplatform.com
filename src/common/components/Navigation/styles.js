@@ -19,7 +19,9 @@ export default theme => ({
         } 
     },
     navContainer: {
-        float: 'right'
+        float: 'right',
+        position: 'relative',
+        zIndex: 1,
     },
     mobileOnly: {
         display: 'block',

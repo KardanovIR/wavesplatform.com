@@ -77,8 +77,6 @@ const PageLayout = ({ classes, initialState }) => (
             </div>
         </Background>
 
-        <Margin bottom={5} />
-
         <Row>
             <Col xs={12} md={8}>
                 <DEXFeatures />
@@ -90,26 +88,6 @@ const PageLayout = ({ classes, initialState }) => (
         </Row>
 
 
-
-
-        {/* <HowToBlock
-            title="How do I start trading on the Waves DEX?"
-            steps={[
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: <span>First, <Link href="/get-client">download</Link> and install the Waves client.</span>
-                },
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
-                },
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
-                },
-            ]}
-            quote={<span>To complete your first operation on the DEX, you need 0.003 Waves, which you can buy directly with $ or €, or get them for free on the <Link href="#">Waves faucet.</Link></span>}
-        /> */}
         <div className={classes.section}>
             <HowToStart />
         </div>
@@ -122,7 +100,6 @@ const PageLayout = ({ classes, initialState }) => (
         <Typography
             type="quote"
             align="center"
-            color="gray-500"
         >
             Companies that have released their own tokens on Waves:
         </Typography>
@@ -142,24 +119,6 @@ const PageLayout = ({ classes, initialState }) => (
             </div>
         </Background>
 
-        {/* <HowToBlock
-            title="How do I release my own tokens on Waves?"
-            steps={[
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: <span>First, <Link href="/get-client">download</Link> and install the Waves client.</span>
-                },
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
-                },
-                {
-                    avatar: <div style={{ height: '100%', background: 'lightcyan' }} />,
-                    text: "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
-                },
-            ]}
-            quote="After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even make them with different prices to create bonus conditions for the first investors."
-        /> */}
     </Layout>
 );
 
