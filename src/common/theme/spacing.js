@@ -106,22 +106,28 @@ const createSpacing = (breakpoints, { unit = 8, radius = 4, inputHeight = 40 } =
 
 
     paddedTop: {
-        paddingTop: unit * 5,
+        paddingTop: unit * 8,
+        [breakpoints.up('sm')]: {
+            paddingTop: unit * 10,
+        },
         [breakpoints.up('md')]: {
-            paddingTop: unit * 8,
+            paddingTop: unit * 12,
         },
         [breakpoints.up('lg')]: {
-            paddingTop: unit * 12,
+            paddingTop: unit * 14,
         }
     },
 
     paddedBottom: {
-        paddingBottom: unit * 5,
+        paddingBottom: unit * 8,
+        [breakpoints.up('sm')]: {
+            paddingBottom: unit * 10,
+        },
         [breakpoints.up('md')]: {
-            paddingBottom: unit * 8,
+            paddingBottom: unit * 12,
         },
         [breakpoints.up('lg')]: {
-            paddingBottom: unit * 12,
+            paddingBottom: unit * 14,
         }
     },
 

@@ -6,8 +6,6 @@ import Button from 'src/common/components/Button';
 import { Row, Col } from 'src/common/components/Grid';
 
 import Panel from 'src/common/components/Panel';
-import Link from 'src/common/components/Link';
-
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -32,29 +30,31 @@ const Team = ({
         <Row>
             { media.map((contact, index) => (
                 <Col key={`media_org_${index}`} xs={12} sm={6} md={4}>
-                    <Link href={contact.url} target="_blank" className={classes.link}>
+                    <a href={contact.url} target="_blank" className={classes.link}>
                         <Panel className={classes.media}>
                             <img src={contact.image} className={classes.logo} alt="Media contact" />
                         </Panel>
-                    </Link>
+                    </a>
                 </Col>
             )) }
         </Row>
 
         <Margin bottom={3} />
 
-        <div className={classes.contactUs}>
-            <Typography type="display1">
-                If you have any questions about partnerships or collaboration
-            </Typography>
-            <Margin bottom={3} />
+        <Row centered>
+            <Col xs={12} md={8} lg={5} className={classes.contactUs}>
+                <Typography type="body">
+                    If you have any questions about partnerships or collaboration
+                </Typography>
 
-            <Margin right={1} bottom={2} display="inline-block">
-                <Button href="mailto:contact@wavesplatform.com">Contact us</Button>
-            </Margin>
+                <Margin bottom={2} />
 
-            <Button href="#" color="gray-500">Branding package</Button>
-        </div>
+                <Margin right={1} bottom={2} display="inline-block">
+                    <Button href="mailto:contact@wavesplatform.com">Contact us</Button>
+                </Margin>
+                <Button href="#" color="gray-500" secondary>Branding package</Button>
+            </Col>
+        </Row>
         
     </div>
 );

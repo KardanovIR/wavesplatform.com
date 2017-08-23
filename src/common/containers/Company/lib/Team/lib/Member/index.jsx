@@ -26,6 +26,7 @@ const Member = ({
                 <div className={classes.social}>
                     { social.map(contact => (
                         <Link
+                            textDecoration={false}
                             target="_blank"
                             href={contact.url}
                             key={`${lastName}_${contact.type}`}
@@ -37,10 +38,10 @@ const Member = ({
                 </div>
 
                 <div className={classes.text}>
-                    <Typography type="display1" color="gray-50">
+                    <Typography type="display1" inverted>
                         {firstName + ' ' + lastName}
                     </Typography>
-                    <Typography type="body" color="gray-50" noMargin>
+                    <Typography type="body" inverted noMargin>
                         {position}
                     </Typography>
                 </div>

@@ -4,7 +4,6 @@ export default theme => ({
     section: theme.spacing.section,
     sectionNarrow: theme.spacing.sectionNarrow,
     sectionWide: theme.spacing.sectionWide,
-
     
     withBackground: {
         padding: theme.spacing.getSpacing(8, 0),
@@ -29,7 +28,7 @@ export default theme => ({
             marginBottom: - theme.spacing.unit * 19
         },
         [theme.mixins.atMedia('xl')]: {
-            marginBottom: - theme.spacing.unit * 13
+            marginBottom: - theme.spacing.unit * 15
         },
     },
 })

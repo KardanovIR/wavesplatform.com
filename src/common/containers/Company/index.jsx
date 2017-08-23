@@ -52,7 +52,7 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <div className={classes.section}>
+        <div className={classes.sectionWide}>
             <Media members={members} />
         </div>
 
