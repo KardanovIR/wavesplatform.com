@@ -4,6 +4,7 @@ import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import Panel from 'src/common/components/Panel';
+import IconProduct from 'src/common/components/IconProduct';
 
 
 import LeftRight from './lib/LeftRight';
@@ -25,7 +26,7 @@ const WavesNetwork = ({ classes }) => (
                 <Typography type="body">
                     New versions of Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases.
                 </Typography>
-                <Margin bottom={3} />
+                <Margin />
                 <Typography type="quote" color="gray-500">
                     Here are explorers for MainNet and TestNet Waves clusters:
                 </Typography>
@@ -36,8 +37,11 @@ const WavesNetwork = ({ classes }) => (
         <Row>
             <Col xs={12} sm={6}>
                 <Panel>
-                    <Typography type="display1">
-                        MainNet
+                    <Typography type="display1" className={classes.title}>
+                        <Margin right={1} className={classes.titleEl}>
+                            <IconProduct name="applicationWaves" />
+                        </Margin>
+                        <div>MainNet</div>
                     </Typography>
                     <Margin />
                     <LeftRight
@@ -45,6 +49,7 @@ const WavesNetwork = ({ classes }) => (
                         right="wavesexplorer.com"
                         href="https://wavesexplorer.com"
                     />
+                    <div className={classes.divider} />
                     <LeftRight
                         left="Online wallet"
                         right="waveswallet.io"
@@ -55,8 +60,11 @@ const WavesNetwork = ({ classes }) => (
             </Col>
             <Col xs={12} sm={6}>
                 <Panel>
-                    <Typography type="display1">
-                        TestNet
+                    <Typography type="display1" className={classes.title}>
+                        <Margin right={1} className={classes.titleEl}>
+                            <IconProduct name="settings" />
+                        </Margin>
+                        <div>TestNet</div>
                     </Typography>
                     <Margin />
                     <LeftRight
@@ -64,9 +72,10 @@ const WavesNetwork = ({ classes }) => (
                         right="testnet.wavesexplorer.com"
                         href="https://testnet.wavesexplorer.com"
                     />
+                    <div className={classes.divider} />
                     <LeftRight
                         left="Online wallet"
-                        right="waveswallet.io"
+                        right="testnet.waveswallet.io"
                         href="https://testnet.waveswallet.io"
                     />
                 </Panel>

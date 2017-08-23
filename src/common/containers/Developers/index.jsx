@@ -3,6 +3,7 @@ import React from 'react';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
+import Background from 'src/common/components/Background';
 // import { Row, Col } from 'src/common/components/Grid';
 
 
@@ -14,43 +15,53 @@ import WavesNode from './lib/WavesNode';
 import DEX from './lib/DEX';
 import WavesNetwork from './lib/WavesNetwork';
 import Community from './lib/Community';
+import Description from './lib/Description';
 
 
 
 // styles
 import injectSheet from 'react-jss';
+import styles from './styles';
 
-
-const styles = theme => ({
-    section: {
-        padding: theme.spacing.getSpacing(5, 0)
-    }
-})
 
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        <div className={classes.section}>
-            <MainScreen />
+    <Layout activeLink="Developers">
+        <Background className={classes.bgMain}>
+            <div>
+                <MainScreen />
+            </div>
+        </Background>
+
+        <div className={classes.sectionNarrow}>
+            <Description />
         </div>
 
-        <div className={classes.section}>
-            <FriendlyAPI />
-        </div>
 
-        <div className={classes.section}>
+        <Background className={classes.bgApi} skewed={true}>
+            <div className={classes.sectionWide}>
+                <FriendlyAPI />
+            </div>
+        </Background>
+
+
+        <div className={classes.sectionWide}>
             <WavesNode />
         </div>
 
-        <div className={classes.section}>
-            <DEX />
-        </div>
 
-        <div className={classes.section}>
+        <Background className={classes.bgDex} skewed={true}>
+            <div className={classes.sectionWide}>
+                <DEX />
+            </div>
+        </Background>
+
+
+        <div className={classes.sectionWide}>
             <WavesNetwork />
         </div>
 
-        <div className={classes.section}>
+        <div className={classes.paddedBottom}>
             <Community />
         </div>
 

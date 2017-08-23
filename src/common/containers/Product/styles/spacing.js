@@ -1,46 +1,9 @@
 export default theme => ({
-    paddedTop: {
-        paddingTop: theme.spacing.unit * 5,
-        [theme.mixins.atMedia('md')]: {
-            paddingTop: theme.spacing.unit * 8
-        },
-        [theme.mixins.atMedia('lg')]: {
-            paddingTop: theme.spacing.unit * 12
-        }
-    },
-    paddedBottom: {
-        paddingBottom: theme.spacing.unit * 5,
-        [theme.mixins.atMedia('md')]: {
-            paddingBottom: theme.spacing.unit * 8
-        },
-        [theme.mixins.atMedia('lg')]: {
-            paddingBottom: theme.spacing.unit * 12
-        }
-    },
-    section: {
-        composes: [
-            '$paddedTop',
-            '$paddedBottom',
-        ]
-    },
-    sectionNarrow: {
-        padding: theme.spacing.getSpacing(3, 0),
-        [theme.mixins.atMedia('md')]: {
-            padding: theme.spacing.getSpacing(6, 0),
-        },
-        [theme.mixins.atMedia('lg')]: {
-            padding: theme.spacing.getSpacing(10, 0),
-        }
-    },
-    sectionWide: {
-        padding: theme.spacing.getSpacing(8, 0),
-        [theme.mixins.atMedia('md')]: {
-            padding: theme.spacing.getSpacing(15, 0),
-        },
-        [theme.mixins.atMedia('lg')]: {
-            padding: theme.spacing.getSpacing(20, 0),
-        }
-    },
+    paddedTop: theme.spacing.paddedTop,
+    paddedBottom: theme.spacing.paddedBottom,
+    section: theme.spacing.section,
+    sectionNarrow: theme.spacing.sectionNarrow,
+    sectionWide: theme.spacing.sectionWide,
 
     withBackground: {
         padding: theme.spacing.getSpacing(8, 0),

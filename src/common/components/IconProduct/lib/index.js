@@ -14,6 +14,11 @@ import star from '!svg-react-loader!./svg/star.svg';
 import tokens from '!svg-react-loader!./svg/tokens.svg';
 import transaction from '!svg-react-loader!./svg/transaction.svg';
 import wallet from '!svg-react-loader!./svg/wallet.svg';
+import application from '!svg-react-loader!./svg/application.svg';
+import applicationWaves from '!svg-react-loader!./svg/application_waves.svg';
+import settings from '!svg-react-loader!./svg/settings.svg';
+import list from '!svg-react-loader!./svg/list.svg';
+import script from '!svg-react-loader!./svg/script.svg';
 
 
 export default {
@@ -33,4 +38,9 @@ export default {
     tokens,
     transaction,
     wallet,
+    application,
+    applicationWaves,
+    settings,
+    list,
+    script,
 }

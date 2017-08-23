@@ -17,7 +17,7 @@ const getSpacing = unit => (top, right, bottom, left) => {
 
 
 
-const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
+const createSpacing = (breakpoints, { unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
     unit,
     radius,
     inputHeight,
@@ -101,6 +101,55 @@ const createSpacing = ({ unit = 8, radius = 4, inputHeight = 40 } = {}) => ({
         //     { marginTop: unit * 1 },
         //     { marginTop: unit * 1.5 }
         // )
+    },
+
+
+
+    paddedTop: {
+        paddingTop: unit * 5,
+        [breakpoints.up('md')]: {
+            paddingTop: unit * 8,
+        },
+        [breakpoints.up('lg')]: {
+            paddingTop: unit * 12,
+        }
+    },
+
+    paddedBottom: {
+        paddingBottom: unit * 5,
+        [breakpoints.up('md')]: {
+            paddingBottom: unit * 8,
+        },
+        [breakpoints.up('lg')]: {
+            paddingBottom: unit * 12,
+        }
+    },
+
+    section: {
+        composes: [
+            '$paddedTop',
+            '$paddedBottom',
+        ]
+    },
+
+    sectionNarrow: {
+        padding: [unit * 3, 0],
+        [breakpoints.up('md')]: {
+            padding: [unit * 6, 0],
+        },
+        [breakpoints.up('lg')]: {
+            padding: [unit * 10, 0],
+        }
+    },
+
+    sectionWide: {
+        padding: [unit * 8, 0, unit * 6],
+        [breakpoints.up('md')]: {
+            padding: [unit * 15, 0, unit * 13],
+        },
+        [breakpoints.up('lg')]: {
+            padding: [unit * 20, 0, unit * 17],
+        }
     },
 
 })

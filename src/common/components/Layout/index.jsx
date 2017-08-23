@@ -33,12 +33,12 @@ const styles = theme => ({
 
 const Layout = ({
     children,
-    invertedNavigation,
-    classes
+    classes,
+    activeLink,
 }) => (
     <Wrapper>
         <div className={classes.navigationWrapper}>
-            <Navigation inverted={invertedNavigation} links={links} />
+            <Navigation links={links} activeLink={activeLink} />
         </div>
         <div>{children}</div>
         <Footer links={links} />

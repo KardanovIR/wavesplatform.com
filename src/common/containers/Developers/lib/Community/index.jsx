@@ -41,6 +41,7 @@ const WavesNetwork = ({ classes }) => (
         <Row style={{ alignItems: 'stretch' }}>
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
+                    iconName="list"
                     title="Function-rich blockchain explorer"
                     resource="wavesgo.com"
                     href="https://wavesgo.com"
@@ -48,6 +49,7 @@ const WavesNetwork = ({ classes }) => (
             </Col>
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
+                    iconName="message"
                     title="Waves forum"
                     resource="wavestalk.org"
                     href="https://wavestalk.org"
@@ -56,6 +58,7 @@ const WavesNetwork = ({ classes }) => (
             </Col>
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
+                    iconName="script"
                     title="Python API client and useful scripts"
                     resource="github.com/PyWaves"
                     href="https://github.com/PyWaves"

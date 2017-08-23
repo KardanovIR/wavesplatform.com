@@ -8,18 +8,17 @@ import Typography from 'src/common/components/Typography';
 
 
 
-const DexktopNav = ({ classes, links, activeLink, inverted }) => (
+const DexktopNav = ({ classes, links, activeLink }) => (
     <div>
         {links.map((link, index) => (
-            <Typography key={`desktop_nav_link${index}`} tagName="span" inverted={inverted}>
+            <Typography key={`desktop_nav_link${index}`} tagName="span" inverted>
                 <a 
                     href={link.href}
-                    className={cn(classes.link, { [classes.active]: activeLink })}
+                    className={cn(classes.link, { [classes.active]: link.text === activeLink })}
                 >
                     {link.text}
                 </a>
             </Typography>
-            
         ))}
     </div>
 )
