@@ -9,12 +9,12 @@ import cn from 'classnames';
 
 const styles = theme => ({
     'wrapper-left': {
-        borderLeft: `6px solid ${theme.palette.cyan[300]}`,
+        borderLeft: `6px solid ${theme.palette.primary[500]}`,
         padding: theme.spacing.getSpacing(0, 0, 0, 2)
     },
     'wrapper-right': {
         textAlign: 'right',
-        borderRight: `6px solid ${theme.palette.cyan[300]}`,
+        borderRight: `6px solid ${theme.palette.primary[500]}`,
         padding: theme.spacing.getSpacing(0, 2, 0, 0)
     },
     [theme.mixins.atMedia('md')]: {

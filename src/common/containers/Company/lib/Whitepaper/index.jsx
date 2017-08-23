@@ -5,6 +5,8 @@ import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
 import Margin from 'src/common/components/Margin';
 
+const wpImageSrc = require('!svg-url-loader?noquotes!./img/wp.svg');
+
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -12,13 +14,11 @@ import styles from './styles';
 
 
 const Whitepaper = ({ classes }) => (
-    <Row className={classes.root} alignItems="center">
-        <Col xs={12} sm={6} md={5}>
-            <div className={classes.imageWrapper}>
-                <div className={classes.image} />
-            </div>
+    <Row alignItems="center">
+        <Col xs={12} sm={6} md={6}>
+            <img src={wpImageSrc} alt="Whitepaper" className={classes.image} />
         </Col>
-        <Col xs={12} sm={6} md={7}>
+        <Col xs={12} sm={6} md={6}>
             <Typography type="display2">
                 Whitepaper
             </Typography>

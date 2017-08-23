@@ -54,17 +54,17 @@
       <path fill="#DFE4EE" fill-rule="nonzero" d="M68,321 L289,321 C290.656854,321 292,319.656854 292,318 C292,316.343146 290.656854,315 289,315 L68,315 C66.3431458,315 65,316.343146 65,318 C65,319.656854 66.3431458,321 68,321 Z"/>
       <path fill="#A2E0F5" fill-rule="nonzero" d="M44,321 L55,321 C56.6568542,321 58,319.656854 58,318 C58,316.343146 56.6568542,315 55,315 L44,315 C42.3431458,315 41,316.343146 41,318 C41,319.656854 42.3431458,321 44,321 Z"/>
       <path fill="#DFE4EE" fill-rule="nonzero" d="M68,321 L289,321 C290.656854,321 292,319.656854 292,318 C292,316.343146 290.656854,315 289,315 L68,315 C66.3431458,315 65,316.343146 65,318 C65,319.656854 66.3431458,321 68,321 Z"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 309 549.5 309 549.5 308 41.5 308"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 292 549.5 292 549.5 291 41.5 291"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 276 549.5 276 549.5 275 41.5 275"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 260 549.5 260 549.5 259 41.5 259"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 244 549.5 244 549.5 243 41.5 243"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 227 549.5 227 549.5 226 41.5 226"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 211 549.5 211 549.5 210 41.5 210"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 195 549.5 195 549.5 194 41.5 194"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 179 549.5 179 549.5 178 41.5 178"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 163 549.5 163 549.5 162 41.5 162"/>
-      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 146 549.5 146 549.5 145 41.5 145"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 309 549.5 309 549.5 308 41.5 308" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 292 549.5 292 549.5 291 41.5 291" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 276 549.5 276 549.5 275 41.5 275" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 260 549.5 260 549.5 259 41.5 259" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 244 549.5 244 549.5 243 41.5 243" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 227 549.5 227 549.5 226 41.5 226" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 211 549.5 211 549.5 210 41.5 210" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 195 549.5 195 549.5 194 41.5 194" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 179 549.5 179 549.5 178 41.5 178" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 163 549.5 163 549.5 162 41.5 162" opacity=".4"/>
+      <polygon fill="#DFE4EE" fill-rule="nonzero" points="41.5 146 549.5 146 549.5 145 41.5 145" opacity=".4"/>
       <polygon fill="#DFE4EE" fill-rule="nonzero" points="30.5 97 559.5 97 559.5 96 30.5 96"/>
       <path stroke="#DFE4EE" stroke-linecap="square" d="M31,80.5 L559,80.5" opacity=".33"/>
       <circle cx="36" cy="36" r="6" fill="#DFE4EE"/>

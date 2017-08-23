@@ -28,9 +28,7 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Developers">
         <Background className={classes.bgMain}>
-            <div>
-                <MainScreen />
-            </div>
+            <MainScreen />
         </Background>
 
         <div className={classes.sectionNarrow}>

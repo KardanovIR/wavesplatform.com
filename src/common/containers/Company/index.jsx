@@ -24,48 +24,45 @@ import members from './__mocks/members';
 
 // styles
 import injectSheet from 'react-jss';
+import styles from './styles';
 
-
-const styles = theme => ({
-    section: {
-        padding: theme.spacing.getSpacing(5, 0)
-    },
-    backgroundColor: {
-        background: theme.palette.gray[50]
-    },
-    centered: {
-        textAlign: 'center'
-    },
-})
 
 
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        <MainScreen />
 
-        <Background className={classes.backgroundColor}>
-            <div className={classes.section}>
-                <Team members={members} />
+        <Background className={classes.bgMain}>
+            <div className={classes.paddedBottom}>
+                <MainScreen />
+            </div>
+        </Background>
+
+
+
+        <div className={classes.sectionWide}>
+            <Team members={members} />
+        </div>
+
+
+        <Background className={classes.bgWhitepaper} skewed={true}>
+            <div className={classes.sectionWide}>
+                <Whitepaper />
             </div>
         </Background>
 
 
         <div className={classes.section}>
-            <Whitepaper />
+            <Media members={members} />
         </div>
 
 
-        <Background className={classes.backgroundColor}>
-            <div className={classes.section}>
-                <Media members={members} />
+
+        <Background className={classes.bgCareers} skewed={true}>
+            <div className={classes.footerMarginCompensate + ' ' + classes.sectionWide}>
+                <Careers />
             </div>
         </Background>
-
-
-        <div className={classes.section}>
-            <Careers />
-        </div>
 
     </Layout>
 );

@@ -22,10 +22,10 @@ export default theme => ({
             minHeight: 650
         }
     },
-    bgApi: {
+    bgWhitepaper: {
         background: theme.palette.gray[50]
     },
-    bgDex: {
-        background: '#f0f4fb'
+    bgCareers: {
+        background: '#233556'
     },
 })
