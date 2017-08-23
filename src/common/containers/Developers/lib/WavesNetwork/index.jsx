@@ -75,7 +75,7 @@ const WavesNetwork = ({ classes }) => (
                     <div className={classes.divider} />
                     <LeftRight
                         left="Online wallet"
-                        right="waveswallet.io"
+                        right="testnet.waveswallet.io"
                         href="https://testnet.waveswallet.io"
                     />
                 </Panel>

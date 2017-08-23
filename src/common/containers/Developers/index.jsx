@@ -28,12 +28,12 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Developers">
         <Background className={classes.bgMain}>
-            <div className={classes.paddedBottom}>
+            <div>
                 <MainScreen />
             </div>
         </Background>
 
-        <div className={classes.section}>
+        <div className={classes.sectionNarrow}>
             <Description />
         </div>
 
@@ -45,7 +45,7 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <div className={classes.section}>
+        <div className={classes.sectionWide}>
             <WavesNode />
         </div>
 
@@ -57,11 +57,11 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <div className={classes.section}>
+        <div className={classes.sectionWide}>
             <WavesNetwork />
         </div>
 
-        <div className={classes.section}>
+        <div className={classes.paddedBottom}>
             <Community />
         </div>
 

@@ -9,8 +9,8 @@ const styles = theme => ({
         overflow: 'visible',
     },
     image: {
-        width: '110%',
-        height: '110%',
+        width: '100%',
+        height: '100%',
         position: 'absolute',
         zIndex: -1,
         top: 0,
@@ -21,10 +21,8 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         image: {
-            width: '130%',
-            height: '140%',
-            position: 'absolute',
-            zIndex: -1,
+            width: '110%',
+            height: '110%',
             top: -70,
             left: 100,
         },

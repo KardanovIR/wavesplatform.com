@@ -14,12 +14,12 @@ export default theme => ({
         [theme.mixins.atMedia('md')]: {
             backgroundPosition: 'top center',
             top: -200,
-            height: 'calc(1100px - 20vw)',
+            height: 'calc(900px - 20vw)',
         },
         [theme.mixins.atMedia('lg')]: {
             top: -230,
-            height: 'calc(1200px - 30vw)',
-            minHeight: 750
+            height: 'calc(1100px - 30vw)',
+            minHeight: 650
         }
     },
     bgApi: {

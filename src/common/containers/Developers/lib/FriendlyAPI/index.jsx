@@ -16,10 +16,14 @@ const styles = theme => ({
     image: {
         maxWidth: '100%'
     },
+    buttonWrapper: {
+        marginBottom: theme.spacing.unit * 2,
+    },
     [theme.mixins.atMedia('md')]: {
         buttonWrapper: {
             display: 'inline-block',
-            verticalAlign: 'middle'
+            verticalAlign: 'middle',
+            marginRight: theme.spacing.unit * 2,
         },
         text: {
             paddingLeft: theme.spacing.unit * 4
@@ -54,7 +58,7 @@ const FriendlyAPI = ({ classes }) => (
 
                 <Margin bottom={2} />
 
-                <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                <div className={classes.buttonWrapper}>
                     <IconButton
                         href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
                         target="_blank"
@@ -62,8 +66,8 @@ const FriendlyAPI = ({ classes }) => (
                     >
                         Documentation
                 </IconButton>
-                </Margin>
-                <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                </div>
+                <div className={classes.buttonWrapper}>
                     <IconButton
                         href="https://github.com/wavesplatform/WavesGUI"
                         target="_blank"
@@ -72,7 +76,7 @@ const FriendlyAPI = ({ classes }) => (
                     >
                         Client
                 </IconButton>
-                </Margin>
+                </div>
             </Col>
             <Col xs={12} md={6} lg={6}>
                 <img src={codeImageSrc} alt="Code image" className={classes.image} />
