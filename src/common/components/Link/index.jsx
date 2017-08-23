@@ -33,7 +33,7 @@ const styles = theme => ({
 
     inverted: {
         color: theme.palette.gray[0],
-        borderColor: theme.palette.opaque(theme.palette.gray[50], 0.5),
+        borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         '&:hover': {
             color: theme.palette.cyan[300],
             borderColor: theme.palette.opaque(theme.palette.cyan[300], 0.5),

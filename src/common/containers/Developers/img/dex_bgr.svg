@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1587" viewBox="0 0 2560 1587">
+  <defs>
+    <linearGradient id="4_bgr-a" x1="78.106%" x2="52.649%" y1="-119.468%" y2="59.813%">
+      <stop offset="0%" stop-color="#00F2FF" stop-opacity=".8"/>
+      <stop offset="44.983%" stop-color="#00F2FF" stop-opacity=".31"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="4_bgr-b" x1="78.106%" x2="52.649%" y1="-119.468%" y2="59.813%">
+      <stop offset="0%" stop-color="#00F2FF" stop-opacity="0"/>
+      <stop offset="45.474%" stop-color="#00F2FF" stop-opacity=".18"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="4_bgr-c" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
+      <stop offset="0%" stop-color="#0053FF"/>
+      <stop offset="43.646%" stop-color="#0086FF" stop-opacity=".4"/>
+      <stop offset="82.963%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="4_bgr-d" x1="53.318%" x2="50%" y1="-54.003%" y2="98.89%">
+      <stop offset="0%" stop-color="#1C00FF" stop-opacity=".09"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="4_bgr-e" cx="-4.449%" cy="37.693%" r="16.065%" fx="-4.449%" fy="37.693%" gradientTransform="matrix(.35491 0 0 1 -.029 0)">
+      <stop offset="0%" stop-color="#0053FF" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="rotate(180 1941.5 898.384)">
+    <polygon fill="url(#4_bgr-a)" points="145.695 465.807 3949.27 467.818 3832.378 1822.833 51.78 1822.833" opacity=".5" transform="rotate(-5 2000.525 1144.32)"/>
+    <polygon fill="url(#4_bgr-b)" points="1429.144 453 2893 453.774 2848.013 975.269 1393 975.269" opacity=".5" transform="rotate(-5 2143 714.135)"/>
+    <polygon fill="url(#4_bgr-c)" points="145.695 569.021 3949.27 571.032 3832.378 1926.047 51.78 1926.047" opacity=".5" transform="rotate(-5 2000.525 1247.534)"/>
+    <polygon fill="url(#4_bgr-d)" points="2522.795 367.285 4963.814 367.285 4886.653 1261.022 2445.634 1261.022" transform="rotate(-5 3704.724 814.154)"/>
+    <polygon fill="url(#4_bgr-e)" points="2233.093 108.078 4674.111 108.078 4596.951 1001.815 2155.932 1001.815" transform="rotate(-5 3415.022 554.947)"/>
+  </g>
+</svg>

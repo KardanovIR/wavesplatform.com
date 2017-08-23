@@ -5,69 +5,80 @@ import IconButton from 'src/common/components/Button/Icon';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
+import codeImageSrc from './img/code.svg';
+
 
 import injectSheet from 'react-jss';
 
 
+
 const styles = theme => ({
+    image: {
+        maxWidth: '100%'
+    },
     [theme.mixins.atMedia('md')]: {
         buttonWrapper: {
             display: 'inline-block',
             verticalAlign: 'middle'
+        },
+        text: {
+            paddingLeft: theme.spacing.unit * 4
+        },
+        mdAlignCenter: {
+            textAlign: 'center'
         }
     }
 })
 
 
 const FriendlyAPI = ({ classes }) => (
-    <Row>
-        <Col xs={12} md={8} lg={7}>
-            <Typography type="display2" margin>
-                Developer-Friendly API
-            </Typography>
-            <Typography type="body" margin>
-                Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.
-            </Typography>
-
-            <Margin bottom={4}>
-                <Typography type="body">
-                    Our open source client application uses the same API; you can explore it and implement any kind of client application yourself.
+    <div>
+        <Row centered>
+            <Col xs={12} md={8} lg={7}>
+                <Typography type="display2" className={classes.mdAlignCenter}>
+                    Developer-Friendly API
                 </Typography>
-            </Margin>
+                <Typography type="body2" className={classes.mdAlignCenter}>
+                    Our open source client application uses the same API. You can explore it and implement any kind of client application yourself.
+                </Typography>
+                <Margin bottom={4} />
+            </Col>
+        </Row>
 
-            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
-                <IconButton
-                    href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
-                    target="_blank"
-                    iconName="github"
-                >
-                    Documentation
+
+        <Row direction="row-reverse">
+            <Col xs={12} md={6} lg={6} className={classes.text}>
+                <Typography type="body" margin>
+                    Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.
+                </Typography>
+
+                <Margin bottom={2} />
+
+                <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                    <IconButton
+                        href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+                        target="_blank"
+                        iconName="github"
+                    >
+                        Documentation
                 </IconButton>
-            </Margin>
-            <Margin bottom={3} right={1} className={classes.buttonWrapper}>
-                <IconButton
-                    href="https://github.com/wavesplatform/WavesGUI"
-                    target="_blank"
-                    iconName="github"
-                    color="gray-300"
-                >
-                    Client
+                </Margin>
+                <Margin bottom={3} right={1} className={classes.buttonWrapper}>
+                    <IconButton
+                        href="https://github.com/wavesplatform/WavesGUI"
+                        target="_blank"
+                        iconName="github"
+                        secondary
+                    >
+                        Client
                 </IconButton>
-            </Margin>
-            {/* <Margin bottom={3} right={1} className={classes.buttonWrapper}>
-                <IconButton
-                    href="https://github.com/wavesplatform/WavesGUI"
-                    target="_blank"
-                    iconName="swagger"
-                    color="gray-300"
-                >
-                    Swagger
-                </IconButton>
-            </Margin> */}
-        </Col>
-        <Col xs={12} md={6}>
-        </Col>
-    </Row>
+                </Margin>
+            </Col>
+            <Col xs={12} md={6} lg={6}>
+                <img src={codeImageSrc} alt="Code image" className={classes.image} />
+            </Col>
+        </Row>
+    </div>
 );
 
 

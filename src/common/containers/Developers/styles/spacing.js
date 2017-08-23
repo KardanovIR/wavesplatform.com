@@ -1,10 +1,11 @@
 export default theme => ({
-    // paddedTop: theme.spacing.paddedTop,
+    paddedTop: theme.spacing.paddedTop,
     paddedBottom: theme.spacing.paddedBottom,
-    // section: theme.spacing.section,
+    section: theme.spacing.section,
     sectionNarrow: theme.spacing.sectionNarrow,
     sectionWide: theme.spacing.sectionWide,
 
+    
     withBackground: {
         padding: theme.spacing.getSpacing(8, 0),
         [theme.mixins.atMedia('md')]: {

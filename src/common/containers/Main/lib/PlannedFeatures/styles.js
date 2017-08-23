@@ -5,9 +5,6 @@ const styles = theme => ({
     feature: {
         marginBottom: theme.spacing.unit * 3
     },
-    background: {
-        background: theme.palette.gray[50]
-    },
     [theme.mixins.atMedia('md')]: {
         title: {
             textAlign: 'center',

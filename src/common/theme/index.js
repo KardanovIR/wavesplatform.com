@@ -12,8 +12,8 @@ import createSpacing from './spacing';
 
 
 // create theme fields
-const spacing = createSpacing();
 const breakpoints = createBreakpoints();
+const spacing = createSpacing(breakpoints);
 const typography = createTypography(palette);
 const mixins = createMixins(breakpoints);
 

@@ -12,10 +12,10 @@ import styles from './styles';
 const MainScreen = ({ classes }) => (
     <Row className={classes.root}>
         <Col xs={12} md={6}>
-            <Typography type="display4" margin>
+            <Typography type="display4" inverted>
                 Build unstoppable applications
             </Typography>
-            <Typography type="body">
+            <Typography type="body" inverted>
                 These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. 
             </Typography>
         </Col>

@@ -82,11 +82,4 @@ export default theme => ({
         },
     },
 
-    backgroundColor: {
-        background: theme.palette.gray[50]
-    },
-    backgroundGradient: {
-        backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0) 25%, ${theme.palette.gray[50]})`
-    },
-
 })

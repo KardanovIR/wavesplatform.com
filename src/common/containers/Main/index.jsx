@@ -14,7 +14,6 @@ import Feedback from 'src/common/containers/Feedback';
 
 // lib
 import MainScreen from './lib/MainScreen';
-import Description from './lib/Description';
 import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
 import DEX from './lib/DEX';
@@ -35,15 +34,11 @@ const PageLayout = ({
     initialState,
     classes
 }) => (
-        <Layout invertedNavigation>
+        <Layout>
 
             <Background className={classes.bgMain}>
                 <MainScreen dexData={initialState.dexData} />
             </Background>
-
-            <div className={classes.sectionNarrow}>
-                <Description />
-            </div>
 
 
             <Background className={classes.bgClient}>

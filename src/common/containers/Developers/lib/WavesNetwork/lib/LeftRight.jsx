@@ -1,17 +1,19 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
+import Link from 'src/common/components/Link';
 
 import injectSheet from 'react-jss';
 
-const styles = {
+const styles = theme => ({
     wrapper: {
         display: 'flex'
     },
     text: {
-        flex: 1
+        flex: 1,
+        color: theme.palette.gray[500]
     }
-}
+})
 
 
 const MainScreen = ({
@@ -22,10 +24,11 @@ const MainScreen = ({
 }) => (
     <div className={classes.wrapper}>
         <Typography className={classes.text}>{ left }</Typography>
-        <Typography className={classes.text} align="right" color="gray-500" noMargin>
-            <a href={href}>
+        
+        <Typography className={classes.text} align="right" noMargin>
+            <Link href={href}>
                 { right }
-            </a>
+            </Link>
         </Typography>
     </div>
 );
