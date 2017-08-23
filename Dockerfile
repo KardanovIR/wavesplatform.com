@@ -16,8 +16,10 @@ ADD . /opt/app
 
 # build frontend and backend
 RUN cd /opt/app && yarn build:be
-RUN yarn build:fe
+RUN yarn build:fe-prod
 
 EXPOSE 3001
+
+ENV NODE_ENV production
 
 CMD ["node", "dist/app.js"]
