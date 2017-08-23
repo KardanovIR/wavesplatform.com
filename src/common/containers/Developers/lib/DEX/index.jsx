@@ -16,18 +16,19 @@ const styles = theme => ({
     image: {
         maxWidth: '100%'
     },
-    [theme.mixins.atMedia('md')]: {
+    [theme.breakpoints.up('md')]: {
         buttonWrapper: {
             display: 'inline-block',
             verticalAlign: 'middle'
         },
         text: {
-            paddingLeft: theme.spacing.unit * 4
+            paddingLeft: theme.spacing.unit * 4,
+            paddingRight: '10%'
         },
         mdAlignCenter: {
             textAlign: 'center'
         }
-    }
+    },
 })
 
 

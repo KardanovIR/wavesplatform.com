@@ -29,7 +29,7 @@ const creatyTypography = (palette) => {
                 ...base,
                 ...display,
                 fontSize: 28,
-                lineHeight: 1.11,
+                lineHeight: 1,
                 fontWeight: 700,
             },
             {

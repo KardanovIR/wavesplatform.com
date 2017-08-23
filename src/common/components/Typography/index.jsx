@@ -12,6 +12,8 @@ import styles from './styles';
 const Typography = ({
     classes,
     className: classNameProp,
+    style,
+    cut,
     type,
     tagName,
     tagMap,
@@ -35,8 +37,12 @@ const Typography = ({
         classNameProp
     );
 
+    // cut paragraph (padded right or left to make it shorter)
+    const cutDirection = align === 'right' ? 'Left' : 'Right';
+    const styleObj = cut ? { ['padding' + cutDirection]: `${cut === true ? 20 : cut}%` } : {}
+
     return (
-        <Tag className={className}>
+        <Tag className={className} style={{ ...styleObj, style }}>
             {children}
         </Tag>
     )
@@ -57,7 +63,7 @@ Typography.defaultProps = {
         'numeral': 'div'
     },
     className: '',
-    align: 'auto'
+    align: 'auto',
 }
 
 const types = [
@@ -73,6 +79,7 @@ const types = [
 
 Typography.propTypes = {
     type: PropTypes.oneOf(types).isRequired,
+    cut: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
     // margin: PropTypes.oneOf([true, ...types])
 }
 

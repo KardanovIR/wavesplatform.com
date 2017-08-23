@@ -3,6 +3,9 @@ import table from './img/table.svg';
 
 const styles = theme => ({
     root: {},
+    subtitle: {
+        maxWidth: '80%'
+    },
     imageWrapper: {
         position: 'relative',
         paddingTop: '67%',
@@ -19,7 +22,15 @@ const styles = theme => ({
         background: `url(${table}) no-repeat`,
         backgroundSize: '100%',
     },
-    [theme.mixins.atMedia('md')]: {
+    [theme.breakpoints.up('md')]: {
+        image: {
+            width: '130%',
+            height: '130%',
+            top: -30,
+            left: 0,
+        },
+    },
+    [theme.breakpoints.up('lg')]: {
         image: {
             width: '110%',
             height: '110%',

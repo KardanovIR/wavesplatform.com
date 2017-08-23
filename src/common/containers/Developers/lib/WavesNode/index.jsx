@@ -27,7 +27,8 @@ const styles = theme => ({
         },
         text: {
             paddingRight: theme.spacing.unit * 4,
-            textAlign: 'right'
+            paddingLeft: '10%',
+            textAlign: 'right',
         },
         mdAlignCenter: {
             textAlign: 'center'

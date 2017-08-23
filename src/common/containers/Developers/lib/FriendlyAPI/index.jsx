@@ -26,7 +26,8 @@ const styles = theme => ({
             marginRight: theme.spacing.unit * 2,
         },
         text: {
-            paddingLeft: theme.spacing.unit * 4
+            paddingLeft: theme.spacing.unit * 4,
+            paddingRight: '10%'
         },
         mdAlignCenter: {
             textAlign: 'center'
@@ -52,7 +53,7 @@ const FriendlyAPI = ({ classes }) => (
 
         <Row direction="row-reverse">
             <Col xs={12} md={6} lg={6} className={classes.text}>
-                <Typography type="body" margin>
+                <Typography type="body">
                     Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.
                 </Typography>
 

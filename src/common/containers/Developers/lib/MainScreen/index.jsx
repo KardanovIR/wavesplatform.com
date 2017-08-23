@@ -16,7 +16,7 @@ const MainScreen = ({ classes }) => (
             <Typography type="display4" inverted>
                 Build unstoppable applications
             </Typography>
-            <Typography type="body" inverted>
+            <Typography type="body" inverted cut>
                 These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. 
             </Typography>
             <Margin bottom={4} />
