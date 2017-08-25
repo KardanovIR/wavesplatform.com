@@ -4,7 +4,9 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
+import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
 
 
@@ -36,40 +38,39 @@ const PageLayout = ({
 }) => (
         <Layout>
 
-            <Background className={classes.bgMain}>
-                <MainScreen dexData={initialState.dexData} />
-            </Background>
+            <BackgroundMainScreen main>
+                <div className={classes.paddedBottom}>
+                    <MainScreen dexData={initialState.dexData} />
+                </div>
+            </BackgroundMainScreen>
 
 
-            <Background className={classes.bgClient}>
-                <div className={classes.section}>
+            <Background className={classes.bgClient} skewed={true}>
+                <div className={classes.sectionWide}>
                     <WavesClient />
                 </div>
             </Background>
 
 
-            <Background className={classes.bgWallet}>
-                <div className={classes.section}>
-                    <Wallet />
-                </div>
-            </Background>
-            <Background className={classes.bgDex}>
-                <div className={classes.section}>
-                    <DEX />
-                </div>
-            </Background>
-
-            <div className={classes.paddedTop}>
-                <IssuingTokens />
-            </div>
+            <Section size={2}>
+                <Wallet />
+            </Section>
 
             <div className={classes.section}>
-                <Feedback>
-                    <Facts tokens={initialState.dexData.dexAssets} />
-                </Feedback>
+                <DEX />
             </div>
 
-            <Margin bottom={4} />
+
+            <Background className={classes.bgDex} skewed={true}>
+                <div className={classes.sectionWide}>
+                    <IssuingTokens />
+                    <Margin bottom={5} />      
+                    <Feedback>
+                        <Facts tokens={initialState.dexData.dexAssets} />
+                    </Feedback>
+                </div>
+            </Background>
+
 
             <Background className={classes.bgFeatures} skewed={true}>
                 <div className={classes.withBackground}>
@@ -78,9 +79,9 @@ const PageLayout = ({
             </Background>
 
 
-            <div className={classes.section}>
+            <Section size={4}>
                 <JoinUs />
-            </div>
+            </Section>
 
             <div className={classes.footerMarginCompensate}>
                 <Background className={classes.bgSubscription} skewed={true}>

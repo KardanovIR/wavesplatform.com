@@ -1,8 +1,4 @@
 const styles = theme => ({
-    root: {
-        padding: theme.spacing.getSpacing(5, 0, 5),
-        flexDirection: 'row-reverse'
-    },
     article: {
         marginBottom: theme.spacing.unit * 6
     },
@@ -16,7 +12,7 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            padding: theme.spacing.getSpacing(20, 0, 15)
+            flexDirection: 'row-reverse'
         },
         article: {
             marginBottom: 0

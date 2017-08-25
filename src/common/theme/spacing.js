@@ -103,6 +103,39 @@ const createSpacing = (breakpoints, { unit = 8, radius = 4, inputHeight = 40 } =
         // )
     },
 
+    
+    section: {
+        padding: [unit * 8, 0],
+        [breakpoints.up('sm')]: {
+            padding: [unit * 10, 0],
+        },
+        [breakpoints.up('md')]: {
+            padding: [unit * 12, 0],
+        },
+        [breakpoints.up('lg')]: {
+            padding: [unit * 14, 0],
+        }
+    },
+
+    sectionNarrow: {
+        padding: [unit * 3, 0],
+        [breakpoints.up('md')]: {
+            padding: [unit * 6, 0],
+        },
+        [breakpoints.up('lg')]: {
+            padding: [unit * 10, 0],
+        }
+    },
+
+    sectionWide: {
+        padding: [unit * 8, 0, unit * 7],
+        [breakpoints.up('md')]: {
+            padding: [unit * 15, 0, unit * 14],
+        },
+        [breakpoints.up('lg')]: {
+            padding: [unit * 20, 0, unit * 18],
+        }
+    },
 
 
     paddedTop: {
@@ -118,6 +151,19 @@ const createSpacing = (breakpoints, { unit = 8, radius = 4, inputHeight = 40 } =
         }
     },
 
+    paddedTopWide: {
+        paddingTop: unit * 8,
+        [breakpoints.up('sm')]: {
+            paddingTop: unit * 12,
+        },
+        [breakpoints.up('md')]: {
+            paddingTop: unit * 15,
+        },
+        [breakpoints.up('lg')]: {
+            paddingTop: unit * 20,
+        }
+    },
+
     paddedBottom: {
         paddingBottom: unit * 8,
         [breakpoints.up('sm')]: {
@@ -128,33 +174,6 @@ const createSpacing = (breakpoints, { unit = 8, radius = 4, inputHeight = 40 } =
         },
         [breakpoints.up('lg')]: {
             paddingBottom: unit * 14,
-        }
-    },
-
-    section: {
-        composes: [
-            '$paddedTop',
-            '$paddedBottom',
-        ]
-    },
-
-    sectionNarrow: {
-        padding: [unit * 3, 0],
-        [breakpoints.up('md')]: {
-            padding: [unit * 6, 0],
-        },
-        [breakpoints.up('lg')]: {
-            padding: [unit * 10, 0],
-        }
-    },
-
-    sectionWide: {
-        padding: [unit * 8, 0, unit * 6],
-        [breakpoints.up('md')]: {
-            padding: [unit * 15, 0, unit * 13],
-        },
-        [breakpoints.up('lg')]: {
-            padding: [unit * 20, 0, unit * 17],
         }
     },
 

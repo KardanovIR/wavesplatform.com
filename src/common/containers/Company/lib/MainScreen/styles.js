@@ -17,6 +17,10 @@ const styles = theme => ({
         }
     },
     [theme.breakpoints.up('lg')]: {
+        root: {
+            height: 400,
+            overflow: 'visible',
+        }
     }
 })
 

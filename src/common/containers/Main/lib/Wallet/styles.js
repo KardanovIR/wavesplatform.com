@@ -1,5 +1,8 @@
 const styles = theme => ({
     root: {},
+    featuresRow: {
+        justifyContent: 'space-around'
+    },
     feature: {
         marginBottom: theme.spacing.unit * 3
     },

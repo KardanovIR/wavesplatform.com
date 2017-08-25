@@ -39,11 +39,7 @@ const styles = theme => ({
         strokeDashoffset: 0,
         animation: 'dash 2.5s ease-in-out infinite',
         strokeLinecap: 'round',
-        stroke: theme.palette.gray[0]
-    },
-
-    dark: {
-        stroke: theme.palette.gray[300]
+        stroke: 'currentColor'
     },
 
     '@keyframes rotate': {
@@ -76,7 +72,7 @@ class Spinner extends PureComponent {
             <div className={cn(classes.loader, className)}>
                 <svg className={classes.circular} viewBox="25 25 50 50">
                     <circle
-                        className={cn(classes.path, { [classes.dark]: dark })}
+                        className={classes.path}
                         cx="50"
                         cy="50"
                         r="20"

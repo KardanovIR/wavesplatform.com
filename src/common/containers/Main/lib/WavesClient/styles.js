@@ -1,32 +1,23 @@
-import mockup from './img/mockup.png';
-
-// import placeholder from 'src/common/styles/placeholder';
-
+import image from './img/image.svg';
 
 
 const styles = theme => ({
-    root: {
-        padding: theme.spacing.getSpacing(0, 0, 5)
-    },
     imageWrapper: {
         position: 'relative',
         overflow: 'visible',
-        paddingTop: '66%',
-        // ...placeholder
+        paddingTop: '74%',
     },
     image: {
         position: 'absolute',
         zIndex: -1,
-        top: 0,
-        left: -100,
+        top: -80,
+        right: 60,
 
-        width: '90%',
-        paddingTop: '60%',
+        width: '140%',
+        height: '140%',
 
-        // background: `url(${mockup}) no-repeat`,
+        background: `url(${image}) no-repeat`,
         backgroundSize: '100%',
-        transform: 'rotate(-6deg)',
-        marginBottom: theme.spacing.unit * 2
     }
 })
 

@@ -1,7 +1,8 @@
 export default theme => ({
     // paddedTop: theme.spacing.paddedTop,
+    paddedTopWide: theme.spacing.paddedTopWide,
     paddedBottom: theme.spacing.paddedBottom,
-    // section: theme.spacing.section,
+    section: theme.spacing.section,
     sectionNarrow: theme.spacing.sectionNarrow,
     sectionWide: theme.spacing.sectionWide,
 
@@ -13,10 +14,6 @@ export default theme => ({
         [theme.mixins.atMedia('lg')]: {
             padding: theme.spacing.getSpacing(20, 0),
         }
-    },
-
-    marginSmall: {
-        marginBottom: theme.spacing.unit
     },
 
     footerMarginCompensate: {

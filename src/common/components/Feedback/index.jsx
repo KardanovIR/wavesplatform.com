@@ -25,7 +25,7 @@ const Feedback = ({
     signature,
     avatar
 }) => (
-    <Row className={classes.root}>
+    <Row>
         <Col xs={12} sm={6} className={classes.imageCol}>
             <Image
                 image={image}
@@ -33,7 +33,6 @@ const Feedback = ({
                 description={description}
                 website={website}
             />
-            <br />
         </Col>
         <Col xs={12} sm={6}>
             <Typography type="display2">

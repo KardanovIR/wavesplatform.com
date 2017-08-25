@@ -4,6 +4,7 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
+import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
 
@@ -30,13 +31,18 @@ import styles from './styles';
 
 
 const PageLayout = ({ classes }) => (
-    <Layout>
+    <Layout activeLink="Company">
 
-        <Background className={classes.bgMain}>
+
+        <MainScreenBackground>
+            <MainScreen />
+        </MainScreenBackground>
+
+        {/* <Background className={classes.bgMain}>
             <div className={classes.paddedBottom}>
                 <MainScreen />
             </div>
-        </Background>
+        </Background> */}
 
 
 

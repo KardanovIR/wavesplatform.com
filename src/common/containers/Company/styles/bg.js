@@ -8,17 +8,17 @@ export default theme => ({
     },
     bgMain: {
         composes: '$bg',
+        backgroundPosition: 'top center',
         backgroundImage: `url(${require('../img/main_bgr.svg')})`,
-        backgroundSize: 'cover',
+        backgroundSize: '100%',
+        width: 2560,
         top: -100,
         height: '175%',
         [theme.breakpoints.up('sm')]: {
-            backgroundPosition: 'top center',
             top: -200,
             height: 580,
         },
         [theme.breakpoints.up('md')]: {
-            backgroundPosition: 'top center',
             top: -200,
             height: 'calc(900px - 20vw)',
         },

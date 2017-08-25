@@ -25,17 +25,15 @@ const MainScreen = ({
         <Row>
 
             <Col xs={12} md={6} className={classes.titleTextCtaCol}>
-                <div className={classes.titleTextCtaWrapper}>
-                    <TitleTextCTA
-                        title="Decentralized blockchain platform"
-                        text="Waves gives all the necessary infrastructure for the production, storage, management, sale and analysis of your digital assets"
-                        inverted
-                        buttons={[
-                            <Button withLoader className={classes.primaryButton} key="main_cta_button" href="/download">Get Client</Button>,
-                            <Button withLoader className={classes.secondaryButton} secondary key="main_cta_button2" href="/download">Get Waves</Button>,
-                        ]}
-                    />
-                </div>
+                <TitleTextCTA
+                    title="Get started with blockchain"
+                    text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
+                    inverted
+                    buttons={[
+                        <Button withLoader className={classes.ctaButton} secondary key="main_cta_button" href="/download">Get Client</Button>,
+                        <Button withLoader className={classes.secondCtaButton} bordered key="main_cta_button2" href="/download">Get Waves</Button>,
+                    ]}
+                />
             </Col>
 
             <Col xs={12} md={6} className={classes.numbersCol}>
@@ -44,7 +42,7 @@ const MainScreen = ({
 
             <Col xs={12} md={6} className={classes.imageCol}>
                 <div className={classes.imageWrapper}>
-                    {/* <div className={classes.image} /> */}
+                    <div className={classes.image} />
                 </div>
             </Col>
 

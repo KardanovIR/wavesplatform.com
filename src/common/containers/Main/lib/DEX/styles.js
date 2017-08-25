@@ -1,6 +1,4 @@
-// import mockup from './img/mockup.png';
-
-// import placeholder from 'src/common/styles/placeholder';
+import image from './img/image.svg';
 
 
 const styles = theme => ({
@@ -15,24 +13,29 @@ const styles = theme => ({
     },
     imageWrapper: {
         position: 'relative',
-        paddingTop: '75%',
+        paddingTop: '70%',
         overflow: 'visible',
-        // ...placeholder
     },
     image: {
-        width: '90%',
-        height: '115%',
+        width: '100%',
+        height: '100%',
         position: 'absolute',
         zIndex: -1,
-        top: -50,
-        right: -100,
 
-        // background: `url(${mockup}) no-repeat`,
+        top: 0,
+        left: 0,
+
+        background: `url(${image}) no-repeat`,
         backgroundSize: '100%',
-        transform: 'rotate(-6deg)',
-        marginBottom: theme.spacing.unit * 2
     },
-    [theme.mixins.atMedia('md')]: {}
+    [theme.mixins.atMedia('lg')]: {
+        image: {
+            width: '180%',
+            height: '180%',
+            top: -180,
+            left: -30,
+        }
+    }
 })
 
 export default styles;

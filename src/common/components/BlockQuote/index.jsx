@@ -36,7 +36,7 @@ const BlockQuote = ({
     align
 }) => (
         <div className={cn(classes[`wrapper-${align}`], className)}>
-            <Typography type="quote">
+            <Typography type="quote" align={align} cut={30}>
                 {children}
             </Typography>
         </div>

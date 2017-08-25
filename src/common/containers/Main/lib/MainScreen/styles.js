@@ -1,4 +1,4 @@
-import mockup from './img/mockup.png';
+import image from './img/image.svg';
 import deloitteLogo from './img/deloitte_logo.svg';
 
 // import placeholder from 'src/common/styles/placeholder';
@@ -8,31 +8,38 @@ const styles = theme => ({
     titleTextCtaWrapper: {
         marginBottom: theme.spacing.unit * 16
     },
-    primaryButton: {
+    ctaButton: {
         display: 'none'
     },
-    secondaryButton: {
+    secondCtaButton: {
         marginLeft: -theme.spacing.unit * 2
     },
     imageWrapper: {
         position: 'relative',
-        paddingTop: '75%',
+        paddingTop: '60%',
         overflow: 'visible',
-        // ...placeholder,
     },
     image: {
-        width: '90%',
-        height: '115%',
+        width: '100%',
+        height: '100%',
+
         position: 'absolute',
         zIndex: -1,
-        top: 0,
-        right: -100,
 
-        background: `url(${mockup}) no-repeat`,
+        top: 0,
+        left: 0,
+
+        background: `url(${image}) no-repeat`,
         backgroundSize: '100%',
-        transform: 'rotate(-6deg)',
-        marginBottom: theme.spacing.unit * 2
+
+        [theme.breakpoints.up('lg')]: {
+            width: '180%',
+            height: '180%',
+            top: -80,
+            left: -50
+        },
     },
+
     deloitte: {
         textAlign: 'right',
         borderRight: `6px solid ${theme.palette.gray[300]}`,
@@ -73,11 +80,19 @@ const styles = theme => ({
         imageCol: {
             order: 2
         },
-        primaryButton: {
+        ctaButton: {
             display: 'inline-block'
         },
-        secondaryButton: {
+        secondCtaButton: {
             margin: 0
+        }
+    },
+    [theme.breakpoints.up('lg')]: {
+        numbersCol: {
+            marginTop: theme.spacing.unit*10,
+        },
+        titleTextCtaCol: {
+            height: 560
         }
     }
 })

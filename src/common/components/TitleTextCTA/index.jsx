@@ -28,7 +28,7 @@ const TitleTextCTA = ({
 
 
             <div className={classes.text}>
-                <Typography inverted={inverted} type="body2">
+                <Typography inverted={inverted} type="body2" cut>
                     {text}
                 </Typography>
             </div>

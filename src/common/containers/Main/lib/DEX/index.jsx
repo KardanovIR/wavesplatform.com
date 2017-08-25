@@ -16,7 +16,7 @@ import styles from './styles';
 const DEX = ({ classes }) => (
     <div>
         <Margin bottom={5}>
-            <Typography type="display3" tagName="div" className={classes.title}>
+            <Typography type="display2" tagName="div" className={classes.title}>
                 Decentralized Exchange (DEX)
             </Typography>
         </Margin>

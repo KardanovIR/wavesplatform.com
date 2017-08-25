@@ -43,7 +43,10 @@ class Button extends Component {
             icon,
             classes,
             className,
-            secondary,
+
+            // types
+            bordered,
+            secondary, // eslint-disable-line
 
             children,
             loading,
@@ -58,8 +61,9 @@ class Button extends Component {
         const showLoader = loading || this.state.loading;
 
         const buttonElementClasses = classnames(classes.button, {
-            [classes.secondary]: secondary,
-            // [classes.primary]: primary,
+            [classes.bordered]: bordered,
+            [classes.light]: !bordered && secondary,
+            [classes.dark]: !bordered && !secondary,
         }, className);
 
         const contentWrapperClasses = classnames(
@@ -82,7 +86,7 @@ class Button extends Component {
             <Element {...elementProps} onClick={this.handleClick}>
 
                 {showLoader && (
-                    <Spinner dark={secondary} className={classes.spinner} />
+                    <Spinner className={classes.spinner} />
                 )}
 
                 <div className={contentWrapperClasses}>
@@ -110,7 +114,11 @@ Button.defaultProps = {
     className: '',
     disabled: false,
     loading: false,
-    onClick: () => {}
+    onClick: () => {},
+
+    // types
+    secondary: false,
+    bordered: false,
 };
 
 

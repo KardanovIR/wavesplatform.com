@@ -27,11 +27,11 @@ const FeedbackContainer = ({
             signature="Primalbase Team"
         />
 
-        <Margin bottom={4} />
+        <Margin bottom={5} />
         
         { children }
 
-        <Margin bottom={4} />
+        <Margin bottom={5} />
 
         <Feedback
             image={<img className={classes.image} src={mobileGoPhoto} alt="mobile_go"/>}

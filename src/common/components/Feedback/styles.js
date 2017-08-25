@@ -1,10 +1,15 @@
 const styles = theme => ({
-    root: {
-        // padding: theme.spacing.getSpacing(10, 0)
+    imageCol: {
+        marginBottom: theme.spacing.unit * 3
+    },
+    [theme.mixins.atMedia('md')]: {
+        imageCol: {
+            margin: 0
+        }
     },
     [theme.mixins.atMedia('lg')]: {
         imageCol: {
-            paddingRight: theme.spacing.unit * 10
+            paddingRight: theme.spacing.unit * 10,
         }
     }
 })

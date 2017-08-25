@@ -4,6 +4,7 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Background from 'src/common/components/Background';
+import MainScreenBackground from 'src/common/components/Background/MainScreen';
 // import { Row, Col } from 'src/common/components/Grid';
 
 
@@ -27,9 +28,10 @@ import styles from './styles';
 
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Developers">
-        <Background className={classes.bgMain}>
+        {/* <Background className={classes.bgMain}> */}
+        <MainScreenBackground>
             <MainScreen />
-        </Background>
+        </MainScreenBackground>
 
         <div className={classes.sectionNarrow}>
             <Description />

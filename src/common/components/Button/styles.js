@@ -19,7 +19,7 @@ const styles = theme => ({
         '-moz-user-select': 'none',
         '-ms-user-select': 'none',
         textDecoration: 'none',
-        
+
         display: 'inline-block',
         position: 'relative',
 
@@ -31,10 +31,7 @@ const styles = theme => ({
 
         padding: theme.spacing.getSpacing(0, 4),
 
-
-        backgroundColor: theme.palette.primary[900],
-
-        transition: theme.transitions.create('background-color'),
+        transition: theme.transitions.create(['background-color', 'color']),
 
         boxShadow: '0 2px 4px 0 rgba(39, 47, 89, 0.25)',
 
@@ -43,21 +40,26 @@ const styles = theme => ({
             pointerEvents: 'none'
         },
 
+        '&:active': {
+            transform: 'translateY(1px)'
+        },
+    },
+    dark: {
+        backgroundColor: theme.palette.primary[900],
+        '& $content, & $spinner': {
+            color: theme.palette.gray[0],
+        },
         '&:hover': {
             backgroundColor: theme.palette.primary[700],
         },
         '&:focus': {
             backgroundColor: theme.palette.primary[700],
         },
-
-        '&:active': {
-            transform: 'translateY(1px)'
-        },
     },
-    secondary: {
+    light: {
         backgroundColor: theme.palette.gray[0],
-        '& $content': {
-            color: theme.palette.gray[300]
+        '& $content, & $spinner': {
+            color: theme.palette.primary[700]
         },
         '&$button:hover': {
             backgroundColor: theme.palette.cyan[300],
@@ -66,12 +68,26 @@ const styles = theme => ({
             backgroundColor: theme.palette.cyan[300],
         },
     },
+    bordered: {
+        backgroundColor: 'transparent',
+        boxShadow: `inset 0 0 0 2px ${theme.palette.gray[0]}`,
+
+        '& $content, & $spinner': {
+            color: theme.palette.gray[0],
+        },
+
+        '&:hover, &:focus': {
+            backgroundColor: theme.palette.gray[0],
+            '& $content, & $spinner': {
+                color: theme.palette.primary[700]
+            }
+        },
+    },
     content: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100%',
-        color: theme.palette.gray[0],
     },
     contentHidden: {
         opacity: 0

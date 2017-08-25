@@ -4,7 +4,7 @@ import React from 'react';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import AvatarWithText from 'src/common/components/AvatarWithText';
-import WalletIcon from './Icon';
+import IconProduct from 'src/common/components/IconProduct';
 import { Row, Col } from 'src/common/components/Grid';
 
 
@@ -14,7 +14,7 @@ import styles from './styles';
 
 
 const ColFeature = ({ children, className }) =>
-    <Col xs={12} md={4} lg className={className}>{children}</Col>;
+    <Col xs={12} md={4} lg={2} className={className}>{children}</Col>;
 
 
 const Wallet = ({ classes }) => (
@@ -30,38 +30,38 @@ const Wallet = ({ classes }) => (
                 <Margin bottom={4} />
             </Col>
         </Row>
-        <Row>
+        <Row className={classes.featuresRow}>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<WalletIcon name="secure" />}
+                    avatar={<IconProduct name="shield" circle />}
                     text="Take advantage of our platform’s high security"
                     centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<WalletIcon name="interest" />}
+                    avatar={<IconProduct name="leasing" circle />}
                     text="Get interest on your Waves account balance"
                     centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<WalletIcon name="transfer" />}
+                    avatar={<IconProduct name="transaction" circle />}
                     text="Transfer funds from person to person"
                     centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<WalletIcon name="mining" />}
+                    avatar={<IconProduct name="mining" circle />}
                     text="Start mining — it’s easy with Waves"
                     centered
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
-                    avatar={<WalletIcon name="wallet" />}
+                    avatar={<IconProduct name="wallet" circle />}
                     text="Create a multiple-currency wallet"
                     centered
                 />
