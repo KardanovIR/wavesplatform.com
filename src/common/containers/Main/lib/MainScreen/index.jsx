@@ -2,10 +2,10 @@ import React from 'react';
 
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
 import BlockQuote from 'src/common/components/BlockQuote';
+import Button from 'src/common/components/Button';
 
 import { Row, Col } from 'src/common/components/Grid';
 
-import Button from 'src/common/components/Button';
 
 
 import Numbers from './lib/Numbers';

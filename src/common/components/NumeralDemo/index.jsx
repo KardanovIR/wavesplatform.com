@@ -44,9 +44,11 @@ const styles = theme => ({
 
 const NumeralDemo = ({ classes, iconName, iconColor, number, text }) => (
     <div className={classes.wrapper}>
-        <div className={classes.icon}>
-            <Icon name={iconName} color={iconColor} />
-        </div>
+        { iconName && (
+            <div className={classes.icon}>
+                <Icon name={iconName} color={iconColor} />
+            </div>
+        ) }
         <div className={classes.text}>
             <Typography type="numeral" tagName="div">
                 <span dangerouslySetInnerHTML={{ __html: number.toLocaleString('en', {maximumFractionDigits: 8}).replace(/,/g, '&thinsp;') }} />

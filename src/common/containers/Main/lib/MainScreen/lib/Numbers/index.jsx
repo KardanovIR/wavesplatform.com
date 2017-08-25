@@ -1,7 +1,9 @@
 import React from 'react';
 
 import { Row, Col } from 'src/common/components/Grid';
-import NumeralDemo from 'src/common/components/NumeralDemo';
+import Typography from 'src/common/components/Typography';
+
+import formatNumber from 'src/common/utils/formatNumber';
 
 
 import injectSheet from 'react-jss';
@@ -27,35 +29,40 @@ const NumbersMain = ({
 }) => wavesBtcRate && dexVolume && dexWallets && dexAssets ? (
     <Row>
         <ColNumber >
-            <NumeralDemo
-                number={wavesBtcRate}
-                text="Waves token value"
-                iconName="mainBitcoin"
-            />
+            <Typography type="numeral">
+                <span dangerouslySetInnerHTML={{ __html: `&#8383;&nbsp;${formatNumber(wavesBtcRate)}` }} />    
+            </Typography>
+            <Typography type="body">
+                waves price
+            </Typography>
         </ColNumber>
         <ColNumber xs={12} md={6}>
-            <NumeralDemo
-                number={dexVolume}
-                text="24h DEX volume"
-                iconName="mainDollar"
-            />
+            <Typography type="numeral">
+                <span dangerouslySetInnerHTML={{ __html: `$&nbsp;${formatNumber(dexVolume)}` }} />    
+            </Typography>
+            <Typography type="body">
+                24h DEX volume
+            </Typography>
         </ColNumber>
         <ColNumber xs={12} md={6}>
-            <NumeralDemo
-                number={dexWallets}
-                text="Wallets created"
-                iconName="mainWallet"
-            />
+            <Typography type="numeral">
+                <span dangerouslySetInnerHTML={{ __html: formatNumber(dexWallets) }} />    
+            </Typography>
+            <Typography type="body">
+                Wallets created
+            </Typography>
         </ColNumber>
         <ColNumber xs={12} md={6}>
-            <NumeralDemo
-                number={dexAssets}
-                text="tokens issued"
-                iconName="mainToken"
-            />
+            <Typography type="numeral">
+                <span dangerouslySetInnerHTML={{ __html: formatNumber(dexAssets) }} />    
+            </Typography>
+            <Typography type="body">
+                tokens issued
+            </Typography>
         </ColNumber>
     </Row>
 ) : null;
+
 
 
 export default NumbersMain;

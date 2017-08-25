@@ -21,6 +21,10 @@ export default theme => ({
         background: theme.palette.gray[50]
     },
 
+    bgSubscription: {
+        backgroundColor: '#233556',
+    },
+
     // bgMain: {
     //     composes: '$bg',
     //     backgroundImage: `url(${require('../img/bg/1_bgr.svg')})`,

@@ -23,6 +23,7 @@ import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
 import JoinUs from './lib/JoinUs';
 import Subscribe from './lib/Subscribe';
+import Description from './lib/Description';
 
 
 
@@ -39,16 +40,17 @@ const PageLayout = ({
         <Layout>
 
             <BackgroundMainScreen main>
-                <div className={classes.paddedBottom}>
-                    <MainScreen dexData={initialState.dexData} />
-                </div>
+                <MainScreen dexData={initialState.dexData} />
             </BackgroundMainScreen>
 
+            <Section>
+                <Description />
+            </Section>
 
             <Background className={classes.bgClient} skewed={true}>
-                <div className={classes.sectionWide}>
+                <Section bottom={2}>
                     <WavesClient />
-                </div>
+                </Section>
             </Background>
 
 
@@ -64,7 +66,7 @@ const PageLayout = ({
             <Background className={classes.bgDex} skewed={true}>
                 <div className={classes.sectionWide}>
                     <IssuingTokens />
-                    <Margin bottom={5} />      
+                    <Margin bottom={5} />
                     <Feedback>
                         <Facts tokens={initialState.dexData.dexAssets} />
                     </Feedback>

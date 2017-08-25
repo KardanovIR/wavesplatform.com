@@ -1,7 +1,6 @@
 import image from './img/image.svg';
 import deloitteLogo from './img/deloitte_logo.svg';
 
-// import placeholder from 'src/common/styles/placeholder';
 
 
 const styles = theme => ({
