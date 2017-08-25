@@ -22,6 +22,7 @@ const MainScreen = ({ classes }) => (
                 <TitleTextCTA
                     title="The Waves Client"
                     titleType="display3"
+                    textType="body2"
                     text="The current version of the Waves client is a wallet, decentralized exchange, and a tool to release tokens."
                     buttons={[
                         <Button withLoader key="main_cta_button" href="#">Get Client</Button>,

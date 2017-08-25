@@ -16,6 +16,7 @@ const TitleTextCTA = ({
     title,
     titleType,
     text,
+    textType,
     inverted,
     buttons
 }) => (
@@ -28,7 +29,7 @@ const TitleTextCTA = ({
 
 
             <div className={classes.text}>
-                <Typography inverted={inverted} type="body2" cut>
+                <Typography inverted={inverted} type={textType} cut>
                     {text}
                 </Typography>
             </div>
@@ -47,6 +48,7 @@ const TitleTextCTA = ({
 
 TitleTextCTA.defaultProps = {
     titleType: 'display4',
+    textType: 'body',
     buttons: []
 }
 
