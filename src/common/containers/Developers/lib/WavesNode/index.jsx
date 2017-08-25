@@ -5,7 +5,7 @@ import IconButton from 'src/common/components/Button/Icon';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
-const consoleImageSrc = require('!svg-url-loader?noquotes!./img/console.svg');
+import consoleImageSrc from '!svg-url-loader?noquotes!./img/console.svg';
 
 
 import injectSheet from 'react-jss';

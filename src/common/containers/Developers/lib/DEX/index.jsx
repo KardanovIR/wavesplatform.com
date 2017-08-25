@@ -5,7 +5,7 @@ import IconButton from 'src/common/components/Button/Icon';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
-import dexImageSrc from './img/dex.svg';
+import dexImageSrc from '!svg-url-loader?noquotes!./img/dex.svg';
 
 
 import injectSheet from 'react-jss';
