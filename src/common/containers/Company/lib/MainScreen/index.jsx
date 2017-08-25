@@ -22,9 +22,9 @@ const MainScreen = ({ classes }) => (
             <Margin bottom={4} />
         </Col>
         <Col xs={12} md={6}>
-            <Typography type="body2" align="right" className={classes.quote} inverted>
+            {/* <Typography type="body2" align="right" className={classes.quote} inverted>
                 Our mission is to accelerate that process by creating easy-to-use, highly functional tools to make blockchain available to every person or organization that can benefit from it.
-            </Typography>
+            </Typography> */}
         </Col>
     </Row>
 );

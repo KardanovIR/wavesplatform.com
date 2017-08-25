@@ -1,33 +1,63 @@
 import React from 'react';
 
-import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
+import TitleTextCTA from 'src/common/components/TitleTextCTA';
+import IconButton from 'src/common/components/Button/Icon';
+
 import { Row, Col } from 'src/common/components/Grid';
+
 
 import injectSheet from 'react-jss';
 import styles from './styles';
 
 
 
+const MainScreen = ({
+    classes,
+}) => (
+        <Row>
 
-const MainScreen = ({ classes }) => (
-    <Row className={classes.root}>
-        <Col xs={12} md={6}>
-            <Typography type="display4" inverted>
-                Build unstoppable applications
-            </Typography>
-            <Typography type="body" inverted cut>
-                These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property. 
-            </Typography>
-            <Margin bottom={4} />
-        </Col>
-        <Col xs={12} md={6}>
-            <div className={classes.imageWrapper}>
-                <div className={classes.image} />
-            </div>
-        </Col>
-    </Row>
-);
+            <Col xs={12} md={6} className={classes.titleTextCtaCol}>
+                <TitleTextCTA
+                    title="Build unstoppable applications"
+                    text="These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property."
+                    inverted
+                    buttons={[
+                        (
+                            <IconButton
+                                key="main_cta_button"
+                                className={classes.ctaButton}
+                                href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+                                target="_blank"
+                                iconName="github"
+                                secondary
+                            >
+                                Documentation
+                            </IconButton>
+                        ),
+                        (
+                            <IconButton
+                                key="main_cta_button2"
+                                className={classes.secondCtaButton}
+                                href="https://github.com/wavesplatform/WavesGUI"
+                                target="_blank"
+                                iconName="github"
+                                bordered
+                            >
+                                Client
+                            </IconButton>
+                        )
+                    ]}
+                />
+            </Col>
+
+            <Col xs={12} md={6} className={classes.imageCol}>
+                <div className={classes.imageWrapper}>
+                    <div className={classes.image} />
+                </div>
+            </Col>
+
+        </Row>
+    );
 
 
 export default injectSheet(styles)(MainScreen);

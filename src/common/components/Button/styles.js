@@ -70,7 +70,7 @@ const styles = theme => ({
     },
     bordered: {
         backgroundColor: 'transparent',
-        boxShadow: `inset 0 0 0 2px ${theme.palette.gray[0]}`,
+        boxShadow: `inset 0 0 0 1px ${theme.palette.gray[0]}`,
 
         '& $content, & $spinner': {
             color: theme.palette.gray[0],

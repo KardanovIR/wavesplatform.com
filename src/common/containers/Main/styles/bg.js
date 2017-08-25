@@ -1,8 +1,14 @@
 export default theme => ({
+    desktopOnly: {
+        display: 'none',
+        [theme.breakpoints.up('md')]: {
+            display: 'block'
+        }
+    },
+    
     bg: {
-        // backgroundSize: 'cover',
+        composes: '$desktopOnly',
         backgroundRepeat: 'no-repeat',
-        // backgroundPosition: 'top right',
         minWidth: 2560,
     },
 

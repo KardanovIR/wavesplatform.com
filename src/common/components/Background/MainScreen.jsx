@@ -3,7 +3,7 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 
 
-import bgMain from './img/main_bgr.svg';
+import bgWide from './img/wide_bgr.svg';
 import bgCommon from './img/common_bgr.svg';
 
 
@@ -31,9 +31,9 @@ const styles = theme => ({
             top: -230
         },
     },
-    main: {
+    wide: {
         height: 841,
-        backgroundImage: `url(${bgMain})`,
+        backgroundImage: `url(${bgWide})`,
     },
     common: {
         height: 704,
@@ -46,15 +46,15 @@ const MainScreenBackground = ({
     classes,
     children,
     className,
-    main,
+    wide,
 }) => (
         <div className={classes.wrapper}>
             <div
                 className={cn(
                     classes.background,
                     {
-                        [classes.main]: main,
-                        [classes.common]: !main,
+                        [classes.wide]: wide,
+                        [classes.common]: !wide,
                     },
                     className
                 )}
