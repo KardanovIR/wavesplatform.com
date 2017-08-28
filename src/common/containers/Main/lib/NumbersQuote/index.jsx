@@ -1,9 +1,15 @@
 import React from 'react';
 
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
+import BlockQuote from 'src/common/components/BlockQuote';
 import Button from 'src/common/components/Button';
 
 import { Row, Col } from 'src/common/components/Grid';
+
+
+
+import Numbers from './lib/Numbers';
+
 
 
 import injectSheet from 'react-jss';
@@ -11,12 +17,14 @@ import styles from './styles';
 
 
 
+
 const MainScreen = ({
     classes,
+    dexData,
 }) => (
         <Row>
 
-            <Col xs={12} md={7} lg={6} className={classes.titleTextCtaCol}>
+            <Col xs={12} md={6} className={classes.titleTextCtaCol}>
                 <TitleTextCTA
                     title="Get started with blockchain"
                     text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
@@ -28,10 +36,21 @@ const MainScreen = ({
                 />
             </Col>
 
-            <Col xs={12} md={5} lg={6} className={classes.imageCol}>
+            <Col xs={12} md={6} className={classes.numbersCol}>
+                <Numbers { ...dexData } />
+            </Col>
+
+            <Col xs={12} md={6} className={classes.imageCol}>
                 <div className={classes.imageWrapper}>
                     <div className={classes.image} />
                 </div>
+            </Col>
+
+            <Col xs={12} md={6} className={classes.deloitteCol}>
+                <BlockQuote align="right">
+                    <div className={classes.deloitteLogo} />
+                    <div>In cooperation with our strategic partner Deloitte, we are changing the future of blockchain and creating the new economy</div>
+                </BlockQuote>
             </Col>
 
         </Row>

@@ -14,31 +14,54 @@ const styles = theme => ({
     },
     background: {
         position: 'absolute',
-        width: 2560,
 
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: -1,
 
-        backgroundSize: '100%',
+        width: '100vw',
+        backgroundSize: 'cover',
+
         backgroundRepeat: 'no-repeat',
 
         top: -100,
         [theme.breakpoints.up('md')]: {
-            top: -150
+            top: -165,
         },
         [theme.breakpoints.up('lg')]: {
-            top: -230
+            top: -230,
+            width: 2560,
+            backgroundSize: '100%',
         },
     },
+
+
+    // height
     wide: {
-        height: 841,
         backgroundImage: `url(${bgWide})`,
+        height: 'calc(100% + 160px)',
+        [theme.breakpoints.up('sm')]: {
+            height: 'calc(100% + 200px)',
+        },
+        [theme.breakpoints.up('md')]: {
+            // height: 'calc(1100px - 40vw)',
+            // height: '120%',
+            height: 'calc(100% + 300px)',
+        },
+        [theme.breakpoints.up('lg')]: {
+            height: 841,
+        },
     },
     common: {
-        height: 704,
         backgroundImage: `url(${bgCommon})`,
+        [theme.breakpoints.up('md')]: {
+            height: 500,
+        },
+        [theme.breakpoints.up('lg')]: {
+            height: 705,
+        },
     },
+    
 })
 
 

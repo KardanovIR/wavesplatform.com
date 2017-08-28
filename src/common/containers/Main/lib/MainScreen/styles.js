@@ -1,12 +1,7 @@
 import image from './img/image.svg';
-import deloitteLogo from './img/deloitte_logo.svg';
-
 
 
 const styles = theme => ({
-    titleTextCtaWrapper: {
-        marginBottom: theme.spacing.unit * 16
-    },
     ctaButton: {
         display: 'none'
     },
@@ -15,7 +10,7 @@ const styles = theme => ({
     },
     imageWrapper: {
         position: 'relative',
-        paddingTop: '60%',
+        paddingTop: '70%',
         overflow: 'visible',
     },
     image: {
@@ -31,54 +26,22 @@ const styles = theme => ({
         background: `url(${image}) no-repeat`,
         backgroundSize: '100%',
 
+        // bg for displays
         [theme.breakpoints.up('lg')]: {
-            width: '180%',
-            height: '180%',
-            top: -80,
-            left: -50
+            width: '140%',
+            height: '140%',
+            top: -60,
+            left: 0
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '140%',
+            height: '140%',
+            top: -60,
+            left: 0
         },
     },
 
-    deloitte: {
-        textAlign: 'right',
-        borderRight: `6px solid ${theme.palette.gray[300]}`,
-        padding: theme.spacing.getSpacing(0.5, 5, 0, 0)
-    },
-    deloitteLogo: {
-        display: 'inline-block',
-        background: `url(${deloitteLogo}) no-repeat`,
-        width: 136,
-        height: 26,
-        backgroundSize: '100%',
-        marginBottom: theme.spacing.unit
-    },
-
-
-    // order
-    titleTextCtaCol: {
-        order: 1
-    },
-    numbersCol: {
-        marginTop: theme.spacing.unit*6,
-        order: 2
-    },
-    imageCol: {
-        order: 3,
-        marginBottom: theme.spacing.unit*4
-    },
-    deloitteCol: {
-        order: 4,
-        display: 'flex',
-        alignItems: 'flex-end',
-        paddingBottom: theme.spacing.unit*4
-    },
     [theme.mixins.atMedia('md')]: {
-        numbersCol: {
-            order: 3
-        },
-        imageCol: {
-            order: 2
-        },
         ctaButton: {
             display: 'inline-block'
         },
@@ -86,10 +49,8 @@ const styles = theme => ({
             margin: 0
         }
     },
+
     [theme.breakpoints.up('lg')]: {
-        numbersCol: {
-            marginTop: theme.spacing.unit*10,
-        },
         titleTextCtaCol: {
             height: 560
         }

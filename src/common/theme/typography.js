@@ -11,7 +11,7 @@ export const global = {
 };
 
 
-const creatyTypography = (palette) => {
+const creatyTypography = (palette, breakpoints) => {
 
     const base = {
         ...global,
@@ -24,18 +24,23 @@ const creatyTypography = (palette) => {
     };
 
     return {
-        display4: combineMobileDesktopStyles(
-            {
-                ...base,
-                ...display,
-                fontSize: 28,
-                lineHeight: 1,
-                fontWeight: 700,
+        display4: {
+
+            ...base,
+            ...display,
+            fontSize: 28,
+            lineHeight: 1,
+            fontWeight: 700,
+
+            [breakpoints.up('md')]: {
+                fontSize: 44
             },
-            {
+
+            [breakpoints.up('lg')]: {
                 fontSize: 64
-            }
-        ),
+            },
+
+        },
         display3: combineMobileDesktopStyles(
             {
                 ...base,
