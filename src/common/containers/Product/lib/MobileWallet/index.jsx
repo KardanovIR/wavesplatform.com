@@ -19,7 +19,7 @@ const MainScreen = ({ classes }) => (
                 <div className={classes.image} />
             </div>
         </Col>
-        <Col xs={12} sm={6} lg={5} lgOffset={1}>
+        <Col xs={12} sm={5} smOffset={1}>
             <Typography type="display2" margin>
                 Mobile wallet
             </Typography>
@@ -27,12 +27,12 @@ const MainScreen = ({ classes }) => (
                 Don’t forget to download the mobile wallet for iOS & Android.
             </Typography>
 
-            <Margin />
+            <Margin bottom={3} />
 
-            <Margin bottom={2} right={1} className={classes.buttonWrapper}>
+            <Margin bottom={1} right={1} className={classes.buttonWrapper}>
                 <ButtonGetApp type="google-play" />
             </Margin>
-            <Margin bottom={2} right={1} className={classes.buttonWrapper}>
+            <Margin bottom={1} right={1} className={classes.buttonWrapper}>
                 <ButtonGetApp type="app-store" />
             </Margin>
         </Col>
