@@ -5,6 +5,7 @@ import cn from 'classnames';
 
 import bgWide from './img/wide_bgr.svg';
 import bgCommon from './img/common_bgr.svg';
+import bgProduct from './img/product_bgr.svg';
 
 
 const styles = theme => ({
@@ -35,7 +36,6 @@ const styles = theme => ({
         },
     },
 
-
     // height
     wide: {
         backgroundImage: `url(${bgWide})`,
@@ -44,8 +44,6 @@ const styles = theme => ({
             height: 'calc(100% + 200px)',
         },
         [theme.breakpoints.up('md')]: {
-            // height: 'calc(1100px - 40vw)',
-            // height: '120%',
             height: 'calc(100% + 300px)',
         },
         [theme.breakpoints.up('lg')]: {
@@ -61,7 +59,10 @@ const styles = theme => ({
             height: 705,
         },
     },
-    
+    product: {
+        composes: '$wide',
+        backgroundImage: `url(${bgProduct})`,
+    }
 })
 
 
@@ -69,15 +70,16 @@ const MainScreenBackground = ({
     classes,
     children,
     className,
-    wide,
+    type,
 }) => (
         <div className={classes.wrapper}>
             <div
                 className={cn(
                     classes.background,
                     {
-                        [classes.wide]: wide,
-                        [classes.common]: !wide,
+                        [classes.product]: type === "product",
+                        [classes.wide]: type === "wide",
+                        [classes.common]: type === "common",
                     },
                     className
                 )}
@@ -85,6 +87,11 @@ const MainScreenBackground = ({
             {children}
         </div>
     )
+
+    
+MainScreenBackground.defaultProps = {
+    type: 'common'
+}
 
 
 export default injectSheet(styles)(MainScreenBackground);

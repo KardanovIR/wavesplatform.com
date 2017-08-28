@@ -7,7 +7,11 @@ import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
+import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
+
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
+// import MainScreen from 'src/common/components/MainScreen';
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
@@ -20,14 +24,12 @@ import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
 import OnlineWallet from './lib/OnlineWallet';
 import HowToStart from './lib/HowToStart';
+import IssuingTokens from './lib/IssuingTokens';
 
 // DEX blocks
 import DEX from './lib/DEX';
 import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
-
-import IssuingTokens from './lib/IssuingTokens';
-
 
 
 // styles
@@ -38,11 +40,10 @@ import styles from './styles';
 
 const PageLayout = ({ classes, initialState }) => (
     <Layout activeLink="Product">
-        <Background className={classes.bgMain}>
-            <div className={classes.paddedBottom}>
-                <MainScreen />
-            </div>
-        </Background>
+
+        <BackgroundMainScreen type="product">
+            <MainScreen />
+        </BackgroundMainScreen>
 
         <Background className={classes.bgInterest} skewed={true}>
             <Wallet />

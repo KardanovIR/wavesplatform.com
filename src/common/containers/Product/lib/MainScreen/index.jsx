@@ -1,36 +1,26 @@
 import React from 'react';
 
-import Typography from 'src/common/components/Typography';
+import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
-import Margin from 'src/common/components/Margin';
-import { Row, Col } from 'src/common/components/Grid';
 
 
-import injectSheet from 'react-jss';
-import styles from './styles';
-
+import ImageMobile from '!svg-react-loader!./img/image_mob.svg';
+import Image from '!svg-react-loader!./img/image.svg';
 
 
 
-const MainScreen = ({ classes }) => (
-    <Row className={classes.root}>
-        <Col xs={12} md={6}>
-            <Typography inverted type="display4">
-                Use blockchain — it’s easy with Waves
-            </Typography>
-            <Typography inverted type="body2">
-                Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange.
-            </Typography>
-
-            <Margin bottom={4} />
-        </Col>
-        <Col xs={12} md={6}>
-            <div className={classes.imageWrapper}>
-                <div className={classes.image} />
-            </div>
-        </Col>
-    </Row>
+const DevelopersMainScreen = () => (
+    <MainScreen
+        title="Use blockchain — it’s easy with Waves"
+        text="Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange."
+        imageDesktop={<Image />}
+        imageMobile={<ImageMobile />}
+        buttons={[
+            <Button withLoader secondary key="main_cta_button" href="/download">Get Client</Button>,
+            <Button bordered key="main_cta_button2" target="_blank" href="https://waveswallet.io/">Online client</Button>,
+        ]}
+    />
 );
 
 
-export default injectSheet(styles)(MainScreen);
+export default DevelopersMainScreen;

@@ -59,6 +59,10 @@ const MainScreen = ({
     );
 
 
+MainScreen.defaultProps = {
+    buttons: []
+}
+
 MainScreen.PropTypes = {
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
