@@ -14,12 +14,12 @@ import styles from './styles';
 
 const MainScreen = ({ classes }) => (
     <Row className={classes.root} alignItems="center">
-        <Col xs={12} md={6}>
+        <Col xs={12} sm={6} className={classes.imageCol}>
             <div className={classes.imageWrapper}>
                 <div className={classes.image} />
             </div>
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={12} sm={6} lg={5} lgOffset={1}>
             <Typography type="display2" margin>
                 Mobile wallet
             </Typography>

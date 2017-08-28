@@ -6,6 +6,10 @@ export default theme => ({
     //     transform: 'translateX(-50%)',
     //     top: 0,
     // },
+
+    bgWallet: {
+        background: theme.palette.gray[50]
+    }
     // bgMain: {
     //     composes: '$bg',
     //     backgroundImage: `url(${require('../img/bg/main_bgr.svg')})`,

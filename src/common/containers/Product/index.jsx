@@ -45,21 +45,25 @@ const PageLayout = ({ classes, initialState }) => (
             <MainScreen />
         </BackgroundMainScreen>
 
-        <Background className={classes.bgInterest} skewed={true}>
+
+        <Section top={3} bottom={2}>
             <Wallet />
-            <div className={classes.section}>
-                <Interest />
-            </div>
+        </Section>
+        <Section top={1} bottom={4}>
+            <Interest />
+        </Section>
+
+
+        <Background className={classes.bgWallet} skewed={true}>
+            <Section size={4}>
+                <MobileWallet />
+            </Section>
         </Background>
 
 
-        <div className={classes.sectionNarrow}>
-            <MobileWallet />
-        </div>
-
-        <div className={classes.sectionNarrow}>
+        {/* <Section size={4}>
             <OnlineWallet />
-        </div>
+        </Section> */}
 
 
         <Background className={classes.bgHowToStart} skewed={true}>
@@ -117,7 +121,7 @@ const PageLayout = ({ classes, initialState }) => (
             </div>
         </Background>
 
-    </Layout>
+    </Layout >
 );
 
 
