@@ -12,7 +12,10 @@ export default theme => ({
     },
     bgDex: {
         backgroundImage: 'linear-gradient(200deg, #c0dafd 0, rgba(255, 255, 255, 0.0) 50%)'
-    }
+    },
+    bgTokens: {
+        backgroundImage: 'linear-gradient(150deg, #c0dafd 0, rgba(255, 255, 255, 0.0) 50%)'
+    },
     // bgMain: {
     //     composes: '$bg',
     //     backgroundImage: `url(${require('../img/bg/main_bgr.svg')})`,

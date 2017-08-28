@@ -18,28 +18,24 @@ const IssuingTokens = ({ classes }) => (
     <div>
         <Row>
             <Col xs={12}>
-                <Typography type="display2" align="center">
-                    Issuing your tokens,  token sales
+                <Typography type="display2" className={classes.title}>
+                    Issuing your tokens, token sales
+                </Typography>
+                <Margin bottom={5} />
+            </Col>
+            <Col xs={12} sm={5} md={3}>
+                <Typography type="body">
+                    Cryptographically protected blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.
                 </Typography>
                 <Margin bottom={4} />
             </Col>
-            <Col xs={12} md={3}>
-                <AvatarTitleText
-                    avatar={<IconProduct name="tokens" />}
-                    small
-                    text="Cryptographically protected blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms."
-                />
+            <Col xs={12} smOffset={1} sm={5} md={3} mdOffset={1}>
+                <Typography type="body">
+                    The role of the released token is determined depending on the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralized voting or a rating system.
+                </Typography>
                 <Margin bottom={4} />
             </Col>
-            <Col xs={12} md={3} mdOffset={1}>
-                <AvatarTitleText
-                    avatar={<IconProduct name="star" />}
-                    small
-                    text="The role of the released token is determined depending on the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralized voting or a rating system."
-                />
-                <Margin bottom={4} />
-            </Col>
-            <Col xs={12} md={5}>
+            <Col md={4} mdOffset={1}>
                 <div className={classes.imageWrapper}>
                     <div className={classes.image} />
                 </div>
@@ -47,10 +43,10 @@ const IssuingTokens = ({ classes }) => (
         </Row>
 
 
-        <Margin bottom={5} />
+        {/* <Margin bottom={5} /> */}
 
         <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} sm={5}>
                 <AvatarTitleText
                     avatar={<IconProduct name="target" circle />}
                     title="Raise funds for the development of your project"
@@ -58,7 +54,7 @@ const IssuingTokens = ({ classes }) => (
                 />
                 <Margin bottom={4} />
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} smOffset={1} sm={5}>
                 <AvatarTitleText
                     avatar={<IconProduct name="message" circle />}
                     title="Get loyal users of your product"

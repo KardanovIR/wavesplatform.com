@@ -9,6 +9,7 @@ import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
+import Divider from 'src/common/components/Divider';
 
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 // import MainScreen from 'src/common/components/MainScreen';
@@ -90,14 +91,19 @@ const PageLayout = ({ classes, initialState }) => (
             </Col>
         </Row>
 
+        <Margin bottom={3} />
+        <Divider /> 
+        <Margin bottom={1} />
 
         <div className={classes.section}>
             <HowToTrade />
         </div>
 
-        <div className={classes.section}>
-            <IssuingTokens />
-        </div>
+        <Background className={classes.bgTokens} skewed={true}>
+            <Section size={4}>
+                <IssuingTokens />
+            </Section>
+        </Background>
 
 
         <Typography
@@ -114,13 +120,12 @@ const PageLayout = ({ classes, initialState }) => (
         </div>
 
         <Margin bottom={4} />
+        <Divider /> 
+        <Margin bottom={2} />
 
-
-        <Background className={classes.bgHowToStart} skewed={true}>
-            <div className={classes.section}>
-                <HowToToken />
-            </div>
-        </Background>
+        <div className={classes.section}>
+            <HowToToken />
+        </div>
 
     </Layout >
 );

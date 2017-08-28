@@ -1,5 +1,4 @@
-// import mockup from './img/mockup.png';
-import placeholder from 'src/common/styles/placeholder';
+import token from './img/token.svg';
 
 
 const styles = theme => ({
@@ -8,27 +7,31 @@ const styles = theme => ({
     },
     imageWrapper: {
         position: 'relative',
-        paddingTop: '75%',
+        paddingTop: '71%',
         overflow: 'visible',
-        ...placeholder,
     },
     image: {
-        width: '90%',
-        height: '115%',
+        width: '100%',
+        height: '100%',
         position: 'absolute',
         zIndex: -1,
         top: 0,
-        right: -100,
+        left: 0,
 
-        // background: `url(${mockup}) no-repeat`,
+        background: `url(${token}) no-repeat`,
         backgroundSize: '100%',
-        transform: 'rotate(-6deg)',
-        marginBottom: theme.spacing.unit * 2
     },
     [theme.mixins.atMedia('md')]: {
+        title: {
+            textAlign: 'center',
+        },
         buttonWrapper: {
             display: 'inline-block',
             verticalAlign: 'middle'
+        },
+        image: {
+            width: '120%',
+            height: '120%',
         }
     }
 })
