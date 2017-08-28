@@ -21,7 +21,6 @@ const IssuingTokens = ({ classes }) => (
                 <Typography type="display2" className={classes.title}>
                     Issuing your tokens, token sales
                 </Typography>
-                <Margin bottom={5} />
             </Col>
             <Col xs={12} sm={5} md={3}>
                 <Typography type="body">
@@ -43,7 +42,7 @@ const IssuingTokens = ({ classes }) => (
         </Row>
 
 
-        {/* <Margin bottom={5} /> */}
+        <Margin bottom={2} />
 
         <Row>
             <Col xs={12} sm={5}>

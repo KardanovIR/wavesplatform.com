@@ -9,7 +9,7 @@ import styles from './styles';
 export const Panel = ({
     classes,
     className,
-    dark,
+    type,
 
     sheet,	// eslint-disable-line
     theme,	// eslint-disable-line
@@ -20,15 +20,17 @@ export const Panel = ({
 }) => (
         <Element
             className={cn(classes.root, {
-                [classes.light]: !dark,
-                [classes.dark]: dark,
+                [classes.light]: type === 'light',
+                [classes.dark]: type === 'dark',
+                [classes.bordered]: type === 'bordered',
             }, className)}
             { ...rest }
          />
     )
 
 Panel.defaultProps = {
-    element: 'div'
+    element: 'div',
+    type: 'light'
 }
 
 

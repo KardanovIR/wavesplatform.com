@@ -2,8 +2,8 @@ import token from './img/token.svg';
 
 
 const styles = theme => ({
-    root: {
-        paddingTop: theme.spacing.unit * 10
+    title: {
+        marginBottom: theme.spacing.unit * 5
     },
     imageWrapper: {
         position: 'relative',
@@ -24,6 +24,7 @@ const styles = theme => ({
     [theme.mixins.atMedia('md')]: {
         title: {
             textAlign: 'center',
+            marginBottom: theme.spacing.unit * 15
         },
         buttonWrapper: {
             display: 'inline-block',
@@ -32,6 +33,7 @@ const styles = theme => ({
         image: {
             width: '120%',
             height: '120%',
+            top: -60
         }
     }
 })

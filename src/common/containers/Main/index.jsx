@@ -39,7 +39,7 @@ const PageLayout = ({
 }) => (
         <Layout>
 
-            <BackgroundMainScreen wide>
+            <BackgroundMainScreen type="wide">
                 <MainScreen dexData={initialState.dexData} />
             </BackgroundMainScreen>
 

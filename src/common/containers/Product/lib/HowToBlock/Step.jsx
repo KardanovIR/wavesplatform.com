@@ -34,7 +34,7 @@ const styles = theme => ({
 
 
 const Step = ({ avatar, children, classes }) => (
-    <Panel className={classes.panel}>
+    <Panel className={classes.panel} type="bordered">
         <div className={classes.avatar}>
             { avatar }
         </div>

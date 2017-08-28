@@ -91,13 +91,14 @@ const PageLayout = ({ classes, initialState }) => (
             </Col>
         </Row>
 
-        <Margin bottom={3} />
-        <Divider /> 
-        <Margin bottom={1} />
 
-        <div className={classes.section}>
+        <Margin bottom={4} />
+        <Divider /> 
+
+
+        <Section size={4}>
             <HowToTrade />
-        </div>
+        </Section>
 
         <Background className={classes.bgTokens} skewed={true}>
             <Section size={4}>

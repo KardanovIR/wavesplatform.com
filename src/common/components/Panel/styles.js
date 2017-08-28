@@ -14,6 +14,9 @@ export default theme => ({
         background: theme.palette.primary[700],
         color: theme.palette.gray[50],
     },
+    bordered: {
+        border: `1px solid ${theme.palette.gray[100]}`
+    },
     [theme.mixins.atMedia('md')]: {
         root: {
             padding: theme.spacing.getSpacing(5, 5, 5.5),
