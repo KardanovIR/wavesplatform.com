@@ -29,23 +29,24 @@ const styles = theme => ({
 const Row = ({
     classes,
     className: classNameProp,
+    style,
     children,
     centered,
     direction,
-    alignItems
+    alignItems,
 }) => {
     const className = cn(
         classes.row,
         {
             [classes.centered]: centered,
             [classes[`direction-${direction}`]]: direction,
-            [classes[`align-items-${alignItems}`]]: alignItems
+            [classes[`align-items-${alignItems}`]]: alignItems,
         },
         classNameProp
     );
 
     return (
-        <div className={className}>
+        <div className={className} style={style}>
             {children}
         </div>
     )

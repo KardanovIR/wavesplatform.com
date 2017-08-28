@@ -22,8 +22,10 @@ import MainScreen from './lib/MainScreen';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
-import OnlineWallet from './lib/OnlineWallet';
-import HowToStart from './lib/HowToStart';
+// import OnlineWallet from './lib/OnlineWallet';
+import HowToWallet from './lib/HowToWallet';
+import HowToTrade from './lib/HowToTrade';
+import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
 
 // DEX blocks
@@ -68,7 +70,7 @@ const PageLayout = ({ classes, initialState }) => (
 
 
         <Section size={4}>
-            <HowToStart />
+            <HowToWallet />
         </Section>
 
 
@@ -90,7 +92,7 @@ const PageLayout = ({ classes, initialState }) => (
 
 
         <div className={classes.section}>
-            <HowToStart />
+            <HowToTrade />
         </div>
 
         <div className={classes.section}>
@@ -116,7 +118,7 @@ const PageLayout = ({ classes, initialState }) => (
 
         <Background className={classes.bgHowToStart} skewed={true}>
             <div className={classes.section}>
-                <HowToStart />
+                <HowToToken />
             </div>
         </Background>
 

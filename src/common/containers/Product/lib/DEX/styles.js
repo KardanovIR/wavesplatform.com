@@ -19,6 +19,9 @@ const styles = theme => ({
     bottomParagraph: {
         flex: 0
     },
+    rowNumbers: {
+        justifyContent: 'space-around'
+    },
     [theme.breakpoints.up('md')]: {
         column: {
             marginBottom: 0
