@@ -9,7 +9,8 @@ import { Transition } from 'react-transition-group';
 
 import cn from 'classnames';
 
-import Icon from '../../../Icon';
+import Icon from 'src/common/components/Icon';
+
 
 
 class MobileNav extends Component {
@@ -40,6 +41,13 @@ class MobileNav extends Component {
                         <div className={cn(classes.popover, classes[`${status}Popover`])}>
                             <Popover open={this.state.open} onClose={this.handleClose}>
                                 <div className={classes.linksWrapper}>
+                                    <a
+                                        key={`mobile_nav_link_main`}
+                                        href='/'
+                                        className={classes.link}
+                                    >
+                                        Main
+                                    </a>
                                     {links.map((link, index) => (
                                         <a
                                             key={`mobile_nav_link${index}`}

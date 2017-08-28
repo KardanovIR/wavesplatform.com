@@ -52,6 +52,7 @@ const styles = theme => ({
     },
     common: {
         backgroundImage: `url(${bgCommon})`,
+        height: 'calc(100% + 190px)',
         [theme.breakpoints.up('md')]: {
             height: 500,
         },

@@ -12,12 +12,6 @@ export default theme => ({
         height: 40,
         width: 40
     },
-    link: {
-        color: 'green',
-        '&:visited': {
-            color: 'darkgrey'
-        } 
-    },
     navContainer: {
         float: 'right',
         position: 'relative',

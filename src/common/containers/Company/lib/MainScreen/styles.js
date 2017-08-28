@@ -1,5 +1,7 @@
 const styles = theme => ({
-    root: {},
+    root: {
+        marginBottom: 90
+    },
     subtitle: {
         maxWidth: '80%'
     },
