@@ -39,7 +39,7 @@ const styles = theme => ({
     // height
     wide: {
         backgroundImage: `url(${bgWide})`,
-        height: 'calc(100% + 160px)',
+        height: 'calc(100% + 190px)',
         [theme.breakpoints.up('sm')]: {
             height: 'calc(100% + 200px)',
         },
