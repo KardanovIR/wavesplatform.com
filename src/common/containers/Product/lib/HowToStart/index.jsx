@@ -14,21 +14,21 @@ const HowToStart = () => (
         title="How do I start using my Waves wallet?"
         steps={[
             {
-                avatar: <IconProduct name="cloud" circle="dark" />,
+                avatar: <IconProduct name="cloud" circle />,
                 text: (
                     <div>
                         First, install the Waves client.
                             <Margin />
-                        <Button secondary href="/get-client" withLoader>Get client</Button>
+                        <Button href="/get-client" withLoader>Get client</Button>
                     </div>
                 )
             },
             {
-                avatar: <IconProduct name="coins" circle="dark" />,
+                avatar: <IconProduct name="coins" circle />,
                 text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
             },
             {
-                avatar: <IconProduct name="dex" circle="dark" />,
+                avatar: <IconProduct name="dex" circle />,
                 text: "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
             },
         ]}

@@ -66,17 +66,16 @@ const PageLayout = ({ classes, initialState }) => (
         </Section> */}
 
 
-        <Background className={classes.bgHowToStart} skewed={true}>
-            <div className={classes.section}>
-                <HowToStart />
-            </div>
-        </Background>
+
+        <Section size={4}>
+            <HowToStart />
+        </Section>
 
 
-        <Background className={classes.bgDex}>
-            <div className={classes.sectionWide}>
+        <Background className={classes.bgDex} skewed={true}>
+            <Section size={4}>
                 <DEX dexData={initialState.dexData} />
-            </div>
+            </Section>
         </Background>
 
         <Row>
