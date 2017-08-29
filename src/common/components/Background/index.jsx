@@ -14,6 +14,7 @@ const styles = {
     background: {
         position: 'absolute',
         width: '100vw',
+        minWidth: 2560,
         height: '100%',
 
         top: '50%',

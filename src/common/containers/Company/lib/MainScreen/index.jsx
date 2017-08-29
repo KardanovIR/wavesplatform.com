@@ -19,7 +19,6 @@ const MainScreen = ({ classes }) => (
             <Typography type="body" inverted cut>
                 We believe that blockchain technology can improve and fundamentally transform not only the modern economy, but all of its various sectors.
             </Typography>
-            <Margin bottom={4} />
         </Col>
         <Col xs={12} md={6}>
             {/* <Typography type="body2" align="right" className={classes.quote} inverted>

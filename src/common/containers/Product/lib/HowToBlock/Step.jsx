@@ -34,11 +34,11 @@ const styles = theme => ({
 
 
 const Step = ({ avatar, children, classes }) => (
-    <Panel dark className={classes.panel}>
+    <Panel className={classes.panel} type="bordered">
         <div className={classes.avatar}>
             { avatar }
         </div>
-        <Typography inverted>
+        <Typography>
             { children }
         </Typography>
     </Panel>

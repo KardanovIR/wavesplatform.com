@@ -33,7 +33,7 @@ const Popover = ({ classes, onClose, children, open }) => (
     <HandleClickOutside onClickOutside={onClose} active={open}>
         <Paper className={classes.body}>
             <div className={classes.close} onClick={onClose}>
-                <Icon name="cross" size={24}  />
+                <Icon name="cross" size={24} color="primary-700" />
             </div>
             {children}
         </Paper>

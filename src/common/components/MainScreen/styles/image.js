@@ -21,7 +21,7 @@ export default theme => ({
 
     [theme.breakpoints.up('sm')]: {
         widthSetter: {
-            width: 425,
+            width: 640,
         },
         image: {
             left: -40,

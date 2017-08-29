@@ -7,7 +7,12 @@ import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
+import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
+import Divider from 'src/common/components/Divider';
+
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
+// import MainScreen from 'src/common/components/MainScreen';
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
@@ -18,16 +23,16 @@ import MainScreen from './lib/MainScreen';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
-import OnlineWallet from './lib/OnlineWallet';
-import HowToStart from './lib/HowToStart';
+// import OnlineWallet from './lib/OnlineWallet';
+import HowToWallet from './lib/HowToWallet';
+import HowToTrade from './lib/HowToTrade';
+import HowToToken from './lib/HowToToken';
+import IssuingTokens from './lib/IssuingTokens';
 
 // DEX blocks
 import DEX from './lib/DEX';
 import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
-
-import IssuingTokens from './lib/IssuingTokens';
-
 
 
 // styles
@@ -38,40 +43,42 @@ import styles from './styles';
 
 const PageLayout = ({ classes, initialState }) => (
     <Layout activeLink="Product">
-        <Background className={classes.bgMain}>
-            <div className={classes.paddedBottom}>
-                <MainScreen />
-            </div>
-        </Background>
 
-        <Background className={classes.bgInterest} skewed={true}>
+        <BackgroundMainScreen type="product">
+            <MainScreen />
+        </BackgroundMainScreen>
+
+
+        <Section top={3} bottom={2}>
             <Wallet />
-            <div className={classes.section}>
-                <Interest />
-            </div>
+        </Section>
+        <Section top={1} bottom={4}>
+            <Interest />
+        </Section>
+
+
+        <Background className={classes.bgWallet} skewed={true}>
+            <Section size={4}>
+                <MobileWallet />
+            </Section>
         </Background>
 
 
-        <div className={classes.sectionNarrow}>
-            <MobileWallet />
-        </div>
-
-        <div className={classes.sectionNarrow}>
+        {/* <Section size={4}>
             <OnlineWallet />
-        </div>
+        </Section> */}
 
 
-        <Background className={classes.bgHowToStart} skewed={true}>
-            <div className={classes.section}>
-                <HowToStart />
-            </div>
-        </Background>
+
+        <Section size={4}>
+            <HowToWallet />
+        </Section>
 
 
-        <Background className={classes.bgDex}>
-            <div className={classes.sectionWide}>
+        <Background className={classes.bgDex} skewed={true}>
+            <Section size={4}>
                 <DEX dexData={initialState.dexData} />
-            </div>
+            </Section>
         </Background>
 
         <Row>
@@ -85,13 +92,19 @@ const PageLayout = ({ classes, initialState }) => (
         </Row>
 
 
-        <div className={classes.section}>
-            <HowToStart />
-        </div>
+        <Margin bottom={4} />
+        <Divider /> 
 
-        <div className={classes.section}>
-            <IssuingTokens />
-        </div>
+
+        <Section size={4}>
+            <HowToTrade />
+        </Section>
+
+        <Background className={classes.bgTokens} skewed={true}>
+            <Section size={4}>
+                <IssuingTokens />
+            </Section>
+        </Background>
 
 
         <Typography
@@ -108,15 +121,14 @@ const PageLayout = ({ classes, initialState }) => (
         </div>
 
         <Margin bottom={4} />
+        <Divider /> 
+        <Margin bottom={2} />
 
+        <div className={classes.section}>
+            <HowToToken />
+        </div>
 
-        <Background className={classes.bgHowToStart} skewed={true}>
-            <div className={classes.section}>
-                <HowToStart />
-            </div>
-        </Background>
-
-    </Layout>
+    </Layout >
 );
 
 

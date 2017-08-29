@@ -38,13 +38,6 @@ const PageLayout = ({ classes }) => (
             <MainScreen />
         </MainScreenBackground>
 
-        {/* <Background className={classes.bgMain}>
-            <div className={classes.paddedBottom}>
-                <MainScreen />
-            </div>
-        </Background> */}
-
-
 
         <div className={classes.sectionWide}>
             <Team members={members} />

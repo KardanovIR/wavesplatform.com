@@ -34,12 +34,12 @@ export default theme => ({
     link: {
         ...theme.typography.display1,
         textDecoration: 'none',
-        color: theme.palette.gray[900],
+        // color: theme.palette.gray[900],
         display: 'block',
         padding: theme.spacing.getSpacing(1, 5),
         marginRight: theme.spacing.unit*3,
         '&:active': {
-            backgroundColor: theme.palette.gray[50]
+            backgroundColor: theme.palette.gray[100]
         }
     },
 })

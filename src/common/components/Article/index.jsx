@@ -2,8 +2,9 @@ import React from 'react';
 
 import Typography from 'src/common/components/Typography';
 
-
 import injectSheet from 'react-jss';
+
+
 
 const styles = theme => ({
     title: {

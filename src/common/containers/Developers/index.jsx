@@ -29,7 +29,7 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Developers">
         {/* <Background className={classes.bgMain}> */}
-        <MainScreenBackground wide>
+        <MainScreenBackground type="wide">
             <MainScreen />
         </MainScreenBackground>
 

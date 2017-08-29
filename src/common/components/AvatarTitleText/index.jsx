@@ -57,10 +57,10 @@ const AvatarWithText = ({
                 {avatar}
             </div>
             <Margin bottom={2} />
-            <Typography type="display1" tagName="div">
+            <Typography type="display1" tagName="div" cut>
                 {title}
             </Typography>
-            <Typography type="body" tagName="div">
+            <Typography type="body" tagName="div" cut>
                 {text}
             </Typography>
         </div>

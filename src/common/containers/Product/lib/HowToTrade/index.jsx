@@ -11,25 +11,25 @@ import HowToBlock from '../HowToBlock';
 
 const HowToStart = () => (
     <HowToBlock
-        title="How do I start using my Waves wallet?"
+        title="How do I start trading on the Waves DEX?"
         steps={[
             {
-                avatar: <IconProduct name="cloud" circle="dark" />,
+                avatar: <IconProduct name="cloud" circle />,
                 text: (
                     <div>
                         First, install the Waves client.
                             <Margin />
-                        <Button secondary href="/get-client" withLoader>Get client</Button>
+                        <Button href="/get-client" withLoader>Get client</Button>
                     </div>
                 )
             },
             {
-                avatar: <IconProduct name="coins" circle="dark" />,
+                avatar: <IconProduct name="coins" circle />,
                 text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
             },
             {
-                avatar: <IconProduct name="dex" circle="dark" />,
-                text: "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
+                avatar: <IconProduct name="dex" circle />,
+                text: "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
             },
         ]}
     />
