@@ -11,12 +11,12 @@ const createClassesForSide = theme => side => ({
 
     // section narrow
     [`padding-${side}-2`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 3,
+        [`padding${capitalize(side)}`]: theme.spacing.unit * 6,
         [theme.breakpoints.up('sm')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 4,
+            [`padding${capitalize(side)}`]: theme.spacing.unit * 7,
         },
         [theme.breakpoints.up('md')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 6,
+            [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
         },
         [theme.breakpoints.up('lg')]: {
             [`padding${capitalize(side)}`]: theme.spacing.unit * 10,
@@ -39,7 +39,7 @@ const createClassesForSide = theme => side => ({
 
     // section wide
     [`padding-${side}-4`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
+        [`padding${capitalize(side)}`]: theme.spacing.unit * 9,
         [theme.breakpoints.up('sm')]: {
             [`padding${capitalize(side)}`]: theme.spacing.unit * 11,
         },

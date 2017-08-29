@@ -9,7 +9,7 @@ const styles = theme => ({
     },
 
     root: {
-        marginBottom: '80px',
+        marginBottom: '90px',
         // marginBottom for displays
         [theme.breakpoints.up('sm')]: {
             marginBottom: '100px',
