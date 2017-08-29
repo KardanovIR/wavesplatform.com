@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { GtmHead, GtmBody } from './Gtm';
+
+
 
 const Html = ({
     title,
@@ -7,7 +10,10 @@ const Html = ({
     initialState,
     script,
     vendorChunk,
-    style
+    style,
+    
+    gtmEnabled,
+    sentryEnabled,
 }) => (
     <html lang="en">
         <head>
@@ -17,13 +23,19 @@ const Html = ({
             <title>{ title }</title>
 
             {/* sentry enable */}
-            {/* <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossOrigin="anonymous" />
-            <script dangerouslySetInnerHTML={{ __html: `
-                Raven.config('https://a453204a9f9846feb4855ab716dc2e9f@sentry.io/198370').install();
-            `}} /> */}
+            { sentryEnabled && (
+                <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossOrigin="anonymous" />
+            ) }
+            { sentryEnabled && (
+                <script dangerouslySetInnerHTML={{ __html: `
+                    Raven.config('https://a453204a9f9846feb4855ab716dc2e9f@sentry.io/198370').install();
+                `}} />
+            ) }
 
-            {/* <link rel="stylesheet" href="styles.css" /> */}
+            {/* GTM enable */}
+            { gtmEnabled && <GtmHead /> }
 
+            {/* Page initial state */}
             <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{ __html: `
@@ -31,21 +43,28 @@ const Html = ({
                 ` }}
             />
 
+            {/* Page styles */}
             <style type="text/css" data-jss-server>
                 { style }
             </style>
         </head>
         <body>
+            {/* GTM enable */}
+            { gtmEnabled && <GtmBody /> }
+
             <div style={{ opacity: ".4" }} id="app" dangerouslySetInnerHTML={{ __html: content }} />
             { vendorChunk && <script type="text/javascript" src={vendorChunk} /> }
             <script type="text/javascript" src={script} />
+
         </body>
     </html>
 )
 
 
 Html.defaultProps = {
-    initialState: {}
+    initialState: {},
+    gtmEnabled: false,
+    sentryEnabled: false,
 }
 
 
