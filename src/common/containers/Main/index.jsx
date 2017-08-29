@@ -59,14 +59,13 @@ const PageLayout = ({
             </Background>
 
 
-            <Section size={2}>
+            <Section>
                 <Wallet />
             </Section>
 
-            <div className={classes.section}>
+            <Section top={2} bottom={4}>
                 <DEX />
-            </div>
-
+            </Section>
 
             <Background className={classes.bgDex} skewed={true}>
                 <div className={classes.sectionWide}>

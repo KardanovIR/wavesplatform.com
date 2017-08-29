@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles';
 
 import injectSheet from 'react-jss';
+import cn from 'classnames';
 
 import Logo from 'src/common/components/Logo';
 
@@ -17,8 +18,8 @@ import FooterNav from './lib/FooterNav';
 
 const Footer = ({ classes, links }) => (
     <div className={classes.root}>
-        <Background className={classes.background} skewed wrapperClassName={classes.backgroundWrapper} />
-        <Background className={classes.background2} skewed wrapperClassName={classes.backgroundWrapper} />
+        <Background className={cn(classes.background, classes.bgSkewed)} skewed wrapperClassName={classes.backgroundWrapper} />
+        <Background className={cn(classes.background2, classes.bgSkewed)} skewed wrapperClassName={classes.backgroundWrapper} />
         <Background className={classes.background} skewed={false}>
             <footer className={classes.footer}>
                 <Row className={classes.row}>
