@@ -12,7 +12,7 @@ import styles from './styles';
 
 const MainScreen = ({ classes }) => (
     <Row className={classes.root} alignItems="center">
-        <Col xs={12} sm={6}>
+        <Col xs={9} sm={6}>
             <div className={classes.imageWrapper}>
                 <div className={classes.image} />
             </div>
@@ -25,7 +25,15 @@ const MainScreen = ({ classes }) => (
                     textType="body2"
                     text="The current version of the Waves client is a wallet, decentralized exchange, and a tool to release tokens."
                     buttons={[
-                        <Button withLoader key="main_cta_button" href="#">Get Client</Button>,
+                        (
+                            <Button
+                                key="main_cta_button"
+                                target="_blank"
+                                href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                            >
+                                Get Client
+                            </Button>
+                        ),
                     ]}
                 />
             </div>

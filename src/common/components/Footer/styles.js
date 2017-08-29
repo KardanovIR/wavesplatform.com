@@ -6,7 +6,7 @@ export default theme => {
     return {
         root: {
             position: 'relative',
-            marginTop: theme.spacing.unit * 8
+            marginTop: 55
         },
 
         // text
@@ -24,10 +24,6 @@ export default theme => {
             alignItems: 'center'
         },
 
-        background: {
-            background: BACKGROUND,
-            transformOrigin: 'left top'
-        },
         backgroundWrapper: {
             position: 'absolute',
             top: 0,
@@ -35,6 +31,18 @@ export default theme => {
             left: 0,
             bottom: 0
         },
+        background: {
+            background: BACKGROUND,
+            transformOrigin: 'left top',
+        },
+
+        bgSkewed: {
+            height: '70%',
+            [theme.breakpoints.up('md')]: {
+                height: '100%'
+            }
+        },
+
         background2: {
             composes: '$background',
             left: '100%',
@@ -76,13 +84,13 @@ export default theme => {
 
         [theme.mixins.atMedia('sm')]: {
             root: {
-                marginTop: theme.spacing.unit * 13
+                marginTop: 60
             },
         },
 
         [theme.mixins.atMedia('md')]: {
             root: {
-                marginTop: theme.spacing.unit * 15
+                marginTop: 115
             },
             footer: {
                 padding: theme.spacing.getSpacing(6, 0, 6)
@@ -113,10 +121,10 @@ export default theme => {
                 float: 'right',
             },
         },
-
+        
         [theme.mixins.atMedia('lg')]: {
             root: {
-                marginTop: theme.spacing.unit * 25
+                marginTop: 120
             },
         }
     }

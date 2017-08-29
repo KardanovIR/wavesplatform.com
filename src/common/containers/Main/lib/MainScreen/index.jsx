@@ -16,7 +16,16 @@ const DevelopersMainScreen = () => (
         imageDesktop={<Image />}
         imageMobile={<ImageMobile />}
         buttons={[
-            <Button withLoader secondary key="main_cta_button" href="/download">Get Client</Button>,
+            (
+                <Button
+                    secondary
+                    key="main_cta_button"
+                    target="_blank"
+                    href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                >
+                    Get Client
+                </Button>
+            ),
             <Button withLoader bordered key="main_cta_button2" href="/download">Get Waves</Button>,
         ]}
     />

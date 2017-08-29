@@ -27,6 +27,11 @@ const styles = (theme) => ({
 
 
 
+const APP_STORE_HREF = "https://itunes.apple.com/us/app/waves-wallet/id1233158971?mt=8";
+const GOOGLE_PLAY_HREF = "https://play.google.com/store/apps/details?id=com.wavesplatform.wallet";
+
+
+
 const ButtonGetApp = ({
     classes,
     className,
@@ -40,7 +45,7 @@ const ButtonGetApp = ({
                 : <Icon size={32} name="apple" />
         }
         className={cn(classes.button, className)}
-        href={type === 'google-play' ? 'https://google.com' : 'https://apple.com'}
+        href={type === 'google-play' ? GOOGLE_PLAY_HREF : APP_STORE_HREF}
         target="_blank"
         { ...rest}
     >

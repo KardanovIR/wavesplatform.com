@@ -16,6 +16,7 @@ import Feedback from 'src/common/containers/Feedback';
 
 // lib
 import MainScreen from './lib/MainScreen';
+import NumbersQuote from './lib/NumbersQuote';
 import WavesClient from './lib/WavesClient';
 import Wallet from './lib/Wallet';
 import DEX from './lib/DEX';
@@ -23,7 +24,7 @@ import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
 import JoinUs from './lib/JoinUs';
 import Subscribe from './lib/Subscribe';
-import Description from './lib/Description';
+import Audience from './lib/Audience';
 
 
 
@@ -40,11 +41,15 @@ const PageLayout = ({
         <Layout>
 
             <BackgroundMainScreen type="wide">
-                <MainScreen dexData={initialState.dexData} />
+                <MainScreen />
             </BackgroundMainScreen>
 
-            <Section>
-                <Description />
+            <Section top={3} bottom={2}>
+                <NumbersQuote dexData={initialState.dexData} />
+            </Section>
+
+            <Section bottom={3}>
+                <Audience />
             </Section>
 
             <Background className={classes.bgClient} skewed={true}>
@@ -54,14 +59,13 @@ const PageLayout = ({
             </Background>
 
 
-            <Section size={2}>
+            <Section>
                 <Wallet />
             </Section>
 
-            <div className={classes.section}>
+            <Section top={2} bottom={4}>
                 <DEX />
-            </div>
-
+            </Section>
 
             <Background className={classes.bgDex} skewed={true}>
                 <div className={classes.sectionWide}>

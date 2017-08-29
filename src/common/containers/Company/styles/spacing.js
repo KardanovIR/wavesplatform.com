@@ -20,15 +20,6 @@ export default theme => ({
     },
 
     footerMarginCompensate: {
-        marginBottom: -theme.spacing.unit * 7,
-        [theme.mixins.atMedia('sm')]: {
-            marginBottom: - theme.spacing.unit * 10
-        },
-        [theme.mixins.atMedia('lg')]: {
-            marginBottom: - theme.spacing.unit * 19
-        },
-        [theme.mixins.atMedia('xl')]: {
-            marginBottom: - theme.spacing.unit * 15
-        },
+        marginBottom: -10,
     },
 })

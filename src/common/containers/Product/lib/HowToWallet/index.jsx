@@ -19,7 +19,13 @@ const HowToStart = () => (
                     <div>
                         First, install the Waves client.
                             <Margin />
-                        <Button href="/get-client" withLoader>Get client</Button>
+                        <Button
+                            key="main_cta_button"
+                            target="_blank"
+                            href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                        >
+                            Get Client
+                        </Button>
                     </div>
                 )
             },
