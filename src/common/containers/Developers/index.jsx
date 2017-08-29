@@ -3,10 +3,10 @@ import React from 'react';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
+import Section from 'src/common/components/Section';
+import Margin from 'src/common/components/Margin';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
-// import { Row, Col } from 'src/common/components/Grid';
-
 
 
 // lib
@@ -57,13 +57,13 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <div className={classes.sectionWide}>
+        <Section size={4}> 
             <WavesNetwork />
-        </div>
-
-        <div className={classes.paddedBottom}>
-            <Community />
-        </div>
+            
+            <Section>
+                <Community />
+            </Section>
+        </Section>
 
     </Layout>
 );
