@@ -7,7 +7,6 @@ import { Row, Col } from 'src/common/components/Grid';
 
 
 import injectSheet from 'react-jss';
-import cn from 'classnames';
 
 
 
