@@ -82,6 +82,12 @@ export default theme => {
             }
         },
 
+        [theme.mixins.atMedia('sm')]: {
+            root: {
+                marginTop: 60
+            },
+        },
+
         [theme.mixins.atMedia('md')]: {
             root: {
                 marginTop: 115
@@ -115,5 +121,11 @@ export default theme => {
                 float: 'right',
             },
         },
+        
+        [theme.mixins.atMedia('lg')]: {
+            root: {
+                marginTop: 120
+            },
+        }
     }
 }
