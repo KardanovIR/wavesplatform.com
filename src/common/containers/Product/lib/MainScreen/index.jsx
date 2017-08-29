@@ -18,6 +18,7 @@ const DevelopersMainScreen = () => (
         buttons={[
             (
                 <Button
+                    secondary
                     key="main_cta_button"
                     target="_blank"
                     href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
