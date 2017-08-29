@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 620 401">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" viewBox="0 0 620 401">
   <defs>
     <path id="code-b" d="M4,-7.99352446e-15 L586,4.39468611e-13 L586,4.42312853e-13 C588.209139,4.41907036e-13 590,1.790861 590,4 L590,367 L590,367 C590,369.209139 588.209139,371 586,371 L4,371 L4,371 C1.790861,371 3.16642949e-14,369.209139 0,367 L0,4 L-3.10862447e-15,4 C-3.37916597e-15,1.790861 1.790861,4.05816873e-16 4,0 Z"/>
     <filter id="code-a" width="111.4%" height="118.1%" x="-5.7%" y="-5.8%" filterUnits="objectBoundingBox">

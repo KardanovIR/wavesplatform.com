@@ -18,7 +18,7 @@ const IssuingTokens = ({ classes }) => (
     <div>
         <Row>
             <Col xs={12}>
-                <Typography type="display2" className={classes.title}>
+                <Typography type="display3" className={classes.title}>
                     Issuing your tokens, token sales
                 </Typography>
             </Col>
