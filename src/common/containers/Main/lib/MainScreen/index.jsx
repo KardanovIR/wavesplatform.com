@@ -18,7 +18,6 @@ const DevelopersMainScreen = () => (
         buttons={[
             (
                 <Button
-                    secondary
                     key="main_cta_button"
                     target="_blank"
                     href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
@@ -26,7 +25,7 @@ const DevelopersMainScreen = () => (
                     Get Client
                 </Button>
             ),
-            <Button withLoader bordered key="main_cta_button2" href="/download">Get Waves</Button>,
+            <Button withLoader secondary key="main_cta_button2" href="/download">Get Waves</Button>,
         ]}
     />
 );
