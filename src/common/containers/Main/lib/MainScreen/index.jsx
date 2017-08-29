@@ -21,7 +21,7 @@ const DevelopersMainScreen = () => (
                     secondary
                     key="main_cta_button"
                     target="_blank"
-                    href="/download"
+                    href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
                 >
                     Get Client
                 </Button>

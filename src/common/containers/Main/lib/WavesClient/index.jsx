@@ -25,7 +25,15 @@ const MainScreen = ({ classes }) => (
                     textType="body2"
                     text="The current version of the Waves client is a wallet, decentralized exchange, and a tool to release tokens."
                     buttons={[
-                        <Button withLoader key="main_cta_button" href="#">Get Client</Button>,
+                        (
+                            <Button
+                                key="main_cta_button"
+                                target="_blank"
+                                href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                            >
+                                Get Client
+                            </Button>
+                        ),
                     ]}
                 />
             </div>
