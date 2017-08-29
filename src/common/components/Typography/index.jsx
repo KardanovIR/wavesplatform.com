@@ -30,6 +30,7 @@ const Typography = ({
             [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align,
             [classes.noMargin]: noMargin,
             [classes.inverted]: inverted,
+            [classes.cut]: cut,
             // [classes.colored]: color
             // [classes[`margin-${String(type)}`]]: margin === true,
             // [classes[`margin-${String(type)}-${String(margin)}`]]: margin && margin !== true
@@ -37,12 +38,8 @@ const Typography = ({
         classNameProp
     );
 
-    // cut paragraph (padded right or left to make it shorter)
-    const cutDirection = align === 'right' ? 'Left' : 'Right';
-    const styleObj = cut ? { ['padding' + cutDirection]: `${cut === true ? 20 : cut}%` } : {}
-
     return (
-        <Tag className={className} style={{ ...styleObj, style }}>
+        <Tag className={className} style={style}>
             {children}
         </Tag>
     )

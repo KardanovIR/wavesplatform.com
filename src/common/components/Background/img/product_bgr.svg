@@ -1,83 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="2560" height="841" viewBox="0 0 2560 841">
   <defs>
-    <linearGradient id="1_bgr_product-a" x1="50.158%" x2="50.005%" y1="-24.618%" y2="95.743%">
-      <stop offset="0%" stop-color="#0036FC" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#00AEFF" stop-opacity=".86"/>
+    <linearGradient id="index_bgr-a" x1="48.172%" x2="49.031%" y1="40.05%" y2="86.771%">
+      <stop offset="0%" stop-color="#002FFF" stop-opacity=".67"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-b" x1="50.158%" x2="50.005%" y1="-27.118%" y2="95.743%">
-      <stop offset="0%" stop-color="#0020FF" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#0020FF" stop-opacity=".86"/>
+    <linearGradient id="index_bgr-b" x1="52.318%" x2="50.029%" y1="-32.698%" y2="97.888%">
+      <stop offset="0%" stop-color="#32FFFD" stop-opacity="0"/>
+      <stop offset="98.358%" stop-color="#009FFF" stop-opacity=".86"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-c" x1="50%" x2="51.013%" y1="0%" y2="58.255%">
+    <linearGradient id="index_bgr-c" x1="50%" x2="52.649%" y1="0%" y2="59.813%">
       <stop offset="0%" stop-color="#006CFF" stop-opacity=".66"/>
-      <stop offset="100%" stop-color="#006CFF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-d" x1="51.762%" x2="50%" y1="19.645%" y2="100%">
+    <linearGradient id="index_bgr-d" x1="52.122%" x2="50%" y1="19.645%" y2="100%">
       <stop offset="0%" stop-color="#0053FF" stop-opacity=".6"/>
-      <stop offset="100%" stop-color="#0053FF" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-e" x1="50%" x2="50%" y1="13.917%" y2="100%">
-      <stop offset="2.772%" stop-color="#0053FF" stop-opacity=".5"/>
-      <stop offset="100%" stop-color="#0053FF" stop-opacity="0"/>
+    <linearGradient id="index_bgr-e" x1="50%" x2="50%" y1="13.917%" y2="100%">
+      <stop offset="0%" stop-color="#0053FF" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-f" x1="49.896%" x2="49.998%" y1="-1.985%" y2="96.675%">
-      <stop offset="0%" stop-color="#006BFF" stop-opacity=".63"/>
-      <stop offset="100%" stop-color="#006BFF" stop-opacity="0"/>
+    <linearGradient id="index_bgr-f" x1="49.333%" x2="50%" y1="-1.985%" y2="98.89%">
+      <stop offset="0%" stop-color="#0053FF" stop-opacity=".63"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="1_bgr_product-g" x1="49.892%" x2="49.999%" y1="-1.985%" y2="97.927%">
-      <stop offset="0%" stop-color="#0100FF" stop-opacity=".63"/>
-      <stop offset="100%" stop-color="#006BFF" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="1_bgr_product-h" x1="49.771%" x2="50%" y1="-1.985%" y2="98.89%">
-      <stop offset="0%" stop-color="#006BFF" stop-opacity=".63"/>
-      <stop offset="100%" stop-color="#006BFF" stop-opacity="0"/>
+    <linearGradient id="index_bgr-g" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
+      <stop offset="0%" stop-color="#0053FF"/>
+      <stop offset="43.646%" stop-color="#D8D8D8"/>
+      <stop offset="98.691%" stop-color="#D5D6D9" stop-opacity=".013"/>
+      <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(-464 -601)">
-    <rect width="3000" height="900" x="246" y="395" fill="#003BDC" transform="rotate(-5 1746 845)"/>
-    <rect width="3000" height="900" x="245.512" y="395.021" fill="#3B5EBD" transform="rotate(-5 1745.512 845.021)"/>
-    <rect width="3000" height="800" x="183" y="501" fill="url(#1_bgr_product-a)" fill-opacity=".8" fill-rule="nonzero" opacity=".2" transform="rotate(-5 1683 901)"/>
-    <rect width="3000" height="800" x="183" y="502" fill="url(#1_bgr_product-b)" fill-rule="nonzero" opacity=".6" transform="rotate(-5 1683 902)"/>
-    <polygon fill="url(#1_bgr_product-c)" fill-rule="nonzero" points="356.336 605.47 2005.405 606.341 1911.148 1691.76 272.04 1691.76" opacity=".6" transform="rotate(-5 1138.723 1148.615)"/>
-    <polygon fill="#0053FF" fill-opacity=".5" fill-rule="nonzero" points="2410.337 73.47 4059.406 74.341 3965.149 1159.76 2326.041 1159.76" opacity=".4" transform="rotate(175 3192.723 616.615)"/>
-    <rect width="766" height="698" x="1007" y="592" fill="url(#1_bgr_product-d)" fill-rule="nonzero" opacity=".6"/>
-    <rect width="766" height="698" y="580" fill="url(#1_bgr_product-e)" fill-rule="nonzero"/>
-    <polygon fill="#0063FF" fill-opacity=".5" fill-rule="nonzero" points="1807.337 136.47 3456.406 137.341 3362.149 1222.76 1723.041 1222.76" opacity=".2" transform="rotate(175 2589.723 679.615)"/>
-    <polygon fill="#0014FF" fill-opacity=".5" fill-rule="nonzero" points="1677.336 147.47 3326.405 148.341 3232.148 1233.76 1593.04 1233.76" opacity=".4" transform="rotate(175 2459.723 690.615)"/>
-    <polygon fill="url(#1_bgr_product-f)" fill-rule="nonzero" points="1806.55 601.552 3014.436 604.167 2944.08 1414.126 1736.194 1411.511" opacity=".5" transform="rotate(-5 2375.315 1007.839)"/>
-    <polygon fill="url(#1_bgr_product-g)" fill-rule="nonzero" points="867.727 733.251 2045.727 733.251 2003.261 1224.428 825.261 1224.428" opacity=".5" transform="rotate(-5 1435.494 978.84)"/>
-    <polygon fill="url(#1_bgr_product-h)" fill-rule="nonzero" points="1115.952 708.915 2323.838 711.53 2282.679 1187.764 1074.793 1185.149" opacity=".3" transform="rotate(-5 1699.315 948.34)"/>
-    <g opacity=".2" transform="rotate(150 754.415 833.44)">
-      <path stroke="#DFE4EE" stroke-linecap="square" d="M6.5 58.5L28.0522621 36.9477379M5.5 61.5L81.3798828 78.6367188M25.7546872 3.11517544L30.1794919 33.9833395M29.7604344 35.7128502L59.2966349 73.6855097"/>
-      <circle cx="5" cy="61" r="5" fill="#DFE4EE"/>
-      <circle cx="30" cy="35" r="3" fill="#DFE4EE"/>
-      <circle cx="25.179" cy="3.349" r="3" fill="#DFE4EE"/>
-      <circle cx="59.5" cy="73.866" r="3" fill="#DFE4EE"/>
-      <circle cx="83" cy="79" r="3" fill="#DFE4EE"/>
-    </g>
-    <g opacity=".2" transform="rotate(-180 932.215 575.117)">
-      <path stroke="#DFE4EE" stroke-linecap="square" d="M6.5 58.5L28.0522621 36.9477379M5.5 61.5L81.3798828 78.6367188M25.7546872 3.11517544L30.1794919 33.9833395M29.7604344 35.7128502L59.2966349 73.6855097"/>
-      <circle cx="5" cy="61" r="5" fill="#DFE4EE"/>
-      <circle cx="30" cy="35" r="3" fill="#DFE4EE"/>
-      <circle cx="25.179" cy="3.349" r="3" fill="#DFE4EE"/>
-      <circle cx="59.5" cy="73.866" r="3" fill="#DFE4EE"/>
-      <circle cx="83" cy="79" r="3" fill="#DFE4EE"/>
-    </g>
-    <g opacity=".2" transform="rotate(161 795.201 520.568)">
-      <path stroke="#DFE4EE" stroke-linecap="square" d="M51.5 58.5L73.0522621 36.9477379M6.51675758 66.2786825L70.4957815 2.29965855M50.5 61.5L126.379883 78.6367188M70.7546872 3.11517544L75.1794919 33.9833395M8.29937345 65.7969783L51.4755821 59.6712898M74.7604344 35.7128502L104.296635 73.6855097"/>
-      <circle cx="50" cy="61" r="5" fill="#DFE4EE"/>
-      <circle cx="5.668" cy="66.888" r="5" fill="#DFE4EE"/>
-      <circle cx="75" cy="35" r="3" fill="#DFE4EE"/>
-      <circle cx="70.179" cy="3.349" r="3" fill="#DFE4EE"/>
-      <circle cx="104.5" cy="73.866" r="3" fill="#DFE4EE"/>
-      <circle cx="128" cy="79" r="3" fill="#DFE4EE"/>
-    </g>
-    <g opacity=".2" transform="translate(2628 711)">
-      <path stroke="#DFE4EE" stroke-linecap="square" d="M6.5 26.5L28.0522621 4.94773794M5.5 29.5L81.3798828 46.6367188M30.0751953 3.63183594L34.5 34.5"/>
-      <circle cx="5" cy="29" r="5" fill="#DFE4EE"/>
-      <circle cx="30" cy="3" r="3" fill="#DFE4EE"/>
-      <circle cx="34" cy="36" r="3" fill="#DFE4EE"/>
-      <circle cx="83" cy="47" r="3" fill="#DFE4EE"/>
-    </g>
+  <g fill="none" fill-rule="evenodd" transform="translate(-570 -605)">
+    <polygon fill="url(#index_bgr-a)" points="467 605 3219 605 3219 1435 467 1435"/>
+    <rect width="3000" height="800" x="521" y="484" opacity=".6" transform="rotate(-5 2021 884)"/>
+    <rect width="3000" height="800" x="521" y="484" fill="url(#index_bgr-b)" opacity=".6" transform="rotate(-5 2021 884)"/>
+    <polygon fill="url(#index_bgr-c)" points="688.365 619.126 2337.434 619.997 2264.966 1456.368 625.859 1456.368" opacity=".6" transform="rotate(-5 1481.647 1037.747)"/>
+    <polygon fill="#0053FF" fill-opacity=".5" points="2638.336 73.47 4287.405 74.341 4193.148 1159.76 2554.04 1159.76" opacity=".6" transform="rotate(175 3420.723 616.615)"/>
+    <rect width="1166" height="698" x="1778" y="602" fill="url(#index_bgr-d)"/>
+    <rect width="766" height="698" x="338" y="590" fill="url(#index_bgr-e)"/>
+    <polygon fill="url(#index_bgr-f)" points="1072.264 752.536 2250.264 752.536 2194.725 1393.142 1016.725 1393.142" transform="rotate(-5 1633.494 1072.84)"/>
+    <polygon fill="url(#index_bgr-f)" points="82.7 754.555 1260.7 754.555 1204.289 1405.123 26.289 1405.123" opacity=".2" transform="rotate(175 643.494 1079.84)"/>
+    <polygon fill="url(#index_bgr-g)" points="2415.336 94.47 4064.405 95.341 3970.148 1180.76 2331.04 1180.76" opacity=".6" transform="rotate(175 3197.723 637.615)"/>
+    <polygon fill="#0053FF" fill-opacity=".5" points="2006.466 130.468 3655.448 132.335 3561.191 1217.755 1922.084 1217.755" opacity=".5" transform="rotate(175 2788.766 674.111)"/>
   </g>
 </svg>

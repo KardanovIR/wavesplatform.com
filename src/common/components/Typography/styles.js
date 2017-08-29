@@ -1,3 +1,16 @@
+const getCutStyle = (paddingDirection) => ({ align, cut }) => {
+    if (!cut
+        || (align === 'right' && paddingDirection === 'right')  // both right
+        || (align !== 'right' && paddingDirection === 'left')   // both left
+    ) {
+        return undefined;
+    }
+
+    return `${cut === true ? 20 : cut}%`
+}
+
+
+
 const styles = theme => ({
     body: {
         extend: [
@@ -59,10 +72,18 @@ const styles = theme => ({
     'align-center': {
         textAlign: 'center'
     },
-    
+
     noMargin: {
         margin: '0 !important'
+    },
+
+    [theme.breakpoints.up('md')]: {
+        cut: {
+            paddingLeft: getCutStyle('left'),
+            paddingRight: getCutStyle('right'),
+        }
     }
+
 })
 
 

@@ -1,7 +1,7 @@
 export default theme => ({
     widthSetter: {
         overflow: 'visible',
-        width: '80%',
+        width: '100%',
     },
     imageWrapper: {
         position: 'relative',

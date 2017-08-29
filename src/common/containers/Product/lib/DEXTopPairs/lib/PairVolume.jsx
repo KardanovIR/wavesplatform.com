@@ -6,7 +6,7 @@ import injectSheet from 'react-jss';
 
 
 
-const styles = {
+const styles = theme => ({
     wrapper: {
         display: 'flex',
         alignItems: "flex-end",
@@ -21,9 +21,11 @@ const styles = {
     volume: {
         flex: 1,
         fontSize: 17,
-        lineHeight: '17px'
+        lineHeight: '17px',
+        color: theme.palette.gray[800]
     }
-}
+})
+
 
 
 const PairVolume = ({

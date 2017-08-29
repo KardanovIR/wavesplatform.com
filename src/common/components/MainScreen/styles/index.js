@@ -49,6 +49,9 @@ const styles = theme => ({
         secondCtaButton: {
             margin: 0
         },
+        textCut: {
+            paddingRight: '20%'
+        }
     },
 })
 

@@ -9,7 +9,11 @@ import DesktopNav from './lib/desktop';
 import Logo from 'src/common/components/Logo';
 
 
-const Nav = ({ classes, links, activeLink }) => (
+const Nav = ({
+    classes,
+    links,
+    activeLink
+}) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
             <a href="/" className={classes.logo}>

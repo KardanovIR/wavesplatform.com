@@ -43,7 +43,7 @@ const MainScreen = ({
             </Col>
 
             <Col xs={12} sm={7} md={7} lg={5}>
-                <Typography type="body" inverted cut>
+                <Typography type="body" inverted className={classes.textCut}>
                     {text}
                 </Typography>
 

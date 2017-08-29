@@ -68,7 +68,7 @@ class SubscriptionForm extends Component {
                                     value={this.state.email}
                                     onChange={this.handleChange}
                                     onBlur={this.props.onBlur}
-                                    placeholder="Email"
+                                    placeholder="Email address"
                                     invalid={invalid}
                                 />
                             </div>

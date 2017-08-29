@@ -38,9 +38,9 @@ const PageLayout = ({
     initialState,
     classes
 }) => (
-        <Layout>
+        <Layout activeLink="Home">
 
-            <BackgroundMainScreen type="wide">
+            <BackgroundMainScreen type="product">
                 <MainScreen />
             </BackgroundMainScreen>
 

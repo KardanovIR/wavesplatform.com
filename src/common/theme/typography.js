@@ -109,6 +109,7 @@ const creatyTypography = (palette, breakpoints) => {
         button: combineMobileDesktopStyles(
             {
                 ...global,
+                fontWeight: 500,
                 fontSize: 13,
                 textTransform: 'uppercase',
                 lineHeight: 1,

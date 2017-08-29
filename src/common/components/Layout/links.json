@@ -1,5 +1,9 @@
 [
 	{
+		"href": "/",
+		"text": "Home"
+	},
+	{
 		"href": "/product",
 		"text": "Product"
 	},
