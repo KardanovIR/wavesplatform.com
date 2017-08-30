@@ -95,7 +95,7 @@ const PictureBlock = ({
                     text.map((p, i) => <Typography type="body" key={`paragraph_${i}`}>{p}</Typography>)
                 ) }
 
-                <Margin bottom={2} />
+                <Margin bottom={3} />
 
                 { buttons.map((button, index) => (
                     <div className={classes[`button-wrapper-${align}`]} key={`devs_block_button_${index}`}>

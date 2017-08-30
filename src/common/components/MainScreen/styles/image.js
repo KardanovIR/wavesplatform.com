@@ -19,11 +19,6 @@ export default theme => ({
         // backgroundColor: 'rgba(255,50,0,.1)',
     },
 
-    imageCol: {
-        marginTop: theme.spacing.unit,
-        marginBottom: theme.spacing.unit * 2,
-    },
-
     [theme.breakpoints.up('sm')]: {
         widthSetter: {
             width: 600,

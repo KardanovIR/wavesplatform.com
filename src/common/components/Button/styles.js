@@ -57,7 +57,7 @@ const styles = theme => ({
             background: 'rgba(255,255,255,.2)',
         },
         '&:after': {
-            boxShadow: '0 2px 9px 2px rgba(39, 47, 89, .25)',
+            boxShadow: '0 3px 8px 1px rgba(39, 47, 89, .1)',
         },
 
         '&:hover': {

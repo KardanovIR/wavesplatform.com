@@ -21,7 +21,7 @@ const Team = ({
                     Careers
                 </Typography>
                 
-                <Typography type="body" align="center" inverted className={classes.narrow}>
+                <Typography type="body2" align="center" inverted className={classes.narrow}>
                     We’d be happy to welcome you to our team. Come change the world with us.
                 </Typography>
 

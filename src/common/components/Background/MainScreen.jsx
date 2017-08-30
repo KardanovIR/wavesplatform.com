@@ -40,7 +40,7 @@ const styles = theme => ({
 
     // height
     width: {
-        height: 'calc(100% + 250px)',
+        height: 'calc(100% + 270px)',
         // [theme.breakpoints.up('sm')]: {
         //     height: 'calc(100% + 280px)',
         // },

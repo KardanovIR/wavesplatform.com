@@ -70,11 +70,11 @@ const creatyTypography = (palette, breakpoints) => {
                 ...base,
                 ...display,
                 fontSize: 18,
-                lineHeight: 1.56,
+                lineHeight: '24px',
             },
             {
                 fontSize: 24,
-                lineHeight: 1.42,
+                lineHeight: '30px',
             }
         ),
         body: combineMobileDesktopStyles(

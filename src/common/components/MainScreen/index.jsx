@@ -20,12 +20,12 @@ const MainScreen = ({
     buttons,
 }) => (
         <Row className={classes.root}>
-            <Col xs={12} sm={7} md={7} lg={6}>
+            <Col xs={12} sm={7} lg={6}>
                 <Typography type="display4" inverted>{title}</Typography>
                 <Margin />
             </Col>
 
-            <Col xs={12} sm={5} md={5} lg={6} className={classes.imageCol}>
+            <Col xs={12} sm={5} lg={6} className={ cn(classes.imageCol, {[classes.imageColMargin]: imageDesktop}) }>
                 {!!imageDesktop && (
                     <div className={classes.widthSetter}>
                         <div className={classes.imageWrapper}>
@@ -42,7 +42,7 @@ const MainScreen = ({
                 )}
             </Col>
 
-            <Col xs={12} sm={7} md={7} lg={5}>
+            <Col xs={12} sm={7} lg={6}>
                 <Typography type="body" inverted className={classes.textCut}>
                     {text}
                 </Typography>

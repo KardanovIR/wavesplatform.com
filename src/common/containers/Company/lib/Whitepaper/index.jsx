@@ -15,14 +15,14 @@ import styles from './styles';
 
 const Whitepaper = ({ classes }) => (
     <Row alignItems="center">
-        <Col xs={12} sm={6} md={6}>
+        <Col sm={6} md={4} mdOffset={1}>
             <img src={wpImageSrc} alt="Whitepaper" className={classes.image} />
         </Col>
-        <Col xs={12} sm={6} md={6}>
-            <Typography type="display2">
+        <Col xs={12} sm={6} md={6} mdOffset={1}>
+            <Typography type="display3">
                 Whitepaper
             </Typography>
-            <Typography type="body">
+            <Typography type="body" cut>
                 WAVES is a decentralized blockchain platform focusing on custom blockchain tokens operations. National currencies transfer is maintained on the WAVES blockchain through compliant gateway operators. 
             </Typography>
 

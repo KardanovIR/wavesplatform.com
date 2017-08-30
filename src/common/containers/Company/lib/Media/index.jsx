@@ -15,7 +15,7 @@ import media from './media.json';
 
 
 
-const Team = ({
+const Media = ({
     classes,
 }) => (
     <div className={classes.root}>
@@ -43,11 +43,11 @@ const Team = ({
 
         <Row centered>
             <Col xs={12} md={8} lg={5} className={classes.contactUs}>
-                <Typography type="body">
+                <Typography type="body2">
                     If you have any questions about partnerships or collaboration
                 </Typography>
 
-                <Margin bottom={2} />
+                <Margin bottom={3} />
 
                 <Margin right={1} bottom={2} display="inline-block">
                     <Button href="mailto:support@wavesplatform.com">Contact us</Button>
@@ -60,4 +60,4 @@ const Team = ({
 );
 
 
-export default injectSheet(styles)(Team);
+export default injectSheet(styles)(Media);

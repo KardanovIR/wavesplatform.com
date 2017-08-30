@@ -22,9 +22,10 @@ const styles = theme => ({
         },
     },
 
-    // imageCol: {
-    //     margin: [theme.spacing.unit, 0, theme.spacing.unit * 2],
-    // },
+    imageColMargin: {
+        marginTop: theme.spacing.unit,
+        marginBottom: theme.spacing.unit * 2,
+    },
 
     buttonWrapper: {
         display: 'inline-block',
@@ -42,6 +43,9 @@ const styles = theme => ({
             position: 'relative',
             height: 0,
             overflow: 'visible',
+        },
+        imageColMargin: {
+            margin: 0
         },
         ctaButton: {
             display: 'inline-block'
