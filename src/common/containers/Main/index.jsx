@@ -53,7 +53,7 @@ const PageLayout = ({
             </Section>
 
             <Background className={classes.bgClient} skewed={true}>
-                <Section size={3}>
+                <Section size={2}>
                     <WavesClient />
                 </Section>
             </Background>

@@ -7,6 +7,9 @@ const styles = theme => ({
     //     overflow: 'visible',
     //     width: '100%',
     // },
+    imageCol: {
+        margin: [theme.spacing.unit*4, 0, theme.spacing.unit*2]
+    },
     imageWrapper: {
         position: 'relative',
         overflow: 'visible',
@@ -23,6 +26,9 @@ const styles = theme => ({
         backgroundSize: '100%',
     },
     [theme.breakpoints.up('sm')]: {
+        imageCol: {
+            margin: 0
+        },
         image: {
             top: -50,
             right: 0,

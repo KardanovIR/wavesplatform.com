@@ -28,10 +28,23 @@ const styles = theme => ({
         background: `url(${image}) no-repeat`,
         backgroundSize: '100%',
     },
-    [theme.mixins.atMedia('lg')]: {
+    [theme.mixins.atMedia('sm')]: {
+        image: {
+            width: '200%',
+            height: '200%',
+            top: -80,
+        }
+    },
+    [theme.mixins.atMedia('md')]: {
         image: {
             width: '180%',
             height: '180%',
+            top: -150,
+            left: -10
+        }
+    },
+    [theme.mixins.atMedia('lg')]: {
+        image: {
             top: -180,
             left: -30,
         }
