@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import Typography from 'src/common/components/Typography';
-import Icon from './Icon';
+import IconProduct from 'src/common/components/IconProduct';
 import AvatarWithText from 'src/common/components/AvatarWithText';
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -25,42 +25,42 @@ const PlannedFeatures = ({ classes }) => (
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="ux" />}
+                    avatar={<IconProduct name="product" circle />}
                     text="New UX & UI"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="dex" />}
+                    avatar={<IconProduct name="dex" circle />}
                     text="Expanded statistics on released tokens"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="mess" />}
+                    avatar={<IconProduct name="message" circle />}
                     text="Blockchain messenger"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="multi" />}
+                    avatar={<IconProduct name="fingerprint" circle />}
                     text="Multisignature"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="smart" />}
+                    avatar={<IconProduct name="document" circle />}
                     text="Smart contracts"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
-                    avatar={<Icon name="fiat" />}
+                    avatar={<IconProduct name="money" circle />}
                     text="New fiat and cryptocurrency gateways"
                 />
             </ColFeature>

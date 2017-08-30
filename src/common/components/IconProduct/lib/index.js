@@ -19,6 +19,10 @@ import applicationWaves from '!svg-react-loader!./svg/application_waves.svg';
 import settings from '!svg-react-loader!./svg/settings.svg';
 import list from '!svg-react-loader!./svg/list.svg';
 import script from '!svg-react-loader!./svg/script.svg';
+import fingerprint from '!svg-react-loader!./svg/fingerprint.svg';
+import document from '!svg-react-loader!./svg/document.svg';
+import product from '!svg-react-loader!./svg/product.svg';
+import money from '!svg-react-loader!./svg/money.svg';
 
 
 export default {
@@ -43,4 +47,8 @@ export default {
     settings,
     list,
     script,
+    fingerprint,
+    document,
+    product,
+    money
 }

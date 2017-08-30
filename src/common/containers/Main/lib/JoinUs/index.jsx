@@ -6,6 +6,7 @@ import Margin from 'src/common/components/Margin';
 import Link from 'src/common/components/Link';
 import Icon from 'src/common/components/Icon';
 import Button from 'src/common/components/Button';
+import IconProduct from 'src/common/components/IconProduct';
 import { Row, Col } from 'src/common/components/Grid';
 
 
@@ -15,7 +16,7 @@ import flexCentered from 'src/common/styles/flexCentered';
 
 
 import links from './links';
-import JoinIcon from './Icon'
+// import JoinIcon from './Icon'
 
 
 const socialButtonStyles = theme => ({
@@ -65,7 +66,7 @@ const MainScreen = ({ classes }) => (
             </Col>
             <Col xs={12} md={4} className={classes.quoteWrapper}>
                 <div className={classes.iconWrapper}>
-                    <JoinIcon />
+                    <IconProduct name="application" size={40} />
                 </div>
                 <Typography type="quote">
                     Read the latest news and articles, and find out all about events happening on the Waves Platform, with our community-centered <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link>

@@ -3,6 +3,7 @@ import React from 'react';
 import Panel from 'src/common/components/Panel';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
+import IconProduct from 'src/common/components/IconProduct';
 
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -13,7 +14,7 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const Interest = ({ classes }) => (
     <div>
         <Row centered>
             <Col xs={12} md={6}>
@@ -25,7 +26,10 @@ const MainScreen = ({ classes }) => (
             <Col xs={12} md={6} className={classes.column}>
                 <Panel className={classes.panel}>
                     <div className={classes.panelTitle}>
-                        <div className={classes.iconLeasing} />
+                        <div className={classes.icon}>
+                            <IconProduct name="leasing" />
+                        </div>
+                        
                         <Typography type="display1">Leasing</Typography>
                     </div>
                     <Margin />
@@ -38,7 +42,9 @@ const MainScreen = ({ classes }) => (
             <Col xs={12} md={6} className={classes.column}>
                 <Panel className={classes.panel}>
                     <div className={classes.panelTitle}>
-                        <div className={classes.iconMining} />
+                        <div className={classes.icon}>
+                            <IconProduct name="mining" />
+                        </div>
                         <Typography type="display1">Mining</Typography>
                     </div>
                     <Margin />  
@@ -52,4 +58,4 @@ const MainScreen = ({ classes }) => (
 );
 
 
-export default injectSheet(styles)(MainScreen);
+export default injectSheet(styles)(Interest);
