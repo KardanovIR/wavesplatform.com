@@ -4,13 +4,14 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
+import MainScreen from 'src/common/components/MainScreen';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
 
 // lib
-import MainScreen from './lib/MainScreen';
+// import MainScreen from './lib/MainScreen';
 import Team from './lib/Team';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
@@ -34,16 +35,16 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Company">
 
-
         <MainScreenBackground>
-            <MainScreen />
+            <MainScreen
+                title="We change lives of the people"
+                text="We believe that blockchain technology can improve and fundamentally transform not only the modern economy, but all of its various sectors."
+            />
         </MainScreenBackground>
 
-
-        <div className={classes.sectionWide}>
+        <Section> 
             <Team members={members} />
-        </div>
-
+        </Section>
 
         <Background className={classes.bgWhitepaper} skewed={true}>
             <div className={classes.sectionWide}>

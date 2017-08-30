@@ -25,7 +25,7 @@ const MainScreen = ({
                 <Margin />
             </Col>
 
-            <Col xs={12} sm={5} md={5} lg={5} lgOffset={1} className={classes.imageCol}>
+            <Col xs={12} sm={5} md={5} lg={6} className={classes.imageCol}>
                 {!!imageDesktop && (
                     <div className={classes.widthSetter}>
                         <div className={classes.imageWrapper}>
@@ -47,7 +47,7 @@ const MainScreen = ({
                     {text}
                 </Typography>
 
-                <Margin bottom={3} />
+                { !!buttons.length && <Margin bottom={3} /> }
 
                 {buttons.map((button, index) => (
                     <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>

@@ -13,7 +13,7 @@ const DevelopersMainScreen = () => (
     <MainScreen
         title="Get started with blockchain"
         text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
-        imageDesktop={<Image />}
+        imageDesktop={<span />}
         imageMobile={<ImageMobile />}
         buttons={[
             (

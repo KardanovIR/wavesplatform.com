@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Row, Col } from 'src/common/components/Grid';
-import Background from 'src/common/components/Background';
 import Article from 'src/common/components/Article';
 
 
@@ -11,8 +10,8 @@ import styles from './styles';
 
 
 
-const Description = ({ classes }) => (
-    <Row className={classes.root}>
+const Description = () => (
+    <Row>
         <Col xs={12} sm={6} lg={3}>
             <Article
                 title="Proof-of-Stake"

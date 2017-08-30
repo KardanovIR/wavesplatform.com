@@ -44,7 +44,7 @@ import styles from './styles';
 const PageLayout = ({ classes, initialState }) => (
     <Layout activeLink="Product">
 
-        <BackgroundMainScreen type="product">
+        <BackgroundMainScreen type="light">
             <MainScreen />
         </BackgroundMainScreen>
 

@@ -18,12 +18,12 @@ const styles = theme => ({
             marginTop: theme.spacing.unit * 4,
         }
     },
-    [theme.breakpoints.up('lg')]: {
-        root: {
-            height: 400,
-            overflow: 'visible',
-        }
-    }
+    // [theme.breakpoints.up('lg')]: {
+    //     root: {
+    //         height: 400,
+    //         overflow: 'visible',
+    //     }
+    // }
 })
 
 export default styles;

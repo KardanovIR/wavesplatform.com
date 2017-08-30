@@ -5,7 +5,7 @@ export default theme => ({
     },
     imageWrapper: {
         position: 'relative',
-        paddingTop: '58.33%',
+        paddingTop: '56.36%',
         overflow: 'visible',
     },
     image: {
@@ -16,34 +16,39 @@ export default theme => ({
         left: 0,
         zIndex: -1,
         // @todo remove
-        // backgroundColor: 'rgba(0,0,0,.5)',
+        // backgroundColor: 'rgba(255,50,0,.1)',
+    },
+
+    imageCol: {
+        marginTop: theme.spacing.unit,
+        marginBottom: theme.spacing.unit * 2,
     },
 
     [theme.breakpoints.up('sm')]: {
         widthSetter: {
-            width: 640,
+            width: 600,
         },
         image: {
-            left: -40,
-            top: -40,
+            left: 0,
+            top: -30,
         },
     },
     [theme.breakpoints.up('md')]: {
         widthSetter: {
-            width: 900,
+            width: 800,
         },
         image: {
-            top: -70,
-            left: -50,
+            top: -60,
+            left: -30,
         },
     },
     [theme.breakpoints.up('lg')]: {
         widthSetter: {
-            width: 1200,
+            width: 1100,
         },
         image: {
-            top: -110,
-            left: 15,
+            top: -100,
+            left: 0,
         },
     },
 })

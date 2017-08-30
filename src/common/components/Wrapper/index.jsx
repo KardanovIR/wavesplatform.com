@@ -11,17 +11,22 @@ const styles = theme => {
             maxWidth: theme.breakpoints.lg,
             margin: '0 auto',
         },
-        [theme.mixins.atMedia('md')]: {
+        [theme.breakpoints.up('md')]: {
             container: {
-                padding: theme.spacing.getSpacing(5, 6, 0)
+                padding: theme.spacing.getSpacing(3, 6, 0)
             }
         },
-        [theme.mixins.atMedia('lg')]: {
+        [theme.breakpoints.up('lg')]: {
             container: {
-                padding: theme.spacing.getSpacing(8, 9, 0)
+                padding: theme.spacing.getSpacing(4, 9, 0)
             }
         },
-        content: { }
+        [theme.breakpoints.up('xl')]: {
+            container: {
+                padding: theme.spacing.getSpacing(4.5, 9, 0)
+            }
+        },
+        // content: { }
     }
 }
 

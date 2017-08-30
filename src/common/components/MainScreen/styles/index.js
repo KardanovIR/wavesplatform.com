@@ -9,22 +9,22 @@ const styles = theme => ({
     },
 
     root: {
-        marginBottom: '90px',
+        marginBottom: '70px',
         // marginBottom for displays
         [theme.breakpoints.up('sm')]: {
-            marginBottom: '100px',
+            marginBottom: '80px',
         },
         [theme.breakpoints.up('md')]: {
-            marginBottom: '150px',
+            marginBottom: '100px',
         },
         [theme.breakpoints.up('lg')]: {
-            marginBottom: '220px',
+            marginBottom: '120px',
         },
     },
 
-    imageCol: {
-        margin: [theme.spacing.unit, 0, theme.spacing.unit * 2],
-    },
+    // imageCol: {
+    //     margin: [theme.spacing.unit, 0, theme.spacing.unit * 2],
+    // },
 
     buttonWrapper: {
         display: 'inline-block',

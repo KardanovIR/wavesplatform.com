@@ -4,8 +4,6 @@ import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 
-import Margin from '../Margin';
-
 import links from './links';
 
 import injectSheet from 'react-jss';

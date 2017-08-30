@@ -3,9 +3,10 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 
 
-import bgWide from './img/wide_bgr.svg';
-import bgCommon from './img/common_bgr.svg';
-import bgProduct from './img/product_bgr.svg';
+import bgLight from './img/light_bgr.svg';
+import bgDark from './img/dark_bgr.svg';
+// import bgCommon from './img/common_bgr.svg';
+// import bgProduct from './img/product_bgr.svg';
 
 
 const styles = theme => ({
@@ -21,7 +22,8 @@ const styles = theme => ({
         zIndex: -1,
 
         width: '100vw',
-        backgroundSize: 'cover',
+        backgroundSize: 2560,
+        backgroundPosition: 'center bottom',
 
         backgroundRepeat: 'no-repeat',
 
@@ -31,39 +33,46 @@ const styles = theme => ({
         },
         [theme.breakpoints.up('lg')]: {
             top: -230,
-            width: 2560,
-            backgroundSize: '100%',
+            // width: 2560,
+            // backgroundSize: '100%',
         },
     },
 
     // height
-    wide: {
-        backgroundImage: `url(${bgWide})`,
-        height: 'calc(100% + 190px)',
-        [theme.breakpoints.up('sm')]: {
-            height: 'calc(100% + 200px)',
-        },
+    width: {
+        height: 'calc(100% + 250px)',
+        // [theme.breakpoints.up('sm')]: {
+        //     height: 'calc(100% + 280px)',
+        // },
         [theme.breakpoints.up('md')]: {
-            height: 'calc(100% + 300px)',
+            height: 'calc(100% + 320px)',
         },
         [theme.breakpoints.up('lg')]: {
-            height: 841,
+            // height: 841,
+            height: 'calc(100% + 400px)',
         },
     },
-    common: {
-        backgroundImage: `url(${bgCommon})`,
-        height: 'calc(100% + 190px)',
-        [theme.breakpoints.up('md')]: {
-            height: 500,
-        },
-        [theme.breakpoints.up('lg')]: {
-            height: 705,
-        },
+
+    light: {
+        backgroundImage: `url(${bgLight})`,
     },
-    product: {
-        composes: '$wide',
-        backgroundImage: `url(${bgProduct})`,
+    dark: {
+        backgroundImage: `url(${bgDark})`,
     }
+    // common: {
+    //     backgroundImage: `url(${bgCommon})`,
+    //     height: 'calc(100% + 190px)',
+    //     [theme.breakpoints.up('md')]: {
+    //         height: 500,
+    //     },
+    //     [theme.breakpoints.up('lg')]: {
+    //         height: 705,
+    //     },
+    // },
+    // product: {
+    //     composes: '$wide',
+    //     backgroundImage: `url(${bgProduct})`,
+    // }
 })
 
 
@@ -77,10 +86,11 @@ const MainScreenBackground = ({
             <div
                 className={cn(
                     classes.background,
+                    classes.width,
                     {
-                        [classes.product]: type === "product",
-                        [classes.wide]: type === "wide",
-                        [classes.common]: type === "common",
+                        [classes.dark]: type === "dark",
+                        [classes.light]: type === "light",
+                        // [classes.common]: type === "common",
                     },
                     className
                 )}
@@ -91,7 +101,7 @@ const MainScreenBackground = ({
 
     
 MainScreenBackground.defaultProps = {
-    type: 'common'
+    type: 'light'
 }
 
 

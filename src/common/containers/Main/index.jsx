@@ -40,11 +40,11 @@ const PageLayout = ({
 }) => (
         <Layout activeLink="Home">
 
-            <BackgroundMainScreen type="product">
+            <BackgroundMainScreen>
                 <MainScreen />
             </BackgroundMainScreen>
 
-            <Section top={3} bottom={2}>
+            <Section size={2}>
                 <NumbersQuote dexData={initialState.dexData} />
             </Section>
 

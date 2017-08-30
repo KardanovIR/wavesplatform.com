@@ -29,14 +29,13 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout activeLink="Developers">
         
-        <MainScreenBackground type="wide">
+        <MainScreenBackground type="dark">
             <MainScreen />
         </MainScreenBackground>
 
-        <div className={classes.sectionNarrow}>
+        <Section top={3} bottom={4}>
             <Description />
-        </div>
-
+        </Section>
 
         <Background className={classes.bgApi} skewed={true}>
             <div className={classes.sectionWide}>

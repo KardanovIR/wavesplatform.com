@@ -28,18 +28,18 @@ const DevelopersMainScreen = () => (
                     Documentation
                 </IconButton>
             ),
-            (
-                <IconButton
-                    key="main_cta_button2"
-                    // className={classes.secondCtaButton}
-                    href="https://github.com/wavesplatform/WavesGUI"
-                    target="_blank"
-                    iconName="github"
-                    bordered
-                >
-                    Client
-                </IconButton>
-            ),
+            // (
+            //    <IconButton
+            //         key="main_cta_button2"
+            //         // className={classes.secondCtaButton}
+            //         href="https://github.com/wavesplatform/WavesGUI"
+            //         target="_blank"
+            //         iconName="github"
+            //         bordered
+            //     >
+            //         Client
+            //     </IconButton>
+            // ),
         ]}
     />
 );
