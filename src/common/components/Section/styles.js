@@ -7,7 +7,18 @@ function capitalize(string) {
 
 
 const createClassesForSide = theme => side => ({
-    // [`padding-${side}-1`]: { },
+    [`padding-${side}-1`]: {
+        [`padding${capitalize(side)}`]: theme.spacing.unit * 4,
+        [theme.breakpoints.up('sm')]: {
+            [`padding${capitalize(side)}`]: theme.spacing.unit * 5,
+        },
+        [theme.breakpoints.up('md')]: {
+            [`padding${capitalize(side)}`]: theme.spacing.unit * 6,
+        },
+        [theme.breakpoints.up('lg')]: {
+            [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
+        },
+    },
 
     // section narrow
     [`padding-${side}-2`]: {

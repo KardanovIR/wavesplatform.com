@@ -5,19 +5,14 @@ import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
-
 import injectSheet from 'react-jss';
 
 
 
 const styles = theme => ({
-    image: {
-        maxWidth: '100%'
-    },
     buttonWrapper: {
         marginBottom: theme.spacing.unit * 2,
     },
-
     'button-wrapper-left': {
         composes: '$buttonWrapper',
     },
@@ -67,7 +62,7 @@ const PictureBlock = ({
     align,
 }) => (
     <div>
-        <Row className={align === 'right' ? classes.rowRight : ''}>
+        <Row className={align === 'right' ? classes.rowRight : ''} style={{ alignItems: 'flex-start' }}>
             <Col xs={12}>
                 <Row centered> 
                     <Col xs={12} md={8} lg={7}>

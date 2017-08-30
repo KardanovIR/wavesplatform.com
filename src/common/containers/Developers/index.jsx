@@ -33,7 +33,7 @@ const PageLayout = ({ classes }) => (
             <MainScreen />
         </MainScreenBackground>
 
-        <Section top={3} bottom={4}>
+        <Section top={3} bottom={1}>
             <Description />
         </Section>
 
@@ -56,12 +56,12 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <Section size={4}> 
+        <Section top={4}> 
             <WavesNetwork />
-            
-            <Section>
-                <Community />
-            </Section>
+        </Section>
+
+        <Section top={2} bottom={4}>
+            <Community />
         </Section>
 
     </Layout>

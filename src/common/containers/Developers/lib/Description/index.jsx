@@ -15,7 +15,7 @@ const Description = () => (
     <Row>
         <Col xs={12} sm={6} lg={3}>
             <Article
-                title="Proof-of-Stake"
+                title="Proof-of-Stake algorithm"
                 text="Waves’s blockchain uses a Proof-of-stake (PoS) algorithm, with participants being rewarded from the commission on transactions made."
             />
             <Margin bottom={4} />  
@@ -29,7 +29,7 @@ const Description = () => (
         </Col>
         <Col xs={12} sm={6} lg={3}>
             <Article
-                title="Low fees"
+                title="Low fixed transaction fee"
                 text="The minimum commission for a transfer of funds is 0,001 Waves. The fixed commission for market orders is 0,003 Waves. The price of releasing a token is 1 Waves and you do not pay to use your token."
             />
             <Margin bottom={4} />  
