@@ -23,10 +23,10 @@ const Footer = ({ classes, links }) => (
         <Background className={classes.background} skewed={false}>
             <footer className={classes.footer}>
                 <Row className={classes.row}>
-                    <Col xs={12} sm={12} md={6} className={classes.social}>
+                    <Col xs={12} sm={12} md={5} className={classes.social}>
                         <Social />
                     </Col>
-                    <Col xs={12} sm={12} md={5} className={classes.nav}>
+                    <Col xs={12} sm={12} md={6} className={classes.nav}>
                         <div className={classes.navWrapper}>
                             <FooterNav links={links} />
                         </div>

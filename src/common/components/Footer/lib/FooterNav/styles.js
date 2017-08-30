@@ -13,7 +13,7 @@ export default theme => ({
         },
 
         [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing.getSpacing(1, 3),
+            padding: theme.spacing.getSpacing(1, 2),
         }
     },
 })

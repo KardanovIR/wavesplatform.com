@@ -9,7 +9,12 @@ import cn from 'classnames';
 const styles = {
     wrapper: {
         position: 'relative',
-        overflow: 'visible'
+        overflow: 'visible',
+
+        // @HACK to force compositing
+        // for smooth overlaying element animations
+        '-webkit-backface-visibility': 'hidden',
+        backfaceVisibility: 'hidden',
     },
     background: {
         position: 'absolute',

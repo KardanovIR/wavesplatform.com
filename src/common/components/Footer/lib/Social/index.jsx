@@ -16,7 +16,7 @@ import icons from './icons';
 const Social = ({ classes }) => (
     <Row className={classes.wrapper}>
         {icons.map((icon, index) => (
-            <Col xs={2} sm={1} key={`social_icon_${index}`}>
+            <Col className={classes.col} sm key={`social_icon_${index}`}>
                 <Link
                     href={icon.href}
                     target="_blank"

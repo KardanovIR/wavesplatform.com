@@ -26,7 +26,10 @@ const socialButtonStyles = theme => ({
         height: 40,
         padding: 0,
         marginRight: theme.spacing.unit * 2,
-        borderRadius: '50%'
+        borderRadius: '50%',
+        '&:before, &:after': {
+            borderRadius: '50%',
+        }
     },
 })
 

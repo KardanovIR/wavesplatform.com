@@ -31,9 +31,39 @@ const styles = theme => ({
 
         padding: theme.spacing.getSpacing(0, 4),
 
-        transition: theme.transitions.create(['background-color', 'color']),
+        transition: theme.transitions.create(['transform']),
+        willChange: 'transform',
+        // transformOrigin: 'center bottom',
 
         boxShadow: '0 2px 4px 0 rgba(39, 47, 89, 0.25)',
+
+        // for HOVER and FOCUS ANIMATIONS
+        '&:after, &:before': {
+            content: '""',
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            borderRadius: theme.spacing.radius,
+            opacity: 0,
+            transition: theme.transitions.create(['opacity']),
+            willChange: 'opacity',
+        },
+
+        '&:before': {
+            zIndex: 2,
+            background: 'rgba(255,255,255,.2)',
+        },
+        '&:after': {
+            boxShadow: '0 2px 9px 2px rgba(39, 47, 89, .25)',
+        },
+
+        '&:hover': {
+            transform: 'scale(1.01) translateY(-1px)',
+            '&:after, &:before': { opacity: 1 }
+        },
 
         '&:disabled': {
             opacity: 0.6,
@@ -50,24 +80,18 @@ const styles = theme => ({
             color: theme.palette.gray[0],
         },
         '&:hover': {
-            backgroundColor: theme.palette.primary[700],
-        },
-        '&:focus': {
-            backgroundColor: theme.palette.primary[700],
+            '&:before': { opacity: 0.3 }
         },
     },
     light: {
         backgroundColor: theme.palette.gray[0],
+        transformOrigin: 'center bottom',
+
         '& $content, & $spinner': {
             color: theme.palette.primary[700]
         },
-        '&$button:hover': {
-            backgroundColor: theme.palette.cyan[300],
-        },
-        '&$button:focus': {
-            backgroundColor: theme.palette.cyan[300],
-        },
     },
+
     bordered: {
         backgroundColor: 'transparent',
         boxShadow: `inset 0 0 0 1px ${theme.palette.gray[0]}`,
