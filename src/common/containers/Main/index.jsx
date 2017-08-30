@@ -48,18 +48,18 @@ const PageLayout = ({
                 <NumbersQuote dexData={initialState.dexData} />
             </Section>
 
-            <Section bottom={3}>
+            <Section bottom={2}>
                 <Audience />
             </Section>
 
             <Background className={classes.bgClient} skewed={true}>
-                <Section bottom={2}>
+                <Section size={3}>
                     <WavesClient />
                 </Section>
             </Background>
 
 
-            <Section>
+            <Section size={2}>
                 <Wallet />
             </Section>
 
@@ -67,7 +67,7 @@ const PageLayout = ({
                 <DEX />
             </Section>
 
-            <Background className={classes.bgDex} skewed={true}>
+            <Background className={classes.bgTokens} skewed={true}>
                 <div className={classes.sectionWide}>
                     <IssuingTokens />
                     <Margin bottom={5} />

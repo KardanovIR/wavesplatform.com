@@ -1,12 +1,14 @@
 export default theme => ({
     root: {
-        position: 'relative'
+        position: 'relative',
+        overflow: 'hidden',
     },
     image: {
         width: '100%',
         paddingBottom: '100%',
         backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        transition: theme.transitions.create('transform', theme.transitions.duratonMedium)
     },
     overlay: {
         position: 'absolute',
@@ -32,13 +34,21 @@ export default theme => ({
         marginBottom: theme.spacing.unit/2,
         color: theme.palette.gray[50]
     },
-    [theme.mixins.atMedia('md')]: {
+    [theme.breakpoints.up('md')]: {
+        root: {
+            '&:hover': {
+                '& $image': {
+                    transform: 'scale(1.02)'
+                },
+                '& $overlay': {
+                    opacity: 1
+                }
+            } 
+        },
+        image: {},
         overlay: {
             opacity: 0,
             transition: theme.transitions.create('opacity', theme.transitions.duratonMedium),
-            '&:hover': {
-                opacity: 1
-            }
-        }
+        },
     }
 })

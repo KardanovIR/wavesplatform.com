@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from 'src/common/components/Typography';
-
+import Margin from 'src/common/components/Margin';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -21,24 +21,19 @@ const TitleTextCTA = ({
     buttons
 }) => (
         <div className={className}>
-            <div className={classes.title}>
-                <Typography inverted={inverted} type={titleType}>
-                    {title}
-                </Typography>
-            </div>
+            <Typography inverted={inverted} type={titleType}>
+                {title}
+            </Typography>
+            <Typography inverted={inverted} type={textType} cut>
+                {text}
+            </Typography>
 
-
-            <div className={classes.text}>
-                <Typography inverted={inverted} type={textType} cut>
-                    {text}
-                </Typography>
-            </div>
-
-
+            { !!buttons.length && <Margin bottom={3} /> }
+            
             <div>
                 {buttons.map((button, index) => (
                     <div className={classes.buttonWrapper} key={`cta_button_wrapper_${index}`}>
-                        { button }
+                        {button}
                     </div>
                 ))}
             </div>

@@ -7,19 +7,26 @@ export default theme => ({
     },
     
     bg: {
-        composes: '$desktopOnly',
+        // composes: '$desktopOnly',
         backgroundRepeat: 'no-repeat',
-        minWidth: 2560,
+        [theme.breakpoints.up('lg')]: {
+            minWidth: 2560,
+        }
     },
 
     bgClient: {
         composes: '$bg',
-        backgroundImage: 'linear-gradient(-155deg, #F7F9FC 0%, rgba(255, 255, 255, 0) 50%)'
+        backgroundImage: 'linear-gradient(200deg, #c0dafd 0, rgba(255, 255, 255, 0.0) 50%)'
     },
-
+    
     bgDex: {
         composes: '$bg',
         backgroundImage: 'linear-gradient(-200deg, #F7F9FC 0%, rgba(255, 255, 255, 0) 50%)'
+    },
+
+    bgTokens: {
+        composes: '$bg',
+        backgroundImage: 'linear-gradient(150deg, #c0dafd 0, rgba(255, 255, 255, 0.0) 50%)'
     },
 
     bgFeatures: {

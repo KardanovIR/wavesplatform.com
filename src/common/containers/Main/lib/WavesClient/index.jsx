@@ -3,6 +3,7 @@ import React from 'react';
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
 import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
+import Margin from 'src/common/components/Margin';
 
 
 import injectSheet from 'react-jss';
@@ -12,12 +13,13 @@ import styles from './styles';
 
 const MainScreen = ({ classes }) => (
     <Row className={classes.root} alignItems="center">
-        <Col xs={9} sm={6}>
+        <Col xs={12} sm={6}>
             <div className={classes.imageWrapper}>
                 <div className={classes.image} />
             </div>
+            <Margin />
         </Col>
-        <Col xs={12} sm={6}>
+        <Col xs={12} sm={6} md={5} mdOffset={1}>
             <div className={classes.titleTextCtaWrapper}>
                 <TitleTextCTA
                     title="The Waves Client"

@@ -62,7 +62,6 @@ const styles = theme => ({
 
         '&:hover': {
             transform: 'scale(1.01) translateY(-1px)',
-            '&:after, &:before': { opacity: 1 }
         },
 
         '&:disabled': {
@@ -80,15 +79,18 @@ const styles = theme => ({
             color: theme.palette.gray[0],
         },
         '&:hover': {
-            '&:before': { opacity: 0.3 }
+            '&:before': { opacity: 0.3 },
+            '&:after': { opacity: 1 }
         },
     },
     light: {
         backgroundColor: theme.palette.gray[0],
         transformOrigin: 'center bottom',
-
         '& $content, & $spinner': {
             color: theme.palette.primary[700]
+        },
+        '&:hover': {
+            '&:after': { opacity: 1 }
         },
     },
 
