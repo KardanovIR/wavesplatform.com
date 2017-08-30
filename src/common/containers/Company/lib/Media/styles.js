@@ -6,16 +6,15 @@ const styles = theme => ({
     },
     media: {
         ...flexCentered,
-        paddingTop: theme.spacing.unit * 6,
-        paddingBottom: theme.spacing.unit * 6,
         marginBottom: theme.spacing.unit * 3,
+        height: 180
     },
     logo: {
         maxWidth: '80%',
         height: 'auto'
     },
     link: {
-        display: 'block'
+        display: 'block',
     },
     contactUs: {
         textAlign: 'center'

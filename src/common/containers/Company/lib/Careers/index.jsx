@@ -27,7 +27,7 @@ const Team = ({
 
                 <Margin bottom={3} />
 
-                <Button href="mailto:job@wavesplatform.com" secondary>Submit a resume</Button>
+                <Button href="mailto:hr@wavesplatform.com" secondary>Submit a resume</Button>
             </Col>
         </Row>
     );

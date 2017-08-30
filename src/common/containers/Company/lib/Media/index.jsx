@@ -11,7 +11,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 
-import media from './media';
+import media from './media.json';
 
 
 
@@ -32,7 +32,7 @@ const Team = ({
                 <Col key={`media_org_${index}`} xs={12} sm={6} md={4}>
                     <a href={contact.url} target="_blank" className={classes.link}>
                         <Panel className={classes.media}>
-                            <img src={contact.image} className={classes.logo} alt="Media contact" />
+                            <img src={contact.logo} className={classes.logo} alt="Media contact" />
                         </Panel>
                     </a>
                 </Col>
@@ -50,7 +50,7 @@ const Team = ({
                 <Margin bottom={2} />
 
                 <Margin right={1} bottom={2} display="inline-block">
-                    <Button href="mailto:contact@wavesplatform.com">Contact us</Button>
+                    <Button href="mailto:support@wavesplatform.com">Contact us</Button>
                 </Margin>
                 <Button href="#" color="gray-500" secondary>Branding package</Button>
             </Col>
