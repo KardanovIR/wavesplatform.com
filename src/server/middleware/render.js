@@ -51,13 +51,15 @@ export const render = (scriptName, Component = 'span') =>
             script = `/static/${scriptName}.js`;
         }
 
+        const fixedFonts = fonts.toString().replace(/woff2\), /g, 'woff2),\n');
+
 
         const html = renderToStaticMarkup(
             <Html
                 script={script}
                 vendorChunk={vendorChunk}
                 content={content}
-                fonts={fonts.toString()}
+                fonts={fixedFonts}
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
             />

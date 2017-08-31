@@ -17,11 +17,11 @@ const Team = ({
 }) => (
         <Row>
             <Col xs={12} className={classes.centered}>
-                <Typography type="display3" align="center" inverted>
+                <Typography type="display3" align="center" inverted dimmed>
                     Careers
                 </Typography>
                 
-                <Typography type="body2" align="center" inverted className={classes.narrow}>
+                <Typography type="body2" align="center" inverted dimmed className={classes.narrow}>
                     We’d be happy to welcome you to our team. Come change the world with us.
                 </Typography>
 

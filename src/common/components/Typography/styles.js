@@ -63,6 +63,9 @@ const styles = theme => ({
     inverted: {
         color: theme.palette.gray[0]
     },
+    dimmed: {
+        color: theme.palette.gray[100]
+    },
     // colored: {
     //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
     // },

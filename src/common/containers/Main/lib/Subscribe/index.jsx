@@ -16,10 +16,10 @@ const Subscribe = ({ classes }) => (
     <Background className={classes.background}>
         <div className={classes.root}>
             <div className={classes.textCentered}>
-                <Typography type="display2" inverted>
+                <Typography type="display2" inverted dimmed>
                     Don’t Miss Important News
                 </Typography>
-                <Typography type="body" inverted>
+                <Typography type="body" inverted dimmed>
                     We do more than just develop more the technical aspect of the platform, we also participate actively in integrating blockchain economy in the real world. Subscribe to our news to keep up to date with all the most interesting happenings.
                 </Typography>
             </div>
