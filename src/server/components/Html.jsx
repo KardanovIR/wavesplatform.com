@@ -11,7 +11,7 @@ const Html = ({
     script,
     vendorChunk,
     style,
-    
+    fonts,
     gtmEnabled,
     sentryEnabled,
 }) => (
@@ -43,10 +43,11 @@ const Html = ({
                 ` }}
             />
 
+            {/* Page fonts */}
+            <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
+
             {/* Page styles */}
-            <style type="text/css" data-jss-server>
-                { style }
-            </style>
+            <style type="text/css" data-jss-server dangerouslySetInnerHTML={{ __html: style }} />
         </head>
         <body>
             {/* GTM enable */}

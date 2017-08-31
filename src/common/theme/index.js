@@ -1,5 +1,3 @@
-export { default as typeface } from './typeface';
-
 // directly imported objects
 import palette from './palette';
 import transitions from './transitions';

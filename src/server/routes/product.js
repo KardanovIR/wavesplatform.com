@@ -5,12 +5,7 @@ import { getDexData } from '../middleware/getDexData';
 import { render } from '../middleware/render';
 
 
-
-let Product;
-if (process.env.NODE_ENV === 'production') {
-    Product = require.ensure('../../common/containers/Product');
-}
-
+import Product from 'src/common/containers/Product';
 
 
 export default compose([

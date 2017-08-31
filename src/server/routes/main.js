@@ -4,11 +4,7 @@ import { getDexData } from '../middleware/getDexData';
 import { render } from '../middleware/render';
 
 
-let Main;
-if (process.env.NODE_ENV === 'production') {
-    Main = require.ensure('../../common/containers/Main');
-}
-
+import Main from 'src/common/containers/Main';
 
 
 export default compose([

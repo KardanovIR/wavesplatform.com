@@ -5,6 +5,8 @@ import { JssProvider, SheetsRegistry } from 'react-jss';
 
 // React html component with <html>, <head> etc.
 import Html from 'src/server/components/Html';
+import FontInliner from 'src/server/components/FontInliner';
+
 
 
 export const render = (scriptName, Component = 'span') =>
@@ -21,10 +23,18 @@ export const render = (scriptName, Component = 'span') =>
 
         // component markup and styles
         const sheets = new SheetsRegistry();
-
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
                 <RenderedComponent initialState={ctx.state.initialState} />
+            </JssProvider>
+        )
+
+
+        // fonts
+        const fonts = new SheetsRegistry();
+        renderToStaticMarkup(
+            <JssProvider registry={fonts}>
+                <FontInliner />
             </JssProvider>
         )
 
@@ -47,6 +57,7 @@ export const render = (scriptName, Component = 'span') =>
                 script={script}
                 vendorChunk={vendorChunk}
                 content={content}
+                fonts={fonts.toString()}
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
             />

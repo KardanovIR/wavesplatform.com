@@ -37,6 +37,12 @@ app
             console.error(err);
         }
     })
+    // .use(async (ctx, next) => {
+    //     if (~ctx.url.indexOf('/static')) {
+    //         console.log(ctx.url);
+    //     }
+    //     await next();
+    // })
     .use(bodyParser())
     .use(mount('/static', serve('./dist')))
     .use(readAssets)
