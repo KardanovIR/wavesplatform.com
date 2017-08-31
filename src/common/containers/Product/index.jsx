@@ -101,7 +101,7 @@ const PageLayout = ({ classes, initialState }) => (
         </Section>
 
         <Background className={classes.bgTokens} skewed={true}>
-            <Section size={4}>
+            <Section top={4} bottom={2}>
                 <IssuingTokens />
             </Section>
         </Background>

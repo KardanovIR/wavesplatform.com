@@ -18,6 +18,8 @@ const Margin = ({
     right,
     bottom,
     left,
+
+    xsOnly,
     
     display,
 
@@ -37,7 +39,8 @@ const Margin = ({
         [classes[`margin-bottom-${String(bottom)}`]]: typeof bottom === 'number',
         [classes['margin-left-2']]: left === true,
         [classes[`margin-left-${String(left)}`]]: typeof left === 'number',
-        [classes['inline-block']]: display === 'inline-block'
+        [classes['inline-block']]: display === 'inline-block',
+        [classes.xsOnly]: xsOnly
     }, classNameProp);
 
 
