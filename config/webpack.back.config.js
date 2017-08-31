@@ -86,7 +86,7 @@ module.exports = {
             path.join(__dirname, '../'),
             'node_modules'
         ],
-        extensions: ['.pug', '.jsx', '.js', '.tsx', '.ts', '.json', '.css', '.scss']
+        extensions: ['.pug', '.jsx', '.js', '.json', '.css']
     },
     externals: nodeModules,
     plugins: [
@@ -94,7 +94,7 @@ module.exports = {
             banner: 'require("source-map-support/register");', // the banner as string, it will be wrapped in a comment
             raw: true, // if true, banner will not be wrapped in a comment
             entryOnly: false, // if true, the banner will only be added to the entry chunks
-        })
+        }),
     ],
     devtool: 'inline-source-map'
 };

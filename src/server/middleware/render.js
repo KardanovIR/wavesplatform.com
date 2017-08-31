@@ -52,7 +52,7 @@ export const render = (scriptName, Component = 'span') =>
         }
 
 
-        ctx.body = `<!DOCTYPE html>${renderToStaticMarkup(
+        const html = renderToStaticMarkup(
             <Html
                 script={script}
                 vendorChunk={vendorChunk}
@@ -61,5 +61,7 @@ export const render = (scriptName, Component = 'span') =>
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
             />
-        )}`;
+        );
+
+        ctx.body = `<!DOCTYPE html>${html}`;
     }

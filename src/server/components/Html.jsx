@@ -53,7 +53,7 @@ const Html = ({
             {/* GTM enable */}
             { gtmEnabled && <GtmBody /> }
 
-            <div style={{ opacity: ".4" }} id="app" dangerouslySetInnerHTML={{ __html: content }} />
+            <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
             { vendorChunk && <script type="text/javascript" src={vendorChunk} /> }
             <script type="text/javascript" src={script} />
 

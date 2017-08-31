@@ -81,7 +81,7 @@ module.exports = {
             path.join(__dirname, '../'),
             'node_modules'
         ],
-        extensions: ['.jsx', '.js', '.css', '.scss', '.json']
+        extensions: ['.jsx', '.js', '.css', '.json']
     },
 
     plugins: [
