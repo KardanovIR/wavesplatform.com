@@ -4,7 +4,7 @@ services:
     build: ./config/nginx
     links:
       - balancer
-      # - static
+      - static
     ports:
      - "80:80"
   balancer:
@@ -24,7 +24,7 @@ services:
     build: .
     expose:
      - "3001"
-  # static:
-  #   build: .
-  #   expose:
-  #    - "3001"
+  static:
+    build: .
+    expose:
+     - "3001"
