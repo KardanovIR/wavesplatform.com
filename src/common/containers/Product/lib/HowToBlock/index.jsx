@@ -36,9 +36,13 @@ const HowToBlock = ({
         { quote && (
             <Col xs={12}>
                 <Margin bottom={3}>
-                    <Typography className={classes.quote} type="quote">
-                        { quote }
-                    </Typography>
+                    <Row centered>
+                        <Col xs={12} md={10}> 
+                            <Typography className={classes.quote} type="quote">
+                                { quote }
+                            </Typography>
+                        </Col>
+                    </Row>
                 </Margin>
             </Col>
         ) }
