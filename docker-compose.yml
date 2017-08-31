@@ -3,23 +3,28 @@ services:
   nginx:
     build: ./config/nginx
     links:
-      - node1
+      - balancer
+      # - static
     ports:
      - "80:80"
-  # balancer:
-  #   image: dockercloud/haproxy
-  #   links:
-  #     - node1
-  #     # - node2
-  #   volumes:
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #   expose:
-  #     - "80"
+  balancer:
+    image: dockercloud/haproxy
+    links:
+      - node1
+      - node2
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    expose:
+      - "80"
   node1:
     build: .
     expose:
      - "3001"
-  # node2:
+  node2:
+    build: .
+    expose:
+     - "3001"
+  # static:
   #   build: .
   #   expose:
   #    - "3001"

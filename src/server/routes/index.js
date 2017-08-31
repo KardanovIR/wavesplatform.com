@@ -27,6 +27,7 @@ router
         ctx.body = { result: 'success' };
     })
     .get('*', async ctx => {
+        ctx.status = 404;
         ctx.body = notFound();
     })
 

@@ -37,14 +37,8 @@ app
             console.error(err);
         }
     })
-    // .use(async (ctx, next) => {
-    //     if (~ctx.url.indexOf('/static')) {
-    //         console.log(ctx.url);
-    //     }
-    //     await next();
-    // })
     .use(bodyParser())
-    .use(mount('/static', serve('./dist')))
+    .use(mount('/static', serve('./dist', { maxage: 2592000000 })))  // 30 days
     .use(readAssets)
     .use(router.routes())
     // .on('error', err => {
