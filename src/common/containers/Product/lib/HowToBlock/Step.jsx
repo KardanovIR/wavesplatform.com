@@ -11,7 +11,7 @@ const styles = theme => ({
         textAlign: 'center',
         paddingTop: theme.spacing.unit * 5,
         paddingBottom: theme.spacing.unit * 4,
-        height: '100%'
+        flex: 1,
     },
     avatar: {
         display: 'inline-block',

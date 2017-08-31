@@ -15,7 +15,8 @@ const styles = theme => ({
         display: 'flex',
     },
     columnContent: {
-        flex: 1
+        flex: 1,
+        display: 'flex',
     }
 })
 

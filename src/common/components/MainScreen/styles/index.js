@@ -29,7 +29,10 @@ const styles = theme => ({
 
     buttonWrapper: {
         display: 'inline-block',
-        margin: [0, theme.spacing.unit * 2, theme.spacing.unit * 2, 0]
+        margin: [0, theme.spacing.unit * 2, theme.spacing.unit * 2, 0],
+        '&:last-of-type': {
+            marginRight: 0
+        }
     },
 
     [theme.mixins.atMedia('sm')]: {
