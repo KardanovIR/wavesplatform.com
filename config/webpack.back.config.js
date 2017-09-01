@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
+const createAlias = require('./lib/createAlias');
 
 
 const includedDirectories = [
@@ -86,7 +87,8 @@ module.exports = {
             path.join(__dirname, '../'),
             'node_modules'
         ],
-        extensions: ['.pug', '.jsx', '.js', '.json', '.css']
+        extensions: ['.pug', '.jsx', '.js', '.json', '.css'],
+        alias: createAlias()
     },
     externals: nodeModules,
     plugins: [

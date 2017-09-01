@@ -10,8 +10,8 @@ import main from './main';
 import product from './product';
 
 // page components
-import Developers from '../../common/containers/Developers';
-import Company from '../../common/containers/Company';
+import Developers from 'src/common/containers/Developers';
+import Company from 'src/common/containers/Company';
 
 
 
