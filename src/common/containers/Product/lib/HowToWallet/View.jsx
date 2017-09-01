@@ -9,17 +9,20 @@ import HowToBlock from '../HowToBlock';
 
 
 
-const HowToStart = () => (
+const HowToStart = ({
+    onGetClientClick
+}) => (
     <HowToBlock
-        title="How do I start trading on the Waves DEX?"
+        title="How do I start using my Waves wallet?"
         steps={[
             {
                 avatar: <IconProduct name="cloud" circle />,
                 text: (
                     <div>
                         First, install the Waves client.
-                        <Margin />
+                            <Margin />
                         <Button
+                            onClick={onGetClientClick}
                             key="main_cta_button"
                             target="_blank"
                             href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
@@ -35,7 +38,7 @@ const HowToStart = () => (
             },
             {
                 avatar: <IconProduct name="dex" circle />,
-                text: "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
+                text: "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
             },
         ]}
     />

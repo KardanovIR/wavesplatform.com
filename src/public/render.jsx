@@ -30,7 +30,6 @@ const store = createStore(
 
 
 
-
 // run app
 export const render = (Component, callback = () => { }) => {
     const appNode = document.getElementById('app');
