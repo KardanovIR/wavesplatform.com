@@ -33,6 +33,22 @@ export default [
         ],
     },
     {
+        "firstName": "Igor",
+        "lastName": "Pugachevsky",
+        "position": "Director of Product",
+        "imageUrl": `${require('./img/pugachevsky.jpg')}`,
+        "social": [
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/pugachevsky"
+            },
+            {
+                "type": "linkedin",
+                "url": "https://www.linkedin.com/in/pugachevsky/"
+            },
+        ],
+    },
+    {
         "firstName": "Alexandra",
         "lastName": "Pestretsova",
         "position": "CMO",
@@ -53,22 +69,6 @@ export default [
             {
                 "type": "email",
                 "url": "mailto:malyova@wavesplatform.com"
-            },
-        ],
-    },
-    {
-        "firstName": "Igor",
-        "lastName": "Pugachevsky",
-        "position": "Director of Product",
-        "imageUrl": `${require('./img/pugachevsky.jpg')}`,
-        "social": [
-            {
-                "type": "facebook",
-                "url": "https://www.facebook.com/pugachevsky"
-            },
-            {
-                "type": "linkedin",
-                "url": "https://www.linkedin.com/in/pugachevsky/"
             },
         ],
     },

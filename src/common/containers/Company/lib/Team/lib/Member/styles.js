@@ -8,7 +8,9 @@ export default theme => ({
         paddingBottom: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        transition: theme.transitions.create('transform', theme.transitions.duratonMedium)
+        transition: theme.transitions.create(['transform','filter'], theme.transitions.duratonMedium),
+
+        filter: 'grayscale(100%)',
     },
     overlay: {
         position: 'absolute',
@@ -38,7 +40,8 @@ export default theme => ({
         root: {
             '&:hover': {
                 '& $image': {
-                    transform: 'scale(1.02)'
+                    transform: 'scale(1.02)',
+                    filter: 'grayscale(100%)'
                 },
                 '& $overlay': {
                     opacity: 1
