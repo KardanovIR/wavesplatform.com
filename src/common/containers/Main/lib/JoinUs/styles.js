@@ -6,8 +6,7 @@ const styles = theme => ({
         display: 'flex'
     },
     iconWrapper: {
-        flex: 0,
-        flexBasis: 41,
+        flex: '0 0 40px',
         marginRight: theme.spacing.unit * 3
     },
     [theme.mixins.atMedia('md')]: {

@@ -28,7 +28,12 @@ const Whitepaper = ({ classes }) => (
 
             <Margin bottom={3} />
             
-            <Button>Download Whitepaper</Button>
+            <Button
+                href="https://wavesplatform.com/files/whitepaper_v0.pdf"
+                target="_blank"
+            >
+                Download Whitepaper
+            </Button>
         </Col>
     </Row>
 );

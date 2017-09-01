@@ -19,7 +19,8 @@ export default theme => ({
     },
 
     buttonWrapper: {
-        flex: '0 0'
+        flex: '0 0',
+        flexBasis: 'content',
     },
     buttonFull: {
         display: 'none'
