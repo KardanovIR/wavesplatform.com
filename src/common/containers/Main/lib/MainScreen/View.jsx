@@ -9,7 +9,10 @@ import Image from '!svg-react-loader!./img/image.svg';
 
 
 
-const DevelopersMainScreen = () => (
+const IndexMainScreen = ({
+    onGetClientClick,
+    onGetWavesClick,
+}) => (
     <MainScreen
         title="Get started with blockchain"
         text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
@@ -18,6 +21,7 @@ const DevelopersMainScreen = () => (
         buttons={[
             (
                 <Button
+                    onClick={onGetClientClick}
                     key="main_cta_button"
                     target="_blank"
                     href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
@@ -25,10 +29,10 @@ const DevelopersMainScreen = () => (
                     Get Client
                 </Button>
             ),
-            <Button withLoader secondary key="main_cta_button2">Get Waves</Button>,
+            <Button onClick={onGetWavesClick} withLoader secondary key="main_cta_button2">Get Waves</Button>,
         ]}
     />
 );
 
 
-export default DevelopersMainScreen;
+export default IndexMainScreen;
