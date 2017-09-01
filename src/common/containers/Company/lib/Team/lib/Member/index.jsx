@@ -27,7 +27,7 @@ const Member = ({
                     { social.map(contact => (
                         <Link
                             textDecoration={false}
-                            target="_blank"
+                            target={contact.type === 'email' ? undefined : "_blank"}
                             href={contact.url}
                             key={`${lastName}_${contact.type}`}
                             className={classes.icon}

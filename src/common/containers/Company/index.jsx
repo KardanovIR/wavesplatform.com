@@ -18,18 +18,13 @@ import Media from './lib/Media';
 import Careers from './lib/Careers';
 
 
-
-// @todo remove
-// --== MOCK ==--
-import members from './__mocks/members';
-
-
-
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
 
 
+
+import teamMembers from './team';
 
 
 const PageLayout = ({ classes }) => (
@@ -43,7 +38,7 @@ const PageLayout = ({ classes }) => (
         </MainScreenBackground>
 
         <Section> 
-            <Team members={members} />
+            <Team members={teamMembers} />
         </Section>
 
         <Background className={classes.bgWhitepaper} skewed={true}>
@@ -54,7 +49,7 @@ const PageLayout = ({ classes }) => (
 
 
         <div className={classes.sectionWide}>
-            <Media members={members} />
+            <Media />
         </div>
 
 

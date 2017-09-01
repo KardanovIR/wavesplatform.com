@@ -22,7 +22,7 @@ const Facts = ({
             </Col>
             <Col xs={12} sm={5} smOffset={2}>
                 <Typography type="display1" className={classes.fact}>
-                    Totaling a market capitalization of more than $2 000 000 000
+                    Totaling a market capitalization of more than $1 000 000 000
                     </Typography>
             </Col>
         </Row>
