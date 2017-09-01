@@ -33,13 +33,14 @@ const Layout = ({
     children,
     classes,
     activeLink,
+    hideFooter
 }) => (
     <Wrapper>
         <div className={classes.navigationWrapper}>
             <Navigation links={links} activeLink={activeLink} />
         </div>
         <div>{children}</div>
-        <Footer links={links} />
+        { !hideFooter && <Footer links={links} /> }
     </Wrapper>
 )
 

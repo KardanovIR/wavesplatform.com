@@ -8,6 +8,7 @@ import { render } from '../middleware/render';
 // import { render } from '../middleware/render';
 import main from './main';
 import product from './product';
+import Error404 from './Error404';
 
 // page components
 import Developers from 'src/common/containers/Developers';
@@ -26,10 +27,7 @@ router
         console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };
     })
-    .get('*', async ctx => {
-        ctx.status = 404;
-        ctx.body = notFound();
-    })
+    .get('*', Error404)
 
 
 export default router;
