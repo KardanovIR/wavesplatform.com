@@ -1,1 +1,2 @@
-export { default as log } from './log';
+// @todo implement middleware here
+// export { default as log } from './log';

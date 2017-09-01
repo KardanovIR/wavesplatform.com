@@ -23,7 +23,7 @@ const store = createStore(
 	s => s,
 	getInitialState(),
 	compose(
-		applyMiddleware(log),
+		// applyMiddleware(log),
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 )
