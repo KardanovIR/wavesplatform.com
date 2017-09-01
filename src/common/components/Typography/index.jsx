@@ -34,8 +34,6 @@ const Typography = ({
             [classes.dimmed]: dimmed,
             [classes.cut]: cut,
             // [classes.colored]: color
-            // [classes[`margin-${String(type)}`]]: margin === true,
-            // [classes[`margin-${String(type)}-${String(margin)}`]]: margin && margin !== true
         },
         classNameProp
     );
@@ -81,7 +79,6 @@ Typography.propTypes = {
     cut: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
     inverted: PropTypes.bool,
     dimmed: PropTypes.bool,
-    // margin: PropTypes.oneOf([true, ...types])
 }
 
 
