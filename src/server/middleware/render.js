@@ -3,13 +3,18 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
 // React html component with <html>, <head> etc.
 import Html from 'src/server/components/Html';
 import FontInliner from 'src/server/components/FontInliner';
 
 
+const store = createStore(s => s, {});
 
-export const render = (scriptName, Component = 'span') =>
+
+export const render = ({ script: scriptName, component: Component = 'span', title = 'Waves Platform' } = {}) =>
     async ctx => {
 
         // enable SSR only for production
@@ -25,7 +30,9 @@ export const render = (scriptName, Component = 'span') =>
         const sheets = new SheetsRegistry();
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
-                <RenderedComponent initialState={ctx.state.initialState} />
+                <Provider store={store}>    
+                    <RenderedComponent initialState={ctx.state.initialState} />
+                </Provider>
             </JssProvider>
         )
 
@@ -54,6 +61,7 @@ export const render = (scriptName, Component = 'span') =>
 
         const html = renderToStaticMarkup(
             <Html
+                title={title}
                 script={script}
                 vendorChunk={vendorChunk}
                 content={content}

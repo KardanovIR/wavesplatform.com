@@ -15,7 +15,7 @@ ADD . /opt/app
 
 
 # build frontend and backend
-RUN cd /opt/app && yarn build:be
+RUN cd /opt/app && yarn build:be-prod
 RUN yarn build:fe-prod
 
 EXPOSE 3001

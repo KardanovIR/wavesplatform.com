@@ -9,7 +9,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./config/webpack.front.config.js",
-    "build:be": "webpack --config ./config/webpack.back.config.js",
+    "build:be": "webpack --config ./config/webpack.back.dev.config.js",
+    "build:be-prod": "webpack --config ./config/webpack.back.prod.config.js",
     "server": "nodemon dist/app.js",
     "build:fe": "webpack --config ./config/webpack.front.config.js",
     "build:fe-prod": "webpack --config ./config/webpack.front.prod.config.js",

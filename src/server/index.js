@@ -18,12 +18,7 @@ import { readAssets } from './middleware/readAssets';
 
 const app = new Koa();
 
-// @todo is it necessary?
-new Pug({
-    viewPath: './src/server/views',
-    basedir: './src/server/views',
-    app: app
-});
+
 
 
 app
@@ -34,18 +29,18 @@ app
             ctx.status = err.status || 500;
             ctx.body = err.message;
             ctx.app.emit('error', err, ctx);
-            console.error(err);
         }
     })
     .use(bodyParser())
     .use(mount('/static', serve('./dist', { maxage: 2592000000 })))  // 30 days
+    .use(serve('./assets', { maxage: 2592000000 }))  // 30 days
     .use(readAssets)
     .use(router.routes())
     // .on('error', err => {
--    //     Raven.captureException(err, (err, eventId) => {
--    //         console.log('Reported error ' + eventId);
--    //     })
--    // })
+    //     Raven.captureException(err, (err, eventId) => {
+    //         console.log('Reported error ' + eventId);
+    //     })
+    // })
 
 
 app.listen(3001);

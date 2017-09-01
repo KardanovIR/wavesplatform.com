@@ -1,11 +1,7 @@
 import Router from 'koa-router';
 
 
-// @TODO replace by React 404
-import notFound from 'src/server/views/404';
-
 import { render } from '../middleware/render';
-// import { render } from '../middleware/render';
 import main from './main';
 import product from './product';
 import Error404 from './Error404';

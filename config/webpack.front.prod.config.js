@@ -20,6 +20,7 @@ module.exports = {
         company: 'src/public/entries/company',
         developers: 'src/public/entries/developers',
         product: 'src/public/entries/product',
+        error404: 'src/public/entries/error404',
     },
 
     target: 'web',
