@@ -33,9 +33,9 @@ const Footer = ({ classes, links }) => (
                     </Col>
 
                     <Col xs={12} md={6} className={classes.language}>
-                        <Typography type="body" className={classes.textGray}>
+                        {/* <Typography type="body" className={classes.textGray}>
                             English
-                        </Typography>
+                        </Typography> */}
                     </Col>
 
                     <Col xs={12} md={6} className={classes.copyright}>

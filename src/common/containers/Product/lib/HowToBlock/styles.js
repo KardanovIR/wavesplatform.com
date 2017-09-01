@@ -1,6 +1,5 @@
 const styles = theme => ({
     root: {
-        // padding: theme.spacing.getSpacing(10, 0),
         textAlign: 'center'
     },
     title: {
@@ -8,7 +7,6 @@ const styles = theme => ({
         display: 'inline-block'
     },
     quote: {
-        maxWidth: 650,
         display: 'inline-block'
     },
     column: {

@@ -26,6 +26,7 @@ const styles = theme => ({
         overflow: 'hidden'
     },
     quote: {
+        color: theme.palette.gray[800],
         '&:before': {
             ...quoteStyles,
             content: 'open-quote',

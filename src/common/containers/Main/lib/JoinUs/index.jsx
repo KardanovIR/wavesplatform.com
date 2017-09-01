@@ -55,7 +55,7 @@ const MainScreen = ({ classes }) => (
         </Row>
         <Row className={classes.root}>
             <Col md={2} />
-            <Col xs={12} md={4} mdOffset={2} className={classes.article}>
+            <Col xs={12} md={4} mdOffset={1} className={classes.article}>
                 <Typography type="body">
                     Waves brings together blockchain enthusiasts, project founders from all sorts of sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world.
                 </Typography>
@@ -64,7 +64,7 @@ const MainScreen = ({ classes }) => (
                     {links.map(link => <SocialButton key={`social_${link.name}`} { ...link } />)}
                 </div>
             </Col>
-            <Col xs={12} md={4} className={classes.quoteWrapper}>
+            <Col xs={12} md={4} mdOffset={1} className={classes.quoteWrapper}>
                 <div className={classes.iconWrapper}>
                     <IconProduct name="application" size={40} />
                 </div>

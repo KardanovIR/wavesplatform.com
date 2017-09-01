@@ -66,5 +66,11 @@ export default theme => {
         display: 'inline-block'
     };
 
+    styles.xsOnly = {
+        [theme.breakpoints.up('sm')]: {
+            margin: 0
+        },
+    };
+
     return styles;
 }

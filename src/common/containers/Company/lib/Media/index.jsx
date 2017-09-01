@@ -50,9 +50,9 @@ const Media = ({
                 <Margin bottom={3} />
 
                 <Margin right={1} bottom={2} display="inline-block">
-                    <Button href="mailto:support@wavesplatform.com">Contact us</Button>
+                    <Button href="mailto:pr@wavesplatform.com">Contact us</Button>
                 </Margin>
-                <Button href="#" color="gray-500" secondary>Branding package</Button>
+                <Button href="https://wavesplatform.com/files/Waves_brand_pack_1.2.rar" target="_blank" secondary>Branding package</Button>
             </Col>
         </Row>
         

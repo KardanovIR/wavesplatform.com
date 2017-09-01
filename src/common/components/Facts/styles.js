@@ -28,7 +28,7 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit * 2
     },
     fact: {
-        maxWidth: '300px',
+        maxWidth: '350px',
         margin: '0 auto',
         color: theme.palette.primary[500]
     },
