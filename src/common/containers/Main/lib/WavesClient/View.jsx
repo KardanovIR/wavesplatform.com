@@ -11,7 +11,10 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const MainScreen = ({
+    classes,
+    onGetClientClick,
+}) => (
     <Row className={classes.root} alignItems="center">
         <Col xs={12} sm={6} className={classes.imageCol}>
             <div className={classes.imageWrapper}>
@@ -29,6 +32,7 @@ const MainScreen = ({ classes }) => (
                     buttons={[
                         (
                             <Button
+                                onClick={onGetClientClick}
                                 key="main_cta_button"
                                 target="_blank"
                                 href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"

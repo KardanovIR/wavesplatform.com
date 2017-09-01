@@ -7,7 +7,7 @@ import DexImage from '!svg-react-loader!./img/dex.svg';
 import PictureBlock from '../PictureBlock';
 
 
-const DEX = () => (
+const DEX = ({ onDexApiClick }) => (
     <PictureBlock
         title="Decentralized Exchange"
         subtitle="Our nodes contain an order matcher which is used as decentralized exchange — it enables token trades that don’t require transferring them from the blockchain to a centralized exchange."
@@ -19,6 +19,7 @@ const DEX = () => (
         buttons={[
             (
                 <IconButton
+                    onClick={onDexApiClick}
                     href="https://github.com/wavesplatform/Waves/wiki/Matcher"
                     target="_blank"
                     iconName="github"

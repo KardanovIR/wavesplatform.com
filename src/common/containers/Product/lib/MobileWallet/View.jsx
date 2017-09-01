@@ -12,7 +12,11 @@ import styles from './styles';
 
 
 
-const MainScreen = ({ classes }) => (
+const MainScreen = ({
+    classes,
+    onAndroidClientClick,
+    onIosClientClick,
+}) => (
     <Row className={classes.root} alignItems="center">
         <Col xs={12} sm={6} className={classes.imageCol}>
             <div className={classes.imageWrapper}>
@@ -30,10 +34,10 @@ const MainScreen = ({ classes }) => (
             <Margin bottom={3} />
 
             <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-                <ButtonGetApp type="google-play" />
+                <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
             </Margin>
             <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-                <ButtonGetApp type="app-store" />
+                <ButtonGetApp onClick={onIosClientClick} type="app-store" />
             </Margin>
         </Col>
     </Row>

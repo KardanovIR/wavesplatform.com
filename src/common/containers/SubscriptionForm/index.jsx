@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { connect } from 'react-redux';
+import { subscribe } from 'src/public/actions';
+
 import { compose } from 'ramda';
 
 import SubscriptionForm from '../../components/SubscriptionForm';
@@ -21,6 +24,10 @@ import { withLocalStorage } from '../../../public/hoc/localStorage';
 
 
 class SubscriptionFormContainer extends Component {
+    static defaultProps = {
+        onSubmit: () => {},
+    }
+
     static propTypes = {
         // local storage
         initialValue: PropTypes.any,
@@ -33,6 +40,8 @@ class SubscriptionFormContainer extends Component {
             email: PropTypes.arrayOf(PropTypes.string)
         }),
         showErrors: PropTypes.bool,
+
+        onSubmit: PropTypes.func,
     }
 
     constructor(props) {
@@ -76,6 +85,7 @@ class SubscriptionFormContainer extends Component {
         if (!this.props.errors.email.length) {
             this.sendForm(formData.email);
             this.props.onLocalStorageUpdate(formData.email);
+            this.props.onSubmit(formData);
         }
     }
 
@@ -115,4 +125,5 @@ class SubscriptionFormContainer extends Component {
 export default compose(
     withLocalStorage('subscriptionEmail'),
     withValidation({ email: [isEmpty, isEmailInvalid] }),
+    connect(s => s, { onSubmit: subscribe })
 )(SubscriptionFormContainer);
