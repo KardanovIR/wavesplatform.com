@@ -15,8 +15,8 @@ import styles from './styles';
 const DEXTopPairs = ({ classes, pairs }) => (
     <Panel className={classes.root}>
         <Margin className={classes.headers}>
-            <Typography className={classes.textGray}>Top 10 pairs</Typography>
-            <Typography className={classes.textGray} align="right">Volume (24h)</Typography>
+            <Typography type="display1">Top 10 pairs</Typography>
+            <Typography className={classes.textGray} align="right" noMargin>Volume (24h)</Typography>
         </Margin>
         {pairs.map((pair, index) => (
             <Margin key={`top_pair_${index}`} bottom={2}>
