@@ -7,7 +7,10 @@ import CodeImage from '!svg-react-loader!./img/code.svg';
 import PictureBlock from '../PictureBlock';
 
 
-const FriendlyAPI = () => (
+const FriendlyAPI = ({
+    onDocumentationClick,
+    onClientClick,
+}) => (
     <PictureBlock
         title="Developer-Friendly API"
         subtitle="Our open source client application uses the same API. You can explore it and implement any kind of client application yourself."
@@ -16,20 +19,22 @@ const FriendlyAPI = () => (
         buttons={[
             (
                 <IconButton
-                        href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
-                        target="_blank"
-                        iconName="github"
-                    >
+                    onClick={onDocumentationClick}
+                    href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+                    target="_blank"
+                    iconName="github"
+                >
                         Documentation
                 </IconButton>
             ),
             (
                 <IconButton
-                        href="https://github.com/wavesplatform/WavesGUI"
-                        target="_blank"
-                        iconName="github"
-                        secondary
-                    >
+                    onClick={onClientClick}
+                    href="https://github.com/wavesplatform/WavesGUI"
+                    target="_blank"
+                    iconName="github"
+                    secondary
+                >
                         Client
                 </IconButton>
             )

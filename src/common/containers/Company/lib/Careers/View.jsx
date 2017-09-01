@@ -14,6 +14,7 @@ import styles from './styles';
 
 const Team = ({
     classes,
+    onSubmitResumeClick
 }) => (
         <Row>
             <Col xs={12} className={classes.centered}>
@@ -27,7 +28,13 @@ const Team = ({
 
                 <Margin bottom={3} />
 
-                <Button href="mailto:hr@wavesplatform.com" secondary>Submit a resume</Button>
+                <Button
+                    onClick={onSubmitResumeClick}
+                    href="mailto:hr@wavesplatform.com"
+                    secondary
+                >
+                    Submit a resume
+                </Button>
             </Col>
         </Row>
     );

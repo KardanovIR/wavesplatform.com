@@ -7,7 +7,10 @@ import ConsoleImage from '!svg-react-loader!./img/console.svg';
 import PictureBlock from '../PictureBlock';
 
 
-const FriendlyAPI = () => (
+const FriendlyAPI = ({
+    onWavesNodeClick,
+    onWavesNodeInstallClick,
+}) => (
     <PictureBlock
         align="right"
         title="Running Waves Node"
@@ -17,6 +20,7 @@ const FriendlyAPI = () => (
         buttons={[
             (
                 <IconButton
+                    onClick={onWavesNodeClick}
                     href="https://github.com/wavesplatform/Waves"
                     target="_blank"
                     iconName="github"
@@ -26,6 +30,7 @@ const FriendlyAPI = () => (
             ),
             (
                 <IconButton
+                    onClick={onWavesNodeInstallClick}
                     href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
                     target="_blank"
                     iconName="github"

@@ -13,7 +13,7 @@ import styles from './styles';
 
 
 
-const Whitepaper = ({ classes }) => (
+const Whitepaper = ({ classes, onWhitepaperClick }) => (
     <Row alignItems="center">
         <Col sm={6} md={4} mdOffset={1}>
             <img src={wpImageSrc} alt="Whitepaper" className={classes.image} />
@@ -29,6 +29,7 @@ const Whitepaper = ({ classes }) => (
             <Margin bottom={3} />
             
             <Button
+                onClick={onWhitepaperClick}
                 href="https://wavesplatform.com/files/whitepaper_v0.pdf"
                 target="_blank"
             >

@@ -9,7 +9,7 @@ import Image from '!svg-react-loader!./img/table.svg';
 
 
 
-const DevelopersMainScreen = () => (
+const DevelopersMainScreen = ({ onDocumentationClick }) => (
     <MainScreen
         title="Build unstoppable applications"
         text="These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property."
@@ -18,6 +18,7 @@ const DevelopersMainScreen = () => (
         buttons={[
             (
                 <IconButton
+                    onClick={onDocumentationClick}
                     key="main_cta_button"
                     // className={classes.ctaButton}
                     href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"

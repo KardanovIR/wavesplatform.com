@@ -13,7 +13,7 @@ export const WAVES_NODE_INSTALL_CLICK = 'WavesNodeInstallClick';
 export const DEX_API_CLICK = 'DexApiClick';
 
 // files downloads
-export const WHITEPAPER_DOWNLOAD = 'OwhitepaperDownload';
+export const WHITEPAPER_DOWNLOAD = 'WhitepaperDownload';
 export const BRANDING_PACKAGE_DOWNLOAD = 'BrandingPackageDownload';
 
 // contact
@@ -36,9 +36,9 @@ export const iosClientClick = createAC(IOS_CLIENT_CLICK);
 // developers
 export const apiDocumentationClick = createAC(API_DOCUMENTATION_CLICK);
 export const apiClientClick = createAC(API_CLIENT_CLICK);
+export const dexApiClick = createAC(DEX_API_CLICK);
 export const wavesNodeClick = createAC(WAVES_NODE_CLICK);
 export const wavesNodeInstallClick = createAC(WAVES_NODE_INSTALL_CLICK);
-export const dexApiClick = createAC(DEX_API_CLICK);
 
 // files downloads
 export const whitepaperDownload = createAC(WHITEPAPER_DOWNLOAD);
