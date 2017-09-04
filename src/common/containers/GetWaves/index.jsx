@@ -33,7 +33,7 @@ const PageLayout = ({ classes }) => (
             <HowToBuyWaves />
         </Section>
 
-        <Background className={classes.bgApi} skewed={true}>
+        <Background className={classes.bgExchanges} skewed={true}>
             <Section size={4}>
                 <Exchanges />
             </Section>
