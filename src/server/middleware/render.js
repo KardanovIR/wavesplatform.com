@@ -25,8 +25,9 @@ export const render = ({ script: scriptName, component: Component = 'span', titl
             RenderedComponent = 'span';
         }
 
-
-        // component markup and styles
+        // log render time
+        const renderStart = new Date();
+        // render component markup and styles
         const sheets = new SheetsRegistry();
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
@@ -35,6 +36,7 @@ export const render = ({ script: scriptName, component: Component = 'span', titl
                 </Provider>
             </JssProvider>
         )
+        ctx.accessLog.renderTime = new Date() - renderStart;
 
 
         // fonts

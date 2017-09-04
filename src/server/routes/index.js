@@ -20,7 +20,6 @@ router
     .get('/developers', render({ script: 'developers', component: Developers }))
     .get('/company', render({ script: 'company', component: Company }))
     .post('/api/subscription', async ctx => {
-        // console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };
     })
     .get('*', Error404)

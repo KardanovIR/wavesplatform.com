@@ -41,7 +41,8 @@
     "react-redux": "^5.0.6",
     "react-transition-group": "^2.2.0",
     "redux": "^3.7.2",
-    "reflect-metadata": "^0.1.9"
+    "reflect-metadata": "^0.1.9",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
