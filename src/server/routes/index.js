@@ -9,6 +9,7 @@ import Error404 from './Error404';
 // page components
 import Developers from 'src/common/containers/Developers';
 import Company from 'src/common/containers/Company';
+import GetWaves from 'src/common/containers/GetWaves';
 
 
 
@@ -19,6 +20,7 @@ router
     .get('/product', product)
     .get('/developers', render({ script: 'developers', component: Developers }))
     .get('/company', render({ script: 'company', component: Company }))
+    .get('/get-waves', render({ script: 'getWaves', component: GetWaves }))
     .post('/api/subscription', async ctx => {
         ctx.body = { result: 'success' };
     })

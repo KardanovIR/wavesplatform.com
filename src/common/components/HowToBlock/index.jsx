@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Row, Col } from 'src/common/components/Grid';
-import Link from 'src/common/components/Link';
 import Margin from 'src/common/components/Margin';
 import Typography from 'src/common/components/Typography';
 

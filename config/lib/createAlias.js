@@ -4,4 +4,5 @@ module.exports = ({ production = false } = {}) =>
         'src/common/containers/Developers': 'config/lib/NoopReact',
         'src/common/containers/Company': 'config/lib/NoopReact',
         'src/common/containers/Product': 'config/lib/NoopReact',
+        'src/common/containers/GetWaves': 'config/lib/NoopReact',
     }
