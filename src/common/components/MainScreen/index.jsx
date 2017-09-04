@@ -25,21 +25,29 @@ const MainScreen = ({
                 <Margin />
             </Col>
 
-            <Col xs={12} sm={5} lg={6} className={ cn(classes.imageCol, {[classes.imageColMargin]: imageDesktop}) }>
-                {!!imageDesktop && (
-                    <div className={classes.widthSetter}>
-                        <div className={classes.imageWrapper}>
-                            {!!imageMobile && (
-                                <div className={cn(classes.image, classes.xsOnly)}>
-                                    {imageMobile}
-                                </div>
-                            )}
-                            <div className={cn(classes.image, { [classes.xsHidden]: imageMobile })}>
+            <Col xs={12} sm={5} lg={6} className={cn(classes.imageCol, { [classes.imageColMargin]: imageMobile })}>
+                <div
+                    className={cn(
+                        classes.widthSetter,
+                        {
+                            [classes.xsOnly]: !imageDesktop && imageMobile,
+                            [classes.xsHidden]: imageDesktop && !imageMobile,
+                        }
+                    )}
+                >
+                    <div className={classes.imageWrapper}>
+                        {!!imageMobile && (
+                            <div className={cn(classes.image, classes.xsOnly)}>
+                                {imageMobile}
+                            </div>
+                        )}
+                        {!!imageDesktop && (
+                            <div className={cn(classes.image, classes.xsHidden)}>
                                 {imageDesktop}
                             </div>
-                        </div>
+                        )}
                     </div>
-                )}
+                </div>
             </Col>
 
             <Col xs={12} sm={7} lg={6}>
@@ -47,7 +55,7 @@ const MainScreen = ({
                     {text}
                 </Typography>
 
-                { !!buttons.length && <Margin bottom={3} /> }
+                {!!buttons.length && <Margin bottom={3} />}
 
                 {buttons.map((button, index) => (
                     <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>

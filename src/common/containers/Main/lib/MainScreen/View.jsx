@@ -4,8 +4,7 @@ import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 
 
-import ImageMobile from '!svg-react-loader!./img/table_mob.svg';
-import Image from '!svg-react-loader!./img/image.svg';
+// import Image from '!svg-react-loader!./img/image.svg';
 
 
 
@@ -16,8 +15,8 @@ const IndexMainScreen = ({
     <MainScreen
         title="Get started with blockchain"
         text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
-        imageDesktop={<span />}
-        imageMobile={<ImageMobile />}
+        //imageDesktop={<span />}
+        //imageMobile={<span />}
         buttons={[
             (
                 <Button

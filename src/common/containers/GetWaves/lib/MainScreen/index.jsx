@@ -11,7 +11,6 @@ const DevelopersMainScreen = () => (
         title={<span dangerouslySetInnerHTML={{  __html: 'Buy, Sell,<br>Exchange Waves' }}  />}
         text="In order to do so you will need to download Waves client and buy Waves tokens on Waves DEX or other exchange."
         imageDesktop={<Image />}
-        imageMobile={<Image />}
     />
 );
 
