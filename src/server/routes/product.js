@@ -11,5 +11,5 @@ import Product from 'src/common/containers/Product';
 export default compose([
     getDexTopPairs,
     getDexData,
-    render('product', Product),
+    render({ script: 'product', component: Product }),
 ])

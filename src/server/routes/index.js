@@ -17,10 +17,10 @@ const router = new Router();
 router
     .get('/', main)
     .get('/product', product)
-    .get('/developers', render('developers', Developers))
-    .get('/company', render('company', Company))
+    .get('/developers', render({ script: 'developers', component: Developers }))
+    .get('/company', render({ script: 'company', component: Company }))
     .post('/api/subscription', async ctx => {
-        console.log(ctx.request.body.email);
+        // console.log(ctx.request.body.email);
         ctx.body = { result: 'success' };
     })
     .get('*', Error404)

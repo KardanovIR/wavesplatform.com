@@ -7,6 +7,7 @@ services:
       - static
     ports:
      - "80:80"
+    restart: unless-stopped
   balancer:
     image: dockercloud/haproxy
     links:
@@ -16,15 +17,19 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     expose:
       - "80"
+    restart: unless-stopped
   node1:
     build: .
     expose:
      - "3001"
+    restart: unless-stopped
   node2:
     build: .
     expose:
      - "3001"
+    restart: unless-stopped
   static:
     build: .
     expose:
      - "3001"
+    restart: unless-stopped

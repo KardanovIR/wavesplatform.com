@@ -9,5 +9,5 @@ import Main from 'src/common/containers/Main';
 
 export default compose([
     getDexData,
-    render('main', Main),
+    render({ script: 'main', component: Main }),
 ])

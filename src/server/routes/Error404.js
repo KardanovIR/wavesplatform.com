@@ -10,5 +10,5 @@ export default compose([
         ctx.status = 404;
         await next();
     },
-    render('error404', Error404),
+    render({ script: 'error404', component: Error404 }),
 ])
