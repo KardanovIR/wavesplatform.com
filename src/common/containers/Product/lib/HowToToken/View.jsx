@@ -3,9 +3,7 @@ import React from 'react';
 import Button from 'src/common/components/Button';
 import Margin from 'src/common/components/Margin';
 import IconProduct from 'src/common/components/IconProduct';
-
-
-import HowToBlock from '../HowToBlock';
+import HowToBlock from 'src/common/components/HowToBlock';
 
 
 

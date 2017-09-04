@@ -29,7 +29,17 @@ const IndexMainScreen = ({
                     Get Client
                 </Button>
             ),
-            <Button onClick={onGetWavesClick} withLoader secondary key="main_cta_button2">Get Waves</Button>,
+            (
+                <Button
+                    onClick={onGetWavesClick}
+                    href="/get-waves"
+                    withLoader
+                    secondary
+                    key="main_cta_button2"
+                >
+                    Get Waves
+                </Button>
+            )
         ]}
     />
 );

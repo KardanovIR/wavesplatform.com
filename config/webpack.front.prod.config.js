@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const AssetsWebpackPlugin = require('assets-webpack-plugin');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
+const entry = require('./lib/entry');
 
 
 const includedDirectories = [
@@ -15,13 +16,7 @@ const includedDirectories = [
 
 
 module.exports = {
-    entry: {
-        main: 'src/public/entries/main',
-        company: 'src/public/entries/company',
-        developers: 'src/public/entries/developers',
-        product: 'src/public/entries/product',
-        error404: 'src/public/entries/error404',
-    },
+    entry,
 
     target: 'web',
 

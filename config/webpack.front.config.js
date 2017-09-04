@@ -6,6 +6,7 @@ const webpack = require('webpack');
 const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
+const entry = require('./lib/entry');
 
 
 const includedDirectories = [
@@ -16,13 +17,7 @@ const includedDirectories = [
 
 
 module.exports = {
-    entry: patchEntriesHotReload({
-        main: 'src/public/entries/main',
-        company: 'src/public/entries/company',
-        developers: 'src/public/entries/developers',
-        product: 'src/public/entries/product',
-        error404: 'src/public/entries/error404',
-    }),
+    entry: patchEntriesHotReload(entry),
 
     target: 'web',
 

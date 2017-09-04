@@ -5,7 +5,7 @@ import Margin from 'src/common/components/Margin';
 import IconProduct from 'src/common/components/IconProduct';
 
 
-import HowToBlock from '../HowToBlock';
+import HowToBlock from 'src/common/components/HowToBlock';
 
 
 
