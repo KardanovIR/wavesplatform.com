@@ -32,7 +32,7 @@ const Audience = () => (
         </Col>
         <Col xs={12} sm={6} lg={3}>
             <Article
-                title="Organizations"
+                title="Organisations"
                 text="Issue your own blockchain token to give your business a head start - whatever your needs: crowdfunding, loyalty programs, voting and more."
             />
             <Margin bottom={3} />  

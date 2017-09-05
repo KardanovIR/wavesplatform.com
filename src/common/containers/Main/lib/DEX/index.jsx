@@ -17,7 +17,7 @@ const DEX = ({ classes }) => (
     <div>
         <Margin bottom={5}>
             <Typography type="display2" tagName="div" className={classes.title}>
-                Decentralized Exchange (DEX)
+                Decentralised Exchange (DEX)
             </Typography>
         </Margin>
         <Row className={classes.root}>
