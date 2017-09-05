@@ -24,7 +24,7 @@ const WavesNetwork = ({ classes }) => (
                     Waves Network
                 </Typography>
                 <Typography type="body2">
-                    New versions of Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases.
+                    New versions of the Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases.
                 </Typography>
                 <Margin />
                 <Typography type="quote" color="gray-500">

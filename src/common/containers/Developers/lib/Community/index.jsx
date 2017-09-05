@@ -33,7 +33,7 @@ const WavesNetwork = ({ classes }) => (
         <Row className={classes.text} centered>
             <Col xs={12} sm={8} md={8} lg={6}>
                 <Typography type="display2">
-                    Community Resources
+                    Waves Ecosystem
                 </Typography>
                 <Margin bottom={4} />
             </Col>

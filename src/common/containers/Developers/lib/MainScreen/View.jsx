@@ -11,8 +11,8 @@ import Image from '!svg-react-loader!./img/table.svg';
 
 const DevelopersMainScreen = ({ onDocumentationClick }) => (
     <MainScreen
-        title="Build unstoppable applications"
-        text="These apps run on a custom built  blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property."
+        title="Build applications on the blockchain"
+        text="Waves is a powerful blockchain platform that allows anyone to launch their own cryptographically-secured tokens — allowing businesses and other organisations to build versatile applications with all the advantages of peer-to-peer technology."
         imageDesktop={<Image />}
         imageMobile={<ImageMobile />}
         buttons={[
