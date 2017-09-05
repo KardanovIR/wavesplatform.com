@@ -19,18 +19,18 @@ const IssuingTokens = ({ classes }) => (
         <Row>
             <Col xs={12}>
                 <Typography type="display3" className={classes.title}>
-                    Issuing your tokens, token sales
+                    Issuing Your Tokens and Token Sales
                 </Typography>
             </Col>
             <Col xs={12} sm={5} md={3}>
                 <Typography type="body">
-                    Cryptographically protected blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.
+                    Cryptographically secured blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.
                 </Typography>
                 <Margin bottom={4} />
             </Col>
             <Col xs={12} smOffset={1} sm={5} md={3} mdOffset={1}>
                 <Typography type="body">
-                    The role of the released token is determined depending on the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralized voting or a rating system.
+                    The role of the token is determined by the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralised voting, as a rating system, or loyalty program.
                 </Typography>
                 <Margin bottom={4} />
             </Col>
@@ -48,16 +48,16 @@ const IssuingTokens = ({ classes }) => (
             <Col xs={12} sm={5}>
                 <AvatarTitleText
                     avatar={<IconProduct name="target" circle />}
-                    title="Raise funds for the development of your project"
-                    text="By releasing blockchain tokens, you provide valuable services to network users, such as the possibility of transferring value in the form of certain conventional units, therefore attracting funds for the development of your project."
+                    title="Raise funds for the development of your project"
+                    text="By releasing blockchain tokens, you provide valuable services to network users, such as the possibility of transferring value in the form of certain convenient units, therefore attracting funds for the development of your project."
                 />
                 <Margin bottom={4} />
             </Col>
             <Col xs={12} smOffset={1} sm={5}>
                 <AvatarTitleText
                     avatar={<IconProduct name="message" circle />}
-                    title="Get loyal users of your product"
-                    text="By holding an ICO not only do you receive money for development, but you also get loyal users of your product who believe in the project and are ready to become its first followers as well as give honest feedback."
+                    title="Get loyal users of your product"
+                    text="By holding an ICO not only do you receive money for development, but you also gain loyal users for your product who believe in the project and are ready to become its first followers as well as give honest feedback."
                 />
                 <Margin bottom={4} />
             </Col>

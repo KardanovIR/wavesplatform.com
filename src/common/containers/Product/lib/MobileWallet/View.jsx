@@ -28,7 +28,7 @@ const MainScreen = ({
                 Mobile wallet
             </Typography>
             <Typography type="body2" margin>
-                Don’t forget to download the mobile wallet for iOS & Android.
+                Don’t forget to download the mobile wallet for iOS & Android
             </Typography>
 
             <Margin bottom={3} />

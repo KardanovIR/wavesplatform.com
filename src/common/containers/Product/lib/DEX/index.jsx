@@ -26,7 +26,7 @@ const DEX = ({
 
                 <Col xs={12} className={classes.withMargin}>
                     <Typography type="display3" className={classes.title}>
-                        Decentralized Exchange
+                        Decentralised Exchange (DEX)
                     </Typography>
                     <Margin bottom={4} />
                 </Col>
@@ -35,7 +35,7 @@ const DEX = ({
                     <Row centered>
                         <Col xs={12} md={6} lg={4}>
                             <Typography type="display1" className={classes.title}>
-                                Stop worrying about the safety of your assets
+                                Stop worrying about the safety of your assets
                             </Typography>
                             <Margin bottom={4} />
                         </Col>
@@ -45,10 +45,10 @@ const DEX = ({
                 <Col xs={12} md={4} lg={3} className={classes.column}>
                     <div className={cn(classes.columnContent, classes.columnLeft)}>
                         <Typography type="body" className={classes.topParagraph}>
-                            By trading on a centralized exchange, you risk losing your funds in the event of hacking, which has happened on almost all popular exchanges.
+                            By trading on a centralised exchange, you risk losing your funds in the event of a hack, which has happened on almost all popular exchanges.
                         </Typography>
                         <Typography type="body" className={classes.bottomParagraph}>
-                            The main advantage of our exchange is that the money is always stored in your wallet, and the match only compares orders.
+                            The main advantage of our exchange is that funds are always stored in your wallet, and the matching process simply pairs orders.
                         </Typography>
                     </div>
 
@@ -63,10 +63,10 @@ const DEX = ({
                 <Col xs={12} md={4} lg={3} className={classes.column}>
                     <div className={cn(classes.columnContent, classes.columnRight)}>
                         <Typography type="body" className={classes.topParagraph}>
-                            The DEX is powered by a matcher, which stores user orders and sends token exchange transactions for fulfilled orders.
+                            The DEX is powered by a matcher, which stores user orders and sends token exchange transactions for fulfilled orders. All final settlement is carried out on the blockchain for security.
                         </Typography>
                         <Typography type="body" className={classes.bottomParagraph}>
-                            You retain complete control over your funds when trading them on our decentralized exchange.
+                            You retain complete control over your funds when trading them on our decentralised exchange.
                         </Typography>
                     </div>
 

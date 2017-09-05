@@ -13,13 +13,13 @@ const HowToStart = ({
     onGetClientClick
 }) => (
     <HowToBlock
-        title="How do I start using my Waves wallet?"
+        title="How do I start using my Waves wallet?"
         steps={[
             {
                 avatar: <IconProduct name="cloud" circle />,
                 text: (
                     <div>
-                        First, install the Waves client.
+                        First, download and install the Waves client.
                             <Margin />
                         <Button
                             onClick={onGetClientClick}
@@ -34,11 +34,11 @@ const HowToStart = ({
             },
             {
                 avatar: <IconProduct name="coins" circle />,
-                text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
+                text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
             },
             {
                 avatar: <IconProduct name="dex" circle />,
-                text: "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
+                text: "You can convert them to Waves tokens using the decentralised exchange (DEX), which you can find on the Waves client."
             },
         ]}
     />

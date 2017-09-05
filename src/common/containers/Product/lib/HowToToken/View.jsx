@@ -11,7 +11,7 @@ const HowToStart = ({
     onGetClientClick
 }) => (
     <HowToBlock
-        title="How do I release my own tokens on Waves?"
+        title="How do I release my own tokens on Waves?"
         steps={[
             {
                 avatar: <IconProduct name="cloud" circle />,
@@ -32,14 +32,14 @@ const HowToStart = ({
             },
             {
                 avatar: <IconProduct name="coins" circle />,
-                text: "To release tokens, you’ll need 1 Waves to pay the commission. You can buy it directly in the client with $ or €."
+                text: "To create tokens, you’ll need 1 WAVES to pay the issuance fee. You can buy WAVES directly in the client with $ or €."
             },
             {
                 avatar: <IconProduct name="dex" circle />,
-                text: "Go to the Token Creation tab and fill out a simple form. Your token will appear on the network within about a minute."
+                text: "Go to the Token Creation tab and fill out a simple form. Your token will appear on the network within about a minute. Your token will also go through a verification process and after that will receive a green check mark on the decentralised exchange."
             },
         ]}
-        quote="After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even make them with different prices to create bonus conditions for the first investors."
+        quote="After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even sell them at different prices to create bonus conditions for the first investors."
     />
 );
 
