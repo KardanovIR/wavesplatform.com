@@ -57,7 +57,7 @@ const MainScreen = ({ classes }) => (
             <Col md={2} />
             <Col xs={12} md={4} mdOffset={1} className={classes.article}>
                 <Typography type="body">
-                    Waves brings together blockchain enthusiasts, project founders from all sorts of sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world.
+                    Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world.
                 </Typography>
                 <Margin />
                 <div>
@@ -69,7 +69,7 @@ const MainScreen = ({ classes }) => (
                     <IconProduct name="application" size={40} />
                 </div>
                 <Typography type="quote">
-                    Read the latest news and articles, and find out all about events happening on the Waves Platform, with our community-centered <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link>
+                    Keep up with the latest news and articles, and find out all about events happening on the Waves Platform, with our community at <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link>
                 </Typography>
             </Col>
         </Row>

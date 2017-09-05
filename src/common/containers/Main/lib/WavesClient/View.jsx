@@ -28,7 +28,7 @@ const MainScreen = ({
                     title="The Waves Client"
                     titleType="display3"
                     textType="body2"
-                    text="The current version of the Waves client is a wallet, decentralized exchange, and a tool to release tokens."
+                    text="The current version of the Waves client is a wallet, decentralised exchange (DEX), and a tool to release tokens."
                     buttons={[
                         (
                             <Button

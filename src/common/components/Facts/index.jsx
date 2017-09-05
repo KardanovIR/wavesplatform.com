@@ -16,12 +16,12 @@ const Facts = ({
         <Row centered className={classes.row}>
             <Col xs={12} sm={5} className={classes.withMargin}>
                 <Typography type="display1" className={classes.fact}>
-                    A total of {tokens} tokens have been released on Waves
+                    A total of {tokens} tokens have been released on Waves
                 </Typography>
             </Col>
             <Col xs={12} sm={5} smOffset={2}>
                 <Typography type="display1" className={classes.fact}>
-                    Totaling a market capitalization of more than $1 000 000 000
+                    Totaling a market capitalization of more than $1 000 000 000
                 </Typography>
             </Col>
         </Row>

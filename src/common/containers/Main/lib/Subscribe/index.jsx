@@ -20,7 +20,7 @@ const Subscribe = ({ classes }) => (
                     Don’t Miss Important News
                 </Typography>
                 <Typography type="body" inverted dimmed>
-                    We do more than just develop more the technical aspect of the platform, we also participate actively in integrating blockchain economy in the real world. Subscribe to our news to keep up to date with all the most interesting happenings.
+                    We do more than just develop the technical aspects of the platform: we also participate actively in integrating blockchain into real-world applications to grow the crypto economy. Subscribe to our newsletter to keep up to date with all the most interesting developments.
                 </Typography>
             </div>
 

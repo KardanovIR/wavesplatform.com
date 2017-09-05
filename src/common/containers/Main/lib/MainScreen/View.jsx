@@ -14,7 +14,7 @@ const IndexMainScreen = ({
 }) => (
     <MainScreen
         title="Get started with blockchain"
-        text="Gain access to the platform solutions to store, trade, manage and issue your digital assets in an easy and secure way."
+        text="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
         //imageDesktop={<span />}
         //imageMobile={<span />}
         buttons={[

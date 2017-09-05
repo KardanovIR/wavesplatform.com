@@ -12,28 +12,28 @@ const Audience = () => (
         <Col xs={12} sm={6} lg={3}>
             <Article
                 title="Developers"
-                text="Waves’s blockchain uses a Proof-of-stake (PoS) algorithm, with participants being rewarded from the commission on transactions made."
+                text="Enjoy the benefits of high network throughput capacity, low latency and low transaction fees."
             />
             <Margin bottom={3} />  
         </Col>
         <Col xs={12} sm={6} lg={3}>
             <Article
                 title="Investors"
-                text="Implementing the Bitcoin-NG algorithm adapted for PoS allowed us to increase the network bandwidth to hundreds of transactions per second."
+                text="Become part of a fast-growing area of the crypto world. Create a multiple-currency wallet and invest in verified crypto assets and the underlying WAVES platform token."
             />
             <Margin bottom={3} />  
         </Col>
         <Col xs={12} sm={6} lg={3}>
             <Article
-                title="For traders"
-                text="The minimum commission for a transfer of funds is 0,001 Waves. The fixed commission for market orders is 0,003 Waves. The price of releasing a token is 1 Waves and you do not pay to use your token."
+                title="Traders"
+                text="Store assets securely in the local lite client, whilst also trading them quickly and safely on the built-in decentralised exchange (DEX)."
             />
             <Margin bottom={3} />  
         </Col>
         <Col xs={12} sm={6} lg={3}>
             <Article
                 title="Organizations"
-                text="You don’t need smart contracts to release tokens or for leasing and making deals on the decentralized exchange, because transactions are performed natively."
+                text="Issue your own blockchain token to give your business a head start - whatever your needs: crowdfunding, loyalty programs, voting and more."
             />
             <Margin bottom={3} />  
         </Col>

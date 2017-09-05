@@ -26,14 +26,14 @@ const PlannedFeatures = ({ classes }) => (
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="product" circle />}
-                    text="New UX & UI"
+                    text="New UX & UI"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="dex" circle />}
-                    text="Expanded statistics on released tokens"
+                    text="Expanded statistics on released tokens"
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
