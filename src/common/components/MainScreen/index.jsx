@@ -26,28 +26,30 @@ const MainScreen = ({
             </Col>
 
             <Col xs={12} sm={5} lg={6} className={cn(classes.imageCol, { [classes.imageColMargin]: imageMobile })}>
-                <div
-                    className={cn(
-                        classes.widthSetter,
-                        {
-                            [classes.xsOnly]: !imageDesktop && imageMobile,
-                            [classes.xsHidden]: imageDesktop && !imageMobile,
-                        }
-                    )}
-                >
-                    <div className={classes.imageWrapper}>
-                        {!!imageMobile && (
-                            <div className={cn(classes.image, classes.xsOnly)}>
-                                {imageMobile}
-                            </div>
+                {(imageDesktop || imageDesktop) && (
+                    <div
+                        className={cn(
+                            classes.widthSetter,
+                            {
+                                [classes.xsOnly]: !imageDesktop && imageMobile,
+                                [classes.xsHidden]: imageDesktop && !imageMobile,
+                            }
                         )}
-                        {!!imageDesktop && (
-                            <div className={cn(classes.image, classes.xsHidden)}>
-                                {imageDesktop}
-                            </div>
-                        )}
+                    >
+                        <div className={classes.imageWrapper}>
+                            {!!imageMobile && (
+                                <div className={cn(classes.image, classes.xsOnly)}>
+                                    {imageMobile}
+                                </div>
+                            )}
+                            {!!imageDesktop && (
+                                <div className={cn(classes.image, classes.xsHidden)}>
+                                    {imageDesktop}
+                                </div>
+                            )}
+                        </div>
                     </div>
-                </div>
+                )}
             </Col>
 
             <Col xs={12} sm={7} lg={6}>
