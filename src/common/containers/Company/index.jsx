@@ -11,7 +11,6 @@ import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
 // lib
-// import MainScreen from './lib/MainScreen';
 import Team from './lib/Team';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
@@ -32,8 +31,8 @@ const PageLayout = ({ classes }) => (
 
         <MainScreenBackground>
             <MainScreen
-                title="We change lives of the people"
-                text="We believe that blockchain technology can improve and fundamentally transform not only the modern economy, but all of its various sectors."
+                title="We change people’s lives"
+                text="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
             />
         </MainScreenBackground>
 

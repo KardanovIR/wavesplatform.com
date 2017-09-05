@@ -23,7 +23,7 @@ const Team = ({
                 </Typography>
                 
                 <Typography type="body2" align="center" inverted dimmed className={classes.narrow}>
-                    We’d be happy to welcome you to our team. Come change the world with us.
+                    We’d be happy to welcome you to our team. Come and change the world with us!
                 </Typography>
 
                 <Margin bottom={3} />
