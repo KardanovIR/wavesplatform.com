@@ -19,7 +19,7 @@ const Wallet = () => (
                 <AvatarTitleText
                     avatar={<IconProduct name="wallet" circle />}
                     title="Create a multiple-currency wallet"
-                    text="In addition to Waves tokens, 3,110 other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding."
+                    text="In addition to Waves tokens, thousands of other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding."
                 />
                 <Margin bottom={5} xsOnly />
             </Col>

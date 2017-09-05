@@ -1,1 +1,1 @@
-export default n => n.toLocaleString('en', {maximumFractionDigits: 8}).replace(/,/g, '&thinsp;');
+export default n => n.toLocaleString('en', {maximumFractionDigits: 8});
