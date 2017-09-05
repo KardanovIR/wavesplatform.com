@@ -1,53 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="747" viewBox="0 0 2560 747">
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="780" viewBox="0 0 2560 780">
   <defs>
-    <linearGradient id="index_mane_3-a" x1="48.172%" x2="49.029%" y1="40.05%" y2="86.636%">
+    <linearGradient id="index_product-a" x1="48.172%" x2="49.029%" y1="40.05%" y2="86.636%">
       <stop offset="0%" stop-color="#002EFF" stop-opacity=".67"/>
       <stop offset="100%" stop-color="#002EFF" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-b" x1="52.318%" x2="50.066%" y1="-32.698%" y2="95.743%">
+    <linearGradient id="index_product-b" x1="52.318%" x2="50.066%" y1="-32.698%" y2="95.743%">
       <stop offset="0%" stop-color="#002EFF" stop-opacity="0"/>
       <stop offset="100%" stop-color="#009FFF" stop-opacity=".86"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-c" x1="50%" x2="52.649%" y1="0%" y2="59.813%">
+    <linearGradient id="index_product-c" x1="50%" x2="52.649%" y1="0%" y2="59.813%">
       <stop offset="0%" stop-color="#002EFF" stop-opacity=".66"/>
       <stop offset="100%" stop-color="#002EFF" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-d" x1="52.122%" x2="52.122%" y1="19.645%" y2="92.881%">
+    <linearGradient id="index_product-d" x1="52.122%" x2="50%" y1="19.645%" y2="100%">
       <stop offset="0%" stop-color="#0053FF" stop-opacity=".6"/>
       <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-e" x1="50%" x2="50%" y1="13.917%" y2="100%">
+    <linearGradient id="index_product-e" x1="50%" x2="50%" y1="13.917%" y2="100%">
       <stop offset="0%" stop-color="#0053FF" stop-opacity=".5"/>
       <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-f" x1="49.333%" x2="50%" y1="-1.985%" y2="98.89%">
+    <linearGradient id="index_product-f" x1="49.333%" x2="50%" y1="-1.985%" y2="98.89%">
       <stop offset="0%" stop-color="#002EFF" stop-opacity=".63"/>
       <stop offset="98.025%" stop-color="#002EFF" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-g" x1="49.333%" x2="50%" y1="-1.985%" y2="98.89%">
+    <linearGradient id="index_product-g" x1="49.333%" x2="50%" y1="-1.985%" y2="98.89%">
       <stop offset="0%" stop-color="#002EFF" stop-opacity=".63"/>
       <stop offset="98.113%" stop-color="#002EFF" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="index_mane_3-h" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
+    <linearGradient id="index_product-h" x1="82.081%" x2="52.649%" y1="-147.203%" y2="59.813%">
       <stop offset="1.574%" stop-color="#002EFF"/>
       <stop offset="43.646%" stop-color="#D8D8D8"/>
       <stop offset="98.691%" stop-color="#002EFF" stop-opacity=".013"/>
       <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(-930 -1162)">
+  <g fill="none" fill-rule="evenodd" transform="translate(-930 -1129)">
     <rect width="3078" height="906" x="832" y="874" fill="#002EFF" transform="rotate(-5 2371 1327)"/>
-    <polygon fill="url(#index_mane_3-a)" points="467 922 3219 922 3219 1702 467 1702"/>
-    <rect width="3000" height="800" x="521" y="1011" fill="url(#index_mane_3-b)" opacity=".6" transform="rotate(-5 2021 1411)"/>
-    <polygon fill="url(#index_mane_3-c)" points="699.26 1146.601 2348.329 1147.473 2254.072 2232.892 614.964 2232.892" opacity=".6" transform="rotate(-5 1481.647 1689.747)"/>
+    <polygon fill="url(#index_product-a)" points="467 922 3219 922 3219 1702 467 1702"/>
+    <rect width="3000" height="800" x="521" y="1011" fill="url(#index_product-b)" opacity=".6" transform="rotate(-5 2021 1411)"/>
+    <polygon fill="url(#index_product-c)" points="699.26 1146.601 2348.329 1147.473 2254.072 2232.892 614.964 2232.892" opacity=".6" transform="rotate(-5 1481.647 1689.747)"/>
     <polygon fill="#002EFF" fill-opacity=".8" points="2328.336 450.47 3977.405 451.341 3883.148 1536.76 2244.04 1536.76" opacity=".6" transform="rotate(175 3110.723 993.615)"/>
     <polygon fill="#000FFF" points="2702.336 73.47 4351.405 74.341 4257.148 1159.76 2618.04 1159.76" transform="rotate(175 3484.723 616.615)"/>
     <polygon fill="#002EFF" fill-opacity=".8" points="2701.336 597.47 4350.405 598.341 4256.148 1683.76 2617.04 1683.76" opacity=".8" transform="rotate(175 3483.723 1140.615)"/>
-    <rect width="1746" height="608" x="1348" y="1079" fill="url(#index_mane_3-d)"/>
-    <rect width="766" height="698" x="338" y="1117" fill="url(#index_mane_3-e)"/>
-    <polygon fill="url(#index_mane_3-f)" points="1064.682 1319.205 2242.682 1319.205 2202.307 1786.473 1024.307 1786.473" transform="rotate(-5 1633.494 1552.84)"/>
-    <polygon fill="url(#index_mane_3-g)" points="82.7 1281.555 1260.7 1281.555 1204.289 1932.123 26.289 1932.123" opacity=".2" transform="rotate(175 643.494 1606.84)"/>
-    <polygon fill="url(#index_mane_3-h)" points="2415.336 621.47 4064.405 622.341 3970.148 1707.76 2331.04 1707.76" opacity=".6" transform="rotate(175 3197.723 1164.615)"/>
+    <rect width="1416" height="608" x="1518" y="1079" fill="url(#index_product-d)"/>
+    <rect width="766" height="698" x="338" y="1117" fill="url(#index_product-e)"/>
+    <polygon fill="url(#index_product-f)" points="1064.682 1319.205 2242.682 1319.205 2202.307 1786.473 1024.307 1786.473" transform="rotate(-5 1633.494 1552.84)"/>
+    <polygon fill="url(#index_product-g)" points="82.7 1281.555 1260.7 1281.555 1204.289 1932.123 26.289 1932.123" opacity=".2" transform="rotate(175 643.494 1606.84)"/>
+    <polygon fill="url(#index_product-h)" points="2415.336 621.47 4064.405 622.341 3970.148 1707.76 2331.04 1707.76" opacity=".6" transform="rotate(175 3197.723 1164.615)"/>
     <polygon fill="#002EFF" fill-opacity=".5" points="2006.466 657.468 3655.448 659.335 3561.191 1744.755 1922.084 1744.755" opacity=".5" transform="rotate(175 2788.766 1201.111)"/>
   </g>
 </svg>
