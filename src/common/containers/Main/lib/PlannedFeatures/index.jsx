@@ -19,7 +19,7 @@ const ColFeature = ({ children, className }) =>
 const PlannedFeatures = ({ classes }) => (
     <div className={classes.root}>
         <Typography type="display3" className={classes.title}>
-            Planned features
+            Planned Features
             </Typography>
         <Row>
             <ColFeature className={classes.feature}>

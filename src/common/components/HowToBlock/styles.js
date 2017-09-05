@@ -3,7 +3,7 @@ const styles = theme => ({
         textAlign: 'center'
     },
     title: {
-        maxWidth: 400,
+        maxWidth: 540,
         display: 'inline-block'
     },
     quote: {

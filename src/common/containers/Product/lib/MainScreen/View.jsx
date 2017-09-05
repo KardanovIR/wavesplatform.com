@@ -4,7 +4,7 @@ import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 
 
-import ImageMobile from '!svg-react-loader!./img/image_mob.svg';
+// import ImageMobile from '!svg-react-loader!./img/image_mob.svg';
 import Image from '!svg-react-loader!./img/image.svg';
 
 
@@ -14,10 +14,10 @@ const DevelopersMainScreen = ({
     onOnlineClientClick,
 }) => (
     <MainScreen
-        title="Use blockchain — it’s easy with Waves"
+        title={<span dangerouslySetInnerHTML={{ __html: 'Use blockchain —<br>it’s easy with Waves' }} />}
         text="Store, manage, trade, issue and analyse your digital assets safely with Waves blockchain platform and decentralised exchange."
         imageDesktop={<Image />}
-        imageMobile={<ImageMobile />}
+        imageMobile={<Image />}
         buttons={[
             (
                 <Button

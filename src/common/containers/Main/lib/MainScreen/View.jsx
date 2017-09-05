@@ -13,7 +13,7 @@ const IndexMainScreen = ({
     onGetWavesClick,
 }) => (
     <MainScreen
-        title="Get started with blockchain"
+        title={<span dangerouslySetInnerHTML={{ __html: 'Get started<br>with blockchain' }} />}
         text="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
         //imageDesktop={<span />}
         //imageMobile={<span />}
