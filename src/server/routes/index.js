@@ -5,6 +5,7 @@ import { render } from '../middleware/render';
 import main from './main';
 import product from './product';
 import Error404 from './Error404';
+import subscribe from './subscribe';
 
 // page components
 import Developers from 'src/common/containers/Developers';
@@ -21,9 +22,7 @@ router
     .get('/developers', render({ script: 'developers', component: Developers, description: 'Build applications on the blockchain' }))
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
-    .post('/api/subscription', async ctx => {
-        ctx.body = { result: 'success' };
-    })
+    .post('/api/subscription', subscribe)
     .get('*', Error404)
 
 

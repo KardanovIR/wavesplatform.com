@@ -22,11 +22,15 @@ services:
     build: .
     expose:
      - "3001"
+    env_file:
+     - variables.env
     restart: unless-stopped
   node2:
     build: .
     expose:
      - "3001"
+    env_file:
+     - variables.env
     restart: unless-stopped
   static:
     build: .

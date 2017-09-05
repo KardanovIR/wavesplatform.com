@@ -6,7 +6,11 @@ export default async (ctx, next) => {
         ctx.logger.error(err.message || 'Unknown error');
 
         ctx.status = err.status || 500;
-        ctx.body = err.message;
+
+        if (process.env.NODE_ENV !== 'production') {
+            ctx.body = err.message;
+        }
+        
         ctx.app.emit('error', err, ctx);
     }
 }
