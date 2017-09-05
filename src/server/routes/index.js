@@ -18,9 +18,9 @@ const router = new Router();
 router
     .get('/', main)
     .get('/product', product)
-    .get('/developers', render({ script: 'developers', component: Developers }))
-    .get('/company', render({ script: 'company', component: Company }))
-    .get('/get-waves', render({ script: 'getWaves', component: GetWaves }))
+    .get('/developers', render({ script: 'developers', component: Developers, description: 'Build applications on the blockchain' }))
+    .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
+    .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
     .post('/api/subscription', async ctx => {
         ctx.body = { result: 'success' };
     })

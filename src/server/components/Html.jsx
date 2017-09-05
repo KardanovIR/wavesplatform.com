@@ -6,6 +6,7 @@ import { GtmHead, GtmBody } from './Gtm';
 
 const Html = ({
     title,
+    description,
     content,
     initialState,
     script,
@@ -23,6 +24,11 @@ const Html = ({
             <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
             <title>{ title }</title>
+            <meta property="og:title" content={title} />
+            <meta name="description" content={description} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content="@todo:add" />
+
 
             {/* sentry enable */}
             { sentryEnabled && (
@@ -68,6 +74,7 @@ Html.defaultProps = {
     initialState: {},
     gtmEnabled: false,
     sentryEnabled: false,
+    description: ''
 }
 
 

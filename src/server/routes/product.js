@@ -11,5 +11,9 @@ import Product from 'src/common/containers/Product';
 export default compose([
     getDexTopPairs,
     getDexData,
-    render({ script: 'product', component: Product }),
+    render({
+        script: 'product',
+        component: Product,
+        description: 'Use blockchain — it’s easy with Waves'
+    }),
 ])

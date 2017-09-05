@@ -14,8 +14,13 @@ import FontInliner from 'src/server/components/FontInliner';
 const store = createStore(s => s, {});
 
 
-export const render = ({ script: scriptName, component: Component = 'span', title = 'Waves Platform' } = {}) =>
-    async ctx => {
+export const render = function({
+    script: scriptName,
+    component: Component = 'span',
+    title = 'Waves Platform',
+    description
+} = {}) {
+    return async ctx => {
 
         // enable SSR only for production
         let RenderedComponent;
@@ -64,6 +69,7 @@ export const render = ({ script: scriptName, component: Component = 'span', titl
         const html = renderToStaticMarkup(
             <Html
                 title={title}
+                description={description}
                 script={script}
                 vendorChunk={vendorChunk}
                 content={content}
@@ -75,3 +81,4 @@ export const render = ({ script: scriptName, component: Component = 'span', titl
 
         ctx.body = `<!DOCTYPE html>${html}`;
     }
+}
