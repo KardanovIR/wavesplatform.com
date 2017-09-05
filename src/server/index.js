@@ -17,6 +17,10 @@ import initLogger from './middleware/initLogger';
 
 
 
+import initEnvVariables from './utils/initEnvVariables';
+initEnvVariables();
+
+
 
 const app = new Koa();
 

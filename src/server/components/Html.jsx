@@ -27,7 +27,7 @@ const Html = ({
             <meta property="og:title" content={title} />
             <meta name="description" content={description} />
             <meta property="og:description" content={description} />
-            <meta property="og:image" content="@todo:add" />
+            <meta property="og:image" content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGimage.png" />
 
 
             {/* sentry enable */}
