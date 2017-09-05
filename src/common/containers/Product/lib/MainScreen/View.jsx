@@ -14,8 +14,8 @@ const DevelopersMainScreen = ({
     onOnlineClientClick,
 }) => (
     <MainScreen
-        title="Use blockchain — it’s easy with Waves"
-        text="Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange."
+        title="Use blockchain — it’s easy with Waves"
+        text="Store, manage, trade, issue and analyse your digital assets safely with Waves blockchain platform and decentralised exchange."
         imageDesktop={<Image />}
         imageMobile={<ImageMobile />}
         buttons={[

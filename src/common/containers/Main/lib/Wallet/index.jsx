@@ -25,7 +25,7 @@ const Wallet = ({ classes }) => (
                     Wallet
                 </Typography>
                 <Typography type="body2" align="center">
-                    Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets."
+                    Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets.
                 </Typography>
                 <Margin bottom={4} />
             </Col>
@@ -36,35 +36,35 @@ const Wallet = ({ classes }) => (
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="shield" circle />}
-                            text="Take advantage of our platform’s high security"
+                            text="Take advantage of our platform’s outstanding security"
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="leasing" circle />}
-                            text="Get interest on your Waves account balance"
+                            text="Receive interest on your Waves account balance"
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="transaction" circle />}
-                            text="Transfer funds from person to person"
+                            text="Transfer funds from person to person"
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="mining" circle />}
-                            text="Start mining — it’s easy with Waves"
+                            text="Start mining — it’s easy with Waves"
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="wallet" circle />}
-                            text="Create a multiple-currency wallet"
+                            text="Create a multiple-currency wallet"
                             centered
                         />
                     </ColFeature>

@@ -13,13 +13,13 @@ const HowToStart = ({
     onGetClientClick
 }) => (
     <HowToBlock
-        title="How do I start trading on the Waves DEX?"
+        title="How do I start trading on the Waves DEX?"
         steps={[
             {
                 avatar: <IconProduct name="cloud" circle />,
                 text: (
                     <div>
-                        First, install the Waves client.
+                        First, download install the Waves client.
                         <Margin />
                         <Button
                             onClick={onGetClientClick}
@@ -34,11 +34,11 @@ const HowToStart = ({
             },
             {
                 avatar: <IconProduct name="coins" circle />,
-                text: "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
+                text: "Fill your wallet with bitcoin, ethereum, ethereum classic, US dollars or Euros."
             },
             {
                 avatar: <IconProduct name="dex" circle />,
-                text: "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
+                text: "You will need to pay a small commission in Waves to trade any pairs, so buy WAVES in advance."
             },
         ]}
     />

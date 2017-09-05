@@ -32,25 +32,25 @@ const DEX = ({ classes }) => (
                     <Col xs={12} md={6} lg={5} className={classes.article}>
                         <Article
                             title="Trade without limits"
-                            text="There are no limits on withdrawals, and the cryptocurrency immediately appears into your wallet’s balance."
+                            text="There are no limits on withdrawals, and any cryptocurrency purchased immediately appears in your wallet’s balance."
                         />
                     </Col>
                     <Col xs={12} md={6} lg={5} lgOffset={1} className={classes.article}>
                         <Article
-                            title="Don’t waste money on high commissions"
-                            text="On our stock exchange a low fixed commission for the order is established."
+                            title="Don’t waste money on high commission fees"
+                            text="Our exchange has a small fixed commission on a per-order basis."
                         />
                     </Col>
                     <Col xs={12} md={6} lg={5} className={classes.article}>
                         <Article
                             title="Trade quickly and safely"
-                            text="A centralized matcher and high channel capacity allow you to make deals as quickly as on a centralized exchange, but without the risk of losing your money."
+                            text="A centralised matcher and high channel capacity allow you to make deals as quickly as on a centralised exchange, but without the risk of losing your money."
                         />
                     </Col>
                     <Col xs={12} md={6} lg={5} lgOffset={1} className={classes.article}>
                         <Article
-                            title="Never worry about the safety of your assets"
-                            text="You money is kept in your wallet, not on the exchange."
+                            title="Never worry about the safety of your assets"
+                            text="Funds are kept in your wallet, not on the exchange."
                         />
                     </Col>                  
                 </Row>

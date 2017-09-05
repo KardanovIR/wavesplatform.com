@@ -11,17 +11,17 @@ const IssuingTokens = () => (
     <Row centered>
         <Col xs={12} sm={8} md={6}>
             <Typography type="display2" align="center">
-                Issuing your tokens
+                Issue your own tokens
             </Typography>
 
             <Typography type="body2" align="center">
-                Releasing tokens allows any business to use their own internal digital currency, using blockchain to pay for goods and services within their projects.
+                Releasing tokens allows any business to implement their own internal digital currency, using blockchain for crowdfunding or to pay for goods and services within their projects. Companies can also use tokens to create voting systems and loyalty or discount programmes.
             </Typography>
 
             <Margin />
 
             <Typography type="quote" align="center" color="gray-500">
-                Companies that have released their own tokens on Waves:
+                Companies that have released their own tokens on Waves:
             </Typography>
         </Col>
     </Row>

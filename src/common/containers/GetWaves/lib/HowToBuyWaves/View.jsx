@@ -11,7 +11,7 @@ const HowToStart = ({
     onGetClientClick
 }) => (
     <HowToBlock
-        title="Buy Waves in a Waves client"
+        title="To buy WAVES using DEX:"
         steps={[
             {
                 avatar: <IconProduct name="cloud" circle />,
@@ -32,14 +32,14 @@ const HowToStart = ({
             },
             {
                 avatar: <IconProduct name="coins" circle />,
-                text: "Deposit Euros, USD, Bitcoin or Ethereum to Waves wallet"
+                text: "Deposit Euros, USD, Bitcoin or Ethereum to your Waves wallet "
             },
             {
                 avatar: <IconProduct name="dex" circle />,
-                text: "Place your order to buy currency on Waves DEX and get your first Waves!"
+                text: "Place your order on the Waves DEX and buy your first WAVES!"
             },
         ]}
-        quote="The Waves DEX, a decentralized exchange within the Waves Client, allows you to buy, sell or exchange digital assets within the Waves Platform. Just place your order to buy Waves and get your first assets! "
+        quote="The Waves DEX, a decentralised exchange integrated within the desktop Waves Client, allows you to buy, store, sell or exchange digital assets on the Waves Platform. Just place your order to buy WAVES or your first assets!"
     />
 );
 

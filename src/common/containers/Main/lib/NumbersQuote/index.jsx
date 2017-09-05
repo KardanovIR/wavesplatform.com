@@ -28,7 +28,7 @@ const NumbersQuote = ({
             <Col xs={12} md={6}>
                 <BlockQuote align="right">
                     <div className={classes.deloitteLogo} />
-                    <div>In cooperation with our strategic partner Deloitte, we are changing the future of blockchain and creating the new economy</div>
+                    <div>In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies.</div>
                 </BlockQuote>
             </Col>
 

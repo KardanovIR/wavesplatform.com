@@ -21,9 +21,9 @@ const FeedbackContainer = ({
             image={<img className={classes.image} src={primalbasePhoto} alt="primalbase"/>}
             logo={<div className={classes.primalbaseLogo} />}
             avatar={<div className={classes.primalbaseAva} />}
-            description="Worldwide coworking spaces for Tech Community"
-            title="Primalbase crowdsale ends after one day and over 3 000 BTC raised"
-            quote="We are very grateful to all who participated early and provided strong support to this project. If you were unable to secure your token in time, please stay subscribed to our mailing list to keep informed about project developments and expansions. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants"
+            description="Distributed workspace for tech community"
+            title="Real Estate on Blockchain becomes a reality: Primalbase raised over 3000 BTC during crowdsale"
+            quote="We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants. Please stay subscribed to our mailing list to keep informed about project developments and expansions."
             signature="Primalbase Team"
         />
 
@@ -37,10 +37,10 @@ const FeedbackContainer = ({
             image={<img className={classes.image} src={mobileGoPhoto} alt="mobile_go"/>}
             logo={<div className={classes.mobileGoLogo} />}
             avatar={<div className={classes.mobileGoAva} />}
-            description="The Crypto-Centric Mobile Gaming Platform and Store"
+            description="Crypto-centric mobile gaming platform and store"
             website="mobilego.io"
-            title="MobileGo becomes largest blockchain crowdsale in history!"
-            quote="	There are advances being made in science and technology everyday, and a good example of this is the LCD monitor. LCD monitors have several benefits over the old chunky computer monitors that most users are familiar with. Old computer monitors, take up quite a bit of desktop space, put out a ton of heat, drain a ton of energy, and most often have low picture quality and resolution. Modern advances with the LCD computer monitors have changed"
+            title="MobileGo becomes largest blockchain crowdsale in history!"
+            quote="MobileGo aims to bring the advantages of cryptocurrency to the gaming industry. The project, which raised $53 million at its crowdfund, is creating a community of gamers and developers around the GStore — an open platform on which all games are purchased for the gamecredits cryptocurrency, via a seamless integration with the GWallet. MobileGo will also use smart contracts to power peer-to-peer e-sports tournaments."
             signature="MobileGo Team"
         />
     </div>

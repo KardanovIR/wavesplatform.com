@@ -18,7 +18,7 @@ const Interest = ({ classes }) => (
     <div>
         <Row centered>
             <Col xs={12} md={6}>
-                <Typography type="display2" align="center">Get interest on your Waves account balance</Typography>
+                <Typography type="display2" align="center">Get interest on your WAVES account balance</Typography>
                 <Margin bottom={5} />
             </Col>
         </Row>
@@ -34,7 +34,7 @@ const Interest = ({ classes }) => (
                     </div>
                     <Margin />
                     <Typography type="body">
-                        Any sum of Waves can be leased to miners to generate interest. You can refund at any time in 2 clicks.
+                        Any sum of WAVES can be leased to miners to generate interest. You can cancel a lease at any time with just two clicks.
                     </Typography>
                 </Panel>
             </Col>
@@ -49,7 +49,7 @@ const Interest = ({ classes }) => (
                     </div>
                     <Margin />  
                     <Typography type="body">
-                        The Waves algorithm uses a proof-of-stake algorithm. To start mining, all you need is to download and launch the node and have 10,000 Waves in your wallet.
+                        Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 10,000 WAVES in your wallet.
                     </Typography>
                 </Panel>
             </Col>
