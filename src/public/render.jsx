@@ -9,7 +9,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 
 // custom middleware
-import { log } from './middleware';
+import { googleAnalytics } from './middleware';
 
 
 
@@ -23,7 +23,7 @@ const store = createStore(
 	s => s,
 	getInitialState(),
 	compose(
-		// applyMiddleware(log),
+		applyMiddleware(googleAnalytics),
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)
 )
