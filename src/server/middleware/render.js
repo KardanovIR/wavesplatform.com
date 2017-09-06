@@ -10,6 +10,8 @@ import { Provider } from 'react-redux';
 import Html from 'src/server/components/Html';
 import FontInliner from 'src/server/components/FontInliner';
 
+import isProd from 'src/server/utils/isProd';
+
 
 const store = createStore(s => s, {});
 
@@ -76,6 +78,7 @@ export const render = function({
                 fonts={fonts.toString()}
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
+                gtmEnabled={isProd()}
             />
         );
 

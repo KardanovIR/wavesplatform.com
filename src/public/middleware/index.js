@@ -1,2 +1,2 @@
 // @todo implement middleware here
-// export { default as log } from './log';
+export { default as googleAnalytics } from './googleAnalytics';
