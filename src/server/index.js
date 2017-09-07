@@ -1,8 +1,6 @@
 import 'babel-polyfill';
 
 import Koa from 'koa';
-import serve from 'koa-static';
-import mount from 'koa-mount';
 import bodyParser from 'koa-bodyparser';
 
 import Raven from 'raven';
@@ -14,6 +12,7 @@ import { readAssets } from './middleware/readAssets';
 import serverErrorHandling from './middleware/serverErrorHandling';
 import accessLog from './middleware/accessLog';
 import initLogger from './middleware/initLogger';
+import serveStatic from './middleware/serveStatic';
 
 
 
@@ -31,9 +30,7 @@ app
     .use(accessLog)
     .use(serverErrorHandling)
     .use(bodyParser())
-    // log requests for static files
-    .use(mount('/static', serve('./dist', { maxage: 2592000000 })))  // 30 days
-    .use(serve('./assets', { maxage: 2592000000 }))  // 30 days
+    .use(serveStatic)
     .use(readAssets)
     .use(router.routes())
     // .on('error', err => {

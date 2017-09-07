@@ -4,8 +4,8 @@ import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 
 
-// import ImageMobile from '!svg-react-loader!./img/image_mob.svg';
-import Image from '!svg-react-loader!./img/image.svg';
+import imageSrc from '!svg-url-loader?noquotes!./img/image.svg';
+import imageMobSrc from '!svg-url-loader?noquotes!./img/image_mob.svg';
 
 
 
@@ -16,8 +16,8 @@ const DevelopersMainScreen = ({
     <MainScreen
         title={<span dangerouslySetInnerHTML={{ __html: 'Use blockchain —<br>it’s easy with Waves' }} />}
         text="Store, manage, trade, issue and analyse your digital assets safely with Waves blockchain platform and decentralised exchange."
-        imageDesktop={<Image />}
-        imageMobile={<Image />}
+        imageDesktop={<img src={imageSrc} alt="Product mockup" />}
+        imageMobile={<img src={imageMobSrc} alt="Product mobile mockup" />}
         buttons={[
             (
                 <Button
