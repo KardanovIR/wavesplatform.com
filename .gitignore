@@ -6,6 +6,8 @@ dist/
 bld/
 
 variables.env
+*.pem
+*.key
 
 npm-debug.log
 yarn-error.log
