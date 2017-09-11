@@ -79,6 +79,7 @@ export const render = function({
                 style={sheets.toString()}
                 initialState={ctx.state.initialState}
                 gtmEnabled={isProd()}
+                sentryEnabled={isProd()}
             />
         );
 

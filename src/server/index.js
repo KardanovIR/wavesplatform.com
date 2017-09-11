@@ -14,6 +14,8 @@ import accessLog from './middleware/accessLog';
 import initLogger from './middleware/initLogger';
 import serveStatic from './middleware/serveStatic';
 
+import isProd from 'src/server/utils/isProd';
+
 
 
 import initEnvVariables from './utils/initEnvVariables';
@@ -32,12 +34,17 @@ app
     .use(bodyParser())
     .use(serveStatic)
     .use(readAssets)
-    .use(router.routes())
-    // .on('error', err => {
-    //     Raven.captureException(err, (err, eventId) => {
-    //         console.log('Reported error ' + eventId);
-    //     })
-    // })
+    .use(router.routes());
+
+
+if (isProd()) {
+    app.on('error', err => {
+        Raven.captureException(err, (err, eventId) => {
+            console.log('Reported error ' + eventId);
+        })
+    })
+}
+    
 
 
 app.listen(3001);
