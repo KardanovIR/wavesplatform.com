@@ -36,15 +36,15 @@ const PageLayout = ({ classes }) => (
             />
         </MainScreenBackground>
 
-        <Section> 
+        {/* <Section> 
             <Team members={teamMembers} />
-        </Section>
+        </Section> */}
 
-        <Background className={classes.bgWhitepaper} skewed={true}>
-            <div className={classes.sectionWide}>
-                <Whitepaper />
-            </div>
-        </Background>
+        {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
+        <Section top={3} bottom={2}> 
+            <Whitepaper />
+        </Section>
+        {/* </Background> */}
 
 
         <div className={classes.sectionWide}>
