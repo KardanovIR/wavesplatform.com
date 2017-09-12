@@ -95,7 +95,7 @@ class SnackbarFeedback extends Component {
         setTimeout(() => {
             this.props.onGiveFeedbackShow();
             this.setState({ open: true });
-        }, 1000);
+        }, 10000);
     }
 
     handleClose = e => {
@@ -105,13 +105,17 @@ class SnackbarFeedback extends Component {
         this.setState({ open: false });
     }
 
+    handleClick = () => {
+        this.props.onGiveFeedbackClick();
+        this.setState({ open: false });
+    }
+
     render() {
         const {
-            classes,
-            onGiveFeedbackClick,
+            classes
         } = this.props;
         return (
-            <a href="https://www.surveymonkey.com/r/S2YCMR2" target="_blank" onClick={onGiveFeedbackClick}>   
+            <a href="https://www.surveymonkey.com/r/S2YCMR2" target="_blank" onClick={this.handleClick}>   
                 <Snackbar open={this.state.open} className={classes.snackbar}>
                     <div className={classes.grid}>
                         <div className={classes.textWrapper}>
