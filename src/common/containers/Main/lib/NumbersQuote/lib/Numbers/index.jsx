@@ -33,7 +33,7 @@ const NumbersMain = ({
                 <span dangerouslySetInnerHTML={{ __html: `฿&nbsp;${formatNumber(wavesBtcRate)}` }} />    
             </Typography>
             <Typography type="body">
-                waves token value
+                waves price
             </Typography>
         </ColNumber>
         <ColNumber xs={12} md={6}>

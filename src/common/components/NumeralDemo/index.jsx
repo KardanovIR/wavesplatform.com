@@ -63,7 +63,6 @@ const NumeralDemo = ({ classes, iconName, iconColor, number, text }) => (
 NumeralDemo.defaultProps = {
     iconColor: 'primary-500',
     number: '123123',
-    text: 'Waves token value'
 }
 
 NumeralDemo.propTypes = {
