@@ -5,6 +5,7 @@ import { render } from '../middleware/render';
 
 
 import Main from 'src/common/containers/Main';
+import messages from 'src/server/locale/home';
 
 
 export default compose([
@@ -12,6 +13,7 @@ export default compose([
     render({
         script: 'main',
         component: Main,
-        description: 'Get started with blockchain'
+        description: 'Get started with blockchain',
+        messages
     }),
 ])

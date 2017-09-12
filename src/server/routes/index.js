@@ -2,7 +2,7 @@ import Router from 'koa-router';
 
 
 import { render } from '../middleware/render';
-import main from './main';
+import home from './home';
 import product from './product';
 import Error404 from './Error404';
 import subscribe from './subscribe';
@@ -17,7 +17,7 @@ import GetWaves from 'src/common/containers/GetWaves';
 const router = new Router();
 
 router
-    .get('/', main)
+    .get('/', home)
     .get('/product', product)
     .get('/developers', render({ script: 'developers', component: Developers, description: 'Build applications on the blockchain' }))
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))

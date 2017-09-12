@@ -7,6 +7,8 @@ import { GtmHead, GtmBody } from './Gtm';
 const Html = ({
     title,
     description,
+    locale,     // i18n
+    messages,   // locale
     content,
     initialState,
     script,
@@ -51,6 +53,14 @@ const Html = ({
                 ` }}
             />
 
+            <script
+                type="text/javascript"
+                dangerouslySetInnerHTML={{ __html: `
+                    window.__MESSAGES = ${JSON.stringify(messages)};
+                    window.__LOCALE = ${JSON.stringify(locale)}
+                ` }}
+            />
+
             {/* Page fonts */}
             <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />
 
@@ -72,9 +82,11 @@ const Html = ({
 
 Html.defaultProps = {
     initialState: {},
+    messages: {},
     gtmEnabled: false,
     sentryEnabled: false,
-    description: ''
+    description: '',
+    locale: 'en'
 }
 
 
