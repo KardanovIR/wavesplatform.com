@@ -22,7 +22,7 @@ const styles = theme => ({
         zIndex: -1,
 
         width: '100vw',
-        backgroundSize: 2560,
+        backgroundSize: 'cover',
         backgroundPosition: 'center bottom',
 
         backgroundRepeat: 'no-repeat',
