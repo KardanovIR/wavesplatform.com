@@ -33,22 +33,16 @@ const styles = theme => ({
         },
         [theme.breakpoints.up('lg')]: {
             top: -230,
-            // width: 2560,
-            // backgroundSize: '100%',
         },
     },
 
     // height
     width: {
         height: 'calc(100% + 270px)',
-        // [theme.breakpoints.up('sm')]: {
-        //     height: 'calc(100% + 280px)',
-        // },
         [theme.breakpoints.up('md')]: {
             height: 'calc(100% + 320px)',
         },
         [theme.breakpoints.up('lg')]: {
-            // height: 841,
             height: 'calc(100% + 400px)',
         },
     },
@@ -59,20 +53,6 @@ const styles = theme => ({
     dark: {
         backgroundImage: `url(${bgDark})`,
     }
-    // common: {
-    //     backgroundImage: `url(${bgCommon})`,
-    //     height: 'calc(100% + 190px)',
-    //     [theme.breakpoints.up('md')]: {
-    //         height: 500,
-    //     },
-    //     [theme.breakpoints.up('lg')]: {
-    //         height: 705,
-    //     },
-    // },
-    // product: {
-    //     composes: '$wide',
-    //     backgroundImage: `url(${bgProduct})`,
-    // }
 })
 
 
