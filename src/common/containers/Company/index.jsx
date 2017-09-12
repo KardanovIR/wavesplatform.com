@@ -23,7 +23,7 @@ import styles from './styles';
 
 
 
-import teamMembers from './team';
+// import teamMembers from './team';
 
 
 const PageLayout = ({ classes }) => (
@@ -31,7 +31,7 @@ const PageLayout = ({ classes }) => (
 
         <MainScreenBackground>
             <MainScreen
-                title={<span dangerouslySetInnerHTML={{ __html: 'We change<br>people’s lives' }} />}
+                title={<span dangerouslySetInnerHTML={{ __html: 'What is<br>Waves Platform?' }} />}
                 text="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
             />
         </MainScreenBackground>

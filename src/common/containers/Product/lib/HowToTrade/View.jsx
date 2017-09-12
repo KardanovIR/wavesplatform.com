@@ -34,7 +34,7 @@ const HowToStart = ({
             },
             {
                 avatar: <IconProduct name="coins" circle />,
-                text: "Fill your wallet with bitcoin, ethereum, ethereum classic, US dollars or Euros."
+                text: "Fill your wallet with Bitcoin, Ethereum, US dollars or Euros."
             },
             {
                 avatar: <IconProduct name="dex" circle />,

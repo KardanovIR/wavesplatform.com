@@ -46,7 +46,7 @@ const Media = ({
         <Row centered>
             <Col xs={12} md={8} lg={5} className={classes.contactUs}>
                 <Typography type="body2">
-                    If you have any questions about partnerships or collaboration
+                    For all media inquiries, please contact the Communications Team
                 </Typography>
 
                 <Margin bottom={3} />

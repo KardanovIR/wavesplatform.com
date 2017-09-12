@@ -13,7 +13,7 @@ const DEXFeatures = () => (
             <AvatarTitleText
                 avatar={<IconProduct name="safe" circle />}
                 title="Trade quickly and securely"
-                text="All transactions happen on the blockchain, and only the order list is held on the centralised matcher. This allows us to take full advantage of both centralised and decentralised technologies. In addition to that, the implementation of the latest developments (the adaptation of Bitcoin NG to a proof-of-stake system) has allowed us to increase network capacity to hundreds of transactions per second."
+                text="All transactions happen on the blockchain, and only the order list is held on the centralised matcher. This allows us to take full advantage of both centralised and decentralised technologies. In addition, implementing the latest developments has allowed us to increase network capacity to hundreds of transactions per second."
             />
             <Margin bottom={5} />
         </Col>
