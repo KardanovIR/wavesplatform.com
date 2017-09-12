@@ -20,7 +20,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
         </Col>
         <Col xs={12} sm={6} md={6} mdOffset={1}>
             <Typography type="display3">
-                White Paper
+                Whitepaper
             </Typography>
             <Typography type="body" cut>
                 Waves is a decentralised blockchain platform focusing on custom blockchain token operations. National currencies transfer is maintained on the Waves blockchain through complaint gateway operators.
@@ -33,7 +33,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
                 href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf"
                 target="_blank"
             >
-                Download White Paper
+                Download Whitepaper
             </Button>
         </Col>
     </Row>
