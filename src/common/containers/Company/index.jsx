@@ -11,7 +11,7 @@ import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
 // lib
-import Team from './lib/Team';
+// import Team from './lib/Team';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
 import Careers from './lib/Careers';

@@ -30,7 +30,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
             
             <Button
                 onClick={onWhitepaperClick}
-                href="https://wavesplatform.com/files/whitepaper_v0.pdf"
+                href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf"
                 target="_blank"
             >
                 Download White Paper

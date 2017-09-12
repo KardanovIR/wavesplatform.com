@@ -56,7 +56,7 @@ const Media = ({
                 </Margin>
                 <Button
                     onClick={onBrandingPackageClick}
-                    href="https://wavesplatform.com/files/Waves_brand_pack_1.2.rar"
+                    href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_1.2.rar"
                     target="_blank"
                     secondary
                 >
