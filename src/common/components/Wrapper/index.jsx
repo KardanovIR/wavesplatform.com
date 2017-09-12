@@ -1,7 +1,7 @@
 import React from 'react';
 
 import injectSheet from 'react-jss';
-
+import cn from 'classnames';
 
 
 const styles = theme => {
@@ -31,8 +31,8 @@ const styles = theme => {
 }
 
 
-const Wrapper = ({ classes, children }) => (
-    <div className={classes.container}>
+const Wrapper = ({ classes, children, className }) => (
+    <div className={cn(classes.container, className)}>
         <div className={classes.content}>
             { children }
         </div>
