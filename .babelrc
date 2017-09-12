@@ -6,6 +6,9 @@
   ],
   "plugins": [
     "babel-plugin-transform-react-stateless-component-name",
-    "ramda"
+    "ramda",
+    ["react-intl", {
+      "messagesDir": "./dist/messages/"
+    }]
   ]
 }
