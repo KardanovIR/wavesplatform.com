@@ -1,3 +1,5 @@
 export default {
-    'home.main.title': 'Первый шаг в блокчейн'
+    'home.main.title': 'Первый шаг в блокчейн',
+    
+    'nav.product': 'Продукт'
 }
