@@ -9,6 +9,8 @@ import Margin from 'src/common/components/Margin';
 import Button from 'src/common/components/Button';
 
 
+import { FormattedMessage } from 'react-intl';
+
 
 import injectSheet from 'react-jss';
 import cn from 'classnames';
@@ -54,13 +56,24 @@ const PageLayout = ({ classes }) => (
                 <Typography type="display4" inverted>
                     404
                     <br />
-                    Page not found
-                </Typography>  
+                    <FormattedMessage
+                        id="error404.notFound"
+                        defaultMessage="Page not found"
+                    />
+                </Typography>
                 <Typography type="body" inverted>
-                    Sorry, this is not the web page you are looking for.
+                    <FormattedMessage
+                        id="error404.sorry"
+                        defaultMessage="Sorry, this is not the web page you are looking for."
+                    />
                 </Typography>
                 <Margin bottom={3} />
-                <Button secondary href="/">Back home</Button>
+                <Button secondary href="/">
+                    <FormattedMessage
+                        id="error404.backHome"
+                        defaultMessage="Back home"
+                    />
+                </Button>
             </div>
         </div>
     </Layout>
