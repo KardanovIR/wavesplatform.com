@@ -61,46 +61,47 @@ const PictureBlock = ({
     buttons,
     align,
 }) => (
-    <div>
-        <Row className={align === 'right' ? classes.rowRight : ''} style={{ alignItems: 'flex-start' }}>
-            <Col xs={12}>
-                <Row centered> 
-                    <Col xs={12} md={8} lg={7}>
-                        <Typography type="display2" className={classes.mdAlignCenter}>
-                            { title }
-                        </Typography>
-                        <Typography type="body2" className={classes.mdAlignCenter}>
-                            { subtitle }
-                        </Typography>
-                        <Margin bottom={4} />
-                    </Col>
-                </Row>
-            </Col>
+        <div>
+            <Row className={align === 'right' ? classes.rowRight : ''} style={{ alignItems: 'flex-start' }}>
+                <Col xs={12}>
+                    <Row centered>
+                        <Col xs={12} md={8} lg={7}>
+                            <Typography type="display2" className={classes.mdAlignCenter}>
+                                {title}
+                            </Typography>
+                            <Typography type="body2" className={classes.mdAlignCenter}>
+                                {subtitle}
+                            </Typography>
+                            <Margin bottom={4} />
+                        </Col>
+                    </Row>
+                </Col>
 
-            <Col xs={12} sm={8} md={6} lg={6}>
-                { image }
-            </Col>
+                <Col xs={12} sm={8} md={6} lg={6}>
+                    {image}
+                </Col>
 
-            <Col xs={12} md={6} lg={6} className={classes[`text-${align}`]}>
-                { typeof text === 'string' ? (
-                    <Typography type="body">
-                        { text }
-                    </Typography>
-                ) : (
-                    text.map((p, i) => <Typography type="body" key={`paragraph_${i}`}>{p}</Typography>)
-                ) }
+                <Col xs={12} md={6} lg={6} className={classes[`text-${align}`]}>
+                    {text && text.map ? (
+                        text.map((p, i) => <Typography type="body" key={`paragraph_${i}`}>{p}</Typography>)
+                    ) : (
+                            <Typography type="body">
+                                {text}
+                            </Typography>
+                        )
+                    }
 
-                <Margin bottom={3} />
+                    <Margin bottom={3} />
 
-                { buttons.map((button, index) => (
-                    <div className={classes[`button-wrapper-${align}`]} key={`devs_block_button_${index}`}>
-                        { button }
-                    </div>
-                )) }
-            </Col>
-        </Row>
-    </div>
-);
+                    {buttons.map((button, index) => (
+                        <div className={classes[`button-wrapper-${align}`]} key={`devs_block_button_${index}`}>
+                            {button}
+                        </div>
+                    ))}
+                </Col>
+            </Row>
+        </div>
+    );
 
 
 PictureBlock.defaultProps = {
@@ -108,7 +109,12 @@ PictureBlock.defaultProps = {
 }
 
 PictureBlock.propTypes = {
-    text: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string),
+        PropTypes.node,
+        PropTypes.arrayOf(PropTypes.node),
+    ])
 }
 
 

@@ -7,6 +7,7 @@ import Margin from 'src/common/components/Margin';
 
 import Resource from './lib/Resource';
 
+import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 
@@ -28,12 +29,15 @@ const styles = theme => ({
 })
 
 
-const WavesNetwork = ({ classes }) => (
+const WavesEcosystem = ({ classes }) => (
     <div>
         <Row className={classes.text} centered>
             <Col xs={12} sm={8} md={8} lg={6}>
                 <Typography type="display2">
-                    Waves Ecosystem
+                    <FormattedMessage
+                        id="developers.wavesEcosystem.title"
+                        defaultMessage="Waves Ecosystem"
+                    />
                 </Typography>
                 <Margin bottom={4} />
             </Col>
@@ -42,7 +46,12 @@ const WavesNetwork = ({ classes }) => (
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
                     iconName="list"
-                    title="Function-rich blockchain explorer"
+                    title={
+                        <FormattedMessage
+                            id="developers.wavesEcosystem.explorer"
+                            defaultMessage="Function-rich blockchain explorer"
+                        />
+                    }
                     resource="wavesgo.com"
                     href="https://wavesgo.com"
                 />
@@ -50,7 +59,12 @@ const WavesNetwork = ({ classes }) => (
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
                     iconName="message"
-                    title="Waves forum"
+                    title={
+                        <FormattedMessage
+                            id="developers.wavesEcosystem.forum"
+                            defaultMessage="Waves forum"
+                        />
+                    }
                     resource="wavestalk.org"
                     href="https://wavestalk.org"
                 />
@@ -59,7 +73,12 @@ const WavesNetwork = ({ classes }) => (
             <Col xs={12} sm={4} className={classes.resourceColumn}>
                 <Resource
                     iconName="script"
-                    title="Python API client and useful scripts"
+                    title={
+                        <FormattedMessage
+                            id="developers.wavesEcosystem.pywaves"
+                            defaultMessage="Python API client and useful scripts"
+                        />
+                    }
                     resource="github.com/PyWaves"
                     href="https://github.com/PyWaves"
                 />
@@ -70,4 +89,4 @@ const WavesNetwork = ({ classes }) => (
 );
 
 
-export default injectSheet(styles)(WavesNetwork);
+export default injectSheet(styles)(WavesEcosystem);

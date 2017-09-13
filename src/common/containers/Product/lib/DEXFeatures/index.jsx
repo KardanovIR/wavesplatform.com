@@ -23,7 +23,7 @@ const DEXFeatures = () => (
                     <FormattedMessage
                         id="product.DEXFeatures.security.text"
                         defaultMessage="All transactions happen on the blockchain, and only the order list is held on the centralised matcher. This allows us to take full advantage of both centralised and decentralised technologies. In addition, implementing the latest developments has allowed us to increase network capacity to hundreds of transactions per second."
-                    />    
+                    /> 
                 }
             />
             <Margin bottom={5} />

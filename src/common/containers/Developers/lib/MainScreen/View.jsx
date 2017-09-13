@@ -8,11 +8,24 @@ import ImageMobile from '!svg-react-loader!./img/table_mob.svg';
 import Image from '!svg-react-loader!./img/table.svg';
 
 
+import { FormattedMessage } from 'react-intl';
+
+
 
 const DevelopersMainScreen = ({ onDocumentationClick }) => (
     <MainScreen
-        title="Build applications on the blockchain"
-        text="Waves is a powerful blockchain platform that allows anyone to launch their own cryptographically-secured tokens — allowing businesses and other organisations to build versatile applications with all the advantages of peer-to-peer technology."
+        title={
+            <FormattedMessage
+                id="developers.title"
+                defaultMessage="Build applications on the blockchain"
+            />
+        }
+        text={
+            <FormattedMessage
+                id="developers.text"
+                defaultMessage="Waves is a powerful blockchain platform that allows anyone to launch their own cryptographically-secured tokens — allowing businesses and other organisations to build versatile applications with all the advantages of peer-to-peer technology."
+            />
+        }
         imageDesktop={<Image />}
         imageMobile={<ImageMobile />}
         buttons={[
@@ -26,7 +39,10 @@ const DevelopersMainScreen = ({ onDocumentationClick }) => (
                     iconName="github"
                     secondary
                 >
-                    Documentation
+                    <FormattedMessage
+                        id="developers.cta.documentation"
+                        defaultMessage="Documentation"
+                    />
                 </IconButton>
             ),
             // (
