@@ -11,6 +11,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 
+import locale from 'src/server/locale';
+
 addLocaleData([...en,...ru]);
 
 
@@ -23,6 +25,7 @@ import FontInliner from 'src/server/components/FontInliner';
 import isProd from 'src/server/utils/isProd';
 
 
+
 const store = createStore(s => s, {});
 
 
@@ -31,7 +34,7 @@ export const render = function({
     script: scriptName,
     component: Component = 'span',
     title = 'Waves Platform',
-    messages = {},
+    // messages = {},
     description
 } = {}) {
     return async ctx => {
@@ -53,7 +56,7 @@ export const render = function({
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
                 <Provider store={store}>    
-                    <IntlProvider locale={ctx.locale} defaultLocale="en" messages={messages}>
+                    <IntlProvider locale={ctx.locale} defaultLocale="en" messages={locale[ctx.locale]}>
                         <RenderedComponent initialState={ctx.state.initialState} />
                     </IntlProvider>
                 </Provider>
@@ -90,8 +93,8 @@ export const render = function({
                 description={description}
                 script={script}
                 vendorChunk={vendorChunk}
-                messages={messages}
                 locale={ctx.locale}
+                messages={locale[ctx.locale]}
                 content={content}
                 fonts={fonts.toString()}
                 style={sheets.toString()}

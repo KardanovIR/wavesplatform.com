@@ -4,6 +4,7 @@ import Typography from 'src/common/components/Typography';
 
 import injectSheet from 'react-jss';
 
+import { FormattedNumber, FormattedMessage } from 'react-intl';
 
 
 const styles = theme => ({
@@ -23,6 +24,9 @@ const styles = theme => ({
         fontSize: 17,
         lineHeight: '17px',
         color: theme.palette.gray[800]
+    },
+    grayText: {
+        color: theme.palette.gray[300]
     }
 })
 
@@ -36,7 +40,14 @@ const PairVolume = ({
         <div className={classes.wrapper}>
             <Typography className={classes.assets}>{assets[0]}/{assets[1]}</Typography>
             <Typography type="numeral" align="right" className={classes.volume} noMargin>
-                ${volume.toLocaleString('ru')}
+                { !!volume
+                    ? <span>$ <FormattedNumber value={volume} /></span>
+                    : (
+                        <span className={classes.grayText}>
+                            <FormattedMessage id="product.DEXTopPairs.unavailable" defaultMessage="n/a" />
+                        </span>
+                    )
+                }
             </Typography>
         </div>
     );

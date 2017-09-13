@@ -35,6 +35,9 @@ import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
 
 
+// intl
+import { FormattedMessage } from 'react-intl';
+
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -111,7 +114,10 @@ const PageLayout = ({ classes, initialState }) => (
             type="quote"
             align="center"
         >
-            Companies that have released their own tokens on Waves:
+            <FormattedMessage
+                id="feedback.companiesReleased"
+                defaultMessage="Companies that have released their own tokens on Waves:"
+            />
         </Typography>
 
         <div className={classes.section}>
