@@ -6,6 +6,7 @@ import IconProduct from 'src/common/components/IconProduct';
 import AvatarWithText from 'src/common/components/AvatarWithText';
 import { Row, Col } from 'src/common/components/Grid';
 
+import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -19,49 +20,82 @@ const ColFeature = ({ children, className }) =>
 const PlannedFeatures = ({ classes }) => (
     <div className={classes.root}>
         <Typography type="display3" className={classes.title}>
-            Planned Features
-            </Typography>
+            <FormattedMessage
+                id="home.plannedFeatures.title"
+                defaultMessage="Planned Features"
+            />
+        </Typography>
         <Row>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="product" circle />}
-                    text="New UX & UI"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.newUX"
+                            defaultMessage="New UX & UI"
+                        />
+                    }
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="dex" circle />}
-                    text="Expanded statistics on released tokens"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.statistics"
+                            defaultMessage="Expanded statistics on released tokens"
+                        />
+                    }
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="message" circle />}
-                    text="Blockchain messenger"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.messenger"
+                            defaultMessage="Blockchain messenger"
+                        />
+                    }
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="fingerprint" circle />}
-                    text="Multisignature"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.multisignature"
+                            defaultMessage="Multisignature"
+                        />
+                    }
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="document" circle />}
-                    text="Smart contracts"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.smartContracts"
+                            defaultMessage="Smart contracts"
+                        />
+                    }
                 />
             </ColFeature>
             <ColFeature className={classes.feature}>
                 <AvatarWithText
                     centered
                     avatar={<IconProduct name="money" circle />}
-                    text="New fiat and cryptocurrency gateways"
+                    text={
+                        <FormattedMessage
+                            id="home.plannedFeatures.gateways"
+                            defaultMessage="New fiat and cryptocurrency gateways"
+                        />
+                    }
                 />
             </ColFeature>
         </Row>

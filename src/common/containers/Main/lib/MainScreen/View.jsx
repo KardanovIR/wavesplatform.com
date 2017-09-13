@@ -3,7 +3,7 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 
-import { FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 
 // import Image from '!svg-react-loader!./img/image.svg';
@@ -21,7 +21,12 @@ const IndexMainScreen = ({
                     defaultMessage='Get started<br>with blockchain'
                 />
             }
-            text="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
+            text={
+                <FormattedMessage
+                    id='home.main.text'
+                    defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
+                />
+            }
             //imageDesktop={<span />}
             //imageMobile={<span />}
             buttons={[
@@ -32,8 +37,11 @@ const IndexMainScreen = ({
                         target="_blank"
                         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
                     >
-                        Get Client
-                </Button>
+                        <FormattedMessage
+                            id="cta.getClient"
+                            defaultMessage="Get Client"
+                        />
+                    </Button>
                 ),
                 (
                     <Button
@@ -43,8 +51,11 @@ const IndexMainScreen = ({
                         secondary
                         key="main_cta_button2"
                     >
-                        Get Waves
-                </Button>
+                        <FormattedMessage
+                            id='cta.getWaves'
+                            defaultMessage="Get Waves"
+                        />
+                    </Button>
                 )
             ]}
         />
