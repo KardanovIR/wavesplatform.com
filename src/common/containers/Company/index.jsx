@@ -21,18 +21,28 @@ import Careers from './lib/Careers';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-
+import { FormattedMessage } from 'react-intl';
 
 // import teamMembers from './team';
 
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="Company">
+    <Layout activeLink="company">
 
         <MainScreenBackground>
             <MainScreen
-                title={<span dangerouslySetInnerHTML={{ __html: 'We&nbsp;create the economics of&nbsp;free, perfect and instant' }} />}
-                text="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
+                title={
+                    <FormattedMessage
+                        id="company.title"
+                        defaultMessage="We create the economics of free, perfect and instant"
+                    />
+                }
+                text={
+                    <FormattedMessage
+                        id="company.text"
+                        defaultMessage="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
+                    />
+                }
             />
         </MainScreenBackground>
 

@@ -50,7 +50,7 @@ TitleTextCTA.defaultProps = {
 TitleTextCTA.propTypes = {
     buttons: PropTypes.arrayOf(PropTypes.node),
     titleType: PropTypes.string,
-    title: PropTypes.string.isRequired
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired
 }
 
 

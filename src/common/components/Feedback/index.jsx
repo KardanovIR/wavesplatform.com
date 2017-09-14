@@ -52,12 +52,12 @@ const Feedback = ({
 Feedback.propTypes = {
     image: PropTypes.node.isRequired,
     logo: PropTypes.node.isRequired,
-    description: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    quote: PropTypes.string.isRequired,
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+    title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+    quote: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 
-    signature: PropTypes.string,
-    website: PropTypes.string,
+    signature: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    website: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     avatar: PropTypes.node,
 };
 

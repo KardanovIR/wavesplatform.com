@@ -13,6 +13,7 @@ import serverErrorHandling from './middleware/serverErrorHandling';
 import accessLog from './middleware/accessLog';
 import initLogger from './middleware/initLogger';
 import serveStatic from './middleware/serveStatic';
+import sniffLocale from './middleware/sniffLocale';
 
 import isProd from 'src/server/utils/isProd';
 
@@ -31,6 +32,7 @@ app
     .use(initLogger)
     .use(accessLog)
     .use(serverErrorHandling)
+    .use(sniffLocale)
     .use(bodyParser())
     .use(serveStatic)
     .use(readAssets)

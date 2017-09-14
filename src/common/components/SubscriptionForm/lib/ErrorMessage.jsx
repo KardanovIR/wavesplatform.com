@@ -1,16 +1,30 @@
 import React from 'react';
-// import styles from './styles';
 
 import Typography from 'src/common/components/Typography';
 
+import { FormattedMessage } from 'react-intl';
 
 
-import { EMPTY, EMAIL_INVALID } from '../../../../public/utils/validation/rules';
+import { EMPTY, EMAIL_INVALID } from 'src/public/utils/validation/rules';
 
 
 
-const Empty = () => <Typography inverted>Please enter an email address</Typography>
-const EmailInvalid = () => <Typography inverted>Invalid email address</Typography>
+const Empty = () => (
+    <Typography inverted>
+        <FormattedMessage
+            id="form.errors.emailEmpty"
+            defaultMessage="Please enter an email address"
+        />
+    </Typography>
+)
+const EmailInvalid = () => (
+    <Typography inverted>
+        <FormattedMessage
+            id="form.errors.emailInvalid"
+            defaultMessage="Invalid email address"
+        />
+    </Typography>
+)
 
 
 const ErrorMessage = ({ errors }) => {

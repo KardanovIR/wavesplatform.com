@@ -14,7 +14,7 @@ const DexktopNav = ({ classes, links, activeLink }) => (
             <Typography key={`desktop_nav_link${index}`} tagName="span" inverted>
                 <a 
                     href={link.href}
-                    className={cn(classes.link, { [classes.active]: link.text === activeLink })}
+                    className={cn(classes.link, { [classes.active]: link.page === activeLink })}
                 >
                     {link.text}
                 </a>

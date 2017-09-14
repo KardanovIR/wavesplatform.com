@@ -4,6 +4,7 @@ import BlockQuote from 'src/common/components/BlockQuote';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
+import { FormattedMessage } from 'react-intl';
 
 import Numbers from './lib/Numbers';
 
@@ -28,7 +29,11 @@ const NumbersQuote = ({
             <Col xs={12} md={6}>
                 <BlockQuote align="right">
                     <div className={classes.deloitteLogo} />
-                    <div>In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies.</div>
+                    <FormattedMessage
+                        tagName="div"
+                        id='home.quote'
+                        defaultMessage="In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies."
+                    />
                 </BlockQuote>
             </Col>
 

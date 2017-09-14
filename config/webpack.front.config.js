@@ -3,7 +3,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
+// const patchEntriesHotReload = require('./utils/patchEntriesHotReload');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
 const entry = require('./lib/entry');
@@ -17,7 +17,8 @@ const includedDirectories = [
 
 
 module.exports = {
-    entry: patchEntriesHotReload(entry),
+    // entry: patchEntriesHotReload(entry),
+    entry: entry,
 
     target: 'web',
 
@@ -33,7 +34,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 use: [
-                    'react-hot-loader/webpack',
+                    // 'react-hot-loader/webpack',
                     'babel-loader',
                 ],
                 include: includedDirectories
@@ -64,7 +65,7 @@ module.exports = {
         port: 3000,
         disableHostCheck: true,
         publicPath: '/static',
-        hot: true,
+        // hot: true,
         historyApiFallback: true,
         contentBase: './public',
         proxy: {
@@ -85,7 +86,7 @@ module.exports = {
             'process.env.NODE_ENV': '"development"',
             'NODE_ENV': '"development"'
         }),
-        new webpack.HotModuleReplacementPlugin(),
+        // new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         // new ExtractTextPlugin('styles.css')
     ],

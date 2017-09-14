@@ -15,7 +15,7 @@ import FriendlyAPI from './lib/FriendlyAPI';
 import WavesNode from './lib/WavesNode';
 import DEX from './lib/DEX';
 import WavesNetwork from './lib/WavesNetwork';
-import Community from './lib/Community';
+import WavesEcosystem from './lib/WavesEcosystem';
 import Description from './lib/Description';
 
 
@@ -27,7 +27,7 @@ import styles from './styles';
 
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="Developers">
+    <Layout activeLink="developers">
         
         <MainScreenBackground type="dark">
             <MainScreen />
@@ -61,7 +61,7 @@ const PageLayout = ({ classes }) => (
         </Section>
 
         <Section top={2} bottom={4}>
-            <Community />
+            <WavesEcosystem />
         </Section>
 
     </Layout>

@@ -9,6 +9,7 @@ import Button from 'src/common/components/Button';
 import IconProduct from 'src/common/components/IconProduct';
 import { Row, Col } from 'src/common/components/Grid';
 
+import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -48,7 +49,10 @@ const MainScreen = ({ classes }) => (
         <Row>
             <Col xs={12} md={6} mdOffset={6}>
                 <Typography type="display1">
-                    Join the Waves Community
+                    <FormattedMessage
+                        id="home.joinUs.title"
+                        defaultMessage="Join the Waves Community"
+                    />
                 </Typography>
                 <Margin />
             </Col>
@@ -57,7 +61,10 @@ const MainScreen = ({ classes }) => (
             <Col md={2} />
             <Col xs={12} md={4} mdOffset={1} className={classes.article}>
                 <Typography type="body">
-                    Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world.
+                    <FormattedMessage
+                        id="home.joinUs.text"
+                        defaultMessage="Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors, and anyone who is interested in staying on the cutting edge of the crypto-world."
+                    />
                 </Typography>
                 <Margin />
                 <div>
@@ -69,7 +76,11 @@ const MainScreen = ({ classes }) => (
                     <IconProduct name="application" size={40} />
                 </div>
                 <Typography type="quote">
-                    Keep up with the latest news and articles, and find out all about events happening on the Waves Platform, with our community at <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link>
+                    <FormattedMessage
+                        id="home.joinUs.quote"
+                        defaultMessage="Keep up with the latest news and articles, and find out all about events happening on the Waves Platform, with our community at {link}"
+                        values={{ link: <Link target="_blank" href="https://wavescommunity.com">wavescommunity.com</Link> }}
+                    />
                 </Typography>
             </Col>
         </Row>

@@ -7,6 +7,7 @@ import AvatarWithText from 'src/common/components/AvatarWithText';
 import IconProduct from 'src/common/components/IconProduct';
 import { Row, Col } from 'src/common/components/Grid';
 
+import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -22,10 +23,16 @@ const Wallet = ({ classes }) => (
         <Row centered>
             <Col xs={12} sm={9} md={6}>
                 <Typography type="display2" align="center">
-                    Wallet
+                    <FormattedMessage
+                        id="home.wallet.title"
+                        defaultMessage="Wallet"
+                    />
                 </Typography>
                 <Typography type="body2" align="center">
-                    Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets.
+                    <FormattedMessage
+                        id="home.wallet.text"
+                        defaultMessage="Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets."
+                    />
                 </Typography>
                 <Margin bottom={4} />
             </Col>
@@ -36,35 +43,60 @@ const Wallet = ({ classes }) => (
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="shield" circle />}
-                            text="Take advantage of our platform’s outstanding security"
-                            centered
+                            text={
+                                <FormattedMessage
+                                    id="home.wallet.security"
+                                    defaultMessage="Take advantage of our platform’s outstanding security"
+                                />
+                            }
+                        centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="leasing" circle />}
-                            text="Receive interest on your Waves account balance"
+                            text={
+                                <FormattedMessage
+                                    id="home.wallet.interest"
+                                    defaultMessage="Receive interest on your Waves account balance"
+                                />
+                            }
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="transaction" circle />}
-                            text="Transfer funds from person to person"
+                            text={
+                                <FormattedMessage
+                                    id="home.wallet.transfer"
+                                    defaultMessage="Transfer funds from person to person"
+                                />
+                            }
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="mining" circle />}
-                            text="Start mining — it’s easy with Waves"
+                            text={
+                                <FormattedMessage
+                                    id="home.wallet.mining"
+                                    defaultMessage="Start mining — it’s easy with Waves"
+                                />
+                            }
                             centered
                         />
                     </ColFeature>
                     <ColFeature className={classes.feature}>
                         <AvatarWithText
                             avatar={<IconProduct name="wallet" circle />}
-                            text="Create a multiple-currency wallet"
+                            text={
+                                <FormattedMessage
+                                    id="home.wallet.wallet"
+                                    defaultMessage="Create a multiple-currency wallet"
+                                />
+                            }
                             centered
                         />
                     </ColFeature>
