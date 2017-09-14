@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 export default [
     {
         "href": "/",
+        "page": "home",
         "text": (
             <FormattedMessage
                 id="nav.home"
@@ -15,6 +16,7 @@ export default [
     },
     {
         "href": "/product",
+        "page": "product",
         "text": (
             <FormattedMessage
                 id="nav.product"
@@ -24,6 +26,7 @@ export default [
     },
     {
         "href": "/developers",
+        "page": "developers",
         "text": (
             <FormattedMessage
                 id="nav.developers"
@@ -33,6 +36,7 @@ export default [
     },
     {
         "href": "/company",
+        "page": "company",
         "text": (
             <FormattedMessage
                 id="nav.company"

@@ -27,7 +27,7 @@ import styles from './styles';
 
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="Developers">
+    <Layout activeLink="developers">
         
         <MainScreenBackground type="dark">
             <MainScreen />

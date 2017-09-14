@@ -27,7 +27,7 @@ import { FormattedMessage } from 'react-intl';
 
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="Company">
+    <Layout activeLink="company">
 
         <MainScreenBackground>
             <MainScreen
