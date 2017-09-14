@@ -70,6 +70,7 @@
     "nodemon": "^1.11.0",
     "pug-loader": "^2.3.0",
     "react-hot-loader": "next",
+    "react-intl-translations-manager": "^5.0.0",
     "style-loader": "^0.18.2",
     "svg-react-loader": "^0.4.4",
     "svg-url-loader": "^1.1.1",
