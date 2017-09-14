@@ -43,7 +43,6 @@ const Layout = ({
         </div>
         <div>{children}</div>
         { !hideFooter && <Footer links={links} /> }
-        <SnackbarFeedback />
     </Wrapper>
 )
 
