@@ -3,8 +3,7 @@ import React from 'react';
 import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
 
-import formatNumber from 'src/common/utils/formatNumber';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 
 import injectSheet from 'react-jss';
@@ -31,7 +30,7 @@ const NumbersMain = ({
         <Row>
             <ColNumber >
                 <Typography type="numeral">
-                    <span dangerouslySetInnerHTML={{ __html: `฿&nbsp;${formatNumber(wavesBtcRate)}` }} />
+                    ฿ <FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />
                 </Typography>
                 <Typography type="body">
                     <FormattedMessage
@@ -42,7 +41,7 @@ const NumbersMain = ({
             </ColNumber>
             <ColNumber xs={12} md={6}>
                 <Typography type="numeral">
-                    <span dangerouslySetInnerHTML={{ __html: `$&nbsp;${formatNumber(dexVolume)}` }} />
+                    $ <FormattedNumber value={dexVolume} />
                 </Typography>
                 <Typography type="body">
                     <FormattedMessage
@@ -53,7 +52,7 @@ const NumbersMain = ({
             </ColNumber>
             <ColNumber xs={12} md={6}>
                 <Typography type="numeral">
-                    <span dangerouslySetInnerHTML={{ __html: formatNumber(dexWallets) }} />
+                    <FormattedNumber value={dexWallets} />
                 </Typography>
                 <Typography type="body">
                     <FormattedMessage
@@ -64,7 +63,7 @@ const NumbersMain = ({
             </ColNumber>
             <ColNumber xs={12} md={6}>
                 <Typography type="numeral">
-                    <span dangerouslySetInnerHTML={{ __html: formatNumber(dexAssets) }} />
+                    <FormattedNumber value={dexAssets} />
                 </Typography>
                 <Typography type="body">
                     <FormattedMessage

@@ -3,7 +3,6 @@ import React from 'react';
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
-import SnackbarFeedback from 'src/common/containers/SnackbarFeedback';
 
 import links from './links';
 

@@ -104,7 +104,7 @@ const DEX = ({
                                 <FormattedMessage
                                     id="product.DEX.wavesPrice.number"
                                     defaultMessage="฿ {price}"
-                                    values={{ price: <FormattedNumber value={dexData.wavesBtcRate} /> }}
+                                    values={{ price: <FormattedNumber value={dexData.wavesBtcRate} maximumFractionDigits={8} /> }}
                                 />
                             </Typography>
                             <Typography type="body">
