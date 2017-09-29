@@ -80,8 +80,8 @@ export const render = function({
 
         if (process.env.NODE_ENV === 'production') {
             // read file path fron assets
-            script = '/static' + ctx.state.assets[scriptName].js;
-            vendorChunk = '/static' + ctx.state.assets.vendor.js;
+            script = ctx.state.assets[scriptName].js;
+            vendorChunk = ctx.state.assets.vendor.js;
         } else {
             script = `/static/${scriptName}.js`;
         }
