@@ -63,18 +63,18 @@ const PageLayout = ({ classes }) => (
 
 
         <Background className={classes.bgLight} skewed={true}>
-            <Section size={4}>
+            <Section size={4} className={classes.footerMarginCompensate}>
                 <Vacancies />
             </Section>
         </Background>
 
 
 
-        <Background className={classes.bgDark} skewed={true}>
+        {/* <Background className={classes.bgDark} skewed={true}>
             <Section size={4} className={classes.footerMarginCompensate}>
                 <Careers />
             </Section>
-        </Background>
+        </Background> */}
 
     </Layout>
 );
