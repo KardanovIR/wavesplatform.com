@@ -31,22 +31,23 @@ const Vacancy = ({
         <Panel className={cn(classes.wrapper, { [classes.collapsed]: !expanded })}>
 
             <div className={classes.clickable} onClick={onToggle}>
-                <div className={classes.arrow} />
+                <div className={classes.titleWrapper} >
+                    <div className={classes.arrow} />
+
+                    <Typography type="display1" className={classes.title}>
+                        {title}
+                    </Typography>
+                    <Typography type="body" noMargin>
+                        <Icon name="mapMarker" size={15} color="gray-400" />
+                        <span className={classes.locationText}>
+                            {location}
+                        </span>
+                    </Typography>
+                </div>
+
             </div>
 
-            <Typography type="display1" className={classes.title}>
-                {title}
-            </Typography>
-            <Typography type="body" noMargin className={classes.location}>
-                <Icon name="mapMarker" size={15} />
-                <span className={classes.locationText}>
-                    {location}
-                </span>
-            </Typography>
-
             <div className={classes.content}>
-                <Margin />
-
                 <Divider />
 
                 {blocks.map((block, index) => (

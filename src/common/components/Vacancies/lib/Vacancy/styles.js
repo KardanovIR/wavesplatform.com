@@ -2,6 +2,23 @@ import arrow from './img/arrow.svg';
 
 
 export default theme => ({
+    clickable: {
+        margin: [
+            -theme.spacing.unit * 3,
+            -theme.spacing.unit * 2.5,
+            0
+        ],
+        cursor: 'pointer',
+    },
+    titleWrapper: {
+        padding: [
+            theme.spacing.unit * 3,
+            theme.spacing.unit * 6,
+            theme.spacing.unit * 3,
+            theme.spacing.unit * 2.5
+        ],
+        position: 'relative'
+    },
     title: {
         marginBottom: theme.spacing.unit / 2,
     },
@@ -9,30 +26,16 @@ export default theme => ({
         fontWeight: 500,
         marginBottom: theme.spacing.unit,
     },
-    location: {
-        color: theme.palette.gray[500],
-    },
     locationText: {
         verticalAlign: '-5%',
         marginLeft: '.3em',
+        color: theme.palette.gray[800],
     },
-
     wrapper: {
         position: 'relative',
     },
 
-    clickable: {
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        cursor: 'pointer',
-        height: theme.spacing.unit * 12,
-    },
-
     collapsed: {
-        height: theme.spacing.unit * 12,
-        overflow: 'hidden',
         // shadow hover
         '&:before': {
             content: '""',
@@ -47,9 +50,14 @@ export default theme => ({
             opacity: 0,
             transition: theme.transitions.create('opacity')
         },
+        '& $clickable': {
+            marginBottom: -theme.spacing.unit * 3
+        },
         '& $content': {
             opacity: 0,
-            transition: 'none'
+            transition: 'none',
+            height: 0,
+            overflow: 'hidden',
         },
         '& $arrow': {
             transform: 'none'
@@ -80,13 +88,27 @@ export default theme => ({
     },
     [theme.breakpoints.up('md')]: {
         clickable: {
-            height: theme.spacing.unit * 17,
+            margin: [
+                -theme.spacing.unit * 5,
+                -theme.spacing.unit * 5,
+                0
+            ],
+        },
+        titleWrapper: {
+            padding: [
+                theme.spacing.unit * 5,
+                theme.spacing.unit * 10,
+                theme.spacing.unit * 5.5,
+                theme.spacing.unit * 5
+            ],
         },
         collapsed: {
-            height: theme.spacing.unit * 17,
             '&:hover:before': {
                 opacity: 1
             },
+            '& $clickable': {
+                marginBottom: -theme.spacing.unit * 5.5
+            }
         },
         subtitle: {
             marginBottom: theme.spacing.unit * 1.5,

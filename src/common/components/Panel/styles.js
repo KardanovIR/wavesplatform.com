@@ -15,7 +15,7 @@ export default theme => ({
         color: theme.palette.gray[50],
     },
     bordered: {
-        border: `1px solid ${theme.palette.gray[300]}`
+        border: `1px solid ${theme.palette.gray[200]}`
     },
     [theme.mixins.atMedia('md')]: {
         root: {
