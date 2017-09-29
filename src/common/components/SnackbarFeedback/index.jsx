@@ -44,7 +44,7 @@ const styles = theme => ({
 
     closeButton: {
         composes: '$button',
-        color: theme.palette.gray[500],
+        color: theme.palette.gray[600],
         '&:hover': {
             color: theme.palette.gray[0],
         },

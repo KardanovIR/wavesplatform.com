@@ -8,10 +8,10 @@ const styles = theme => ({
         width: '100%',
     },
     plain: {
-        background: theme.palette.gray[100]
+        background: theme.palette.gray[300]
     },
     gradient: {
-        backgroundImage: `radial-gradient(circle at center, ${theme.palette.gray[100]} 0, rgba(255,255,255,0) 100%)`,
+        backgroundImage: `radial-gradient(circle at center, ${theme.palette.gray[300]} 0, rgba(255,255,255,0) 100%)`,
     }
 })
 

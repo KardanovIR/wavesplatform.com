@@ -27,7 +27,7 @@ const IssuingTokens = () => (
 
             <Margin />
 
-            <Typography type="quote" align="center" color="gray-500">
+            <Typography type="quote" align="center" color="gray-600">
                 <FormattedMessage
                     id="feedback.companiesReleased"
                     defaultMessage="Companies that have released their own tokens on Waves:"

@@ -10,7 +10,7 @@ export default theme => ({
         marginBottom: theme.spacing.unit,
     },
     location: {
-        color: theme.palette.gray[300],
+        color: theme.palette.gray[500],
     },
     locationText: {
         verticalAlign: '-5%',

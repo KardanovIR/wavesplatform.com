@@ -34,7 +34,7 @@ const WavesNetwork = ({ classes }) => (
                     />
                 </Typography>
                 <Margin />
-                <Typography type="quote" color="gray-500">
+                <Typography type="quote" color="gray-600">
                     <FormattedMessage
                         id="developers.wavesNetwork.explorers"
                         defaultMessage="Here are explorers for MainNet and TestNet Waves clusters:"

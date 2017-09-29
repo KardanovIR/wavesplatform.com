@@ -99,7 +99,7 @@ const creatyTypography = (palette, breakpoints) => {
             {
                 ...base,
                 fontStyle: 'italic',
-                color: palette.gray[300]
+                color: palette.gray[500]
             },
             {
                 fontSize: 17,
