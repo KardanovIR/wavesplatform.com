@@ -9,12 +9,16 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
+// containers
+import FeedbackForm from 'src/common/containers/FeedbackForm';
+
+
 
 // lib
 // import Team from './lib/Team';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
-import Careers from './lib/Careers';
+// import Careers from './lib/Careers';
 
 
 // styles
@@ -65,7 +69,8 @@ const PageLayout = ({ classes }) => (
 
         <Background className={classes.bgCareers} skewed={true}>
             <Section size={4} className={classes.footerMarginCompensate}>
-                <Careers />
+                <FeedbackForm />
+                {/* <Careers /> */}
             </Section>
         </Background>
 

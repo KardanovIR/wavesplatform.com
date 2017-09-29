@@ -27,8 +27,8 @@
         "quotes": "off",
         "indent": [
             "error",
-            4
-            // { "SwitchCase": 1 }
+            4,
+            { "SwitchCase": 1 }
         ],
         "no-irregular-whitespace": "warn",
         "react/prop-types": [

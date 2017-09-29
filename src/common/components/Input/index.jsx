@@ -21,6 +21,8 @@ class Input extends PureComponent {
             invalid,
             theme, // eslint-disable-line
             sheet, // eslint-disable-line
+            tagName,
+            type,
             ...rest
         } = this.props;
 
@@ -35,7 +37,8 @@ class Input extends PureComponent {
         )
 
         return (
-            <input
+            <tagName
+                type={tagName === 'input' ? type : undefined}
                 ref={el => this.input = el}
                 className={className}
                 {...rest}
@@ -48,6 +51,7 @@ class Input extends PureComponent {
 Input.defaultProps = {
     // backgroundColor: 'gray-300',
     // color: 'primary-900',
+    tagName: "input",
     type: "text",
     className: '',
     invalid: false
