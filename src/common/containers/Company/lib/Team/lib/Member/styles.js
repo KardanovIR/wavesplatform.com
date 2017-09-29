@@ -8,7 +8,7 @@ export default theme => ({
         paddingBottom: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        transition: theme.transitions.create(['transform','filter'], theme.transitions.duratonMedium),
+        transition: theme.transitions.create(['transform','filter'], theme.transitions.durationMedium),
 
         filter: 'grayscale(100%)',
     },
@@ -51,7 +51,7 @@ export default theme => ({
         image: {},
         overlay: {
             opacity: 0,
-            transition: theme.transitions.create('opacity', theme.transitions.duratonMedium),
+            transition: theme.transitions.create('opacity', theme.transitions.durationMedium),
         },
     }
 })

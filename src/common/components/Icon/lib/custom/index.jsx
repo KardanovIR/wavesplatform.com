@@ -1,33 +1,24 @@
 import React from 'react';
 
-import injectSheet from 'react-jss';
-
-
 import IconsMap from './map';
 
 
-const styles = {
-    wrapper: {
-        width: props => props.size,
-        height: props => props.size,
-    }
-}
-
-
-const CustomIcon = ({ classes, name, color, style }) => {
+const CustomIcon = ({ name, color, size, style }) => {
     const IconComponent = IconsMap[name];
 
-    return (
-        <div className={classes.wrapper} style={style}>
-            <IconComponent fill={color} />
-        </div> 
-    )
+    if (process.env.NODE_ENV !== 'production') {
+        if (!IconComponent) console.warn(`Icon '${name}' not found. Please check icon imports`);
+    }
+    
+    return <IconComponent fill={color} size={size} style={style} />
 }
+
 
 CustomIcon.defaultProps = {
-    color: 'currentColor'
+    color: 'currentColor',
+    style: { verticalAlign: 'middle' }
 }
 
 
 
-export default injectSheet(styles)(CustomIcon);
+export default CustomIcon;

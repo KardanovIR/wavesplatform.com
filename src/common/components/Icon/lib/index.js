@@ -1,5 +1,3 @@
-import CustomIcon from './custom';
-
 import FaTwitter from 'react-icons/lib/fa/twitter';
 import FaGithub from 'react-icons/lib/fa/github';
 import FaSlack from 'react-icons/lib/fa/slack';
@@ -20,15 +18,6 @@ import FaEvelope from 'react-icons/lib/fa/envelope';
 
 
 export default {
-    hamburger: CustomIcon,
-    cross: CustomIcon,
-    swagger: CustomIcon,
-    googlePlay: CustomIcon,
-    mainWallet: CustomIcon,
-    mainBitcoin: CustomIcon,
-    mainToken: CustomIcon,
-    mainDollar: CustomIcon,
-
     // social
     twitter: FaTwitter,
     github: FaGithub,
@@ -45,5 +34,5 @@ export default {
     apple: FaApple,
     send: MdSend,
     email: FaEvelope,
-    linkedin: FaLinkedin
+    linkedin: FaLinkedin,
 }

@@ -3,14 +3,12 @@ import React from 'react';
 import { withTheme } from 'react-jss';
 
 import IconsMap from './lib';
+import CustomIcon from './lib/custom';
+
 
 
 const Icon = ({ color, theme, name, ...rest }) => {
-    const IconComponent = IconsMap[name];
-    
-    if (process.env.NODE_ENV !== 'production') {
-        if (!IconComponent) console.warn(`Icon '${name}' not found. Please check icon imports`);
-    }
+    const IconComponent = IconsMap[name] || CustomIcon;
 
     const passedColor = color !== 'inherit'
         ? theme.palette[color.split('-')[0]][color.split('-')[1]]
