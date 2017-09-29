@@ -48,6 +48,7 @@ export default theme => ({
             boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .08)',
             borderRadius: theme.spacing.radius,
             opacity: 0,
+            willChange: 'opacity',
             transition: theme.transitions.create('opacity')
         },
         '& $clickable': {
