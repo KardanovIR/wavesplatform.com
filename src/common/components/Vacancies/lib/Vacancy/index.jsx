@@ -60,7 +60,7 @@ const Vacancy = ({
                     </div>
                 ))}
 
-                <Margin />
+                <Margin top={3} bottom={1}>
 
                 <Button
                     onClick={onSubmitResumeClick}
@@ -71,6 +71,8 @@ const Vacancy = ({
                         defaultMessage="Submit a resume"
                     />
                 </Button>
+
+                </Margin>
             </div>
 
         </Panel>
