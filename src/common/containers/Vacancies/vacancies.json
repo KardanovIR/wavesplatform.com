@@ -95,29 +95,5 @@
 				]
 			}
 		]
-	},
-	{
-		"title": "Analyst",
-		"location": "Moscow",
-		"blocks": [
-			{
-				"title": "Duties:",
-				"elements": [
-					"Constant monitoring and analysis of the market and trends",
-					"Monitoring of information space",
-					"Search for investment opportunities (assets already on markets)",
-					"Analysis of projects having ICOs (including those in the Pre-Sale stages)",
-					"Participation in writing fund analytical reports"
-				]
-			},
-			{
-				"title": "Requirements:",
-				"elements": [
-					"First-hand experience working in cryptocurrency markets",
-					"First-hand experience investing in projects having an ICO",
-					"The ability to analyze large amounts of information, draw conclusions, and offer solutions"
-				]
-			}
-		]
 	}
 ]
