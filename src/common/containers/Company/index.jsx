@@ -9,13 +9,11 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
-// containers
-import FeedbackForm from 'src/common/containers/FeedbackForm';
-
 
 
 // lib
 // import Team from './lib/Team';
+import FeedbackForm from './lib/FeedbackForm';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
 // import Careers from './lib/Careers';
@@ -28,6 +26,7 @@ import styles from './styles';
 import { FormattedMessage } from 'react-intl';
 
 // import teamMembers from './team';
+
 
 
 const PageLayout = ({ classes }) => (
@@ -78,7 +77,9 @@ const PageLayout = ({ classes }) => (
 );
 
 
+
 const Page = injectSheet(styles)(PageLayout);
+
 
 
 const App = () => (

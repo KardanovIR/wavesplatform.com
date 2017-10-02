@@ -2,9 +2,6 @@ const styles = theme => ({
     root: {
         ...theme.typography.body,
 
-        height: theme.spacing.inputHeight,
-        lineHeight: `${theme.spacing.inputHeight}px`,
-
         fontWeight: 500,
 
         // RESET default browser styles
@@ -30,12 +27,12 @@ const styles = theme => ({
         '&:focus': {
             backgroundColor: theme.palette.gray[200],
         },
-
         '&::-webkit-input-placeholder': {
             color: theme.palette.primary[900]
         },
         '&::-moz-placeholder': {
-            color: theme.palette.primary[900]
+            color: theme.palette.primary[900],
+            opacity: 1,
         },
         '&:-ms-placeholder': {
             color: theme.palette.primary[900]
@@ -43,6 +40,13 @@ const styles = theme => ({
         '&::-ms-input-placeholder': {
             color: theme.palette.primary[900]
         },
+    },
+    input: {
+        height: theme.spacing.inputHeight,
+        lineHeight: `${theme.spacing.inputHeight}px`,
+    },
+    textarea: {
+        resize: 'none'
     },
     disabled: {
         opacity: 0.6,

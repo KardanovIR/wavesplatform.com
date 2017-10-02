@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
 // import Typography from 'src/common/components/Typography';
-// import Margin from 'src/common/components/Margin';
+import Margin from 'src/common/components/Margin';
 // import Link from 'src/common/components/Link';
 import Input from 'src/common/components/Input';
 import Icon from 'src/common/components/Icon';
@@ -45,7 +45,19 @@ class FeedbackForm extends Component {
         onReasonChange: PropTypes.func.isRequired,
         onRetry: PropTypes.func,
         onStartOver: PropTypes.func,
+
+        errors: PropTypes.object.isRequired,
+        showErrors: PropTypes.bool,
+
+        // status,
+        // reasonsList: PropTypes.array.isRequired,
+
+        // form data
+        email: PropTypes.string.isRequired,
+        reason: PropTypes.string.isRequired,
+        message: PropTypes.string.isRequired,
     }
+    
 
     static defaultProps = {
         onSubmit: () => { },
@@ -79,7 +91,7 @@ class FeedbackForm extends Component {
             showErrors,
             status,
 
-            reasonsList,
+            // reasonsList,
 
             // form data
             email,
@@ -113,11 +125,11 @@ class FeedbackForm extends Component {
                     <Col xs={12} sm={6}>
                         <div className={classes.inputWrapper}>
                             <select
-                                className={classes.input}
+                                // className={classes.input}
                                 type="text"
                                 value={reason}
                                 onChange={this.handleReasonChange}
-                                invalid={invalid}
+                                // invalid={invalid}
                             >
                                 <option value="Reason1">Reason1</option>
                                 <option value="Reason2">Reason2</option>

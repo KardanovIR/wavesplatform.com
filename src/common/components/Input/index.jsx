@@ -1,14 +1,28 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 import cn from 'classnames';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+import InputComponent from './Input';
+import TextareaComponent from './Textarea';
+
 
 
 class Input extends PureComponent {
+    static propTypes = {
+        tagName: PropTypes.oneOf(['input', 'textarea'])
+    }
+    static defaultProps = {
+        tagName: "input",
+        className: '',
+        invalid: false
+    }
 
+
+    initInputRef = el => this.input = el
     focus = () => this.input.focus()
     blur = () => this.input.blur()
 
@@ -22,24 +36,30 @@ class Input extends PureComponent {
             theme, // eslint-disable-line
             sheet, // eslint-disable-line
             tagName,
-            type,
             ...rest
         } = this.props;
+
+
+        const Component = tagName === "textarea"
+            ? TextareaComponent
+            : InputComponent;
 
 
         const className = cn(
             classes.root,
             {
+                [classes.input]: tagName !== "textarea",
+                [classes.textarea]: tagName === "textarea",
                 [classes.invalid]: invalid,
                 [classes.disabled]: disabled,
             },
             classNameProp
         )
 
+
         return (
-            <tagName
-                type={tagName === 'input' ? type : undefined}
-                ref={el => this.input = el}
+            <Component
+                inputRef={this.initInputRef}
                 className={className}
                 {...rest}
             />
@@ -47,15 +67,6 @@ class Input extends PureComponent {
     }
 }
 
-
-Input.defaultProps = {
-    // backgroundColor: 'gray-300',
-    // color: 'primary-900',
-    tagName: "input",
-    type: "text",
-    className: '',
-    invalid: false
-}
 
 
 export default injectSheet(styles)(Input);

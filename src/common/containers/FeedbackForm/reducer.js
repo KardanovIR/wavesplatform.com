@@ -18,7 +18,6 @@ const inisialState = {
     showErrors: false,
     errors: {
         email: [],
-        reason: [],
         message: [],
     }
 }
@@ -47,7 +46,6 @@ export default (state = inisialState, { type, payload }) => {
                 ...state,
                 errors: {
                     email: [],
-                    reason: [],
                     message: []
                 }
             }

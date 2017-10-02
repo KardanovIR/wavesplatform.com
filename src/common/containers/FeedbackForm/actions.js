@@ -1,9 +1,11 @@
 export const EMAIL_CHANGE = 'EmailChange';
-export const REASON_CHANGE = 'EmailChange';
-export const MESSAGE_CHANGE = 'EmailChange';
+export const REASON_CHANGE = 'ReasonChange';
+export const MESSAGE_CHANGE = 'MessageChange';
 
-export const SUBMIT = 'EmailChange';
+export const SUBMIT = 'Submit';
 export const SHOW_ERRORS = 'ShowErrors';
+
+export const VALIDATE = 'Validate';
 
 
 
