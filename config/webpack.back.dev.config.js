@@ -1,8 +1,14 @@
 
 const config = require('./webpack.back.prod.config.js');
 
-const createAlias = require('./lib/createAlias');
+const createBackendAlias = require('./lib/createBackendAlias');
 
-config.resolve.alias = createAlias();
+
+config.resolve.alias = Object.assign(
+	{},
+	config.resolve.alias,
+	createBackendAlias()
+);
+
 
 module.exports = config;
