@@ -5,15 +5,6 @@ import { map, mapObjIndexed, empty } from 'ramda';
 import { combineRules } from '../utils/validation';
 
 
-
-const hasErrors = R.compose(
-    R.lt(0),
-    R.sum,
-    R.map(R.length),
-    R.values
-)
-
-
 /**
  * 
  * @param {object} fieldRules
@@ -28,10 +19,6 @@ const hasErrors = R.compose(
  */
 export const withValidation = fieldRules => WrappedForm =>
     class FormWithValidation extends Component {
-        static defaultProps = {
-            onSubmit: () => {}
-        }
-
         constructor(props) {
             super(props);
             this.state = {
@@ -61,18 +48,11 @@ export const withValidation = fieldRules => WrappedForm =>
             this.setState({ showErrors: true })
         }
 
-        handleSubmit = (...args) => {
-            if (!hasErrors(this.state.errors)) {
-                this.props.onSubmit(...args);
-            }
-        }
-
         render() {
             return (
                 <WrappedForm
                     onValidate={this.validate}
                     onValidationStart={this.showErrors}
-                    onSubmit={this.handleSubmit}
                     { ...this.state }
                     { ...this.props }
                 />
