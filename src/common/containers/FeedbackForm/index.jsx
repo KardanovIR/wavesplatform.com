@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// redux-form
+import { Form, Field, reduxForm } from 'redux-form';
+import renderInput from './renderInput';
+
+
+// components
 import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
-// import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
-// import Link from 'src/common/components/Link';
-import Input from 'src/common/components/Input';
 import Icon from 'src/common/components/Icon';
+// import Typography from 'src/common/components/Typography';
+// import Margin from 'src/common/components/Margin';
+// import Link from 'src/common/components/Link';
+// import Input from 'src/common/components/Input';
 
-import ErrorMessage from './lib/ErrorMessage';
+
+// error message
+// import ErrorMessage from './lib/ErrorMessage';
 
 
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
@@ -39,121 +47,110 @@ const messages = defineMessages({
 
 class FeedbackForm extends Component {
     static propTypes = {
-        onSubmit: PropTypes.func.isRequired,
-        onEmailChange: PropTypes.func.isRequired,
-        onMessageChange: PropTypes.func.isRequired,
-        onReasonChange: PropTypes.func.isRequired,
-        onRetry: PropTypes.func,
-        onStartOver: PropTypes.func,
+        // onSubmit: PropTypes.func.isRequired,
+        // onEmailChange: PropTypes.func.isRequired,
+        // onMessageChange: PropTypes.func.isRequired,
+        // onReasonChange: PropTypes.func.isRequired,
+        // onRetry: PropTypes.func,
+        // onStartOver: PropTypes.func,
 
-        errors: PropTypes.object.isRequired,
-        showErrors: PropTypes.bool,
+        // onBlur
+
+        // errors: PropTypes.object.isRequired,
+        // showErrors: PropTypes.bool,
 
         // status,
         // reasonsList: PropTypes.array.isRequired,
 
         // form data
-        email: PropTypes.string.isRequired,
-        reason: PropTypes.string.isRequired,
-        message: PropTypes.string.isRequired,
-    }
-    
-
-    static defaultProps = {
-        onSubmit: () => { },
-        onEmailChange: () => { },
-        onMessageChange: () => { },
-        onReasonChange: () => { },
-        onRetry: () => { },
-        onStartOver: () => { },
-    }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        this.props.onSubmit(this.state);
+        // email: PropTypes.string.isRequired,
+        // reason: PropTypes.string.isRequired,
+        // message: PropTypes.string.isRequired,
     }
 
 
-    handleEmailChange = e => this.props.onEmailChange(e.target.value);
-    handleReasonChange = e => this.props.onReasonChange(e.target.value);
-    handleMessageChange = e => this.props.onMessageChange(e.target.value);
+    // static defaultProps = {
+    //     onSubmit: () => { },
+    //     onEmailChange: () => { },
+    //     onMessageChange: () => { },
+    //     onReasonChange: () => { },
+    //     onRetry: () => { },
+    //     onStartOver: () => { },
+    // }
 
-
-    handleStartOver = e => {
-        e.preventDefault();
-        this.props.onStartOver();
-    }
+    // handleStartOver = e => {
+    //     e.preventDefault();
+    //     this.props.onStartOver();
+    // }
 
     render() {
         const {
             classes,
-            errors,
-            showErrors,
-            status,
+            // errors,
+            // showErrors,
+            // status,
 
             // reasonsList,
 
-            // form data
-            email,
-            reason,
-            message,
+            // // form data
+            // email,
+            // reason,
+            // message,
 
 
             // onRetry,
             // onStartOver,
+            submitting,
+            invalid,
+            handleSubmit,
             intl
         } = this.props;
 
-        const invalid = !!(showErrors && errors.email.length);
-
         return (
-            <form onSubmit={this.handleSubmit}>
+            <Form onSubmit={handleSubmit}>
                 <Row>
                     <Col xs={12} sm={6}>
                         <div className={classes.inputWrapper}>
-                            <Input
+                            <Field
+                                name="email"
+                                component={renderInput}
                                 className={classes.input}
                                 type="text"
-                                value={email}
-                                onChange={this.handleEmailChange}
-                                onBlur={this.props.onBlur}
                                 placeholder={intl.formatMessage(messages.placeholderEmail)}
-                                invalid={invalid}
                             />
                         </div>
                     </Col>
                     <Col xs={12} sm={6}>
                         <div className={classes.inputWrapper}>
-                            <select
-                                // className={classes.input}
-                                type="text"
-                                value={reason}
-                                onChange={this.handleReasonChange}
-                                // invalid={invalid}
-                            >
+                            <Field name="reason" component="select">
                                 <option value="Reason1">Reason1</option>
                                 <option value="Reason2">Reason2</option>
                                 <option value="Reason3">Reason3</option>
-                            </select>
+                            </Field>
                         </div>
                     </Col>
 
                     <Col xs={12}>
                         <div className={classes.inputWrapper}>
-                            <Input
-                                className={classes.input}
+                            <Field
+                                name="message"
                                 tagName="textarea"
-                                value={message}
-                                onChange={this.handleMessageChange}
-                                onBlur={this.props.onBlur}
-                                placeholder={intl.formatMessage(messages.placeholderEmail)}
-                                invalid={invalid}
+                                component={renderInput}
+                                className={classes.input}
+                                placeholder={intl.formatMessage(messages.placeholderMessage)}
                             />
                         </div>
                     </Col>
 
                     <Col xs={12}>
-                        <Button className={classes.button} loading={status === "pending"} type="submit" secondary disabled={invalid}>
+                        <Button
+                            className={classes.button}
+                            // loading={status === "pending"}
+                            loading={submitting}
+                            type="submit"
+                            secondary
+                            disabled={invalid}
+                        >
                             <span className={classes.buttonFull}>
                                 <FormattedMessage
                                     id="form.submit"
@@ -166,7 +163,7 @@ class FeedbackForm extends Component {
                 </Row>
 
 
-                {showErrors && <ErrorMessage errors={errors.email} />}
+                {/* {showErrors && <ErrorMessage errors={errors.email} />} */}
 
 
 
@@ -212,14 +209,14 @@ class FeedbackForm extends Component {
                             )}
                         </div>
                     )} */}
-            </form>
-
+            </Form>
         )
     }
 }
 
 
 export default compose(
+    reduxForm({form: 'feedbackForm'}),
     injectSheet(styles),
-    injectIntl
+    injectIntl,
 )(FeedbackForm);

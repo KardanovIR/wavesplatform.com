@@ -6,11 +6,12 @@ const InputComponent = ({
     theme, // eslint-disable-line
     sheet, // eslint-disable-line
     type,
+    inputRef,
     ...rest
 }) => (
         <input
             type={type}
-            ref={el => this.input = el}
+            ref={inputRef}
             className={className}
             {...rest}
         />

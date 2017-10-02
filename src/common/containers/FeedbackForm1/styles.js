@@ -6,10 +6,10 @@ export default theme => ({
         display: 'flex',
         marginBottom: theme.spacing.unit
     },
-    inputWrapper: {
-        // flex: '1',
-        marginBottom: theme.spacing.unit * 2
-    },
+    // inputWrapper: {
+    //     flex: '1',
+    //     marginRight: theme.spacing.unit
+    // },
     input: {
         width: '100%'
     },

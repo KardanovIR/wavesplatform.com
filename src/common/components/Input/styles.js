@@ -46,7 +46,9 @@ const styles = theme => ({
         lineHeight: `${theme.spacing.inputHeight}px`,
     },
     textarea: {
-        resize: 'none'
+        resize: 'none',
+        paddingTop: theme.spacing.unit,
+        paddingBottom: theme.spacing.unit,
     },
     disabled: {
         opacity: 0.6,

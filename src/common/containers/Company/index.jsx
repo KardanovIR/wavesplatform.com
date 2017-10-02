@@ -68,7 +68,7 @@ const PageLayout = ({ classes }) => (
 
         <Background className={classes.bgCareers} skewed={true}>
             <Section size={4} className={classes.footerMarginCompensate}>
-                <FeedbackForm />
+                <FeedbackForm onSubmit={val => console.log(val)} />
                 {/* <Careers /> */}
             </Section>
         </Background>
