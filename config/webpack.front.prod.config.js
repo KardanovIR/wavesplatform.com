@@ -6,12 +6,9 @@ const AssetsWebpackPlugin = require('assets-webpack-plugin');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
 const entry = require('./lib/entry');
-
-
-const includedDirectories = [
-    path.join(__dirname, '../src/public'),
-    path.join(__dirname, '../src/common'),
-];
+const output = require('./lib/output');
+const resolve = require('./lib/resolve');
+const includedDirectories = require('./lib/includedDirectories');
 
 
 
@@ -20,12 +17,9 @@ module.exports = {
 
     target: 'web',
 
-    output: {
-        path: path.join(__dirname, '../dist'),
-        filename: '[name].[chunkhash].js',
-        chunkFilename: '[name].chunk.js',
-        publicPath: '/static/'
-    },
+    output: Object.assign({}, output, {
+        filename: '[name].[chunkhash].js'
+    }),
 
     module: {
         rules: [
@@ -37,21 +31,6 @@ module.exports = {
                 ],
                 include: includedDirectories
             },
-            // @todo extract text plugin
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         "style-loader",
-            //         {
-            //             loader: "css-loader",
-            //             options: {
-            //                 modules: true,
-            //                 localIdentName: '[folder]__[local]__[hash:base64:5]'
-            //             }
-            //         }
-            //     ],
-            //     include: includedDirectories
-            // },
             {
                 test: /\.json$/,
                 loader: 'json-loader'
@@ -59,13 +38,7 @@ module.exports = {
         ]
     },
 
-    resolve: {
-        modules: [
-            path.join(__dirname, '../'),
-            'node_modules'
-        ],
-        extensions: ['.jsx', '.js', '.css', '.json']
-    },
+    resolve,
 
     plugins: [
         new webpack.DefinePlugin({
@@ -100,8 +73,6 @@ module.exports = {
         new webpack.HashedModuleIdsPlugin(),
 
         new AssetsWebpackPlugin({ path: path.join(__dirname, '..','dist'), filename: 'assets.json' })
-
-        // new ExtractTextPlugin('styles.css')
     ],
 
     devtool: 'cheap-module-source-map'

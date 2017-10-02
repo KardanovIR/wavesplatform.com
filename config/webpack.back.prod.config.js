@@ -1,26 +1,19 @@
 const webpack = require('webpack');
 const path = require('path');
-const fs = require('fs');
+// const fs = require('fs');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
+const createExternals = require('./lib/createExternals');
 
 
 const includedDirectories = [
     path.join(__dirname, '../src/server'),
     path.join(__dirname, '../src/common'),
     path.join(__dirname, '../src/public'),
-    /flexboxgrid/
 ];
 
 
-const nodeModules = {};
-fs.readdirSync('node_modules')
-    .filter(function (x) {
-        return ['.bin'].indexOf(x) === -1;
-    })
-    .forEach(function (mod) {
-        nodeModules[mod] = 'commonjs ' + mod;
-    });
+
 
 module.exports = {
     entry: 'src/server/index',
@@ -88,7 +81,7 @@ module.exports = {
         ],
         extensions: ['.pug', '.jsx', '.js', '.json', '.css'],
     },
-    externals: nodeModules,
+    externals: createExternals(),
     plugins: [
         new webpack.BannerPlugin({
             banner: 'require("source-map-support/register");', // the banner as string, it will be wrapped in a comment
