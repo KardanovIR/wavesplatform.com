@@ -21,7 +21,7 @@ const styles = theme => ({
         height: theme.spacing.unit * 10,
         marginRight: theme.spacing.unit * 3,
 
-        background: theme.palette.gray[300],
+        background: theme.palette.gray[500],
         borderRadius: '50%',
         overflow: 'hidden'
     },

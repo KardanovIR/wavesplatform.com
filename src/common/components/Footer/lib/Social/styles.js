@@ -7,7 +7,7 @@ export default theme => ({
         width: 30,
         height: 30,
         margin: [theme.spacing.unit, 0],
-        color: theme.palette.gray[500],
+        color: theme.palette.gray[600],
         transition: theme.transitions.create('color'),
         '&:hover': {
             color: theme.palette.gray[0],

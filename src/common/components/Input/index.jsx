@@ -68,5 +68,12 @@ class Input extends PureComponent {
 }
 
 
+Input.defaultProps = {
+    // backgroundColor: 'gray-500',
+    // color: 'primary-900',
+    className: '',
+    invalid: false
+}
+
 
 export default injectSheet(styles)(Input);

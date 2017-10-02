@@ -1,8 +1,8 @@
 export default theme => ({
-    bgWhitepaper: {
+    bgLight: {
         background: theme.palette.gray[50]
     },
-    bgCareers: {
+    bgDark: {
         background: '#233556'
     },
 })

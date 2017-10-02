@@ -11,7 +11,7 @@ export default theme => {
 
         // text
         textGray: {
-            color: theme.palette.gray[500]
+            color: theme.palette.gray[600]
         },
         textDarkGray: {
             color: theme.palette.gray[700]

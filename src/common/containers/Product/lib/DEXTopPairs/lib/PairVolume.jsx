@@ -26,7 +26,7 @@ const styles = theme => ({
         color: theme.palette.gray[800]
     },
     grayText: {
-        color: theme.palette.gray[300]
+        color: theme.palette.gray[500]
     }
 })
 

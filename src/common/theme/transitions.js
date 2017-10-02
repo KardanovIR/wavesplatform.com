@@ -14,8 +14,8 @@ const createTransition = (properties, duration = 150) => {
 
 
 export default {
-    duratonShort: 150,
-    duratonMedium: 300,
-    duratonLong: 500,
+    durationShort: 150,
+    durationMedium: 300,
+    durationLong: 500,
     create: createTransition
 }

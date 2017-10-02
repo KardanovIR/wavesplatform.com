@@ -44,9 +44,9 @@ export const render = function({
         // enable SSR only for production
         let RenderedComponent;
         if (process.env.NODE_ENV === 'production') {
-            RenderedComponent = Component;
+            RenderedComponent = <Component initialState={ctx.state.initialState} />;
         } else {
-            RenderedComponent = 'span';
+            RenderedComponent = <span />;
         }
 
         // log render time
@@ -57,7 +57,7 @@ export const render = function({
             <JssProvider registry={sheets}>
                 <Provider store={store}>    
                     <IntlProvider locale={ctx.locale} defaultLocale="en" messages={locale[ctx.locale]}>
-                        <RenderedComponent initialState={ctx.state.initialState} />
+                        { RenderedComponent }
                     </IntlProvider>
                 </Provider>
             </JssProvider>
@@ -80,8 +80,8 @@ export const render = function({
 
         if (process.env.NODE_ENV === 'production') {
             // read file path fron assets
-            script = '/static' + ctx.state.assets[scriptName].js;
-            vendorChunk = '/static' + ctx.state.assets.vendor.js;
+            script = ctx.state.assets[scriptName].js;
+            vendorChunk = ctx.state.assets.vendor.js;
         } else {
             script = `/static/${scriptName}.js`;
         }

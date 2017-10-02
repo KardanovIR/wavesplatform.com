@@ -64,7 +64,7 @@ const styles = theme => ({
         color: theme.palette.gray[0]
     },
     dimmed: {
-        color: theme.palette.gray[100]
+        color: theme.palette.gray[200]
     },
     // colored: {
     //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'

@@ -16,7 +16,7 @@ const styles = theme => ({
 
         borderRadius: theme.spacing.radius,
 
-        backgroundColor: theme.palette.gray[300],
+        backgroundColor: theme.palette.gray[500],
         color: theme.palette.primary[900],
 
         boxSizing: 'border-box',
@@ -25,7 +25,7 @@ const styles = theme => ({
         transition: theme.transitions.create('background-color'),
 
         '&:focus': {
-            backgroundColor: theme.palette.gray[200],
+            backgroundColor: theme.palette.gray[300],
         },
         '&::-webkit-input-placeholder': {
             color: theme.palette.primary[900]

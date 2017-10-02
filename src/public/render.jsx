@@ -67,16 +67,13 @@ function run(Component, {
 }
 
 
-export const render = (...args) => {
+export const render = async (...args) => {
     if (!global.Intl) {
-        require.ensure([
-            'intl',
-            'intl/locale-data/jsonp/en.js'
-        ], function (require) {
-            require('intl');
-            require('intl/locale-data/jsonp/en.js');
-            run(...args)
-        });
+        await import('intl');
+        await Promise.all([
+            import('intl/locale-data/jsonp/en.js')
+        ]);
+        run(...args);
     } else {
         run(...args)
     }

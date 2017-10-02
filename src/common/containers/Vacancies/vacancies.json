@@ -1,0 +1,99 @@
+[
+	{
+		"title": "Front-end Developer",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Required:",
+				"elements": [
+					"Solid understanding of client-side development patterns and principles",
+					"Strong Javascript development skills, including ES6+",
+					"Hands-on experience with ReactJS",
+					"Proficiency in HTML/CSS",
+					"Understanding of HTTP, REST, AJAX, etc",
+					"Exposure to the modern JavaScript toolchain: npm/yarn, webpack, babel"
+				]
+			},
+			{
+				"title": "Preferred:",
+				"elements": [
+					"Basic knowledge of NodeJS",
+					"Understanding of React-centric app architecture",
+					"Experience with Redux, redux-saga/redux-observable, etc",
+					"Knowledge of common patterns of development of applications that intensively interact with the back end"
+				]
+			}
+		]
+	},
+	{
+		"title": "API Integration Specialist",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Duties:",
+				"elements": [
+					"Consult with our partners and third-party developers, contribute to the development of applications, and work with API",
+					"Develop client libraries for our API and examples of their use and useful services",
+					"Write technical documentation and instructions"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"Basic programming skills in one or more languages (Java/Scala/C#/Python/JavaScript/Go/PHP)",
+					"The desire to learn about new platforms, languages, and libraries",
+					"Good written English",
+					"Basic knowledge of Unix (preferred)"
+				]
+			}
+		]
+	},
+	{
+		"title": "QA / Test Automation",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Duties:",
+				"elements": [
+					"Analysis of new functionalities, test of design",
+					"Hand testing of client and server applications",
+					"Writing automatic tests for client and server applications",
+					"Writing and fine-tuning of frameworks for automated testing"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"Knowledge of the theoretical basis of QA and testing",
+					"Experience manually testing in a team of developers",
+					"Sufficient experience in programming to write automatic tests and to fine-tune frameworks (Java and Scala preferred)",
+					"Understanding of the specifics of blockchain, cryptocurrencies, and fintech products (preferred)"
+				]
+			}
+		]
+	},
+	{
+		"title": "Analyst",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Duties:",
+				"elements": [
+					"Constant monitoring and analysis of the market and trends",
+					"Monitoring of information space",
+					"Search for investment opportunities (assets already on markets)",
+					"Analysis of projects having ICOs (including those in the Pre-Sale stages)",
+					"Participation in writing fund analytical reports"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"First-hand experience working in cryptocurrency markets",
+					"First-hand experience investing in projects having an ICO",
+					"The ability to analyze large amounts of information, draw conclusions, and offer solutions"
+				]
+			}
+		]
+	}
+]

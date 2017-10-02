@@ -15,7 +15,7 @@ const styles = theme => ({
 
             height: 1,
             width: '100%',
-            backgroundImage: `radial-gradient(circle at center, ${theme.palette.gray[100]} 0, rgba(255,255,255,0) 100%)`,
+            backgroundImage: `radial-gradient(circle at center, ${theme.palette.gray[200]} 0, rgba(255,255,255,0) 100%)`,
         },
         '&:before': {
             top: 0
