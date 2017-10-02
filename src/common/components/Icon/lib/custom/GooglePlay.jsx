@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-const GooglePlay = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 120.92399 129.16047">
+const GooglePlay = ({ size, style }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 120.92399 129.16047" style={style}>
         <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="226.858" y1="284.507" x2="210.54" y2="252.479" gradientTransform="translate(-124.695 -206.6)">
             <stop offset="0" stopColor="#FCD08F" />
             <stop offset="1" stopColor="#F79673" />

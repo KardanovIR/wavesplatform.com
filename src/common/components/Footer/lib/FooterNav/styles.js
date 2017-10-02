@@ -1,7 +1,7 @@
 export default theme => ({
     link: {
         textDecoration: 'none',
-        color: theme.palette.gray[500],
+        color: theme.palette.gray[600],
         display: 'inline-block',
         padding: theme.spacing.getSpacing(1, 1),
         transition: theme.transitions.create(

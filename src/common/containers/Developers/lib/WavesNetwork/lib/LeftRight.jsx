@@ -11,7 +11,7 @@ const styles = theme => ({
     },
     text: {
         flex: 1,
-        color: theme.palette.gray[500]
+        color: theme.palette.gray[600]
     }
 })
 

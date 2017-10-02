@@ -9,9 +9,8 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
-
 // lib
-// import Team from './lib/Team';
+import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
 import Careers from './lib/Careers';
@@ -51,7 +50,7 @@ const PageLayout = ({ classes }) => (
         </Section> */}
 
         {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-        <Section top={3} bottom={2}> 
+        <Section top={3} bottom={2}>
             <Whitepaper />
         </Section>
         {/* </Background> */}
@@ -63,11 +62,19 @@ const PageLayout = ({ classes }) => (
 
 
 
-        <Background className={classes.bgCareers} skewed={true}>
+        <Background className={classes.bgLight} skewed={true}>
+            <Section size={4} className={classes.footerMarginCompensate}>
+                <Vacancies />
+            </Section>
+        </Background>
+
+
+
+        {/* <Background className={classes.bgDark} skewed={true}>
             <Section size={4} className={classes.footerMarginCompensate}>
                 <Careers />
             </Section>
-        </Background>
+        </Background> */}
 
     </Layout>
 );

@@ -96,7 +96,7 @@ const PageLayout = ({ classes, initialState }) => (
 
 
         <Margin bottom={4} />
-        <Divider /> 
+        <Divider gradient /> 
 
 
         <Section size={4}>
@@ -127,7 +127,7 @@ const PageLayout = ({ classes, initialState }) => (
         </div>
 
         <Margin bottom={4} />
-        <Divider /> 
+        <Divider gradient /> 
         <Margin bottom={2} />
 
         <div className={classes.section}>

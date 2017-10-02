@@ -1,9 +1,11 @@
 const webpack = require('webpack');
 const path = require('path');
-// const fs = require('fs');
 
 const createUrlLoaders = require('./lib/createUrlLoaders');
 const createExternals = require('./lib/createExternals');
+
+const resolve = require('./lib/resolve');
+
 
 
 const includedDirectories = [
@@ -74,13 +76,7 @@ module.exports = {
             },
         ]
     },
-    resolve: {
-        modules: [
-            path.join(__dirname, '../'),
-            'node_modules'
-        ],
-        extensions: ['.pug', '.jsx', '.js', '.json', '.css'],
-    },
+    resolve,
     externals: createExternals(),
     plugins: [
         new webpack.BannerPlugin({

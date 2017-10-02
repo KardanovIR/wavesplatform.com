@@ -9,7 +9,7 @@ const styles = theme => ({
     wrapper: {
         background: theme.palette.primary[0],
         borderRadius: theme.spacing.radius,
-        boxShadow: `0 2px 10px ${theme.palette.gray[500]}`
+        boxShadow: `0 2px 10px ${theme.palette.gray[600]}`
     }
 })
 

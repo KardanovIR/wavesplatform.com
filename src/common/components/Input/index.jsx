@@ -46,7 +46,7 @@ class Input extends PureComponent {
 
 
 Input.defaultProps = {
-    // backgroundColor: 'gray-300',
+    // backgroundColor: 'gray-500',
     // color: 'primary-900',
     type: "text",
     className: '',
