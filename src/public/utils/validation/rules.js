@@ -10,7 +10,8 @@ export const EMAIL_INVALID = 'emailInvalid';
 
 // rules
 export const isEmpty = value => {
-    return !value.length ? EMPTY : '';
+    console.log(!value.length ? 'correct' : EMPTY);
+    return value.length ? '' : EMPTY;
 }
 
 export const isEmailInvalid = value => {

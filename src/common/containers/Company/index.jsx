@@ -9,16 +9,12 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
-<<<<<<< HEAD
 
 
 // lib
 // import Team from './lib/Team';
 import FeedbackForm from './lib/FeedbackForm';
-=======
-// lib
 import Vacancies from './lib/Vacancies';
->>>>>>> 6f0fc6f91f1c23a75cad5be521ff004b61040008
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
 // import Careers from './lib/Careers';
@@ -81,7 +77,7 @@ const PageLayout = ({ classes }) => (
 
         <Background className={classes.bgDark} skewed={true}>
             <Section size={4} className={classes.footerMarginCompensate}>
-                <FeedbackForm onSubmit={val => console.log(val)} />
+                <FeedbackForm />
             </Section>
         </Background>
 

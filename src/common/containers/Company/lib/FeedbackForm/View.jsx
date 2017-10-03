@@ -16,31 +16,35 @@ import styles from './styles';
 
 
 
-const Whitepaper = () => (
-    <Row alignItems="center">
+const FeedbackFormSection = () => (
+    <Row centered>
         <Col xs={12} md={8}>
-            <Typography type="display3" inverted>
-                <FormattedMessage
-                    id="company.feedback.title"
-                    defaultMessage="Contact us"
-                />
-            </Typography>
-            <Typography type="body"  inverted>
-                <FormattedMessage
-                    id="company.feedback.text"
-                    defaultMessage="Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}."
-                    values={{
-                        link: <Link><FormattedMessage id="company.feedback.supportLink" defaultMessage="support" /></Link>  
-                    }}
-                />
-            </Typography>
+            <Row centered>
+                <Col xs={12} md={10}>
+                    <Typography type="display3" inverted align="center">
+                        <FormattedMessage
+                            id="company.feedback.title"
+                            defaultMessage="Contact us"
+                        />
+                    </Typography>
+                    <Typography type="body" inverted align="center">
+                        <FormattedMessage
+                            id="company.feedback.text"
+                            defaultMessage="Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}."
+                            values={{
+                                link: <Link><FormattedMessage id="company.feedback.supportLink" defaultMessage="support" /></Link>
+                            }}
+                        />
+                    </Typography>
+                </Col>
+            </Row>
 
             <Margin bottom={3} />
 
-            <FeedbackForm />
+            <FeedbackForm initialValues={{ reason: 'Reason1', email: "", message: "" }} onSubmit={val => console.log(val)} />
         </Col>
     </Row>
 );
 
 
-export default injectSheet(styles)(Whitepaper);
+export default injectSheet(styles)(FeedbackFormSection);

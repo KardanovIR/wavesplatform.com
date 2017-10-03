@@ -17,6 +17,7 @@ import Icon from 'src/common/components/Icon';
 
 
 // error message
+import validate from './validate';
 // import ErrorMessage from './lib/ErrorMessage';
 
 
@@ -100,6 +101,7 @@ class FeedbackForm extends Component {
 
             // onRetry,
             // onStartOver,
+            anyTouched,
             submitting,
             invalid,
             handleSubmit,
@@ -149,7 +151,7 @@ class FeedbackForm extends Component {
                             loading={submitting}
                             type="submit"
                             secondary
-                            disabled={invalid}
+                            disabled={anyTouched && invalid}
                         >
                             <span className={classes.buttonFull}>
                                 <FormattedMessage
@@ -216,7 +218,10 @@ class FeedbackForm extends Component {
 
 
 export default compose(
-    reduxForm({form: 'feedbackForm'}),
+    reduxForm({
+        form: 'feedbackForm',
+        validate
+    }),
     injectSheet(styles),
     injectIntl,
 )(FeedbackForm);
