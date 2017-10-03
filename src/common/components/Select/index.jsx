@@ -34,7 +34,7 @@ class Input extends PureComponent {
             className: classNameProp,
 
             disabled,
-            // invalid,
+            invalid,
 
             options,
 
@@ -48,6 +48,7 @@ class Input extends PureComponent {
             classes.root,
             {
                 [classes.disabled]: disabled,
+                [classes.invalid]: invalid,
             },
             classNameProp
         )

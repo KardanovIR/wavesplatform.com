@@ -10,6 +10,10 @@ export default defineMessages({
         id: 'feedbackForm.placeholderMessage',
         defaultMessage: 'Message',
     },
+    chooseTopic: {
+        id: 'feedbackForm.chooseTopic',
+        defaultMessage: 'Choose a topic...',
+    },
     partnership: {
         id: 'feedbackForm.optionPartnership',
         defaultMessage: 'Partnership',

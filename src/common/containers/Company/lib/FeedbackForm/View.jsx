@@ -41,7 +41,7 @@ const FeedbackFormSection = () => (
 
             <Margin bottom={3} />
 
-            <FeedbackForm initialValues={{ reason: 'partnership', email: "", message: "" }} onSubmit={val => console.log(val)} />
+            <FeedbackForm initialValues={{ reason: '', email: '', message: '' }} />
         </Col>
     </Row>
 );

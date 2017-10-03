@@ -4,14 +4,10 @@ import createValidation from 'src/public/utils/validation/create';
 
 const rules = {
     email: [isEmpty, isEmailInvalid],
-    message: [isEmpty]
+    message: [isEmpty],
+    reason: [isEmpty],
 }
 
 
 
-
-export default values => {
-    const results = createValidation(rules)(values);
-    console.log(rules, values, results);
-    return results;
-};
+export default createValidation(rules);

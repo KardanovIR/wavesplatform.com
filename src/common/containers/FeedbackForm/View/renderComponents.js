@@ -3,8 +3,9 @@ import Input from 'src/common/components/Input';
 import Select from 'src/common/components/Select';
 
 
-export const renderSelect = ({ input, ...custom }) => (
+export const renderSelect = ({ input, meta: { touched, error }, ...custom }) => (
     <Select
+        invalid={touched && error}
         {...input}
         {...custom}
     />

@@ -23,10 +23,5 @@ export default connect(
     ({ feedbackForm }) => feedbackForm,
     {
         onSubmit: submit,
-        onEmailChange: emailChange,
-        onMessageChange: messageChange,
-        onReasonChange: reasonChange,
-        // onRetry: PropTypes.func,
-        // onStartOver: PropTypes.func,
     }
 )(View);

@@ -63,7 +63,7 @@ const styles = theme => ({
         pointerEvents: 'none'
     },
     invalid: {
-        // boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
+        boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
     },
 })
 

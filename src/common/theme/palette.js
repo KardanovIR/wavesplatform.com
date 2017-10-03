@@ -37,6 +37,10 @@ export const grayBlue = colorMigrationProxy({
 }, 'grayBlue')
 
 
+export const orange = {
+    300: '#FCBC32'
+}
+
 
 
 // product colors
@@ -51,9 +55,8 @@ export const success = {
 }
 
 export const danger = {
-    500: '#cc1442'
+    500: orange[300]
 }
-
 
 
 
