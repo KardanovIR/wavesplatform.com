@@ -38,20 +38,16 @@ const styles = theme => ({
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
-        transition: theme.transitions.create(['background-color', 'color']),
+        transition: theme.transitions.create(['background-color']),
+
+        '&:focus': {
+            backgroundColor: theme.palette.grayBlue[600],
+        },
 
         '&::-moz-placeholder': {
             opacity: 1,
         },
-
-
-        '&:focus': {
-            // backgroundColor: theme.palette.grayBlue[300],
-            backgroundColor: '#4d5d7e',
-            // color: theme.palette.grayBlue[200],
-            // ...setPlaceholderColor(theme.palette.primary[700]),
-        },
-        ...setPlaceholderColor(theme.palette.gray[600]),
+        ...setPlaceholderColor(theme.palette.grayBlue[400]),
     },
     input: {
         height: theme.spacing.inputHeight,

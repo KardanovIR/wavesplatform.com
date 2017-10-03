@@ -47,7 +47,7 @@ const styles = theme => ({
         // focus
         transition: theme.transitions.create('background-color'),
         '&:focus': {
-            backgroundColor: theme.palette.grayBlue[300],
+            backgroundColor: theme.palette.grayBlue[400],
         },
     },
     disabled: {
