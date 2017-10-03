@@ -33,7 +33,6 @@ const IconProduct = ({
             [classes.rootCustomSize]: size,
             [classes.circleLight]: circle === true || circle === "light",
             [classes.circleDark]: circle === "dark",
-            [classes.circleCyan]: circle === "cyan",
         },
         className
     );
@@ -60,7 +59,7 @@ const IconProduct = ({
 
 IconProduct.propTypes = {
     name: PropTypes.string.isRequired,
-    circle: PropTypes.oneOf([true, 'light', 'dark', 'cyan']),
+    circle: PropTypes.oneOf([true, 'light', 'dark']),
 }
 
 

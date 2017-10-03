@@ -1,3 +1,19 @@
+const setPlaceholderColor = color => ({
+    '&::-webkit-input-placeholder': {
+        color
+    },
+    '&::-moz-placeholder': {
+        color
+    },
+    '&:-ms-placeholder': {
+        color
+    },
+    '&::-ms-input-placeholder': {
+        color
+    },
+})
+
+
 const styles = theme => ({
     root: {
         ...theme.typography.body,
@@ -16,30 +32,26 @@ const styles = theme => ({
 
         borderRadius: theme.spacing.radius,
 
-        backgroundColor: theme.palette.gray[500],
-        color: theme.palette.primary[900],
+        backgroundColor: theme.palette.grayBlue[700],
+        color: theme.palette.grayBlue[200],
 
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
-        transition: theme.transitions.create('background-color'),
+        transition: theme.transitions.create(['background-color', 'color']),
 
-        '&:focus': {
-            backgroundColor: theme.palette.gray[300],
-        },
-        '&::-webkit-input-placeholder': {
-            color: theme.palette.primary[900]
-        },
         '&::-moz-placeholder': {
-            color: theme.palette.primary[900],
             opacity: 1,
         },
-        '&:-ms-placeholder': {
-            color: theme.palette.primary[900]
+
+
+        '&:focus': {
+            // backgroundColor: theme.palette.grayBlue[300],
+            backgroundColor: '#4d5d7e',
+            // color: theme.palette.grayBlue[200],
+            // ...setPlaceholderColor(theme.palette.primary[700]),
         },
-        '&::-ms-input-placeholder': {
-            color: theme.palette.primary[900]
-        },
+        ...setPlaceholderColor(theme.palette.gray[600]),
     },
     input: {
         height: theme.spacing.inputHeight,
@@ -55,7 +67,7 @@ const styles = theme => ({
         pointerEvents: 'none'
     },
     invalid: {
-        boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
+        // boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`
     },
 })
 

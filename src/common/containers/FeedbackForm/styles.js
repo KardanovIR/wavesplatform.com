@@ -15,7 +15,7 @@ export default theme => ({
     },
 
     textGray: {
-        color: theme.palette.gray[100]
+        color: theme.palette.grayBlue[200]
     },
 
     buttonWrapper: {

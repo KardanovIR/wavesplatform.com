@@ -39,7 +39,7 @@ export default theme => ({
         padding: theme.spacing.getSpacing(1, 5),
         marginRight: theme.spacing.unit*3,
         '&:active': {
-            backgroundColor: theme.palette.gray[300]
+            backgroundColor: theme.palette.grayBlue[300]
         }
     },
 })

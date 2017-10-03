@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 // redux-form
 import { Form, Field, reduxForm } from 'redux-form';
-import renderInput from './renderInput';
+import {
+    renderInput,
+    renderSelect
+} from './renderComponents';
 
 
 // components
@@ -21,7 +24,8 @@ import validate from './validate';
 // import ErrorMessage from './lib/ErrorMessage';
 
 
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import messages from './messages';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -29,19 +33,6 @@ import styles from './styles';
 
 import { compose } from 'ramda';
 
-
-
-
-const messages = defineMessages({
-    placeholderEmail: {
-        id: 'form.placeholderEmail',
-        defaultMessage: 'Email address',
-    },
-    placeholderMessage: {
-        id: 'form.placeholderMessage',
-        defaultMessage: 'Message',
-    },
-})
 
 
 
@@ -124,11 +115,29 @@ class FeedbackForm extends Component {
                     </Col>
                     <Col xs={12} sm={6}>
                         <div className={classes.inputWrapper}>
-                            <Field name="reason" component="select">
-                                <option value="Reason1">Reason1</option>
-                                <option value="Reason2">Reason2</option>
-                                <option value="Reason3">Reason3</option>
-                            </Field>
+                            <Field
+                                name="reason"
+                                component={renderSelect}
+                                className={classes.input}
+                                options={[
+                                    {
+                                        value: 'partnership',
+                                        content: intl.formatMessage(messages.partnership)
+                                    },
+                                    {
+                                        value: 'events',
+                                        content: intl.formatMessage(messages.events)
+                                    },
+                                    {
+                                        value: 'media',
+                                        content: intl.formatMessage(messages.media)
+                                    },
+                                    {
+                                        value: 'jobs',
+                                        content: intl.formatMessage(messages.jobs)
+                                    },
+                                ]}
+                            />
                         </div>
                     </Col>
 

@@ -34,7 +34,7 @@ function run(Component, {
     callback = () => {},
     reducer = s => s,
     initialState = getInitialState()
-}) {
+} = {}) {
     const appNode = document.getElementById('app');
 
     // redux store

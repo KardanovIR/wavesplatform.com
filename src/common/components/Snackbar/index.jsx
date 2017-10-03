@@ -37,7 +37,7 @@ const styles = theme => ({
         width: theme.spacing.unit * 3,
         top: -theme.spacing.unit,
         right: -theme.spacing.unit,
-        color: theme.palette.gray[300],
+        color: theme.palette.grayBlue[300],
         cursor: 'pointer',
         padding: theme.spacing.unit,
 

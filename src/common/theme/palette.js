@@ -1,3 +1,8 @@
+import colorMigrationProxy from './utils/colorMigrationProxy';
+import hexToRgbA from './utils/hexToRgbA';
+import createColorGetter from './utils/createColorGetter';
+
+
 export const blue = {
     0: 'white',
     300: '#60a9ff',
@@ -21,36 +26,33 @@ export const danger = {
 }
 
 
-export const gray = {
+// 300, 500, 700
+
+export const gray = colorMigrationProxy({
     0: '#fff',
     50: '#fafafa',
     100: '#ebecf0',
+    // 200: '#d8dbed',  // moved to grayBlue
+    // 300: '#9cb4e1',  // moved to grayBlue
+    400: '#A9B1BD',
+    // 500: '#5F7090',  // moved to grayBlue
+    600: '#6a7689',
+    // 700: '#415272',  // moved to grayBlue
+    800: '#2d374b',
+}, 'gray');
+
+
+
+export const grayBlue = colorMigrationProxy({
     200: '#d8dbed',
     300: '#9cb4e1',
-    400: '#A9B1BD',
+    400: '#7d89a3', // new
     500: '#5F7090',
-    600: '#6a7689',
-    700: '#48576f',
-    800: '#2d374b',
-}
-
-export const cyan = {
-    300: '#c0eff8',
-}
+    600: '#4d5d7e', // new
+    700: '#415272',
+}, 'grayBlue')
 
 
-function hexToRgbA(hex, opacity = 1) {
-    var c;
-    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-        c = hex.substring(1).split('');
-        if (c.length == 3) {
-            c = [c[0], c[0], c[1], c[1], c[2], c[2]];
-        }
-        c = '0x' + c.join('');
-        return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',')},${opacity})`;
-    }
-    throw new Error('Bad Hex');
-}
 
 
 
@@ -60,8 +62,8 @@ const palette = {
     success,
     danger,
     gray,
-    cyan,
-    getColor: color => palette[color.split('-')[0]][color.split('-')[1]],
+    grayBlue,
+    getColor: createColorGetter(palette),
     opaque: hexToRgbA
 }
 

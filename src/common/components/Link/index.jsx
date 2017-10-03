@@ -32,15 +32,15 @@ const styles = theme => ({
     },
 
     inverted: {
-        color: theme.palette.gray[0],
-        borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
+        color: theme.palette.grayBlue[200],
+        borderColor: theme.palette.opaque(theme.palette.grayBlue[200], 0.5),
         '&:hover': {
-            color: theme.palette.cyan[300],
-            borderColor: theme.palette.opaque(theme.palette.cyan[300], 0.5),
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         },
         '&:active': {
-            color: theme.palette.cyan[300],
-            borderColor: theme.palette.opaque(theme.palette.cyan[300], 0.5),
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         },
     }
 })

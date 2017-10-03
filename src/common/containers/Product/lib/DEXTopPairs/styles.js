@@ -8,7 +8,7 @@ const styles = theme => ({
         justifyContent: 'space-between'
     },
     textGray: {
-        color: theme.palette.gray[500],
+        color: theme.palette.grayBlue[500],
     },
     [theme.breakpoints.up('md')]: {
         root: {
