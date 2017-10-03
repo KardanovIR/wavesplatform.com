@@ -3,6 +3,7 @@ import hexToRgbA from './utils/hexToRgbA';
 import createColorGetter from './utils/createColorGetter';
 
 
+// palette
 export const blue = {
     0: 'white',
     300: '#60a9ff',
@@ -11,23 +12,7 @@ export const blue = {
     900: '#0a1b43',
 }
 
-export const primary = blue;
-
-export const secondary = {
-    500: '#ea9019'
-}
-
-export const success = {
-    500: '#22d64c'
-}
-
-export const danger = {
-    500: '#cc1442'
-}
-
-
 // 300, 500, 700
-
 export const gray = colorMigrationProxy({
     0: '#fff',
     50: '#fafafa',
@@ -42,7 +27,6 @@ export const gray = colorMigrationProxy({
 }, 'gray');
 
 
-
 export const grayBlue = colorMigrationProxy({
     200: '#d8dbed',
     300: '#9cb4e1',
@@ -52,6 +36,23 @@ export const grayBlue = colorMigrationProxy({
     700: '#415272',
 }, 'grayBlue')
 
+
+
+
+// product colors
+export const primary = blue;
+
+export const secondary = {
+    500: '#ea9019'
+}
+
+export const success = {
+    500: '#22d64c'
+}
+
+export const danger = {
+    500: '#cc1442'
+}
 
 
 
