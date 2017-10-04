@@ -1,4 +1,4 @@
-import isProd from 'src/server/utils/isProd';
+import isProd from 'src/common/utils/isProd';
 
 
 export default (colorObj, colorName) =>

@@ -4,7 +4,7 @@ import mount from 'koa-mount';
 import compose from 'koa-compose';
 
 
-import isProd from 'src/server/utils/isProd';
+import isProd from 'src/common/utils/isProd';
 
 
 const MAX_AGE = isProd() ? 2592000000 : 0;
