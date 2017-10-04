@@ -47,7 +47,6 @@ const FeedbackForm = ({
     intl
 }) => (
     <div>
-        {console.log('Submit failed', submitFailed)}
         { (status === 'idle' || status === 'pending') && (
             <Form onSubmit={handleSubmit}>
                 <Row>

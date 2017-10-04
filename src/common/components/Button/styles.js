@@ -1,5 +1,4 @@
 const getFontColor = color => {
-    // console.log(color)
     if (parseInt(color.split('-')[1]) > 400) {
         return 'gray-0'
     } else {

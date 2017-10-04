@@ -11,7 +11,7 @@ const readAssets = async (ctx, next) => {
         await readFileAsync('./dist/assets.json')
             .then(text => ctx.state.assets = JSON.parse(text))
             .catch(err => {
-                console.log('Unable to read assets.json file');
+                ctx.logger.error('Unable to read assets.json file');
                 ctx.state.assets = {}
             });
     }
