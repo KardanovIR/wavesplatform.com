@@ -67,6 +67,7 @@ const palette = {
     danger,
     gray,
     grayBlue,
+    orange,
     getColor: createColorGetter(palette),
     opaque: hexToRgbA
 }
