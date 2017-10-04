@@ -1,5 +1,5 @@
 import colorMigrationProxy from './utils/colorMigrationProxy';
-import hexToRgbA from './utils/hexToRgbA';
+import hexToRgba from './utils/hexToRgba';
 import createColorGetter from './utils/createColorGetter';
 
 
@@ -69,7 +69,7 @@ const palette = {
     grayBlue,
     orange,
     getColor: createColorGetter(palette),
-    opaque: hexToRgbA
+    opaque: hexToRgba
 }
 
 export { palette }
