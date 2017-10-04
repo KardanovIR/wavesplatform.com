@@ -16,7 +16,7 @@ import { isEmpty, isEmailInvalid } from '../../../public/utils/validation';
 
 // for submit
 import { handleFetchError } from '../../../common/utils/handleFetchError';
-
+import sendToApi from 'src/public/utils/sendToApi';
 
 // localStorage read and write email
 import { withLocalStorage } from '../../../public/hoc/localStorage';
@@ -25,7 +25,7 @@ import { withLocalStorage } from '../../../public/hoc/localStorage';
 
 class SubscriptionFormContainer extends Component {
     static defaultProps = {
-        onSubmit: () => {},
+        onSubmit: () => { },
     }
 
     static propTypes = {
@@ -60,15 +60,8 @@ class SubscriptionFormContainer extends Component {
 
     sendForm = email => {
         this.setState({ status: 'pending' });
-        fetch('/api/subscription', {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            method: 'POST',
-            body: JSON.stringify({ email })
-        })
-            .then(handleFetchError)
+        
+        sendToApi('subscription', { email })
             .then(() => this.setState({ status: 'subscribed' }))
             .catch(err => {
                 console.warn(err);

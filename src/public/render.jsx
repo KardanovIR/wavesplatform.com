@@ -7,6 +7,7 @@ import { render as reactDomRender } from 'react-dom';
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
 
 // i18n initialization
@@ -43,6 +44,7 @@ function run(Component, {
         initialState,
         compose(
             applyMiddleware(googleAnalytics),
+            applyMiddleware(thunk),
             window.devToolsExtension ? window.devToolsExtension() : f => f
         )
     )

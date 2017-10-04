@@ -1,6 +1,6 @@
 import compose from 'koa-compose';
 
-import { render } from '../middleware/render';
+import { render } from 'src/server/middleware/render';
 
 import Error404 from 'src/common/containers/Error404';
 
