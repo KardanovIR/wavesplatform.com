@@ -5,38 +5,30 @@ import Typography from 'src/common/components/Typography';
 import { FormattedMessage } from 'react-intl';
 
 
-import { EMPTY, EMAIL_INVALID } from 'src/public/utils/validation/rules';
+import injectSheet from 'react-jss';
 
-
-
-const Empty = () => (
-    <Typography inverted>
-        <FormattedMessage
-            id="form.errors.emailEmpty"
-            defaultMessage="Please enter an email address"
-        />
-    </Typography>
-)
-const EmailInvalid = () => (
-    <Typography inverted>
-        <FormattedMessage
-            id="form.errors.emailInvalid"
-            defaultMessage="Invalid email address"
-        />
-    </Typography>
-)
-
-
-const ErrorMessage = ({ errors }) => {
-    if (~errors.indexOf(EMPTY)) {
-        return <Empty />
+const styles = theme => ({
+    text: {
+        color: theme.palette.danger[500],
+        marginTop: '-.4em'
     }
+})
 
-    if (~errors.indexOf(EMAIL_INVALID)) {
-        return <EmailInvalid />
-    }
 
-    return null;
-}
 
-export default ErrorMessage;
+
+const ErrorMessage = ({ error, classes }) => 
+    error
+    ? (
+        <Typography inverted align="right" className={classes.text}>
+            <FormattedMessage
+                id="form.errors.general"
+                defaultMessage="Please enter a correct email address, choose a topic and write a message"
+            />
+        </Typography>
+    )
+    : null;
+
+
+
+export default injectSheet(styles)(ErrorMessage);

@@ -9,6 +9,7 @@ import validate from './validate';
 
 
 
+
 export default compose(
     connect(
         ({ feedbackForm }) => feedbackForm,
