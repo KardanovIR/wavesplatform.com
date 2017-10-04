@@ -9,7 +9,7 @@ import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 export default async (ctx, next) => {
     const email = sanitize(ctx.request.body.email);
 
-    checkEnvVariable(ctx, [
+    checkEnvVariable([
         'MAILCHIMP_LIST',
         'MAILCHIMP_API_KEY',
     ])

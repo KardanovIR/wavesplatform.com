@@ -19,11 +19,6 @@ import isProd from 'src/server/utils/isProd';
 
 
 
-import initEnvVariables from './utils/initEnvVariables';
-initEnvVariables();
-
-
-
 const app = new Koa();
 
 

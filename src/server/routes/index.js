@@ -24,7 +24,7 @@ router
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
     .post('/api/subscription', subscribe)
-    .post('/api/feedback', feedback)
+    .post('/api/feedback', feedback())
     .get('*', Error404)
 
 

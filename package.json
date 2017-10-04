@@ -11,7 +11,7 @@
     "start": "webpack-dev-server --config ./config/webpack.front.config.js",
     "build:be": "webpack --config ./config/webpack.back.dev.config.js",
     "build:be-prod": "webpack --config ./config/webpack.back.prod.config.js",
-    "server": "nodemon dist/app.js",
+    "server": "nodemon config/server.js",
     "build:fe": "webpack --config ./config/webpack.front.config.js",
     "build:fe-prod": "webpack --config ./config/webpack.front.prod.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -34,6 +34,7 @@
     "koa-static": "^3.0.0",
     "locale": "^0.1.0",
     "node-env-file": "^0.1.8",
+    "nodemailer": "^4.1.2",
     "pug": "^2.0.0-beta11",
     "ramda": "^0.24.1",
     "raven": "^2.1.1",
