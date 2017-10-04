@@ -32,7 +32,15 @@ const FeedbackFormSection = () => (
                             id="company.feedback.text"
                             defaultMessage="Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}."
                             values={{
-                                link: <Link secondary><FormattedMessage id="company.feedback.supportLink" defaultMessage="support" /></Link>
+                                link: (
+                                    <Link
+                                        secondary
+                                        href="https://support.wavesplatform.com"
+                                        target="_blank"
+                                    >
+                                        <FormattedMessage id="company.feedback.supportLink" defaultMessage="support" />
+                                    </Link>
+                                )
                             }}
                         />
                     </Typography>
