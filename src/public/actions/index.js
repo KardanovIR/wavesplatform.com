@@ -17,7 +17,6 @@ export const WHITEPAPER_DOWNLOAD = 'WhitepaperDownload';
 export const BRANDING_PACKAGE_DOWNLOAD = 'BrandingPackageDownload';
 
 // contact
-export const CONTACT_US_CLICK = 'ContactUsClick';
 export const SUBMIT_RESUME_CLICK = 'SubmitResumeClick';
 export const SUBSCRIBE = 'Subscribe';
 
@@ -49,7 +48,6 @@ export const whitepaperDownload = createAC(WHITEPAPER_DOWNLOAD);
 export const brandingPackageDownload = createAC(BRANDING_PACKAGE_DOWNLOAD);
 
 // contact
-export const contactUsClick = createAC(CONTACT_US_CLICK);
 export const submitResumeClick = createAC(SUBMIT_RESUME_CLICK);
 export const subscribe = createAC(SUBSCRIBE);
 

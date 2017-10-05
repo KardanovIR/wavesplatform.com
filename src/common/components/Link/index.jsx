@@ -69,6 +69,7 @@ const Link = ({
     textDecoration,
     sheet, // eslint-disable-line
     theme, // eslint-disable-line
+    href,
     ...rest
 }) => {
     const className = cn(
@@ -82,10 +83,10 @@ const Link = ({
         classNameProp
     );
 
-    const Element = pseudo ? 'span' : 'a';
+    const Element = href ? 'a' : 'span';
 
     return (
-        <Element className={className} { ...rest } />
+        <Element href={href} className={className} { ...rest } />
     )
 }
 
