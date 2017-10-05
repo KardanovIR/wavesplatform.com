@@ -8,6 +8,8 @@ import MainScreen from 'src/common/components/MainScreen';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
+import AnchorScroll from 'src/public/components/AnchorScroll';
+
 
 
 
@@ -66,20 +68,23 @@ const PageLayout = ({ classes }) => (
         </div>
 
 
-
         <Background className={classes.bgLight} skewed={true}>
             <Section size={4}>
-                <Vacancies />
+                <AnchorScroll anchor="careers">
+                    <Vacancies />
+                </AnchorScroll>
             </Section>
         </Background>
 
 
+        <AnchorScroll anchor="contact">
+            <Background className={classes.bgDark} skewed={true}>
+                <Section size={4} className={classes.footerMarginCompensate}>
+                    <FeedbackForm />
+                </Section>
+            </Background>
+        </AnchorScroll>
 
-        <Background className={classes.bgDark} skewed={true}>
-            <Section size={4} className={classes.footerMarginCompensate}>
-                <FeedbackForm />
-            </Section>
-        </Background>
 
     </Layout>
 );

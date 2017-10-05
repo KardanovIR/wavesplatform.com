@@ -10,6 +10,9 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 
 
+import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
+
+
 // i18n initialization
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
@@ -32,7 +35,7 @@ export const getLocale = () => window.__LOCALE;
 
 // run app
 function run(Component, {
-    callback = () => {},
+    callback = () => { },
     reducer = s => s,
     initialState = getInitialState()
 } = {}) {
@@ -53,7 +56,9 @@ function run(Component, {
         (
             <Provider store={store}>
                 <IntlProvider locale={getLocale()} defaultLocale="en" messages={getMessages()}>
-                    {Component}
+                    <AnchorScrollProvider>
+                        {Component}
+                    </AnchorScrollProvider>
                 </IntlProvider>
             </Provider>
         ),
