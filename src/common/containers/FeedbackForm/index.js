@@ -10,15 +10,26 @@ import validate from './validate';
 
 
 
-export default compose(
+const FeedbackFormContainer = compose(
     connect(
         ({ feedbackForm }) => feedbackForm,
-        {
-            onSubmit: sendForm
-        }
+        (dispatch, ownProps) => ({
+            onSubmit: (formData) => {
+                dispatch(sendForm(formData));
+                ownProps.onSubmit(formData);
+            }
+        })
     ),
     reduxForm({
         form: 'feedbackForm',
         validate
     }),
 )(View);
+
+
+FeedbackFormContainer.defaultProps = {
+    onSubmit: () => {}
+}
+
+
+export default FeedbackFormContainer;
