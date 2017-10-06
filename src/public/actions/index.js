@@ -26,7 +26,11 @@ export const GIVE_FEEDBACK_SHOW = 'GiveFeedbackShow';
 
 
 
-const createAC = type => meta => ({ type, ...meta });
+const createAC = type => meta => ({
+    type,
+    log: true,
+    ...meta
+});
 
 
 // our products

@@ -1,5 +1,5 @@
 export default store => next => action => {
-    if (window.dataLayer) {
+    if (action.log && window.dataLayer) {
         window.dataLayer.push({
             'event': action.type,
             'page': action.page,

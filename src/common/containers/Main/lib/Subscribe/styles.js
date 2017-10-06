@@ -11,9 +11,6 @@ const styles = theme => ({
         margin: `${theme.spacing.unit * 3}px auto 0`,
         maxWidth: 400
     },
-    background: {
-        background: theme.palette.gray[900]
-    },
     [theme.mixins.atMedia('md')]: {
         root: {
             padding: theme.spacing.getSpacing(20, 0, 20)
