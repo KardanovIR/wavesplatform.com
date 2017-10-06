@@ -14,10 +14,6 @@ import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
 import Icon from 'src/common/components/Icon';
 import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
-// import Link from 'src/common/components/Link';
-// import Input from 'src/common/components/Input';
-
 
 // error message
 import ErrorMessage from './lib/ErrorMessage';
@@ -40,7 +36,6 @@ const FeedbackForm = ({
     classes,
     error,
     status,
-    anyTouched,
     invalid,
     handleSubmit,
     submitFailed,
