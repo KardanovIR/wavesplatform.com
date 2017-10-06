@@ -1,7 +1,7 @@
 import sendToApi from 'src/public/utils/sendToApi';
 
 
-export const SUBMIT = 'FeedbackFormSubmit';
+export const SUBMIT = 'Submit';
 export const SUCCESS = 'Success';
 export const ERROR = 'Error';
 
@@ -13,7 +13,6 @@ const createAC = type => meta => ({ type, ...meta });
 export const submit = (formData, meta) => ({
     type: SUBMIT,
     payload: formData,
-    log: true,
     ...meta
 })
 

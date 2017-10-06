@@ -19,10 +19,12 @@ export const BRANDING_PACKAGE_DOWNLOAD = 'BrandingPackageDownload';
 // contact
 export const SUBMIT_RESUME_CLICK = 'SubmitResumeClick';
 export const SUBSCRIBE = 'Subscribe';
+export const FEEDBACK_FORM_SUBMIT = 'FeedbackFormSubmit';
 
-export const GIVE_FEEDBACK_CLICK = 'GiveFeedbackClick';
-export const GIVE_FEEDBACK_CLOSE = 'GiveFeedbackClose';
-export const GIVE_FEEDBACK_SHOW = 'GiveFeedbackShow';
+
+// export const GIVE_FEEDBACK_CLICK = 'GiveFeedbackClick';
+// export const GIVE_FEEDBACK_CLOSE = 'GiveFeedbackClose';
+// export const GIVE_FEEDBACK_SHOW = 'GiveFeedbackShow';
 
 
 
@@ -54,9 +56,10 @@ export const brandingPackageDownload = createAC(BRANDING_PACKAGE_DOWNLOAD);
 // contact
 export const submitResumeClick = createAC(SUBMIT_RESUME_CLICK);
 export const subscribe = createAC(SUBSCRIBE);
+export const feedbackFormSubmit = createAC(FEEDBACK_FORM_SUBMIT);
 
-export const giveFeedbackShow = createAC(GIVE_FEEDBACK_SHOW);
-export const giveFeedbackClick = createAC(GIVE_FEEDBACK_CLICK);
-export const giveFeedbackClose = createAC(GIVE_FEEDBACK_CLOSE);
+// export const giveFeedbackShow = createAC(GIVE_FEEDBACK_SHOW);
+// export const giveFeedbackClick = createAC(GIVE_FEEDBACK_CLICK);
+// export const giveFeedbackClose = createAC(GIVE_FEEDBACK_CLOSE);
 
 

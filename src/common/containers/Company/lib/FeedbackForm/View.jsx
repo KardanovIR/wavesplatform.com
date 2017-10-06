@@ -16,7 +16,7 @@ import styles from './styles';
 
 
 
-const FeedbackFormSection = () => (
+const FeedbackFormSection = ({ onFeedbackFormSubmit }) => (
     <Row centered>
         <Col xs={12} md={8}>
             <Row centered>
@@ -49,7 +49,10 @@ const FeedbackFormSection = () => (
 
             <Margin bottom={3} />
 
-            <FeedbackForm initialValues={{ reason: '', email: '', message: '' }} />
+            <FeedbackForm
+                initialValues={{ reason: '', email: '', message: '' }}
+                onSubmit={onFeedbackFormSubmit}
+            />
         </Col>
     </Row>
 );
