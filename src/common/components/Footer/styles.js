@@ -14,7 +14,7 @@ export default theme => {
             color: theme.palette.gray[600]
         },
         textDarkGray: {
-            color: theme.palette.gray[700]
+            color: theme.palette.grayBlue[700]
         },
 
         footer: {

@@ -27,11 +27,7 @@ const styles = theme => ({
     circleDark: {
         composes: '$circle',
         background: theme.palette.primary[900],
-    },
-    circleCyan: {
-        composes: '$circle',
-        background: theme.palette.cyan[300],
-    },
+    }
 })
 
 

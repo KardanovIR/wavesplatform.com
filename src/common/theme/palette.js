@@ -1,3 +1,9 @@
+import colorMigrationProxy from './utils/colorMigrationProxy';
+import hexToRgba from './utils/hexToRgba';
+import createColorGetter from './utils/createColorGetter';
+
+
+// palette
 export const blue = {
     0: 'white',
     300: '#60a9ff',
@@ -6,6 +12,38 @@ export const blue = {
     900: '#0a1b43',
 }
 
+// 300, 500, 700
+export const gray = colorMigrationProxy({
+    0: '#fff',
+    50: '#fafafa',
+    100: '#ebecf0',
+    // 200: '#d8dbed',  // moved to grayBlue
+    // 300: '#9cb4e1',  // moved to grayBlue
+    400: '#A9B1BD',
+    // 500: '#5F7090',  // moved to grayBlue
+    600: '#6a7689',
+    // 700: '#415272',  // moved to grayBlue
+    800: '#2d374b',
+}, 'gray');
+
+
+export const grayBlue = colorMigrationProxy({
+    200: '#d8dbed',
+    300: '#9cb4e1',
+    400: '#8292b6', // new
+    500: '#5F7090',
+    600: '#4d5d7e', // new
+    700: '#415272',
+}, 'grayBlue')
+
+
+export const orange = {
+    300: '#FCBC32'
+}
+
+
+
+// product colors
 export const primary = blue;
 
 export const secondary = {
@@ -17,39 +55,7 @@ export const success = {
 }
 
 export const danger = {
-    500: '#cc1442'
-}
-
-
-export const gray = {
-    0: '#fff',
-    50: '#fafafa',
-    100: '#ebecf0',
-    200: '#d8dbed',
-    300: '#9cb4e1',
-    400: '#A9B1BD',
-    500: '#5F7090',
-    600: '#6a7689',
-    700: '#48576f',
-    800: '#2d374b',
-}
-
-export const cyan = {
-    300: '#c0eff8',
-}
-
-
-function hexToRgbA(hex, opacity = 1) {
-    var c;
-    if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
-        c = hex.substring(1).split('');
-        if (c.length == 3) {
-            c = [c[0], c[0], c[1], c[1], c[2], c[2]];
-        }
-        c = '0x' + c.join('');
-        return `rgba(${[(c >> 16) & 255, (c >> 8) & 255, c & 255].join(',')},${opacity})`;
-    }
-    throw new Error('Bad Hex');
+    500: orange[300]
 }
 
 
@@ -60,9 +66,10 @@ const palette = {
     success,
     danger,
     gray,
-    cyan,
-    getColor: color => palette[color.split('-')[0]][color.split('-')[1]],
-    opaque: hexToRgbA
+    grayBlue,
+    orange,
+    getColor: createColorGetter(palette),
+    opaque: hexToRgba
 }
 
 export { palette }

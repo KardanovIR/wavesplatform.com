@@ -31,16 +31,29 @@ const styles = theme => ({
         border: 0
     },
 
-    inverted: {
-        color: theme.palette.gray[0],
-        borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
+    secondary: {
+        color: theme.palette.orange[300],
+        borderColor: theme.palette.opaque(theme.palette.orange[300], 0.5),
         '&:hover': {
-            color: theme.palette.cyan[300],
-            borderColor: theme.palette.opaque(theme.palette.cyan[300], 0.5),
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         },
         '&:active': {
-            color: theme.palette.cyan[300],
-            borderColor: theme.palette.opaque(theme.palette.cyan[300], 0.5),
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
+        },
+    },
+
+    inverted: {
+        color: theme.palette.grayBlue[200],
+        borderColor: theme.palette.opaque(theme.palette.grayBlue[200], 0.5),
+        '&:hover': {
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
+        },
+        '&:active': {
+            color: theme.palette.gray[0],
+            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         },
     }
 })
@@ -51,26 +64,29 @@ const Link = ({
     classes,
     className: classNameProp,
     inverted,
+    secondary,
     pseudo,
     textDecoration,
     sheet, // eslint-disable-line
     theme, // eslint-disable-line
+    href,
     ...rest
 }) => {
     const className = cn(
         classes.link,
         {
             [classes.inverted]: inverted,
+            [classes.secondary]: secondary,
             [classes.pseudo]: pseudo,
             [classes.noDecoration]: !textDecoration,
         },
         classNameProp
     );
 
-    const Element = pseudo ? 'span' : 'a';
+    const Element = href ? 'a' : 'span';
 
     return (
-        <Element className={className} { ...rest } />
+        <Element href={href} className={className} { ...rest } />
     )
 }
 

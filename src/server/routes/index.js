@@ -2,10 +2,11 @@ import Router from 'koa-router';
 
 
 import { render } from '../middleware/render';
-import home from './home';
-import product from './product';
-import Error404 from './Error404';
-import subscribe from './subscribe';
+import home from './get/home';
+import product from './get/product';
+import Error404 from './get/Error404';
+import subscribe from './post/subscribe';
+import feedback from './post/feedback';
 
 // page components
 import Developers from 'src/common/containers/Developers';
@@ -23,6 +24,7 @@ router
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
     .post('/api/subscription', subscribe)
+    .post('/api/feedback', feedback())
     .get('*', Error404)
 
 

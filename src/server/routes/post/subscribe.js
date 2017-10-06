@@ -2,17 +2,17 @@ import { sanitize } from 'sanitizer';
 import { validate } from 'email-validator';
 import fetch from 'node-fetch';
 
+import checkEnvVariable from 'src/server/utils/checkEnvVariable';
+
+
 
 export default async (ctx, next) => {
     const email = sanitize(ctx.request.body.email);
 
-    if (!process.env.MAILCHIMP_LIST) {
-        ctx.throw('No MAILCHIMP_LIST provided');
-    }
-    if (!process.env.MAILCHIMP_API_KEY) {
-        ctx.throw('No MAILCHIMP_API_KEY provided');
-    }
-    // console.log(email);
+    checkEnvVariable([
+        'MAILCHIMP_LIST',
+        'MAILCHIMP_API_KEY',
+    ])
 
     if (validate(email)) {
         ctx.logger.info('Received an VALID email', { email });

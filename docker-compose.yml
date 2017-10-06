@@ -39,4 +39,6 @@ services:
     build: .
     expose:
      - "3001"
+    env_file:
+      - variables.env
     restart: unless-stopped

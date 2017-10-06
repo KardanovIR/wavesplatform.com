@@ -1,13 +1,3 @@
-const getFontColor = color => {
-    // console.log(color)
-    if (parseInt(color.split('-')[1]) > 400) {
-        return 'gray-0'
-    } else {
-        return 'gray-900'
-    }
-}
-
-
 const styles = theme => ({
     button: {
         // RESET default browser styles

@@ -5,7 +5,7 @@ import deloitteLogo from './img/deloitte_logo.svg';
 const styles = theme => ({
     deloitte: {
         textAlign: 'right',
-        borderRight: `6px solid ${theme.palette.gray[500]}`,
+        borderRight: `6px solid ${theme.palette.grayBlue[500]}`,
         padding: theme.spacing.getSpacing(0.5, 5, 0, 0)
     },
     deloitteLogo: {

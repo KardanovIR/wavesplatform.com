@@ -3,6 +3,7 @@ import React from 'react';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import Button from 'src/common/components/Button';
+import Link from 'src/common/components/Link';
 import { Row, Col } from 'src/common/components/Grid';
 
 import Panel from 'src/common/components/Panel';
@@ -19,8 +20,7 @@ import media from './media.json';
 
 const Media = ({
     classes,
-    onBrandingPackageClick,
-    onContactUsClick,
+    onBrandingPackageClick
 }) => (
         <div className={classes.root}>
             <Row>
@@ -53,25 +53,26 @@ const Media = ({
                     <Typography type="body2">
                         <FormattedMessage
                             id="company.media.contactUs"
-                            defaultMessage="For all media inquiries, please contact the Communications Team"
+                            defaultMessage="For all media inquiries, please {link} the Communications Team"
+                            values={{
+                                link: (
+                                    <Link pseudo href="#contact">
+                                        <FormattedMessage
+                                            id="company.media.contactUsLink"
+                                            defaultMessage="contact"
+                                        />
+                                    </Link>
+                                )
+                            }}
                         />
                     </Typography>
 
                     <Margin bottom={3} />
 
-                    <Margin right={1} bottom={2} display="inline-block">
-                        <Button onClick={onContactUsClick} href="mailto:pr@wavesplatform.com">
-                            <FormattedMessage
-                                id="cta.contactUs"
-                                defaultMessage="Contact us"
-                            />
-                        </Button>
-                    </Margin>
                     <Button
                         onClick={onBrandingPackageClick}
                         href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_1.2.zip"
                         target="_blank"
-                        secondary
                     >
                         <FormattedMessage
                             id="cta.brandingPackage"

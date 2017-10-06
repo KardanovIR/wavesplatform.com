@@ -22,7 +22,7 @@ import Html from 'src/server/components/Html';
 import FontInliner from 'src/server/components/FontInliner';
 
 
-import isProd from 'src/server/utils/isProd';
+import isProd from 'src/common/utils/isProd';
 
 
 

@@ -7,6 +7,10 @@ import { render as reactDomRender } from 'react-dom';
 
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+
+
+import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
 
 
 // i18n initialization
@@ -29,27 +33,32 @@ export const getLocale = () => window.__LOCALE;
 
 
 
-// redux store
-const store = createStore(
-    s => s,
-    getInitialState(),
-    compose(
-        applyMiddleware(googleAnalytics),
-        window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-)
-
-
-
 // run app
-const run = (Component, callback = () => { }) => {
+function run(Component, {
+    callback = () => { },
+    reducer = s => s,
+    initialState = getInitialState()
+} = {}) {
     const appNode = document.getElementById('app');
+
+    // redux store
+    const store = createStore(
+        reducer,
+        initialState,
+        compose(
+            applyMiddleware(googleAnalytics),
+            applyMiddleware(thunk),
+            window.devToolsExtension ? window.devToolsExtension() : f => f
+        )
+    )
 
     return reactDomRender(
         (
             <Provider store={store}>
                 <IntlProvider locale={getLocale()} defaultLocale="en" messages={getMessages()}>
-                    {Component}
+                    <AnchorScrollProvider>
+                        {Component}
+                    </AnchorScrollProvider>
                 </IntlProvider>
             </Provider>
         ),

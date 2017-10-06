@@ -1,9 +1,22 @@
+const setPlaceholderColor = color => ({
+    '&::-webkit-input-placeholder': {
+        color
+    },
+    '&::-moz-placeholder': {
+        color
+    },
+    '&:-ms-placeholder': {
+        color
+    },
+    '&::-ms-input-placeholder': {
+        color
+    },
+})
+
+
 const styles = theme => ({
     root: {
         ...theme.typography.body,
-
-        height: theme.spacing.inputHeight,
-        lineHeight: `${theme.spacing.inputHeight}px`,
 
         fontWeight: 500,
 
@@ -19,30 +32,31 @@ const styles = theme => ({
 
         borderRadius: theme.spacing.radius,
 
-        backgroundColor: theme.palette.gray[500],
-        color: theme.palette.primary[900],
+        backgroundColor: theme.palette.grayBlue[700],
+        color: theme.palette.grayBlue[200],
 
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
-        transition: theme.transitions.create('background-color'),
+        transition: theme.transitions.create(['background-color']),
 
         '&:focus': {
-            backgroundColor: theme.palette.gray[300],
+            backgroundColor: theme.palette.grayBlue[600],
         },
 
-        '&::-webkit-input-placeholder': {
-            color: theme.palette.primary[900]
-        },
         '&::-moz-placeholder': {
-            color: theme.palette.primary[900]
+            opacity: 1,
         },
-        '&:-ms-placeholder': {
-            color: theme.palette.primary[900]
-        },
-        '&::-ms-input-placeholder': {
-            color: theme.palette.primary[900]
-        },
+        ...setPlaceholderColor(theme.palette.grayBlue[400]),
+    },
+    input: {
+        height: theme.spacing.inputHeight,
+        lineHeight: `${theme.spacing.inputHeight}px`,
+    },
+    textarea: {
+        resize: 'none',
+        paddingTop: theme.spacing.unit,
+        paddingBottom: theme.spacing.unit,
     },
     disabled: {
         opacity: 0.6,

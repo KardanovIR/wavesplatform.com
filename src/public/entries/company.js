@@ -3,13 +3,16 @@ import React from 'react';
 import { render } from '../render';
 
 
-import Company from '../../common/containers/Company';
+import Company from 'src/common/containers/Company';
+import reducer from 'src/common/containers/Company/reducer';
 
 
-render(<Company />);
+render(<Company />, {
+    reducer
+});
 
 
 
-if (process.env.NODE_ENV === 'development') {
-    if (module.hot) module.hot.accept('../../common/containers/Main', () => render(<Main />))
-}
+// if (process.env.NODE_ENV === 'development') {
+//     if (module.hot) module.hot.accept('../../common/containers/Main', () => render(<Company />))
+// }
