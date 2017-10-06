@@ -28,24 +28,8 @@ module.exports = {
         rules: [
             ...createUrlLoaders({ emitFile: false }),
             {
-                test: /\.pug?$/,
-                loader: 'pug-loader',
-                include: includedDirectories
-            },
-            {
                 test: /\.jsx?$/,
                 loader: 'babel-loader',
-                include: includedDirectories
-            },
-            {
-                test: /\.css$/,
-                use: {
-                    loader: 'css-loader/locals',
-                    options: {
-                        modules: true,
-                        localIdentName: '[folder]__[local]__[hash:base64:5]'
-                    }
-                },
                 include: includedDirectories
             },
             {
