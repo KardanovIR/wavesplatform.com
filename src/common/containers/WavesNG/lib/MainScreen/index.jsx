@@ -1,30 +1,30 @@
 import React from 'react';
 
-import { FormattedMessage } from 'react-intl';
+import {
+    FormattedHTMLMessage,
+    FormattedMessage
+} from 'react-intl';
 
 import MainScreen from 'src/common/components/MainScreen';
 
-import Image from '!svg-react-loader!./img/waves.svg';
 
 
-
-const DevelopersMainScreen = () => (
+const MainScreenSection = () => (
     <MainScreen
         title={
-            <FormattedMessage
-                id="getWaves.title"
-                defaultMessage="Get Waves"
+            <FormattedHTMLMessage
+                id="wavesNG.title"
+                defaultMessage="Help us test<br>Waves-NG"
             />
         }
         text={
             <FormattedMessage
-                id="getWaves.text"
-                defaultMessage="You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC."
+                id="wavesNG.text"
+                defaultMessage="Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on testnet."
             />
         }
-        imageDesktop={<Image />}
     />
 );
 
 
-export default DevelopersMainScreen;
+export default MainScreenSection;

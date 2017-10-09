@@ -10,8 +10,8 @@ import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 // lib
 import MainScreen from './lib/MainScreen';
-import HowToBuyWaves from './lib/HowToBuyWaves';
-import Exchanges from './lib/Exchanges';
+import StressTest from './lib/StressTest';
+import Descriptions from './lib/Descriptions';
 
 
 
@@ -24,18 +24,18 @@ import styles from './styles';
 const PageLayout = ({ classes }) => (
     <Layout>
         
-        <MainScreenBackground type="light">
+        <MainScreenBackground type="dark">
             <MainScreen />
         </MainScreenBackground>
 
 
         <Section size={3}>
-            <HowToBuyWaves />
+            <StressTest />
         </Section>
 
-        <Background className={classes.bgExchanges} skewed={true}>
+        <Background className={classes.bgDescriptions} skewed={true}>
             <Section size={4}>
-                <Exchanges />
+                <Descriptions />
             </Section>
         </Background>
 
