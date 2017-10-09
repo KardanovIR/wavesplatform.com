@@ -8,9 +8,10 @@ import Panel from 'src/common/components/Panel';
 import Divider from 'src/common/components/Divider';
 import Article from 'src/common/components/Article';
 import Margin from 'src/common/components/Margin';
-
 import { Row, Col } from 'src/common/components/Grid';
 
+
+import StressTest from 'src/common/containers/StressTest';
 import Countdown from './Countdown';
 
 
@@ -40,10 +41,11 @@ const styles = ({ breakpoints }) => ({
 
 
 
-const StressTest = ({ classes }) => (
+const StressTestSection = ({ classes }) => (
     <Panel>
         <Margin top={2} bottom={4}>
-            <Countdown />
+            {/* <Countdown /> */}
+            <StressTest />
         </Margin>
 
         <Divider />
@@ -100,4 +102,4 @@ const StressTest = ({ classes }) => (
     </Panel>
 )
 
-export default injectSheet(styles)(StressTest);
+export default injectSheet(styles)(StressTestSection);
