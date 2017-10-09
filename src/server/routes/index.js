@@ -12,6 +12,7 @@ import feedback from './post/feedback';
 import Developers from 'src/common/containers/Developers';
 import Company from 'src/common/containers/Company';
 import GetWaves from 'src/common/containers/GetWaves';
+import WavesNG from 'src/common/containers/WavesNG';
 
 
 
@@ -23,6 +24,7 @@ router
     .get('/developers', render({ script: 'developers', component: Developers, description: 'Build applications on the blockchain' }))
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
+    .get('/waves-ng', render({ script: 'wavesNG', component: WavesNG, description: 'Waves NG'  }))
     .post('/api/subscription', subscribe)
     .post('/api/feedback', feedback())
     .get('*', Error404)

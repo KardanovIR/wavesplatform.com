@@ -5,4 +5,5 @@ module.exports = {
     product: 'src/public/entries/product',
     getWaves: 'src/public/entries/getWaves',
     error404: 'src/public/entries/error404',
+    wavesNG: 'src/public/entries/wavesNG',
 }
