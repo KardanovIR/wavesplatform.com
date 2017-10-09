@@ -29,7 +29,7 @@ const PageLayout = ({ classes }) => (
         </MainScreenBackground>
 
 
-        <Section size={3}>
+        <Section top={3} bottom={4}>
             <StressTest />
         </Section>
 
