@@ -59,13 +59,13 @@ const Steps = () => {
                         title={
                             <FormattedMessage
                                 id="wavesNG.preview.p3.title"
-                                defaultMessage="3. Mainnet release"
+                                defaultMessage="3. MainNet release"
                             />
                         }
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p3.text"
-                                defaultMessage="When it is clear that the new version works as expected, we will release Waves-NG on mainnet and everyone can upgrade their nodes. Waves-NG will again be activated after the conditions of the Waves Activation Protocol have been met."
+                                defaultMessage="When it is clear that the new version works as expected, we will release Waves-NG on MainNet and everyone can upgrade their nodes. Waves-NG will again be activated after the conditions of the Waves Activation Protocol have been met."
                             />
                         }
                     />
