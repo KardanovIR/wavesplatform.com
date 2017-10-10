@@ -1,9 +1,13 @@
 import React from 'react';
 
+import { FormattedMessage } from 'react-intl';
+
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
+import Margin from 'src/common/components/Margin';
+import Typography from 'src/common/components/Typography';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
@@ -16,6 +20,7 @@ import SubscribeSection from 'src/common/containers/SubscribeSection';
 import MainScreen from './lib/MainScreen';
 import StressTest from './lib/StressTest';
 import Descriptions from './lib/Descriptions';
+import Steps from './lib/Steps';
 
 
 // styles
@@ -32,10 +37,22 @@ const PageLayout = ({ classes }) => (
             <MainScreen />
         </MainScreenBackground>
 
+        <Section top={3}>
+            <Typography type="display3" align="center">
+                <FormattedMessage
+                    id="wavesNG.stressTest.title"
+                    defaultMessage="Waves-NG activation stages"
+                />
+            </Typography>
+            <Margin bottom={4} />
+            <Steps />
+        </Section>
 
-        <Section top={3} bottom={4}>
+
+        <Section top={2} bottom={4}>
             <StressTest />
         </Section>
+
 
         <Background className={classes.bgDescriptions} skewed={true}>
             <Section size={4}>

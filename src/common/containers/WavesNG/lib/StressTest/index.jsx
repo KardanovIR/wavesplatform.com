@@ -13,15 +13,18 @@ import { Row, Col } from 'src/common/components/Grid';
 
 
 // import StressTest from 'src/common/containers/StressTest';
-import Preview from './Preview';
-// import Countdown from './Countdown';
 
 
 
 
 import injectSheet from 'react-jss';
-const styles = ({ breakpoints }) => ({
+const styles = ({ breakpoints, palette }) => ({
+    title: {
+        color: palette.gray[400]
+    },
     chartWrapper: {
+        opacity: 0.5,
+        pointerEvents: 'none',
         height: 150,
     },
     [breakpoints.up('md')]: {
@@ -40,20 +43,15 @@ const styles = ({ breakpoints }) => ({
 
 const StressTestSection = ({ classes }) => (
     <div>
-        <Typography type="display3" align="center">
-            <FormattedMessage
-                id="wavesNG.stressTest.title"
-                defaultMessage="Waves-NG activation stages"
-            />
-        </Typography>
-
-        <Margin bottom={4} />
-
         <Panel>
 
             <Margin top={2} bottom={4}>
-                {/* <Countdown /> */}
-                <Preview />
+                <Typography type="display1" tagName="div" align="center" className={classes.title}>
+                    <FormattedMessage
+                        id="wavesNG.stressTest.anounce"
+                        defaultMessage="Public stress test will start soon"
+                    />
+                </Typography>
                 {/* <StressTest /> */}
             </Margin>
 
