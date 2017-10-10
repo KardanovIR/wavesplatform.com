@@ -45,15 +45,19 @@ const StressTestSection = ({ classes }) => (
     <div>
         <Panel>
 
-            <Margin top={2} bottom={4}>
-                <Typography type="display1" tagName="div" align="center" className={classes.title}>
-                    <FormattedMessage
-                        id="wavesNG.stressTest.anounce"
-                        defaultMessage="Public stress test will start soon"
-                    />
-                </Typography>
-                {/* <StressTest /> */}
-            </Margin>
+            <Row centered>
+                <Col xs={12} md={8}>
+                    <Margin top={2} bottom={4}>
+                        <Typography type="body2" tagName="div" align="center" className={classes.title}>
+                            <FormattedMessage
+                                id="wavesNG.stressTest.anounce"
+                                defaultMessage="Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
+                            />
+                        </Typography>
+                        {/* <StressTest /> */}
+                    </Margin>
+                </Col>
+            </Row>
 
             <Divider />
             <Margin bottom={4} />
@@ -70,7 +74,7 @@ const StressTestSection = ({ classes }) => (
                         text={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart1.text"
-                                defaultMessage="Numeber of transaction waiting in queue for confirmation. The more trasnsactions are processed by network within a minute, the faster it decreases."
+                                defaultMessage="Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second."
                             />
                         }
                     />
