@@ -8,6 +8,10 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 
+// containers
+import SubscribeSection from 'src/common/containers/SubscribeSection';
+
+
 // lib
 import MainScreen from './lib/MainScreen';
 import StressTest from './lib/StressTest';
@@ -23,7 +27,7 @@ import styles from './styles';
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        
+
         <MainScreenBackground type="dark">
             <MainScreen />
         </MainScreenBackground>
@@ -38,6 +42,12 @@ const PageLayout = ({ classes }) => (
                 <Descriptions />
             </Section>
         </Background>
+
+        <div className={classes.footerMarginCompensate}>
+            <Background className={classes.bgSubscription} skewed={true}>
+                <SubscribeSection />
+            </Background>
+        </div>
 
     </Layout>
 );

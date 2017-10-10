@@ -12,6 +12,7 @@ import Facts from 'src/common/components/Facts';
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
+import SubscribeSection from 'src/common/containers/SubscribeSection';
 
 
 // lib
@@ -23,7 +24,6 @@ import DEX from './lib/DEX';
 import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
 import JoinUs from './lib/JoinUs';
-import Subscribe from './lib/Subscribe';
 import Audience from './lib/Audience';
 
 
@@ -91,7 +91,7 @@ const PageLayout = ({
 
             <div className={classes.footerMarginCompensate}>
                 <Background className={classes.bgSubscription} skewed={true}>
-                    <Subscribe />
+                    <SubscribeSection />
                 </Background>
             </div>
 

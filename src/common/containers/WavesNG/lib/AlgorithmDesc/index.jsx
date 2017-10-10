@@ -21,13 +21,13 @@ const AlgorithmDesc = ({
     classes
 }) => (
         <Panel className={classes.wrapper}>
-            <Typography type="display1" tagName="div" cut>
+            <Typography type="display1" tagName="div">
                 {title}
             </Typography>
             <Margin bottom={3} />
             {image}
             <Margin />
-            <Typography type="body" tagName="div" cut>
+            <Typography type="body" tagName="div">
                 {text}
             </Typography>
             <Margin />
