@@ -23,13 +23,13 @@ const Steps = () => {
                         title={
                             <FormattedMessage
                                 id="wavesNG.preview.p1.title"
-                                defaultMessage="1. Testnet release"
+                                defaultMessage="1. TestNet release"
                             />
                         }
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p1.text"
-                                defaultMessage="Anyone will be able to download node version 0.8 with Waves-NG for testnet. We will lease testnet WAVES to anyone who wants to run a testnet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol."
+                                defaultMessage="Anyone will be able to download node version 0.8 with Waves-NG for TestNet. We will lease TestNet WAVES to anyone who wants to run a TestNet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol."
                             />
                         }
                     />
@@ -47,7 +47,7 @@ const Steps = () => {
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p2.text"
-                                defaultMessage="Once the voting conditions have been met, Waves-NG will be activated on testnet and we will perform a public stress test. Anyone will be able to generate transactions and monitor how the network responds in realtime to the increased throughput."
+                                defaultMessage="Once the voting conditions have been met, Waves-NG will be activated on TestNet and we will perform a public stress test. Anyone will be able to generate transactions and monitor how the network responds in realtime to the increased throughput."
                             />
                         }
                     />
@@ -83,7 +83,7 @@ const Steps = () => {
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p4.text"
-                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 90% of miners have approved the feature after 10,000 blocks or roughly 1 week (3,000 blocks on testnet), it is automatically activated after a further 1,000 blocks."
+                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 90% of miners have approved the feature after 10,000 blocks or roughly 1 week (3,000 blocks on TestNet), it is automatically activated after a further 1,000 blocks."
                             />
                         }
                     />
@@ -115,7 +115,7 @@ const Steps = () => {
                     <Typography>
                         <FormattedMessage
                             id="wavesNG.preview.activation.p2"
-                            defaultMessage="When 10,000 blocks or roughly 1 week pass (3,000 blocks on testnet), the protocol checks how many blocks contain the flag. If 90% of miners have approved the feature, it is automatically activated after a further 1,000 blocks."
+                            defaultMessage="When 10,000 blocks or roughly 1 week pass (3,000 blocks on TestNet), the protocol checks how many blocks contain the flag. If 90% of miners have approved the feature, it is automatically activated after a further 1,000 blocks."
                         />
                     </Typography>
                     <Margin bottom={MARGIN_BOTTOM} />

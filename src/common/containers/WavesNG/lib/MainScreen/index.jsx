@@ -20,7 +20,7 @@ const MainScreenSection = () => (
         text={
             <FormattedMessage
                 id="wavesNG.text"
-                defaultMessage="Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on testnet."
+                defaultMessage="Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on TestNet."
             />
         }
     />
