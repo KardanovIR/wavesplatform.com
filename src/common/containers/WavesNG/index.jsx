@@ -54,7 +54,7 @@ const PageLayout = ({ classes }) => (
 
 
         <Section top={2} bottom={4}>
-            <StressTest />
+            <StressTest active />
         </Section>
 
 

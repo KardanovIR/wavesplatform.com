@@ -43,6 +43,17 @@ module.exports = {
             'NODE_ENV': '"development"'
         }),
         new webpack.NamedModulesPlugin(),
+        new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+        // new webpack.ContextReplacementPlugin(/^\.\/locale$/, context => {
+        //     if (!/\/moment\//.test(context.context)) { return }
+        //     // context needs to be modified in place
+        //     Object.assign(context, {
+        //         // include only CJK
+        //         regExp: /^\.\/(en)/,
+        //         // point to the locale data folder relative to moment's src/lib/locale
+        //         request: '../../locale'
+        //     })
+        // })
     ],
 
     devtool: '#eval-source-map'

@@ -7,7 +7,9 @@ import { Observable } from 'rxjs'
 
 import {
     updateConfirmedTxs,
-    START
+    updateTime,
+    START,
+    FINISH
 } from './ducks';
 
 
@@ -24,23 +26,29 @@ const receiveFromSocket = socket => socketEvent =>
             socket.on(socketEvent, data => observer.next(data))
             return { dispose: socket.close }
         })
-        
 
+
+
+const timer = action$ =>
+    action$.ofType(START)
+        .flatMap(() => Observable.interval(1000).takeUntil(action$.ofType(FINISH)))
+        .map(updateTime)
 
 
 
 // init socket and combine epics
 export default action$ => {
-    const socket = io('localhost:3002');
+    // const socket = io('localhost:3002');
 
-    const forward = forwardToSocket(socket);
+    // const forward = forwardToSocket(socket);
 
-    const balanceUpdate = () => receiveFromSocket(socket)('balanceUpdate')
-        .map(({ balance }) => updateConfirmedTxs(balance));
+    // const balanceUpdate = () => receiveFromSocket(socket)('balanceUpdate')
+        // .map(({ balance }) => updateConfirmedTxs(balance));
 
 
     return combineEpics(
-        balanceUpdate,
-        forward(START, 'startTest')
+        // balanceUpdate,
+        timer,
+        // forward(START, 'startTest')
     )(action$)
 }

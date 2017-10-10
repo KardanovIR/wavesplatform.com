@@ -12,7 +12,7 @@ import Typography from 'src/common/components/Typography';
 import { Row, Col } from 'src/common/components/Grid';
 
 
-// import StressTest from 'src/common/containers/StressTest';
+import StressTest from 'src/common/containers/StressTest';
 
 
 
@@ -41,22 +41,25 @@ const styles = ({ breakpoints, palette }) => ({
 
 
 
-const StressTestSection = ({ classes }) => (
+const StressTestSection = ({ classes, active }) => (
     <div>
         <Panel>
 
             <Row centered>
-                <Col xs={12} md={8}>
-                    <Margin top={2} bottom={4}>
-                        <Typography type="body2" tagName="div" align="center" className={classes.title}>
-                            <FormattedMessage
-                                id="wavesNG.stressTest.anounce"
-                                defaultMessage="Charts below show current DevNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
-                            />
-                        </Typography>
-                        {/* <StressTest /> */}
-                    </Margin>
-                </Col>
+                {active ? <StressTest /> :
+                    (
+                        <Col xs={12} md={8}>
+                            <Margin top={2} bottom={4}>
+                                <Typography type="body2" tagName="div" align="center" className={classes.title}>
+                                    <FormattedMessage
+                                        id="wavesNG.stressTest.anounce"
+                                        defaultMessage="Charts below show current DevNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
+                                    />
+                                </Typography>
+                            </Margin>
+                        </Col>
+                    )
+                }
             </Row>
 
             <Divider />
