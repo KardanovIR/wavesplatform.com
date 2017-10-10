@@ -12,7 +12,7 @@ const subdomains = new Router();
 
 
 subdomains
-    .get('/ng', render({ script: 'wavesNG', component: WavesNG, description: 'Help us test Waves-NG'  }))
+    .get('/waves-ng', render({ script: 'wavesNG', component: WavesNG, description: 'Help us test Waves-NG'  }))
 
 
 export default subdomains;
