@@ -48,7 +48,7 @@ const Descriptions = () => (
                         defaultMessage="Traditional blockchain model"
                     />
                 }
-                image={<ImageNG />}
+                image={<ImageTraditional />}
                 text={
                     <FormattedMessage
                         id="wavesNG.descriptions.1.text"
@@ -65,7 +65,7 @@ const Descriptions = () => (
                         defaultMessage="Traditional blockchain model"
                     />
                 }
-                image={<ImageTraditional />}
+                image={<ImageNG />}
                 text={
                     <FormattedMessage
                         id="wavesNG.descriptions.2.text"

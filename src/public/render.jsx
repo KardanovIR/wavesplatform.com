@@ -1,5 +1,7 @@
 import 'babel-polyfill';
 import './polyfill';
+import './rxImports';
+
 
 import React from 'react';
 import { render as reactDomRender } from 'react-dom';
@@ -8,6 +10,8 @@ import { render as reactDomRender } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import { createEpicMiddleware } from 'redux-observable';
+import { Observable } from 'rxjs';
 
 
 import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
@@ -37,6 +41,7 @@ export const getLocale = () => window.__LOCALE;
 function run(Component, {
     callback = () => { },
     reducer = s => s,
+    epic = () => Observable.empty(),
     initialState = getInitialState()
 } = {}) {
     const appNode = document.getElementById('app');
@@ -48,6 +53,7 @@ function run(Component, {
         compose(
             applyMiddleware(googleAnalytics),
             applyMiddleware(thunk),
+            applyMiddleware(createEpicMiddleware(epic)),
             window.devToolsExtension ? window.devToolsExtension() : f => f
         )
     )

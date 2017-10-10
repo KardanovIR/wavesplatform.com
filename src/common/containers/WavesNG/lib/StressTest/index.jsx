@@ -44,8 +44,8 @@ const styles = ({ breakpoints }) => ({
 const StressTestSection = ({ classes }) => (
     <Panel>
         <Margin top={2} bottom={4}>
-            {/* <Countdown /> */}
-            <StressTest />
+            {<Countdown />}
+            {/* <StressTest /> */}
         </Margin>
 
         <Divider />
