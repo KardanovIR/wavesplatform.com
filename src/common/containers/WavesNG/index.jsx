@@ -28,6 +28,9 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 
+import WavesNgLogo from '!svg-react-loader!./img/ng-logo.svg';
+
+
 
 
 const PageLayout = ({ classes }) => (
@@ -41,7 +44,8 @@ const PageLayout = ({ classes }) => (
             <Typography type="display3" align="center">
                 <FormattedMessage
                     id="wavesNG.stressTest.title"
-                    defaultMessage="Waves-NG activation stages"
+                    defaultMessage="{logo} Waves-NG activation stages"
+                    values={{ logo: <span className={classes.logo}><WavesNgLogo /></span> }}
                 />
             </Typography>
             <Margin bottom={4} />
