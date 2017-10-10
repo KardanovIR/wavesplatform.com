@@ -29,7 +29,7 @@ const Steps = () => {
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p1.text"
-                                defaultMessage="Anyone will be able to download node version 8.0 with Waves-NG for testnet. We will lease testnet WAVES to anyone who wants to run a testnet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol."
+                                defaultMessage="Anyone will be able to download node version 0.8 with Waves-NG for testnet. We will lease testnet WAVES to anyone who wants to run a testnet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol."
                             />
                         }
                     />
