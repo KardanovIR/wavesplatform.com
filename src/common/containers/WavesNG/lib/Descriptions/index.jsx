@@ -102,8 +102,19 @@ const Descriptions = ({ classes }) => (
                     href="https://github.com/wavesplatform/Waves/wiki/Waves-NG-Protocol"
                 >
                     <FormattedMessage
-                        id="wavesNG.descriptions.2.fullDetails"
+                        id="wavesNG.descriptions.2.buttonFullDetails"
                         defaultMessage="Full Details"
+                    />
+                </Button>
+                <Margin display="inline-block" right={1} />
+                <Button
+                    secondary
+                    target="_blank"
+                    href="http://support.wavesplatform.com/topics/8675-qa-waves-ng/"
+                >
+                    <FormattedMessage
+                        id="wavesNG.descriptions.2.buttonFAQ"
+                        defaultMessage="FAQ"
                     />
                 </Button>
             </AlgorithmDesc>

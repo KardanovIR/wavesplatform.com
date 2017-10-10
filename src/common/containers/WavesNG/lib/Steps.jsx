@@ -3,12 +3,10 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
 
-import Typography from 'src/common/components/Typography';
 import AvatarTitleText from 'src/common/components/AvatarTitleText';
 import IconProduct from 'src/common/components/IconProduct';
 import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
-
 
 
 
