@@ -2,10 +2,12 @@ import React from 'react';
 
 import { FormattedMessage } from 'react-intl';
 
+import url from 'src/common/utils/url';
+
 
 export default [
     {
-        "href": "/",
+        "href": url('home'),
         "page": "home",
         "text": (
             <FormattedMessage
@@ -15,7 +17,7 @@ export default [
         )
     },
     {
-        "href": "/product",
+        "href": url('product'),
         "page": "product",
         "text": (
             <FormattedMessage
@@ -25,7 +27,7 @@ export default [
         )
     },
     {
-        "href": "/developers",
+        "href": url('developers'),
         "page": "developers",
         "text": (
             <FormattedMessage
@@ -35,7 +37,7 @@ export default [
         )
     },
     {
-        "href": "/company",
+        "href": url('company'),
         "page": "company",
         "text": (
             <FormattedMessage
