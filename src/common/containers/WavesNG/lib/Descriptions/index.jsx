@@ -40,7 +40,7 @@ const Descriptions = ({ classes }) => (
                     <Typography type="body2" align="center">
                         <FormattedMessage
                             id="wavesNG.descriptions.text.p1"
-                            defaultMessage="Waves-NG is a next-generation consensus algorithm, based on the Bitcoin-NG proposal made by Cornell Computer Science academics Emil Gün Sirer and Ittay Eyal."
+                            defaultMessage="Waves-NG is a next-generation consensus algorithm, based on the Bitcoin-NG proposal made by Cornell Computer Science academics Emin Gün Sirer and Ittay Eyal."
                         />
                     </Typography>
                     <Typography type="body2" align="center">
