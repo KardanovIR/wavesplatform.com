@@ -15,6 +15,9 @@ import Social from './lib/Social';
 import FooterNav from './lib/FooterNav';
 
 
+import url from 'src/common/utils/url';
+
+
 
 const Footer = ({ classes, links }) => (
     <div className={classes.root}>
@@ -45,7 +48,7 @@ const Footer = ({ classes, links }) => (
                     </Col>
 
                     <Col xs={12} md={1} className={classes.logo}>
-                        <a href="/" className={classes.logoLink}>
+                        <a href={url('home')} className={classes.logoLink}>
                             <Logo full={false} />
                         </a>
                     </Col>
