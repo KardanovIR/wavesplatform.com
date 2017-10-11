@@ -23,9 +23,11 @@ import FontInliner from 'src/server/components/FontInliner';
 
 
 import isProd from 'src/common/utils/isProd';
+import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
 
 
+checkEnvVariable('SERVER_NAME');
 const store = createStore(s => s, {});
 
 
@@ -101,6 +103,7 @@ export const render = function({
                 initialState={ctx.state.initialState}
                 gtmEnabled={isProd()}
                 sentryEnabled={isProd()}
+                serverName={process.env.SERVER_NAME}
             />
         );
 

@@ -17,6 +17,7 @@ const Html = ({
     fonts,
     gtmEnabled,
     sentryEnabled,
+    serverName
 }) => (
     <html lang="en">
         <head>
@@ -49,7 +50,8 @@ const Html = ({
             <script
                 type="text/javascript"
                 dangerouslySetInnerHTML={{ __html: `
-                    window.__INITIAL_STATE = ${JSON.stringify(initialState)}
+                    window.__INITIAL_STATE = ${JSON.stringify(initialState)};
+                    window.__SERVER_NAME = ${JSON.stringify(serverName)};
                 ` }}
             />
 
