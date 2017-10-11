@@ -7,6 +7,7 @@ import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 
 // import Image from '!svg-react-loader!./img/image.svg';
+import url from 'src/common/utils/url';
 
 
 
@@ -46,7 +47,7 @@ const IndexMainScreen = ({
                 (
                     <Button
                         onClick={onGetWavesClick}
-                        href="/get-waves"
+                        href={url('get-waves')}
                         withLoader
                         secondary
                         key="main_cta_button2"

@@ -14,7 +14,7 @@
     "server": "nodemon config/server.js",
     "build:fe": "webpack --config ./config/webpack.front.config.js",
     "build:fe-prod": "webpack --config ./config/webpack.front.prod.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/babel-node --presets env,stage-0"
   },
   "author": "Dmitry Shuranov <dvshur@gmail.com>",
   "license": "ISC",
@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.5.1",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
@@ -75,6 +76,7 @@
     "react-intl-translations-manager": "^5.0.0",
     "svg-react-loader": "^0.4.4",
     "svg-url-loader": "^1.1.1",
+    "tape": "^4.8.0",
     "url-loader": "^0.5.7",
     "webpack": "^3.4.1"
   }

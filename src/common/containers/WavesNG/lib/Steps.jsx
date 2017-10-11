@@ -83,44 +83,13 @@ const Steps = () => {
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p4.text"
-                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 90% of miners have approved the feature after 10,000 blocks or roughly 1 week (3,000 blocks on TestNet), it is automatically activated after a further 1,000 blocks."
+                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 90% of miners have approved the feature after 10,000 blocks or roughly 1 week (3,000 blocks on TestNet), it is automatically activated after a further 10,000 blocks."
                             />
                         }
                     />
                     <Margin bottom={MARGIN_BOTTOM} />
                 </Col>
             </Row>
-
-
-            {/* <Typography type="display1">
-                <FormattedMessage
-                    id="wavesNG.preview.activation.title"
-                    defaultMessage="4. Activation"
-                />
-            </Typography>
-
-            <Margin bottom={2} />
-
-            <Row>
-                <Col xs={12} sm={6}>
-                    <Typography>
-                        <FormattedMessage
-                            id="wavesNG.preview.activation.p1"
-                            defaultMessage="The Waves Activation Protocol is designed to ensure that activation of features requiring a hardfork occurs smoothly. Once a new version is released and nodes are updated, miners will begin to set new feature approval flags in their blocks."
-                        />
-                    </Typography>
-                    <Margin bottom={MARGIN_BOTTOM} />
-                </Col>
-                <Col xs={12} sm={6}>
-                    <Typography>
-                        <FormattedMessage
-                            id="wavesNG.preview.activation.p2"
-                            defaultMessage="When 10,000 blocks or roughly 1 week pass (3,000 blocks on TestNet), the protocol checks how many blocks contain the flag. If 90% of miners have approved the feature, it is automatically activated after a further 1,000 blocks."
-                        />
-                    </Typography>
-                    <Margin bottom={MARGIN_BOTTOM} />
-                </Col>
-            </Row> */}
         </div>
 
     )

@@ -12,6 +12,7 @@ import Error404 from './get/Error404';
 import Developers from 'src/common/containers/Developers';
 import Company from 'src/common/containers/Company';
 import GetWaves from 'src/common/containers/GetWaves';
+import WavesNG from 'src/common/containers/WavesNG';
 
 
 // nested routers

@@ -9,6 +9,11 @@ import DesktopNav from './lib/desktop';
 import Logo from 'src/common/components/Logo';
 
 
+import url from 'src/common/utils/url';
+
+
+
+
 const Nav = ({
     classes,
     links,
@@ -16,7 +21,7 @@ const Nav = ({
 }) => (
     <nav className={classes.wrapper}>
         <div className={classes.logo}>
-            <a href="/" className={classes.logo}>
+            <a href={url('home')} className={classes.logo}>
                 <span className={classes.mobileOnly}>
                     <Logo desktop={false} />
                 </span>
