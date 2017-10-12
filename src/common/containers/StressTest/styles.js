@@ -20,21 +20,21 @@ export default ({ spacing, palette, transitions }) => ({
         transformOrigin: 'top left',
         transition: transitions.create('transform')
     },
-    confirmed: {
-        composes: '$bar'
-    },
     unconfirmed: {
         composes: '$bar'
     },
-    confirmedInner: {
-        composes: '$inner',
-        background: '#64ca57',
-        // transform: ({ utx, confirmed }) => `scaleX(${confirmed / (utx + confirmed)})`
-        transform: ({ utx, confirmed }) => `scaleX(${utx / (confirmed + confirmed || 100)})`
+    confirmed: {
+        composes: '$bar'
     },
     unconfirmedInner: {
         composes: '$inner',
         background: palette.orange[300],
-        transform: ({ utx, confirmed }) => `scaleX(${utx / (utx + confirmed || 100)})`
-    }
+        transform: ({ unconfirmed, total }) => `scaleX(${  unconfirmed / (total || 10)  })`
+    },
+    confirmedInner: {
+        composes: '$inner',
+        background: '#64ca57',
+        transform: ({ confirmed, total }) => `scaleX(${  confirmed / (total || 10)  })`
+        // transform: ({ unconfirmed, confirmed }) => `scaleX(${confirmed / ((utx + confirmed) || 100)})`
+    },
 })
