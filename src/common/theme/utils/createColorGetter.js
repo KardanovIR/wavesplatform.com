@@ -11,6 +11,6 @@ export default palette => color => {
     if (~color.indexOf('[')) {
         const arr = color.split('[');
         arr[1] = arr[1].substring(0,3);
-        path(arr, palette);
+        return path(arr, palette);
     }
 }

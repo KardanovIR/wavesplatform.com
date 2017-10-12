@@ -48,7 +48,7 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case START: {
             return {
-                ...state,
+                ...initialState,
                 startTimestamp: Date.now(),
                 status: 'loading'
             }

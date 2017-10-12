@@ -1,10 +1,7 @@
-import io from 'socket.io-client';
-
 import { combineEpics } from 'redux-observable';
-
 import { Observable } from 'rxjs';
-
 import { prop } from 'ramda';
+
 
 import {
     updateUnconfirmedTxs,
@@ -21,31 +18,22 @@ import {
 
 
 
+import initSocket, {
+    forwardToSocket,
+    receiveFromSocket
+} from './lib/socket'
+
+
+
 const ERROR_TIMEOUT = 10000;
 const TIMER_UPDATE_INTERVAL = 100;
-const SOCKET_PATH = 'localhost:3002';
 
 
-
-
-
-
-// repeating socket actions transfer
-const forwardToSocket = socket => (reduxType, socketAction) => action$ =>
-    action$
-        .ofType(reduxType)
-        .forEach(({ payload }) => socket.emit(socketAction, payload));
-
-const receiveFromSocket = socket => socketEvent =>
-    Observable.create(observer => {
-        socket.on(socketEvent, data => observer.next(data));
-        return { dispose: socket.close };
-    });
 
 
 // init socket and combine epics
-export default (...args) => {
-    const socket = io(SOCKET_PATH);
+export default (action$, store, ...args) => {
+    const socket = initSocket(() => store.dispatch(error()));
     const forward = forwardToSocket(socket);
 
 
@@ -73,7 +61,6 @@ export default (...args) => {
             .map(updateConfirmedTxs);
 
 
-
     const utxUpdate = () =>
         receiveFromSocket(socket)('utxUpdate')
             .map(prop('trx'))
@@ -91,7 +78,6 @@ export default (...args) => {
 
 
 
-
     return combineEpics(
         balanceUpdate,
         finishTest,
@@ -99,5 +85,5 @@ export default (...args) => {
         timer,
         errorTimeout,
         forward(START, 'startTest')
-    )(...args);
+    )(action$, store, ...args);
 };

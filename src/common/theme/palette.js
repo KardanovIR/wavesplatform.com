@@ -68,9 +68,10 @@ const palette = {
     gray,
     grayBlue,
     orange,
-    getColor: createColorGetter(palette),
     opaque: hexToRgba
 }
+palette.getColor = createColorGetter(palette);
+
 
 export { palette }
 export default palette
