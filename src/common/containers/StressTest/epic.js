@@ -33,7 +33,7 @@ const TIMER_UPDATE_INTERVAL = 100;
 
 // init socket and combine epics
 export default (action$, store, ...args) => {
-    const socket = initSocket(() => store.dispatch(error()));
+    const socket = initSocket(() => store.dispatch(error('fatal')));
     const forward = forwardToSocket(socket);
 
 

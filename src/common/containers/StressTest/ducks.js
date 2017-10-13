@@ -17,7 +17,7 @@ export const UPDATE_TIME = "UpdateTime";
 export const start = () => ({ type: START });
 export const finish = () => ({ type: FINISH });
 export const updateTime = () => ({ type: UPDATE_TIME });
-export const error = () => ({ type: ERROR });
+export const error = severity => ({ type: ERROR, payload: severity });
 
 
 export const updateConfirmedTxs = newValue => ({
@@ -35,10 +35,11 @@ export const updateUnconfirmedTxs = newValue => ({
 const initialState = {
     startTime: null,
     totalTime: 0,
-    status: "idle", // idle | testing | finished | ?
+    status: "idle", // idle | loading | testing | finished | error | error_fatal
     total: 0,
     unconfirmed: 0,
-    confirmed: 0
+    confirmed: 0,
+    speed: 0
 }
 
 
@@ -63,7 +64,7 @@ export default (state = initialState, action) => {
         case ERROR: {
             return {
                 ...state,
-                status: 'error'
+                status: action.payload === 'fatal' ? 'error_fatal' : 'error'
             }
         }
         case UPDATE_CONFIRMED_TXS: {

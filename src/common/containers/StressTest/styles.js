@@ -40,7 +40,9 @@ export default ({ spacing, palette, transitions }) => ({
         background: '#64ca57',
         transform: ({ confirmed, total }) =>
             `scaleX(${confirmed / (total || 10)})`,
-        // transform: ({ unconfirmed, confirmed }) => `scaleX(${confirmed / ((utx + confirmed) || 100)})`
+    },
+    statusMessage: {
+        marginTop: spacing.unit
     },
     legendWrapper: {
         margin: [10, 0],

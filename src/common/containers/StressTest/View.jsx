@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 import Button from 'src/common/components/Button';
 import Divider from 'src/common/components/Divider';
@@ -8,6 +8,7 @@ import Article from 'src/common/components/Article';
 import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
 import Spinner from 'src/common/components/Spinner';
+import Margin from 'src/common/components/Margin';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -16,7 +17,20 @@ import getMinutesSeconds from './lib/getMinutesSeconds';
 
 const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
     const { minutes, seconds } = getMinutesSeconds(totalTime);
-    return (
+    return status === 'error_fatal' ? (
+        <Row centered>
+            <Col xs={12} md={6} lg={4}>
+                <Typography type="quote" align="center">
+                    <FormattedMessage
+                        id="wavesNG.stressTest.test.errorFatal"
+                        // defaultMessage="Sorry, it seems your device is unable to connect to our testing server. Please check your network connection and try again."
+                        defaultMessage="Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later."
+                    />
+                </Typography>
+                <Margin bottom={3} />
+            </Col>
+        </Row>
+    ) : (
         <Row>
             <Col xs={12} md={4}>
                 <Article
@@ -33,46 +47,64 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                         />
                     }
                 />
+                <Margin bottom={4} />
             </Col>
 
             <Col xs={12} md={4} className={classes.centerWrapper}>
                 <div className={classes.statusReport}>
-                    {status === 'error' && <span>Сорян, дерьмо случается</span>}
-
-                    {status !== 'error' && (
-                        <div>
-                            <div className={classes.barWrapper}>
-                                <div className={classes.unconfirmed}>
-                                    {status === 'loading' && (
-                                        <Spinner
-                                            type="points"
-                                            color="orange[300]"
-                                            size={12}
-                                            style={{ marginTop: 6 }}
-                                        />
-                                    )}
-                                    <div className={classes.unconfirmedInner} />
-                                </div>
-                            </div>
-                            <div className={classes.barWrapper}>
-                                <div className={classes.confirmed}>
-                                    <div className={classes.confirmedInner} />
-                                </div>
-                            </div>
-                        </div>
+                    {status === 'error' && (
+                        <Typography type="quote">
+                            <FormattedMessage
+                                id="wavesNG.stressTest.test.error"
+                                defaultMessage="Чувак, ты молодец, но UtxPool полный — другие пользователи активно тестят. Попробуй позже. "
+                            />
+                        </Typography>
                     )}
+
+                    {status !== 'error' &&
+                        status !== 'error_fatal' && (
+                            <div>
+                                <div className={classes.barWrapper}>
+                                    <div className={classes.unconfirmed}>
+                                        {status === 'loading' && (
+                                            <Spinner
+                                                type="points"
+                                                color="orange[300]"
+                                                size={12}
+                                                style={{ marginTop: 6 }}
+                                            />
+                                        )}
+                                        <div
+                                            className={classes.unconfirmedInner}
+                                        />
+                                    </div>
+                                </div>
+                                <div className={classes.barWrapper}>
+                                    <div className={classes.confirmed}>
+                                        <div
+                                            className={classes.confirmedInner}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                 </div>
+
+                <Margin bottom={1} />
 
                 {status === 'idle' && (
                     <Button
                         className={classes.buttonWidth}
                         onClick={onTestStart}
                     >
-                        Run test
+                        <FormattedMessage
+                            id="wavesNG.stressTest.test.run"
+                            defaultMessage="Run test"
+                        />
                     </Button>
                 )}
                 {status === 'loading' && (
-                    <Typography type="body">
+                    <Typography type="quote" className={classes.statusMessage}>
                         <FormattedMessage
                             id="wavesNG.stressTest.test.status.loading"
                             defaultMessage="Initiating test..."
@@ -80,7 +112,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                     </Typography>
                 )}
                 {status === 'testing' && (
-                    <Typography type="body">
+                    <Typography type="quote" className={classes.statusMessage}>
                         <FormattedMessage
                             id="wavesNG.stressTest.test.status.testing"
                             defaultMessage="Running test..."
@@ -93,9 +125,14 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                         className={classes.buttonWidth}
                         onClick={onTestStart}
                     >
-                        Run again
+                        <FormattedMessage
+                            id="wavesNG.stressTest.test.runAgain"
+                            defaultMessage="Run again"
+                        />
                     </Button>
                 )}
+
+                <Margin bottom={4} />
             </Col>
 
             <Col xs={12} md={4}>
@@ -122,7 +159,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.totalTime"
-                                defaultMessage="Total time:"
+                                defaultMessage="Total time"
                             />
                         </Typography>
                         <Typography type="numeral" tagName="div">
@@ -139,23 +176,25 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.speed"
-                                defaultMessage="Speed:"
+                                defaultMessage="Speed, trx/sec"
                             />
                         </Typography>
                         <Typography type="numeral" tagName="div">
-                            {status === 'testing' || status === 'finished' ? (
-                                <span>
-                                    {speed}
-                                </span>
+                            {status === 'finished' ? (
+                                <FormattedNumber
+                                    value={speed}
+                                    maximumFractionDigits={1}
+                                />
                             ) : (
                                 <span>--</span>
                             )}
-                            /sec
                         </Typography>
                     </Col>
                 </Row>
+
+                <Margin bottom={4} />
             </Col>
         </Row>
-    );
+    )
 };
 export default injectSheet(styles)(StressTest);
