@@ -13,10 +13,11 @@ import Margin from 'src/common/components/Margin';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-import getMinutesSeconds from './lib/getMinutesSeconds';
+import getTotalTime from './lib/getTotalTime';
 
 const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
-    const { minutes, seconds } = getMinutesSeconds(totalTime);
+    const { minutes, seconds } = getTotalTime(totalTime);
+    console.log(seconds);
     return status === 'error_fatal' ? (
         <Row centered>
             <Col xs={12} md={6} lg={4}>
@@ -165,7 +166,16 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                         <Typography type="numeral" tagName="div">
                             {status === 'testing' || status === 'finished' ? (
                                 <span>
-                                    {minutes}:{seconds}
+                                    <FormattedNumber
+                                        value={minutes}
+                                        minimumIntegerDigits={2}
+                                    />
+                                    :
+                                    <FormattedNumber
+                                        value={seconds}
+                                        minimumIntegerDigits={2}
+                                        maximumFractionDigits={2}
+                                    />
                                 </span>
                             ) : (
                                 <span>--:--</span>
@@ -184,6 +194,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                                 <FormattedNumber
                                     value={speed}
                                     maximumFractionDigits={1}
+                                    minimumFractionDigits={1}
                                 />
                             ) : (
                                 <span>--</span>
@@ -195,6 +206,6 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                 <Margin bottom={4} />
             </Col>
         </Row>
-    )
+    );
 };
 export default injectSheet(styles)(StressTest);

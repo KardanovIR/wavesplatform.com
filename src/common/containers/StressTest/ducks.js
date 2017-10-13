@@ -50,13 +50,13 @@ export default (state = initialState, action) => {
         case START: {
             return {
                 ...initialState,
-                startTimestamp: Date.now(),
                 status: 'loading'
             }
         }
         case UPDATE_UNCONFIRMED_TXS: {
             return {
                 ...state,
+                startTimestamp: Date.now(),
                 total: action.payload,
                 status: 'testing'
             }
@@ -71,8 +71,7 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 confirmed: action.payload,
-                unconfirmed: state.total - action.payload,
-                status: state.total === action.payload ? 'finished' : 'tesing'
+                unconfirmed: state.total - action.payload
             }
         }
         case UPDATE_TIME: {
@@ -82,10 +81,12 @@ export default (state = initialState, action) => {
             }
         }
         case FINISH: {
+            const totalTime = Date.now() - state.startTimestamp;
             return {
                 ...state,
-                speed: state.total * 1000 / (Date.now() - state.startTimestamp),
-                staus: 'finished'
+                totalTime,
+                speed: state.total * 1000 / (totalTime),
+                status: 'finished'
             }
         }
         default: {

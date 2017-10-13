@@ -25,7 +25,7 @@ import initSocket, {
 
 
 
-const ERROR_TIMEOUT = 10000;
+const ERROR_TIMEOUT = 15000;
 const TIMER_UPDATE_INTERVAL = 100;
 
 
@@ -40,8 +40,10 @@ export default (action$, store, ...args) => {
     const timer = action$ =>
         action$
             .ofType(UPDATE_UNCONFIRMED_TXS)
-            .flatMap(() => Observable.interval(TIMER_UPDATE_INTERVAL))
-            .takeUntil(action$.ofType(FINISH))
+            .flatMap(
+                () => Observable.interval(TIMER_UPDATE_INTERVAL)
+                    .takeUntil(action$.ofType(FINISH))
+            )
             .takeUntil(action$.ofType(ERROR))
             .map(updateTime);
 
