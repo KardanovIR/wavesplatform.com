@@ -30,7 +30,7 @@
 		"location": "Moscow",
 		"blocks": [
 			{
-				"title": "Duties:",
+				"title": "Responsibilities:",
 				"elements": [
 					"Consult with our partners and third-party developers, contribute to the development of applications, and work with API",
 					"Develop client libraries for our API and examples of their use and useful services",
@@ -53,7 +53,7 @@
 		"location": "Moscow",
 		"blocks": [
 			{
-				"title": "Duties:",
+				"title": "Responsibilities:",
 				"elements": [
 					"Analysis of new functionalities, test of design",
 					"Hand testing of client and server applications",
@@ -77,7 +77,7 @@
 		"location": "Moscow",
 		"blocks": [
 			{
-				"title": "Duties:",
+				"title": "Responsibilities:",
 				"elements": [
 					"Constant monitoring and analysis of the market and trends",
 					"Monitoring of information space",
@@ -92,6 +92,188 @@
 					"First-hand experience working in cryptocurrency markets",
 					"First-hand experience investing in projects having an ICO",
 					"The ability to analyze large amounts of information, draw conclusions, and offer solutions"
+				]
+			}
+		]
+	},
+	{
+		"title": "Android Developer",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Responsibilities:",
+				"elements": [
+					"Breaking down tasks",
+					"Project scope planning",
+					"Interacting with analysts, designers, programmers, and testers",
+					"Writing quality code"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"Experience developing on Android (2+ years, API level 15+)",
+					"Deep understanding of Java (3+ years)",
+					"Knowledge of the development specifics of Android (version 4 and higher)",
+					"Knowledge and understanding of Android MVP, OOP, and design patterns",
+					"Ability to create interfaces and interface animations",
+					"Protocol and format knowledge of HTTP, HTTPS, JSON, REST",
+					"Experience working with push notifications",
+					"Experience working with Git",
+					"Ability to understand others’ code"
+				]
+			},
+			{
+				"title": "Preferred:",
+				"elements": [
+					"Knowledge of Android Studio and Gradle",
+					"Experience working with NoSQL databases (Realm)",
+					"Experience with non-mobile programming",
+					"Projects already on Google Play"
+				]
+			}
+		]
+	},
+	{
+		"title": "iOS developer",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Responsibilities:",
+				"elements": [
+					"Developing and supporting iOS apps and participating in the company’s projects",
+					"Designing new versions of apps and ensuring that external devices, smartphones, third-party apps, and web services synchronize harmoniously with them",
+					"Working on the system core, interacting with portable devices (Bluetooth LE)",
+					"Forming the functional and technical requirements of apps",
+					"Analyzing and searching for new solutions in order to optimize the app’s consumption of mobile devices’ resources",
+					"Developing project documentation (Wiki)"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"4+ years experience working with iOS 9, 10, 11 (completed projects on the App Store with over 100,000 users)",
+					"Experience working on a team (GIT/ SVN + Redmine / Jira)",
+					"Strong knowledge of development technologies (Objective C, XCode, iOS SDK, Cocoa Touch)",
+					"Experience working with databases (SQLite)",
+					"Understanding of the principles of OOP, MVC; knowledge of design patterns and the principles of client-server apps (REST, caching, query queues)",
+					"Experience working with JSON, UIKit, Core Graphis, Core Data, Auto Layout, Quartz Core (layers), Core Animation, GCD (blocks and lines), NSOperation, NSURLSession, AFNetworking, MagicalRecord, RestKit"
+				]
+			},
+			{
+				"title": "Preferred::",
+				"elements": [
+					"Experience working with multithreading",
+					"Knowledge of English for technical documentation",
+					"Experience working with Crashlytics, Reactive Cocoa, push notifications",
+					"Experience developing on other platforms (web, desktop)",
+					"Experience localizing iOS apps",
+					"Experience working with Bluetooth / BLE",
+					"Experience writing unit tests"
+				]
+			}
+		]
+	},
+	{
+		"title": "Blockchain Evangelist",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Responsibilities:",
+				"elements": [
+					"Participating in making presentations, reports, holding negotiations, consulting clients and partners",
+					"Promoting the Waves Platform ideology and brand",
+					"Closing deals with independent clients",
+					"Planning your responsibilities and work schedule",
+					"Accounting for and analyzing your own work"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"More than 3 years’ work experience with similar tasks",
+					"A good tech background, experience working with tech projects (in the fields of fintech and blockchain)",
+					"Fluent English",
+					"Perfect Russian, experience with public speaking at large events; good communication skills",
+					"Experience organizing events and meetups from scratch",
+					"Experience holding negotiations",
+					"Regular business trips"
+				]
+			},
+			{
+				"title": "Preferred:",
+				"elements": [
+					"High mobility and self-organization",
+					"Real cases of attracting partners and clients",
+					"Ability to find the right people and a common language with them",
+					"Ability to think outside the box",
+					"Ability to persuade others"
+				]
+			}
+		]
+	},
+	{
+		"title": "UX/UI designer",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Responsibilities:",
+				"elements": [
+					"Closely collaborate with colleagues across the product team to design and deliver industry-leading digital experiences across a wide range of platforms; including mobile, desktop, web, and others as projects require",
+					"Clearly articulate your design and bring it to life for the developers via user journeys, user flows, wireframes, mock-ups, prototypes, presentations and comprehensively-annotated design specifications",
+					"Effectively balance complex project plans with multiple work streams and dependencies as well as user experience quality and implementation challenges/considerations",
+					"Incorporate UX research tools, data, personas, competitive analysis and metrics to help shape user experiences",
+					"Revise and iterate designs and documentation based on continued user testing and feedback",
+					"Contribute to testing criteria for usability studies, A/B & MV Testing of products and platforms as part of the design process",
+					"Guide, maintain and communicate UX/UI consistency of experience across all platforms",
+					"Spur new ideas in the development team through expert-level knowledge of competitive and complimentary mobile and multi-platform products"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"Strong working knowledge of relevant design software, in particular Sketch",
+					"Experience designing applications over a wide range of screen sizes",
+					"A strong knowledge of modern design standards and conventions. Up to date with latest design trends",
+					"An in-depth understanding of user experience and user-centered design principles",
+					"Understanding of user psychology, and intuition for how users interact with interactive systems",
+					"A strong aesthetic instinct, with honed visual design skills",
+					"Ability to effectively communicate design concepts and development, both internally and to clients",
+					"An understanding of how to effectively work with a development team, including provision of design assets for implementation",
+					"Highly motivated and self-disciplined, with the ability to work both independently as well as part of a team",
+					"Strong problem solving skills",
+					"Excellent oral and written communication skills"
+				]
+			}
+		]
+	},
+	{
+		"title": "Head of SMM",
+		"location": "Moscow",
+		"blocks": [
+			{
+				"title": "Responsibilities:",
+				"elements": [
+					"Vividly and appealingly talk about our projects online with videos, graphics, texts, interviews, and other creative methods",
+					"Find fascinating ideas for their realization",
+					"Create and supervise content plans and promotional strategies",
+					"Run the main social media pages (Facebook, VK, Instagram, Reddit, Twitter, Telegram, etc)",
+					"Collaborate with industry friendly networks and SMM channels",
+					"Find content, write posts and blogs",
+					"Develop and organize competitions and events",
+					"Assign work and supervise the process of the copywriters, designers, etc",
+					"Work with bloggers",
+					"Create and carry out budget, and maintain records"
+				]
+			},
+			{
+				"title": "Requirements:",
+				"elements": [
+					"Minimum 3 years work as an SMM manager",
+					"Upper Intermediate level spoken and written English",
+					"Vast experience creating exciting original content",
+					"Experience assigning, delegating, and supervising work",
+					"Strong writing skills (preferred)"
 				]
 			}
 		]
