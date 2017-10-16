@@ -17,7 +17,6 @@ import getTotalTime from './lib/getTotalTime';
 
 const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
     const { minutes, seconds } = getTotalTime(totalTime);
-    console.log(seconds);
     return status === 'error_fatal' ? (
         <Row centered>
             <Col xs={12} md={6} lg={4}>
@@ -82,6 +81,13 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                                 </div>
                                 <div className={classes.barWrapper}>
                                     <div className={classes.confirmed}>
+                                        {status === 'testing' && (
+                                            <Spinner
+                                                type="points"
+                                                size={12}
+                                                style={{ marginTop: 6, color: '#64ca57' }}
+                                            />
+                                        )}
                                         <div
                                             className={classes.confirmedInner}
                                         />

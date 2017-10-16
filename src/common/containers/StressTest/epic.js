@@ -25,7 +25,7 @@ import initSocket, {
 
 
 
-const ERROR_TIMEOUT = 15000;
+const ERROR_TIMEOUT = 20000;
 const TIMER_UPDATE_INTERVAL = 100;
 
 
@@ -52,7 +52,7 @@ export default (action$, store, ...args) => {
         action$
             .ofType(UPDATE_CONFIRMED_TXS)
             .takeUntil(action$.ofType(ERROR))
-            .filter(action => action.payload === getState().stressTest.total)
+            .filter(action => action.payload == getState().stressTest.total) // == on purpose, str/int comparison
             .map(finish);
 
 

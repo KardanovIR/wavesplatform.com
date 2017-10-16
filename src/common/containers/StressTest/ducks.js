@@ -58,6 +58,7 @@ export default (state = initialState, action) => {
                 ...state,
                 startTimestamp: Date.now(),
                 total: action.payload,
+                unconfirmed: action.payload,
                 status: 'testing'
             }
         }
