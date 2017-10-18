@@ -13,11 +13,7 @@ export default theme => ({
         width: prop('size'),
         height: prop('size'),
 
-        color: ({ color }) => {
-            const clr = theme.palette.getColor(color);
-            console.log(clr);
-            return clr;
-        },
+        color: ({ color }) => theme.palette.getColor(color),
 
         margin: 'auto',
         position: 'relative',
