@@ -71,7 +71,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                                                 type="points"
                                                 color="orange[300]"
                                                 size={12}
-                                                style={{ marginTop: 6 }}
+                                                className={classes.loader}
                                             />
                                         )}
                                         <div
@@ -84,8 +84,9 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                                         {status === 'testing' && (
                                             <Spinner
                                                 type="points"
+                                                style={{ color: '#64ca57' }}
                                                 size={12}
-                                                style={{ marginTop: 6, color: '#64ca57' }}
+                                                className={classes.loader}
                                             />
                                         )}
                                         <div

@@ -16,6 +16,7 @@ export default ({ spacing, palette, transitions }) => ({
         display: 'inline-block',
         height: spacing.unit * 6,
         border: `1px dashed ${palette.gray[400]}`,
+        position: 'relative',
     },
     inner: {
         height: '100%',
@@ -40,6 +41,12 @@ export default ({ spacing, palette, transitions }) => ({
         background: '#64ca57',
         transform: ({ confirmed, total }) =>
             `scaleX(${confirmed / (total || 10)})`,
+    },
+    loader: {
+        position: 'absolute',
+        top: 6,
+        left: '50%',
+        transform: 'translateX(-50%)'
     },
     statusMessage: {
         marginTop: spacing.unit
