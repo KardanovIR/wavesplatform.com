@@ -51,7 +51,7 @@ const StressTestSection = ({ classes }) => (
                         <Typography type="body2" tagName="div" align="center" className={classes.title}>
                             <FormattedMessage
                                 id="wavesNG.stressTest.anounce"
-                                defaultMessage="Charts below show current DevNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
+                                defaultMessage="Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
                             />
                         </Typography>
                         {/* <StressTest /> */}
