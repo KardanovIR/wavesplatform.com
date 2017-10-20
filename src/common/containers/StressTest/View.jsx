@@ -163,7 +163,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                 <Divider className={classes.legendWrapper} />
 
                 <Row>
-                    <Col xs={6}>
+                    <Col xs={12}>
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.totalTime"
@@ -189,7 +189,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                             )}
                         </Typography>
                     </Col>
-                    <Col xs={6}>
+                    {/* <Col xs={6}>
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.speed"
@@ -207,7 +207,7 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
                                 <span>--</span>
                             )}
                         </Typography>
-                    </Col>
+                    </Col> */}
                 </Row>
 
                 <Margin bottom={4} />
