@@ -23,8 +23,8 @@ const styles = ({ breakpoints, palette }) => ({
         color: palette.gray[400]
     },
     chartWrapper: {
-        opacity: 0.5,
-        pointerEvents: 'none',
+        // opacity: 0.5,
+        // pointerEvents: 'none',
         height: 150,
     },
     [breakpoints.up('md')]: {
