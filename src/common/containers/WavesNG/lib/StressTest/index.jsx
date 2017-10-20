@@ -85,7 +85,7 @@ const StressTestSection = ({ classes, active }) => (
                 </Col>
                 <Col xs={12} sm={7} lg={8}>
                     <div className={classes.chartWrapper}>
-                        <iframe src="https://grafana.wavesnodes.com/dashboard-solo/db/stress-test?orgId=2&from=now-5m&to=now&refresh=1s&panelId=4&theme=light" width="100%" height="100%" frameBorder="0" />
+                        <iframe src="https://grafana.wavesnodes.com/dashboard-solo/db/stress-test?orgId=2&from=now-10m&to=now&refresh=1s&panelId=4&theme=light" width="100%" height="100%" frameBorder="0" />
                     </div>
 
                 </Col>
@@ -113,7 +113,7 @@ const StressTestSection = ({ classes, active }) => (
                 </Col>
                 <Col xs={12} sm={7} lg={8}>
                     <div className={classes.chartWrapper}>
-                        <iframe src="https://grafana.wavesnodes.com/dashboard-solo/db/stress-test?orgId=2&from=now-5m&to=now&refresh=1s&theme=light&panelId=3" width="100%" height="100%" frameBorder="0" />
+                        <iframe src="https://grafana.wavesnodes.com/dashboard-solo/db/stress-test?orgId=2&from=now-10m&to=now&refresh=1s&theme=light&panelId=3" width="100%" height="100%" frameBorder="0" />
                     </div>
                 </Col>
             </Row>
