@@ -37,7 +37,6 @@ export default theme => ({
         // color: theme.palette.gray[900],
         display: 'block',
         padding: theme.spacing.getSpacing(1, 5),
-        marginRight: theme.spacing.unit*3,
         '&:active': {
             backgroundColor: theme.palette.grayBlue[300]
         }
