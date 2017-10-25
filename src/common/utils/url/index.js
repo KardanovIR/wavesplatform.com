@@ -47,6 +47,12 @@ const URL = {
         subdomain: 'waves-ng',
         pathname: '/'
     },
+    'mining': {
+        pathname: '/mining'
+    },
+    'leasing': {
+        pathname: '/leasing'
+    },
     'files.terms_conditions': {
         pathname: '/files/docs/Waves_terms_and_conditions.pdf'
     }
@@ -88,6 +94,10 @@ const createGetUrl = urls => {
     const defaults = {
         protocol: 'https',
         domain: getServerName()
+    }
+
+    if (process.env.NODE_ENV === "development") {
+        defaults.protocol = 'http';
     }
 
     return compose(

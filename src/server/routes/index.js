@@ -12,7 +12,7 @@ import Error404 from './get/Error404';
 import Developers from 'src/common/containers/Developers';
 import Company from 'src/common/containers/Company';
 import GetWaves from 'src/common/containers/GetWaves';
-import WavesNG from 'src/common/containers/WavesNG';
+import Mining from 'src/common/containers/Mining';
 
 
 // nested routers
@@ -28,6 +28,7 @@ router
     .get('/product', product)
     .get('/developers', render({ script: 'developers', component: Developers, description: 'Build applications on the blockchain' }))
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
+    .get('/mining', render({ script: 'mining', component: Mining, description: 'Support the Waves Network' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
     .use('/api', api.routes())
     .use('/subdomains', subdomains.routes())
