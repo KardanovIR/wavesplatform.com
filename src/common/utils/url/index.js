@@ -46,6 +46,9 @@ const URL = {
     'waves-ng': {
         subdomain: 'waves-ng',
         pathname: '/'
+    },
+    'files.terms_conditions': {
+        pathname: '/files/docs/Waves_terms_and_conditions.pdf'
     }
 }
 

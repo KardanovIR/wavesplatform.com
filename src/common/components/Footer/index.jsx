@@ -6,23 +6,28 @@ import cn from 'classnames';
 
 import Logo from 'src/common/components/Logo';
 
-
 import { Row, Col } from 'src/common/components/Grid';
 import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
+import Link from 'src/common/components/Link';
 
 import Social from './lib/Social';
 import FooterNav from './lib/FooterNav';
 
-
 import url from 'src/common/utils/url';
-
-
 
 const Footer = ({ classes, links }) => (
     <div className={classes.root}>
-        <Background className={cn(classes.background, classes.bgSkewed)} skewed wrapperClassName={classes.backgroundWrapper} />
-        <Background className={cn(classes.background2, classes.bgSkewed)} skewed wrapperClassName={classes.backgroundWrapper} />
+        <Background
+            className={cn(classes.background, classes.bgSkewed)}
+            skewed
+            wrapperClassName={classes.backgroundWrapper}
+        />
+        <Background
+            className={cn(classes.background2, classes.bgSkewed)}
+            skewed
+            wrapperClassName={classes.backgroundWrapper}
+        />
         <Background className={classes.background} skewed={false}>
             <footer className={classes.footer}>
                 <Row className={classes.row}>
@@ -36,13 +41,18 @@ const Footer = ({ classes, links }) => (
                     </Col>
 
                     <Col xs={12} md={6} className={classes.language}>
-                        {/* <Typography type="body" className={classes.textGray}>
-                            English
-                        </Typography> */}
+                        <Typography type="body" className={classes.textGray}>
+                            <Link href={url('files.terms_conditions')} className={classes.link}>
+                                Terms and conditions
+                            </Link>
+                        </Typography>
                     </Col>
 
                     <Col xs={12} md={6} className={classes.copyright}>
-                        <Typography className={classes.textDarkGray} type="body">
+                        <Typography
+                            className={classes.textDarkGray}
+                            type="body"
+                        >
                             © Waves Platform
                         </Typography>
                     </Col>
@@ -56,7 +66,6 @@ const Footer = ({ classes, links }) => (
             </footer>
         </Background>
     </div>
-)
-
+);
 
 export default injectSheet(styles)(Footer);
