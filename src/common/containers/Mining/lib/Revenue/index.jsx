@@ -7,9 +7,12 @@ import AvatarTitle from 'src/common/components/AvatarTitle';
 import IconProduct from 'src/common/components/IconProduct';
 import Typography from 'src/common/components/Typography';
 import IconButton from 'src/common/components/Button/Icon';
+import ButtonGroup from 'src/common/components/ButtonGroup/view';
 import { Row, Col } from 'src/common/components/Grid';
 
 import { FormattedMessage } from 'react-intl';
+
+import timeOptions from './lib/timeOptions';
 
 // import url from 'src/common/utils/url';
 
@@ -95,7 +98,7 @@ const StartMining = () => (
 
         <Row>
             <Col xs={12} md={9}>
-                Калькулятор
+                <ButtonGroup options={timeOptions} value="1y" onChange={v => console.log(v)} />
             </Col>
 
             <Col xs={12} md={3}>
