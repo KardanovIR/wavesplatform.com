@@ -10,18 +10,18 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const WavesNodes = ({ classes }) => (
+const WavesNodesMap = ({ classes }) => (
     <div>
         <SectionTitleText
             title={
                 <FormattedMessage
-                    id="mining.wavesNodes.title"
+                    id="mining.wavesNodesMap.title"
                     defaultMessage="Waves nodes"
                 />
             }
             text={
                 <FormattedMessage
-                    id="mining.wavesNodes.text"
+                    id="mining.wavesNodesMap.text"
                     defaultMessage="Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!"
                 />
             }
@@ -35,7 +35,7 @@ const WavesNodes = ({ classes }) => (
                 </Typography>
                 <Typography type="body" tagName="span">
                     <FormattedMessage
-                        id="mining.wavesNodes.nodes"
+                        id="mining.wavesNodesMap.nodes"
                         defaultMessage=" nodes"
                     />
                 </Typography>
@@ -46,7 +46,7 @@ const WavesNodes = ({ classes }) => (
                 </Typography>
                 <Typography type="body" tagName="span">
                     <FormattedMessage
-                        id="mining.wavesNodes.countries"
+                        id="mining.wavesNodesMap.countries"
                         defaultMessage=" countries"
                     />
                 </Typography>
@@ -61,4 +61,4 @@ const WavesNodes = ({ classes }) => (
     </div>
 );
 
-export default injectSheet(styles)(WavesNodes);
+export default injectSheet(styles)(WavesNodesMap);

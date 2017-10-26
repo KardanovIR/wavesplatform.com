@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Margin from 'src/common/components/Margin';
+import Hidden from 'src/common/components/Hidden';
 import SectionTitleText from 'src/common/components/SectionTitleText';
 import { Row, Col } from 'src/common/components/Grid';
 
@@ -47,7 +48,7 @@ const Algorithms = () => (
                         />
                     }
                 />
-                <Margin bottom={4} />
+                <Margin bottom={4} xsOnly />
             </Col>
             <Col xs={12} sm={6}>
                 <Card
@@ -66,7 +67,7 @@ const Algorithms = () => (
                         />
                     }
                 />
-                <Margin bottom={4} />
+                <Margin bottom={4} xsOnly />
             </Col>
         </Row>
     </div>

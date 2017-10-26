@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
+import Quote from 'src/common/components/Quote';
 
 import Image from './lib/Image';
-import Quote from './lib/Quote';
-
 
 import injectSheet from 'react-jss';
 import styles from './styles';

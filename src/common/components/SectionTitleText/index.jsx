@@ -8,7 +8,7 @@ const SectionTitleText = ({ titleType, text, title, marginSize }) => {
     return (
         <div>
             <Row centered>
-                <Col xs={12} sm={10} md={8} lg={6}>
+                <Col xs={12} sm={10} md={8} lg={8}>
                     <Typography type={titleType} align="center">
                         {title}
                     </Typography>
