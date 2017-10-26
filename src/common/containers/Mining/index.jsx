@@ -14,6 +14,7 @@ import MainScreen from './lib/MainScreen';
 import Algorithms from './lib/Algorithms';
 import StartMining from './lib/StartMining';
 import Revenue from './lib/Revenue';
+import WavesNodes from './lib/WavesNodes';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -56,6 +57,12 @@ const PageLayout = ({ classes }) => (
         <Section size={4}>
             <StartMining />
         </Section>
+
+        <Background className={classes.bgRevenue} skewed>
+            <Section size={4}>
+                <WavesNodes />
+            </Section>
+        </Background>
     </Layout>
 );
 
