@@ -35,6 +35,10 @@ const styles = theme => ({
             display: 'none',
         },
     },
+    selected: {
+        background: theme.palette.primary[500],
+        borderColor: 'transparent'
+    },
     first: {
         marginLeft: 0,
         borderTopLeftRadius: theme.spacing.radius,
