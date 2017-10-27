@@ -65,9 +65,7 @@ const styles = theme => ({
     },
     dark: {
         backgroundColor: theme.palette.primary[900],
-        '& $content, & $spinner': {
-            color: theme.palette.gray[0],
-        },
+        color: theme.palette.gray[0],
         '&:hover': {
             '&:before': { opacity: 0.3 },
             '&:after': { opacity: 1 }
@@ -76,9 +74,7 @@ const styles = theme => ({
     light: {
         backgroundColor: theme.palette.gray[0],
         transformOrigin: 'center bottom',
-        '& $content, & $spinner': {
-            color: theme.palette.primary[700]
-        },
+        color: theme.palette.primary[700],
         '&:hover': {
             '&:after': { opacity: 1 }
         },
