@@ -6,17 +6,18 @@ import cn from 'classnames';
 
 import styles from './styles';
 
-const ButtonGroup = ({ classes, className, options, value, onChange }) => (
+const ButtonGroup = ({ classes, className, options, value, onSelect }) => (
     <div className={cn(classes.wrapper, className)}>
         {options.map((opt, index) => (
             <div
-                onClick={() => onChange(opt.value)}
+                onClick={() => onSelect(opt.value)}
                 className={cn(classes.button, {
                     [classes.selected]: value === opt.value,
                     [classes.first]: index === 0,
                     [classes.last]: index === options.length - 1,
                 })}
                 key={`button_group_b${index}`}
+                value={opt.value}
             >
                 {opt.name}
             </div>
@@ -24,12 +25,15 @@ const ButtonGroup = ({ classes, className, options, value, onChange }) => (
     </div>
 );
 
-ButtonGroup.defaultProps = {
-    options: PropTypes.shape({
-        value: PropTypes.string.isRequired,
-        name: PropTypes.node,
-    }).isRequired,
-    onChange: PropTypes.func.isRequired,
+ButtonGroup.propTypes = {
+    className: PropTypes.string,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            value: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
+        }).isRequired
+    ),
+    onSelect: PropTypes.func.isRequired,
     value: PropTypes.string,
 };
 

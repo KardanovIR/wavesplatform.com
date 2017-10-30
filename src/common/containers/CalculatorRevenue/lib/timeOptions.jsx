@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 
 export default [
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option1"
                 defaultMessage="1 week"
@@ -12,7 +12,7 @@ export default [
         value: '1w',
     },
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option2"
                 defaultMessage="1 month"
@@ -21,7 +21,7 @@ export default [
         value: '1m',
     },
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option3"
                 defaultMessage="6 months"
@@ -30,7 +30,7 @@ export default [
         value: '6m',
     },
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option4"
                 defaultMessage="1 year"
@@ -39,7 +39,7 @@ export default [
         value: '1y',
     },
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option5"
                 defaultMessage="1 year"
@@ -48,7 +48,7 @@ export default [
         value: '3y',
     },
     {
-        name: (
+        content: (
             <FormattedMessage
                 id="mining.revenue.calc.option6"
                 defaultMessage="1 year"

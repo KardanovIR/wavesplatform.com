@@ -5,6 +5,7 @@ import Panel from 'src/common/components/Panel';
 import Input from 'src/common/components/Input';
 import Typography from 'src/common/components/Typography';
 import ButtonGroup from 'src/common/components/ButtonGroup';
+import Select from 'src/common/components/Select';
 import Divider from 'src/common/components/Divider';
 import Slider from 'src/common/components/Slider';
 import { Row, Col } from 'src/common/components/Grid';
@@ -22,22 +23,30 @@ const styles = theme => ({
     },
     divider: {},
 
-    inlineBlock: {
-        display: 'inline-block',
+    // slider and input
+    rowInput: {
+        display: 'flex',
+        alignItems: 'center',
     },
-    resultTitle: {
-        marginBottom: theme.spacing.unit,
+
+    sliderWrapper: {
+        display: 'none',
+        flex: 1,
+        paddingRight: theme.spacing.unit * 3,
     },
-    currency: {
-        color: theme.palette.primary[700],
+
+    input: {
+        display: 'block',
+        flex: [0, 0, '100%'],
     },
-    textBlock: {
-        composes: '$inlineBlock',
-        whiteSpace: 'nowrap',
-        lineHeight: 2,
-    },
-    sign: {
-        color: theme.palette.gray[400],
+
+    [theme.breakpoints.up('md')]: {
+        sliderWrapper: {
+            display: 'block',
+        },
+        input: {
+            flex: [0, 0, '120px'],
+        },
     },
 });
 
@@ -57,11 +66,11 @@ const CalculatorRevenue = ({
             />
         </Typography>
 
-
-
-        <Margin top={1} bottom={2}>
-            <Slider />
-            <Input type="number" />
+        <Margin top={1} bottom={2} className={classes.rowInput}>
+            <div className={classes.sliderWrapper}>
+                <Slider />
+            </div>
+            <Input className={classes.input} onChange={v => console.log(v)} type="number" />
         </Margin>
 
         <Margin>
@@ -72,6 +81,12 @@ const CalculatorRevenue = ({
                 />
             </Typography>
             <Margin bottom={1} />
+            <Select
+                options={timeOptions}
+                value="1y"
+                /* onChange={v => console.log('Change', v)} */
+                onSelect={v => console.log('Select', v)}
+            />
             <ButtonGroup
                 className={classes.buttonGroup}
                 options={timeOptions}
@@ -84,7 +99,7 @@ const CalculatorRevenue = ({
             <Divider />
         </Margin>
 
-
+        <Result />
     </Panel>
 );
 

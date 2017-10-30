@@ -65,23 +65,23 @@ const FeedbackForm = ({
                                 options={[
                                     {
                                         value: '',
-                                        content: intl.formatMessage(messages.chooseTopic)
+                                        name: intl.formatMessage(messages.chooseTopic)
                                     },
                                     {
                                         value: 'partnership',
-                                        content: intl.formatMessage(messages.partnership)
+                                        name: intl.formatMessage(messages.partnership)
                                     },
                                     {
                                         value: 'events',
-                                        content: intl.formatMessage(messages.events)
+                                        name: intl.formatMessage(messages.events)
                                     },
                                     {
                                         value: 'media',
-                                        content: intl.formatMessage(messages.media)
+                                        name: intl.formatMessage(messages.media)
                                     },
                                     {
                                         value: 'jobs',
-                                        content: intl.formatMessage(messages.jobs)
+                                        name: intl.formatMessage(messages.jobs)
                                     },
                                 ]}
                             />
