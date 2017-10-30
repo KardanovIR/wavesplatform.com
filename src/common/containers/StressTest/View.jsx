@@ -64,7 +64,7 @@ const StressTest = ({
                         <Typography type="quote">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.error"
-                                defaultMessage="Чувак, ты молодец, но UtxPool полный — другие пользователи активно тестят. Попробуй позже. "
+                                defaultMessage="Whoops! Network is stressed and your transaction did not make it. Try again!"
                             />
                         </Typography>
                     )}
