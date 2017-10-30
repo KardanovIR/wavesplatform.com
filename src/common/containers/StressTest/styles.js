@@ -46,28 +46,30 @@ export default ({ spacing, palette, transitions }) => ({
         position: 'absolute',
         top: 6,
         left: '50%',
-        transform: 'translateX(-50%)'
+        transform: 'translateX(-50%)',
     },
     statusMessage: {
-        marginTop: spacing.unit
+        marginTop: spacing.unit,
+        height: 40,
     },
     legendWrapper: {
         margin: [10, 0],
-        display: 'flex'
+        display: 'flex',
+        alignItems: 'center',
     },
     legendTypeWrapper: {
-        flex: 1
+        flex: 1,
     },
     legendNumberWrapper: {
-        flex: 0
+        flex: 0,
     },
     legend: {
         display: 'inline-block',
         width: spacing.unit * 2,
         height: spacing.unit * 2,
-        verticalAlign: 'middle',
+        verticalAlign: '-10%',
         borderRadius: '50%',
-        marginRight: spacing.unit
+        marginRight: spacing.unit,
     },
     unconfirmedLegend: {
         composes: '$legend',

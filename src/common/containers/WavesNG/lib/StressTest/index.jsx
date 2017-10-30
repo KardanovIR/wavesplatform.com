@@ -77,7 +77,7 @@ const StressTestSection = ({ classes, active }) => (
                         text={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart1.text"
-                                defaultMessage="Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second."
+                                defaultMessage="Number of transactions waiting in queue for confirmation. The greater the number of transactions processed by the network every minute, the faster this decreases."
                             />
                         }
                     />
