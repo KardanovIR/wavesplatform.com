@@ -1,18 +1,23 @@
 const styles = ({ spacing, palette, transitions }) => ({
     wrapper: {
         background: 'rgba(39, 47, 89, 0.22)',
-        display: 'inline-block',
+        display: 'inline-flex',
         boxShadow: '0 2px 4px 0 rgba(39, 47, 89, 0.25)',
         borderRadius: spacing.radius,
     },
     button: {
+        flex: 1,
+
         display: 'inline-block',
         cursor: 'pointer',
 
         height: spacing.inputHeight,
         lineHeight: `${spacing.inputHeight}px`,
 
-        padding: [0, spacing.unit * 4],
+        whiteSpace: 'nowrap',
+        textAlign: 'center',
+
+        padding: [0, spacing.unit * 2.5],
 
         background: palette.gray[0],
         color: palette.gray[600],
@@ -24,7 +29,7 @@ const styles = ({ spacing, palette, transitions }) => ({
         
         '&:hover:not($selected)': {
             transform: 'translateY(-2px)'
-        }
+        },
     },
     selected: {
         background: palette.primary[500],

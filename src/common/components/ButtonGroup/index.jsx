@@ -9,19 +9,17 @@ import styles from './styles';
 const ButtonGroup = ({ classes, className, options, value, onChange }) => (
     <div className={cn(classes.wrapper, className)}>
         {options.map((opt, index) => (
-                <div
-                    secondary
-                    onClick={() => onChange(opt.value)}
-                    className={cn(classes.button, {
-                        [classes.selected]: value === opt.value,
-                        [classes.first]: index === 0,
-                        [classes.last]: index === options.length - 1,
-                    })}
-                    target="_blank"
-                    key={`button_group_b${index}`}
-                >
-                    {opt.name}
-                </div>
+            <div
+                onClick={() => onChange(opt.value)}
+                className={cn(classes.button, {
+                    [classes.selected]: value === opt.value,
+                    [classes.first]: index === 0,
+                    [classes.last]: index === options.length - 1,
+                })}
+                key={`button_group_b${index}`}
+            >
+                {opt.name}
+            </div>
         ))}
     </div>
 );

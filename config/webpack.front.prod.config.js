@@ -4,7 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const AssetsWebpackPlugin = require('assets-webpack-plugin');
 
-const createUrlLoaders = require('./lib/createUrlLoaders');
+const createFrontendLoaders = require('./lib/createFrontendLoaders');
 const entry = require('./lib/entry');
 const output = require('./lib/output');
 const resolve = require('./lib/resolve');
@@ -22,20 +22,7 @@ module.exports = {
     }),
 
     module: {
-        rules: [
-            ...createUrlLoaders({ emitFile: true }),
-            {
-                test: /\.jsx?$/,
-                use: [
-                    'babel-loader',
-                ],
-                include: includedDirectories
-            },
-            {
-                test: /\.json$/,
-                loader: 'json-loader'
-            },
-        ]
+        rules: createFrontendLoaders(includedDirectories),
     },
 
     resolve,
