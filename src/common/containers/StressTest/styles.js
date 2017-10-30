@@ -53,6 +53,13 @@ export default ({ spacing, palette, transitions }) => ({
     },
     legendWrapper: {
         margin: [10, 0],
+        display: 'flex'
+    },
+    legendTypeWrapper: {
+        flex: 1
+    },
+    legendNumberWrapper: {
+        flex: 0
     },
     legend: {
         display: 'inline-block',

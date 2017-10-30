@@ -15,7 +15,15 @@ import styles from './styles';
 
 import getTotalTime from './lib/getTotalTime';
 
-const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
+const StressTest = ({
+    status,
+    onTestStart,
+    classes,
+    totalTime,
+    // speed,
+    unconfirmed,
+    confirmed,
+}) => {
     const { minutes, seconds } = getTotalTime(totalTime);
     return status === 'error_fatal' ? (
         <Row centered>
@@ -145,21 +153,49 @@ const StressTest = ({ status, onTestStart, classes, totalTime, speed }) => {
 
             <Col xs={12} md={4}>
                 <Divider />
-                <Typography type="body" className={classes.legendWrapper}>
-                    <span className={classes.unconfirmedLegend} />
-                    <FormattedMessage
-                        id="wavesNG.stressTest.test.unconfirmed"
-                        defaultMessage="Unconfirmed trx"
-                    />
-                </Typography>
+                <div className={classes.legendWrapper}>
+                    <Typography
+                        type="body"
+                        className={classes.legendTypeWrapper}
+                    >
+                        <span className={classes.unconfirmedLegend} />
+                        <FormattedMessage
+                            id="wavesNG.stressTest.test.unconfirmed"
+                            defaultMessage="Unconfirmed trx"
+                        />
+                    </Typography>
+                    {!!unconfirmed && (
+                        <Typography
+                            type="numeral"
+                            className={classes.legendNumberWrapper}
+                        >
+                            {unconfirmed}
+                        </Typography>
+                    )}
+                </div>
+
                 <Divider />
-                <Typography type="body" className={classes.legendWrapper}>
-                    <span className={classes.confirmedLegend} />
-                    <FormattedMessage
-                        id="wavesNG.stressTest.test.confirmed"
-                        defaultMessage="Confirmed trx"
-                    />
-                </Typography>
+
+                <div className={classes.legendWrapper}>
+                    <Typography
+                        type="body"
+                        className={classes.legendTypeWrapper}
+                    >
+                        <span className={classes.confirmedLegend} />
+                        <FormattedMessage
+                            id="wavesNG.stressTest.test.confirmed"
+                            defaultMessage="Confirmed trx"
+                        />
+                    </Typography>
+                    {!!confirmed && (
+                        <Typography
+                            type="numeral"
+                            className={classes.legendNumberWrapper}
+                        >
+                            {confirmed}
+                        </Typography>
+                    )}
+                </div>
                 <Divider className={classes.legendWrapper} />
 
                 <Row>

@@ -2,7 +2,8 @@ import io from 'socket.io-client';
 import { Observable } from 'rxjs';
 
 
-const SOCKET_PATH = 'wss://stresstest.wavesplatform.com';
+// const SOCKET_PATH = 'wss://stresstest.wavesplatform.com';
+const SOCKET_PATH = 'localhost:3002';
 
 
 
