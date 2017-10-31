@@ -1,11 +1,6 @@
-import { combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form';
-
-import feedbackForm from '../FeedbackForm/reducer'
-
-
+import { combineReducers } from 'redux';
+import calculatorRevenue from 'src/common/containers/CalculatorRevenue/ducks';
 
 export default combineReducers({
-    feedbackForm,
-    form: formReducer
-})
+    calculatorRevenue,
+});

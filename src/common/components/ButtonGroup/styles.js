@@ -38,6 +38,7 @@ const styles = ({ spacing, palette, transitions }) => ({
         color: palette.gray[0],
         pointerEvents: 'none',
         boxShadow: 'inset 0 0 2px rgba(39, 47, 89, 0.25)',
+        // transition: 'none',
     },
     first: {
         borderTopLeftRadius: spacing.radius,
