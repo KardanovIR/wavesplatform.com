@@ -1,59 +1,55 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { defineMessages } from 'react-intl';
 
-export default [
+const messages = defineMessages({
+    option1: {
+        id: 'mining.revenue.calc.option1',
+        defaultMessage: '1 week',
+    },
+    option2: {
+        id: 'mining.revenue.calc.option2',
+        defaultMessage: '1 month',
+    },
+    option3: {
+        id: 'mining.revenue.calc.option3',
+        defaultMessage: '6 months',
+    },
+    option4: {
+        id: 'mining.revenue.calc.option4',
+        defaultMessage: '1 year',
+    },
+    option5: {
+        id: 'mining.revenue.calc.option5',
+        defaultMessage: '3 years',
+    },
+    option6: {
+        id: 'mining.revenue.calc.option6',
+        defaultMessage: '5 years',
+    },
+});
+
+export default intl => [
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option1"
-                defaultMessage="1 week"
-            />
-        ),
+        name: intl.formatMessage(messages.option1),
         value: '1w',
     },
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option2"
-                defaultMessage="1 month"
-            />
-        ),
+        name: intl.formatMessage(messages.option2),
         value: '1m',
     },
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option3"
-                defaultMessage="6 months"
-            />
-        ),
+        name: intl.formatMessage(messages.option3),
         value: '6m',
     },
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option4"
-                defaultMessage="1 year"
-            />
-        ),
+        name: intl.formatMessage(messages.option4),
         value: '1y',
     },
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option5"
-                defaultMessage="1 year"
-            />
-        ),
+        name: intl.formatMessage(messages.option5),
         value: '3y',
     },
     {
-        content: (
-            <FormattedMessage
-                id="mining.revenue.calc.option6"
-                defaultMessage="1 year"
-            />
-        ),
+        name: intl.formatMessage(messages.option6),
         value: '5y',
     },
 ];

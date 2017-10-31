@@ -10,7 +10,8 @@ import Divider from 'src/common/components/Divider';
 import Slider from 'src/common/components/Slider';
 import { Row, Col } from 'src/common/components/Grid';
 
-import { FormattedMessage, FormattedNumber } from 'react-intl';
+import { FormattedMessage, FormattedNumber, injectIntl } from 'react-intl';
+import { compose } from 'ramda';
 
 import timeOptions from './lib/timeOptions';
 import Result from './lib/Result';
@@ -57,6 +58,7 @@ const CalculatorRevenue = ({
     total,
     waves,
     mrt,
+    intl
 }) => (
     <Panel>
         <Typography type="body">
@@ -70,7 +72,7 @@ const CalculatorRevenue = ({
             <div className={classes.sliderWrapper}>
                 <Slider />
             </div>
-            <Input className={classes.input} onChange={v => console.log(v)} type="number" />
+            <Input className={classes.input} secondary onChange={v => console.log(v)} type="number" />
         </Margin>
 
         <Margin>
@@ -82,14 +84,13 @@ const CalculatorRevenue = ({
             </Typography>
             <Margin bottom={1} />
             <Select
-                options={timeOptions}
+                options={timeOptions(intl)}
                 value="1y"
-                /* onChange={v => console.log('Change', v)} */
                 onSelect={v => console.log('Select', v)}
             />
             <ButtonGroup
                 className={classes.buttonGroup}
-                options={timeOptions}
+                options={timeOptions(intl)}
                 value="1y"
                 onChange={v => console.log(v)}
             />
@@ -111,4 +112,7 @@ CalculatorRevenue.defaultProps = {
     total: 12050,
 };
 
-export default injectSheet(styles)(CalculatorRevenue);
+export default compose(
+    injectSheet(styles),
+    injectIntl
+)(CalculatorRevenue);

@@ -26,6 +26,7 @@ const styles = ({ spacing, palette, transitions }) => ({
         border: '1px solid #f0f0f0',
 
         transition: transitions.create('transform'),
+        willChange: 'transform',
         
         '&:hover:not($selected)': {
             transform: 'translateY(-2px)'

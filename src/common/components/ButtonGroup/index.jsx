@@ -25,6 +25,10 @@ const ButtonGroup = ({ classes, className, options, value, onSelect }) => (
     </div>
 );
 
+ButtonGroup.defaultProps = {
+    onSelect: () => {}
+}
+
 ButtonGroup.propTypes = {
     className: PropTypes.string,
     options: PropTypes.arrayOf(
