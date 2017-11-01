@@ -164,14 +164,12 @@ const StressTest = ({
                             defaultMessage="Unconfirmed trx"
                         />
                     </Typography>
-                    {!!unconfirmed && (
-                        <Typography
-                            type="numeral"
-                            className={classes.legendNumberWrapper}
-                        >
-                            {unconfirmed}
-                        </Typography>
-                    )}
+                    <Typography
+                        type="numeral"
+                        className={classes.legendNumberWrapper}
+                    >
+                        {unconfirmed}
+                    </Typography>
                 </div>
 
                 <Divider />
@@ -187,14 +185,12 @@ const StressTest = ({
                             defaultMessage="Confirmed trx"
                         />
                     </Typography>
-                    {!!confirmed && (
-                        <Typography
-                            type="numeral"
-                            className={classes.legendNumberWrapper}
-                        >
-                            {confirmed}
-                        </Typography>
-                    )}
+                    <Typography
+                        type="numeral"
+                        className={classes.legendNumberWrapper}
+                    >
+                        {confirmed}
+                    </Typography>
                 </div>
                 <Divider className={classes.legendWrapper} />
 

@@ -9,5 +9,7 @@ import 'rxjs/add/operator/takeUntil';
 // import 'rxjs/add/operator/startWith';
 
 // import 'rxjs/add/observable/from';
+import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/empty';
 import 'rxjs/add/observable/timer';
+import 'rxjs/add/observable/interval';
