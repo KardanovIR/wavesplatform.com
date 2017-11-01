@@ -56,7 +56,6 @@ const styles = theme => ({
     },
 });
 
-
 const CalculatorRevenue = ({
     minWaves,
     maxWaves,
@@ -72,9 +71,7 @@ const CalculatorRevenue = ({
     onAmountChange,
     onTermChange,
 }) => {
-    
     const handleInputChange = e => onAmountChange(e.target.value);
-    
 
     return (
         <Panel>
@@ -139,7 +136,7 @@ const CalculatorRevenue = ({
                 <Divider />
             </Margin>
 
-            {/* <Result /> */}
+            {<Result total={total} waves={waves} mrt={mrt} />}
         </Panel>
     );
 };

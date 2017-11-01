@@ -1,4 +1,4 @@
-import { assoc } from 'ramda';
+import calculateRewards from './lib/calculateRewards';
 
 export const CHANGE_AMOUNT = 'ChangeAmount';
 export const CHANGE_TERM = 'ChangeTerm';
@@ -15,18 +15,24 @@ export const changeTerm = newValue => ({
 const initialState = {
     amount: 10000,
     term: '1m',
-    total: 0,
-    waves: 0,
-    mrt: 0,
+    ...calculateRewards(10000, '1m')
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_AMOUNT: {
-            return assoc('amount', action.payload, state);
+            return {
+                ...state,
+                amount: action.payload,
+                ...calculateRewards(action.payload, state.term)
+            }
         }
         case CHANGE_TERM: {
-            return assoc('term', action.payload, state);
+            return {
+                ...state,
+                term: action.payload,
+                ...calculateRewards(state.amount, action.payload)
+            }
         }
         default: {
             return state;
