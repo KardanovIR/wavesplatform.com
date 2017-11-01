@@ -108,6 +108,15 @@ const StressTest = ({
 
                 <Margin bottom={1} />
 
+                {status === 'connecting' && (
+                    <Typography type="quote" className={classes.statusMessage}>
+                        <FormattedMessage
+                            id="wavesNG.stressTest.test.status.connecting"
+                            defaultMessage="Connecting..."
+                        />
+                    </Typography>
+                )}
+
                 {status === 'idle' && (
                     <Button
                         className={classes.buttonWidth}
