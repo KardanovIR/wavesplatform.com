@@ -53,15 +53,13 @@ export default (action$, store, ...args) => {
     const utxUpdate = () =>
         receiveFromSocket(socket)('utxUpdate')
             .map(prop('trx'))
-            .concatMap(
-                trx =>
-                    trx
-                        ? Observable.of(updateUnconfirmedTxs(trx))
-                        : Observable.of(error())
-            );
+            .map(updateUnconfirmedTxs)
 
     const socketConnect = () =>
         receiveFromSocket(socket)('connect').map(connect);
+
+    const errorFromSocket = () =>
+        receiveFromSocket(socket)('testError').map(error);
 
     const errorTimeout = action$ =>
         action$
@@ -76,6 +74,7 @@ export default (action$, store, ...args) => {
         utxUpdate,
         timer,
         errorTimeout,
+        errorFromSocket,
         socketConnect,
         forward(START, 'startTest')
     )(action$, store, ...args);
