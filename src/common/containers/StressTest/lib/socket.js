@@ -1,5 +1,5 @@
 import io from 'socket.io-client';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 
 const SOCKET_PATH = 'wss://stresstest.wavesplatform.com';
