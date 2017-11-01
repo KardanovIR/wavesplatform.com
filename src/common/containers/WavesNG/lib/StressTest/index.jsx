@@ -63,7 +63,7 @@ const StressTestSection = ({ classes, active }) => (
             </Row>
 
             <Divider />
-            <Margin bottom={4} />
+            <Margin bottom={2} />
 
             <Row direction="row-reverse">
                 <Col xs={12} sm={5} lg={4}>
@@ -91,7 +91,7 @@ const StressTestSection = ({ classes, active }) => (
                 </Col>
             </Row>
 
-            <Margin bottom={4} />
+            <Margin bottom={2} />
 
             <Row direction="row-reverse">
                 <Col xs={12} sm={5} lg={4}>

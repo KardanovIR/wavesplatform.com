@@ -35,7 +35,7 @@ const StressTest = ({
                         defaultMessage="Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later."
                     />
                 </Typography>
-                <Margin bottom={3} />
+                <Margin bottom={2} />
             </Col>
         </Row>
     ) : (
@@ -55,7 +55,7 @@ const StressTest = ({
                         />
                     }
                 />
-                <Margin bottom={4} />
+                <Margin bottom={2} />
             </Col>
 
             <Col xs={12} md={4} className={classes.centerWrapper}>
@@ -157,7 +157,7 @@ const StressTest = ({
                     </Button>
                 )}
 
-                <Margin bottom={4} />
+                <Margin bottom={2} />
             </Col>
 
             <Col xs={12} md={4}>
@@ -251,7 +251,7 @@ const StressTest = ({
                     </Col> */}
                 </Row>
 
-                <Margin bottom={4} />
+                <Margin bottom={2} />
             </Col>
         </Row>
     );
