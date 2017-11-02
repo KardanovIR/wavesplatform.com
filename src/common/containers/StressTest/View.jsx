@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage, FormattedNumber } from 'react-intl';
+import { FormattedMessage, FormattedNumber, FormattedTime } from 'react-intl';
 
 import Button from 'src/common/components/Button';
 import Divider from 'src/common/components/Divider';
@@ -171,7 +171,7 @@ const StressTest = ({
                         <span className={classes.unconfirmedLegend} />
                         <FormattedMessage
                             id="wavesNG.stressTest.test.unconfirmed"
-                            defaultMessage="Unconfirmed trx"
+                            defaultMessage="Unconfirmed txs"
                         />
                     </Typography>
                     <Typography
@@ -192,7 +192,7 @@ const StressTest = ({
                         <span className={classes.confirmedLegend} />
                         <FormattedMessage
                             id="wavesNG.stressTest.test.confirmed"
-                            defaultMessage="Confirmed trx"
+                            defaultMessage="Confirmed txs"
                         />
                     </Typography>
                     <Typography
@@ -223,11 +223,17 @@ const StressTest = ({
                                     <FormattedNumber
                                         value={seconds}
                                         minimumIntegerDigits={2}
-                                        maximumFractionDigits={2}
+                                        maximumFractionDigits={0}
+                                    />
+                                    :
+                                    <FormattedNumber
+                                        value={seconds % 1}
+                                        minimumIntegerDigits={2}
+                                        maximumSignificantDigits={2}
                                     />
                                 </span>
                             ) : (
-                                <span>--:--</span>
+                                <span>--:--:--</span>
                             )}
                         </Typography>
                     </Col>
@@ -235,7 +241,7 @@ const StressTest = ({
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.speed"
-                                defaultMessage="Speed, trx/sec"
+                                defaultMessage="Speed, txs/sec"
                             />
                         </Typography>
                         <Typography type="numeral" tagName="div">

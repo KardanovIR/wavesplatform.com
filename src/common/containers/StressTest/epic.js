@@ -52,7 +52,7 @@ export default (action$, store, ...args) => {
 
     const utxUpdate = () =>
         receiveFromSocket(socket)('utxUpdate')
-            .map(prop('trx'))
+            .map(prop('txs'))
             .map(updateUnconfirmedTxs)
 
     const socketConnect = () =>
