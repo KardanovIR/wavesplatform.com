@@ -121,6 +121,7 @@ const StressTest = ({
                     <Button
                         className={classes.buttonWidth}
                         onClick={onTestStart}
+                        href="#stress-test"
                     >
                         <FormattedMessage
                             id="wavesNG.stressTest.test.run"
