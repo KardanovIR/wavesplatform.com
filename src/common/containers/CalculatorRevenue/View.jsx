@@ -70,6 +70,7 @@ const CalculatorRevenue = ({
     term,
     onAmountChange,
     onTermChange,
+    onAmountBlur
 }) => {
     const handleInputChange = e => onAmountChange(e.target.value);
 
@@ -99,6 +100,7 @@ const CalculatorRevenue = ({
                     className={classes.input}
                     secondary
                     onChange={handleInputChange}
+                    onBlur={onAmountBlur}
                     value={amount}
                     type="number"
                 />
@@ -139,11 +141,6 @@ const CalculatorRevenue = ({
             {<Result total={total} waves={waves} mrt={mrt} />}
         </Panel>
     );
-};
-
-CalculatorRevenue.defaultProps = {
-    minWaves: 0.02,
-    maxWaves: 100000000,
 };
 
 export default compose(injectSheet(styles), injectIntl)(CalculatorRevenue);

@@ -1,6 +1,8 @@
+import { assoc } from 'ramda';
 import calculateRewards from './lib/calculateRewards';
 
 export const CHANGE_AMOUNT = 'ChangeAmount';
+export const AMOUNT_BLUR = 'AmountBlur';
 export const CHANGE_TERM = 'ChangeTerm';
 
 export const changeAmount = newValue => ({
@@ -10,6 +12,10 @@ export const changeAmount = newValue => ({
 export const changeTerm = newValue => ({
     type: CHANGE_TERM,
     payload: newValue,
+});
+export const amountBlur = range => ({
+    type: AMOUNT_BLUR,
+    payload: range,
 });
 
 const initialState = {
@@ -33,6 +39,15 @@ export default (state = initialState, action) => {
                 term: action.payload,
                 ...calculateRewards(state.amount, action.payload)
             }
+        }
+        case AMOUNT_BLUR: {
+            if (state.amount < action.payload.min) {
+                return assoc('amount', action.payload.min, state);
+            }
+            if (state.amount > action.payload.max) {
+                return assoc('amount', action.payload.max, state);
+            }
+            return state;
         }
         default: {
             return state;
