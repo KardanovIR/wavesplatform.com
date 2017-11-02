@@ -20,9 +20,9 @@ const StressTest = ({
     onTestStart,
     classes,
     totalTime,
-    // speed,
     unconfirmed,
     confirmed,
+    targetWalletAddress,
 }) => {
     const { minutes, seconds } = getTotalTime(totalTime);
     return status === 'error_fatal' ? (
@@ -205,7 +205,7 @@ const StressTest = ({
                 <Divider className={classes.legendWrapper} />
 
                 <Row>
-                    <Col xs={12}>
+                    <Col xs={4} md={5}>
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.totalTime"
@@ -237,25 +237,21 @@ const StressTest = ({
                             )}
                         </Typography>
                     </Col>
-                    {/* <Col xs={6}>
-                        <Typography type="body" tagName="div">
-                            <FormattedMessage
-                                id="wavesNG.stressTest.test.speed"
-                                defaultMessage="Speed, txs/sec"
-                            />
-                        </Typography>
-                        <Typography type="numeral" tagName="div">
-                            {status === 'finished' ? (
-                                <FormattedNumber
-                                    value={speed}
-                                    maximumFractionDigits={1}
-                                    minimumFractionDigits={1}
+
+                    <Col xs={8} md={7}>
+                        {status === 'finished' && (
+                            <Button
+                                secondary
+                                className={classes.explorerButton}
+                                href={`https://testnet.wavesexplorer.com/address/${targetWalletAddress}`}
+                            >
+                                <FormattedMessage
+                                    id="wavesNG.stressTest.test.explorer"
+                                    defaultMessage="Explorer"
                                 />
-                            ) : (
-                                <span>--</span>
-                            )}
-                        </Typography>
-                    </Col> */}
+                            </Button>
+                        )}
+                    </Col>
                 </Row>
 
                 <Margin bottom={2} />

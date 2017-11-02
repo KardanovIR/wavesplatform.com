@@ -29,6 +29,7 @@ const initialState = {
     unconfirmed: 0,
     confirmed: 0,
     speed: 0,
+    targetWalletAddress: ''
 };
 
 
@@ -50,9 +51,10 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 startTimestamp: Date.now(),
-                total: action.payload,
-                unconfirmed: action.payload,
+                total: action.payload.tsx,
+                unconfirmed: action.payload.tsx,
                 status: 'testing',
+                targetWalletAddress: action.payload.targetWalletAddress
             };
         }
         case ERROR: {

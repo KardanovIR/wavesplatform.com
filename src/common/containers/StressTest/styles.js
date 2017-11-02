@@ -79,4 +79,8 @@ export default ({ spacing, palette, transitions }) => ({
         composes: '$legend',
         background: '#64ca57',
     },
+    explorerButton: {
+        float: 'right',
+        marginTop: spacing.unit,
+    }
 });
