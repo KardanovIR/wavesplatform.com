@@ -30,7 +30,7 @@ const smoothScroll = (targetScrollPos, duration = 500) => {
 
 
 
-const smoothScrollTo = (element, { duration = 500, scrollToViewport = false } = {}) => {
+const smoothScrollTo = (element, { duration = 300, scrollToViewport = false, viewportOffsetTop = 0 } = {}) => {
     const rect = element.getBoundingClientRect();
 
     if (scrollToViewport) {
@@ -41,7 +41,7 @@ const smoothScrollTo = (element, { duration = 500, scrollToViewport = false } = 
 
     // scroll to element
     smoothScroll(
-        rect.top - document.body.getBoundingClientRect().top,
+        rect.top - document.body.getBoundingClientRect().top - viewportOffsetTop,
         duration
     );
 }

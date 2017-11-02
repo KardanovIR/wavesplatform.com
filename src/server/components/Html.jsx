@@ -17,6 +17,7 @@ const Html = ({
     fonts,
     gtmEnabled,
     sentryEnabled,
+    mailchimpEnabled,
     serverName
 }) => (
     <html lang="en">
@@ -45,6 +46,13 @@ const Html = ({
 
             {/* GTM enable */}
             { gtmEnabled && <GtmHead /> }
+
+            {/* Mailchimp intefration */}
+            { mailchimpEnabled && (
+                <script id="mcjs" dangerouslySetInnerHTML={{ __html: `
+                    !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/4ff64a51eb6d5c66edfc248d3/132601c045c40b7fba6454c7b.js");
+                `}} />
+            ) }
 
             {/* Page initial state */}
             <script

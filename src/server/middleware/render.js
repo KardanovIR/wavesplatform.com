@@ -103,6 +103,7 @@ export const render = function({
                 initialState={ctx.state.initialState}
                 gtmEnabled={isProd()}
                 sentryEnabled={isProd()}
+                mailchimpEnabled={isProd()}
                 serverName={process.env.SERVER_NAME}
             />
         );

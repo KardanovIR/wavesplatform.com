@@ -11,12 +11,13 @@ import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
 import Divider from 'src/common/components/Divider';
 
+import AnchorScroll from 'src/public/components/AnchorScroll';
+
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 // import MainScreen from 'src/common/components/MainScreen';
 
 // containers
 import Feedback from 'src/common/containers/Feedback';
-
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -34,7 +35,6 @@ import DEX from './lib/DEX';
 import DEXFeatures from './lib/DEXFeatures';
 import DEXTopPairs from './lib/DEXTopPairs';
 
-
 // intl
 import { FormattedMessage } from 'react-intl';
 
@@ -42,23 +42,21 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-
-
 const PageLayout = ({ classes, initialState }) => (
     <Layout activeLink="product">
-
         <BackgroundMainScreen type="light">
             <MainScreen />
         </BackgroundMainScreen>
 
-
         <Section top={3} bottom={2}>
-            <Wallet />
+            <AnchorScroll anchor="wallet">
+                <Wallet />
+            </AnchorScroll>
         </Section>
+
         <Section top={1} bottom={4}>
             <Interest />
         </Section>
-
 
         <Background className={classes.bgWallet} skewed={true}>
             <Section size={4}>
@@ -66,21 +64,19 @@ const PageLayout = ({ classes, initialState }) => (
             </Section>
         </Background>
 
-
         {/* <Section size={4}>
             <OnlineWallet />
         </Section> */}
-
-
 
         <Section size={4}>
             <HowToWallet />
         </Section>
 
-
         <Background className={classes.bgDex} skewed={true}>
             <Section size={4}>
-                <DEX dexData={initialState.dexData} />
+                <AnchorScroll anchor="dex">
+                    <DEX dexData={initialState.dexData} />
+                </AnchorScroll>
             </Section>
         </Background>
 
@@ -94,10 +90,8 @@ const PageLayout = ({ classes, initialState }) => (
             </Col>
         </Row>
 
-
         <Margin bottom={4} />
-        <Divider gradient /> 
-
+        <Divider gradient />
 
         <Section size={4}>
             <HowToTrade />
@@ -105,15 +99,13 @@ const PageLayout = ({ classes, initialState }) => (
 
         <Background className={classes.bgTokens} skewed={true}>
             <Section top={4} bottom={2}>
-                <IssuingTokens />
+                <AnchorScroll anchor="token-launcher">
+                    <IssuingTokens />
+                </AnchorScroll>
             </Section>
         </Background>
 
-
-        <Typography
-            type="quote"
-            align="center"
-        >
+        <Typography type="quote" align="center">
             <FormattedMessage
                 id="feedback.companiesReleased"
                 defaultMessage="Companies that have released their own tokens on Waves:"
@@ -127,26 +119,21 @@ const PageLayout = ({ classes, initialState }) => (
         </div>
 
         <Margin bottom={4} />
-        <Divider gradient /> 
+        <Divider gradient />
         <Margin bottom={2} />
 
         <div className={classes.section}>
             <HowToToken />
         </div>
-
-    </Layout >
+    </Layout>
 );
-
 
 const Page = injectSheet(styles)(PageLayout);
 
-
 const App = props => (
     <ThemeProvider>
-        <Page { ...props } />
+        <Page {...props} />
     </ThemeProvider>
-)
-
-
+);
 
 export default App;
