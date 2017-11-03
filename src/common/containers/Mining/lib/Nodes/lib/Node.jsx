@@ -6,28 +6,50 @@ import { Row, Col } from 'src/common/components/Grid';
 // import Link from 'src/common/components/Link';
 import Panel from 'src/common/components/Panel';
 import Divider from 'src/common/components/Divider';
+import Input from 'src/common/components/Input';
 
 import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 import injectSheet from 'react-jss';
-const styles = ({ palette, spacing }) => ({
+const styles = ({ palette, spacing, breakpoints }) => ({
     spaced: {
-        margin: [spacing.unit, 0],
+        margin: [spacing.unit * 1.5, 0],
     },
 
     chartOuter: {
         width: '100%',
-        height: spacing.unit * 8,
+        height: spacing.unit * 10,
         position: 'relative',
-        background: palette.orange[300],
+        background: palette.gray[100],
     },
     chartInner: {
         position: 'absolute',
-        background: '#ED6B60',
+        // background: '#ED6B60',
+        background: palette.orange[300],
         height: '100%',
         top: 0,
         left: 0,
         width: ({ share }) => `${share}%`,
+    },
+
+    copyToClipboard: {
+        marginTop: spacing.unit,
+        borderRadius: spacing.radius,
+        padding: [spacing.unit, spacing.unit * 1],
+        border: [1, 'solid', palette.gray[100]],
+        background: palette.gray[50],
+    },
+    copyToClipboardText: {
+        color: palette.primary[700],
+        fontSize: '10px',
+    },
+    [breakpoints.up('md')]: {
+        copyToClipboard: {
+            padding: [spacing.unit, spacing.unit * 2],
+        },
+        copyToClipboardText: {
+            fontSize: '12px',
+        },
     },
 });
 
@@ -40,7 +62,7 @@ const Node = ({ name, balance, share, classes, address }) => (
 
         <div className={classes.spaced}>
             <Row>
-                <Col xs>
+                <Col xs={4}>
                     <Typography type="body">
                         <FormattedMessage
                             id="balance"
@@ -49,7 +71,7 @@ const Node = ({ name, balance, share, classes, address }) => (
                     </Typography>
                 </Col>
 
-                <Col xs>
+                <Col xs={8}>
                     <Typography type="body" align="right">
                         <FormattedNumber
                             value={balance}
@@ -71,24 +93,26 @@ const Node = ({ name, balance, share, classes, address }) => (
 
         <Margin bottom={1} />
 
-        <Row>
-            <Col xs>
-                <Typography type="body">
-                    <FormattedMessage
-                        id="mining.nodes.share"
-                        defaultMessage="Share"
-                    />
-                </Typography>
-            </Col>
+        <div className={classes.spaced}>
+            <Row>
+                <Col xs={4}>
+                    <Typography type="body">
+                        <FormattedMessage
+                            id="mining.nodes.share"
+                            defaultMessage="Share"
+                        />
+                    </Typography>
+                </Col>
 
-            <Col xs>
-                <Typography type="body" align="right">
-                    <FormattedNumber value={share} /> %
-                </Typography>
-            </Col>
-        </Row>
+                <Col xs={8}>
+                    <Typography type="body" align="right">
+                        <FormattedNumber value={share} /> %
+                    </Typography>
+                </Col>
+            </Row>
+        </div>
 
-        <Margin top={1} bottom={2}>
+        <Margin bottom={2}>
             <Divider />
         </Margin>
 
@@ -98,7 +122,12 @@ const Node = ({ name, balance, share, classes, address }) => (
                 defaultMessage="Coly leasing address"
             />
         </Typography>
-        <Typography type="body">{address}</Typography>
+
+        <div className={classes.copyToClipboard}>
+            <Typography className={classes.copyToClipboardText} type="body">
+                {address}
+            </Typography>
+        </div>
     </Panel>
 );
 

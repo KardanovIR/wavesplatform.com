@@ -51,10 +51,10 @@ const WavesNodes = ({ wavesTopNodes }) => {
 
             {/* WAVESGO */}
             <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12} sm={6} lg={5}>
                     <Node {...wavesGo} />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} sm={6} lgOffset={1} lg={6}>
                     <Typography type="display1">
                         <FormattedMessage
                             id="mining.nodes.node1.title"
@@ -86,10 +86,10 @@ const WavesNodes = ({ wavesTopNodes }) => {
 
             {/* Wavesnodes */}
             <Row>
-                <Col xs={12} md={6}>
+                <Col xs={12} sm={6} lg={5}>
                     <Node {...WavesNodeNet} />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12} sm={6} lgOffset={1} lg={6}>
                     <Typography type="display1">
                         <FormattedMessage
                             id="mining.nodes.node2.title"
