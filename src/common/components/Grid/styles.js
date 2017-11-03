@@ -6,6 +6,7 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
             flexBasis: 0,
             flexGrow: 1,
             maxWidth: '100%',
+            padding: theme.spacing.getSpacing(0, GUTTER_UNITS/2)
         }
     };
 

@@ -1,7 +1,7 @@
 import compose from 'koa-compose';
 
-import { getDexTopPairs } from 'src/server/middleware/getDexTopPairs';
-import { getDexData } from 'src/server/middleware/getDexData';
+import getDexTopPairs from 'src/server/middleware/getDexTopPairs';
+import getDexData from 'src/server/middleware/getDexData';
 import { render } from 'src/server/middleware/render';
 
 
