@@ -106,8 +106,6 @@ const StartMining = () => (
                             defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."
                         />
                     </Typography>
-                    <Margin bottom={3} />
-                    Здесь будет график
                 </Margin>
             </Col>
         </Row>

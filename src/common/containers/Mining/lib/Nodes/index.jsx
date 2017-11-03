@@ -53,6 +53,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
             <Row>
                 <Col xs={12} sm={6} lg={5}>
                     <Node {...wavesGo} />
+                    <Margin bottom={3} xsOnly />
                 </Col>
                 <Col xs={12} sm={6} lgOffset={1} lg={6}>
                     <Typography type="display1">
@@ -88,6 +89,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
             <Row>
                 <Col xs={12} sm={6} lg={5}>
                     <Node {...WavesNodeNet} />
+                    <Margin bottom={3} xsOnly />
                 </Col>
                 <Col xs={12} sm={6} lgOffset={1} lg={6}>
                     <Typography type="display1">
