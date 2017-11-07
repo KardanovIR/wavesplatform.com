@@ -52,8 +52,8 @@ export default (action$, store, ...args) => {
 
     const utxUpdate = () =>
         receiveFromSocket(socket)('utxUpdate')
-            // .map(prop('txs'))
-            .map(updateUnconfirmedTxs)
+            .takeUntil(action$.ofType(ERROR))
+            .map(updateUnconfirmedTxs);
 
     const socketConnect = () =>
         receiveFromSocket(socket)('connect').map(connect);
@@ -76,6 +76,7 @@ export default (action$, store, ...args) => {
         errorTimeout,
         errorFromSocket,
         socketConnect,
-        forward(START, 'startTest')
+        forward(START, 'startTest'),
+        forward(ERROR, 'clientError'),
     )(action$, store, ...args);
 };

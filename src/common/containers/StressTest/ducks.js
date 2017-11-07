@@ -51,8 +51,8 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 startTimestamp: Date.now(),
-                total: action.payload.tsx,
-                unconfirmed: action.payload.tsx,
+                total: action.payload.txs,
+                unconfirmed: action.payload.txs,
                 status: 'testing',
                 targetWalletAddress: action.payload.targetWalletAddress
             };

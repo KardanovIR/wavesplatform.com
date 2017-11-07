@@ -24,7 +24,7 @@ const StressTest = ({
     confirmed,
     targetWalletAddress,
 }) => {
-    const { minutes, seconds } = getTotalTime(totalTime);
+    const { minutes, seconds, centiSeconds } = getTotalTime(totalTime);
     return status === 'error_fatal' ? (
         <Row centered>
             <Col xs={12} md={6} lg={4}>
@@ -227,9 +227,8 @@ const StressTest = ({
                                     />
                                     :
                                     <FormattedNumber
-                                        value={seconds % 1}
+                                        value={centiSeconds}
                                         minimumIntegerDigits={2}
-                                        maximumSignificantDigits={2}
                                     />
                                 </span>
                             ) : (
@@ -243,7 +242,8 @@ const StressTest = ({
                             <Button
                                 secondary
                                 className={classes.explorerButton}
-                                href={`https://testnet.wavesexplorer.com/address/${targetWalletAddress}`}
+                                href={`http://testnet.wavesexplorer.com/address/${targetWalletAddress}`}
+                                target="_blank"
                             >
                                 <FormattedMessage
                                     id="wavesNG.stressTest.test.explorer"

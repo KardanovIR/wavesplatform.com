@@ -1,6 +1,9 @@
 export default timestamp => {
+    const date = new Date(timestamp);
+
     return {
-        minutes: Math.floor(timestamp / (1000 * 60)),
-        seconds: (timestamp % (1000 * 60)) / 1000,
-    }
-}
+        minutes: date.getMinutes(),
+        seconds: date.getSeconds(),
+        centiSeconds: Math.floor(date.getMilliseconds() / 10),
+    };
+};
