@@ -18,7 +18,7 @@ import {
 
 import initSocket, { forwardToSocket, receiveFromSocket } from './lib/socket';
 
-const ERROR_TIMEOUT = 20000;
+const ERROR_TIMEOUT = 25000;
 const TIMER_UPDATE_INTERVAL = 100;
 
 // init socket and combine epics
