@@ -25,7 +25,7 @@ export default async (ctx, next) => {
             method: 'POST',
             body: JSON.stringify({
                 email_address: email,
-                status: "subscribed",
+                status: "pending",
             })
         })
             .then(res => res.json())
