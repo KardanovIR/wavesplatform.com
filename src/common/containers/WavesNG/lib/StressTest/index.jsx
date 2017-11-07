@@ -87,6 +87,8 @@ const StressTestSection = ({ classes, active }) => (
                             width="100%"
                             height="100%"
                             frameBorder="0"
+                            style={{overflow: 'hidden'}}
+                            scrolling="no"
                         />
                     </div>
                 </Col>
@@ -119,6 +121,8 @@ const StressTestSection = ({ classes, active }) => (
                             width="100%"
                             height="100%"
                             frameBorder="0"
+                            style={{overflow: 'hidden'}}
+                            scrolling="no"
                         />
                     </div>
                 </Col>
