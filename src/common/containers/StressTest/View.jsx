@@ -51,7 +51,7 @@ const StressTest = ({
                     text={
                         <FormattedMessage
                             id="wavesNG.stressTest.test.text"
-                            defaultMessage="When you click this button you will generate 100 transactions. You can watch how network speed and characteristics respond in real time!"
+                            defaultMessage="When you click this button you will automatically generate a series of transactions. You can watch how network speed and characteristics respond in real time!"
                         />
                     }
                 />
