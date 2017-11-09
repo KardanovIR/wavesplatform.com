@@ -1,17 +1,19 @@
 import compose from 'koa-compose';
 
-import { getWavesTopNodes } from 'src/server/middleware/getWavesTopNodes';
+import getWavesTopNodes from 'src/server/middleware/getWavesTopNodes';
+import getMrtWavesPrice from 'src/server/middleware/getMrtWavesPrice';
 import { render } from 'src/server/middleware/render';
 
-
-import Mining from 'src/common/containers/Mining';
-
+import Leasing from 'src/common/containers/Leasing';
+import reducer from 'src/common/containers/Leasing/reducer';
 
 export default compose([
     getWavesTopNodes,
+    getMrtWavesPrice,
     render({
-        script: 'mining',
-        component: Mining,
-        description: 'Support the Waves Network'
+        script: 'leasing',
+        component: Leasing,
+        reducer,
+        description: 'Support the Waves Network',
     }),
-])
+]);

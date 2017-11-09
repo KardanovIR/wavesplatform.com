@@ -38,7 +38,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
                                         defaultMessage="dev.pywaves.org"
                                         values={{
                                             pywavesLink: (
-                                                <Link>dev.pywaves.org</Link>
+                                                <Link href="http://dev.pywaves.org/generators-weekly/" target="_blank">dev.pywaves.org</Link>
                                             ),
                                         }}
                                     />

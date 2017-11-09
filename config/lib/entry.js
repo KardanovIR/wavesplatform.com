@@ -7,4 +7,5 @@ module.exports = {
     error404: 'src/public/entries/error404',
     wavesNG: 'src/public/entries/wavesNG',
     mining: 'src/public/entries/mining',
+    leasing: 'src/public/entries/leasing',
 }

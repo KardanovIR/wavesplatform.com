@@ -6,7 +6,7 @@ import { render } from '../middleware/render';
 import home from './get/home';
 import product from './get/product';
 import mining from './get/mining';
-// import leasing from './get/leasing';
+import leasing from './get/leasing';
 import Error404 from './get/Error404';
 
 
@@ -31,6 +31,7 @@ router
     .get('/company', render({ script: 'company', component: Company, description: 'We change people’s lives' }))
     .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves'  }))
     .get('/mining', mining)
+    .get('/leasing', leasing)
     .use('/api', api.routes())
     .use('/subdomains', subdomains.routes())
     .get('*', Error404)
