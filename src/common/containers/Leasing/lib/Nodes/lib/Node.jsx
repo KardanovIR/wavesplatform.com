@@ -15,23 +15,6 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     spaced: {
         margin: [spacing.unit * 1.5, 0],
     },
-
-    chartOuter: {
-        width: '100%',
-        height: spacing.unit * 10,
-        position: 'relative',
-        background: palette.gray[100],
-    },
-    chartInner: {
-        position: 'absolute',
-        // background: '#ED6B60',
-        background: palette.orange[300],
-        height: '100%',
-        top: 0,
-        left: 0,
-        width: ({ share }) => `${share}%`,
-    },
-
     copyToClipboard: {
         marginTop: spacing.unit,
         borderRadius: spacing.radius,
@@ -41,7 +24,7 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     },
     copyToClipboardText: {
         color: palette.primary[700],
-        fontSize: '10px',
+        fontSize: '9px',
     },
     [breakpoints.up('md')]: {
         copyToClipboard: {

@@ -59,6 +59,7 @@ const styles = theme => ({
 const CalculatorRevenue = ({
     minWaves,
     maxWaves,
+    initialValue,
     classes,
     waves,
     mrt,
@@ -90,7 +91,7 @@ const CalculatorRevenue = ({
                         reverse={reverse}
                         min={minWaves}
                         max={maxWaves}
-                        value={amount}
+                        value={amount || initialValue}
                         onChange={onAmountChange}
                         stepsNumber={300}
                     />
@@ -101,7 +102,7 @@ const CalculatorRevenue = ({
                     secondary
                     onChange={handleInputChange}
                     onBlur={onAmountBlur}
-                    value={amount}
+                    value={amount || initialValue}
                     type="number"
                 />
             </Margin>
@@ -145,6 +146,7 @@ const CalculatorRevenue = ({
 
 CalculatorRevenue.defaultProps = {
     mrtWavesPrice: 0.02,
+    initialValue: 10000
 };
 
 export default compose(injectSheet(styles), injectIntl)(CalculatorRevenue);

@@ -42,7 +42,7 @@ const Footer = ({ classes, links }) => (
 
                     <Col xs={12} md={6} className={classes.language}>
                         <Typography type="body" className={classes.textGray}>
-                            <Link href={url('files.terms_conditions')} className={classes.link}>
+                            <Link href={url('files.terms_conditions')} className={classes.link} textDecoration={false}>
                                 Terms and conditions
                             </Link>
                         </Typography>

@@ -95,7 +95,7 @@ const StartMining = () => (
 
         <Row>
             <Col xs={12} md={9}>
-                <Calculator minWaves={0.02} />
+                <Calculator minWaves={0.02} initialValue={1000} />
             </Col>
 
             <Col xs={12} md={3}>
