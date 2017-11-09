@@ -18,39 +18,27 @@ const styles = theme => ({
 
     primary: {
         color: theme.palette.primary[500],
+        borderColor: theme.palette.opaque(theme.palette.primary[500], 0.5),
         ['&:hover, &:active']: {
             color: theme.palette.primary[300],
-        },
-        ['& $text']: {
-            borderColor: theme.palette.opaque(theme.palette.primary[500], 0.5),
-        },
-        ['&:hover $text, &:active $text']: {
             borderColor: theme.palette.opaque(theme.palette.primary[300], 0.5),
         },
     },
 
     secondary: {
         color: theme.palette.orange[300],
+        borderColor: theme.palette.opaque(theme.palette.primary[500], 0.5),
         ['&:hover, &:active']: {
             color: theme.palette.gray[0],
-        },
-        ['& $text']: {
-            borderColor: theme.palette.opaque(theme.palette.orange[300], 0.5),
-        },
-        ['&:hover $text, &:active $text']: {
-            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
+            borderColor: theme.palette.opaque(theme.palette.primary[300], 0.5),
         },
     },
 
     inverted: {
         color: theme.palette.grayBlue[200],
+        borderColor: theme.palette.opaque(theme.palette.grayBlue[200], 0.5),
         ['&:hover, &:active']: {
             color: theme.palette.gray[0],
-        },
-        ['& $text']: {
-            borderColor: theme.palette.opaque(theme.palette.grayBlue[200], 0.5),
-        },
-        ['&:hover $text, &:active $text']: {
             borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
         },
     },

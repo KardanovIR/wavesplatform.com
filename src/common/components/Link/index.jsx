@@ -52,7 +52,7 @@ const Link = ({
             target={target}
             {...rest}
         >
-            <span href={href} className={classNameText}>
+            <span className={classNameText}>
                 {children}
             </span>
             {!!iconElement && (
