@@ -14,7 +14,6 @@ import MainScreen from './lib/MainScreen';
 import Description from './lib/Description';
 import StartLeasing from './lib/StartLeasing';
 import Revenue from './lib/Revenue';
-import WavesNodesMap from './lib/WavesNodesMap';
 import Nodes from './lib/Nodes';
 
 import injectSheet from 'react-jss';
