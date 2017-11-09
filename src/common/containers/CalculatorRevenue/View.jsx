@@ -60,9 +60,9 @@ const CalculatorRevenue = ({
     minWaves,
     maxWaves,
     classes,
-    total,
     waves,
     mrt,
+    mrtWavesPrice,
     intl,
 
     // state
@@ -70,7 +70,7 @@ const CalculatorRevenue = ({
     term,
     onAmountChange,
     onTermChange,
-    onAmountBlur
+    onAmountBlur,
 }) => {
     const handleInputChange = e => onAmountChange(e.target.value);
 
@@ -138,9 +138,13 @@ const CalculatorRevenue = ({
                 <Divider />
             </Margin>
 
-            {<Result total={total} waves={waves} mrt={mrt} />}
+            {<Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />}
         </Panel>
     );
+};
+
+CalculatorRevenue.defaultProps = {
+    mrtWavesPrice: 0.02,
 };
 
 export default compose(injectSheet(styles), injectIntl)(CalculatorRevenue);

@@ -5,7 +5,7 @@ import { changeAmount, changeTerm, amountBlur } from './ducks';
 import View from './View';
 
 const CalculatorRevenueContainer = connect(
-    ({ calculatorRevenue }) => calculatorRevenue,
+    ({ calculatorRevenue, mrtWavesPrice }) => ({ ...calculatorRevenue, mrtWavesPrice }),
     (dispatch, { minWaves, maxWaves }) => ({
         onAmountChange: v => dispatch(changeAmount(v)),
         onTermChange: v => dispatch(changeTerm(v)),

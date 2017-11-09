@@ -42,7 +42,10 @@ const Result = ({ classes, total, waves, mrt }) => (
             <div className={classes.inlineBlock}>
                 <div className={classes.textBlock}>
                     <Typography type="numeral" tagName="span">
-                        <FormattedNumber value={waves} maximumFractionDigits={0} />
+                        <FormattedNumber
+                            value={waves}
+                            maximumFractionDigits={0}
+                        />
                     </Typography>{' '}
                     <Typography
                         type="body"
@@ -63,7 +66,10 @@ const Result = ({ classes, total, waves, mrt }) => (
                 </div>
                 <div className={classes.textBlock}>
                     <Typography type="numeral" tagName="span">
-                        <FormattedNumber value={mrt} maximumFractionDigits={0} />
+                        <FormattedNumber
+                            value={mrt}
+                            maximumFractionDigits={0}
+                        />
                     </Typography>{' '}
                     <Typography
                         type="body"
@@ -97,8 +103,14 @@ const Result = ({ classes, total, waves, mrt }) => (
             </div>
             <div>
                 <Typography type="numeral" tagName="span">
-                    {'$ '}
                     <FormattedNumber value={total} maximumFractionDigits={0} />
+                </Typography>{' '}
+                <Typography
+                    type="body"
+                    tagName="span"
+                    className={classes.currency}
+                >
+                    WAVES
                 </Typography>
             </div>
         </div>
