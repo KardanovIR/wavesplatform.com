@@ -124,7 +124,7 @@ const CalculatorRevenue = ({
                     />
                 </Hidden>
 
-                <Hidden smDown>
+                <Hidden mdDown>
                     <ButtonGroup
                         className={classes.buttonGroup}
                         options={timeOptions(intl)}
