@@ -35,6 +35,8 @@ class Select extends PureComponent {
 
     render() {
         const {
+            name,
+            
             classes,
             className: classNameProp,
 

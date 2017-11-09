@@ -20,7 +20,9 @@ export default async (ctx, next) => {
                     mrtWavesPrice: res,
                 })
         )
-        .catch(() => ctx.throw(500, 'Unable to get MRT/WAVES trades'));
+        .catch(() => {
+            throw new Error('Unable to get MRT/WAVES trades');
+        });
 
     const ms = Date.now() - start;
     ctx.logger.info('API_request', {

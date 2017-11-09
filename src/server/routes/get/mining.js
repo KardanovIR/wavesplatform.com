@@ -5,6 +5,7 @@ import getMrtWavesPrice from 'src/server/middleware/getMrtWavesPrice';
 import { render } from 'src/server/middleware/render';
 
 import Mining from 'src/common/containers/Mining';
+import reducer from 'src/common/containers/Mining/reducer';
 
 export default compose([
     getWavesTopNodes,
@@ -12,6 +13,7 @@ export default compose([
     render({
         script: 'mining',
         component: Mining,
+        reducer,
         description: 'Support the Waves Network',
     }),
 ]);
