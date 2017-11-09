@@ -139,7 +139,7 @@ const StartMining = ({ classes }) => (
                 <Typography tagName="div" align="center" className={classes.message}>
                     <FormattedMessage
                         id="mining.startMining.done.title"
-                        defaultMessage="4. Готово! Нода автоматически начинает майнить"
+                        defaultMessage="4. Ready! Your node automatically starts mining."
                     />
                 </Typography>
                 <Margin bottom={2} />

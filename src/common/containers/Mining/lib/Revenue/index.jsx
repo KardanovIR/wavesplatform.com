@@ -51,7 +51,7 @@ const StartMining = () => (
                 <Typography type="body" cut>
                     <FormattedMessage
                         id="mining.revenue.p1.text2"
-                        defaultMessage="In addition to any WAVES they receive, nodes will receives 10 MRT per block they generate, though not more than 700 MRT per day."
+                        defaultMessage="In addition to any WAVES they receive, nodes will receive 20 MRT per block for the first 70 blocks they generate per day, with 10 MRT per block awarded thereafter."
                     />
                 </Typography>
             </Col>
