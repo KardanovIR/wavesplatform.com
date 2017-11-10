@@ -17,7 +17,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
     const wavesGo = wavesTopNodes.find(v => v.name === 'WavesGo');
     const WavesNodeNet = wavesTopNodes.find(v => v.name === 'Wavesnode.net');
 
-    return (wavesGo && WavesNodeNet) ? (
+    return wavesGo && WavesNodeNet ? (
         <div>
             <SectionTitleText
                 title={
@@ -32,16 +32,11 @@ const WavesNodes = ({ wavesTopNodes }) => {
                         defaultMessage="A Waves node isn’t just a way to get paid for securing the network. These are hubs of activity around which entrepreneurs build new businesses and engage the community. You can find a list of Waves nodes at {pywavesLink}"
                         values={{
                             pywavesLink: (
-                                <Link>
-                                    <FormattedMessage
-                                        id="mining.nodes.link"
-                                        defaultMessage="dev.pywaves.org"
-                                        values={{
-                                            pywavesLink: (
-                                                <Link href="http://dev.pywaves.org/generators-weekly/" target="_blank">dev.pywaves.org</Link>
-                                            ),
-                                        }}
-                                    />
+                                <Link
+                                    href="http://dev.pywaves.org/generators-weekly/"
+                                    target="_blank"
+                                >
+                                    dev.pywaves.org
                                 </Link>
                             ),
                         }}
