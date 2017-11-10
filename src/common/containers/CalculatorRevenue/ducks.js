@@ -19,7 +19,7 @@ export const amountBlur = range => ({
 });
 
 const initialState = {
-    amount: undefined,
+    amount: 10000,
     term: '1m',
     ...calculateRewards(10000, '1m')
 };

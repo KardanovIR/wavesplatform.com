@@ -15,7 +15,7 @@ const CalculatorRevenueContainer = connect(
 
 
 CalculatorRevenueContainer.defaultProps = {
-    minWaves: 0.02,
+    minWaves: 1,
     maxWaves: 100000000,
 };
 
