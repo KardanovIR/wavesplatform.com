@@ -6,6 +6,7 @@ import SectionTitleText from 'src/common/components/SectionTitleText';
 import AvatarTitle from 'src/common/components/AvatarTitle';
 import IconProduct from 'src/common/components/IconProduct';
 import Typography from 'src/common/components/Typography';
+import Link from 'src/common/components/Link';
 import { Row, Col } from 'src/common/components/Grid';
 
 // containers
@@ -45,7 +46,17 @@ const StartMining = () => (
                 <Typography type="body" cut>
                     <FormattedMessage
                         id="leasing.revenue.p1.text1"
-                        defaultMessage="The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves nodes and select the one with the best conditions for you!"
+                        defaultMessage="The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves {nodesLink} and select the one with the best conditions for you!"
+                        values={{
+                            nodesLink: (
+                                <Link pseudo href="#nodes">
+                                    <FormattedMessage
+                                        id="leasing.revenue.p1.text1.link"
+                                        defaultMessage="nodes"
+                                    />
+                                </Link>
+                            ),
+                        }}
                     />
                 </Typography>
                 <Typography type="body" cut>
