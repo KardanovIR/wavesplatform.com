@@ -70,11 +70,11 @@ const palette = {
     orange,
     
     // color helper functions
-    getColor: createColorGetter(palette),
     lighten: lightenDarkenColor,
     darken: (v, amt) => lightenDarkenColor(v, -amt),
     opaque: hexToRgba,
 };
+palette.getColor = createColorGetter(palette);
 
 export { palette };
 export default palette;
