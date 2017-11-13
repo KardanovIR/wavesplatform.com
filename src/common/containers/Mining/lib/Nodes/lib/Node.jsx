@@ -129,7 +129,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
         <Typography type="body">
             <FormattedMessage
                 id="mining.nodes.copyAddress"
-                defaultMessage="Coly leasing address"
+                defaultMessage="Copy leasing address"
             />
         </Typography>
 
