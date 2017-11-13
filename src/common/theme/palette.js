@@ -68,7 +68,7 @@ const palette = {
     gray,
     grayBlue,
     orange,
-
+    
     // color helper functions
     getColor: createColorGetter(palette),
     lighten: lightenDarkenColor,

@@ -1,46 +1,82 @@
-import io from 'socket.io-client';
-
 import { combineEpics } from 'redux-observable';
-
-import { Observable } from 'rxjs'
-
+import { Observable } from 'rxjs/Observable';
+import { prop } from 'ramda';
 
 import {
+    updateUnconfirmedTxs,
     updateConfirmedTxs,
-    START
+    UPDATE_CONFIRMED_TXS,
+    UPDATE_UNCONFIRMED_TXS,
+    updateTime,
+    START,
+    FINISH,
+    finish,
+    error,
+    ERROR,
+    connect,
 } from './ducks';
 
+import initSocket, { forwardToSocket, receiveFromSocket } from './lib/socket';
 
-
-// repeating socket actions transfer
-const forwardToSocket = (socket) => (reduxType, socketAction) =>
-    action$ => action$.ofType(reduxType)
-        .forEach(({ payload }) => socket.emit(socketAction, payload))
-
-
-const receiveFromSocket = socket => socketEvent =>
-    Observable
-        .create(observer => {
-            socket.on(socketEvent, data => observer.next(data))
-            return { dispose: socket.close }
-        })
-        
-
-
-
+const ERROR_TIMEOUT = 60000;
+const TIMER_UPDATE_INTERVAL = 100;
 
 // init socket and combine epics
-export default action$ => {
-    const socket = io('localhost:3002');
-
+export default (action$, store, ...args) => {
+    const socket = initSocket(() => store.dispatch(error('fatal')));
     const forward = forwardToSocket(socket);
 
-    const balanceUpdate = () => receiveFromSocket(socket)('balanceUpdate')
-        .map(({ balance }) => updateConfirmedTxs(balance));
+    const timer = action$ =>
+        action$
+            .ofType(UPDATE_UNCONFIRMED_TXS)
+            .flatMap(() =>
+                Observable.interval(TIMER_UPDATE_INTERVAL).takeUntil(
+                    action$.ofType(FINISH)
+                )
+            )
+            .takeUntil(action$.ofType(ERROR))
+            .map(updateTime);
 
+    const finishTest = (action$, { getState }) =>
+        action$
+            .ofType(UPDATE_CONFIRMED_TXS)
+            .takeUntil(action$.ofType(ERROR))
+            .filter(action => action.payload == getState().stressTest.total) // == on purpose, str/int comparison
+            .map(finish);
+
+    const balanceUpdate = action$ =>
+        receiveFromSocket(socket)('balanceUpdate')
+            .takeUntil(action$.ofType(ERROR))
+            .map(prop('balance'))
+            .map(updateConfirmedTxs);
+
+    const utxUpdate = () =>
+        receiveFromSocket(socket)('utxUpdate')
+            .takeUntil(action$.ofType(ERROR))
+            .map(updateUnconfirmedTxs);
+
+    const socketConnect = () =>
+        receiveFromSocket(socket)('connect').map(connect);
+
+    const errorFromSocket = () =>
+        receiveFromSocket(socket)('testError').map(error);
+
+    const errorTimeout = action$ =>
+        action$
+            .ofType(START)
+            .flatMap(() => Observable.timer(ERROR_TIMEOUT))
+            .takeUntil(action$.ofType(UPDATE_UNCONFIRMED_TXS))
+            .map(error);
 
     return combineEpics(
         balanceUpdate,
-        forward(START, 'startTest')
-    )(action$)
-}
+        finishTest,
+        utxUpdate,
+        timer,
+        errorTimeout,
+        errorFromSocket,
+        socketConnect,
+        forward(START, 'startTest'),
+        forward(ERROR, 'clientError'),
+    )(action$, store, ...args);
+};

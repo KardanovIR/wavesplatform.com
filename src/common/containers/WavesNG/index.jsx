@@ -11,10 +11,10 @@ import Typography from 'src/common/components/Typography';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
+import AnchorScroll from 'src/public/components/AnchorScroll';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
-
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -22,20 +22,14 @@ import StressTest from './lib/StressTest';
 import Descriptions from './lib/Descriptions';
 import Steps from './lib/Steps';
 
-
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-
 import WavesNgLogo from '!svg-react-loader!./img/ng-logo.svg';
 
-
-
-
 const PageLayout = ({ classes }) => (
-    <Layout>
-
+    <Layout hideSnackbar>
         <MainScreenBackground type="dark">
             <MainScreen />
         </MainScreenBackground>
@@ -45,18 +39,24 @@ const PageLayout = ({ classes }) => (
                 <FormattedMessage
                     id="wavesNG.stressTest.title"
                     defaultMessage="{logo} Waves-NG activation stages"
-                    values={{ logo: <span className={classes.logo}><WavesNgLogo /></span> }}
+                    values={{
+                        logo: (
+                            <span className={classes.logo}>
+                                <WavesNgLogo />
+                            </span>
+                        ),
+                    }}
                 />
             </Typography>
             <Margin bottom={4} />
             <Steps />
         </Section>
 
-
         <Section top={2} bottom={4}>
-            <StressTest />
+            <AnchorScroll anchor="stress-test">
+                <StressTest active />
+            </AnchorScroll>
         </Section>
-
 
         <Background className={classes.bgDescriptions} skewed={true}>
             <Section size={4}>
@@ -69,22 +69,15 @@ const PageLayout = ({ classes }) => (
                 <SubscribeSection />
             </Background>
         </div>
-
     </Layout>
 );
 
-
-
-
 const Page = injectSheet(styles)(PageLayout);
-
 
 const App = () => (
     <ThemeProvider>
         <Page />
     </ThemeProvider>
-)
-
-
+);
 
 export default App;

@@ -11,7 +11,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import { createEpicMiddleware } from 'redux-observable';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 
 import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
