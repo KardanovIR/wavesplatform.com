@@ -1,64 +1,60 @@
+import capitalizeFirstLetter from 'src/common/utils/capitalizeFirstLetter';
+
 const directions = ['top', 'bottom'];
-
-
-function capitalize(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
 
 const createClassesForSide = theme => side => ({
     [`padding-${side}-1`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 4,
+        [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 4,
         [theme.breakpoints.up('sm')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 5,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 5,
         },
         [theme.breakpoints.up('md')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 6,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 6,
         },
         [theme.breakpoints.up('lg')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 8,
         },
     },
 
     // section narrow
     [`padding-${side}-2`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 6,
+        [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 6,
         [theme.breakpoints.up('sm')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 7,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 7,
         },
         [theme.breakpoints.up('md')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 8,
         },
         [theme.breakpoints.up('lg')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 10,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 10,
         },
     },
     
     // section
     [`padding-${side}-3`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 8,
+        [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 8,
         [theme.breakpoints.up('sm')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 10,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 10,
         },
         [theme.breakpoints.up('md')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 12,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 12,
         },
         [theme.breakpoints.up('lg')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 14,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 14,
         },
     },
 
     // section wide
     [`padding-${side}-4`]: {
-        [`padding${capitalize(side)}`]: theme.spacing.unit * 9,
+        [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 9,
         [theme.breakpoints.up('sm')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 11,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 11,
         },
         [theme.breakpoints.up('md')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 15,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 15,
         },
         [theme.breakpoints.up('lg')]: {
-            [`padding${capitalize(side)}`]: theme.spacing.unit * 20,
+            [`padding${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 20,
         },
     },
 

@@ -18,7 +18,7 @@ class Input extends PureComponent {
     static defaultProps = {
         tagName: "input",
         className: '',
-        invalid: false
+        invalid: false,
     }
 
 
@@ -36,6 +36,7 @@ class Input extends PureComponent {
             theme, // eslint-disable-line
             sheet, // eslint-disable-line
             tagName,
+            secondary,
             ...rest
         } = this.props;
 
@@ -52,6 +53,8 @@ class Input extends PureComponent {
                 [classes.textarea]: tagName === "textarea",
                 [classes.invalid]: invalid,
                 [classes.disabled]: disabled,
+                [classes.primary]: !secondary,
+                [classes.secondary]: secondary,
             },
             classNameProp
         )

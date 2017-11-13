@@ -9,7 +9,7 @@ import styles from './styles';
 
 
 
-class Input extends PureComponent {
+class Select extends PureComponent {
     static propTypes = {
         name: PropTypes.string,
         className: PropTypes.string,
@@ -17,7 +17,7 @@ class Input extends PureComponent {
         options: PropTypes.arrayOf(
             PropTypes.shape({
                 value: PropTypes.string.isRequired,
-                content: PropTypes.node.isRequired,
+                name: PropTypes.string.isRequired,
             }).isRequired
         )
     }
@@ -28,8 +28,15 @@ class Input extends PureComponent {
         name: ''
     }
 
+    handleChange = e => {
+        this.props.onChange(e);
+        this.props.onSelect(e.target.value);
+    }
+
     render() {
         const {
+            name,
+            
             classes,
             className: classNameProp,
 
@@ -40,6 +47,10 @@ class Input extends PureComponent {
 
             theme, // eslint-disable-line
             sheet, // eslint-disable-line
+            
+            onChange, // eslint-disable-line
+            onSelect, // eslint-disable-line
+
             ...rest
         } = this.props;
 
@@ -54,14 +65,17 @@ class Input extends PureComponent {
         )
 
         return (
-            <select name={name} className={className} {...rest}>
+            <select name={name} className={className} onChange={this.handleChange} {...rest}>
                 {options.length && options.map((opt, i) => (
-                    <option value={opt.value} key={`${name}_option_${i}`}>{opt.content}</option>
+                    <option value={opt.value} key={`${name}_option_${i}`}>{opt.name}</option>
                 ))}
             </select>
         )
     }
 }
 
+Select.defaultProps = {
+    onChange: () => {}
+}
 
-export default injectSheet(styles)(Input);
+export default injectSheet(styles)(Select);

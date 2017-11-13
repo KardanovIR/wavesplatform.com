@@ -13,59 +13,58 @@ import ru from 'react-intl/locale-data/ru';
 
 import locale from 'src/server/locale';
 
-addLocaleData([...en,...ru]);
-
-
+addLocaleData([...en, ...ru]);
 
 // React html component with <html>, <head> etc.
 import Html from 'src/server/components/Html';
 import FontInliner from 'src/server/components/FontInliner';
 
-
 import isProd from 'src/common/utils/isProd';
 import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
-
-
 checkEnvVariable('SERVER_NAME');
-const store = createStore(s => s, {});
 
-
-
-export const render = function({
-    script: scriptName,
-    component: Component = 'span',
-    title = 'Waves Platform',
-    // messages = {},
-    description
-} = {}) {
+export const render = function(
+    {
+        script: scriptName,
+        component: Component = 'span',
+        reducer = s => s,
+        title = 'Waves Platform',
+        // messages = {},
+        description,
+    } = {}
+) {
     return async ctx => {
-
-
-
         // enable SSR only for production
         let RenderedComponent;
         if (process.env.NODE_ENV === 'production') {
-            RenderedComponent = <Component initialState={ctx.state.initialState} />;
+            RenderedComponent = (
+                <Component initialState={ctx.state.initialState} />
+            );
         } else {
             RenderedComponent = <span />;
         }
 
         // log render time
         const renderStart = new Date();
+        // create store
+        const store = createStore(reducer, ctx.state.initialState);
         // render component markup and styles
-        const sheets = new SheetsRegistry();
+        const sheets = new SheetsRegistry();        
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
-                <Provider store={store}>    
-                    <IntlProvider locale={ctx.locale} defaultLocale="en" messages={locale[ctx.locale]}>
-                        { RenderedComponent }
+                <Provider store={store}>
+                    <IntlProvider
+                        locale={ctx.locale}
+                        defaultLocale="en"
+                        messages={locale[ctx.locale]}
+                    >
+                        {RenderedComponent}
                     </IntlProvider>
                 </Provider>
             </JssProvider>
-        )
+        );
         ctx.accessLog.renderTime = new Date() - renderStart;
-
 
         // fonts
         const fonts = new SheetsRegistry();
@@ -73,8 +72,7 @@ export const render = function({
             <JssProvider registry={fonts}>
                 <FontInliner />
             </JssProvider>
-        )
-
+        );
 
         // script paths
         let vendorChunk;
@@ -87,7 +85,6 @@ export const render = function({
         } else {
             script = `/static/${scriptName}.js`;
         }
-
 
         const html = renderToStaticMarkup(
             <Html
@@ -109,5 +106,5 @@ export const render = function({
         );
 
         ctx.body = `<!DOCTYPE html>${html}`;
-    }
-}
+    };
+};

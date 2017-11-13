@@ -36,7 +36,7 @@ const styles = theme => ({
 
 
 
-const AvatarWithText = ({
+const AvatarTitleText = ({
     classes,
     className,
     avatar,
@@ -68,9 +68,9 @@ const AvatarWithText = ({
 }
 
 
-AvatarWithText.defaultProps = {
+AvatarTitleText.defaultProps = {
     centered: false
 }
 
 
-export default injectSheet(styles)(AvatarWithText);
+export default injectSheet(styles)(AvatarTitleText);

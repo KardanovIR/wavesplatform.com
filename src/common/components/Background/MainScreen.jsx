@@ -70,7 +70,6 @@ const MainScreenBackground = ({
                     {
                         [classes.dark]: type === "dark",
                         [classes.light]: type === "light",
-                        // [classes.common]: type === "common",
                     },
                     className
                 )}

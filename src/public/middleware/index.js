@@ -1,2 +1,8 @@
-// @todo implement middleware here
-export { default as googleAnalytics } from './googleAnalytics';
+import { applyMiddleware, compose } from 'redux';
+import googleAnalytics from './googleAnalytics';
+import logCalculatorInteraction from './logCalculatorInteraction';
+
+export default compose(
+	applyMiddleware(googleAnalytics),
+	applyMiddleware(logCalculatorInteraction),
+)

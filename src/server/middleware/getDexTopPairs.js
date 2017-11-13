@@ -3,7 +3,7 @@ import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
 checkEnvVariable('INFO_API');
 
-const getDexTopPairs = async (ctx, next) => {
+export default async (ctx, next) => {
     const start = Date.now();
 
     await fetchJson(`${process.env.INFO_API}/pairs`)
@@ -16,5 +16,3 @@ const getDexTopPairs = async (ctx, next) => {
     
     await next();
 }
-
-export { getDexTopPairs };

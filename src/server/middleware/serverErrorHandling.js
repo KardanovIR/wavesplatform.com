@@ -10,6 +10,8 @@ export default async (ctx, next) => {
         if (process.env.NODE_ENV !== 'production') {
             ctx.body = err.message;
         }
+
+        // console.log(err);
         
         ctx.app.emit('error', err, ctx);
     }

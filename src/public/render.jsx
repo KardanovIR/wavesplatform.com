@@ -26,7 +26,7 @@ addLocaleData([...en, ...ru]);
 
 
 // custom middleware
-import { googleAnalytics } from './middleware';
+import customMiddleware from './middleware';
 
 
 
@@ -51,7 +51,7 @@ function run(Component, {
         reducer,
         initialState,
         compose(
-            applyMiddleware(googleAnalytics),
+            customMiddleware,
             applyMiddleware(thunk),
             applyMiddleware(createEpicMiddleware(epic)),
             window.devToolsExtension ? window.devToolsExtension() : f => f

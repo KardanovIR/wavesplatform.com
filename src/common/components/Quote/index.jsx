@@ -47,7 +47,7 @@ const styles = theme => ({
 
 
 
-const FeedbackQuote = ({
+const Quote = ({
     classes,
     avatar,
     children,
@@ -74,9 +74,9 @@ const FeedbackQuote = ({
     )
 
 
-FeedbackQuote.defaultProps = {
+Quote.defaultProps = {
     avatar: null
 }
 
 
-export default injectSheet(styles)(FeedbackQuote);
+export default injectSheet(styles)(Quote);

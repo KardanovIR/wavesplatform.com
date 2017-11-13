@@ -2,63 +2,10 @@ import React from 'react';
 
 import cn from 'classnames';
 
-
 import injectSheet from 'react-jss';
+import styles from './styles';
 
-const styles = theme => ({
-    link: {
-        color: theme.palette.primary[500],
-        textDecoration: 'none',
-        cursor: 'pointer',
-
-        borderBottom: `1px solid ${theme.palette.opaque(theme.palette.primary[500], 0.5)}`,
-
-        '&:hover': {
-            color: theme.palette.primary[300],
-            borderColor: theme.palette.opaque(theme.palette.primary[300], 0.5),
-        },
-        '&:active': {
-            color: theme.palette.primary[300],
-            borderColor: theme.palette.opaque(theme.palette.primary[300], 0.5),
-        },
-    },
-
-    pseudo: {
-        borderBottomStyle: 'dashed !important',
-    },
-
-    noDecoration: {
-        border: 0
-    },
-
-    secondary: {
-        color: theme.palette.orange[300],
-        borderColor: theme.palette.opaque(theme.palette.orange[300], 0.5),
-        '&:hover': {
-            color: theme.palette.gray[0],
-            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
-        },
-        '&:active': {
-            color: theme.palette.gray[0],
-            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
-        },
-    },
-
-    inverted: {
-        color: theme.palette.grayBlue[200],
-        borderColor: theme.palette.opaque(theme.palette.grayBlue[200], 0.5),
-        '&:hover': {
-            color: theme.palette.gray[0],
-            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
-        },
-        '&:active': {
-            color: theme.palette.gray[0],
-            borderColor: theme.palette.opaque(theme.palette.gray[0], 0.5),
-        },
-    }
-})
-
-
+import Newtab from '!svg-react-loader!./img/newtab.svg';
 
 const Link = ({
     classes,
@@ -70,30 +17,53 @@ const Link = ({
     sheet, // eslint-disable-line
     theme, // eslint-disable-line
     href,
+    target,
+    icon,
+    children,
     ...rest
 }) => {
+    const targetBlank = target === '_blank' || target === 'blank';
+    const Element = href ? 'a' : 'span';
+
+    if (targetBlank && !href)
+        throw new Error('A link with target="_blank" requires href attribute');
+
     const className = cn(
-        classes.link,
         {
+            [classes.primary]: !secondary && !inverted,
             [classes.inverted]: inverted,
             [classes.secondary]: secondary,
-            [classes.pseudo]: pseudo,
-            [classes.noDecoration]: !textDecoration,
         },
         classNameProp
     );
 
-    const Element = href ? 'a' : 'span';
+    const classNameText = cn(classes.text, {
+        [classes.pseudo]: pseudo,
+        [classes.noDecoration]: !textDecoration,
+    });
+
+    const iconElement =
+        icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
 
     return (
-        <Element href={href} className={className} { ...rest } />
-    )
-}
-
+        <Element
+            href={href}
+            className={cn(classes.link, className, classes.noDecoration)}
+            target={target}
+            {...rest}
+        >
+            <span className={classNameText}>
+                {children}
+            </span>
+            {!!iconElement && (
+                <span className={classes.icon}>{iconElement}</span>
+            )}
+        </Element>
+    );
+};
 
 Link.defaultProps = {
-    textDecoration: true
-}
-
+    textDecoration: true,
+};
 
 export default injectSheet(styles)(Link);

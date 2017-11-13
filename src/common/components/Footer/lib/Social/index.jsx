@@ -20,6 +20,7 @@ const Social = ({ classes }) => (
                 <Link
                     href={icon.href}
                     target="_blank"
+                    icon={null}
                     className={classes.icon}
                     textDecoration={false}
                 >

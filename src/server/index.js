@@ -34,7 +34,7 @@ app
     .use(router.routes());
 
 
-if (isProd()) {
+if (process.env.NODE_ENV === 'production') {
     app.on('error', err => {
         Raven.captureException(err, (err, eventId) => {
             console.log('Reported error ' + eventId);
