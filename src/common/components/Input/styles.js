@@ -32,21 +32,36 @@ const styles = theme => ({
 
         borderRadius: theme.spacing.radius,
 
-        backgroundColor: theme.palette.grayBlue[700],
-        color: theme.palette.grayBlue[200],
-
         boxSizing: 'border-box',
         padding: theme.spacing.getSpacing(0, 1.5),
 
         transition: theme.transitions.create(['background-color']),
 
-        '&:focus': {
-            backgroundColor: theme.palette.grayBlue[600],
-        },
-
         '&::-moz-placeholder': {
             opacity: 1,
         },
+        
+    },
+    primary: {
+        backgroundColor: theme.palette.grayBlue[700],
+        color: theme.palette.grayBlue[200],
+
+        '&:focus': {
+            backgroundColor: theme.palette.grayBlue[600],
+        },
+        
+        ...setPlaceholderColor(theme.palette.grayBlue[400]),
+    },
+    secondary: {
+        backgroundColor: theme.palette.gray[0],
+        color: theme.palette.primary[700],
+
+        border: `1px solid ${theme.palette.gray[400]}`,
+
+        '&:focus': {
+            borderColor: theme.palette.primary[700],
+        },
+        
         ...setPlaceholderColor(theme.palette.grayBlue[400]),
     },
     input: {

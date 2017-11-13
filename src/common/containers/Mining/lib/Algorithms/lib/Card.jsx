@@ -10,7 +10,7 @@ import Divider from 'src/common/components/Divider';
 // import cn from 'classnames';
 
 const styles = theme => ({
-    [theme.mixins.atMedia('md')]: {
+    [theme.mixins.atMedia('sm')]: {
         wrapper: {
             height: '100%',
         },
@@ -18,13 +18,6 @@ const styles = theme => ({
 });
 
 const Card = ({ classes, imageMobile, image, text, title }) => {
-    // const wrapperClasses = cn(
-    //     classes.avatarWrapper,
-    //     {
-    //         [classes.small]: small
-    //     }
-    // );
-
     return (
         <Panel className={classes.wrapper}>
             <Typography type="display1" tagName="div">

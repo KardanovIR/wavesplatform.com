@@ -1,9 +1,12 @@
 import fetchJson from 'src/server/utils/fetchJson';
+import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
-const getDexTopPairs = async (ctx, next) => {
+checkEnvVariable('INFO_API');
+
+export default async (ctx, next) => {
     const start = Date.now();
 
-    await fetchJson('http://13.56.20.226/pairs')
+    await fetchJson(`${process.env.INFO_API}/pairs`)
         .then(res => ctx.state.initialState = { ...ctx.state.initialState, dexTopPairs: res } )
         .catch(err => ctx.throw(500, 'Unable to get DEX top pairs'));
 
@@ -13,5 +16,3 @@ const getDexTopPairs = async (ctx, next) => {
     
     await next();
 }
-
-export { getDexTopPairs };

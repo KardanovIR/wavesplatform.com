@@ -57,10 +57,16 @@ function Hidden(props) {
     });
 
     if (only) {
-        className.push(classes[`only${capitalizeFirstLetter(only)}`]);
+        if (typeof only === 'string') {
+            className.push(classes[`only${capitalizeFirstLetter(only)}`]);
+        } else {
+            only.forEach(bp =>
+                className.push(classes[`only${capitalizeFirstLetter(bp)}`])
+            );
+        }
     }
 
-    return <span className={className}>{children}</span>;
+    return <span className={className.join(' ')}>{children}</span>;
 }
 
 export default injectSheet(styles)(Hidden);

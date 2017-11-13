@@ -16,7 +16,10 @@ import { FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
 
-const StartMining = () => (
+import injectSheet from 'react-jss';
+import styles from './styles';
+
+const StartMining = ({ classes }) => (
     <div>
         <SectionTitleText
             title={
@@ -44,14 +47,17 @@ const StartMining = () => (
         />
 
         <Row>
-            <Col xs={12} sm={6} md={3}>
-                <div>
+            <Col xs={12} sm={6} lg={3} className={classes.col}>
+                <div className={classes.imageWrapper}>
                     <ImageNode />
+                    <div className={classes.arrow} />
+                    <div className={classes.arrowMobile} />
                 </div>
-                <Typography tagName="div" align="center">
+                <Margin bottom={1} />
+                <Typography tagName="div" align="center" className={classes.message}>
                     <FormattedMessage
                         id="mining.startMining.download.title"
-                        defaultMessage="Download the Waves Node"
+                        defaultMessage="1. Download the Waves Node"
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -66,16 +72,20 @@ const StartMining = () => (
                         defaultMessage="Waves node"
                     />
                 </IconButton>
+                <Margin bottom={5} />
             </Col>
 
-            <Col xs={12} sm={6} md={3}>
-                <div>
+            <Col xs={12} sm={6} lg={3} className={classes.col}>
+                <div className={classes.imageWrapper}>
                     <ImageInstall />
+                    <div className={classes.arrow} />
+                    <div className={classes.arrowMobile} />
                 </div>
-                <Typography tagName="div" align="center">
+                <Margin bottom={1} />
+                <Typography tagName="div" align="center" className={classes.message}>
                     <FormattedMessage
                         id="mining.startMining.install.title"
-                        defaultMessage="Install Node"
+                        defaultMessage="2. Install Node"
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -90,16 +100,20 @@ const StartMining = () => (
                         defaultMessage="How to install"
                     />
                 </IconButton>
+                <Margin bottom={5} />
             </Col>
 
-            <Col xs={12} sm={6} md={3}>
-                <div>
+            <Col xs={12} sm={6} lg={3} className={classes.col}>
+                <div className={classes.imageWrapper}>
                     <ImageConfigure />
+                    <div className={classes.arrow} />
+                    <div className={classes.arrowMobile} />
                 </div>
-                <Typography tagName="div" align="center">
+                <Margin bottom={1} />
+                <Typography tagName="div" align="center" className={classes.message}>
                     <FormattedMessage
                         id="mining.startMining.configure.title"
-                        defaultMessage="Configure Node"
+                        defaultMessage="3. Configure Node"
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -114,16 +128,18 @@ const StartMining = () => (
                         defaultMessage="Configuration"
                     />
                 </IconButton>
+                <Margin bottom={5} />
             </Col>
             
-            <Col xs={12} sm={6} md={3}>
-                <div>
+            <Col xs={12} sm={6} lg={3} className={classes.col}>
+                <div className={classes.imageWrapper}>
                     <ImageDone />
                 </div>
-                <Typography tagName="div" align="center">
+                <Margin bottom={1} />
+                <Typography tagName="div" align="center" className={classes.message}>
                     <FormattedMessage
                         id="mining.startMining.done.title"
-                        defaultMessage="Готово! Нода автоматически начинает майнить"
+                        defaultMessage="4. Ready! Your node automatically starts mining."
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -132,4 +148,4 @@ const StartMining = () => (
     </div>
 );
 
-export default StartMining;
+export default injectSheet(styles)(StartMining);

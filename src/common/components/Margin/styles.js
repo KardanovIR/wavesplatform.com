@@ -3,7 +3,7 @@ import capitalizeFirstLetter from 'src/common/utils/capitalizeFirstLetter';
 const directions = ['top', 'right', 'bottom', 'left'];
 
 const createClassesForSide = theme => side => ({
-    [`margin-${side}-05`]: {
+    [`margin-${side}-0.5`]: {
         [`margin${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 0.5,
 
         [theme.mixins.atMedia('md')]: {

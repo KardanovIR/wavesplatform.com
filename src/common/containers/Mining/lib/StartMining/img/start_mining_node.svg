@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="162" height="110" viewBox="0 0 162 110">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188" height="126" viewBox="0 0 188 126">
   <defs>
     <polygon id="start_mining_node-a" points="0 .398 49.436 .398 49.436 34.665 0 34.665"/>
     <polygon id="start_mining_node-c" points=".019 .398 49.545 .398 49.545 34.726 .019 34.726"/>
   </defs>
-  <g fill="none" fill-rule="evenodd">
+  <g fill="none" fill-rule="evenodd" transform="translate(16 14)">
     <rect width="121" height="35" fill="#E0E1E6" rx="3"/>
     <rect width="121" height="35" y="37" fill="#E0E1E6" rx="3"/>
     <path stroke="#FFF" stroke-linecap="square" stroke-width="2" d="M15.5 11L55.512498 11M15.5 15L55.512498 15M15.5 48L55.512498 48M15.5 52L55.512498 52"/>

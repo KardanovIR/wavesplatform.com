@@ -18,12 +18,10 @@ const DevelopersMainScreen = ({ onWavesNodeClick }) => (
         }
         text={
             <FormattedMessage
-                id="developers.text"
+                id="mining.text"
                 defaultMessage="Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 1% monthly on your WAVES balance."
             />
         }
-        /* imageDesktop={<Image />} */
-        /* imageMobile={<ImageMobile />} */
         buttons={[
             <IconButton
                 onClick={onWavesNodeClick}

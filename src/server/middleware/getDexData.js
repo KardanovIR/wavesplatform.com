@@ -1,9 +1,12 @@
 import fetchJson from 'src/server/utils/fetchJson';
+import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
-const getDexData = async (ctx, next) => {
+checkEnvVariable('INFO_API');
+
+export default async (ctx, next) => {
     const start = Date.now();
 
-    await fetchJson('http://13.56.20.226/general')
+    await fetchJson(`${process.env.INFO_API}/general`)
         .then(res => ctx.state.initialState = { ...ctx.state.initialState, dexData: res } )
         .catch(err => ctx.throw(500, 'Unable to fetch DEX general data'));
 
@@ -13,5 +16,3 @@ const getDexData = async (ctx, next) => {
 
     await next();
 }
-
-export { getDexData };

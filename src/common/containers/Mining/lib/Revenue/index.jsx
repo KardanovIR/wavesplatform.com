@@ -1,17 +1,17 @@
 import React from 'react';
 
+// components
 import Margin from 'src/common/components/Margin';
 import SectionTitleText from 'src/common/components/SectionTitleText';
-import Link from 'src/common/components/Link';
 import AvatarTitle from 'src/common/components/AvatarTitle';
 import IconProduct from 'src/common/components/IconProduct';
 import Typography from 'src/common/components/Typography';
-import IconButton from 'src/common/components/Button/Icon';
 import { Row, Col } from 'src/common/components/Grid';
 
-import { FormattedMessage } from 'react-intl';
+// containers
+import Calculator from 'src/common/containers/CalculatorRevenue';
 
-// import url from 'src/common/utils/url';
+import { FormattedMessage } from 'react-intl';
 
 const StartMining = () => (
     <div>
@@ -51,7 +51,7 @@ const StartMining = () => (
                 <Typography type="body" cut>
                     <FormattedMessage
                         id="mining.revenue.p1.text2"
-                        defaultMessage="In addition to any WAVES they receive, nodes will receives 10 MRT per block they generate, though not more than 700 MRT per day."
+                        defaultMessage="In addition to any WAVES they receive, nodes will receive 20 MRT per block for the first 70 blocks they generate per day, with 10 MRT per block awarded thereafter."
                     />
                 </Typography>
             </Col>
@@ -95,7 +95,7 @@ const StartMining = () => (
 
         <Row>
             <Col xs={12} md={9}>
-                Калькулятор
+                <Calculator minWaves={10000} />
             </Col>
 
             <Col xs={12} md={3}>
@@ -106,8 +106,6 @@ const StartMining = () => (
                             defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."
                         />
                     </Typography>
-                    <Margin bottom={3} />
-                    Здесь будет график
                 </Margin>
             </Col>
         </Row>

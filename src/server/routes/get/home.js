@@ -1,6 +1,6 @@
 import compose from 'koa-compose';
 
-import { getDexData } from 'src/server/middleware/getDexData';
+import getDexData from 'src/server/middleware/getDexData';
 import { render } from 'src/server/middleware/render';
 
 
