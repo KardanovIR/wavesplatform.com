@@ -25,7 +25,7 @@ const StartMining = () => (
             text={
                 <FormattedMessage
                     id="mining.revenue.text"
-                    defaultMessage="By supporting the Waves network, you can earn up to 1% per month on your balance."
+                    defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
                 />
             }
         />
@@ -51,7 +51,7 @@ const StartMining = () => (
                 <Typography type="body" cut>
                     <FormattedMessage
                         id="mining.revenue.p1.text2"
-                        defaultMessage="In addition to any WAVES they receive, nodes will receive 20 MRT per block for the first 70 blocks they generate per day, with 10 MRT per block awarded thereafter."
+                        defaultMessage="In addition to any WAVES they receive, nodes will receive 60 MRT per block for the first 70 blocks they generate per day, with 30 MRT per block awarded thereafter."
                     />
                 </Typography>
             </Col>

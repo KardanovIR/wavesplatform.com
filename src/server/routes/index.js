@@ -13,7 +13,6 @@ import company from './get/company';
 
 // page components
 import Developers from 'src/common/containers/Developers';
-import Company from 'src/common/containers/Company';
 import GetWaves from 'src/common/containers/GetWaves';
 
 

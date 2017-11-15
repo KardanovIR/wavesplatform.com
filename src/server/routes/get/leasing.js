@@ -8,12 +8,12 @@ import Leasing from 'src/common/containers/Leasing';
 import reducer from 'src/common/containers/Leasing/reducer';
 
 export default compose([
-    getWavesTopNodes,
-    getMrtWavesPrice,
-    render({
-        script: 'leasing',
-        component: Leasing,
-        reducer,
-        description: 'Support the Waves Network',
-    }),
+  getWavesTopNodes,
+  getMrtWavesPrice,
+  render({
+    script: 'leasing',
+    component: Leasing,
+    reducer,
+    description: 'Support the Waves Network',
+  }),
 ]);

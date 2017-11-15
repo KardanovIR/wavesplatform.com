@@ -1,10 +1,10 @@
 import { multiply, map } from 'ramda';
 
-const TOTAL_MINERS_BALANCE = 50000000; // 50 mil
-const AVG_WAVES_PER_DAY = 50;
+const TOTAL_MINERS_BALANCE = 45000000; // 50 mil
+const AVG_WAVES_PER_DAY = 100;
 const BLOCKS_PER_DAY = 1440;
 const MRT_BLOCKS_THRESHOLD = 70;
-const MRT_PER_BLOCK = 10;
+const MRT_PER_BLOCK = 30;
 
 
 const getDailyRewards = balance => {

@@ -26,7 +26,7 @@ const StartMining = () => (
             text={
                 <FormattedMessage
                     id="mining.revenue.text"
-                    defaultMessage="By supporting the Waves network, you can earn up to 1% per month on your balance."
+                    defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
                 />
             }
         />
