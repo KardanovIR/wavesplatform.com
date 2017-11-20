@@ -70,7 +70,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
                     >
                         <FormattedMessage
                             id="mining.nodes.node1.quote"
-                            defaultMessage="We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools."
+                            defaultMessage="WavesGo’s mission is to make blockchain accessible to the masses. This ideal is reflected in our different services. First and foremost, we are proud to run Waves’ largest mining pool, to which hundreds of community members have already leased their stakes. We maintain and develop the officially endorsed, feature-rich blockchain explorer at WavesGo. com, which is visited by thousands of users every single day. We also have more services and products in the pipeline, all of which serve one major goal — to expand the thriving ecosystem around the Waves Platform. WavesGo is more than proud to be able to support Waves in such a meaningful way."
                         />
                     </Quote>
                 </Col>
@@ -90,7 +90,7 @@ const WavesNodes = ({ wavesTopNodes }) => {
                     <Typography type="display1">
                         <FormattedMessage
                             id="mining.nodes.node2.title"
-                            defaultMessage="WavesNode.net represents a developing community in Holland. The node accepts multiple tokens for fees and has a growing list of supporters — as well as offering unique Waves merchandise!"
+                            defaultMessage="Wavesnode.NET represents a developing community in Holland. The node accepts multiple tokens for fees and has a growing list of supporters — as well as offering unique Waves merchandise!"
                         />
                     </Typography>
 
@@ -100,13 +100,13 @@ const WavesNodes = ({ wavesTopNodes }) => {
                         signature={
                             <FormattedMessage
                                 id="mining.nodes.node2.signature"
-                                defaultMessage="Wavesnode.net Team"
+                                defaultMessage="Wavesnode.NET Team"
                             />
                         }
                     >
                         <FormattedMessage
                             id="mining.nodes.node2.quote"
-                            defaultMessage="We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools."
+                            defaultMessage="Running our fullnode since the start of the platform gave us a thorough knowledge about the Wavesplatform and we are also providing 30+ years combined experience in IT and 7+ years in Crypto. We have a lot to offer with our Wavesnode.NET fullnode for starting projects on the Wavesplatform and are proud owners of the first shop accepting payments in a Waves asset. With our services we are taking technical work out of our clients hands and providing them a trustfull partner to work with at the Wavesplatform. Clients will have their peace of mind, letting Wavesnode.NET handle all the technical work needed. We can assist clients step by step in the process and provide strategic advice on how to move forward with their projects. All our services to be bought with our WNET token."
                         />
                     </Quote>
                 </Col>
