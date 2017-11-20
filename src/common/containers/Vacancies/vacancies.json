@@ -49,30 +49,6 @@
 		]
 	},
 	{
-		"title": "QA / Test Automation",
-		"location": "Moscow",
-		"blocks": [
-			{
-				"title": "Responsibilities:",
-				"elements": [
-					"Analysis of new functionalities, test of design",
-					"Hand testing of client and server applications",
-					"Writing automatic tests for client and server applications",
-					"Writing and fine-tuning of frameworks for automated testing"
-				]
-			},
-			{
-				"title": "Requirements:",
-				"elements": [
-					"Knowledge of the theoretical basis of QA and testing",
-					"Experience manually testing in a team of developers",
-					"Sufficient experience in programming to write automatic tests and to fine-tune frameworks (Java and Scala preferred)",
-					"Understanding of the specifics of blockchain, cryptocurrencies, and fintech products (preferred)"
-				]
-			}
-		]
-	},
-	{
 		"title": "Analyst",
 		"location": "Moscow",
 		"blocks": [
