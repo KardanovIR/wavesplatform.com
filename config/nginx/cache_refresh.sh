@@ -1,4 +1,4 @@
-pages=( '' 'product' 'company' 'developers' 'get-waves' '404');
+pages=( '' 'product' 'company' 'developers' 'get-waves' '404' 'mining' 'leasing' );
 
 
 for i in "${pages[@]}"
