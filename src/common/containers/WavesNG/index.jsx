@@ -29,7 +29,7 @@ import styles from './styles';
 import WavesNgLogo from '!svg-react-loader!./img/ng-logo.svg';
 
 const PageLayout = ({ classes }) => (
-    <Layout hideSnackbar>
+    <Layout>
         <MainScreenBackground type="dark">
             <MainScreen />
         </MainScreenBackground>

@@ -3,7 +3,6 @@ import React from 'react';
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
-import SnackbarStressTest from 'src/common/components/SnackbarStressTest';
 
 import links from './links';
 
@@ -33,7 +32,7 @@ const Layout = ({
     classes,
     activeLink,
     hideFooter,
-    hideSnackbar,
+    // hideSnackbar,
 }) => (
     <Wrapper>
         <div className={classes.navigationWrapper}>
@@ -41,7 +40,7 @@ const Layout = ({
         </div>
         <div>{children}</div>
         {!hideFooter && <Footer links={links} />}
-        {!hideSnackbar && <SnackbarStressTest />}
+        {/* {!hideSnackbar && <SnackbarStressTest />} */}
     </Wrapper>
 );
 
