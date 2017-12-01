@@ -6,8 +6,9 @@ const Piwik = () => (
     dangerouslySetInnerHTML={{
       __html: `var _paq = _paq || [];
           /* recognize subdomains */
+					_paq.push(['setDocumentTitle', document.domain + "/" + document.title]);
           _paq.push(['setCookieDomain', '*.wavesplatform.com']);
-          _paq.push(['setDomains', '*.wavesplatform.com']);
+					_paq.push(['setDomains', '*.wavesplatform.com']);
 
           _paq.push(['trackPageView']);
           _paq.push(['enableLinkTracking']);
