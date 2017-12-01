@@ -45,7 +45,6 @@ const categoryMap = {
 
 export default store => next => action => {
   if (action.log && window._paq) {
-    console.log(['trackEvent', action.type, categoryMap[action.type]]);
     window._paq.push(['trackEvent', categoryMap[action.type], action.type]);
   }
   next(action);
