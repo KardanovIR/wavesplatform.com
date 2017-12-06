@@ -23,14 +23,14 @@ class Viewport {
 
     this._handleScroll(null, {
       scroll: {
-        top: window.pageYOffset,
+        top: canUseDOM ? window.pageYOffset : 0,
       },
     });
 
     this._handleResize(null, {
       resize: {
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: canUseDOM ? window.innerWidth : 0,
+        height: canUseDOM ? window.innerHeight : 0,
       },
     });
   }
