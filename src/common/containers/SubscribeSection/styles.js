@@ -13,7 +13,7 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('md')]: {
         root: {
-            padding: theme.spacing.getSpacing(20, 0, 20)
+            padding: theme.spacing.getSpacing(10, 0)
         },
         formWrapper: {
             margin: `${theme.spacing.unit * 4}px auto 0`,

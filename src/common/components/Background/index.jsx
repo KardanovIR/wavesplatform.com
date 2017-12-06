@@ -28,9 +28,6 @@ const styles = {
 
         zIndex: -1
     },
-    skewed: {
-        transform: 'translate(-50%, -50%) skewY(-5deg)',
-    }
 }
 
 
@@ -40,13 +37,11 @@ const Background = ({
     className,
     wrapperClassName,
     style,
-    skewed
 }) => (
     <div className={cn(classes.wrapper, wrapperClassName)}>
         <div
             className={cn(
                 classes.background,
-                { [classes.skewed]: skewed },
                 className
             )}
             style={style}

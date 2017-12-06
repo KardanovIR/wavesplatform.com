@@ -19,7 +19,9 @@ const MainScreen = ({
         <Row className={classes.root} alignItems="center">
             <Col xs={12} sm={6} className={classes.imageCol}>
                 <div className={classes.imageWrapper}>
-                    <div className={classes.image} />
+                  <div className={classes.imageContainer}>
+                    <img src={require('./img/image.jpg')} srcSet={`${require('./img/image.jpg')} 1x, ${require('./img/image@2x.jpg')} 2x`} alt="" className={classes.image} />
+                  </div>
                 </div>
                 <Margin />
             </Col>

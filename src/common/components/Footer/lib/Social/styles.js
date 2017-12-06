@@ -7,10 +7,11 @@ export default theme => ({
         width: 30,
         height: 30,
         margin: [theme.spacing.unit, 0],
-        color: theme.palette.gray[600],
-        transition: theme.transitions.create('color'),
+        color: '#fff',
+        transition: theme.transitions.create('opacity'),
+        opacity: .6,
         '&:hover': {
-            color: theme.palette.gray[0],
+            opacity: 1
         }
     },
     col: flexCentered,

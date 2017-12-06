@@ -5,46 +5,22 @@ import Typography from 'src/common/components/Typography';
 
 import cn from 'classnames';
 
+const styles = () => ({
+  'wrapper-right': {
+    textAlign: 'right',
+  },
+});
 
-
-const styles = theme => ({
-    'wrapper-left': {
-        borderLeft: `6px solid ${theme.palette.primary[500]}`,
-        padding: theme.spacing.getSpacing(0, 0, 0, 2)
-    },
-    'wrapper-right': {
-        textAlign: 'right',
-        borderRight: `6px solid ${theme.palette.primary[500]}`,
-        padding: theme.spacing.getSpacing(0, 2, 0, 0)
-    },
-    [theme.mixins.atMedia('md')]: {
-        'wrapper-left': {
-            padding: theme.spacing.getSpacing(0.5, 0, 0, 5)
-        },
-        'wrapper-right': {
-            padding: theme.spacing.getSpacing(0.5, 5, 0, 0)
-        },
-    }
-})
-
-
-
-const BlockQuote = ({
-    classes,
-    className,
-    children,
-    align
-}) => (
-        <div className={cn(classes[`wrapper-${align}`], className)}>
-            <Typography type="quote" align={align} cut={30}>
-                {children}
-            </Typography>
-        </div>
-    )
+const BlockQuote = ({ classes, className, children, align }) => (
+  <div className={cn(classes[`wrapper-${align}`], className)}>
+    <Typography type="quote" align={align} cut={30}>
+      {children}
+    </Typography>
+  </div>
+);
 
 BlockQuote.defaultProps = {
-    align: 'left'
-}
-
+  align: 'left',
+};
 
 export default injectSheet(styles)(BlockQuote);

@@ -1,87 +1,80 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 import cn from 'classnames';
-
+import flexCentered from 'src/common/styles/flexCentered';
+import Wrapper from 'src/common/components/Wrapper';
 
 import bgLight from './img/light_bgr.svg';
 import bgDark from './img/dark_bgr.svg';
 // import bgCommon from './img/common_bgr.svg';
 // import bgProduct from './img/product_bgr.svg';
 
+const styles = () => ({
+  wrapper: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: '100vh',
+    width: '100%'
+  },
+  background: {
+    position: 'absolute',
 
-const styles = theme => ({
-    wrapper: {
-        position: 'relative',
-        overflow: 'visible'
-    },
-    background: {
-        position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: -1,
 
-        left: '50%',
-        transform: 'translateX(-50%)',
-        zIndex: -1,
+    height: '100%',
+    width: '100vw',
 
-        width: '100vw',
-        backgroundSize: 2560,
-        backgroundPosition: 'center bottom',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
 
-        backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'no-repeat',
+  },
 
-        top: -100,
-        [theme.breakpoints.up('md')]: {
-            top: -165,
-        },
-        [theme.breakpoints.up('lg')]: {
-            top: -230,
-        },
-    },
+  centered: flexCentered,
 
-    // height
-    width: {
-        height: 'calc(100% + 270px)',
-        [theme.breakpoints.up('md')]: {
-            height: 'calc(100% + 320px)',
-        },
-        [theme.breakpoints.up('lg')]: {
-            height: 'calc(100% + 400px)',
-        },
-    },
+  image: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    minWidth: '100%',
+    minHeight: '100%',
+    transform: 'translate(-50%, -50%)',
+    zIndex: -1,
+  },
 
-    light: {
-        backgroundImage: `url(${bgLight})`,
-    },
-    dark: {
-        backgroundImage: `url(${bgDark})`,
-    }
-})
+  light: {
+    backgroundImage: `url(${bgLight})`,
+  },
+  dark: {
+    backgroundImage: `url(${bgDark})`,
+  },
+});
 
+const MainScreenBackground = ({ classes, children, className, type, src, srcSet }) => (
+  <div className={classes.wrapper}>
+    <Wrapper>
+      <div
+        className={cn(
+          classes.background,
+          classes.height,
+          {
+            [classes.dark]: type === 'dark',
+            [classes.light]: type === 'light',
+          },
+          className
+        )}
+      >
+        {src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
+      </div>
+      {children}
+    </Wrapper>
+  </div>
+);
 
-const MainScreenBackground = ({
-    classes,
-    children,
-    className,
-    type,
-}) => (
-        <div className={classes.wrapper}>
-            <div
-                className={cn(
-                    classes.background,
-                    classes.width,
-                    {
-                        [classes.dark]: type === "dark",
-                        [classes.light]: type === "light",
-                    },
-                    className
-                )}
-            />
-            {children}
-        </div>
-    )
-
-    
 MainScreenBackground.defaultProps = {
-    type: 'light'
-}
-
+  type: 'light',
+};
 
 export default injectSheet(styles)(MainScreenBackground);

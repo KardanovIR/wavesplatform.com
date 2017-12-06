@@ -16,13 +16,13 @@ import styles from './styles';
 const Subscribe = ({ classes }) => (
     <div className={classes.root}>
         <div className={classes.textCentered}>
-            <Typography type="display2" inverted dimmed>
+            <Typography type="display2" inverted>
                 <FormattedMessage
                     id="home.subscribe.title"
                     defaultMessage="Don’t Miss Important News"
                 />
             </Typography>
-            <Typography type="body" inverted dimmed>
+            <Typography type="body" inverted>
                 <FormattedMessage
                     id="home.subscribe.text"
                     defaultMessage="We do more than just develop the technical aspects of the platform: we also participate actively in integrating blockchain into real-world applications to grow the crypto economy. Subscribe to our newsletter to keep up to date with all the most interesting developments."

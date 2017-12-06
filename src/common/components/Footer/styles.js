@@ -2,27 +2,27 @@ import flexCentered from '../../styles/flexCentered';
 
 
 export default theme => {
-    const BACKGROUND = "#172947"
+    const BACKGROUND = "#000"
     return {
         root: {
             position: 'relative',
-            marginTop: 55
         },
 
         link: {
             border: 0,
             textDecoration: 'none',
-            color: theme.palette.gray[600],
+            color: '#fff',
             display: 'inline-block',
             padding: theme.spacing.getSpacing(1, 1),
+            opacity: .6,
             transition: theme.transitions.create(
-                'color',
+                'opacity',
                 theme.transitions.durationShort
             ),
             '&:hover': {
-                color: theme.palette.gray[0]
+                opacity: 1
             },
-    
+
             [theme.breakpoints.up('sm')]: {
                 padding: theme.spacing.getSpacing(1, 2),
             }
@@ -33,11 +33,12 @@ export default theme => {
             color: theme.palette.gray[600]
         },
         textDarkGray: {
-            color: theme.palette.grayBlue[700]
+            color: '#fff',
+          opacity: .6
         },
 
         footer: {
-            padding: theme.spacing.getSpacing(6, 0, 4)
+            padding: theme.spacing.getSpacing(11, 0)
         },
         row: {
             alignItems: 'center'
@@ -101,16 +102,7 @@ export default theme => {
             }
         },
 
-        [theme.mixins.atMedia('sm')]: {
-            root: {
-                marginTop: 60
-            },
-        },
-
         [theme.mixins.atMedia('md')]: {
-            root: {
-                marginTop: 115
-            },
             footer: {
                 padding: theme.spacing.getSpacing(6, 0, 6)
             },
@@ -140,11 +132,5 @@ export default theme => {
                 float: 'right',
             },
         },
-        
-        [theme.mixins.atMedia('lg')]: {
-            root: {
-                marginTop: 120
-            },
-        }
     }
 }

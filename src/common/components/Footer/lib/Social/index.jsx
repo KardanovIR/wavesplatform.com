@@ -23,6 +23,7 @@ const Social = ({ classes }) => (
                     icon={null}
                     className={classes.icon}
                     textDecoration={false}
+                    primary={false}
                 >
                     <Icon name={icon.name} size={20} />
                 </Link>

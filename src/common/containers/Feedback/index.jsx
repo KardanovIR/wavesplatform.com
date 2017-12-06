@@ -49,7 +49,7 @@ const FeedbackContainer = ({
         />
 
         <Margin bottom={5} />
-        
+
         { children }
 
         <Margin bottom={5} />
@@ -57,7 +57,6 @@ const FeedbackContainer = ({
         <Feedback
             image={<img className={classes.image} src={mobileGoPhoto} alt="mobile_go"/>}
             logo={<div className={classes.mobileGoLogo} />}
-            avatar={<div className={classes.mobileGoAva} />}
             description={
                 <FormattedMessage
                     id="feedback.mobileGo.description"

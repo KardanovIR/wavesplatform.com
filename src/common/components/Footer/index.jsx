@@ -42,7 +42,7 @@ const Footer = ({ classes, links }) => (
 
                     <Col xs={12} md={6} className={classes.language}>
                         <Typography type="body" className={classes.textGray}>
-                            <Link href={url('files.terms_conditions')} className={classes.link} textDecoration={false}>
+                            <Link href={url('files.terms_conditions')} className={classes.link} textDecoration={false} primary={false}>
                                 Terms and conditions
                             </Link>
                         </Typography>
@@ -59,7 +59,7 @@ const Footer = ({ classes, links }) => (
 
                     <Col xs={12} md={1} className={classes.logo}>
                         <a href={url('home')} className={classes.logoLink}>
-                            <Logo full={false} />
+                            <Logo size="xs" />
                         </a>
                     </Col>
                 </Row>

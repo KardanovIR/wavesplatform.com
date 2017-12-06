@@ -6,43 +6,31 @@ import injectSheet from 'react-jss';
 import MobileNav from './lib/mobile';
 import DesktopNav from './lib/desktop';
 
+import Wrapper from 'src/common/components/Wrapper';
 import Logo from 'src/common/components/Logo';
-
 
 import url from 'src/common/utils/url';
 
+const Nav = ({ classes, links, activeLink }) => (
+  <nav className={classes.wrapper}>
+    <Wrapper>
+      <div className={classes.logo}>
+        <a href={url('home')} className={classes.logo}>
+          <Logo />
+        </a>
+      </div>
 
-
-
-const Nav = ({
-    classes,
-    links,
-    activeLink
-}) => (
-    <nav className={classes.wrapper}>
-        <div className={classes.logo}>
-            <a href={url('home')} className={classes.logo}>
-                <span className={classes.mobileOnly}>
-                    <Logo desktop={false} />
-                </span>
-                <span className={classes.desktopOnly}>
-                    <Logo />
-                </span>
-            </a>
+      <div className={classes.navContainer}>
+        <div className={classes.mobileOnly}>
+          <MobileNav links={links} activeLink={activeLink} />
         </div>
 
-        <div className={classes.navContainer}>
-
-            <div className={classes.mobileOnly}>
-                <MobileNav links={links} activeLink={activeLink} />
-            </div>
-
-            <div className={classes.desktopOnly}>
-                <DesktopNav links={links} activeLink={activeLink} />
-            </div>
+        <div className={classes.desktopOnly}>
+          <DesktopNav links={links} activeLink={activeLink} />
         </div>
-    </nav>
-)
-
+      </div>
+    </Wrapper>
+  </nav>
+);
 
 export default injectSheet(styles)(Nav);

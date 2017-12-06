@@ -19,6 +19,6 @@ const styles = theme => ({
             opacity: 1
         }
     }
-})
+});
 
 export default styles;

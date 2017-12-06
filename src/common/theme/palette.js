@@ -7,7 +7,7 @@ import lightenDarkenColor from './utils/lightenDarkenColor';
 export const blue = {
     0: 'white',
     300: '#60a9ff',
-    500: '#4f77fc',
+    500: '#0155FF',
     700: '#263f6f',
     900: '#0a1b43',
 };
@@ -25,6 +25,7 @@ export const gray = colorMigrationProxy(
         600: '#6a7689',
         // 700: '#415272',  // moved to grayBlue
         800: '#2d374b',
+        1000: '#000'
     },
     'gray'
 );
@@ -68,7 +69,7 @@ const palette = {
     gray,
     grayBlue,
     orange,
-    
+
     // color helper functions
     lighten: lightenDarkenColor,
     darken: (v, amt) => lightenDarkenColor(v, -amt),

@@ -1,10 +1,10 @@
 import React from 'react';
 
-
 import Typography from 'src/common/components/Typography';
 import IconProduct from 'src/common/components/IconProduct';
 import AvatarWithText from 'src/common/components/AvatarWithText';
 import { Row, Col } from 'src/common/components/Grid';
+import Scrim from 'src/common/components/Scrim';
 
 import { FormattedMessage } from 'react-intl';
 
