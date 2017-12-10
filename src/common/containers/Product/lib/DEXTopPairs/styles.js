@@ -1,38 +1,55 @@
 const styles = theme => ({
-    root: {
-        paddingBottom: theme.spacing.unit * 2,
-    },
-    headers: {
-        display: 'flex',
-        alignItems: "flex-end",
-        justifyContent: 'space-between'
-    },
-    textGray: {
-        color: theme.palette.grayBlue[500],
-    },
-    [theme.breakpoints.up('md')]: {
-        root: {
-            marginTop: theme.spacing.unit * 9,
-            
-            position: 'relative',
+  root: {
+    paddingBottom: theme.spacing.unit * 2,
+  },
+  headers: {
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    paddingBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing.unit * 3,
 
-            '&:before': {
-                content: '""',
-                display: 'block',
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                borderRadius: theme.spacing.radius,
-    
-                zIndex: -1,
-    
-                top: -theme.spacing.unit * 2,
-                left: -theme.spacing.unit * 2,
-    
-                backgroundImage: 'linear-gradient(5deg, rgba(79, 119, 252, 0.0), #4f77fc);',
-            }
-        }
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      height: 2,
+      backgroundColor: theme.palette.blue[300]
     }
-})
+  },
+  pairContainer: {
+    position: 'relative',
+    marginBottom: theme.spacing.unit * 2,
+    paddingBottom: theme.spacing.unit * 2,
+
+    '&::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      height: 1,
+      backgroundColor: 'rgba(255,255,255,0.1)'
+    },
+
+    '&:last-child::after': {
+      display: 'none'
+    }
+  },
+  [theme.breakpoints.up('md')]: {
+    root: {
+      marginTop: theme.spacing.unit * 9,
+      paddingBottom: theme.spacing.unit * 30,
+      maxWidth: 250,
+      position: 'relative',
+    },
+    pairContainer: {
+      marginBottom: theme.spacing.unit * 3,
+    }
+  },
+});
 
 export default styles;

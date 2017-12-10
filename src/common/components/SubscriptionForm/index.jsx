@@ -81,7 +81,8 @@ class SubscriptionForm extends Component {
                   className={classes.button}
                   loading={status === 'pending'}
                   type="submit"
-                  secondary
+                  bordered
+                  inverted
                   disabled={invalid}
                 >
                   <span className={classes.buttonFull}>

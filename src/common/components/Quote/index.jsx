@@ -1,5 +1,6 @@
 import React from 'react';
 import injectSheet from 'react-jss';
+import cx from 'classnames';
 
 import Typography from 'src/common/components/Typography';
 
@@ -25,7 +26,9 @@ const styles = theme => ({
     overflow: 'hidden',
   },
   quote: {
-    color: theme.palette.gray[800],
+    color: ({inverted}) => inverted ? theme.palette.gray[0] : theme.palette.gray[800],
+  },
+  withQuotes: {
     '&:before': {
       ...quoteStyles,
       content: 'open-quote',
@@ -47,17 +50,17 @@ const styles = theme => ({
   },
 });
 
-const Quote = ({ classes, avatar, children, signature }) => (
-  <div className={classes.wrapper}>
+const Quote = ({ classes, avatar, children, withQuotes = true, signature, inverted, className}) => (
+  <div className={cx(classes.wrapper, className)}>
     {avatar && <div className={classes.avatarWrapper}>{avatar}</div>}
     <div>
-      <Typography type="quote" className={classes.quote}>
+      <Typography type="quote" className={cx(classes.quote, {[classes.withQuotes]: withQuotes})} inverted={inverted}>
         {children}
       </Typography>
       {signature && (
-        <Typography type="body" className={classes.signature}>
+        <Typography type="body" className={classes.signature} inverted={inverted}>
           <br />
-          — {signature}
+          &mdash; {signature}
         </Typography>
       )}
     </div>

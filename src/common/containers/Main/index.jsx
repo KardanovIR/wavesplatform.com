@@ -4,14 +4,13 @@ import React from 'react';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Wrapper from 'src/common/components/Wrapper';
-import Background from 'src/common/components/Background';
+import ContentContainer from 'src/common/components/ContentContainer';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
 
 // containers
-import Feedback from 'src/common/containers/Feedback';
 import SubscribeSection from 'src/common/containers/SubscribeSection';
 
 // lib
@@ -24,6 +23,7 @@ import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
 import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
+import UserCases from '../../components/UserCases';
 
 // styles
 import injectSheet from 'react-jss';
@@ -31,56 +31,77 @@ import styles from './styles';
 
 const PageLayout = ({ initialState, classes }) => (
   <Layout activeLink="home">
-    <BackgroundMainScreen type="image" src={require('./img/bg.jpg')} srcSet={`${require('./img/bg@0.5x.jpg')} 640w, ${require('./img/bg.jpg')} 1280w, ${require('./img/bg@2x.jpg')} 1600w`}>
-      <MainScreen />
+    <BackgroundMainScreen
+      type="image"
+      src={require('./img/bg.jpg')}
+      srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+    >
+      <ContentContainer>
+        <MainScreen />
+      </ContentContainer>
     </BackgroundMainScreen>
 
     <Wrapper>
-      <Section size={2}>
-        <NumbersQuote dexData={initialState.dexData} />
+      <Section top={3} bottom={2}>
+        <ContentContainer>
+          <NumbersQuote dexData={initialState.dexData} />
+        </ContentContainer>
       </Section>
 
       <Section bottom={2}>
-        <Audience />
+        <ContentContainer>
+          <Audience />
+        </ContentContainer>
       </Section>
 
-      <Background>
-        <Section size={2}>
+      <Section size={4} className={classes.bgBlack}>
+        <ContentContainer>
           <WavesClient />
-        </Section>
-      </Background>
-
-      <Section size={2}>
-        <Wallet />
+        </ContentContainer>
       </Section>
 
-      <Section top={2} bottom={4}>
-        <DEX />
+      <Section top={4} bottom={1} className={classes.bgWallet}>
+        <ContentContainer>
+          <Wallet />
+        </ContentContainer>
       </Section>
 
-      <Background className={classes.bgTokens}>
-        <div className={classes.sectionWide}>
+      <Section top={4} className={classes.bgBlack}>
+        <ContentContainer>
+          <DEX />
+        </ContentContainer>
+      </Section>
+
+      <Section size={5}>
+        <ContentContainer>
           <IssuingTokens />
-          <Margin bottom={5} />
-          <Feedback>
-            <Facts tokens={initialState.dexData.dexAssets} />
-          </Feedback>
-        </div>
-      </Background>
+        </ContentContainer>
+      </Section>
 
-      <Background className={classes.bgFeatures}>
-        <div className={classes.withBackground}>
-          <PlannedFeatures />
-        </div>
-      </Background>
+      <UserCases />
 
       <Section size={4}>
-        <JoinUs />
+        <ContentContainer>
+          <Facts tokens={initialState.dexData.dexAssets} />
+        </ContentContainer>
       </Section>
 
-      <Background className={classes.bgSubscription}>
-        <SubscribeSection />
-      </Background>
+      <Section size={2}>
+        <ContentContainer>
+          <PlannedFeatures />
+        </ContentContainer>
+      </Section>
+
+      <Section top={2} bottom={1} className={classes.bgJoinUs}>
+        <ContentContainer>
+          <JoinUs />
+          <Margin bottom={5} />
+          <br/>
+          <Margin top={5} />
+          <SubscribeSection />
+        </ContentContainer>
+      </Section>
+
     </Wrapper>
   </Layout>
 );

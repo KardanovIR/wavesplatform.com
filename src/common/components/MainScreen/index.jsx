@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from 'src/common/components/Typography';
@@ -13,7 +13,7 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }
   <Row className={classes.root}>
     <div className={classes.inner}>
       <Col xs={12} sm={8} lg={8} smOffset={2} lgOffset={2}>
-        <Typography type="display4" inverted>
+        <Typography type="display4">
           {title}
         </Typography>
         <Margin />
@@ -45,17 +45,21 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }
       )}
 
       <Col xs={12} sm={8} lg={6} smOffset={2} lgOffset={3}>
-        <Typography type="body" inverted>
+        <div className={classes.descriptionText}>
           {text}
-        </Typography>
+        </div>
 
         {!!buttons.length && <Margin bottom={3} />}
 
-        {buttons.map((button, index) => (
-          <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>
-            {button}
-          </div>
-        ))}
+        <div className={classes.buttonsContainer}>
+          {buttons.map((button, index) => (
+            <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>
+              {cloneElement(button, {
+                className: cn(button.props.className, classes.button)
+              })}
+            </div>
+          ))}
+        </div>
       </Col>
     </div>
   </Row>

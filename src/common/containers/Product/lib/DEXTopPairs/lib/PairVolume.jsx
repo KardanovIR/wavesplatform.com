@@ -16,13 +16,11 @@ const styles = theme => ({
     flex: 1,
     textTransform: 'uppercase',
     letterSpacing: '1px',
-    lineHeight: '17px',
+    lineHeight: 1,
   },
   volume: {
     flex: 1,
-    fontSize: 17,
-    lineHeight: '17px',
-    color: theme.palette.gray[800],
+    lineHeight: 1,
   },
   grayText: {
     color: theme.palette.grayBlue[500],
@@ -31,11 +29,11 @@ const styles = theme => ({
 
 const PairVolume = ({ classes, assets, volume }) => (
   <div className={classes.wrapper}>
-    <Typography className={classes.assets}>
+    <Typography type="body" className={classes.assets} inverted>
       {assets[0]}/{assets[1]}
     </Typography>
-    <Typography type="numeral" align="right" className={classes.volume} noMargin>
-      {!!volume ? (
+    <Typography type="body" align="right" className={classes.volume} noMargin inverted>
+      {volume ? (
         <span>
           $ <FormattedNumber value={volume} />
         </span>

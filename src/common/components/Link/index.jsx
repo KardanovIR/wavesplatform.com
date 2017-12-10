@@ -52,7 +52,7 @@ const Link = ({
       {...rest}
     >
       <span className={classNameText}>{children}</span>
-      {!!iconElement && <span className={classes.icon}>{iconElement}</span>}
+      {iconElement && <span className={classes.icon}>{iconElement}</span>}
     </Element>
   );
 };

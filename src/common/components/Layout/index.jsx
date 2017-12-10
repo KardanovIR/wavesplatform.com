@@ -9,7 +9,7 @@ import links from './links';
 
 import injectSheet from 'react-jss';
 
-const styles = () => ({
+const styles = theme => ({
   root: {
     overflowX: 'hidden',
   },

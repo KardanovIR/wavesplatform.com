@@ -46,6 +46,7 @@ class Button extends Component {
 
             // types
             bordered,
+            inverted,
             secondary, // eslint-disable-line
 
             children,
@@ -57,11 +58,12 @@ class Button extends Component {
 
             ...others,
     } = this.props;
-        
+
         const showLoader = loading || this.state.loading;
 
         const buttonElementClasses = classnames(classes.button, {
             [classes.bordered]: bordered,
+            [classes.inverted]: bordered && inverted,
             [classes.light]: !bordered && secondary,
             [classes.dark]: !bordered && !secondary,
         }, className);
@@ -127,6 +129,7 @@ Button.propTypes = {
     className: PropTypes.string,
     href: PropTypes.string,
     secondary: PropTypes.bool,
+    inverted: PropTypes.bool,
     children: PropTypes.node,
     disabled: PropTypes.bool,
     loading: PropTypes.bool,

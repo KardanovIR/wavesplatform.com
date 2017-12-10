@@ -2,34 +2,46 @@ import { combineMobileDesktopStyles } from './utils/combineMobileDesktopStyles';
 
 export const global = {
   fontFamily: 'suisse_intl, Helvetica Neue, arial, sans-serif',
-  fontSize: 15,
+  fontSize: 17,
   fontStyle: 'normal',
-  lineHeight: 1.67,
-  margin: 0,
+  lineHeight: 1.35,
   fontVariantLigatures: 'none',
   '-webkit-font-smoothing': 'antialiased',
   '-moz-osx-font-smoothing': 'grayscale',
   'text-rendering': 'optimizeLegibility',
 };
 
-const creatyTypography = (palette, breakpoints, colors) => {
+const creatyTypography = (palette, breakpoints) => {
   const base = {
     ...global,
-    color: palette.gray[800],
+    color: palette.gray[1000],
   };
 
   const display = {
     fontWeight: 500,
-    color: colors.black.default,
+    color: palette.gray[1000],
   };
 
   return {
+    display5: {
+      ...base,
+      ...display,
+      fontSize: 38,
+      lineHeight: 1.2,
+      fontWeight: 500,
+      margin: 0,
+
+      [breakpoints.up('md')]: {
+        fontSize: 80,
+      },
+    },
     display4: {
       ...base,
       ...display,
       fontSize: 28,
       lineHeight: 1,
       fontWeight: 700,
+      margin: 0,
 
       [breakpoints.up('md')]: {
         fontSize: 44,
@@ -43,14 +55,28 @@ const creatyTypography = (palette, breakpoints, colors) => {
       {
         ...base,
         ...display,
-        fontSize: 28,
-        lineHeight: 1.36,
+        fontSize: 30,
+        lineHeight: 1.4,
+        margin: 0,
       },
       {
         fontSize: 44,
-        lineHeight: 1.23,
+        lineHeight: 1.25,
       }
     ),
+    display3Inverted: {
+      extend: 'display3',
+      ...combineMobileDesktopStyles(
+        {
+          fontSize: 50,
+          lineHeight: 1.1,
+        },
+        {
+          fontSize: 44,
+          lineHeight: 1.22,
+        }
+      ),
+    },
     display2: combineMobileDesktopStyles(
       {
         ...base,
@@ -58,6 +84,7 @@ const creatyTypography = (palette, breakpoints, colors) => {
         fontWeight: 400,
         fontSize: 24,
         lineHeight: 1.42,
+        margin: 0,
       },
       {
         fontSize: 34,
@@ -68,34 +95,38 @@ const creatyTypography = (palette, breakpoints, colors) => {
       {
         ...base,
         ...display,
-        fontSize: 18,
-        lineHeight: '24px',
+        fontSize: 16,
+        lineHeight: 1.2,
+        margin: 0,
       },
       {
-        fontSize: 24,
-        lineHeight: '30px',
+        fontSize: 19,
       }
     ),
     body: combineMobileDesktopStyles(base, {
       fontSize: 17,
-      lineHeight: 1.59,
+      lineHeight: 1.6,
+      margin: 0,
     }),
     body2: combineMobileDesktopStyles(
       {
         ...base,
-        fontSize: 17,
-        lineHeight: 1.59,
+        fontSize: 26,
+        lineHeight: 1.25,
+        fontWeight: 500,
+        margin: 0,
       },
       {
-        fontSize: 20,
-        lineHeight: 1.5,
+        fontSize: 32,
+        fontWeight: 400,
       }
     ),
     quote: combineMobileDesktopStyles(
       {
         ...base,
         fontStyle: 'normal',
-        color: colors.black.default,
+        color: palette.gray[1000],
+        margin: 0,
       },
       {
         fontSize: 17,
@@ -105,11 +136,10 @@ const creatyTypography = (palette, breakpoints, colors) => {
     button: combineMobileDesktopStyles(
       {
         ...global,
-        fontWeight: 500,
+        margin: 0,
+        fontWeight: 600,
         fontSize: 13,
-        textTransform: 'uppercase',
         lineHeight: 1,
-        letterSpacing: '1px',
       },
       {
         fontSize: 15,
@@ -120,8 +150,8 @@ const creatyTypography = (palette, breakpoints, colors) => {
         fontSize: 20,
         lineHeight: 1,
         fontStyle: 'normal',
-        color: colors.black.default,
         fontWeight: 700,
+        margin: 0,
       },
       {
         fontSize: 30,
@@ -129,6 +159,7 @@ const creatyTypography = (palette, breakpoints, colors) => {
     ),
     muted: combineMobileDesktopStyles({
       fontSize: 17,
+      margin: 0,
     }),
   };
 };

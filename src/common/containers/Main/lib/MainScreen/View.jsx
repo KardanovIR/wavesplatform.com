@@ -19,16 +19,15 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
         defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
       />
     }
-    //imageDesktop={<span />}
-    //imageMobile={<span />}
     buttons={[
       <Button
         onClick={onGetClientClick}
         key="main_cta_button"
         target="_blank"
         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+        bordered
       >
-        <FormattedMessage id="cta.getClient" defaultMessage="Get Client" />
+        <FormattedMessage id="cta.signUp" defaultMessage="Sign up" />
       </Button>,
       <Button
         onClick={onGetWavesClick}

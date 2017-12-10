@@ -1,136 +1,153 @@
 import flexCentered from '../../styles/flexCentered';
 
-
 export default theme => {
-    const BACKGROUND = "#000"
-    return {
-        root: {
-            position: 'relative',
-        },
+  return {
+    root: {
+      position: 'relative',
+    },
 
-        link: {
-            border: 0,
-            textDecoration: 'none',
-            color: '#fff',
-            display: 'inline-block',
-            padding: theme.spacing.getSpacing(1, 1),
-            opacity: .6,
-            transition: theme.transitions.create(
-                'opacity',
-                theme.transitions.durationShort
-            ),
-            '&:hover': {
-                opacity: 1
-            },
+    footer: {
+      padding: theme.spacing.getSpacing(1, 2),
+    },
 
-            [theme.breakpoints.up('sm')]: {
-                padding: theme.spacing.getSpacing(1, 2),
-            }
-        },
+    link: {
+      border: 0,
+      textDecoration: 'none',
+      color: theme.palette.gray[400],
+      display: 'inline-block',
+      padding: theme.spacing.getSpacing(2, 2, 2, 0),
+      transition: theme.transitions.create('opacity', theme.transitions.durationShort),
 
-        // text
-        textGray: {
-            color: theme.palette.gray[600]
-        },
-        textDarkGray: {
-            color: '#fff',
-          opacity: .6
-        },
+      [theme.breakpoints.up('md')]: {
+        padding: theme.spacing.getSpacing(1, 2),
 
-        footer: {
-            padding: theme.spacing.getSpacing(11, 0)
-        },
-        row: {
-            alignItems: 'center'
-        },
+        '&:last-child': {
+          paddingRight: 0
+        }
+      },
+    },
 
-        backgroundWrapper: {
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            left: 0,
-            bottom: 0
-        },
-        background: {
-            background: BACKGROUND,
-            transformOrigin: 'left top',
-        },
+    terms: {
+      display: 'none',
+      extend: 'link',
+      fontSize: 12,
+      padding: 0,
+      [theme.breakpoints.up('sm')]: {
+        padding: 0,
+      },
+      [theme.breakpoints.up('md')]: {
+        display: 'block',
+      },
+    },
 
-        bgSkewed: {
-            height: '70%',
-            [theme.breakpoints.up('md')]: {
-                height: '100%'
-            }
-        },
+    // text
+    textGray: {
+      color: theme.palette.gray[400],
+    },
 
-        background2: {
-            composes: '$background',
-            left: '100%',
-        },
 
-        // blocks
-        social: {
-            marginBottom: theme.spacing.unit * 4,
-        },
-        nav: {
-            marginBottom: theme.spacing.unit * 3
-        },
-        language: {
-            marginBottom: theme.spacing.unit,
-            textAlign: 'center',
-        },
-        copyright: {
-            marginBottom: theme.spacing.unit * 2,
-            textAlign: 'center'
-        },
+    row: {
+      alignItems: 'center',
+    },
 
-        logo: flexCentered,
-        logoLink: {
-            opacity: 0.5,
-            transition: theme.transitions.create('opacity'),
-            '&:hover': {
-                opacity: 1
-            }
-        },
+    // blocks
+    social: {
+      marginBottom: theme.spacing.unit * 4,
+      order: 2,
+    },
+    nav: {
+      margin: theme.spacing.getSpacing(3, 0, 2),
+      order: 1,
+    },
+    language: {
+      marginBottom: theme.spacing.unit,
+      textAlign: 'center',
+    },
+    copyright: {
+      fontSize: 12,
+      display: 'flex',
+      justifyContent: 'space-between',
+      margin: theme.spacing.getSpacing(2, 0),
+      textAlign: 'center',
+      order: 4
+    },
 
-        navWrapper: {
-            textAlign: 'center',
-            '&:after': {
-                content: '""',
-                display: 'block',
-                clear: 'both'
-            }
-        },
+    logo: {
+      display: 'flex',
+      alignItems: 'center',
+      order: 3
+    },
+    logoLink: {
+      position: 'relative',
+      top: -3,
+      opacity: 0.7,
+      transition: theme.transitions.create('opacity'),
+      '&:hover': {
+        opacity: 1,
+      },
+      '& > svg > path:first-child': {
+        fill: theme.palette.gray[400]
+      }
+    },
 
-        [theme.mixins.atMedia('md')]: {
-            footer: {
-                padding: theme.spacing.getSpacing(6, 0, 6)
-            },
-            social: {
-                order: 1,
-                margin: 0
-            },
-            nav: {
-                order: 2,
-                margin: 0
-            },
-            logo: {
-                order: 3,
-                margin: 0
-            },
-            language: {
-                textAlign: 'left',
-                order: 4,
-                marginTop: theme.spacing.unit * 4,
-            },
-            copyright: {
-                order: 5,
-                textAlign: 'right',
-                marginTop: theme.spacing.unit * 4,
-            },
-            navWrapper: {
-                float: 'right',
-            },
-        },
-    }
-}
+    navWrapper: {
+      '&:after': {
+        content: '""',
+        display: 'block',
+        clear: 'both',
+      },
+    },
+
+    navContainer: {
+      display: 'flex',
+      flexWrap: 'wrap'
+    },
+
+    navLinkContainer: {
+      width: '50%',
+      margin: 0 + '!important',
+    },
+
+    [theme.mixins.atMedia('md')]: {
+      footer: {
+        padding: theme.spacing.getSpacing(10, 2),
+      },
+      social: {
+        order: 1,
+        margin: 0,
+      },
+      navContainer: {
+        display: 'block'
+      },
+      navLinkContainer: {
+        width: 'auto',
+        '& + &': {
+          margin: theme.spacing.getSpacing(1, 0, 0),
+        }
+      },
+      nav: {
+        order: 2,
+        margin: 0,
+      },
+      logo: {
+        margin: 0,
+        justifyContent: 'flex-end',
+      },
+      language: {
+        textAlign: 'left',
+        order: 4,
+        marginTop: theme.spacing.unit * 4,
+      },
+      copyright: {
+        display: 'block',
+        order: 5,
+        textAlign: 'right',
+        margin: theme.spacing.getSpacing(4, 0, 0),
+      },
+      navWrapper: {
+        textAlign: 'center',
+        float: 'right',
+      },
+    },
+  };
+};

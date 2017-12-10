@@ -30,7 +30,6 @@ const Typography = ({
       [classes.inverted]: inverted && !dimmed,
       [classes.dimmed]: dimmed,
       [classes.cut]: cut,
-      // [classes.colored]: color
     },
     classNameProp
   );
@@ -46,8 +45,10 @@ Typography.defaultProps = {
   type: 'body',
   tagName: '',
   tagMap: {
+    display5: 'h1',
     display4: 'h1',
     display3: 'h2',
+    display3Inverted: 'h2',
     display2: 'h3',
     display1: 'h4',
     body: 'div',
@@ -60,13 +61,26 @@ Typography.defaultProps = {
   align: 'auto',
 };
 
-const types = ['display4', 'display3', 'display2', 'display1', 'body', 'body2', 'quote', 'muted', 'numeral'];
+const types = [
+  'display5',
+  'display4',
+  'display3',
+  'display3Inverted',
+  'display2',
+  'display1',
+  'body',
+  'body2',
+  'quote',
+  'muted',
+  'numeral',
+];
 
 Typography.propTypes = {
   type: PropTypes.oneOf(types).isRequired,
   cut: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   inverted: PropTypes.bool,
   dimmed: PropTypes.bool,
+  weight: PropTypes.number,
 };
 
 export default injectSheet(styles)(Typography);

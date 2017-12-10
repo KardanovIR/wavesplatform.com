@@ -19,12 +19,26 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 2,
   },
 
+  descriptionText: {
+    fontSize: 16,
+    lineHeight: 2
+  },
+
+  buttonsContainer: {
+    margin: [0, -theme.spacing.unit * .5],
+    display: 'flex',
+  },
+
   buttonWrapper: {
     display: 'inline-block',
-    margin: [0, theme.spacing.unit * 2, theme.spacing.unit * 2, 0],
-    '&:last-of-type': {
-      marginRight: 0,
-    },
+    margin: [0, theme.spacing.unit * .5],
+    width: '50%',
+  },
+
+  button: {
+    padding: `3px ${theme.spacing.unit}px 0`,
+    width: '100%',
+    boxSizing: 'border-box',
   },
 
   [theme.mixins.atMedia('sm')]: {
@@ -51,6 +65,22 @@ const styles = theme => ({
     textCut: {
       paddingRight: '20%',
     },
+    descriptionText: {
+      fontSize: 23,
+      lineHeight: 1.4
+    },
+    buttonsContainer: {
+      margin: 0,
+      display: 'block'
+    },
+    buttonWrapper: {
+      margin: theme.spacing.getSpacing(0, 2),
+      width: 'auto',
+    },
+    button: {
+      padding: [3, theme.spacing.unit * 5, 0],
+      width: 'auto',
+    }
   },
 });
 

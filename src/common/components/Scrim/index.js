@@ -34,24 +34,22 @@ class Scrim extends Component {
   componentDidMount() {
     this._scrollEvent = subscribe('scroll', this.handleScroll, {
       useRAF: true,
-      enableScrollInfo: true,
     });
 
     this._resizeEvent = subscribe('resize', this.handleResize, {
       useRAF: true,
-      enableResizeInfo: true,
       throttleRate: 300,
     });
 
-    raf(() => {
+    setInterval(() => {
       const rect = this.$root.getBoundingClientRect();
-      // const top = rect.y + viewport.pageY;
-      // const bottom = top + rect.height;
+      const top = rect.top + viewport.pageY;
+      const bottom = top + rect.height;
 
       this.height = rect.height;
-      // this.startPx = bottom;
-      // this.endPx = bottom + 0.5 * viewport.height;
-    });
+      this.startPx = bottom - 0.5 * viewport.height;
+      this.endPx = bottom;
+    }, 1000);
   }
 
   componentWillUnmount() {
@@ -59,17 +57,16 @@ class Scrim extends Component {
   }
 
   handleScroll = () => {
-    const start = this.$root.offsetTop;
-    const end = start + this.height;
+    console.log(viewport.pageY, this.startPx, this.endPx);
 
-    if (viewport.pageY >= start && viewport.pageY <= end) {
-      this.$root.style.opacity = `${mapClamp(viewport.pageY, start, end, 0, 1)}%`;
+    if (viewport.pageY >= this.startPx && viewport.pageY <= this.endPx) {
+      this.$root.style.opacity = mapClamp(viewport.pageY, this.startPx, this.endPx, 0, 1);
     }
   };
 
   handleResize = () => {
     const rect = this.$root.getBoundingClientRect();
-    const top = rect.top + viewport.pageY;
+    const top = rect.top + window.pageYOffset;
     const bottom = top + rect.height;
 
     this.startPx = bottom;

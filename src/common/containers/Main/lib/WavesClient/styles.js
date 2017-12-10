@@ -4,7 +4,13 @@ const styles = theme => ({
   //     overflow: 'visible',
   //     width: '100%',
   // },
+  root: {
+  },
   imageCol: {
+    position: 'absolute',
+    right: 0,
+    bottom: -150,
+    width: '50%',
     margin: [theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
   },
   imageWrapper: {
@@ -12,8 +18,6 @@ const styles = theme => ({
   },
   imageContainer: {
     overflow: 'hidden',
-    borderRadius: 4,
-    boxShadow: `0 6px 24px ${theme.colors.blue[100]}`
   },
   image: {
     display: 'block',

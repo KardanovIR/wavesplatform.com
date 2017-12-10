@@ -43,9 +43,9 @@ const styles = theme => ({
     },
   },
   primary: {
-    backgroundColor: theme.palette.gray[1000],
+    backgroundColor: 'transparent',
     color: theme.palette.gray[0],
-    border: `1px solid ${theme.palette.gray[0]}`,
+    borderBottom: `1px solid ${theme.palette.gray[0]}`,
 
     ...setPlaceholderColor(theme.palette.gray[0]),
   },

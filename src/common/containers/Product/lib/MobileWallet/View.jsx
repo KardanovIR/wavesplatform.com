@@ -10,45 +10,44 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
+  <Row className={classes.root} alignItems="center">
+    <Col xs={12} sm={6}>
+      <Row>
+        <Col xs={12} sm={10}>
+          <Typography type="display3Inverted">
+            <FormattedMessage
+              id="product.mobileWallet.title"
+              defaultMessage="Start using your Waves wallet"
+            />
+          </Typography>
+        </Col>
+        <Col xs={12} sm={8}>
+          <Margin top={2} xsOnly />
+          <Typography type="body">
+            <FormattedMessage
+              id="product.mobileWallet.text"
+              defaultMessage="Don’t forget to download the mobile wallet for iOS & Android."
+            />
+          </Typography>
+        </Col>
+      </Row>
 
+      <Margin bottom={5} />
 
-
-const MainScreen = ({
-    classes,
-    onAndroidClientClick,
-    onIosClientClick,
-}) => (
-        <Row className={classes.root} alignItems="center">
-            <Col xs={12} sm={6} className={classes.imageCol}>
-                <div className={classes.imageWrapper}>
-                    <div className={classes.image} />
-                </div>
-            </Col>
-            <Col xs={12} sm={5} smOffset={1}>
-                <Typography type="display2" margin>
-                    <FormattedMessage
-                        id="product.mobileWallet.title"
-                        defaultMessage="Mobile wallet"
-                    />
-                </Typography>
-                <Typography type="body2" margin>
-                    <FormattedMessage
-                        id="product.mobileWallet.text"
-                        defaultMessage="Don’t forget to download the mobile wallet for iOS & Android"
-                    />
-                </Typography>
-
-                <Margin bottom={3} />
-
-                <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-                    <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
-                </Margin>
-                <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-                    <ButtonGetApp onClick={onIosClientClick} type="app-store" />
-                </Margin>
-            </Col>
-        </Row>
-    );
-
+      <Margin bottom={1} right={1} className={classes.buttonWrapper}>
+        <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
+      </Margin>
+      <Margin bottom={1} right={1} className={classes.buttonWrapper}>
+        <ButtonGetApp onClick={onIosClientClick} type="app-store" />
+      </Margin>
+    </Col>
+    <Col xs={12} sm={6} className={classes.imageCol}>
+      <div className={classes.imageWrapper}>
+        <div className={classes.image} />
+      </div>
+    </Col>
+  </Row>
+);
 
 export default injectSheet(styles)(MainScreen);

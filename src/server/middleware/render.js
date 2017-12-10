@@ -50,7 +50,7 @@ export const render = function(
         // create store
         const store = createStore(reducer, ctx.state.initialState);
         // render component markup and styles
-        const sheets = new SheetsRegistry();        
+        const sheets = new SheetsRegistry();
         const content = renderToStaticMarkup(
             <JssProvider registry={sheets}>
                 <Provider store={store}>
@@ -83,7 +83,7 @@ export const render = function(
             script = ctx.state.assets[scriptName].js;
             vendorChunk = ctx.state.assets.vendor.js;
         } else {
-            script = `/static/${scriptName}.js`;
+            script = scriptName.indexOf('.js') > -1 ? scriptName : `/static/${scriptName}.js`;
         }
 
         const html = renderToStaticMarkup(
