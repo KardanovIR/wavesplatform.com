@@ -11,16 +11,16 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const DEX = ({ classes }) => (
-  <div>
-    <Row>
+  <div className={classes.root}>
+    <Row className={classes.titleRow}>
       <Col xs={12} md={7}>
         <Typography type="display5" tagName="div" className={classes.title} inverted>
           <FormattedMessage id="home.DEX.title" defaultMessage="Decentralised Exchange" />
-          <div className={classes.imageWrapper}>
-            <img src="" alt="" className={classes.image} />
-          </div>
         </Typography>
       </Col>
+      <div className={classes.imageWrapper}>
+        <img src={require('./img/dexmain@1x.jpg')} srcSet={`${require('./img/dexmain@1x.jpg')} 1x, ${require('./img/dexmain@2x.jpg')} 2x`} alt="" className={classes.image} />
+      </div>
     </Row>
     <Row>
       <Col xs={12} md={6} className={classes.article}>

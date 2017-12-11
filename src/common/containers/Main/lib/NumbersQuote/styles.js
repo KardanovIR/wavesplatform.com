@@ -27,7 +27,7 @@ const styles = theme => ({
 
   investorsText: {
     fontWeight: 600,
-    margin: 0
+    margin: 0 + '!important'
   },
 
   [theme.mixins.atMedia('md')]: {
@@ -42,6 +42,10 @@ const styles = theme => ({
     },
     secondCtaButton: {
       margin: 0,
+    },
+    investorsText: {
+      fontWeight: 600,
+      margin: 0
     },
   },
   [theme.breakpoints.up('md')]: {

@@ -1,31 +1,37 @@
 
 const styles = theme => ({
   root: {
-    flexDirection: 'row-reverse',
+    position: 'relative'
+  },
+  titleRow: {
+    justifyContent: 'flex-end'
   },
   title: {
-    marginBottom: theme.spacing.unit * 37,
+    position: 'relative',
+    zIndex: 2
   },
   article: {
     marginBottom: theme.spacing.unit * 4,
-  },
-  imageWrapper: {
-    position: 'absolute',
-    right: 0,
-    bottom: 0,
-    width: '45%',
+    position: 'relative',
+    zIndex: 2
   },
   image: {
     width: '100%',
   },
-  [theme.mixins.atMedia('sm')]: {
-    image: {
-      width: '200%',
-      height: '200%',
-      top: -80,
-    },
-  },
   [theme.mixins.atMedia('md')]: {
+    titleRow: {
+      justifyContent: 'flex-start'
+    },
+    title: {
+      marginBottom: theme.spacing.unit * 37,
+    },
+    imageWrapper: {
+      position: 'absolute',
+      top: -120,
+      right: 40,
+      width: '50%',
+      zIndex: 1
+    },
     image: {
       width: '180%',
       height: '180%',

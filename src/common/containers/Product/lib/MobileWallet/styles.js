@@ -1,5 +1,3 @@
-import mobileWallet from './img/mobile_wallet.svg';
-
 const styles = theme => ({
   imageWrapper: {
     position: 'relative',
@@ -10,20 +8,16 @@ const styles = theme => ({
     display: 'none'
   },
   image: {
-    width: '100%',
-    height: '100%',
     position: 'absolute',
     zIndex: -1,
     top: 0,
 
-    background: `url(${mobileWallet}) no-repeat`,
-    backgroundSize: '100%',
   },
   buttonWrapper: {
     display: 'inline-block',
     verticalAlign: 'middle',
   },
-  [theme.breakpoints.up('lg')]: {
+  [theme.breakpoints.up('md')]: {
     imageCol: {
       display: 'block',
       height: 0,

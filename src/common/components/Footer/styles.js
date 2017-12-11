@@ -22,8 +22,8 @@ export default theme => {
         padding: theme.spacing.getSpacing(1, 2),
 
         '&:last-child': {
-          paddingRight: 0
-        }
+          paddingRight: 0,
+        },
       },
     },
 
@@ -40,11 +40,15 @@ export default theme => {
       },
     },
 
+    ony: {
+      textDecoration: 'none',
+      color: theme.palette.gray[400]
+    },
+
     // text
     textGray: {
       color: theme.palette.gray[400],
     },
-
 
     row: {
       alignItems: 'center',
@@ -69,13 +73,13 @@ export default theme => {
       justifyContent: 'space-between',
       margin: theme.spacing.getSpacing(2, 0),
       textAlign: 'center',
-      order: 4
+      order: 4,
     },
 
     logo: {
       display: 'flex',
       alignItems: 'center',
-      order: 3
+      order: 3,
     },
     logoLink: {
       position: 'relative',
@@ -86,8 +90,8 @@ export default theme => {
         opacity: 1,
       },
       '& > svg > path:first-child': {
-        fill: theme.palette.gray[400]
-      }
+        fill: theme.palette.gray[400],
+      },
     },
 
     navWrapper: {
@@ -100,7 +104,7 @@ export default theme => {
 
     navContainer: {
       display: 'flex',
-      flexWrap: 'wrap'
+      flexWrap: 'wrap',
     },
 
     navLinkContainer: {
@@ -117,13 +121,13 @@ export default theme => {
         margin: 0,
       },
       navContainer: {
-        display: 'block'
+        display: 'block',
       },
       navLinkContainer: {
         width: 'auto',
         '& + &': {
           margin: theme.spacing.getSpacing(1, 0, 0),
-        }
+        },
       },
       nav: {
         order: 2,

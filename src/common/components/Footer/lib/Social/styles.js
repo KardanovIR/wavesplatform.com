@@ -39,5 +39,8 @@ export default theme => ({
       border: 0,
       padding: 0
     },
+    col: {
+      justifyContent: 'flex-start'
+    }
   },
 });

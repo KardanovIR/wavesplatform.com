@@ -34,4 +34,8 @@ export default theme => ({
     backgroundColor: theme.palette.gray[1000],
     position: 'relative'
   },
+
+  bgGray: {
+    background: theme.palette.gray[50],
+  },
 });

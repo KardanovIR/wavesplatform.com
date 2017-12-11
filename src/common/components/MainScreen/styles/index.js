@@ -14,6 +14,14 @@ const styles = theme => ({
     height: '100%',
   },
 
+  inner: {
+    paddingTop: theme.spacing.unit * 4
+  },
+
+  title: {
+    lineHeight: 1.05
+  },
+
   imageColMargin: {
     marginTop: theme.spacing.unit,
     marginBottom: theme.spacing.unit * 2,
@@ -36,7 +44,7 @@ const styles = theme => ({
   },
 
   button: {
-    padding: `3px ${theme.spacing.unit}px 0`,
+    padding: `0 ${theme.spacing.unit}px 0`,
     width: '100%',
     boxSizing: 'border-box',
   },
@@ -47,6 +55,9 @@ const styles = theme => ({
     },
     xsHidden: {
       display: 'block',
+    },
+    inner: {
+      paddingTop: theme.spacing.unit * 8
     },
     imageCol: {
       position: 'relative',
@@ -78,7 +89,7 @@ const styles = theme => ({
       width: 'auto',
     },
     button: {
-      padding: [3, theme.spacing.unit * 5, 0],
+      padding: [0, theme.spacing.unit * 5, 0],
       width: 'auto',
     }
   },

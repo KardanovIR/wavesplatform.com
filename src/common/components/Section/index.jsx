@@ -33,6 +33,7 @@ const Section = ({
       [classes[`padding-top-${String(size)}`]]: typeof size === 'number',
       [classes[`padding-bottom-${String(size)}`]]: typeof size === 'number',
     },
+    classes.root,
     classNameProp
   );
 

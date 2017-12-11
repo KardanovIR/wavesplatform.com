@@ -9,7 +9,7 @@ const styles = theme => ({
   imageCol: {
     position: 'absolute',
     right: 0,
-    bottom: -150,
+    bottom: -130,
     width: '50%',
     margin: [theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
   },

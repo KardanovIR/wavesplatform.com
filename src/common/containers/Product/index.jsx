@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -92,7 +93,7 @@ const PageLayout = ({ classes, initialState }) => (
         </AnchorScroll>
       </Section>
 
-      <div className={classes.bgBlack}>
+      <div className={cx(classes.bgBlack, classes.section)}>
         <ContentContainer>
           <Section size={2}>
             <Typography type="display5" inverted>

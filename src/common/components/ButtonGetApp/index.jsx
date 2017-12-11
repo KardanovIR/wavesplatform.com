@@ -9,7 +9,7 @@ import cn from 'classnames';
 
 const styles = theme => ({
   button: {
-    padding: [3, theme.spacing.unit * 4, 0, theme.spacing.unit * 2]
+    padding: [0, theme.spacing.unit * 4, 0, theme.spacing.unit * 2]
   },
   text: {
     ...theme.typography.button,
@@ -19,7 +19,7 @@ const styles = theme => ({
   },
   [theme.mixins.atMedia('md')]: {
     button: {
-      padding: [3, theme.spacing.unit * 5, 0, theme.spacing.unit * 3]
+      padding: [0, theme.spacing.unit * 5, 0, theme.spacing.unit * 3]
     },
   },
 });

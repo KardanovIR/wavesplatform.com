@@ -1,7 +1,18 @@
 const styles = theme => ({
+  container: {
+    position: 'relative',
+  },
   root: {
     paddingBottom: theme.spacing.unit * 2,
   },
+  image: {
+    width: '100%',
+    marginTop: -40,
+    marginBottom: 20,
+    position: 'relative',
+    right: -20,
+  },
+
   headers: {
     position: 'relative',
     display: 'flex',
@@ -17,8 +28,8 @@ const styles = theme => ({
       left: 0,
       width: '100%',
       height: 2,
-      backgroundColor: theme.palette.blue[300]
-    }
+      backgroundColor: theme.palette.blue[300],
+    },
   },
   pairContainer: {
     position: 'relative',
@@ -32,12 +43,12 @@ const styles = theme => ({
       left: 0,
       width: '100%',
       height: 1,
-      backgroundColor: 'rgba(255,255,255,0.1)'
+      backgroundColor: 'rgba(255,255,255,0.1)',
     },
 
     '&:last-child::after': {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   [theme.breakpoints.up('md')]: {
     root: {
@@ -48,7 +59,15 @@ const styles = theme => ({
     },
     pairContainer: {
       marginBottom: theme.spacing.unit * 3,
-    }
+    },
+    image: {
+      position: 'absolute',
+      top: 140,
+      right: '-20%',
+      width: 'auto',
+      marginTop: 0,
+      marginBottom: 0,
+    },
   },
 });
 

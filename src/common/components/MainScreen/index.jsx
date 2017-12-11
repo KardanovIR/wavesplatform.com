@@ -12,8 +12,8 @@ import cn from 'classnames';
 const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
-      <Col xs={12} sm={8} lg={8} smOffset={2} lgOffset={2}>
-        <Typography type="display4">
+      <Col xs={12} sm={10} lg={10} smOffset={1} lgOffset={1}>
+        <Typography type="display5" weight={700} className={classes.title}>
           {title}
         </Typography>
         <Margin />

@@ -13,8 +13,8 @@
     "build:be-prod": "NODE_ENV=production webpack --config ./config/webpack.back.prod.config.js",
     "server": "nodemon config/server.js",
     "devserver": "node config/webpack.devserver.js",
-    "build:fe": "webpack --config ./config/webpack.front.config.js",
-    "build:fe-prod": "webpack --config ./config/webpack.front.prod.config.js",
+    "build:fe": "NODE_ENV=development webpack --config ./config/webpack.front.config.js",
+    "build:fe-prod": "NODE_ENV=production webpack --config ./config/webpack.front.prod.config.js",
     "test": "./node_modules/.bin/babel-node --presets env,stage-0"
   },
   "author": "Dmitry Shuranov <dvshur@gmail.com>",

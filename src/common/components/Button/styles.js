@@ -21,7 +21,7 @@ const styles = theme => ({
     height: theme.spacing.inputHeight,
     lineHeight: `${theme.spacing.inputHeight}px`,
 
-    padding: [3, theme.spacing.unit * 5, 0],
+    padding: [0, theme.spacing.unit * 5],
 
     transition: theme.transitions.create(['transform']),
     willChange: 'transform',

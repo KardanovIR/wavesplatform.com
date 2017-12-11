@@ -11,6 +11,9 @@ export default theme => ({
       display: 'block',
     },
   },
+  section: {
+    overflow: 'hidden'
+  },
   centered: {
     textAlign: 'center',
   },

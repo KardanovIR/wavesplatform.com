@@ -25,7 +25,11 @@ const createClassesForSide = theme => side => ({
 
 export default theme => {
   const stylesCreator = createClassesForSide(theme);
-  let styles = {};
+  let styles = {
+    root: {
+      overflow: 'hidden',
+    },
+  };
 
   directions.forEach(
     side =>

@@ -44,8 +44,8 @@ const MainScreen = ({ classes, onGetClientClick }) => (
     </Row>
     <div xs={12} sm={6} className={classes.imageCol}>
       <img
-        src={require('./img/image.jpg')}
-        srcSet={`${require('./img/image.jpg')} 1x, ${require('./img/image@2x.jpg')} 2x`}
+        src={require('./img/nobg@1x.png')}
+        srcSet={`${require('./img/nobg@1x.png')} 1x, ${require('./img/nobg@2x.png')} 2x`}
         alt=""
         className={classes.image}
       />
