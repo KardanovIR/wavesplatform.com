@@ -27,14 +27,14 @@ const styles = theme => ({
     },
     imageWrapper: {
       position: 'absolute',
-      top: -120,
+      top: -70,
       right: 40,
       width: '50%',
       zIndex: 1
     },
     image: {
-      width: '180%',
-      height: '180%',
+      width: '150%',
+      height: '150%',
       top: -150,
       left: -10,
     },

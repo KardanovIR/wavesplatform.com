@@ -12,7 +12,7 @@ import Logo from 'src/common/components/Logo';
 
 import url from 'src/common/utils/url';
 
-const Nav = ({ classes, links, activeLink }) => (
+const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => (
   <nav className={classes.wrapper}>
     <Wrapper>
       <ContentContainer>
@@ -24,11 +24,11 @@ const Nav = ({ classes, links, activeLink }) => (
 
         <div className={classes.navContainer}>
           <div className={classes.mobileOnly}>
-            <MobileNav links={links} activeLink={activeLink} />
+            <MobileNav links={mobileLinks} activeLink={activeLink} />
           </div>
 
           <div className={classes.desktopOnly}>
-            <DesktopNav links={links} activeLink={activeLink} />
+            <DesktopNav links={desktopLinks} activeLink={activeLink} />
           </div>
         </div>
       </ContentContainer>

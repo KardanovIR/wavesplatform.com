@@ -14,4 +14,7 @@ export default theme => ({
   centered: {
     textAlign: 'center',
   },
+  overflowHidden: {
+    overflow: 'hidden'
+  }
 });

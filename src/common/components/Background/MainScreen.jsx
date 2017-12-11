@@ -3,6 +3,7 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 import flexCentered from 'src/common/styles/flexCentered';
 import Wrapper from 'src/common/components/Wrapper';
+import Video from 'src/common/components/InlineVideo';
 
 import bgLight from './img/light_bgr.svg';
 import bgDark from './img/dark_bgr.svg';
@@ -14,7 +15,7 @@ const styles = () => ({
     position: 'relative',
     overflow: 'hidden',
     height: '100vh',
-    width: '100%'
+    width: '100%',
   },
   background: {
     position: 'absolute',
@@ -52,7 +53,7 @@ const styles = () => ({
   },
 });
 
-const MainScreenBackground = ({ classes, children, className, type, src, srcSet }) => (
+const MainScreenBackground = ({ classes, children, className, type, src, videoSrc, srcSet, videoFirstFrame }) => (
   <div className={classes.wrapper}>
     <Wrapper>
       <div
@@ -66,7 +67,8 @@ const MainScreenBackground = ({ classes, children, className, type, src, srcSet 
           className
         )}
       >
-        {src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
+        {videoSrc && <Video autoPlay muted className={classes.image} src={videoSrc} firstFrame={videoFirstFrame} poster={src} srcSet={srcSet} />}
+        {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
       </div>
       {children}
     </Wrapper>

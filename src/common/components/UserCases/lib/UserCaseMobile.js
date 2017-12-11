@@ -8,7 +8,7 @@ import cn from 'classnames';
 import styles from '../styles';
 import injectSheet from 'react-jss';
 
-const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, onDetails }) => (
+const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, onDetails, index }) => (
   <div className={cn(className, classes.slide)}>
     <Typography type="numeral" weight={500} className={classes.title}>
       {userName}
@@ -24,6 +24,7 @@ const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, o
         onDetails && onDetails({ userName, title, text, bgMobile });
       }}
       className={classes.link}
+      data-slide-link={`${index}`}
     >
       Details
     </Link>

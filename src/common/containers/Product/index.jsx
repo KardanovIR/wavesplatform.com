@@ -52,6 +52,8 @@ const PageLayout = ({ classes, initialState }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+      videoSrc={require('../Main/video/w_white_main_1.mp4')}
+      videoFirstFrame={require('../Main/img/video_ff.jpg')}
     >
       <ContentContainer>
         <MainScreen />

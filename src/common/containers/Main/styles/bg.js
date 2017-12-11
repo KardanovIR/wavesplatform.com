@@ -21,7 +21,7 @@ export default theme => ({
   bgFeatures: {},
 
   bgWallet: {
-    backgroundColor: theme.palette.blue[100]
+    backgroundColor: theme.palette.blue[100],
   },
 
   bgJoinUs: {

@@ -11,7 +11,7 @@ const SLIDES_DATA = [
   },
   {
     userName: 'Worldwide coworking spaces for Tech Community',
-    title: 'Real Estate on Blockchain becomes a reality: Primalbase raised over 3000 BTC during crowdsale',
+    title: 'Primalbase raised over 3000 BTC during crowdsale',
     text:
       'We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools.',
     signature: 'MobileGo Team',

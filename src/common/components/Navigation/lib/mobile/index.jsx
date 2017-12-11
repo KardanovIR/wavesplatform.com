@@ -12,6 +12,12 @@ const burger = {
     position: 'relative',
     height: 12,
     width: 27,
+    padding: 0,
+    appearance: 'none',
+    border: 0,
+    borderRadius: 0,
+    backgroundColor: 'transparent',
+    outline: 'none',
   },
   bar: {
     position: 'absolute',
@@ -64,8 +70,12 @@ class MobileNav extends Component {
 
         <Popup show={this.state.open} onClose={this.handleClose} inverted>
           <div className={classes.linksWrapper}>
-            {links.map((link, index) => (
-              <a key={`mobile_nav_link${index}`} href={link.href} className={classes.link}>
+            {links.filter(link => !link.hideInMenu).map((link, index) => (
+              <a
+                key={`mobile_nav_link${index}`}
+                href={link.href}
+                className={cn(classes.link, { [classes.linkSecondary]: link.type === 'secondary' })}
+              >
                 {link.text}
               </a>
             ))}

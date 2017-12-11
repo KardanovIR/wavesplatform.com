@@ -14,7 +14,7 @@ export default theme => ({
     padding: 0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   popover: {
     position: 'absolute',
@@ -34,7 +34,7 @@ export default theme => ({
     padding: theme.spacing.getSpacing(7, 0),
     height: '100%',
     backgroundColor: '#000',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
   },
   link: {
     fontSize: 40,
@@ -46,6 +46,17 @@ export default theme => ({
     padding: theme.spacing.getSpacing(1, 5),
     '&:active': {
       backgroundColor: theme.palette.grayBlue[300],
+    },
+    '& + $linkSecondary': {
+      marginTop: theme.spacing.unit * 3
+    }
+  },
+  linkSecondary: {
+    ...theme.typography.body2,
+    color: theme.palette.gray[0],
+    fontWeight: 400,
+    '& + &': {
+      margin: theme.spacing.getSpacing(1, 0),
     },
   },
 });

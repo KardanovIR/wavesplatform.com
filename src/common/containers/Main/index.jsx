@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -35,6 +36,8 @@ const PageLayout = ({ initialState, classes }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+      videoSrc={require('./video/w_white_main_1.mp4')}
+      videoFirstFrame={require('./img/video_ff.jpg')}
     >
       <ContentContainer>
         <MainScreen />
@@ -66,7 +69,7 @@ const PageLayout = ({ initialState, classes }) => (
         </ContentContainer>
       </Section>
 
-      <Section top={4} className={classes.bgBlack}>
+      <Section top={4} className={cx(classes.bgBlack, classes.overflowHidden)}>
         <ContentContainer>
           <DEX />
         </ContentContainer>

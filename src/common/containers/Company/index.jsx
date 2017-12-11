@@ -10,9 +10,6 @@ import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
-
-
-
 // lib
 // import Team from './lib/Team';
 import FeedbackForm from './lib/FeedbackForm';
@@ -20,7 +17,6 @@ import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import Media from './lib/Media';
 // import Careers from './lib/Careers';
-
 
 // styles
 import injectSheet from 'react-jss';
@@ -30,77 +26,63 @@ import { FormattedMessage } from 'react-intl';
 
 // import teamMembers from './team';
 
-
-
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="company">
+  <Layout activeLink="company">
+    <MainScreenBackground>
+      <MainScreen
+        title={
+          <FormattedMessage
+            id="company.title"
+            defaultMessage="We create the economics of free, perfect and instant"
+          />
+        }
+        text={
+          <FormattedMessage
+            id="company.text"
+            defaultMessage="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
+          />
+        }
+      />
+    </MainScreenBackground>
 
-        <MainScreenBackground>
-            <MainScreen
-                title={
-                    <FormattedMessage
-                        id="company.title"
-                        defaultMessage="We create the economics of free, perfect and instant"
-                    />
-                }
-                text={
-                    <FormattedMessage
-                        id="company.text"
-                        defaultMessage="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
-                    />
-                }
-            />
-        </MainScreenBackground>
-
-        {/* <Section> 
+    {/* <Section> 
             <Team members={teamMembers} />
         </Section> */}
 
-        {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-        <Section top={3} bottom={2}>
-            <Whitepaper />
-        </Section>
-        {/* </Background> */}
+    {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
+    <Section top={3} bottom={2}>
+      <Whitepaper />
+    </Section>
+    {/* </Background> */}
 
+    <div className={classes.sectionWide}>
+      <Media />
+    </div>
 
-        <div className={classes.sectionWide}>
-            <Media />
-        </div>
-
-
-        <Background className={classes.bgLight} skewed={true}>
-            <Section size={4}>
-                <AnchorScroll anchor="careers">
-                    <Vacancies />
-                </AnchorScroll>
-            </Section>
-        </Background>
-
-
-        <AnchorScroll anchor="contact">
-            <Background className={classes.bgDark} skewed={true}>
-                <Section size={4} className={classes.footerMarginCompensate}>
-                    <FeedbackForm />
-                </Section>
-            </Background>
+    <Background className={classes.bgLight} skewed={true}>
+      <Section size={4}>
+        <AnchorScroll anchor="careers">
+          <Vacancies />
         </AnchorScroll>
+      </Section>
+    </Background>
 
-
-    </Layout>
+    <AnchorScroll anchor="contact">
+      <Background className={classes.bgDark} skewed={true}>
+        <Section size={4} className={classes.footerMarginCompensate}>
+          <FeedbackForm />
+        </Section>
+      </Background>
+    </AnchorScroll>
+  </Layout>
 );
-
-
 
 const Page = injectSheet(styles)(PageLayout);
 
-
-
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
-)
-
-
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
+);
 
 export default App;

@@ -7,8 +7,13 @@ import Typography from 'src/common/components/Typography';
 
 const FooterNav = ({ classes, links }) => (
   <div className={classes.navContainer}>
-    {links.map((link, index) => (
-      <Typography className={classes.navLinkContainer} key={`desktop_nav_link${index}`} tagName="span" color="gray-50">
+    {links.filter(link => !link.hideInFooter).map((link, index) => (
+      <Typography
+        className={classes.navLinkContainer}
+        key={`desktop_nav_link${index}`}
+        tagName="span"
+        color="gray-50"
+      >
         <a key={`desktop_nav_link${index}`} href={link.href} className={classes.link}>
           {link.text}
         </a>

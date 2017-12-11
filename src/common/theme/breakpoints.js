@@ -27,7 +27,7 @@ function createBreakpoints(breakpoints = defaultBreakpoints, unit = 'px', step =
     } else {
       value = breakpoints[key] || key;
     }
-    return `@media (min-width:${value}${unit})`;
+    return `@media (min-width:${value}${unit})`
   }
 
   function down(key) {

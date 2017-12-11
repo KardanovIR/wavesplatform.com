@@ -15,8 +15,8 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
     }
     text={
       <FormattedMessage
-        id="home.main.text"
-        defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
+      id="home.main.text"
+      defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
       />
     }
     buttons={[

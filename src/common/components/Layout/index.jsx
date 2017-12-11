@@ -5,7 +5,7 @@ import Navigation from '../Navigation';
 import Footer from '../Footer';
 // import SnackbarStressTest from 'src/common/components/SnackbarStressTest';
 
-import links from './links';
+import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
 import injectSheet from 'react-jss';
 
@@ -31,11 +31,11 @@ const Layout = ({
 }) => (
   <div>
     <div className={classes.navigationWrapper}>
-      <Navigation links={links} activeLink={activeLink} />
+      <Navigation desktopLinks={DESKTOP_LINKS} mobileLinks={MOBILE_LINKS} activeLink={activeLink} />
     </div>
     {children}
     <Wrapper>
-      {!hideFooter && <Footer links={links} />}
+      {!hideFooter && <Footer links={MOBILE_LINKS} />}
       {/* {!hideSnackbar && <SnackbarStressTest />} */}
     </Wrapper>
   </div>
