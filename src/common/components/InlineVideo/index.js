@@ -40,7 +40,7 @@ export default class Video extends Component {
     const { canPlaysInline } = this.state;
 
     const Video = (
-      <video poster={firstFrame} className={className} playsInline {...rest}>
+      <video poster={firstFrame} className={className} playsInline muted autoPlay {...rest}>
         {children}
       </video>
     );

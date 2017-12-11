@@ -15,8 +15,8 @@ const SLIDES_DATA = [
     text:
       'We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools.',
     signature: 'MobileGo Team',
-    bg: require('./img/slide.jpg'),
-    bgMobile: require('./img/slide0mobile.jpg'),
+    bg: require('./img/slide1.jpg'),
+    bgMobile: require('./img/slide1mobile.jpg'),
     logo: '',
   },
 ];
