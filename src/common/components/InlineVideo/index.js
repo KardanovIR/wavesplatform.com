@@ -33,6 +33,13 @@ export default class Video extends Component {
     this.setState({
       canPlaysInline: 'playsInline' in document.createElement('video'),
     });
+
+    // workaround for React strip muted attribute on client render https://github.com/facebook/react/issues/10389
+    if (this.$video) {
+      this.$video.setAttribute('muted', '1');
+      this.$video.setAttribute('playsinline', '1');
+      this.$video.setAttribute('autoplay', '1');
+    }
   }
 
   render() {
@@ -40,7 +47,15 @@ export default class Video extends Component {
     const { canPlaysInline } = this.state;
 
     const Video = (
-      <video poster={firstFrame} className={className} playsInline muted autoPlay {...rest}>
+      <video
+        ref={ref => (this.$video = ref)}
+        poster={firstFrame}
+        className={className}
+        {...rest}
+        autoPlay
+        playsInline
+        muted
+      >
         {children}
       </video>
     );

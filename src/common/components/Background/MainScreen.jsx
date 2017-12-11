@@ -67,7 +67,7 @@ const MainScreenBackground = ({ classes, children, className, type, src, videoSr
           className
         )}
       >
-        {videoSrc && <Video autoPlay muted className={classes.image} src={videoSrc} firstFrame={videoFirstFrame} poster={src} srcSet={srcSet} />}
+        {videoSrc && <Video className={classes.image} src={videoSrc} firstFrame={videoFirstFrame} poster={src} srcSet={srcSet} />}
         {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
       </div>
       {children}
