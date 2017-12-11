@@ -1,6 +1,6 @@
 import React, { Component, Children, cloneElement } from 'react';
 import PropTypes from 'prop-types';
-import { Swiper, Pagination } from 'swiper/dist/js/swiper.esm.js';
+import Swiper from 'swiper/dist/js/swiper.js';
 import 'swiper/dist/css/swiper.min.css';
 import cn from 'classnames';
 import injectSheet from 'react-jss';
@@ -20,7 +20,6 @@ class Gallery extends Component {
   };
 
   componentDidMount() {
-    Swiper.use([Pagination]);
     this.__gallery = new Swiper(this.$root, {
       autoplay: {
         delay: 5000,
