@@ -9,7 +9,7 @@ const styles = theme => ({
         lineHeight: 1,
         [theme.breakpoints.up('md')]: {
             fontSize: 44,
-            fontWeight: 400,
+            fontWeight: 600,
             lineHeight: 1.23,
             textAlign: 'left',
         },

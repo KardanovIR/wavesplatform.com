@@ -4,8 +4,10 @@ import Sasha_Ivanov2x from './lib/Team/img/Sasha_Ivanov@1x.jpg';
 import Maxim_Pertsovskiy1x from './lib/Team/img/Maxim_Pertsovskiy@1x.jpg';
 import Maxim_Pertsovskiy2x from './lib/Team/img/Maxim_Pertsovskiy@2x.jpg';
 
+/*
 import Alexandra_Pestretsova1x from './lib/Team/img/Alexandra_Pestretsova@1x.jpg';
 import Alexandra_Pestretsova2x from './lib/Team/img/Alexandra_Pestretsova@2x.jpg';
+*/
 
 import Natalya_Malyova1x from './lib/Team/img/Natalya_Malyova@1x.jpg';
 import Natalya_Malyova2x from './lib/Team/img/Natalya_Malyova@2x.jpg';
@@ -25,8 +27,14 @@ import Phil_Filippak2x from './lib/Team/img/Phil_Filippak@2x.jpg';
 import Alexey_Koloskov1x from './lib/Team/img/Alexey_Koloskov@1x.jpg';
 import Alexey_Koloskov2x from './lib/Team/img/Alexey_Koloskov@2x.jpg';
 
+import Alexey_Kiselev1x from './lib/Team/img/Alexey_Kisilev@1x.jpg';
+import Alexey_Kiselev2x from './lib/Team/img/Alexey_Kisilev@2x.jpg';
+
 import Sergey_Tolmachev1x from './lib/Team/img/Sergey_Tolmachev@1x.jpg';
 import Sergey_Tolmachev2x from './lib/Team/img/Sergey_Tolmachev@2x.jpg';
+
+import Ilya_Smagin1x from './lib/Team/img/Ilya_Smagin@1x.jpg';
+import Ilya_Smagin2x from './lib/Team/img/Ilya_Smagin@1x.jpg';
 
 export default [
     {
@@ -65,6 +73,19 @@ export default [
         ],
     },
     {
+        "firstName": "Mariya",
+        "lastName": "Borovikova",
+        "position": "CFO",
+        "imageUrl1x": `url(${Mariya_Borovikova1x})`,
+        "imageUrl2x": `url(${Mariya_Borovikova2x})`,
+        "social": [
+            {
+                "type": "facebook",
+                "url": "https://www.facebook.com/profile.php?id=100001562743926"
+            },
+        ],
+    },
+    {
         "firstName": "Igor",
         "lastName": "Pugachevsky",
         "position": "Director of Product",
@@ -85,7 +106,7 @@ export default [
             },
         ],
     },
-    {
+   /* {
         "firstName": "Alexandra",
         "lastName": "Pestretsova",
         "position": "CMO",
@@ -97,7 +118,7 @@ export default [
                 "url": "mailto:pestretsova@wavesplatform.com"
             },
         ],
-    },
+    },*/
     {
         "firstName": "Natalya",
         "lastName": "Malyova",
@@ -111,19 +132,7 @@ export default [
             },
         ],
     },
-    {
-        "firstName": "Mariya",
-        "lastName": "Borovikova",
-        "position": "CFO",
-        "imageUrl1x": `url(${Mariya_Borovikova1x})`,
-        "imageUrl2x": `url(${Mariya_Borovikova2x})`,
-        "social": [
-            {
-                "type": "facebook",
-                "url": "https://www.facebook.com/profile.php?id=100001562743926"
-            },
-        ],
-    },
+
     {
         "firstName": "Alexey",
         "lastName": "Kofman",
@@ -136,6 +145,22 @@ export default [
                 "url": "mailto:kofman@wavesplatform.com"
             },
         ],
+    },
+    {
+        "firstName": "Ilya",
+        "lastName": "Smagin",
+        "position": "",
+        "imageUrl1x": `url(${Ilya_Smagin1x})`,
+        "imageUrl2x": `url(${Ilya_Smagin2x})`,
+        "social": [],
+    },
+    {
+        "firstName": "Alexey",
+        "lastName": "Koloskov",
+        "position": "Scala Developer",
+        "imageUrl1x": `url(${Alexey_Koloskov1x})`,
+        "imageUrl2x": `url(${Alexey_Koloskov2x})`,
+        "social": [],
     },
    /* {
         "firstName": "Guy",
@@ -167,14 +192,6 @@ export default [
         ],
     },
     {
-        "firstName": "Alexey",
-        "lastName": "Koloskov",
-        "position": "Scala Developer",
-        "imageUrl1x": `url(${Alexey_Koloskov1x})`,
-        "imageUrl2x": `url(${Alexey_Koloskov2x})`,
-        "social": [],
-    },
-    {
         "firstName": "Sergey",
         "lastName": "Tolmachev",
         "position": "Scala Developer",
@@ -182,4 +199,14 @@ export default [
         "imageUrl2x": `url(${Sergey_Tolmachev2x})`,
         "social": [],
     },
+    {
+        "firstName": "Alexey",
+        "lastName": "Kiselev",
+        "position": "",
+        "imageUrl1x": `url(${Alexey_Kiselev1x})`,
+        "imageUrl2x": `url(${Alexey_Kiselev2x})`,
+        "social": [],
+    },
+
+
 ]

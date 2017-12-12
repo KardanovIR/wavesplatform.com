@@ -14,6 +14,9 @@ const styles = theme => ({
     },
     svgrow:{
         boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .09)',
+        flexDirection: 'row',
+        alignItems: 'center',
+        display: 'flex',
     }
 })
 

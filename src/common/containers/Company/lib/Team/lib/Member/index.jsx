@@ -31,6 +31,7 @@ const Member = ({
                             href={contact.url}
                             key={`${lastName}_${contact.type}`}
                             className={classes.icon}
+                            icon={null}
                         >
                             <Icon name={contact.type} size={20} />
                         </Link>

@@ -40,12 +40,13 @@ export default theme => ({
         root: {
             '&:hover': {
                 '& $image': {
-                    transform: 'scale(1.02)',
-                    filter: 'grayscale(100%)'
-                },
-                '& $overlay': {
+                    transform: 'scale(1.02) 0.25s ease-out',
+                    filter: 'grayscale(100%)',
                     opacity: 1
-                }
+                },
+                /*'& $overlay': {
+                    opacity: 1
+                }*/
             }
         },
         image: {},

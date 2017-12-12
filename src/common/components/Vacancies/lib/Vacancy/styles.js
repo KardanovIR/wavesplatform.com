@@ -21,6 +21,7 @@ export default theme => ({
     },
     title: {
         marginBottom: theme.spacing.unit / 2,
+
     },
     subtitle: {
         fontWeight: 500,
@@ -114,7 +115,9 @@ export default theme => ({
         subtitle: {
             marginBottom: theme.spacing.unit * 1.5,
         },
-
+        title: {
+            fontSize: 24,
+        },
         arrow: {
             right: theme.spacing.unit * 5
         },

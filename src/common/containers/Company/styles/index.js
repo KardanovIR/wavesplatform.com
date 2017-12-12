@@ -21,7 +21,7 @@ export default theme => ({
         [theme.breakpoints.up('md')]: {
             fontSize: 80,
             width: 773,
-            fontWeight: 400,
+            fontWeight: 700,
             lineHeight: 1.05,
 
         },
