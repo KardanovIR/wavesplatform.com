@@ -1,6 +1,7 @@
 import React from 'react';
 import LogoIcon from '!svg-react-loader!./logo.svg';
 
+import cn from 'classnames';
 import injectSheet from 'react-jss';
 
 const styles = theme => ({
@@ -14,8 +15,8 @@ const styles = theme => ({
   },
 });
 
-const Logo = ({ classes }) => (
-  <div className={classes.logoWrapper}>
+const Logo = ({ classes, className }) => (
+  <div className={cn(classes.logoWrapper, className)}>
     <LogoIcon />
   </div>
 );
