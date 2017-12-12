@@ -30,7 +30,7 @@ const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => {
 
           <div className={classes.navContainer}>
             <div className={classes.mobileOnly}>
-              <MobileNav links={mobileLinks} activeLink={activeLink} />
+              <MobileNav links={mobileLinks} activeLink={activeLink} inverted={activeLink === undefined} />
             </div>
 
             <div className={classes.desktopOnly}>

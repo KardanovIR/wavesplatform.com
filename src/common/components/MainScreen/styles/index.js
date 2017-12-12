@@ -47,6 +47,7 @@ const styles = theme => ({
     display: 'flex',
     opacity: ({animated}) => animated ? 0 : 1,
     animation: ({animated}) => animated && 'show-0 .65s ease 4.5s forwards',
+    justifyContent: 'center'
   },
 
   buttonWrapper: {
