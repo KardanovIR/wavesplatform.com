@@ -33,7 +33,8 @@ const IndexMainScreen = ({
             buttons={[
                 (
                     <Button
-                        onClick={onGetClientClick}
+												onClick={onGetClientClick}
+												secondary
                         key="main_cta_button"
                         target="_blank"
                         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
@@ -49,7 +50,6 @@ const IndexMainScreen = ({
                         onClick={onGetWavesClick}
                         href={url('get-waves')}
                         withLoader
-                        secondary
                         key="main_cta_button2"
                     >
                         <FormattedMessage
