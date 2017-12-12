@@ -48,4 +48,4 @@ services:
     restart: unless-stopped
 volumes:
   staticfiles:
-    external: true
+    external: false
