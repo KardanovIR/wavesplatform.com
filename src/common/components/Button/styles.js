@@ -64,6 +64,11 @@ const styles = theme => ({
       color: theme.palette.gray[0],
     },
   },
+  invertedFill: {
+    backgroundColor: theme.palette.gray[0],
+    borderColor: theme.palette.gray[0],
+    color: theme.palette.blue[500],
+  },
   content: {
     display: 'flex',
     justifyContent: 'center',

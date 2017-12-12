@@ -21,6 +21,7 @@ import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 
 // containers
 import UserCases from 'src/common/components/UserCases';
+import HowToWallet from 'src/common/components/HowToWallet';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -28,7 +29,6 @@ import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
 // import OnlineWallet from './lib/OnlineWallet';
-import HowToWallet from './lib/HowToWallet';
 import HowToTrade from './lib/HowToTrade';
 import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
@@ -85,7 +85,16 @@ const PageLayout = ({ classes, initialState }) => (
 
       <Section top={4} bottom={2} className={classes.bgGray}>
         <ContentContainer>
-          <HowToWallet />
+          <HowToWallet
+            title={
+              <FormattedMessage
+                id="product.howToWallet.title"
+                defaultMessage="How do I start using my Waves wallet?"
+              />
+            }
+            eventPage="product"
+            eventSource="how_to_wallet"
+          />
         </ContentContainer>
       </Section>
 
@@ -119,7 +128,7 @@ const PageLayout = ({ classes, initialState }) => (
         </AnchorScroll>
       </Section>
 
-      <Margin top={5} bottom={5} >
+      <Margin top={5} bottom={5}>
         <ContentContainer>
           <Typography type="display3" weight={600}>
             <FormattedMessage

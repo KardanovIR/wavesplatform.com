@@ -21,6 +21,7 @@ const styles = theme => ({
 
   inner: {
     paddingTop: theme.spacing.unit * 4,
+    width: '100%'
   },
 
   title: {

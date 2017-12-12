@@ -45,6 +45,13 @@ const createClassesForSide = theme => side => ({
       [`margin${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 10,
     },
   },
+  [`margin-${side}-6`]: {
+    [`margin${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 7,
+
+    [theme.mixins.atMedia('md')]: {
+      [`margin${capitalizeFirstLetter(side)}`]: theme.spacing.unit * 12,
+    },
+  },
 });
 
 export default theme => {

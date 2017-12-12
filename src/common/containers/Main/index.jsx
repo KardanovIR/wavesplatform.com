@@ -18,7 +18,8 @@ import SubscribeSection from 'src/common/containers/SubscribeSection';
 import MainScreen from './lib/MainScreen';
 import NumbersQuote from './lib/NumbersQuote';
 import WavesClient from './lib/WavesClient';
-import Wallet from './lib/Wallet';
+import Wallet from '../../components/Wallet';
+import WalletText from './lib/WalletText';
 import DEX from './lib/DEX';
 import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
@@ -67,7 +68,9 @@ const PageLayout = ({ initialState, classes }) => (
 
       <Section top={4} bottom={1} className={classes.bgWallet}>
         <ContentContainer>
-          <Wallet />
+          <Wallet>
+            <WalletText />
+          </Wallet>
         </ContentContainer>
       </Section>
 

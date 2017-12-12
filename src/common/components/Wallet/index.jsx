@@ -1,10 +1,8 @@
 import React from 'react';
 
-import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
-import AvatarWithText from 'src/common/components/AvatarWithText';
-import IconProduct from 'src/common/components/IconProduct';
-import { Row, Col } from 'src/common/components/Grid';
+import AvatarWithText from 'src/common/components/AvatarWithText/index';
+import IconProduct from 'src/common/components/IconProduct/index';
+import { Row, Col } from 'src/common/components/Grid/index';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -17,22 +15,9 @@ const ColFeature = ({ children, className }) => (
   </Col>
 );
 
-const Wallet = ({ classes }) => (
+const Wallet = ({ children, classes }) => (
   <div className={classes.root}>
-    <Row>
-      <Col xs={12} sm={9}>
-        <Typography type="display1">
-          <FormattedMessage id="home.wallet.title" defaultMessage="Wallet" />
-        </Typography>
-        <Typography type="body2">
-          <FormattedMessage
-            id="home.wallet.text"
-            defaultMessage="Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets."
-          />
-        </Typography>
-        <Margin bottom={4} />
-      </Col>
-    </Row>
+    {children}
     <Row>
       <Col xs={12} lg={10}>
         <Row className={classes.featuresRow}>

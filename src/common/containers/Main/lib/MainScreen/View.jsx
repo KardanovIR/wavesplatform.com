@@ -5,7 +5,6 @@ import Button from 'src/common/components/Button';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
-// import Image from '!svg-react-loader!./img/image.svg';
 import url from 'src/common/utils/url';
 
 const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (

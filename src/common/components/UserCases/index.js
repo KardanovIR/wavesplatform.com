@@ -35,7 +35,7 @@ class UserCases extends Component {
     const { popupData } = this.state;
 
     return (
-      <MQ query={query.md}>
+      <MQ query={query.sm}>
         {matches =>
           matches ? (
             <Gallery className={classes.gallery} swiperProps={GALLERY_SETTINGS_D}>

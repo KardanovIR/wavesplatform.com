@@ -9,11 +9,11 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 import cn from 'classnames';
 
-const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }) => (
+const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, inverted }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
       <Col xs={12} sm={10} lg={10} smOffset={1} lgOffset={1}>
-        <Typography type="display5" weight={700} className={classes.title}>
+        <Typography type="display5" weight={700} className={classes.title} inverted={inverted}>
           {title}
         </Typography>
         <Margin />
@@ -49,7 +49,7 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }
           {text}
         </div>
 
-        {!!buttons.length && <Margin bottom={3} />}
+        {buttons.length && <Margin bottom={text ? 3 : 6} />}
 
         <div className={classes.buttonsContainer}>
           {buttons.map((button, index) => (
