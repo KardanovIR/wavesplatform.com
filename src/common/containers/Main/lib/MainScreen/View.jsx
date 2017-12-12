@@ -27,7 +27,7 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
         bordered
       >
-        <FormattedMessage id="cta.signUp" defaultMessage="Sign up" />
+        <FormattedMessage id="cta.getClient" defaultMessage="Get client" />
       </Button>,
       <Button
         onClick={onGetWavesClick}
@@ -36,7 +36,7 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
         secondary
         key="main_cta_button2"
       >
-        <FormattedMessage id="cta.getWaves" defaultMessage="Get Waves" />
+        <FormattedMessage id="cta.onlineClient" defaultMessage="Online client (beta)" />
       </Button>,
     ]}
     animated={animated}
