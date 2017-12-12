@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import styles from '../../styles';
 
 import injectSheet from 'react-jss';
@@ -9,7 +10,7 @@ const FooterNav = ({ classes, links }) => (
   <div className={classes.navContainer}>
     {links.filter(link => !link.hideInFooter).map((link, index) => (
       <Typography
-        className={classes.navLinkContainer}
+        className={cx(classes.navLinkContainer, {[classes.navLinkContainerXsOnly]: link.xsOnly})}
         key={`desktop_nav_link${index}`}
         tagName="span"
         color="gray-50"

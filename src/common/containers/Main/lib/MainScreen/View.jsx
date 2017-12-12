@@ -31,7 +31,7 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
       </Button>,
       <Button
         onClick={onGetWavesClick}
-        href={url('get-waves')}
+        href={url('online-client')}
         withLoader
         secondary
         key="main_cta_button2"

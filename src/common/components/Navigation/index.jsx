@@ -14,12 +14,12 @@ import Logo from 'src/common/components/Logo';
 import url from 'src/common/utils/url';
 
 const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => (
-  <nav className={cx(classes.wrapper, {[classes.wrapperAnimated]: activeLink === 'home'} )}>
+  <nav className={cx(classes.wrapper, { [classes.wrapperAnimated]: activeLink === 'home' })}>
     <Wrapper>
       <ContentContainer>
         <div className={classes.logo}>
           <a href={url('home')} className={classes.logo}>
-            <Logo />
+            <Logo color={activeLink === undefined ? '#fff' : '#000'} flat />
           </a>
         </div>
 
@@ -29,7 +29,11 @@ const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => (
           </div>
 
           <div className={classes.desktopOnly}>
-            <DesktopNav links={desktopLinks} activeLink={activeLink} />
+            <DesktopNav
+              links={desktopLinks}
+              activeLink={activeLink}
+              inverted={activeLink === undefined}
+            />
           </div>
         </div>
       </ContentContainer>

@@ -62,6 +62,7 @@ export const MOBILE_LINKS = [
     text: <FormattedMessage id="nav.terms" defaultMessage="Terms and conditions" />,
     type: 'primary',
     hideInMenu: true,
+    xsOnly: true
   },
   {
     href: url('home'),
