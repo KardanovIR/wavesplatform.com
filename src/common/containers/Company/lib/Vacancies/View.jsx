@@ -14,21 +14,21 @@ import { FormattedMessage } from 'react-intl';
 const VacanciesContainer = () => (
     <Row centered>
         <Col xs={12} sm={10} md={8}>
-            <Typography type="display3" align="center">
+            <Typography type="display2" style={{fontSize: 23}} align="left">
                 <FormattedMessage
                     id="company.vacancies.title"
                     defaultMessage="Current openings"
                 />
             </Typography>
 
-            <Margin bottom={3} />
+            <Margin bottom={1} />
 
-            <Row centered>
+            <Row>
                 <Col xs={12} sm={10} md={9}>
-                    <Typography type="body2" align="center">
+                    <Typography type="display2" align="left">
                         <FormattedMessage
                             id="company.vacancies.text"
-                            defaultMessage="We’d be happy to welcome you to our team. Come and change the world with us!"
+                            defaultMessage="We’d be happy to welcome you to our team. Come and change the world with us!"
                         />
                     </Typography>
                 </Col>

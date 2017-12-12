@@ -14,7 +14,7 @@ const Team = ({
     <div>
         <Row>
             <Col xs={12}>
-                <Typography style={{fontSize: 32}} type="display2">
+                <Typography style={{fontSize: 23}} type="display2">
                     Our Team
                 </Typography>
                 <Margin bottom={2} />

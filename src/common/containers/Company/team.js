@@ -1,12 +1,40 @@
-//const BASE_URL = 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/images';
-const BASE_URL = "http://work.image-life.ru:8081/wave/";
+import Sasha_Ivanov1x from './lib/Team/img/Sasha_Ivanov@1x.jpg';
+import Sasha_Ivanov2x from './lib/Team/img/Sasha_Ivanov@1x.jpg';
+
+import Maxim_Pertsovskiy1x from './lib/Team/img/Maxim_Pertsovskiy@1x.jpg';
+import Maxim_Pertsovskiy2x from './lib/Team/img/Maxim_Pertsovskiy@2x.jpg';
+
+import Alexandra_Pestretsova1x from './lib/Team/img/Alexandra_Pestretsova@1x.jpg';
+import Alexandra_Pestretsova2x from './lib/Team/img/Alexandra_Pestretsova@2x.jpg';
+
+import Natalya_Malyova1x from './lib/Team/img/Natalya_Malyova@1x.jpg';
+import Natalya_Malyova2x from './lib/Team/img/Natalya_Malyova@2x.jpg';
+
+import Igor_Pugachevsky1x from './lib/Team/img/Igor_Pugachevsky@1x.jpg';
+import Igor_Pugachevsky2x from './lib/Team/img/Igor_Pugachevsky@2x.jpg';
+
+import Mariya_Borovikova1x from './lib/Team/img/Mariya_Borovikova@1x.jpg';
+import Mariya_Borovikova2x from './lib/Team/img/Mariya_Borovikova@2x.jpg';
+
+import Alexey_Kofman1x from './lib/Team/img/Alexey_Kofman@1x.jpg';
+import Alexey_Kofman2x from './lib/Team/img/Alexey_Kofman@2x.jpg';
+
+import Phil_Filippak1x from './lib/Team/img/Phil_Filippak@1x.jpg';
+import Phil_Filippak2x from './lib/Team/img/Phil_Filippak@2x.jpg';
+
+import Alexey_Koloskov1x from './lib/Team/img/Alexey_Koloskov@1x.jpg';
+import Alexey_Koloskov2x from './lib/Team/img/Alexey_Koloskov@2x.jpg';
+
+import Sergey_Tolmachev1x from './lib/Team/img/Sergey_Tolmachev@1x.jpg';
+import Sergey_Tolmachev2x from './lib/Team/img/Sergey_Tolmachev@2x.jpg';
 
 export default [
     {
         "firstName": "Sasha",
         "lastName": "Ivanov",
         "position": "Founder & CEO",
-        "imageUrl": `${BASE_URL}/Sasha_Ivanov.JPG`,
+        "imageUrl1x": `url(${Sasha_Ivanov1x})`,
+        "imageUrl2x": `url(${Sasha_Ivanov2x})`,
         "social": [
             {
                 "type": "facebook",
@@ -30,7 +58,8 @@ export default [
         "firstName": "Maxim",
         "lastName": "Pertsovskiy",
         "position": "CBDO",
-        "imageUrl": `${BASE_URL}/Maxim_Pertsovskiy.jpg`,
+        "imageUrl1x": `url(${Maxim_Pertsovskiy1x})`,
+        "imageUrl2x": `url(${Maxim_Pertsovskiy2x})`,
         "social": [
             // @todo add
         ],
@@ -39,8 +68,13 @@ export default [
         "firstName": "Igor",
         "lastName": "Pugachevsky",
         "position": "Director of Product",
-        "imageUrl": `${BASE_URL}/Igor_Pugachevsky.JPG`,
+        "imageUrl1x": `url(${Igor_Pugachevsky1x})`,
+        "imageUrl2x": `url(${Igor_Pugachevsky2x})`,
         "social": [
+            {
+                "type": "twitter",
+                "url": "https://twitter.com/pugachevsky"
+            },
             {
                 "type": "facebook",
                 "url": "https://www.facebook.com/pugachevsky"
@@ -55,7 +89,8 @@ export default [
         "firstName": "Alexandra",
         "lastName": "Pestretsova",
         "position": "CMO",
-        "imageUrl": `${BASE_URL}/Alexandra_Pestretsova.JPG`,
+        "imageUrl1x": `url(${Alexandra_Pestretsova1x})`,
+        "imageUrl2x": `url(${Alexandra_Pestretsova2x})`,
         "social": [
             {
                 "type": "email",
@@ -66,8 +101,9 @@ export default [
     {
         "firstName": "Natalya",
         "lastName": "Malyova",
-        "position": "CCO",
-        "imageUrl": `${BASE_URL}/Natalya_Malyova.JPG`,
+        "position": "Head of communications",
+        "imageUrl1x": `url(${Natalya_Malyova1x})`,
+        "imageUrl2x": `url(${Natalya_Malyova2x})`,
         "social": [
             {
                 "type": "email",
@@ -79,7 +115,8 @@ export default [
         "firstName": "Mariya",
         "lastName": "Borovikova",
         "position": "CFO",
-        "imageUrl": `${BASE_URL}/Mariya_Borovikova.JPG`,
+        "imageUrl1x": `url(${Mariya_Borovikova1x})`,
+        "imageUrl2x": `url(${Mariya_Borovikova2x})`,
         "social": [
             {
                 "type": "facebook",
@@ -91,7 +128,8 @@ export default [
         "firstName": "Alexey",
         "lastName": "Kofman",
         "position": "PM of Development Team",
-        "imageUrl": `${BASE_URL}/Alexey_Kofman.JPG`,
+        "imageUrl1x": `url(${Alexey_Kofman1x})`,
+        "imageUrl2x": `url(${Alexey_Kofman2x})`,
         "social": [
             {
                 "type": "email",
@@ -115,7 +153,8 @@ export default [
         "firstName": "Phil",
         "lastName": "Filippak",
         "position": "Lead Frontend Developer",
-        "imageUrl": `${BASE_URL}/Phil_Filippak.JPG`,
+        "imageUrl1x": `url(${Phil_Filippak1x})`,
+        "imageUrl2x": `url(${Phil_Filippak2x})`,
         "social": [
             {
                 "type": "twitter",
@@ -131,14 +170,16 @@ export default [
         "firstName": "Alexey",
         "lastName": "Koloskov",
         "position": "Scala Developer",
-        "imageUrl": `${BASE_URL}/Alexey_Koloskov.JPG`,
+        "imageUrl1x": `url(${Alexey_Koloskov1x})`,
+        "imageUrl2x": `url(${Alexey_Koloskov2x})`,
         "social": [],
     },
     {
         "firstName": "Sergey",
         "lastName": "Tolmachev",
         "position": "Scala Developer",
-        "imageUrl": `${BASE_URL}/Sergey_Tolmachev.JPG`,
+        "imageUrl1x": `url(${Sergey_Tolmachev1x})`,
+        "imageUrl2x": `url(${Sergey_Tolmachev2x})`,
         "social": [],
     },
 ]

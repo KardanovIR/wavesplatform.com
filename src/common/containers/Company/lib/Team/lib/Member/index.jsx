@@ -10,18 +10,17 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 
-
-
 const Member = ({
     firstName,
     lastName,
     position,
-    imageUrl,
+    imageUrl1x,
+    imageUrl2x,
     social,
     classes
 }) => (
         <div className={classes.root}>
-            <div className={classes.image} style={{ backgroundImage: `url(${imageUrl})` }} />
+            <div className={classes.image} style={{ backgroundImage: imageUrl2x }} />
 
             <div className={classes.overlay}>
                 <div className={classes.social}>
@@ -61,7 +60,8 @@ Member.propTypes = {
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
+    imageUrl1x: PropTypes.string.isRequired,
+    imageUrl2x: PropTypes.string.isRequired,
     social: PropTypes.arrayOf(
         PropTypes.shape({
             type: PropTypes.string.isRequired,

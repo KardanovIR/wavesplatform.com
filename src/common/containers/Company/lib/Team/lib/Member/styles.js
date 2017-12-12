@@ -38,7 +38,7 @@ export default theme => ({
     },
     [theme.breakpoints.up('md')]: {
         root: {
-            /*'&:hover': {
+            '&:hover': {
                 '& $image': {
                     transform: 'scale(1.02)',
                     filter: 'grayscale(100%)'
@@ -46,7 +46,7 @@ export default theme => ({
                 '& $overlay': {
                     opacity: 1
                 }
-            }*/
+            }
         },
         image: {},
         overlay: {

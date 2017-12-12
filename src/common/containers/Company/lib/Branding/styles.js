@@ -1,4 +1,14 @@
 import flexCentered from 'src/common/styles/flexCentered';
+import img1x from  './img/branding@1x.jpg';
+import img2x from './img/branding@2x.jpg';
+
+const bgStyle = theme => ({
+   backgroundRepeat: 'no-repeat',
+   backgroundSize: 'contain',
+   height: 589,
+   backgroundPosition: 'center',
+
+});
 
 const styles = theme => ({
     root: {
@@ -26,6 +36,16 @@ const styles = theme => ({
     contactUs: {
         textAlign: 'left'
     },
+    bg: {
+        ...bgStyle(theme),
+        backgrounImage: `url(${img1x})`,
+        [theme.mixins.atMedia('md')]: {
+            backgroundImage: `url(${img2x})`,
+        }
+    },
+    bgRow:{
+        height: 589,
+    }
 })
 
 export default styles;

@@ -20,6 +20,7 @@ import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import AboutDescription from './lib/AboutDescription';
 import Media from './lib/Media';
+import Branding from './lib/Branding';
 // import Careers from './lib/Careers';
 
 
@@ -63,12 +64,12 @@ const PageLayout = ({ classes }) => (
         </MainScreenBackground>
 
         {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-        <Section>
+        <Section top={2} bottom={2}>
             <ContentContainer>
                 <AboutDescription />
             </ContentContainer>
         </Section>
-        <Section>
+        <Section top={1} bottom={2}>
             <ContentContainer>
                 <Team members={teamMembers} />
             </ContentContainer>
@@ -80,12 +81,17 @@ const PageLayout = ({ classes }) => (
         </Section>
         {/* </Background> */}
 
-
-        <div className={classes.sectionWide}>
+        <Section top={1} bottom={2}>
             <ContentContainer>
                 <Media />
             </ContentContainer>
-        </div>
+        </Section>
+
+        <Section top={1} bottom={2}>
+            <ContentContainer>
+                <Branding />
+            </ContentContainer>
+        </Section>
 
 
         <Background className={classes.bgLight} skewed={true}>
@@ -97,14 +103,13 @@ const PageLayout = ({ classes }) => (
         </Background>
 
 
-        <AnchorScroll anchor="contact">
+        {/*<AnchorScroll anchor="contact">
             <Background className={classes.bgDark} skewed={true}>
                 <Section size={4} className={classes.footerMarginCompensate}>
                     <FeedbackForm />
                 </Section>
             </Background>
-        </AnchorScroll>
-
+        </AnchorScroll>*/}
 
     </Layout>
 );
