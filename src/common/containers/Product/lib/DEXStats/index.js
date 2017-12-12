@@ -10,9 +10,9 @@ import styles from './styles';
 
 const DEXStats = ({ classes, dexData }) => (
   <Row centered>
-    <Col xs={12} md={6}>
+    <Col xs={12} sm={10} md={6}>
       <Row>
-        <Col xs={12} md={6}>
+        <Col xs={12} sm={6}>
           <Margin bottom={1} xsOnly />
           <Typography type="numeral" className={classes.number} inverted>
             <FormattedMessage
@@ -28,7 +28,7 @@ const DEXStats = ({ classes, dexData }) => (
           </Typography>
           <Margin bottom={3} xsOnly />
         </Col>
-        <Col xs={12} md={6}>
+        <Col xs={12} sm={6}>
           <Typography type="numeral" className={classes.number} inverted>
             <FormattedMessage
               id="product.DEX.dexVolume.number"

@@ -4,6 +4,8 @@ import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
+const image = require('!svg-url-loader?noquotes!./img/image.svg');
+
 import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
@@ -19,6 +21,11 @@ const Exchanges = ({ classes }) => (
           <FormattedMessage id="getWaves.exchanges.title" defaultMessage="Buy Waves on Exchanges" />
         </Typography>
         <Margin bottom={4} />
+      </Col>
+      <Col md={5} className={classes.imageCol}>
+        <div className={classes.imageContainer}>
+          <img src={image} className={classes.image} />
+        </div>
       </Col>
     </Row>
     <Row>

@@ -77,7 +77,7 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </Section>
 
-      <Section size={4}>
+      <Section top={4} bottom={4}>
         <ContentContainer>
           <MobileWallet />
         </ContentContainer>
@@ -120,7 +120,7 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </div>
 
-      <Section top={4} bottom={4}>
+      <Section top={4} bottom={3}>
         <AnchorScroll anchor="token-launcher">
           <ContentContainer>
             <IssuingTokens />

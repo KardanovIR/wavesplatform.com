@@ -9,7 +9,7 @@ const styles = theme => {
       maxWidth: theme.breakpoints.md,
       margin: '0 auto',
       height: '100%',
-      padding: theme.spacing.getSpacing(0, 2)
+      padding: theme.spacing.getSpacing(0, 3)
     },
   };
 };

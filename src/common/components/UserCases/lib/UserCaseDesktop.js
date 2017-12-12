@@ -25,7 +25,7 @@ const UserCaseDesktop = injectSheet(styles)(
             </Typography>
           </Col>
           <Col sm={7}>
-            <Typography type="display3" inverted>
+            <Typography type="display3" inverted weight={600}>
               {title}
             </Typography>
             <Quote signature={signature} withQuotes={false} className={classes.quote} inverted>

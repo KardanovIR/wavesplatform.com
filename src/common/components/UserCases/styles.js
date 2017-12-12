@@ -5,9 +5,12 @@ const styles = theme => ({
     justifyContent: 'flex-end',
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
-    height: 540,
-    width: `calc(100vw - ${theme.spacing.unit * 4}px)`,
-    boxSizing: 'border-box'
+    height: 650,
+    width: `calc(100vw - ${theme.spacing.unit * 6}px)`,
+    boxSizing: 'border-box',
+    [theme.mixins.atMedia(375)]: {
+      height: 560,
+    }
   },
   quote: {
     marginTop: theme.spacing.unit * 1.5

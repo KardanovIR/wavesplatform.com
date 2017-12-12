@@ -14,7 +14,7 @@ import url from 'src/common/utils/url';
 
 const Interest = ({ classes }) => (
   <Row className={classes.row}>
-    <Col xs={12} md={6} className={cx(classes.column, classes.columnGray)}>
+    <Col xs={12} sm={6} className={cx(classes.column, classes.columnGray)}>
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>
@@ -37,7 +37,7 @@ const Interest = ({ classes }) => (
       </div>
     </Col>
 
-    <Col xs={12} md={6} className={cx(classes.column, classes.columnBlue)}>
+    <Col xs={12} sm={6} className={cx(classes.column, classes.columnBlue)}>
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>

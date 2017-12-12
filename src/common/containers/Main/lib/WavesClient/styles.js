@@ -5,7 +5,7 @@ const styles = theme => ({
   //     width: '100%',
   // },
   root: {
-    marginBottom: theme.spacing.unit * 18
+    marginBottom: theme.spacing.unit * 18,
   },
   imageCol: {
     position: 'absolute',
@@ -25,22 +25,26 @@ const styles = theme => ({
     zIndex: -1,
     top: 0,
     left: 0,
-    width: '100%'
+    width: '100%',
   },
   [theme.breakpoints.up('sm')]: {
     root: {
       marginBottom: 0,
     },
     imageCol: {
-      right: theme.spacing.unit * 1.5,
-      bottom: -130,
+      right: -theme.spacing.unit * 3,
+      bottom: -110,
       width: '50%',
     },
     image: {
-      width: 'auto'
-    }
+      width: 'auto',
+    },
   },
-  [theme.breakpoints.up('md')]: {},
+  [theme.breakpoints.up('md')]: {
+    imageCol: {
+      right: theme.spacing.unit * 1.5,
+    },
+  },
   [theme.breakpoints.up('lg')]: {},
 });
 

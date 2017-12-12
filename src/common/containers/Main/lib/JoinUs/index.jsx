@@ -28,7 +28,7 @@ const socialButtonStyles = theme => ({
     '&:before, &:after': {
       borderRadius: '50%',
     },
-    [theme.mixins.atMedia('md')]: {
+    [theme.mixins.atMedia('sm')]: {
       float: 'left',
       marginRight: theme.spacing.unit * 2,
     }
@@ -44,7 +44,7 @@ const SocialButton = injectSheet(socialButtonStyles)(({ href, name, classes }) =
 const MainScreen = ({ classes }) => (
   <div>
     <Row className={classes.root}>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Typography type="body2" className={classes.text} inverted>
           <FormattedMessage
             id="home.joinUs.text"
@@ -56,12 +56,12 @@ const MainScreen = ({ classes }) => (
           Join the Waves Community
         </Typography>
 
-        <MQ query={query.md}>
+        <MQ query={query.sm}>
           <Margin />
-          <div>{links.map(link => <SocialButton key={`social_${link.name}`} {...link} />)}</div>
+          <div className={classes.socialButtonsContainer}>{links.map(link => <SocialButton key={`social_${link.name}`} {...link} />)}</div>
         </MQ>
       </Col>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Typography type="body2" className={classes.text} inverted>
           <FormattedMessage
             id="home.joinUs.quote"
@@ -83,7 +83,7 @@ const MainScreen = ({ classes }) => (
       </Col>
     </Row>
 
-    <MQ query={query.md}>
+    <MQ query={query.sm}>
       {matches =>
         !matches && (
           <div className={classes.socialButtonsContainer}>

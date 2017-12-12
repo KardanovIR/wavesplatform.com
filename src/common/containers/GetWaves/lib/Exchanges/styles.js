@@ -4,6 +4,17 @@ const styles = theme => ({
   root: {
     padding: theme.spacing.getSpacing(0, 1.5)
   },
+  imageCol: {
+    display: 'none',
+    position: 'relative'
+  },
+  imageContainer: {
+    position: 'absolute',
+    right: 0,
+    top: 114
+  },
+  image: {
+  },
   col: {
     padding: 0,
     border: `1px solid ${theme.palette.gray[100]}`,
@@ -26,6 +37,11 @@ const styles = theme => ({
       opacity: 1,
     },
   },
+  [theme.mixins.atMedia('md')]: {
+    imageCol: {
+      display: 'block'
+    }
+  }
 });
 
 export default styles;

@@ -7,7 +7,7 @@ const styles = theme => ({
   },
   imageWrapper: {
     position: 'relative',
-    paddingTop: '71%',
+    paddingTop: '100%',
     overflow: 'visible',
   },
   image: {
@@ -33,7 +33,8 @@ const styles = theme => ({
     image: {
       width: '120%',
       height: '120%',
-      top: -60,
+      top: -90,
+      left: '10%'
     },
   },
 });

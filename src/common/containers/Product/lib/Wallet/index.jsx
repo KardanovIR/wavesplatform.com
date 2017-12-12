@@ -39,7 +39,7 @@ const Wallet = ({classes}) => (
       />
     </Margin>
     <Row>
-      <Col xs={12} md={6}>
+      <Col xs={12} sm={6}>
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="transaction" />}
@@ -58,7 +58,7 @@ const Wallet = ({classes}) => (
         />
         <Margin bottom={5} xsOnly />
       </Col>
-      <Col xs={12} md={6}>
+      <Col xs={12} sm={6}>
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="shield" />}

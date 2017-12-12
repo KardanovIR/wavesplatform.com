@@ -13,7 +13,7 @@ import styles from './styles';
 const DEX = ({ classes }) => (
   <div className={classes.root}>
     <Row className={classes.titleRow}>
-      <Col xs={12} md={7}>
+      <Col xs={12} sm={7} md={7}>
         <Typography type="display5" tagName="div" className={classes.title} inverted>
           <FormattedMessage id="home.DEX.title" defaultMessage="Decentralised Exchange" />
         </Typography>
@@ -23,7 +23,7 @@ const DEX = ({ classes }) => (
       </div>
     </Row>
     <Row>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
             title={
@@ -43,7 +43,7 @@ const DEX = ({ classes }) => (
           />
         </Margin>
       </Col>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
             title={
@@ -63,7 +63,7 @@ const DEX = ({ classes }) => (
           />
         </Margin>
       </Col>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
             title={
@@ -83,7 +83,7 @@ const DEX = ({ classes }) => (
           />
         </Margin>
       </Col>
-      <Col xs={12} md={6} className={classes.article}>
+      <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
             title={

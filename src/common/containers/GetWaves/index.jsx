@@ -38,13 +38,11 @@ const PageLayout = ({ classes }) => (
       </ContentContainer>
     </Section>
 
-    <Background className={classes.bgExchanges} skewed={true}>
-      <Section size={4}>
-        <ContentContainer>
-          <Exchanges />
-        </ContentContainer>
-      </Section>
-    </Background>
+    <Section bottom={4}>
+      <ContentContainer>
+        <Exchanges />
+      </ContentContainer>
+    </Section>
   </Layout>
 );
 

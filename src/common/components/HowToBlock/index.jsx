@@ -19,7 +19,7 @@ const HowToBlock = ({ classes, title, steps, quote }) => (
       </Col>
     )}
     {steps.map((step, index) => (
-      <Col key={`step_${index}`} xs={12} md={4} className={classes.column}>
+      <Col key={`step_${index}`} xs={12} sm={4} className={classes.column}>
         <div bottom={3} className={classes.columnContent}>
           <Step avatar={step.avatar}>{step.text}</Step>
         </div>

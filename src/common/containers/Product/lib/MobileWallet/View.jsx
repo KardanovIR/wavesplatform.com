@@ -12,9 +12,9 @@ import styles from './styles';
 
 const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
   <Row className={classes.root} alignItems="center">
-    <Col xs={12} md={6}>
+    <Col xs={12} sm={8} md={6}>
       <Row>
-        <Col xs={12} md={10}>
+        <Col xs={12} sm={10}>
           <Typography type="display3Inverted">
             <FormattedMessage
               id="product.mobileWallet.title"
@@ -22,7 +22,7 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
             />
           </Typography>
         </Col>
-        <Col xs={12} md={8}>
+        <Col xs={12} sm={8}>
           <Margin top={2} xsOnly />
           <Typography type="body">
             <FormattedMessage
@@ -42,7 +42,7 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
         <ButtonGetApp onClick={onIosClientClick} type="app-store" />
       </Margin>
     </Col>
-    <Col xs={12} md={6} className={classes.imageCol}>
+    <Col xs={12} sm={4} md={6} className={classes.imageCol}>
       <div className={classes.imageWrapper}>
         <img
           src={require('./img/hand@1x.jpg')}

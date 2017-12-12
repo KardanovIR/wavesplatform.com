@@ -14,7 +14,6 @@ import Logo from 'src/common/components/Logo';
 import url from 'src/common/utils/url';
 
 const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => {
-  console.log('activeLink', activeLink);
   return (
     <nav className={cx(classes.wrapper, { [classes.wrapperAnimated]: activeLink === 'home' })}>
       <Wrapper>

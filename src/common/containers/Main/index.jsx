@@ -80,7 +80,7 @@ const PageLayout = ({ initialState, classes }) => (
         </ContentContainer>
       </Section>
 
-      <Section size={5}>
+      <Section top={5} className={classes.issuingTokens}>
         <ContentContainer>
           <IssuingTokens />
         </ContentContainer>
