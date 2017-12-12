@@ -11,8 +11,6 @@ import MainScreenBackground from 'src/common/components/Background/MainScreen';
 import AnchorScroll from 'src/public/components/AnchorScroll';
 import ContentContainer from 'src/common/components/ContentContainer';
 
-
-
 // lib
 import Team from './lib/Team';
 import FeedbackForm from './lib/FeedbackForm';
@@ -23,16 +21,12 @@ import Media from './lib/Media';
 import Branding from './lib/Branding';
 // import Careers from './lib/Careers';
 
-
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-//import { FormattedMessage } from 'react-intl';
-
+import { FormattedMessage } from 'react-intl';
 import teamMembers from './team';
-
-
 
 const PageLayout = ({ classes }) => (
     <Layout activeLink="company">
@@ -44,7 +38,10 @@ const PageLayout = ({ classes }) => (
         >
             <MainScreen
                 title={
-                    "We create the economics of free, perfect and instant"
+                    <FormattedMessage
+                        id="company.title"
+                        defaultMessage="We create the economics of free, perfect and instant"
+                    />
                 }
                 titleWeight={400}
                 titleType={"display6"}
