@@ -63,9 +63,6 @@ const PageLayout = ({ classes }) => (
         </MainScreenBackground>
 
         {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-        {/*<Section top={3} bottom={2}>
-            <Whitepaper />
-        </Section>*/}
         <Section>
             <ContentContainer>
                 <AboutDescription />
@@ -77,14 +74,18 @@ const PageLayout = ({ classes }) => (
             </ContentContainer>
         </Section>
         <Section top={1} bottom={2}>
-            <Whitepaper />
+            <ContentContainer>
+                <Whitepaper />
+            </ContentContainer>
         </Section>
         {/* </Background> */}
 
 
-        {/*<div className={classes.sectionWide}>
-            <Media />
-        </div>*/}
+        <div className={classes.sectionWide}>
+            <ContentContainer>
+                <Media />
+            </ContentContainer>
+        </div>
 
 
         <Background className={classes.bgLight} skewed={true}>

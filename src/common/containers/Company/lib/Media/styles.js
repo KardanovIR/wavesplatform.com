@@ -1,12 +1,19 @@
 import flexCentered from 'src/common/styles/flexCentered';
+import img1x from  './img/branding@1x.jpg';
+import img2x from './img/branding@2x.jpg';
 
+const bgStyle = theme => ({
+   backgroundRepeat: 'no-repeat',
+   backgroundSize: 'cover',
+
+});
 
 const styles = theme => ({
     root: {
     },
     media: {
         ...flexCentered,
-        marginBottom: theme.spacing.unit * 3,
+        //marginBottom: theme.spacing.unit * 3,
         height: 180
     },
     logo: {
@@ -15,6 +22,9 @@ const styles = theme => ({
     },
     link: {
         display: 'block',
+        border: '1px solid #d6d6d6',
+        marginRight: -1,
+        marginBottom: -1,
         opacity: 0.6,
         transition: theme.transitions.create('opacity'),
         '&:hover': {
@@ -24,6 +34,13 @@ const styles = theme => ({
     contactUs: {
         textAlign: 'center'
     },
+    bg: {
+        ...bgStyle(theme),
+        backgrounImage: `url(${img1x})`,
+        [theme.mixins.atMedia('md')]: {
+            backgroundImage: `url(${img2x})`,
+        }
+    }
 })
 
 export default styles;
