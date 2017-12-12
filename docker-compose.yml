@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   nginx:
     build: ./config/nginx
@@ -10,6 +10,8 @@ services:
       - "443:443"
     env_file:
       - variables.env
+    volumes_from:
+      - static
     restart: unless-stopped
   balancer:
     image: dockercloud/haproxy
@@ -41,4 +43,9 @@ services:
      - "3001"
     env_file:
       - variables.env
+    volumes:
+      - staticfiles:/opt/app/dist
     restart: unless-stopped
+volumes:
+  staticfiles:
+    external: true
