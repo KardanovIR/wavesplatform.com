@@ -45,6 +45,8 @@ Typography.defaultProps = {
   type: 'body',
   tagName: '',
   tagMap: {
+    display7: 'div',
+    display6: 'div',
     display5: 'h1',
     display4: 'h1',
     display3: 'h2',
@@ -62,6 +64,8 @@ Typography.defaultProps = {
 };
 
 const types = [
+  'display7',
+  'display6',
   'display5',
   'display4',
   'display3',

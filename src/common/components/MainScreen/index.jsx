@@ -9,11 +9,11 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 import cn from 'classnames';
 
-const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }) => (
+const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, titleType, titleWeight }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
       <Col xs={12} sm={10} lg={10} smOffset={1} lgOffset={1}>
-        <Typography type="display5" weight={700} className={classes.title}>
+        <Typography type={titleType} weight={titleWeight} className={classes.title}>
           {title}
         </Typography>
         <Margin />
@@ -67,6 +67,8 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons }
 
 MainScreen.defaultProps = {
   buttons: [],
+  titleType: 'display5',
+  titleWeight: 700,
 };
 
 MainScreen.PropTypes = {
@@ -75,6 +77,8 @@ MainScreen.PropTypes = {
   buttons: PropTypes.arrayOf(PropTypes.node),
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,
+  titleType: PropTypes.string,
+  titleWeight: PropTypes.string,
 };
 
 export default injectSheet(styles)(MainScreen);

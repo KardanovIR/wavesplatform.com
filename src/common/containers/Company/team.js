@@ -1,11 +1,12 @@
-const BASE_URL = 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/images';
+//const BASE_URL = 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/images';
+const BASE_URL = "http://work.image-life.ru:8081/wave/";
 
 export default [
     {
         "firstName": "Sasha",
         "lastName": "Ivanov",
         "position": "Founder & CEO",
-        "imageUrl": `${BASE_URL}/ivanov.jpg`,
+        "imageUrl": `${BASE_URL}/Sasha_Ivanov.JPG`,
         "social": [
             {
                 "type": "facebook",
@@ -29,7 +30,7 @@ export default [
         "firstName": "Maxim",
         "lastName": "Pertsovskiy",
         "position": "CBDO",
-        "imageUrl": `${BASE_URL}/pertsovskiy.jpg`,
+        "imageUrl": `${BASE_URL}/Maxim_Pertsovskiy.jpg`,
         "social": [
             // @todo add
         ],
@@ -38,7 +39,7 @@ export default [
         "firstName": "Igor",
         "lastName": "Pugachevsky",
         "position": "Director of Product",
-        "imageUrl": `${BASE_URL}/pugachevsky.jpg`,
+        "imageUrl": `${BASE_URL}/Igor_Pugachevsky.JPG`,
         "social": [
             {
                 "type": "facebook",
@@ -54,7 +55,7 @@ export default [
         "firstName": "Alexandra",
         "lastName": "Pestretsova",
         "position": "CMO",
-        "imageUrl": `${BASE_URL}/pestrecova.jpg`,
+        "imageUrl": `${BASE_URL}/Alexandra_Pestretsova.JPG`,
         "social": [
             {
                 "type": "email",
@@ -66,7 +67,7 @@ export default [
         "firstName": "Natalya",
         "lastName": "Malyova",
         "position": "CCO",
-        "imageUrl": `${BASE_URL}/malyova.jpg`,
+        "imageUrl": `${BASE_URL}/Natalya_Malyova.JPG`,
         "social": [
             {
                 "type": "email",
@@ -78,7 +79,7 @@ export default [
         "firstName": "Mariya",
         "lastName": "Borovikova",
         "position": "CFO",
-        "imageUrl": `${BASE_URL}/borovikova.jpg`,
+        "imageUrl": `${BASE_URL}/Mariya_Borovikova.JPG`,
         "social": [
             {
                 "type": "facebook",
@@ -90,7 +91,7 @@ export default [
         "firstName": "Alexey",
         "lastName": "Kofman",
         "position": "PM of Development Team",
-        "imageUrl": `${BASE_URL}/kofman.jpg`,
+        "imageUrl": `${BASE_URL}/Alexey_Kofman.JPG`,
         "social": [
             {
                 "type": "email",
@@ -98,7 +99,7 @@ export default [
             },
         ],
     },
-    {
+   /* {
         "firstName": "Guy",
         "lastName": "Brandon",
         "position": "Writer",
@@ -109,12 +110,12 @@ export default [
                 "url": "https://twitter.com/cassiuscrypto"
             },
         ],
-    },
+    },*/
     {
         "firstName": "Phil",
         "lastName": "Filippak",
         "position": "Lead Frontend Developer",
-        "imageUrl": `${BASE_URL}/filippak.jpg`,
+        "imageUrl": `${BASE_URL}/Phil_Filippak.JPG`,
         "social": [
             {
                 "type": "twitter",
@@ -130,14 +131,14 @@ export default [
         "firstName": "Alexey",
         "lastName": "Koloskov",
         "position": "Scala Developer",
-        "imageUrl": `${BASE_URL}/koloskov.jpeg`,
+        "imageUrl": `${BASE_URL}/Alexey_Koloskov.JPG`,
         "social": [],
     },
     {
         "firstName": "Sergey",
         "lastName": "Tolmachev",
         "position": "Scala Developer",
-        "imageUrl": `${BASE_URL}/tolmachev.jpg`,
+        "imageUrl": `${BASE_URL}/Sergey_Tolmachev.JPG`,
         "social": [],
     },
 ]

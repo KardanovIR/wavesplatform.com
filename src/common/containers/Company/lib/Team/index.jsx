@@ -14,15 +14,15 @@ const Team = ({
     <div>
         <Row>
             <Col xs={12}>
-                <Typography type="display3">
+                <Typography type="display2">
                     Our Team
                 </Typography>
-                <Margin bottom={5} />
+                <Margin bottom={2} />
             </Col>
         </Row>
         <Row>
             { members.map((member, index) => (
-                <Col key={`team_member_${index}`} xs={12} sm={6} md={4}>
+                <Col key={`team_member_${index}`} xs={12} sm={3} md={3}>
                     <Member {...member} />
                     <Margin bottom={3} />
                 </Col>

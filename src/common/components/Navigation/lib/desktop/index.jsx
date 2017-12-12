@@ -12,6 +12,7 @@ const DesktopNav = ({ classes, links, activeLink }) => (
       <Typography key={`desktop_nav_link${index}`} tagName="span">
         <a
           href={link.href}
+          style={(activeLink==="company"?{color: '#fff'}:{})}
           className={cn(classes.link, { [classes.active]: link.page === activeLink })}
         >
           {link.text}

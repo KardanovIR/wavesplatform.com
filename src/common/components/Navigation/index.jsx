@@ -18,7 +18,7 @@ const Nav = ({ classes, links, activeLink }) => (
       <ContentContainer>
         <div className={classes.logo}>
           <a href={url('home')} className={classes.logo}>
-            <Logo />
+            <Logo color={activeLink=="company"?"#fff":null} />
           </a>
         </div>
 

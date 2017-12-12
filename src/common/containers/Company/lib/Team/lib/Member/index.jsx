@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Typography from 'src/common/components/Typography';
 import Icon from 'src/common/components/Icon';
 import Link from 'src/common/components/Link';
+import Margin from 'src/common/components/Margin';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -36,15 +37,15 @@ const Member = ({
                         </Link>
                     )) }
                 </div>
-
-                <div className={classes.text}>
-                    <Typography type="display1" inverted>
-                        {firstName + ' ' + lastName}
-                    </Typography>
-                    <Typography type="body" inverted noMargin>
-                        {position}
-                    </Typography>
-                </div>
+            </div>
+            <Margin top={1} />
+            <div className={classes.text}>
+                <Typography type="display1">
+                    {firstName + ' ' + lastName}
+                </Typography>
+                <Typography type="body" noMargin>
+                    {position}
+                </Typography>
             </div>
         </div>
     );

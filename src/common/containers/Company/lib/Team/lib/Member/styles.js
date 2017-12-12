@@ -8,9 +8,8 @@ export default theme => ({
         paddingBottom: '100%',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        transition: theme.transitions.create(['transform','filter'], theme.transitions.durationMedium),
-
-        filter: 'grayscale(100%)',
+        //transition: theme.transitions.create(['transform','filter'], theme.transitions.durationMedium),
+        //filter: 'grayscale(100%)',
     },
     overlay: {
         position: 'absolute',
@@ -21,9 +20,10 @@ export default theme => ({
         background: 'rgba(0,0,0,.4)',
     },
     text: {
-        position: 'absolute',
-        bottom: theme.spacing.unit * 3,
-        left: theme.spacing.unit * 3,
+        //position: 'absolute',
+        //bottom: theme.spacing.unit * 3,
+        left: theme.spacing.unit * 2,
+        color: theme.palette.gray[1000],
     },
     social: {
         position: 'absolute',
@@ -38,7 +38,7 @@ export default theme => ({
     },
     [theme.breakpoints.up('md')]: {
         root: {
-            '&:hover': {
+            /*'&:hover': {
                 '& $image': {
                     transform: 'scale(1.02)',
                     filter: 'grayscale(100%)'
@@ -46,12 +46,12 @@ export default theme => ({
                 '& $overlay': {
                     opacity: 1
                 }
-            } 
+            }*/
         },
         image: {},
         overlay: {
             opacity: 0,
-            transition: theme.transitions.create('opacity', theme.transitions.durationMedium),
+            //transition: theme.transitions.create('opacity', theme.transitions.durationMedium),
         },
     }
 })
