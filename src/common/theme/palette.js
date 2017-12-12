@@ -24,7 +24,8 @@ export const gray = colorMigrationProxy(
         // 500: '#5F7090',  // moved to grayBlue
         600: '#6a7689',
         // 700: '#415272',  // moved to grayBlue
-        800: '#2d374b',
+				800: '#2d374b',
+				1000: '#000',
     },
     'gray'
 );

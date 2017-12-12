@@ -1,4 +1,5 @@
-import image from './img/image.svg';
+// import image from './img/image.svg';
+import image from './img/image.png';
 
 
 const styles = theme => ({

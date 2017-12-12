@@ -37,11 +37,11 @@ const IndexMainScreen = ({
 												secondary
                         key="main_cta_button"
                         target="_blank"
-                        href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                        href={url('beta-new-client')}
                     >
                         <FormattedMessage
-                            id="cta.getClient"
-                            defaultMessage="Get Client"
+                            id="cta.getNewClient"
+                            defaultMessage="New Client (beta)"
                         />
                     </Button>
                 ),

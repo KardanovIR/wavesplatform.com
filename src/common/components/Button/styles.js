@@ -64,7 +64,7 @@ const styles = theme => ({
         },
     },
     dark: {
-        backgroundColor: theme.palette.primary[900],
+        backgroundColor: theme.palette.gray[1000],
         color: theme.palette.gray[0],
         '&:hover': {
             '&:before': { opacity: 0.3 },

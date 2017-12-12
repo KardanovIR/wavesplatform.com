@@ -1,4 +1,4 @@
-import mobileWallet from './img/mobile_wallet.svg';
+import mobileWallet from './img/mobile_wallet.png';
 
 
 const styles = theme => ({
