@@ -75,6 +75,7 @@ MainScreen.PropTypes = {
   buttons: PropTypes.arrayOf(PropTypes.node),
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,
+  animated: PropTypes.bool
 };
 
 export default injectSheet(styles)(MainScreen);

@@ -6,13 +6,16 @@ export default theme => ({
 
   wrapper: {
     padding: '20px 0',
-    animation: 'show-0 .65s ease 4.5s forwards',
-    opacity: 0,
+
     '&:after': {
       content: '""',
       display: 'block',
       clear: 'both',
     },
+  },
+  wrapperAnimated: {
+    animation: 'show-0 .65s ease 4.5s forwards',
+    opacity: 0,
   },
   logo: {
     float: 'left',

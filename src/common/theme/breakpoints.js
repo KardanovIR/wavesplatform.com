@@ -4,6 +4,7 @@ export const keys = ['xs', 'sm', 'md', 'lg', 'desktop1366', 'xl'];
 const defaultBreakpoints = {
   xs: 360,
   sm: 600,
+  tablet: 768,
   md: 980,
   lg: 1280,
   desktop1366: 1366,

@@ -25,8 +25,8 @@ const styles = theme => ({
 
   title: {
     lineHeight: 1.05,
-    opacity: 0,
-    animation: 'show-0 .65s ease 3s forwards',
+    opacity: ({animated}) => animated ? 0 : 1,
+    animation: ({animated}) => animated && 'show-0 .65s ease 3s forwards',
   },
 
   imageColMargin: {
@@ -37,15 +37,15 @@ const styles = theme => ({
   descriptionText: {
     fontSize: 16,
     lineHeight: 2,
-    opacity: 0,
-    animation: 'show-0 .65s ease 4.5s forwards',
+    opacity: ({animated}) => animated ? 0 : 1,
+    animation: ({animated}) => animated && 'show-0 .65s ease 4.5s forwards',
   },
 
   buttonsContainer: {
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
-    opacity: 0,
-    animation: 'show-0 .65s ease 4.5s forwards',
+    opacity: ({animated}) => animated ? 0 : 1,
+    animation: ({animated}) => animated && 'show-0 .65s ease 4.5s forwards',
   },
 
   buttonWrapper: {

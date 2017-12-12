@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import styles from './styles';
 
 import injectSheet from 'react-jss';
@@ -13,7 +14,7 @@ import Logo from 'src/common/components/Logo';
 import url from 'src/common/utils/url';
 
 const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => (
-  <nav className={classes.wrapper}>
+  <nav className={cx(classes.wrapper, {[classes.wrapperAnimated]: activeLink === 'home'} )}>
     <Wrapper>
       <ContentContainer>
         <div className={classes.logo}>

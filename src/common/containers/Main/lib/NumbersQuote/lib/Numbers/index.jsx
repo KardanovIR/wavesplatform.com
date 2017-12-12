@@ -21,7 +21,7 @@ const ColNumber = injectSheet(styles)(({ classes, children }) => (
 
 const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }) =>
   wavesBtcRate && dexVolume && dexWallets && dexAssets ? (
-    <Col xs={12} md={4} {...rest}>
+    <Col xs={12} sm={4} {...rest}>
       <ColNumber>
         <Typography type="numeral">
           ฿ <FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />

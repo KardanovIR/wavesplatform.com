@@ -36,11 +36,13 @@ const PageLayout = ({ initialState, classes }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-      videoSrc={require('./video/w_white_main_1.mp4')}
-      videoFirstFrame={require('./img/video_ff.jpg')}
+      videoSrc={require('./video/waves_main_seq.mp4')}
+      videoSrcMobile={require('./video/ony_waves_video_iphone.mp4')}
+      videoFirstFrame={require('./img/bgDesktopFF.jpg')}
+      videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
       <ContentContainer>
-        <MainScreen />
+        <MainScreen animated />
       </ContentContainer>
     </BackgroundMainScreen>
 

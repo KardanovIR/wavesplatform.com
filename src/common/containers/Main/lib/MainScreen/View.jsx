@@ -8,7 +8,7 @@ import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 // import Image from '!svg-react-loader!./img/image.svg';
 import url from 'src/common/utils/url';
 
-const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
+const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
   <MainScreen
     title={
       <FormattedHTMLMessage id="home.main.title" defaultMessage="Get started<br>with blockchain" />
@@ -39,6 +39,7 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
         <FormattedMessage id="cta.getWaves" defaultMessage="Get Waves" />
       </Button>,
     ]}
+    animated={animated}
   />
 );
 

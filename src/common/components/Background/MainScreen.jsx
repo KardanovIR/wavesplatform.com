@@ -53,7 +53,7 @@ const styles = () => ({
   },
 });
 
-const MainScreenBackground = ({ classes, children, className, type, src, videoSrc, srcSet, videoFirstFrame }) => (
+const MainScreenBackground = ({ classes, children, className, type, src, videoSrc, videoSrcMobile, srcSet, videoFirstFrame, videoFirstFrameMobile }) => (
   <div className={classes.wrapper}>
     <Wrapper>
       <div
@@ -67,7 +67,7 @@ const MainScreenBackground = ({ classes, children, className, type, src, videoSr
           className
         )}
       >
-        {videoSrc && <Video className={classes.image} src={videoSrc} firstFrame={videoFirstFrame} poster={src} srcSet={srcSet} />}
+        {videoSrc && <Video loop className={classes.image} src={videoSrc} srcMobile={videoSrcMobile} firstFrame={videoFirstFrame} firstFrameMobile={videoFirstFrameMobile} poster={src} srcSet={srcSet} />}
         {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
       </div>
       {children}

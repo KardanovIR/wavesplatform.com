@@ -7,9 +7,12 @@ import IS_MS from 'src/common/utils/isMS.js';
 
 export default class Video extends Component {
   static propTypes = {
-    poster: PropTypes.string,
+    poster: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    srcMobile: PropTypes.string.isRequired,
     srcSet: PropTypes.string,
-    firstFrame: PropTypes.string,
+    firstFrame: PropTypes.string.isRequired,
+    firstFrameMobile: PropTypes.string.isRequired,
     noMSIE: PropTypes.bool,
   };
 
@@ -18,7 +21,7 @@ export default class Video extends Component {
   };
 
   state = {
-    canPlaysInline: false,
+    canPlaysInline: true,
   };
 
   componentWillMount() {
@@ -30,45 +33,48 @@ export default class Video extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      canPlaysInline: 'playsInline' in document.createElement('video'),
-    });
-
-    // workaround for React strip muted attribute on client render https://github.com/facebook/react/issues/10389
-    if (this.$video) {
-      this.$video.setAttribute('muted', '1');
-      this.$video.setAttribute('playsinline', '1');
-      this.$video.setAttribute('autoplay', '1');
+    if (! this.state.canPlaysInline) {
+      this.setState({
+        canPlaysInline: 'playsInline' in document.createElement('video'),
+      });
     }
   }
 
   render() {
-    const { children, poster, className, srcSet, noMSIE, firstFrame, ...rest } = this.props;
+    const {
+      children,
+      poster,
+      className,
+      srcSet,
+      noMSIE,
+      firstFrame,
+      firstFrameMobile,
+      src,
+      srcMobile,
+      ...rest
+    } = this.props;
+
     const { canPlaysInline } = this.state;
 
-    const Video = (
-      <video
-        ref={ref => (this.$video = ref)}
-        poster={firstFrame}
-        className={className}
-        {...rest}
-        autoPlay
-        playsInline
-        muted
-      >
-        {children}
-      </video>
-    );
-
     if (!canUseDOM) {
-      return Video;
+      return null;
     }
 
     return (
-      <MQ query={query.md}>
+      <MQ query={query.tablet}>
         {matches =>
           (matches || canPlaysInline) && !(noMSIE && IS_MS) ? (
-            Video
+            <video
+              {...rest}
+              src={matches ? src : srcMobile}
+              poster={matches ? firstFrame : firstFrameMobile}
+              className={className}
+              autoPlay
+              playsInline
+              muted
+            >
+              {children}
+            </video>
           ) : (
             <img src={poster} srcSet={srcSet} alt="" className={className} />
           )
