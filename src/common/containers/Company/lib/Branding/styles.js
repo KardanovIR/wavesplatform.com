@@ -5,9 +5,8 @@ import img2x from './img/branding@2x.jpg';
 const bgStyle = theme => ({
    backgroundRepeat: 'no-repeat',
    backgroundSize: 'contain',
-   height: 589,
    backgroundPosition: 'center',
-
+    padding: theme.spacing.getSpacing(10, 0, 32, 0),
 });
 
 const styles = theme => ({
@@ -44,7 +43,7 @@ const styles = theme => ({
         }
     },
     bgRow:{
-        height: 589,
+        padding: theme.spacing.getSpacing(10, 0, 14, 0),
     }
 })
 

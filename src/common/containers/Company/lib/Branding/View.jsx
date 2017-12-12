@@ -22,7 +22,6 @@ const Branding = ({
     <div className={classes.root}>
         <Row className={classes.bgRow}>
             <Background className={classes.bg} skewed={true}>
-                <Margin top={5} />
                 <Col xs={12} md={8} lg={5} className={classes.contactUs}>
                     <Typography type="body2" inverted>
                         <FormattedMessage
