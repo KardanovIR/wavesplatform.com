@@ -23,40 +23,6 @@ const creatyTypography = (palette, breakpoints) => {
   };
 
   return {
-    display7: combineMobileDesktopStyles(
-      {
-        fontSize: 30,
-        lineHeight: 1,
-      },
-      {
-        ...base,
-        ...display,
-        fontSize: 44,
-        fontWeight: 400,
-        lineHeight: 1.23,
-        textAlign: 'left',
-      },
-    ),
-    display6: combineMobileDesktopStyles(
-      {
-          fontSize: 20,
-          color: palette.gray[0],
-      },
-      {
-        ...base,
-        ...display,
-        width: 773,
-        fontSize: 38,
-        fontWeight: 400,
-        lineHeight: 1.05,
-        //textAlign: 'center',
-        color: palette.gray[0],
-
-        [breakpoints.up('md')]: {
-          fontSize: 80,
-        },
-      },
-    ),
     display5: {
       ...base,
       ...display,

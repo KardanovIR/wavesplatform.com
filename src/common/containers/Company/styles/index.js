@@ -14,5 +14,16 @@ export default theme => ({
     },
     centered: {
         textAlign: 'center'
+    },
+    titleStyle: {
+        fontSize: 38,
+        color: theme.palette.gray[0],
+        [theme.breakpoints.up('md')]: {
+            fontSize: 80,
+            width: 773,
+            fontWeight: 400,
+            lineHeight: 1.05,
+
+        },
     }
 })

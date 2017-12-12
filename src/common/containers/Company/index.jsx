@@ -7,6 +7,7 @@ import Section from 'src/common/components/Section';
 import MainScreen from 'src/common/components/MainScreen';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
+import Typography from 'src/common/components/Typography';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 import ContentContainer from 'src/common/components/ContentContainer';
@@ -38,13 +39,14 @@ const PageLayout = ({ classes }) => (
         >
             <MainScreen
                 title={
-                    <FormattedMessage
-                        id="company.title"
-                        defaultMessage="We create the economics of free, perfect and instant"
-                    />
+                    <Typography type={"display5"} className={classes.titleStyle} inverted>
+                        <FormattedMessage
+                            id="company.title"
+                            defaultMessage="We create the economics of free, perfect and instant"
+                        />
+                    </Typography>
                 }
-                titleWeight={400}
-                titleType={"display6"}
+                //titleType={"display5"}
                 /*title={
                     {<FormattedMessage
                         id="company.title"
