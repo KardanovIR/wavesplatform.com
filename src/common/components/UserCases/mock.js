@@ -7,7 +7,8 @@ const SLIDES_DATA = [
     signature: 'MobileGo Team',
     bg: require('./img/slide.jpg'),
     bgMobile: require('./img/slide0mobile.jpg'),
-    logo: '',
+    logoSrc: require('!svg-url-loader?noquotes!./img/logo.svg'),
+    logoSrcLight: require('!svg-url-loader?noquotes!./img/logoWhite.svg'),
   },
   {
     userName: 'Worldwide coworking spaces for Tech Community',
@@ -17,7 +18,8 @@ const SLIDES_DATA = [
     signature: 'MobileGo Team',
     bg: require('./img/slide1.jpg'),
     bgMobile: require('./img/slide1Mobile.jpg'),
-    logo: '',
+    logoSrc: require('./img/logo2.png'),
+    logoSrcSet: `${require('./img/logo2.png')} 1x, ${require('./img/logo2@2x.png')} 2x`
   },
 ];
 

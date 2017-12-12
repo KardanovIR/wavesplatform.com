@@ -36,7 +36,7 @@ const styles = theme => ({
     header: {
       display: ({ twoColumns }) => (twoColumns ? 'flex' : 'block'),
       alignItems: 'center',
-      marginBottom: 0
+      marginBottom: 0,
     },
     title: {
       fontSize: 19,

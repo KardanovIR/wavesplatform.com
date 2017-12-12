@@ -11,20 +11,20 @@ import styles from "../styles";
 import injectSheet from 'react-jss';
 
 const UserCaseDesktop = injectSheet(styles)(
-  ({ userName, title, text, signature, className, classes, bg }) => (
+  ({ userName, title, text, signature, className, classes, bg, logoSrc, logoSrcLight, logoSrcSet }) => (
     <Section
       size={2}
       className={cn(className, classes.slide)}
       style={{ backgroundImage: bg && `url(${bg})` }}
     >
       <ContentContainer>
-        <Row>
+        <Row className={classes.row}>
           <Col sm={3}>
             <Typography type="display1" inverted>
               {userName}
             </Typography>
           </Col>
-          <Col sm={7}>
+          <Col sm={7} className={classes.body}>
             <Typography type="display3" inverted weight={600}>
               {title}
             </Typography>
@@ -32,6 +32,7 @@ const UserCaseDesktop = injectSheet(styles)(
               {text}
             </Quote>
           </Col>
+          <img className={classes.logo} src={logoSrcLight || logoSrc} srcSet={!logoSrcLight && logoSrcSet} alt=""/>
         </Row>
       </ContentContainer>
     </Section>

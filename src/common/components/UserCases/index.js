@@ -70,6 +70,9 @@ class UserCases extends Component {
 
 const GALLERY_SETTINGS_D = {
   loop: true,
+  autoplay: {
+    delay: 7000,
+  },
 };
 
 const GALLERY_SETTINGS_M = {
