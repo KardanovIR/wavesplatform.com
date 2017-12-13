@@ -83,7 +83,7 @@ const Steps = () => {
                         text={
                             <FormattedMessage
                                 id="wavesNG.preview.p4.text"
-                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 90% of miners have approved the feature after 10,000 blocks or roughly 1 week (3,000 blocks on TestNet), it is automatically activated after a further 10,000 blocks."
+                                defaultMessage="The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 80% of miners have approved the feature after 5,000 blocks or roughly 3.5 days (3,000 blocks on TestNet), it is automatically activated after a further 5,000 blocks."
                             />
                         }
                     />
