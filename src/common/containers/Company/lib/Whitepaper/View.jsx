@@ -15,8 +15,8 @@ import styles from './styles';
 
 
 const Whitepaper = ({ classes, onWhitepaperClick }) => (
-    <Row alignItems="left">
-        <Col xs={12} sm={6} md={8}>
+    <Row alignItems="left" className={classes.row}>
+        <Col xs={12} sm={6} md={8} className={classes.blockText}>
             <Typography type="display2" style={{fontSize: 23}}>
                 <FormattedMessage
                     id="company.whitepaper.title"

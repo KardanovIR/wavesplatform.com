@@ -36,7 +36,7 @@ const Media = ({
             </Row>
             <Row>
                 {media.map((contact, index) => (
-                    <Col key={`media_org_${index}`} style={{padding: 0}} xs={12} sm={6} md={4}>
+                    <Col key={`media_org_${index}`} style={{padding: 0}} xs={4} sm={4} md={4}>
                         <a href={contact.url} target="_blank" className={classes.link}>
                             <Panel className={classes.media}>
                                 <img src={contact.logo} className={classes.logo} alt="Media contact" />

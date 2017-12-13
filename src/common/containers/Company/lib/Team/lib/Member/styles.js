@@ -17,7 +17,7 @@ export default theme => ({
         left: 0,
         right: 0,
         bottom: 0,
-        background: 'rgba(0,0,0,.4)',
+        //background: 'rgba(0,0,0,.4)',
     },
     text: {
         //position: 'absolute',
