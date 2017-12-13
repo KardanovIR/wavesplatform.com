@@ -15,11 +15,11 @@ export const DESKTOP_LINKS = [
     page: 'developers',
     text: <FormattedMessage id="nav.developers" defaultMessage="Developers" />,
   },
-  // {
-  //   href: url('company'),
-  //   page: 'company',
-  //   text: <FormattedMessage id="nav.company" defaultMessage="Company" />,
-  // },
+  {
+    href: url('company'),
+    page: 'company',
+    text: <FormattedMessage id="nav.company" defaultMessage="Company" />,
+  },
   {
     href: url('get-waves'),
     text: <FormattedMessage id="nav.getWaves" defaultMessage="Get Waves" />,
@@ -43,12 +43,12 @@ export const MOBILE_LINKS = [
     text: <FormattedMessage id="nav.developers" defaultMessage="Developers" />,
     type: 'primary'
   },
-  // {
-  //   href: url('company'),
-  //   page: 'company',
-  //   text: <FormattedMessage id="nav.company" defaultMessage="Company" />,
-  //   type: 'primary'
-  // },
+  {
+    href: url('company'),
+    page: 'company',
+    text: <FormattedMessage id="nav.company" defaultMessage="Company" />,
+    type: 'primary'
+  },
   // {
   //   href: url('leasing'),
   //   page: 'leasing',

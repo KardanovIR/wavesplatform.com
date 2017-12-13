@@ -2,6 +2,7 @@ const styles = theme => ({
   image: {
     display: 'block',
     maxWidth: '100%',
+    margin: [theme.spacing.unit * 8, 0, 0]
   },
   [theme.breakpoints.up('md')]: {
     image: {
