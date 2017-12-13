@@ -47,4 +47,4 @@ services:
       - static-files:/opt/app/dist
     restart: unless-stopped
 volumes:
-  staticfiles:
+  static-files:
