@@ -21,13 +21,13 @@ const styles = theme => ({
 
   inner: {
     paddingTop: theme.spacing.unit * 4,
-    width: '100%'
+    width: '100%',
   },
 
   title: {
     lineHeight: 1.05,
-    opacity: ({animated}) => animated ? 0 : 1,
-    animation: ({animated}) => animated && 'show-0 .65s ease 3s forwards',
+    opacity: ({ animated }) => (animated ? 0 : 1),
+    animation: ({ animated }) => animated && 'show-0 .65s ease 3s forwards',
   },
 
   imageColMargin: {
@@ -38,16 +38,17 @@ const styles = theme => ({
   descriptionText: {
     fontSize: 16,
     lineHeight: 2,
-    opacity: ({animated}) => animated ? 0 : 1,
-    animation: ({animated}) => animated && 'show-0 .65s ease 4.5s forwards',
+    color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
+    opacity: ({ animated }) => (animated ? 0 : 1),
+    animation: ({ animated }) => animated && 'show-0 .65s ease 4.5s forwards',
   },
 
   buttonsContainer: {
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
-    opacity: ({animated}) => animated ? 0 : 1,
-    animation: ({animated}) => animated && 'show-0 .65s ease 4.5s forwards',
-    justifyContent: 'center'
+    opacity: ({ animated }) => (animated ? 0 : 1),
+    animation: ({ animated }) => animated && 'show-0 .65s ease 4.5s forwards',
+    justifyContent: 'center',
   },
 
   buttonWrapper: {

@@ -7,7 +7,7 @@ export default theme => ({
         boxSizing: 'border-box'
     },
     light: {
-        ...shadow,
+        //...shadow,
         background: theme.palette.gray[0],
     },
     dark: {

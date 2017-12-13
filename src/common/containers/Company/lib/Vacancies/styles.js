@@ -17,7 +17,10 @@ const styles = theme => ({
     },
     link: {
         ...theme.typography.display1
-    }
+    },
+    div:{
+        padding: theme.spacing.getSpacing(0, 2),
+    },
 })
 
 export default styles;

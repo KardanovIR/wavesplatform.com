@@ -22,7 +22,7 @@ const styles = () => ({
 
     top: 0,
     left: 0,
-    zIndex: -1,
+    zIndex: 0,
 
     height: '100%',
     width: '100vw',
@@ -33,6 +33,12 @@ const styles = () => ({
     backgroundRepeat: 'no-repeat',
   },
 
+  children: {
+    position: 'relative',
+    zIndex: 1,
+    height: '100%'
+  },
+
   centered: flexCentered,
 
   image: {
@@ -40,7 +46,7 @@ const styles = () => ({
     top: '50%',
     left: '50%',
     minWidth: '100%',
-    minHeight: '100%',
+    height: '100%',
     transform: 'translate(-50%, -50%)',
     zIndex: -1,
   },
@@ -70,7 +76,9 @@ const MainScreenBackground = ({ classes, children, className, type, src, videoSr
         {videoSrc && <Video loop className={classes.image} src={videoSrc} srcMobile={videoSrcMobile} firstFrame={videoFirstFrame} firstFrameMobile={videoFirstFrameMobile} poster={src} srcSet={srcSet} />}
         {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
       </div>
-      {children}
+      <div className={classes.children}>
+        {children}
+      </div>
     </Wrapper>
   </div>
 );

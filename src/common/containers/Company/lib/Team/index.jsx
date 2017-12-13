@@ -5,24 +5,26 @@ import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
 import Member from './lib/Member';
-
+import styles from './styles';
+import injectSheet from 'react-jss';
 
 
 const Team = ({
-    members,
+  classes,
+  members,
 }) => (
     <div>
         <Row>
             <Col xs={12}>
-                <Typography type="display3">
+                <Typography style={{fontSize: 23}} type="display2">
                     Our Team
                 </Typography>
-                <Margin bottom={5} />
+                <Margin bottom={2} />
             </Col>
         </Row>
-        <Row>
+        <Row className={classes.Team}>
             { members.map((member, index) => (
-                <Col key={`team_member_${index}`} xs={12} sm={6} md={4}>
+                <Col key={`team_member_${index}`} xs={9} sm={3} md={3}>
                     <Member {...member} />
                     <Margin bottom={3} />
                 </Col>
@@ -32,4 +34,4 @@ const Team = ({
 );
 
 
-export default Team;
+export default injectSheet(styles)(Team);

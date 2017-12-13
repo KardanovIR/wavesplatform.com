@@ -49,10 +49,10 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, 
           {text}
         </div>
 
-        {buttons.length && <Margin bottom={text ? 3 : 6} />}
+        {buttons && buttons.length > 0 && <Margin bottom={text ? 3 : 6} />}
 
         <div className={classes.buttonsContainer}>
-          {buttons.map((button, index) => (
+          {buttons && buttons.map((button, index) => (
             <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>
               {cloneElement(button, {
                 className: cn(button.props.className, classes.button)
