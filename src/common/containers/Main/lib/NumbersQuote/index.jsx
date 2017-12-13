@@ -15,7 +15,7 @@ import styles from './styles';
 const NumbersQuote = ({ classes, dexData }) => (
   <Row>
     <Numbers {...dexData} className={classes.numbersContainer} />
-    <Col xs={12} md={8} className={classes.investorsContainer}>
+    <Col xs={12} sm={8} className={classes.investorsContainer}>
       <Typography type="display1" className={classes.investorsLabel}>
         <FormattedMessage
           id="home.audience.investors.title"
@@ -30,7 +30,7 @@ const NumbersQuote = ({ classes, dexData }) => (
       </Typography>
       <Margin bottom={4} />
     </Col>
-    <Col xs={12} md={8} mdOffset={4}>
+    <Col xs={12} sm={8} smOffset={4}>
       <BlockQuote>
         <div className={classes.deloitteLogo} />
         <FormattedMessage

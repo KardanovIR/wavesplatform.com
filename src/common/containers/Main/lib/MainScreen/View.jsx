@@ -5,18 +5,17 @@ import Button from 'src/common/components/Button';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
-// import Image from '!svg-react-loader!./img/image.svg';
 import url from 'src/common/utils/url';
 
-const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
+const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
   <MainScreen
     title={
       <FormattedHTMLMessage id="home.main.title" defaultMessage="Get started<br>with blockchain" />
     }
     text={
       <FormattedMessage
-        id="home.main.text"
-        defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
+      id="home.main.text"
+      defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
       />
     }
     buttons={[
@@ -27,18 +26,19 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick }) => (
         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
         bordered
       >
-        <FormattedMessage id="cta.signUp" defaultMessage="Sign up" />
+        <FormattedMessage id="cta.getClient" defaultMessage="Get client" />
       </Button>,
       <Button
-        onClick={onGetWavesClick}
-        href={url('get-waves')}
+        onClick={onNewClientClick}
+        href={url('online-client')}
         withLoader
         secondary
         key="main_cta_button2"
       >
-        <FormattedMessage id="cta.getWaves" defaultMessage="Get Waves" />
+        <FormattedMessage id="cta.onlineClient" defaultMessage="Online client (beta)" />
       </Button>,
     ]}
+    animated={animated}
   />
 );
 

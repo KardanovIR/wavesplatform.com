@@ -30,14 +30,16 @@ const Wallet = ({classes}) => (
         </Typography>
       </Col>
     </Row>
-    <img
-      className={classes.image}
-      src={require('../../img/wallet.jpg')}
-      srcSet={`${require('../../img/wallet.jpg')} 1x, ${require('../../img/wallet@2x.jpg')} 2x`}
-      alt=""
-    />
+    <Margin top={4} bottom={4}>
+      <img
+        className={classes.image}
+        src={require('../../img/ipad_iphone@1x.jpg')}
+        srcSet={`${require('../../img/ipad_iphone@1x.jpg')} 1x, ${require('../../img/ipad_iphone@2x.jpg')} 2x`}
+        alt=""
+      />
+    </Margin>
     <Row>
-      <Col xs={12} md={6}>
+      <Col xs={12} sm={6}>
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="transaction" />}
@@ -56,7 +58,7 @@ const Wallet = ({classes}) => (
         />
         <Margin bottom={5} xsOnly />
       </Col>
-      <Col xs={12} md={6}>
+      <Col xs={12} sm={6}>
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="shield" />}

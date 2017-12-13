@@ -3,6 +3,7 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 import flexCentered from 'src/common/styles/flexCentered';
 import Wrapper from 'src/common/components/Wrapper';
+import Video from 'src/common/components/InlineVideo';
 
 import bgLight from './img/light_bgr.svg';
 import bgDark from './img/dark_bgr.svg';
@@ -14,14 +15,14 @@ const styles = () => ({
     position: 'relative',
     overflow: 'hidden',
     height: '100vh',
-    width: '100%'
+    width: '100%',
   },
   background: {
     position: 'absolute',
 
     top: 0,
     left: 0,
-    zIndex: -1,
+    zIndex: 0,
 
     height: '100%',
     width: '100vw',
@@ -30,6 +31,12 @@ const styles = () => ({
     backgroundPosition: 'center center',
 
     backgroundRepeat: 'no-repeat',
+  },
+
+  children: {
+    position: 'relative',
+    zIndex: 1,
+    height: '100%'
   },
 
   centered: flexCentered,
@@ -52,7 +59,7 @@ const styles = () => ({
   },
 });
 
-const MainScreenBackground = ({ classes, children, className, type, src, srcSet }) => (
+const MainScreenBackground = ({ classes, children, className, type, src, videoSrc, videoSrcMobile, srcSet, videoFirstFrame, videoFirstFrameMobile }) => (
   <div className={classes.wrapper}>
     <Wrapper>
       <div
@@ -66,9 +73,12 @@ const MainScreenBackground = ({ classes, children, className, type, src, srcSet 
           className
         )}
       >
-        {src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
+        {videoSrc && <Video loop className={classes.image} src={videoSrc} srcMobile={videoSrcMobile} firstFrame={videoFirstFrame} firstFrameMobile={videoFirstFrameMobile} poster={src} srcSet={srcSet} />}
+        {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
       </div>
-      {children}
+      <div className={classes.children}>
+        {children}
+      </div>
     </Wrapper>
   </div>
 );

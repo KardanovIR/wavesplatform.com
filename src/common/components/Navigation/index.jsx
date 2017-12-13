@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import styles from './styles';
 
 import injectSheet from 'react-jss';
@@ -12,28 +13,49 @@ import Logo from 'src/common/components/Logo';
 
 import url from 'src/common/utils/url';
 
-const Nav = ({ classes, links, activeLink }) => (
-  <nav className={classes.wrapper}>
-    <Wrapper>
-      <ContentContainer>
-        <div className={classes.logo}>
-          <a href={url('home')} className={classes.logo}>
-            <Logo color={activeLink=="company"?"#fff":null} />
-          </a>
-        </div>
+const INVERTED_SKIN_LINKS = {
+  'get-waves': true,
+  developers: true,
+  company: true
+};
 
-        <div className={classes.navContainer}>
-          <div className={classes.mobileOnly}>
-            <MobileNav links={links} activeLink={activeLink} />
+const isInverted = link => link === undefined || INVERTED_SKIN_LINKS[link];
+
+const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => {
+  return (
+    <nav className={cx(classes.wrapper, { [classes.wrapperAnimated]: activeLink === 'home' })}>
+      <Wrapper>
+        <ContentContainer>
+          <div className={classes.logo}>
+            <a href={url('home')} className={classes.logo}>
+              <Logo
+                color={isInverted(activeLink) ? '#fff' : '#000'}
+                flat={isInverted(activeLink)}
+              />
+            </a>
           </div>
 
-          <div className={classes.desktopOnly}>
-            <DesktopNav links={links} activeLink={activeLink} />
+          <div className={classes.navContainer}>
+            <div className={classes.mobileOnly}>
+              <MobileNav
+                links={mobileLinks}
+                activeLink={activeLink}
+                inverted={isInverted(activeLink)}
+              />
+            </div>
+
+            <div className={classes.desktopOnly}>
+              <DesktopNav
+                links={desktopLinks}
+                activeLink={activeLink}
+                inverted={isInverted(activeLink)}
+              />
+            </div>
           </div>
-        </div>
-      </ContentContainer>
-    </Wrapper>
-  </nav>
-);
+        </ContentContainer>
+      </Wrapper>
+    </nav>
+  );
+};
 
 export default injectSheet(styles)(Nav);

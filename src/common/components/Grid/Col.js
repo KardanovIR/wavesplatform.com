@@ -42,11 +42,11 @@ const Column = ({
       [classes[`lg-${String(lg)}`]]: lg && lg !== true,
       [classes['xl']]: xl === true,
       [classes[`xl-${String(xl)}`]]: xl && xl !== true,
-      [classes[`xs-offset-${String(xsOffset)}`]]: xsOffset,
-      [classes[`sm-offset-${String(smOffset)}`]]: smOffset,
-      [classes[`md-offset-${String(mdOffset)}`]]: mdOffset,
-      [classes[`lg-offset-${String(lgOffset)}`]]: lgOffset,
-      [classes[`xl-offset-${String(xlOffset)}`]]: xlOffset,
+      [classes[`xs-offset-${String(xsOffset)}`]]: xsOffset !== undefined,
+      [classes[`sm-offset-${String(smOffset)}`]]: smOffset !== undefined,
+      [classes[`md-offset-${String(mdOffset)}`]]: mdOffset !== undefined,
+      [classes[`lg-offset-${String(lgOffset)}`]]: lgOffset !== undefined,
+      [classes[`xl-offset-${String(xlOffset)}`]]: xlOffset !== undefined,
     },
     classNameProp
   );

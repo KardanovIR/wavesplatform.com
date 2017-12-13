@@ -5,7 +5,7 @@ import Navigation from '../Navigation';
 import Footer from '../Footer';
 // import SnackbarStressTest from 'src/common/components/SnackbarStressTest';
 
-import links from './links';
+import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
 import injectSheet from 'react-jss';
 
@@ -18,7 +18,10 @@ const styles = theme => ({
     top: 0,
     left: 0,
     width: '100%',
-    zIndex: 300
+    zIndex: 300,
+  },
+  body: {
+    backgroundColor: ({ inverted }) => inverted && theme.palette.gray[800],
   },
 });
 
@@ -29,13 +32,13 @@ const Layout = ({
   hideFooter,
   // hideSnackbar,
 }) => (
-  <div>
+  <div className={classes.body}>
     <div className={classes.navigationWrapper}>
-      <Navigation links={links} activeLink={activeLink} />
+      <Navigation desktopLinks={DESKTOP_LINKS} mobileLinks={MOBILE_LINKS} activeLink={activeLink} />
     </div>
-    {children}
+      {children}
     <Wrapper>
-      {!hideFooter && <Footer links={links} />}
+      {!hideFooter && <Footer links={MOBILE_LINKS} />}
       {/* {!hideSnackbar && <SnackbarStressTest />} */}
     </Wrapper>
   </div>

@@ -1,30 +1,9 @@
-import React from 'react';
+import { connect } from 'react-redux';
 
-import { FormattedMessage } from 'react-intl';
+import { getClientClick } from 'src/public/actions';
 
-import MainScreen from 'src/common/components/MainScreen';
+import View from './View';
 
-import Image from '!svg-react-loader!./img/waves.svg';
-
-
-
-const DevelopersMainScreen = () => (
-    <MainScreen
-        title={
-            <FormattedMessage
-                id="getWaves.title"
-                defaultMessage="Get Waves"
-            />
-        }
-        text={
-            <FormattedMessage
-                id="getWaves.text"
-                defaultMessage="You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC."
-            />
-        }
-        imageDesktop={<Image />}
-    />
-);
-
-
-export default DevelopersMainScreen;
+export default connect(s => s, {
+  onGetClientClick: () => getClientClick({ page: 'get-waves', source: 'main-screen' }),
+})(View);

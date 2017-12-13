@@ -5,9 +5,22 @@ const styles = theme => ({
     justifyContent: 'flex-end',
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
-    height: 540,
-    width: `calc(100vw - ${theme.spacing.unit * 4}px)`,
-    boxSizing: 'border-box'
+    height: 650,
+    width: `calc(100vw - ${theme.spacing.unit * 6}px)`,
+    boxSizing: 'border-box',
+    [theme.mixins.atMedia(375)]: {
+      height: 560,
+    }
+  },
+  row: {
+    height: '100%',
+    position: 'relative'
+  },
+  body: {
+    marginTop: -theme.spacing.unit * 1,
+  },
+  logo: {
+    marginTop: theme.spacing.unit * 3,
   },
   quote: {
     marginTop: theme.spacing.unit * 1.5
@@ -29,6 +42,13 @@ const styles = theme => ({
   popupContainer: {
     paddingTop: theme.spacing.unit * 6,
     paddingBottom: theme.spacing.unit * 4,
+  },
+  [theme.mixins.atMedia('sm')]: {
+    logo: {
+      position: 'absolute',
+      right: 0,
+      bottom: theme.spacing.unit * 1,
+    },
   },
   [theme.mixins.atMedia('md')]: {
     slide: {

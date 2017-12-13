@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -17,7 +18,8 @@ import SubscribeSection from 'src/common/containers/SubscribeSection';
 import MainScreen from './lib/MainScreen';
 import NumbersQuote from './lib/NumbersQuote';
 import WavesClient from './lib/WavesClient';
-import Wallet from './lib/Wallet';
+import Wallet from '../../components/Wallet';
+import WalletText from './lib/WalletText';
 import DEX from './lib/DEX';
 import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
@@ -35,9 +37,13 @@ const PageLayout = ({ initialState, classes }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+      videoSrc={require('./video/waves_main_seq.mp4')}
+      videoSrcMobile={require('./video/ony_waves_video_iphone.mp4')}
+      videoFirstFrame={require('./img/bgDesktopFF.jpg')}
+      videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
       <ContentContainer>
-        <MainScreen />
+        <MainScreen animated />
       </ContentContainer>
     </BackgroundMainScreen>
 
@@ -62,17 +68,19 @@ const PageLayout = ({ initialState, classes }) => (
 
       <Section top={4} bottom={1} className={classes.bgWallet}>
         <ContentContainer>
-          <Wallet />
+          <Wallet>
+            <WalletText />
+          </Wallet>
         </ContentContainer>
       </Section>
 
-      <Section top={4} className={classes.bgBlack}>
+      <Section top={4} className={cx(classes.bgBlack, classes.overflowHidden)}>
         <ContentContainer>
           <DEX />
         </ContentContainer>
       </Section>
 
-      <Section size={5}>
+      <Section top={5} className={classes.issuingTokens}>
         <ContentContainer>
           <IssuingTokens />
         </ContentContainer>

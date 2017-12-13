@@ -12,6 +12,12 @@ const burger = {
     position: 'relative',
     height: 12,
     width: 27,
+    padding: 0,
+    appearance: 'none',
+    border: 0,
+    borderRadius: 0,
+    backgroundColor: 'transparent',
+    outline: 'none',
   },
   bar: {
     position: 'absolute',
@@ -28,15 +34,18 @@ const burger = {
       transform: 'translate(0, 5px)',
     },
   },
+  inverted: {
+    backgroundColor: '#fff',
+  },
   barOpen: {
     transform: 'translate(0, 0)',
   },
 };
 
-const Burger = injectSheet(burger)(({ classes, open }) => (
+const Burger = injectSheet(burger)(({ classes, open, inverted }) => (
   <button className={cn(classes.root, { [classes.open]: open })}>
-    <div className={cn(classes.bar, { [classes.barOpen]: open })} />
-    <div className={cn(classes.bar, { [classes.barOpen]: open })} />
+    <div className={cn(classes.bar, { [classes.barOpen]: open, [classes.inverted]: inverted })} />
+    <div className={cn(classes.bar, { [classes.barOpen]: open, [classes.inverted]: inverted })} />
   </button>
 ));
 
@@ -54,18 +63,22 @@ class MobileNav extends Component {
     });
 
   render() {
-    const { classes, links } = this.props;
+    const { classes, links, inverted } = this.props;
 
     return (
       <div className={classes.wrapper}>
         <div className={classes.burger} onClick={this.handleClick}>
-          <Burger open={this.state.open} />
+          <Burger open={this.state.open} inverted={inverted} />
         </div>
 
         <Popup show={this.state.open} onClose={this.handleClose} inverted>
           <div className={classes.linksWrapper}>
-            {links.map((link, index) => (
-              <a key={`mobile_nav_link${index}`} href={link.href} className={classes.link}>
+            {links.filter(link => !link.hideInMenu).map((link, index) => (
+              <a
+                key={`mobile_nav_link${index}`}
+                href={link.href}
+                className={cn(classes.link, { [classes.linkSecondary]: link.type === 'secondary' })}
+              >
                 {link.text}
               </a>
             ))}

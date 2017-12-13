@@ -10,6 +10,7 @@ import { FormattedMessage } from 'react-intl';
 const DEXFeatures = () => (
   <Row>
     <Col xs={12} sm={6}>
+      <Margin bottom={3} xsOnly />
       <AvatarTitleText
         avatar={<IconProduct name="safe" />}
         title={
@@ -27,6 +28,8 @@ const DEXFeatures = () => (
         inverted
       />
       <Margin bottom={5} />
+      <br/>
+      <Margin bottom={3} xsOnly />
     </Col>
     <Col xs={12} sm={6}>
       <AvatarTitleText
@@ -46,6 +49,8 @@ const DEXFeatures = () => (
         inverted
       />
       <Margin bottom={5} />
+      <br/>
+      <Margin bottom={3} xsOnly />
     </Col>
     <Col xs={12} sm={6}>
       <AvatarTitleText
@@ -65,6 +70,8 @@ const DEXFeatures = () => (
         inverted
       />
       <Margin bottom={5} />
+      <br/>
+      <Margin bottom={3} xsOnly />
     </Col>
     <Col xs={12} sm={6}>
       <AvatarTitleText
@@ -84,6 +91,8 @@ const DEXFeatures = () => (
         inverted
       />
       <Margin bottom={5} />
+      <br/>
+      <Margin bottom={3} xsOnly />
     </Col>
   </Row>
 );

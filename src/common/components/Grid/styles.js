@@ -10,7 +10,7 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
     },
   };
 
-  for (let size = 1; size <= 12; size++) {
+  for (let size = 0; size <= 12; size++) {
     // 6 significant digits
     const width = `${Math.round(size / 12 * Math.pow(10, 6)) / Math.pow(10, 4)}%`;
 

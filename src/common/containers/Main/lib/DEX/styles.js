@@ -15,10 +15,15 @@ const styles = theme => ({
     position: 'relative',
     zIndex: 2
   },
+  imageWrapper: {
+    position: 'relative',
+    right: -20,
+    margin: [theme.spacing.unit * 1, 0, theme.spacing.unit * 3]
+  },
   image: {
     width: '100%',
   },
-  [theme.mixins.atMedia('md')]: {
+  [theme.mixins.atMedia('sm')]: {
     titleRow: {
       justifyContent: 'flex-start'
     },
@@ -27,17 +32,22 @@ const styles = theme => ({
     },
     imageWrapper: {
       position: 'absolute',
-      top: -120,
-      right: 40,
+      top: -70,
+      right: 100,
       width: '50%',
       zIndex: 1
     },
     image: {
-      width: '180%',
-      height: '180%',
+      width: '150%',
+      height: '150%',
       top: -150,
       left: -10,
     },
+  },
+  [theme.mixins.atMedia('md')]: {
+    imageWrapper: {
+      right: 40,
+    }
   },
   [theme.mixins.atMedia('lg')]: {
     image: {

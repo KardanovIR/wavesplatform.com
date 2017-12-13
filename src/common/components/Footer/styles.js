@@ -1,5 +1,3 @@
-import flexCentered from '../../styles/flexCentered';
-
 export default theme => {
   return {
     root: {
@@ -110,6 +108,14 @@ export default theme => {
     navLinkContainer: {
       width: '50%',
       margin: 0 + '!important',
+    },
+
+    navLinkContainerXsOnly: {
+      display: 'block',
+
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
     },
 
     [theme.mixins.atMedia('md')]: {

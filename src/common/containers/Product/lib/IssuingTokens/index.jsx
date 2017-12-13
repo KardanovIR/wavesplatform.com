@@ -37,6 +37,11 @@ const IssuingTokens = ({ classes }) => (
         </Typography>
         <Margin bottom={4} />
       </Col>
+      <Col sm={4} smOffset={1} mdOffset={0}>
+        <div className={classes.imageWrapper}>
+          <div className={classes.image} />
+        </div>
+      </Col>
     </Row>
 
     <Margin bottom={1} />

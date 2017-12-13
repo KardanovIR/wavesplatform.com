@@ -20,6 +20,7 @@ const styles = theme => ({
 
   investorsContainer: {
     position: 'relative',
+    marginTop: theme.spacing.unit * 4
   },
 
   investorsLabel: {
@@ -47,8 +48,9 @@ const styles = theme => ({
       fontWeight: 600,
       margin: 0
     },
-  },
-  [theme.breakpoints.up('md')]: {
+    investorsContainer: {
+      marginTop: 0
+    },
     numbersContainer: {
       paddingTop: theme.spacing.unit * 2
     },
@@ -60,7 +62,7 @@ const styles = theme => ({
       fontWeight: 400,
     },
   },
-  [theme.breakpoints.up('lg')]: {
+  [theme.mixins.atMedia('lg')]: {
     numbersCol: {
       marginTop: theme.spacing.unit * 10,
     },

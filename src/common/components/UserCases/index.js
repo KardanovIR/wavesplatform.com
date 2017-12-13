@@ -18,12 +18,24 @@ class UserCases extends Component {
 
   showDetails = data => this.setState({ popupData: data });
 
+  handleSlideClick = e => {
+    e.preventDefault();
+
+    const target = e.target.hasAttribute('data-slide-link') ? e.target : e.target.parentNode;
+
+    if (target.hasAttribute('data-slide-link')) {
+      this.setState({
+        popupData: SLIDES_DATA[target.getAttribute('data-slide-link') | 0],
+      });
+    }
+  };
+
   render() {
     const { classes } = this.props;
     const { popupData } = this.state;
 
     return (
-      <MQ query={query.md}>
+      <MQ query={query.sm}>
         {matches =>
           matches ? (
             <Gallery className={classes.gallery} swiperProps={GALLERY_SETTINGS_D}>
@@ -31,9 +43,14 @@ class UserCases extends Component {
             </Gallery>
           ) : (
             [
-              <Gallery key="gallery" className={classes.gallery} swiperProps={GALLERY_SETTINGS_M}>
+              <Gallery
+                key="gallery"
+                className={classes.gallery}
+                swiperProps={GALLERY_SETTINGS_M}
+                onClick={this.handleSlideClick}
+              >
                 {SLIDES_DATA.map((data, i) => (
-                  <UserCaseMobile key={i} {...data} onDetails={this.showDetails} />
+                  <UserCaseMobile key={i} {...data} index={i} />
                 ))}
               </Gallery>,
               <Popup
@@ -53,6 +70,9 @@ class UserCases extends Component {
 
 const GALLERY_SETTINGS_D = {
   loop: true,
+  autoplay: {
+    delay: 7000,
+  },
 };
 
 const GALLERY_SETTINGS_M = {

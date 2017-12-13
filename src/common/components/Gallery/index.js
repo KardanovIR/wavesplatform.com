@@ -41,12 +41,13 @@ class Gallery extends Component {
   }
 
   render() {
-    const { children, swiperProps, classes, className: classNameProp } = this.props;
+    const { children, swiperProps, classes, className: classNameProp, onClick } = this.props;
 
     return (
       <div
         className={cn('swiper-container', classes.root, classNameProp)}
         ref={ref => (this.$root = ref)}
+        onClick={onClick}
       >
         <div className="swiper-wrapper">
           {Children.map(children, child =>

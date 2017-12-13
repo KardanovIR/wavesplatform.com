@@ -18,19 +18,18 @@ const styles = theme => ({
   text: {
     fontWeight: 400,
   },
-  [theme.mixins.atMedia('md')]: {
+  [theme.mixins.atMedia('sm')]: {
     root: {
       flexDirection: 'row-reverse',
     },
     article: {
       margin: 0,
-      textAlign: 'left',
-    },
-    text: {
-      fontWeight: 500,
     },
     feature: {
       marginBottom: theme.spacing.unit * 6,
+    },
+    socialButtonsContainer: {
+      justifyContent: 'center',
     },
     iconWrapper: {
       marginRight: theme.spacing.unit * 4,

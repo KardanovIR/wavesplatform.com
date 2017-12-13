@@ -35,6 +35,8 @@ const styles = theme => ({
   [theme.mixins.atMedia('md')]: {
     header: {
       display: ({ twoColumns }) => (twoColumns ? 'flex' : 'block'),
+      alignItems: 'center',
+      marginBottom: 0,
     },
     title: {
       fontSize: 19,

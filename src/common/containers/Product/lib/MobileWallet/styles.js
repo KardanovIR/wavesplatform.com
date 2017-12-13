@@ -1,4 +1,7 @@
 const styles = theme => ({
+  root: {
+
+  },
   imageWrapper: {
     position: 'relative',
     paddingTop: '98%',
@@ -17,7 +20,10 @@ const styles = theme => ({
     display: 'inline-block',
     verticalAlign: 'middle',
   },
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('sm')]: {
+    root: {
+      paddingTop: theme.spacing.unit * 7
+    },
     imageCol: {
       display: 'block',
       height: 0,
@@ -25,7 +31,13 @@ const styles = theme => ({
     },
     image: {
       top: '-60%',
+      left: '-90%'
       // bottom: '80%'
+    },
+  },
+  [theme.breakpoints.up('md')]: {
+    image: {
+      left: 0
     },
   },
 });

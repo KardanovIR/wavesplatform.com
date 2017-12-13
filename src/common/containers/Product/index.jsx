@@ -21,6 +21,7 @@ import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 
 // containers
 import UserCases from 'src/common/components/UserCases';
+import HowToWallet from 'src/common/components/HowToWallet';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -28,7 +29,6 @@ import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
 // import OnlineWallet from './lib/OnlineWallet';
-import HowToWallet from './lib/HowToWallet';
 import HowToTrade from './lib/HowToTrade';
 import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
@@ -52,7 +52,10 @@ const PageLayout = ({ classes, initialState }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-
+      videoSrc={require('./video/w_white_main_2.mp4')}
+      videoSrcMobile={require('./video/w_white_main_2_iphone.mp4')}
+      videoFirstFrame={require('./img/bgDesktopFF.jpg')}
+      videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
       <ContentContainer>
         <MainScreen />
@@ -74,7 +77,7 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </Section>
 
-      <Section size={4}>
+      <Section top={4} bottom={4}>
         <ContentContainer>
           <MobileWallet />
         </ContentContainer>
@@ -82,7 +85,16 @@ const PageLayout = ({ classes, initialState }) => (
 
       <Section top={4} bottom={2} className={classes.bgGray}>
         <ContentContainer>
-          <HowToWallet />
+          <HowToWallet
+            title={
+              <FormattedMessage
+                id="product.howToWallet.title"
+                defaultMessage="How do I start using my Waves wallet?"
+              />
+            }
+            eventPage="product"
+            eventSource="how_to_wallet"
+          />
         </ContentContainer>
       </Section>
 
@@ -108,7 +120,7 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </div>
 
-      <Section top={4} bottom={4}>
+      <Section top={4} bottom={3}>
         <AnchorScroll anchor="token-launcher">
           <ContentContainer>
             <IssuingTokens />
@@ -116,7 +128,7 @@ const PageLayout = ({ classes, initialState }) => (
         </AnchorScroll>
       </Section>
 
-      <Margin top={5} bottom={5} >
+      <Margin top={5} bottom={5}>
         <ContentContainer>
           <Typography type="display3" weight={600}>
             <FormattedMessage

@@ -64,6 +64,7 @@ class Button extends Component {
         const buttonElementClasses = classnames(classes.button, {
             [classes.bordered]: bordered,
             [classes.inverted]: bordered && inverted,
+            [classes.invertedFill]: !bordered && inverted,
             [classes.light]: !bordered && secondary,
             [classes.dark]: !bordered && !secondary,
         }, className);

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import MQ from 'react-responsive';
+import { query } from 'src/common/theme/breakpoints.js';
 import Typography from 'src/common/components/Typography';
 
 import PairVolume from './lib/PairVolume';
@@ -11,12 +12,16 @@ import styles from './styles';
 
 const DEXTopPairs = ({ classes, pairs }) => (
   <div className={classes.container}>
-    <img
-      src={require('./img/dex@1x.jpg')}
-      srcSet={`${require('./img/dex@1x.jpg')} 1x, ${require('./img/dex@2x.jpg')} 2x`}
-      className={classes.image}
-      alt=""
-    />
+    <MQ query={query.sm}>
+      {matches => (
+        <img
+          src={matches ? require('./img/dex@1x.jpg') : require('./img/dexMobile.jpg')}
+          srcSet={matches ? `${require('./img/dex@1x.jpg')} 1x, ${require('./img/dex@2x.jpg')} 2x` : null}
+          className={classes.image}
+          alt=""
+        />
+      )}
+    </MQ>
     <div className={classes.root}>
       <div className={classes.headers}>
         <Typography type="display1" inverted>
