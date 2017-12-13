@@ -40,13 +40,12 @@ const PageLayout = ({ classes }) => (
       videoFirstFrameMobile={require('./img/ffMob.jpg')}
     >
       <MainScreen
+        inverted
         title={
-          <Typography type={'display5'} className={classes.titleStyle} inverted>
-            <FormattedMessage
-              id="company.title"
-              defaultMessage="We create the economics of free, perfect and instant"
-            />
-          </Typography>
+          <FormattedMessage
+            id="company.title"
+            defaultMessage="We create the economics of free, perfect and instant"
+          />
         }
       />
     </MainScreenBackground>

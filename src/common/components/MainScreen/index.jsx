@@ -12,7 +12,7 @@ import cn from 'classnames';
 const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, inverted }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
-      <Col xs={12} sm={10} lg={10} smOffset={1} lgOffset={1}>
+      <Col xs={12} sm={10} lg={8} smOffset={1} lgOffset={2}>
         <Typography type="display5" weight={700} className={classes.title} inverted={inverted}>
           {title}
         </Typography>
@@ -49,10 +49,10 @@ const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, 
           {text}
         </div>
 
-        {buttons.length && <Margin bottom={text ? 3 : 6} />}
+        {buttons && buttons.length > 0 && <Margin bottom={text ? 3 : 6} />}
 
         <div className={classes.buttonsContainer}>
-          {buttons.map((button, index) => (
+          {buttons && buttons.map((button, index) => (
             <div className={classes.buttonWrapper} key={`main_cta_wrapper${index}`}>
               {cloneElement(button, {
                 className: cn(button.props.className, classes.button)
