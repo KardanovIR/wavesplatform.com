@@ -52,6 +52,7 @@ const PageLayout = ({ classes, initialState }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+
     >
       <ContentContainer>
         <MainScreen />

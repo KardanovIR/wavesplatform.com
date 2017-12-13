@@ -30,101 +30,91 @@ import { FormattedMessage } from 'react-intl';
 import teamMembers from './team';
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="company">
-
-        <MainScreenBackground
-            type="image"
-            src={require('./img/Artboard.jpg')}
-            srcSet={`${require('./img/Artboard.jpg')} 3x`}
-        >
-            <MainScreen
-                title={
-                    <Typography type={"display5"} className={classes.titleStyle} inverted>
-                        <FormattedMessage
-                            id="company.title"
-                            defaultMessage="We create the economics of free, perfect and instant"
-                        />
-                    </Typography>
-                }
-                //titleType={"display5"}
-                /*title={
+  <Layout activeLink="company">
+    <MainScreenBackground
+      type="image"
+      src={require('./img/Artboard.jpg')}
+      srcSet={`${require('./img/Artboard.jpg')} 3x`}
+    >
+      <MainScreen
+        title={
+          <Typography type={'display5'} className={classes.titleStyle} inverted>
+            <FormattedMessage
+              id="company.title"
+              defaultMessage="We create the economics of free, perfect and instant"
+            />
+          </Typography>
+        }
+        //titleType={"display5"}
+        /*title={
                     {<FormattedMessage
                         id="company.title"
                         defaultMessage="We create the economics of free, perfect and instant"
                     />}
                 }*/
-                /*text={
+        /*text={
                     <FormattedMessage
                         id="company.text"
                         defaultMessage="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
                     />
                 }*/
-            />
-        </MainScreenBackground>
+      />
+    </MainScreenBackground>
 
-        {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-        <Section top={2} bottom={2}>
-            <ContentContainer>
-                <AboutDescription />
-            </ContentContainer>
-        </Section>
-        <Section top={1} bottom={2}>
-            <ContentContainer>
-                <Team members={teamMembers} />
-            </ContentContainer>
-        </Section>
-        <Section top={1} bottom={2}>
-            <ContentContainer>
-                <Whitepaper />
-            </ContentContainer>
-        </Section>
-        {/* </Background> */}
+    {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
+    <Section top={2} bottom={2}>
+      <ContentContainer>
+        <AboutDescription />
+      </ContentContainer>
+    </Section>
+    <Section top={1} bottom={2}>
+      <ContentContainer>
+        <Team members={teamMembers} />
+      </ContentContainer>
+    </Section>
+    <Section top={1} bottom={2}>
+      <ContentContainer>
+        <Whitepaper />
+      </ContentContainer>
+    </Section>
+    {/* </Background> */}
 
-        <Section top={1} bottom={2}>
-            <ContentContainer>
-                <Media />
-            </ContentContainer>
-        </Section>
+    <Section top={1} bottom={2}>
+      <ContentContainer>
+        <Media />
+      </ContentContainer>
+    </Section>
 
-        <Section top={3} bottom={2}>
-            <ContentContainer>
-                <Branding />
-            </ContentContainer>
-        </Section>
+    <Section top={3} bottom={2} className={classes.bgBranding}>
+      <ContentContainer>
+        <Branding />
+      </ContentContainer>
+    </Section>
 
+    <Background className={classes.bgLight} skewed={true}>
+      <Section size={4}>
+        <AnchorScroll anchor="careers">
+          <Vacancies />
+        </AnchorScroll>
+      </Section>
+    </Background>
 
-        <Background className={classes.bgLight} skewed={true}>
-            <Section size={4}>
-                <AnchorScroll anchor="careers">
-                    <Vacancies />
-                </AnchorScroll>
-            </Section>
-        </Background>
-
-
-        {/*<AnchorScroll anchor="contact">
+    {/*<AnchorScroll anchor="contact">
             <Background className={classes.bgDark} skewed={true}>
                 <Section size={4} className={classes.footerMarginCompensate}>
                     <FeedbackForm />
                 </Section>
             </Background>
         </AnchorScroll>*/}
-
-    </Layout>
+  </Layout>
 );
-
-
 
 const Page = injectSheet(styles)(PageLayout);
 
-
-
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
-)
-
-
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
+);
 
 export default App;

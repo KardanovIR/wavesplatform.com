@@ -14,55 +14,40 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+const Branding = ({ classes, onBrandingPackageClick }) => (
+  <div className={classes.root}>
+    <Row className={classes.bgRow}>
+      <Col xs={12} md={8} lg={5} className={classes.contactUs}>
+        <Typography type="body2" inverted>
+          <FormattedMessage
+            id="company.media.contactUs"
+            defaultMessage="For all media inquiries, please contact the Communications Team"
+            values={{
+              link: (
+                <Link pseudo href="#contact">
+                  <FormattedMessage id="company.media.contactUsLink" defaultMessage="contact" />
+                </Link>
+              ),
+            }}
+          />
+        </Typography>
 
-const Branding = ({
-                   classes,
-                   onBrandingPackageClick
-               }) => (
-    <div className={classes.root}>
-        <Row className={classes.bgRow}>
-            <Background className={classes.bg} skewed={true}>
-                <Col xs={12} md={8} lg={5} className={classes.contactUs}>
-                    <Typography type="body2" inverted>
-                        <FormattedMessage
-                            id="company.media.contactUs"
-                            defaultMessage="For all media inquiries, please contact the Communications Team"
-                            values={{
-                                link: (
-                                    <Link pseudo href="#contact">
-                                        <FormattedMessage
-                                            id="company.media.contactUsLink"
-                                            defaultMessage="contact"
-                                        />
-                                    </Link>
-                                )
-                            }}
-                        />
-                    </Typography>
+        <Margin bottom={3} />
 
-                    <Margin bottom={3} />
-
-                    <Button
-                        onClick={onBrandingPackageClick}
-                        href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_1.2.zip"
-                        target="_blank"
-                        bordered
-                        inverted
-                    >
-                        <Typography type="body2" style={{fontSize: 22}} inverted>
-                            <FormattedMessage
-                                id="cta.brandingPackage"
-                                defaultMessage="Branding package"
-                            />
-                        </Typography>
-                    </Button>
-                </Col>
-            </Background>
-        </Row>
-
-
-    </div>
+        <Button
+          onClick={onBrandingPackageClick}
+          href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_1.2.zip"
+          target="_blank"
+          bordered
+          inverted
+        >
+          <Typography type="body2" style={{ fontSize: 22 }} inverted>
+            <FormattedMessage id="cta.brandingPackage" defaultMessage="Branding package" />
+          </Typography>
+        </Button>
+      </Col>
+    </Row>
+  </div>
 );
-
 
 export default injectSheet(styles)(Branding);
