@@ -44,9 +44,9 @@ export default theme => ({
                     filter: 'grayscale(100%)',
                     opacity: 1
                 },
-                /*'& $overlay': {
+                '& $overlay': {
                     opacity: 1
-                }*/
+                }
             }
         },
         image: {},
