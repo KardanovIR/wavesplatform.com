@@ -21,8 +21,12 @@ export const DESKTOP_LINKS = [
     text: <FormattedMessage id="nav.company" defaultMessage="Company" />,
   },
   {
-    href: url('home'),
-    text: <FormattedMessage id="nav.signIn" defaultMessage="Sign in" />,
+    href: url('get-waves'),
+    text: <FormattedMessage id="nav.getWaves" defaultMessage="Get Waves" />,
+  },
+  {
+    href: url('blog'),
+    text: <FormattedMessage id="nav.blog" defaultMessage="Blog" />,
   },
 ];
 
@@ -65,8 +69,14 @@ export const MOBILE_LINKS = [
     xsOnly: true
   },
   {
-    href: url('home'),
-    text: <FormattedMessage id="nav.signIn" defaultMessage="Sign in" />,
+    href: url('get-waves'),
+    text: <FormattedMessage id="nav.getWaves" defaultMessage="Get Waves" />,
+    type: 'secondary',
+    hideInFooter: true
+  },
+  {
+    href: url('blog'),
+    text: <FormattedMessage id="nav.blog" defaultMessage="Blog" />,
     type: 'secondary',
     hideInFooter: true
   },

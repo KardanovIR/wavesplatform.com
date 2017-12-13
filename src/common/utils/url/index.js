@@ -52,6 +52,10 @@ const URL = {
   'online-client': {
     pathname: 'https://beta.wavesplatform.com',
   },
+  blog: {
+    subdomain: 'blog',
+    pathname: '/',
+  }
 };
 
 export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {

@@ -46,10 +46,10 @@ const styles = theme => ({
   },
 });
 
-const Step = ({ avatar, children, classes }) => (
+const Step = ({ avatar, children, classes, inverted }) => (
   <div className={classes.panel}>
     <div className={classes.avatar}>{avatar}</div>
-    <Typography className={classes.children}>{children}</Typography>
+    <Typography inverted={inverted} className={classes.children}>{children}</Typography>
   </div>
 );
 
