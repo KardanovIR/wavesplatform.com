@@ -16,6 +16,7 @@ import url from 'src/common/utils/url';
 const INVERTED_SKIN_LINKS = {
   'get-waves': true,
   developers: true,
+  company: true
 };
 
 const isInverted = link => link === undefined || INVERTED_SKIN_LINKS[link];

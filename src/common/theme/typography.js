@@ -62,7 +62,7 @@ const creatyTypography = (palette, breakpoints) => {
       {
         fontSize: 44,
         lineHeight: 1.25,
-      }
+      },
     ),
     display3Inverted: {
       extend: 'display3',
@@ -74,7 +74,7 @@ const creatyTypography = (palette, breakpoints) => {
         {
           fontSize: 44,
           lineHeight: 1.22,
-        }
+        },
       ),
     },
     display2: combineMobileDesktopStyles(
@@ -89,7 +89,7 @@ const creatyTypography = (palette, breakpoints) => {
       {
         fontSize: 34,
         lineHeight: 1.29,
-      }
+      },
     ),
     display1: combineMobileDesktopStyles(
       {
@@ -101,7 +101,7 @@ const creatyTypography = (palette, breakpoints) => {
       },
       {
         fontSize: 19,
-      }
+      },
     ),
     body: combineMobileDesktopStyles(base, {
       fontSize: 17,
@@ -119,7 +119,7 @@ const creatyTypography = (palette, breakpoints) => {
       {
         fontSize: 32,
         fontWeight: 400,
-      }
+      },
     ),
     quote: combineMobileDesktopStyles(
       {
@@ -131,7 +131,7 @@ const creatyTypography = (palette, breakpoints) => {
       {
         fontSize: 17,
         lineHeight: 1.59,
-      }
+      },
     ),
     button: combineMobileDesktopStyles(
       {
@@ -143,7 +143,7 @@ const creatyTypography = (palette, breakpoints) => {
       },
       {
         fontSize: 15,
-      }
+      },
     ),
     numeral: combineMobileDesktopStyles(
       {
@@ -155,7 +155,7 @@ const creatyTypography = (palette, breakpoints) => {
       },
       {
         fontSize: 30,
-      }
+      },
     ),
     muted: combineMobileDesktopStyles({
       fontSize: 17,
