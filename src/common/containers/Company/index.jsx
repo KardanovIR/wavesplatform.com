@@ -34,7 +34,10 @@ const PageLayout = ({ classes }) => (
     <MainScreenBackground
       type="image"
       src={require('./img/Artboard.jpg')}
-      srcSet={`${require('./img/Artboard.jpg')} 3x`}
+      videoSrc={require('./video/w_bleu_comp_2_f.mp4')}
+      videoSrcMobile={require('./video/w_bleu_comp_2.mp4')}
+      videoFirstFrame={require('./img/ffDesk.jpg')}
+      videoFirstFrameMobile={require('./img/ffMob.jpg')}
     >
       <MainScreen
         title={
@@ -45,19 +48,6 @@ const PageLayout = ({ classes }) => (
             />
           </Typography>
         }
-        //titleType={"display5"}
-        /*title={
-                    {<FormattedMessage
-                        id="company.title"
-                        defaultMessage="We create the economics of free, perfect and instant"
-                    />}
-                }*/
-        /*text={
-                    <FormattedMessage
-                        id="company.text"
-                        defaultMessage="The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it."
-                    />
-                }*/
       />
     </MainScreenBackground>
 
