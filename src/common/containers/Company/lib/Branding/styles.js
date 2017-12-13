@@ -37,7 +37,7 @@ const styles = theme => ({
     },
     bg: {
         ...bgStyle(theme),
-        backgrounImage: `url(${img1x})`,
+        backgroundImage: `url(${img1x})`,
         [theme.mixins.atMedia('md')]: {
             backgroundImage: `url(${img2x})`,
         }
