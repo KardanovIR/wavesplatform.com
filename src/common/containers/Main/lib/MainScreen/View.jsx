@@ -7,7 +7,7 @@ import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
 
-const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
+const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
   <MainScreen
     title={
       <FormattedHTMLMessage id="home.main.title" defaultMessage="Get started<br>with blockchain" />
@@ -29,7 +29,7 @@ const IndexMainScreen = ({ onGetClientClick, onGetWavesClick, animated }) => (
         <FormattedMessage id="cta.getClient" defaultMessage="Get client" />
       </Button>,
       <Button
-        onClick={onGetWavesClick}
+        onClick={onNewClientClick}
         href={url('online-client')}
         withLoader
         secondary
