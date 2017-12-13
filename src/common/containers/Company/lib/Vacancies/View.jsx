@@ -13,7 +13,7 @@ import styles from './styles';
 
 const VacanciesContainer = ({classes}) => (
     <Row centered>
-        <Col xs={12} sm={10} md={8}>
+        <Col xs={12} sm={10} md={10}>
             <div className={classes.div}>
                 <Typography type="display2" style={{fontSize: 23}} align="left">
                     <FormattedMessage
