@@ -13,7 +13,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const Whitepaper = ({ classes, onWhitepaperClick }) => (
-  <Row alignItems="left" className={classes.row}>
+   <Row alignItems="left" className={classes.twoblocks}>
     <Col xs={12} sm={6} md={8} className={classes.blockText}>
       <Typography type="display2" style={{ fontSize: 23 }}>
         <FormattedMessage id="company.whitepaper.title" defaultMessage="Whitepaper" />

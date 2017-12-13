@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl';
 const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
   <MainScreen
     title={
-      <FormattedMessage id="developers.title" defaultMessage="Build unstoppable applications" />
+      <FormattedMessage id="developers.title" defaultMessage="Build applications on the blockchain" />
     }
     text={
       <FormattedMessage

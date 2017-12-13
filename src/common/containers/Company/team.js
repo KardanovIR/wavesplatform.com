@@ -1,5 +1,5 @@
 import Sasha_Ivanov1x from './lib/Team/img/Sasha_Ivanov@1x.jpg';
-import Sasha_Ivanov2x from './lib/Team/img/Sasha_Ivanov@1x.jpg';
+import Sasha_Ivanov2x from './lib/Team/img/Sasha_Ivanov@2x.jpg';
 
 import Maxim_Pertsovskiy1x from './lib/Team/img/Maxim_Pertsovskiy@1x.jpg';
 import Maxim_Pertsovskiy2x from './lib/Team/img/Maxim_Pertsovskiy@2x.jpg';
