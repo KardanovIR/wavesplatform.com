@@ -55,6 +55,7 @@ class Video extends Component {
       srcMobile,
       classes,
       sheet,
+      theme,
       ...rest
     } = this.props;
 
