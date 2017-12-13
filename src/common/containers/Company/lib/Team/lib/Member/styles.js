@@ -41,7 +41,7 @@ export default theme => ({
       '&:hover': {
         '& $image': {
           transform: 'scale(1.02) 0.25s ease-out',
-          filter: 'grayscale(100%)',
+          //filter: 'grayscale(100%)',
           opacity: 1,
         },
         '& $overlay': {
