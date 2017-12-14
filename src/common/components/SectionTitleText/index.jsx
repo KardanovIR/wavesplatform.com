@@ -4,16 +4,15 @@ import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
 
-const SectionTitleText = ({ titleType, text, title, marginSize }) => {
+const SectionTitleText = ({ titleType, text, title, marginSize, align }) => {
     return (
         <div>
-            <Row centered>
+            <Row>
                 <Col xs={12} sm={10} md={8} lg={8}>
-                    <Typography type={titleType} align="center">
+                    <Typography type={titleType} align={align}>
                         {title}
                     </Typography>
-
-                    <Typography type="body2" tagName="div" align="center">
+                    <Typography type="body2" tagName="div" align={align}>
                         {text}
                     </Typography>
                 </Col>
@@ -26,6 +25,7 @@ const SectionTitleText = ({ titleType, text, title, marginSize }) => {
 SectionTitleText.defaultProps = {
     titleType: 'display3',
     marginSize: 4,
+    align: "center",
 };
 
 export default SectionTitleText;

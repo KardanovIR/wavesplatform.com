@@ -10,6 +10,7 @@ import { FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = ({ onWavesNodeClick }) => (
     <MainScreen
+        inverted
         title={
             <FormattedMessage
                 id="mining.title"

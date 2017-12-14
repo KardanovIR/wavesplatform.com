@@ -6,6 +6,7 @@ import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
+import ContentContainer from 'src/common/components/ContentContainer';
 
 // import AnchorScroll from 'src/public/components/AnchorScroll';
 
@@ -20,7 +21,7 @@ import Nodes from './lib/Nodes';
 import injectSheet from 'react-jss';
 const styles = theme => ({
     bgRevenue: {
-        background: '#f0f4fb',
+        background: '#d6e0fc',
     },
     bgNodes: {
         background: theme.palette.gray[50],
@@ -29,8 +30,16 @@ const styles = theme => ({
 
 const PageLayout = ({ classes }) => (
     <Layout>
-        <MainScreenBackground type="dark">
-            <MainScreen />
+        <MainScreenBackground
+            type="image"
+            src={require('./lib/MainScreen/img/bg.jpg')}
+            srcSet={`${require('./lib/MainScreen/img/bg.jpg')} 1x, ${require('./lib/MainScreen/img/bg@2x.jpg')} 2x`}
+            videoSrc={require('./lib/MainScreen/video/w_black_dev_1.mp4')}
+            videoSrcMobile={require('./lib/MainScreen/video/w_phone_black_1.mp4')}
+        >
+            <ContentContainer>
+                <MainScreen />
+            </ContentContainer>
         </MainScreenBackground>
 
         <Section top={3} bottom={4}>

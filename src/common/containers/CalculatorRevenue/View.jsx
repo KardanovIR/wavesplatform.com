@@ -22,7 +22,7 @@ import injectSheet from 'react-jss';
 
 const styles = theme => ({
     buttonGroup: {
-        width: '100%',
+        width: '90%',
     },
     divider: {},
 
