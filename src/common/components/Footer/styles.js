@@ -26,7 +26,7 @@ export default theme => {
     },
 
     terms: {
-      display: 'none',
+      // display: 'none',
       extend: 'link',
       fontSize: 12,
       padding: 0,
@@ -62,8 +62,10 @@ export default theme => {
       order: 1,
     },
     language: {
+      order: 5,
       marginBottom: theme.spacing.unit,
-      textAlign: 'center',
+      marginTop: -theme.spacing.unit,
+      textAlign: 'left',
     },
     copyright: {
       fontSize: 12,
@@ -144,7 +146,6 @@ export default theme => {
         justifyContent: 'flex-end',
       },
       language: {
-        textAlign: 'left',
         order: 4,
         marginTop: theme.spacing.unit * 4,
       },

@@ -62,17 +62,9 @@ export const MOBILE_LINKS = [
   //   type: 'secondary'
   // },
   {
-    href: url('files.terms_conditions'),
-    text: <FormattedMessage id="nav.terms" defaultMessage="Terms and conditions" />,
-    type: 'primary',
-    hideInMenu: true,
-    xsOnly: true
-  },
-  {
     href: url('get-waves'),
     text: <FormattedMessage id="nav.getWaves" defaultMessage="Get Waves" />,
     type: 'secondary',
-    hideInFooter: true
   },
   {
     href: url('blog'),
