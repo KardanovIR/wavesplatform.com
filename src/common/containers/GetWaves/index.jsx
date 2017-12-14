@@ -17,6 +17,7 @@ import WalletText from './lib/WalletText';
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
+import {fileUrl} from "../../utils/url";
 
 const PageLayout = ({ classes }) => (
   <Layout>
@@ -24,6 +25,10 @@ const PageLayout = ({ classes }) => (
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+      videoSrc={fileUrl('video/blue2_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/blue2_mobile.mp4')}
+      videoFirstFrame={require('./img/mobile_2.jpg')}
+      videoFirstFrameMobile={require('./img/mobile_2_m.jpg')}
     >
       <ContentContainer>
         <MainScreen />
