@@ -104,7 +104,7 @@ class SubscriptionForm extends Component {
             <Typography type="quote" inverted align="center" className={classes.textGray}>
               <FormattedMessage
                 id="form.thanksSubscribe"
-                defaultMessage="Thanks for subscribing! We will soon post you at {email}."
+                defaultMessage="Thanks for subscribing! Check your inbox, we've sent a confirmation letter to {email}."
                 values={{
                   email: (
                     <Typography inverted tagName="span">
