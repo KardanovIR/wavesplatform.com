@@ -12,8 +12,8 @@ const typeface = {
     {
       fontFamily: 'suisse_intl',
       src: [
-        `url(${require('./fonts/suisseintl-semibold-webfont.woff2')}) format(\'woff2\')`,
-        `url(${require('./fonts/suisseintl-semibold-webfont.woff')}) format(\'woff\')`,
+        `url(${require('./fonts/subset-SuisseIntl-SemiBold.woff2')}) format(\'woff2\')`,
+        `url(${require('./fonts/subset-SuisseIntl-SemiBold.woff2')}) format(\'woff\')`,
       ],
       fontWeight: 600,
       fontStyle: 'normal',
