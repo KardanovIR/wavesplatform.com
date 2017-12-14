@@ -52,7 +52,7 @@ const styles = theme => ({
   button: {
     boxSizing: 'border-box',
     width: 240,
-    [theme.mixins.atMedia(375)]: {
+    [theme.mixins.atMedia(414)]: {
       width: '100%',
     },
     [theme.mixins.atMedia('sm')]: {

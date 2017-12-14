@@ -13,7 +13,7 @@ const styles = theme => ({
     width: '100%',
     boxSizing: 'border-box',
 
-    [theme.mixins.atMedia(375)]: {
+    [theme.mixins.atMedia(414)]: {
       width: '50%',
       display: 'inline-block',
       padding: '0 10px 0 0'
