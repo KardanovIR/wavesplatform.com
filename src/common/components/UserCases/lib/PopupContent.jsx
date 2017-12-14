@@ -9,7 +9,17 @@ import styles from '../styles';
 import injectSheet from 'react-jss';
 
 const PopupContent = injectSheet(styles)(
-  ({ userName, title, text, signature, className, classes, bgMobile, logoSrc, logoSrcSet }) => (
+  ({
+    userName,
+    title,
+    text,
+    signature,
+    className,
+    classes,
+    bgMobile,
+    logoSrc,
+    logoSrcSet,
+  }) => (
     <ContentContainer>
       <div className={cx(className, classes.popupContainer)}>
         <Typography type="numeral" weight={500} className={classes.title}>
@@ -20,12 +30,21 @@ const PopupContent = injectSheet(styles)(
           {title}
         </Typography>
         <Margin top={3} />
-        <Quote signature={signature} withQuotes={false} className={classes.quote}>
+        <Quote
+          signature={signature}
+          withQuotes={false}
+          className={classes.quote}
+        >
           {text}
         </Quote>
         <Margin top={3} />
         <img className={classes.image} src={bgMobile} alt="" />
-        <img className={classes.logo} src={logoSrc} srcSet={logoSrcSet} alt=""/>
+        <img
+          className={classes.logo}
+          src={logoSrc}
+          srcSet={logoSrcSet}
+          alt="Case Picture"
+        />
       </div>
     </ContentContainer>
   )
