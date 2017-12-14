@@ -30,11 +30,15 @@ const styles = theme => ({
     alignItems: 'center',
     display: 'none',
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
+    maxWidth: 282,
+    height: 374,
     //padding: theme.spacing.getSpacing(4, 4),
   },
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
       flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     svgrow: {
       margin: 0,
