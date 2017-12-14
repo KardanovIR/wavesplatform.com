@@ -13,10 +13,13 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const Whitepaper = ({ classes, onWhitepaperClick }) => (
-   <Row alignItems="left" className={classes.twoblocks}>
+  <Row alignItems="left" className={classes.twoblocks}>
     <Col xs={12} sm={6} md={8} className={classes.blockText}>
       <Typography type="display2" className={classes.title}>
-        <FormattedMessage id="company.whitepaper.title" defaultMessage="Whitepaper" />
+        <FormattedMessage
+          id="company.whitepaper.title"
+          defaultMessage="Whitepaper"
+        />
       </Typography>
       <Typography type="body" className={classes.text} cut>
         <FormattedMessage
@@ -33,7 +36,10 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
         target="_blank"
         secondary
       >
-        <FormattedMessage id="cta.whitepaper" defaultMessage="Download Whitepaper" />
+        <FormattedMessage
+          id="cta.whitepaper"
+          defaultMessage="Download Whitepaper"
+        />
       </Button>
     </Col>
     <Col xs={12} sm={6} md={4} className={classes.svgrow}>

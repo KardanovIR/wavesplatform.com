@@ -8,7 +8,17 @@ import cn from 'classnames';
 import styles from '../styles';
 import injectSheet from 'react-jss';
 
-const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, onDetails, index }) => (
+import { FormattedMessage } from 'react-intl';
+
+const UserCaseMobile = ({
+  classes,
+  userName,
+  title,
+  className,
+  bgMobile,
+  onDetails,
+  index,
+}) => (
   <div className={cn(className, classes.slide)}>
     <Typography type="numeral" weight={500} className={classes.title}>
       {userName}
@@ -19,18 +29,20 @@ const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, o
     </Typography>
     <Margin top={3} />
     <Link
-      onClick={e => {
-        e.preventDefault();
-        onDetails && onDetails({ userName, title, text, bgMobile });
-      }}
+      pseudo
+      onClick={onDetails}
       className={classes.link}
       data-slide-link={`${index}`}
     >
-      Details
+      <FormattedMessage id="userCases.detailsLink" defaultMessage="Details" />
     </Link>
     <Margin top={4} />
-    <img className={classes.image} src={bgMobile} alt="" />
+    <img className={classes.image} src={bgMobile} alt="Case Picture" />
   </div>
 );
+
+UserCaseMobile.defaultProps = {
+  onDetails: () => {},
+};
 
 export default injectSheet(styles)(UserCaseMobile);

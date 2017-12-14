@@ -41,7 +41,7 @@ class Gallery extends Component {
   }
 
   render() {
-    const { children, swiperProps, classes, className: classNameProp, onClick } = this.props;
+    const { children, classes, className: classNameProp, onClick } = this.props;
 
     return (
       <div
@@ -52,11 +52,18 @@ class Gallery extends Component {
         <div className="swiper-wrapper">
           {Children.map(children, child =>
             cloneElement(child, {
-              className: cn(child.props.className, classes.slide, 'swiper-slide'),
+              className: cn(
+                child.props.className,
+                classes.slide,
+                'swiper-slide'
+              ),
             })
           )}
         </div>
-        <div ref={ref => this.$bulletsContainer = ref} className={classes.bulletContainer} />
+        <div
+          ref={ref => (this.$bulletsContainer = ref)}
+          className={classes.bulletContainer}
+        />
       </div>
     );
   }

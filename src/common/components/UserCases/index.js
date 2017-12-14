@@ -76,7 +76,6 @@ const GALLERY_SETTINGS_D = {
 };
 
 const GALLERY_SETTINGS_M = {
-  loop: true,
   spaceBetween: 10,
   centeredSlides: true,
   slidesPerView: 'auto',

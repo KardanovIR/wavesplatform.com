@@ -71,7 +71,7 @@ const MainScreen = ({ classes }) => (
         <Margin />
         <Typography type="display1" inverted>
           <Link
-            icon={null}
+            // icon={null}
             textDecoration={false}
             target="_blank"
             href="https://wavescommunity.com"

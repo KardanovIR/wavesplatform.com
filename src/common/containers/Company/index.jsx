@@ -29,13 +29,16 @@ import styles from './styles';
 import { FormattedMessage } from 'react-intl';
 import teamMembers from './team';
 
+// url
+import { fileUrl } from 'src/common/utils/url';
+
 const PageLayout = ({ classes }) => (
   <Layout activeLink="company">
     <MainScreenBackground
       type="image"
       src={require('./img/Artboard.jpg')}
-      videoSrc={require('./video/w_bleu_comp_2_f.mp4')}
-      videoSrcMobile={require('./video/w_bleu_comp_2.mp4')}
+      videoSrc={fileUrl('video/blue_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/blue_mobile.mp4')}
       videoFirstFrame={require('./img/ffDesk.jpg')}
       videoFirstFrameMobile={require('./img/ffMob.jpg')}
     >

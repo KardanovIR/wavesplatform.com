@@ -15,7 +15,7 @@ const HowToStart = ({ onGetClientClick }) => (
           <div>
             <FormattedHTMLMessage
               id="product.howToToken.step1"
-              defaultMessage="First, install the <br/> Waves client"
+              defaultMessage="First, install the Waves client"
             />
             <br />
             <Link

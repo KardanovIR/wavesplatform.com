@@ -20,6 +20,9 @@ const styles = theme => ({
   'align-items-center': {
     alignItems: 'center',
   },
+  'align-items-left': {
+    alignItems: 'left',
+  },
 });
 
 const Row = ({
@@ -50,7 +53,7 @@ const Row = ({
 
 Row.propTypes = {
   direction: PropTypes.oneOf(['row-reverse']),
-  alignItems: PropTypes.oneOf(['center']),
+  alignItems: PropTypes.oneOf(['center', 'left']),
 };
 
 Row.defaultProps = {

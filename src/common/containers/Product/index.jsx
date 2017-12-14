@@ -4,20 +4,16 @@ import cx from 'classnames';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
-import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
-import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
-import Divider from 'src/common/components/Divider';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
-// import MainScreen from 'src/common/components/MainScreen';
 
 // containers
 import UserCases from 'src/common/components/UserCases';
@@ -28,7 +24,6 @@ import MainScreen from './lib/MainScreen';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
-// import OnlineWallet from './lib/OnlineWallet';
 import HowToTrade from './lib/HowToTrade';
 import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
@@ -46,14 +41,17 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+// url
+import { fileUrl } from 'src/common/utils/url';
+
 const PageLayout = ({ classes, initialState }) => (
   <Layout activeLink="product">
     <BackgroundMainScreen
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-      videoSrc={require('./video/w_white_main_2.mp4')}
-      videoSrcMobile={require('./video/w_white_main_2_iphone.mp4')}
+      videoSrc={fileUrl('video/white2_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/white2_mobile.mp4')}
       videoFirstFrame={require('./img/bgDesktopFF.jpg')}
       videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
@@ -110,7 +108,10 @@ const PageLayout = ({ classes, initialState }) => (
         <ContentContainer>
           <Section size={2}>
             <Typography type="display5" inverted>
-              Stop worrying about the safety of your assets
+              <FormattedMessage
+                id="product.DEX.safety"
+                defaultMessage="Stop worrying about the safety of your assets"
+              />
             </Typography>
           </Section>
           <DEXTopPairs pairs={initialState.dexTopPairs} />
@@ -139,7 +140,9 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </Margin>
 
-      <UserCases />
+      <ContentContainer>
+        <UserCases />
+      </ContentContainer>
 
       <Section size={4}>
         <ContentContainer>

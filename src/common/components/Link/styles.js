@@ -6,11 +6,10 @@ const styles = theme => ({
 
   text: {
     display: 'inline-block',
-    borderBottom: '1px solid',
   },
 
   pseudo: {
-    borderBottomStyle: 'dashed !important',
+    borderBottom: '1px dashed',
   },
 
   noDecoration: {

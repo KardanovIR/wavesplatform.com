@@ -22,14 +22,19 @@ import Description from './lib/Description';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+// url
+import { fileUrl } from 'src/common/utils/url';
+
 const PageLayout = ({ classes }) => (
   <Layout activeLink="developers" inverted>
     <BackgroundMainScreen
       type="image"
       src={require('./lib/MainScreen/img/bg.jpg')}
       srcSet={`${require('./lib/MainScreen/img/bg.jpg')} 1x, ${require('./lib/MainScreen/img/bg@2x.jpg')} 2x`}
-      videoSrc={require('./lib/MainScreen/video/w_black_dev_1.mp4')}
-      videoSrcMobile={require('./lib/MainScreen/video/w_phone_black_1.mp4')}
+      videoSrc={fileUrl('video/black_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/black_mobile.mp4')}
+      videoFirstFrame={require('./lib/MainScreen/img/w_black_dev_1.jpg')}
+      videoFirstFrameMobile={require('./lib/MainScreen/img/w_phone_black_1.jpg')}
     >
       <ContentContainer>
         <MainScreen inverted />
