@@ -47,7 +47,8 @@ const URL = {
     pathname: '/leasing',
   },
   'online-client': {
-    pathname: 'https://beta.wavesplatform.com',
+    subdomain: 'beta',
+    pathname: '/',
   },
   blog: {
     subdomain: 'blog',
