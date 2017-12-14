@@ -16,22 +16,13 @@ export default theme => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  popover: {
+  logo: {
     position: 'absolute',
-    right: 0,
-    top: 0,
-    opacity: 0,
-    transition: theme.transitions.create(['opacity', 'transform']),
-    transform: 'scale(0.9)',
-    transformOrigin: 'right top',
+    top: 26,
+    left: theme.spacing.unit * 3
   },
-  enteringPopover: { opacity: 1, transform: 'scale(1)' },
-  enteredPopover: { opacity: 1, transform: 'scale(1)' },
-  exitingPopover: { opacity: 0, transform: 'scale(0.9)' },
-  exitedPopover: hidden,
-  unmountedPopover: { opacity: 0 },
   linksWrapper: {
-    padding: theme.spacing.getSpacing(7, 0),
+    padding: theme.spacing.getSpacing(14, 0, 7),
     height: '100%',
     backgroundColor: '#000',
     boxSizing: 'border-box',
@@ -43,7 +34,7 @@ export default theme => ({
     textDecoration: 'none',
     color: theme.palette.gray[0],
     display: 'block',
-    padding: theme.spacing.getSpacing(1, 5),
+    padding: theme.spacing.getSpacing(1, 3),
     '&:active': {
       backgroundColor: theme.palette.grayBlue[300],
     },

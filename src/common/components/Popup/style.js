@@ -30,7 +30,7 @@ export default function(theme) {
     closeButton: {
       position: 'absolute',
       top: 17,
-      right: 26,
+      right: 20,
       width: 24,
       height: 24,
       appearance: 'none',

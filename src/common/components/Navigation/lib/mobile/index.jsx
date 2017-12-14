@@ -5,7 +5,9 @@ import injectSheet from 'react-jss';
 
 import cn from 'classnames';
 
+import Logo from 'src/common/components/Logo';
 import Popup from 'src/common/components/Popup';
+import url from "../../../../utils/url";
 
 const burger = {
   root: {
@@ -73,6 +75,15 @@ class MobileNav extends Component {
 
         <Popup show={this.state.open} onClose={this.handleClose} inverted>
           <div className={classes.linksWrapper}>
+            <div className={classes.logo}>
+              <a href={url('home')}>
+                <Logo
+                  color={'#fff'}
+                  flat
+                />
+              </a>
+            </div>
+
             {links.filter(link => !link.hideInMenu).map((link, index) => (
               <a
                 key={`mobile_nav_link${index}`}
