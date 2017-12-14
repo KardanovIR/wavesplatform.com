@@ -23,7 +23,7 @@ const styles = theme => ({
   },
   header: {
     display: 'flex',
-    alignItems: 'flex-start',
+    alignItems: 'center',
     marginBottom: theme.spacing.unit * 2,
   },
   title: {
@@ -35,7 +35,6 @@ const styles = theme => ({
   [theme.mixins.atMedia('md')]: {
     header: {
       display: ({ twoColumns }) => (twoColumns ? 'flex' : 'block'),
-      alignItems: 'center',
       marginBottom: 0,
     },
     title: {
