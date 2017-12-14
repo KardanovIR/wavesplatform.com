@@ -38,7 +38,7 @@ module.exports = {
           options: {
             publicPath: '/static/',
             name: path.join('fonts', '[name].[ext]'),
-            limit: 30000,
+            limit: 1,
           },
         },
       },
