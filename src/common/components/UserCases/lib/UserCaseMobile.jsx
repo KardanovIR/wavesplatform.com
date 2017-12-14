@@ -8,11 +8,12 @@ import cn from 'classnames';
 import styles from '../styles';
 import injectSheet from 'react-jss';
 
+import { FormattedMessage } from 'react-intl';
+
 const UserCaseMobile = ({
   classes,
   userName,
   title,
-  text,
   className,
   bgMobile,
   onDetails,
@@ -28,18 +29,20 @@ const UserCaseMobile = ({
     </Typography>
     <Margin top={3} />
     <Link
-      onClick={e => {
-        e.preventDefault();
-        onDetails && onDetails({ userName, title, text, bgMobile });
-      }}
+      pseudo
+      onClick={onDetails}
       className={classes.link}
       data-slide-link={`${index}`}
     >
-      Details
+      <FormattedMessage id="userCases.detailsLink" defaultMessage="Details" />
     </Link>
     <Margin top={4} />
-    <img className={classes.image} src={bgMobile} alt="" />
+    <img className={classes.image} src={bgMobile} alt="Case Picture" />
   </div>
 );
+
+UserCaseMobile.defaultProps = {
+  onDetails: () => {},
+};
 
 export default injectSheet(styles)(UserCaseMobile);

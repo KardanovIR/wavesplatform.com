@@ -4,20 +4,16 @@ import cx from 'classnames';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
-import Background from 'src/common/components/Background';
 import Typography from 'src/common/components/Typography';
-import { Row, Col } from 'src/common/components/Grid';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
 import Facts from 'src/common/components/Facts';
-import Divider from 'src/common/components/Divider';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
-// import MainScreen from 'src/common/components/MainScreen';
 
 // containers
 import UserCases from 'src/common/components/UserCases';
@@ -28,7 +24,6 @@ import MainScreen from './lib/MainScreen';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
-// import OnlineWallet from './lib/OnlineWallet';
 import HowToTrade from './lib/HowToTrade';
 import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
@@ -113,7 +108,10 @@ const PageLayout = ({ classes, initialState }) => (
         <ContentContainer>
           <Section size={2}>
             <Typography type="display5" inverted>
-              Stop worrying about the safety of your assets
+              <FormattedMessage
+                id="product.DEX.safety"
+                defaultMessage="Stop worrying about the safety of your assets"
+              />
             </Typography>
           </Section>
           <DEXTopPairs pairs={initialState.dexTopPairs} />
@@ -142,7 +140,9 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </Margin>
 
-      <UserCases />
+      <ContentContainer>
+        <UserCases />
+      </ContentContainer>
 
       <Section size={4}>
         <ContentContainer>

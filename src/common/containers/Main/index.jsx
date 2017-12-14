@@ -89,7 +89,9 @@ const PageLayout = ({ initialState, classes }) => (
         </ContentContainer>
       </Section>
 
-      <UserCases />
+      <ContentContainer>
+        <UserCases />
+      </ContentContainer>
 
       <Section size={4}>
         <ContentContainer>

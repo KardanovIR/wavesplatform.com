@@ -52,7 +52,7 @@ const UserCaseDesktop = injectSheet(styles)(
             className={classes.logo}
             src={logoSrcLight || logoSrc}
             srcSet={logoSrcLight ? undefined : logoSrcSet}
-            alt=""
+            alt="Case Picture"
           />
         </Row>
       </ContentContainer>
