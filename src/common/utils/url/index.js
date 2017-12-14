@@ -46,16 +46,19 @@ const URL = {
   leasing: {
     pathname: '/leasing',
   },
-  'files.terms_conditions': {
-    pathname: '/files/docs/Waves_terms_and_conditions.pdf',
-  },
   'online-client': {
     pathname: 'https://beta.wavesplatform.com',
   },
   blog: {
     subdomain: 'blog',
     pathname: '/',
-  }
+  },
+  'files.terms_conditions': {
+    pathname: '/files/docs/Waves_terms_and_conditions.pdf',
+  },
+  file: {
+    pathname: '/files/',
+  },
 };
 
 export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {
@@ -68,7 +71,9 @@ export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {
     return pathname;
   }
 
-  return `${protocol}://${subdomain ? `${subdomain}.` : ''}${domain}${pathname}`;
+  return `${protocol}://${
+    subdomain ? `${subdomain}.` : ''
+  }${domain}${pathname}`;
 };
 
 const checkKey = urls => key => {
@@ -83,14 +88,28 @@ const checkKey = urls => key => {
  * @param {Object.<string, urlObject>} urls
  * @returns {funtction(string)}
  */
-const createGetUrl = urls => {
+const url = (urls => {
   /** @type {urlObject} */
   const defaults = {
     protocol: process.env.NODE_ENV === 'development' ? 'http' : 'https',
     domain: getServerName(),
   };
 
-  return compose(createUrlFromObj, merge(defaults), prop(__, urls), checkKey(urls));
-};
+  return compose(
+    createUrlFromObj,
+    merge(defaults),
+    prop(__, urls),
+    checkKey(urls)
+  );
+})(URL);
 
-export default createGetUrl(URL);
+/**
+ * @param {string} filePath
+ * @returns {string}
+ */
+export const fileUrl = filePath =>
+  (process.env.NODE_ENV === 'development'
+    ? 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/'
+    : url('file')) + filePath;
+
+export default url;

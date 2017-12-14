@@ -14,17 +14,6 @@ module.exports = ({ emitFile = true, limit = 8192 }) => [
     },
   },
   {
-    test: /\.mp4$/,
-    use: {
-      loader: 'file-loader',
-      options: {
-        publicPath: '/static/',
-        name: path.join('images', '[name]_[hash:5].[ext]'),
-        emitFile,
-      },
-    },
-  },
-  {
     test: /\.(png|jpg|jpeg|gif)$/,
     use: {
       loader: 'url-loader',

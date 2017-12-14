@@ -46,14 +46,17 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+// url
+import { fileUrl } from 'src/common/utils/url';
+
 const PageLayout = ({ classes, initialState }) => (
   <Layout activeLink="product">
     <BackgroundMainScreen
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-      videoSrc={require('./video/w_white_main_2.mp4')}
-      videoSrcMobile={require('./video/w_white_main_2_iphone.mp4')}
+      videoSrc={fileUrl('video/white2_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/white2_mobile.mp4')}
       videoFirstFrame={require('./img/bgDesktopFF.jpg')}
       videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >

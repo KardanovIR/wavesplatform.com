@@ -31,14 +31,17 @@ import UserCases from '../../components/UserCases';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
+// url
+import { fileUrl } from 'src/common/utils/url';
+
 const PageLayout = ({ initialState, classes }) => (
   <Layout activeLink="home">
     <BackgroundMainScreen
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-      videoSrc={require('./video/waves_main_seq.mp4')}
-      videoSrcMobile={require('./video/ony_waves_video_iphone.mp4')}
+      videoSrc={fileUrl('video/white_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/white_mobile.mp4')}
       videoFirstFrame={require('./img/bgDesktopFF.jpg')}
       videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
@@ -104,12 +107,11 @@ const PageLayout = ({ initialState, classes }) => (
         <ContentContainer>
           <JoinUs />
           <Margin bottom={5} />
-          <br/>
+          <br />
           <Margin top={5} />
           <SubscribeSection />
         </ContentContainer>
       </Section>
-
     </Wrapper>
   </Layout>
 );
