@@ -28,7 +28,7 @@ const Html = ({
       <link
         rel="shortcut icon"
         type="image/x-icon"
-        href="/static/favicon.ico"
+        href="/static/favicon.ico?v=2"
       />
 
       <title>{title}</title>

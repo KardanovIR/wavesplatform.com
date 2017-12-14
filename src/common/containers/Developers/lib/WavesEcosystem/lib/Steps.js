@@ -1,10 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Link from 'src/common/components/Link';
 import IconProduct from 'src/common/components/IconProduct';
 
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 import HowToBlock from 'src/common/components/HowToBlock';
 
@@ -24,12 +23,11 @@ const HowToWallet = ({ children, title }) => (
                 id="developers.wavesEcosystem.explorer"
                 defaultMessage="Function-rich blockchain explorer"
               />
-              <br/>
+              <br />
               <Link
                 target="_blank"
                 href="https://wavesgo.com"
                 textDecoration={false}
-                icon={null}
               >
                 wavesgo.com
               </Link>
@@ -44,12 +42,11 @@ const HowToWallet = ({ children, title }) => (
                 id="developers.wavesEcosystem.pywaves"
                 defaultMessage="Python API client and useful scripts"
               />
-              <br/>
+              <br />
               <Link
                 target="_blank"
                 href="https://github.com/PyWaves"
                 textDecoration={false}
-                icon={null}
               >
                 github.com/PyWaves
               </Link>
@@ -60,13 +57,15 @@ const HowToWallet = ({ children, title }) => (
           avatar: <IconProduct name="message" />,
           text: (
             <div>
-              <FormattedMessage id="developers.wavesEcosystem.forum" defaultMessage="Waves forum" />
-              <br/>
+              <FormattedMessage
+                id="developers.wavesEcosystem.forum"
+                defaultMessage="Waves forum"
+              />
+              <br />
               <Link
                 target="_blank"
                 href="https://wavestalk.org"
                 textDecoration={false}
-                icon={null}
               >
                 wavestalk.org
               </Link>

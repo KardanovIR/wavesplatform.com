@@ -52,11 +52,11 @@ const TableDesktop = injectSheet(styles)(({classes}) => [
       <TitleApp />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link href="https://wavesexplorer.com">wavesexplorer.com</Link>
+      <Link target="_blank" href="https://wavesexplorer.com">wavesexplorer.com</Link>
 			<Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link href="https://waveswallet.io">waveswallet.io</Link>
+      <Link target="_blank" href="https://waveswallet.io">waveswallet.io</Link>
     </Col>
   </Row>,
   <Row key="tr2" className={classes.tableRow}>
@@ -64,11 +64,11 @@ const TableDesktop = injectSheet(styles)(({classes}) => [
       <TitleSettings />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link href="https://testnet.wavesexplorer.com">testnet.wavesexplorer.com</Link>
+      <Link target="_blank" href="https://testnet.wavesexplorer.com">testnet.wavesexplorer.com</Link>
 			<Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link href="https://testnet.wavesexplorer.com">testnet.wavesexplorer.com</Link>
+      <Link target="_blank" href="https://testnet.waveswallet.io">testnet.waveswallet.io</Link>
     </Col>
   </Row>,
 ]);
