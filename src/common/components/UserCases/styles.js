@@ -1,16 +1,15 @@
 const styles = theme => ({
+  '@global .swiper-wrapper': {
+    alignItems: 'flex-end'
+  },
   slide: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
-    height: 650,
     width: `calc(100vw - ${theme.spacing.unit * 6}px)`,
     boxSizing: 'border-box',
-    [theme.mixins.atMedia(375)]: {
-      height: 560,
-    }
   },
   row: {
     height: '100%',

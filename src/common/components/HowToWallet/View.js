@@ -20,7 +20,7 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
             <div>
               <FormattedHTMLMessage
                 id="howToWallet.step1"
-                defaultMessage="First, install the <br/> Waves client"
+                defaultMessage="First, install the Waves client"
               />
               <br/>
               <Link

@@ -6,7 +6,6 @@ const styles = theme => ({
 
   text: {
     display: 'inline-block',
-    borderBottom: '1px solid',
   },
 
   pseudo: {

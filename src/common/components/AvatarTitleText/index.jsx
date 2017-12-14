@@ -42,6 +42,7 @@ const styles = theme => ({
       paddingRight: 0,
       marginLeft: ({ twoColumns }) => (twoColumns ? theme.spacing.unit * 2.5 : 0),
       paddingTop: ({ twoColumns }) => (twoColumns ? theme.spacing.unit * 0.75 : 0),
+      marginBottom: ({ twoColumns }) => (twoColumns ? 0 : theme.spacing.unit * 2),
     },
     text: {
       marginLeft: ({ twoColumns, small }) =>
