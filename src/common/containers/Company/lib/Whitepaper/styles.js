@@ -4,7 +4,7 @@ const styles = theme => ({
     maxWidth: '100%',
     //margin: [theme.spacing.unit * 8, 0, 0],
     padding: theme.spacing.getSpacing(3, 0, 3, 0),
-      margin: [0, 'auto'],
+    margin: [0, 'auto'],
   },
   /*image: {
     display: 'block',
@@ -25,12 +25,16 @@ const styles = theme => ({
     flexDirection: 'column-reverse',
   },
   svgrow: {
+    display: 'none',
     boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .09)',
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'none',
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
-    //padding: theme.spacing.getSpacing(4, 4),
+  },
+  [theme.breakpoints.up('sm')]: {
+    svgrow: {
+      display: 'flex',
+    }
   },
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
@@ -48,7 +52,6 @@ const styles = theme => ({
       fontSize: 19,
     }
   },
-
 });
 
 export default styles;

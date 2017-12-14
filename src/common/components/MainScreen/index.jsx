@@ -12,7 +12,7 @@ import cn from 'classnames';
 const MainScreen = ({ title, text, imageDesktop, imageMobile, classes, buttons, inverted }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
-      <Col xs={12} sm={10} lg={10} smOffset={1} lgOffset={1}>
+      <Col xs={10} sm={10} lg={10} xsOffset={1} lgOffset={1}>
         <Typography type="display5" weight={700} className={classes.title} inverted={inverted}>
           {title}
         </Typography>
