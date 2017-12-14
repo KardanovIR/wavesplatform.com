@@ -15,7 +15,7 @@ const styles = theme => ({
         marginBottom: theme.spacing.unit,
     },
     currency: {
-        color: theme.palette.primary[700],
+        color: theme.palette.gray[1000],
     },
     textBlock: {
         composes: '$inlineBlock',
@@ -25,6 +25,10 @@ const styles = theme => ({
     sign: {
         color: theme.palette.gray[400],
     },
+    val: {
+        fontSize: 34,
+        fontWeight: 500,
+    }
 });
 
 const Result = ({ classes, total, waves, mrt }) => (
@@ -41,7 +45,7 @@ const Result = ({ classes, total, waves, mrt }) => (
 
             <div className={classes.inlineBlock}>
                 <div className={classes.textBlock}>
-                    <Typography type="numeral" tagName="span">
+                    <Typography className={classes.val} type="numeral" tagName="span">
                         <FormattedNumber
                             value={waves}
                             maximumFractionDigits={0}
@@ -65,7 +69,7 @@ const Result = ({ classes, total, waves, mrt }) => (
                     </Margin>
                 </div>
                 <div className={classes.textBlock}>
-                    <Typography type="numeral" tagName="span">
+                    <Typography className={classes.val} type="numeral" tagName="span">
                         <FormattedNumber
                             value={mrt}
                             maximumFractionDigits={0}
@@ -102,7 +106,7 @@ const Result = ({ classes, total, waves, mrt }) => (
                 </Typography>
             </div>
             <div>
-                <Typography type="numeral" tagName="span">
+                <Typography className={classes.val} type="numeral" tagName="span">
                     <FormattedNumber value={total} maximumFractionDigits={0} />
                 </Typography>{' '}
                 <Typography

@@ -117,14 +117,12 @@ const StartMining = ({classes}) => (
                 </Col>
 
                 <Col xs={12} md={3}>
-                    <Margin top={4}>
-                        <Typography type="quote" tagName="div">
-                            <FormattedMessage
-                                id="mining.revenue.calc.description"
-                                defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."
-                            />
-                        </Typography>
-                    </Margin>
+                    <Typography type="quote" tagName="div">
+                        <FormattedMessage
+                            id="mining.revenue.calc.description"
+                            defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."
+                        />
+                    </Typography>
                 </Col>
             </Row>
         </ContentContainer>
