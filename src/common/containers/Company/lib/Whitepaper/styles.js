@@ -13,8 +13,13 @@ const styles = theme => ({
 
   },*/
   text: {
-    lineHeight: 1.3,
+    lineHeight: 1.25,
     paddingRight: 0,
+    fontSize: 26,
+    fontWeight: 500,
+  },
+  title: {
+    fontSize: 16,
   },
   twoblocks: {
     flexDirection: 'column-reverse',
@@ -23,17 +28,25 @@ const styles = theme => ({
     boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .09)',
     flexDirection: 'row',
     alignItems: 'center',
-    display: 'flex',
+    display: 'none',
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
     //padding: theme.spacing.getSpacing(4, 4),
   },
-  [theme.breakpoints.up('md')]: {
+  [theme.breakpoints.up('tablet')]: {
     twoblocks: {
       flexDirection: 'row',
     },
     svgrow: {
       margin: 0,
+      display: 'flex',
     },
+    text: {
+      fontSize: 32,
+      lineHeight: 1.3,
+    },
+    title: {
+      fontSize: 19,
+    }
   },
 
 });
