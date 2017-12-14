@@ -15,7 +15,7 @@ const Logo = ({ size, color, flat }) => (
 );
 
 Logo.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.string,
   color: PropTypes.string,
   flat: PropTypes.bool,
 };

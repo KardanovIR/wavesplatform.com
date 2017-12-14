@@ -8,7 +8,16 @@ import cn from 'classnames';
 import styles from '../styles';
 import injectSheet from 'react-jss';
 
-const UserCaseMobile = ({ classes, userName, title, text, className, bgMobile, onDetails, index }) => (
+const UserCaseMobile = ({
+  classes,
+  userName,
+  title,
+  text,
+  className,
+  bgMobile,
+  onDetails,
+  index,
+}) => (
   <div className={cn(className, classes.slide)}>
     <Typography type="numeral" weight={500} className={classes.title}>
       {userName}

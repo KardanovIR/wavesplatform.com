@@ -5,12 +5,12 @@ const styles = theme => ({
         textAlign: 'center'
     },
     aboutText:{
-        fontSize: 30,
-        lineHeight: 1,
+        fontSize: 26,
+        lineHeight: 1.25,
         [theme.breakpoints.up('md')]: {
-            fontSize: 44,
+            fontSize: 32,
             fontWeight: 600,
-            lineHeight: 1.23,
+            lineHeight: 1.3,
             textAlign: 'left',
         },
     }

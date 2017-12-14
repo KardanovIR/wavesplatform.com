@@ -26,6 +26,14 @@ const styles = theme => ({
     contactUs: {
         textAlign: 'left'
     },
+    title: {
+        fontSize: 16,
+    },
+    [theme.breakpoints.up('md')]: {
+        title: {
+            fontSize: 19,
+        }
+    }
 })
 
 export default styles;

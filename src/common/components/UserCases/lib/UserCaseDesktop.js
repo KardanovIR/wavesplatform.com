@@ -7,11 +7,22 @@ import Typography from 'src/common/components/Typography';
 
 import cn from 'classnames';
 
-import styles from "../styles";
+import styles from '../styles';
 import injectSheet from 'react-jss';
 
 const UserCaseDesktop = injectSheet(styles)(
-  ({ userName, title, text, signature, className, classes, bg, logoSrc, logoSrcLight, logoSrcSet }) => (
+  ({
+    userName,
+    title,
+    text,
+    signature,
+    className,
+    classes,
+    bg,
+    logoSrc,
+    logoSrcLight,
+    logoSrcSet,
+  }) => (
     <Section
       size={2}
       className={cn(className, classes.slide)}
@@ -28,11 +39,21 @@ const UserCaseDesktop = injectSheet(styles)(
             <Typography type="display3" inverted weight={600}>
               {title}
             </Typography>
-            <Quote signature={signature} withQuotes={false} className={classes.quote} inverted>
+            <Quote
+              signature={signature}
+              withQuotes={false}
+              className={classes.quote}
+              inverted
+            >
               {text}
             </Quote>
           </Col>
-          <img className={classes.logo} src={logoSrcLight || logoSrc} srcSet={!logoSrcLight && logoSrcSet} alt=""/>
+          <img
+            className={classes.logo}
+            src={logoSrcLight || logoSrc}
+            srcSet={logoSrcLight ? undefined : logoSrcSet}
+            alt=""
+          />
         </Row>
       </ContentContainer>
     </Section>
