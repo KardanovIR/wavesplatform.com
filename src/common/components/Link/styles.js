@@ -9,7 +9,7 @@ const styles = theme => ({
   },
 
   pseudo: {
-    borderBottomStyle: 'dashed !important',
+    borderBottom: '1px dashed',
   },
 
   noDecoration: {
