@@ -10,10 +10,16 @@ const styles = theme => ({
         '-ms-overflow-style': "none",
         overflow: "-moz-scrollbars-none",
     },
-    [theme.breakpoints.up('md')]: {
+    title: {
+        fontSize: 16,
+    },
+    [theme.breakpoints.up('tablet')]: {
         Team: {
             overflowY: "hidden",
             flexWrap: 'wrap',
+        },
+        title: {
+            fontSize: 19,
         },
     },
 

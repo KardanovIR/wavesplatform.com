@@ -15,7 +15,7 @@ const VacanciesContainer = ({classes}) => (
     <Row centered>
         <Col xs={12} sm={10} md={10}>
             <div className={classes.div}>
-                <Typography type="display2" style={{fontSize: 23}} align="left">
+                <Typography type="display2" className={classes.title} align="left">
                     <FormattedMessage
                         id="company.vacancies.title"
                         defaultMessage="Current openings"
@@ -26,7 +26,7 @@ const VacanciesContainer = ({classes}) => (
 
                 <Row>
                     <Col xs={12} sm={10} md={9}>
-                        <Typography type="display2" align="left">
+                        <Typography type="display2" className={classes.text} align="left">
                             <FormattedMessage
                                 id="company.vacancies.text"
                                 defaultMessage="We’d be happy to welcome you to our team. Come and change the world with us!"
