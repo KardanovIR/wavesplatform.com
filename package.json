@@ -12,7 +12,7 @@
     "build:be": "cross-env NODE_ENV=development webpack --config ./config/webpack.back.dev.config.js",
     "build:be-prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.back.prod.config.js",
     "server": "nodemon config/server.js",
-    "devserver": "node config/webpack.devserver.js",
+    "devserver": "cross-env NODE_ENV=development node config/webpack.devserver.js",
     "build:fe": "cross-env NODE_ENV=development webpack --config ./config/webpack.front.config.js",
     "build:fe-prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.front.prod.config.js",
     "test": "./node_modules/.bin/babel-node --presets env,stage-0"
