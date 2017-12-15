@@ -50,7 +50,7 @@ const styles = theme => ({
   },
 });
 
-const Quote = ({ classes, avatar, children, withQuotes = true, signature, inverted, className}) => (
+const Quote = ({ classes, avatar, children, withQuotes, signature, inverted, className}) => (
   <div className={cx(classes.wrapper, className)}>
     {avatar && <div className={classes.avatarWrapper}>{avatar}</div>}
     <div>
@@ -68,6 +68,7 @@ const Quote = ({ classes, avatar, children, withQuotes = true, signature, invert
 );
 
 Quote.defaultProps = {
+  withQuotes: true,
   avatar: null,
 };
 

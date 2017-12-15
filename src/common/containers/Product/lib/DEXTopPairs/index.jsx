@@ -1,5 +1,6 @@
 import React from 'react';
 import MQ from 'react-responsive';
+// @todo refactor inject query
 import { query } from 'src/common/theme/breakpoints.js';
 import Typography from 'src/common/components/Typography';
 

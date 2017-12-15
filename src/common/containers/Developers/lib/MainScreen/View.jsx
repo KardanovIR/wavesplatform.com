@@ -8,7 +8,10 @@ import { FormattedMessage } from 'react-intl';
 const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
   <MainScreen
     title={
-      <FormattedMessage id="developers.title" defaultMessage="Build applications on the blockchain" />
+      <FormattedMessage
+        id="developers.title"
+        defaultMessage="Build applications on the blockchain"
+      />
     }
     text={
       <FormattedMessage
@@ -20,26 +23,16 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
       <IconButton
         onClick={onDocumentationClick}
         key="main_cta_button"
-        // className={classes.ctaButton}
         href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
         target="_blank"
         iconName="github"
         secondary
       >
-        <FormattedMessage id="developers.cta.documentation" defaultMessage="Documentation" />
+        <FormattedMessage
+          id="developers.cta.documentation"
+          defaultMessage="Documentation"
+        />
       </IconButton>,
-      // (
-      //    <IconButton
-      //         key="main_cta_button2"
-      //         // className={classes.secondCtaButton}
-      //         href="https://github.com/wavesplatform/WavesGUI"
-      //         target="_blank"
-      //         iconName="github"
-      //         bordered
-      //     >
-      //         Client
-      //     </IconButton>
-      // ),
     ]}
     inverted={inverted}
   />

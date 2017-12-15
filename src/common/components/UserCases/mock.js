@@ -1,3 +1,4 @@
+//@todo locale
 const SLIDES_DATA = [
   {
     userName: 'The Crypto-Centric Mobile Gaming Platform and Store',

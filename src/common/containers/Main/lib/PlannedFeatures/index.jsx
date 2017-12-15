@@ -1,10 +1,10 @@
+// @todo locale
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
-// import Scrim from 'src/common/components/Scrim';
 
 import { FormattedMessage } from 'react-intl';
 

@@ -1,6 +1,4 @@
 import React from 'react';
-import MQ from 'react-responsive';
-import { query } from 'src/common/theme/breakpoints.js';
 import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';

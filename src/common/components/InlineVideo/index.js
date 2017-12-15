@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import injectSheets from 'react-jss';
 import MQ from 'react-responsive';
+// @todo refactor: inject theme
 import { query } from 'src/common/theme/breakpoints.js';
 import canUseDOM from 'src/common/utils/canUseDOM.js';
 import IS_MS from 'src/common/utils/isMS.js';
