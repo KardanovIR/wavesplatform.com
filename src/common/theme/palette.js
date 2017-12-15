@@ -30,6 +30,7 @@ export const gray = colorMigrationProxy(
     700: '#444444',
     800: '#232323',
     1000: '#161616',
+    9999: '#000',
   },
   'gray'
 );

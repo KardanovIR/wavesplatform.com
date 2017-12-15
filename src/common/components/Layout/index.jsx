@@ -23,6 +23,9 @@ const styles = theme => ({
   body: {
     backgroundColor: ({ inverted }) => inverted && theme.palette.gray[800],
   },
+  ftwrapper: {
+    backgroundColor: ({ darkFooter }) => darkFooter && theme.palette.gray[9999],
+  }
 });
 
 const Layout = ({
@@ -30,6 +33,7 @@ const Layout = ({
   classes,
   activeLink,
   hideFooter,
+  darkFooter,
   // hideSnackbar,
 }) => (
   <div className={classes.body}>
@@ -37,7 +41,7 @@ const Layout = ({
       <Navigation desktopLinks={DESKTOP_LINKS} mobileLinks={MOBILE_LINKS} activeLink={activeLink} />
     </div>
       {children}
-    <Wrapper>
+    <Wrapper className={classes.ftwrapper}>
       {!hideFooter && <Footer links={MOBILE_LINKS} />}
       {/* {!hideSnackbar && <SnackbarStressTest />} */}
     </Wrapper>
