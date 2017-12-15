@@ -28,7 +28,7 @@ const Html = ({
       <link
         rel="shortcut icon"
         type="image/x-icon"
-        href="/static/favicon.ico"
+        href="/static/favicon.ico?v=2"
       />
 
       <title>{title}</title>
@@ -37,7 +37,7 @@ const Html = ({
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGimage.png"
+        content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGImage.jpg"
       />
 
       {/* sentry enable */}

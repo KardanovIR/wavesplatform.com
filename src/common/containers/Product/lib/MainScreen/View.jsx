@@ -34,6 +34,7 @@ const DevelopersMainScreen = ({
             buttons={[
                 (
                     <Button
+												secondary
                         onClick={onGetClientClick}
                         key="main_cta_button"
                         target="_blank"
@@ -44,7 +45,6 @@ const DevelopersMainScreen = ({
                 ),
                 <Button
                     onClick={onOnlineClientClick}
-                    secondary
                     key="main_cta_button2"
                     target="_blank"
                     href="https://waveswallet.io/"

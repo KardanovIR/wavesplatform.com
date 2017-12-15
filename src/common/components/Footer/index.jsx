@@ -57,9 +57,9 @@ const Footer = ({ classes, links }) => (
                         </Typography>
                     </Col>
 
-                    <Col xs={12} md={1} className={classes.logo}>
+                    <Col xs={12} md={1} className={classes.logoWrapper}>
                         <a href={url('home')} className={classes.logoLink}>
-                            <Logo full={false} />
+                            <Logo className={classes.logo} full={false} />
                         </a>
                     </Col>
                 </Row>

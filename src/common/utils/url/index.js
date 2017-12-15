@@ -46,7 +46,11 @@ const URL = {
     'waves-ng': {
         subdomain: 'waves-ng',
         pathname: '/'
-    },
+		},
+		'beta-new-client': {
+			subdomain: 'beta',
+			pathname: '/'
+		},
     'mining': {
         pathname: '/mining'
     },

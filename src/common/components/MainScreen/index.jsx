@@ -17,16 +17,17 @@ const MainScreen = ({
     imageDesktop,
     imageMobile,
     classes,
-    buttons,
+		buttons,
+		invertedText
 }) => (
         <Row className={classes.root}>
             <Col xs={12} sm={7} lg={6}>
-                <Typography type="display4" inverted>{title}</Typography>
+                <Typography type="display4" inverted={invertedText}>{title}</Typography>
                 <Margin />
             </Col>
 
             <Col xs={12} sm={5} lg={6} className={cn(classes.imageCol, { [classes.imageColMargin]: imageMobile })}>
-                {(imageDesktop || imageDesktop) && (
+                {/* {(imageDesktop || imageDesktop) && (
                     <div
                         className={cn(
                             classes.widthSetter,
@@ -49,11 +50,11 @@ const MainScreen = ({
                             )}
                         </div>
                     </div>
-                )}
+                )} */}
             </Col>
 
             <Col xs={12} sm={7} lg={6}>
-                <Typography type="body" inverted className={classes.textCut}>
+                <Typography type="body" inverted={invertedText} className={classes.textCut}>
                     {text}
                 </Typography>
 
@@ -70,7 +71,8 @@ const MainScreen = ({
 
 
 MainScreen.defaultProps = {
-    buttons: []
+		buttons: [],
+		invertedText: true
 }
 
 MainScreen.PropTypes = {

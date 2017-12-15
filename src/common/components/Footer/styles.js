@@ -83,7 +83,10 @@ export default theme => {
             textAlign: 'center'
         },
 
-        logo: flexCentered,
+				logoWrapper: flexCentered,
+				logo: {
+					width: 80
+				},
         logoLink: {
             opacity: 0.5,
             transition: theme.transitions.create('opacity'),
@@ -122,9 +125,10 @@ export default theme => {
                 order: 2,
                 margin: 0
             },
-            logo: {
+            logoWrapper: {
                 order: 3,
-                margin: 0
+								margin: 0,
+								marginBottom: 7
             },
             language: {
                 textAlign: 'left',
