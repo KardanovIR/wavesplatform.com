@@ -4,23 +4,23 @@ import PropTypes from 'prop-types';
 import Typography from 'src/common/components/Typography';
 import Icon from 'src/common/components/Icon';
 import Link from 'src/common/components/Link';
+import Margin from 'src/common/components/Margin';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
-
-
 
 
 const Member = ({
     firstName,
     lastName,
     position,
-    imageUrl,
+    imageUrl1x,
+    imageUrl2x,
     social,
     classes
 }) => (
         <div className={classes.root}>
-            <div className={classes.image} style={{ backgroundImage: `url(${imageUrl})` }} />
+            <div className={classes.image} style={{ backgroundImage: imageUrl2x }} />
 
             <div className={classes.overlay}>
                 <div className={classes.social}>
@@ -31,20 +31,21 @@ const Member = ({
                             href={contact.url}
                             key={`${lastName}_${contact.type}`}
                             className={classes.icon}
+                            icon={null}
                         >
                             <Icon name={contact.type} size={20} />
                         </Link>
                     )) }
                 </div>
-
-                <div className={classes.text}>
-                    <Typography type="display1" inverted>
-                        {firstName + ' ' + lastName}
-                    </Typography>
-                    <Typography type="body" inverted noMargin>
-                        {position}
-                    </Typography>
-                </div>
+            </div>
+            <Margin top={1} />
+            <div className={classes.text}>
+                <Typography type="display1">
+                    {firstName + ' ' + lastName}
+                </Typography>
+                <Typography type="body" noMargin>
+                    {position}
+                </Typography>
             </div>
         </div>
     );
@@ -60,7 +61,8 @@ Member.propTypes = {
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
-    imageUrl: PropTypes.string.isRequired,
+    imageUrl1x: PropTypes.string.isRequired,
+    imageUrl2x: PropTypes.string.isRequired,
     social: PropTypes.arrayOf(
         PropTypes.shape({
             type: PropTypes.string.isRequired,

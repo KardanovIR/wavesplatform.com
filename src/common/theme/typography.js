@@ -1,139 +1,168 @@
 import { combineMobileDesktopStyles } from './utils/combineMobileDesktopStyles';
 
-
 export const global = {
-    fontFamily: 'TTNorms, arial, sans-serif',
-    fontSize: 15,
-    fontStyle: 'normal',
-    lineHeight: 1.67,
-    margin: 0,
-    fontVariantLigatures: 'none',
+  fontFamily: 'suisse_intl, Helvetica Neue, arial, sans-serif',
+  fontSize: 17,
+  fontStyle: 'normal',
+  lineHeight: 1.35,
+  fontVariantLigatures: 'none',
+  '-webkit-font-smoothing': 'antialiased',
+  '-moz-osx-font-smoothing': 'grayscale',
+  'text-rendering': 'optimizeLegibility',
 };
 
-
 const creatyTypography = (palette, breakpoints) => {
+  const base = {
+    ...global,
+    color: palette.gray[1000],
+  };
 
-    const base = {
-        ...global,
-        color: palette.gray[800]
-    }
+  const display = {
+    fontWeight: 500,
+    color: palette.gray[1000],
+  };
 
-    const display = {
-        fontWeight: 500,
-        color: palette.primary[700]
-    };
+  return {
+    display5: {
+      ...base,
+      ...display,
+      fontSize: 38,
+      lineHeight: 1.2,
+      fontWeight: 500,
+      margin: 0,
 
-    return {
-        display4: {
+      [breakpoints.up('md')]: {
+        fontSize: 80,
+      },
+    },
+    display4: {
+      ...base,
+      ...display,
+      fontSize: 28,
+      lineHeight: 1,
+      fontWeight: 700,
+      margin: 0,
 
-            ...base,
-            ...display,
-            fontSize: 28,
-            lineHeight: 1,
-            fontWeight: 700,
+      [breakpoints.up('md')]: {
+        fontSize: 44,
+      },
 
-            [breakpoints.up('md')]: {
-                fontSize: 44
-            },
-
-            [breakpoints.up('lg')]: {
-                fontSize: 64
-            },
-
+      [breakpoints.up('lg')]: {
+        fontSize: 64,
+      },
+    },
+    display3: combineMobileDesktopStyles(
+      {
+        ...base,
+        ...display,
+        fontSize: 30,
+        lineHeight: 1.4,
+        margin: 0,
+      },
+      {
+        fontSize: 44,
+        lineHeight: 1.25,
+      },
+    ),
+    display3Inverted: {
+      extend: 'display3',
+      ...combineMobileDesktopStyles(
+        {
+          fontSize: 50,
+          lineHeight: 1.1,
         },
-        display3: combineMobileDesktopStyles(
-            {
-                ...base,
-                ...display,
-                fontSize: 28,
-                lineHeight: 1.36,
-            },
-            {
-                fontSize: 44,
-                lineHeight: 1.23,
-            }
-        ),
-        display2: combineMobileDesktopStyles(
-            {
-                ...base,
-                ...display,
-                fontSize: 24,
-                lineHeight: 1.42,
-            },
-            {
-                fontSize: 34,
-                lineHeight: 1.29,
-            }
-        ),
-        display1: combineMobileDesktopStyles(
-            {
-                ...base,
-                ...display,
-                fontSize: 18,
-                lineHeight: '24px',
-            },
-            {
-                fontSize: 24,
-                lineHeight: '30px',
-            }
-        ),
-        body: combineMobileDesktopStyles(
-            base,
-            {
-                fontSize: 17,
-                lineHeight: 1.59,
-            }
-        ),
-        body2: combineMobileDesktopStyles(
-            {
-                ...base,
-                fontSize: 17,
-                lineHeight: 1.59,
-            },
-            {
-                fontSize: 20,
-                lineHeight: 1.5,
-            }
-        ),
-        quote: combineMobileDesktopStyles(
-            {
-                ...base,
-                fontStyle: 'italic',
-                color: palette.grayBlue[500]
-            },
-            {
-                fontSize: 17,
-                lineHeight: 1.59,
-            }
-        ),
-        button: combineMobileDesktopStyles(
-            {
-                ...global,
-                fontWeight: 500,
-                fontSize: 13,
-                textTransform: 'uppercase',
-                lineHeight: 1,
-                letterSpacing: '1px',
-            },
-            {
-                fontSize: 15,
-            }
-        ),
-        numeral: combineMobileDesktopStyles(
-            {
-                fontFamily: 'arial, sans-serif',
-                fontSize: 20,
-                lineHeight: 1,
-                fontStyle: 'normal',
-                color: palette.primary[700]
-            },
-            {
-                fontSize: 30,
-            }
-        ),
-    }
-}
+        {
+          fontSize: 44,
+          lineHeight: 1.22,
+        },
+      ),
+    },
+    display2: combineMobileDesktopStyles(
+      {
+        ...base,
+        ...display,
+        fontWeight: 400,
+        fontSize: 24,
+        lineHeight: 1.42,
+        margin: 0,
+      },
+      {
+        fontSize: 34,
+        lineHeight: 1.29,
+      },
+    ),
+    display1: combineMobileDesktopStyles(
+      {
+        ...base,
+        ...display,
+        fontSize: 16,
+        lineHeight: 1.2,
+        margin: 0,
+      },
+      {
+        fontSize: 19,
+      },
+    ),
+    body: combineMobileDesktopStyles(base, {
+      fontSize: 17,
+      lineHeight: 1.6,
+      margin: 0,
+    }),
+    body2: combineMobileDesktopStyles(
+      {
+        ...base,
+        fontSize: 26,
+        lineHeight: 1.25,
+        fontWeight: 500,
+        margin: 0,
+      },
+      {
+        fontSize: 32,
+        fontWeight: 400,
+      },
+    ),
+    quote: combineMobileDesktopStyles(
+      {
+        ...base,
+        fontStyle: 'normal',
+        color: palette.gray[1000],
+        margin: 0,
+      },
+      {
+        fontSize: 17,
+        lineHeight: 1.59,
+      },
+    ),
+    button: combineMobileDesktopStyles(
+      {
+        ...global,
+        margin: 0,
+        fontWeight: 600,
+        fontSize: 13,
+        lineHeight: 1,
+      },
+      {
+        fontSize: 15,
+      },
+    ),
+    numeral: combineMobileDesktopStyles(
+      {
+        fontSize: 20,
+        lineHeight: 1,
+        fontStyle: 'normal',
+        fontWeight: 700,
+        margin: 0,
+      },
+      {
+        fontSize: 30,
+      },
+    ),
+    muted: combineMobileDesktopStyles({
+      fontSize: 17,
+      margin: 0,
+    }),
+  };
+};
 
-
-export { creatyTypography }
-export default creatyTypography
+export { creatyTypography };
+export default creatyTypography;

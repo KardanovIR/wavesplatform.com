@@ -1,35 +1,41 @@
+import palette from "../../../theme/palette";
+
 export default theme => ({
-    desktopOnly: {
-        display: 'none',
-        [theme.breakpoints.up('md')]: {
-            display: 'block'
-        }
+  desktopOnly: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
     },
-    
-    bg: {
-        // composes: '$desktopOnly',
-        backgroundRepeat: 'no-repeat',
-        [theme.breakpoints.up('lg')]: {
-            minWidth: 2560,
-        }
-    },
+  },
 
-    bgClient: {
-        composes: '$bg',
-        backgroundImage: 'linear-gradient(190deg, #c0dafd 0, rgba(255, 255, 255, 0.0) 50%)'
+  bg: {
+    // composes: '$desktopOnly',
+    backgroundRepeat: 'no-repeat',
+    [theme.breakpoints.up('lg')]: {
+      minWidth: 2560,
     },
+  },
 
-    bgTokens: {
-        composes: '$bg',
-        backgroundImage: 'linear-gradient(160deg, rgba(232, 241, 254, 1) 0, rgba(232, 241, 254, 0.0) 50%)'
-    },
+  bgTokens: {},
 
-    bgFeatures: {
-        composes: '$bg',
-        background: theme.palette.gray[50]
-    },
+  bgFeatures: {},
 
-    bgSubscription: {
-        backgroundColor: '#233556',
-    },
-})
+  bgWallet: {
+    backgroundColor: theme.palette.blue[100],
+  },
+
+  bgJoinUs: {
+    backgroundSize: 'cover',
+    backgroundImage: `url(${require('../img/bgJoinUs.jpg')})`,
+    backgroundPosition: 'center'
+  },
+
+  bgBlack: {
+    backgroundColor: theme.palette.gray[1000],
+    position: 'relative'
+  },
+
+  bgGray: {
+    background: theme.palette.gray[50],
+  },
+});

@@ -1,31 +1,5 @@
 [
 	{
-		"title": "Front-end Developer",
-		"location": "Moscow",
-		"blocks": [
-			{
-				"title": "Required:",
-				"elements": [
-					"Solid understanding of client-side development patterns and principles",
-					"Strong Javascript development skills, including ES6+",
-					"Hands-on experience with ReactJS",
-					"Proficiency in HTML/CSS",
-					"Understanding of HTTP, REST, AJAX, etc",
-					"Exposure to the modern JavaScript toolchain: npm/yarn, webpack, babel"
-				]
-			},
-			{
-				"title": "Preferred:",
-				"elements": [
-					"Basic knowledge of NodeJS",
-					"Understanding of React-centric app architecture",
-					"Experience with Redux, redux-saga/redux-observable, etc",
-					"Knowledge of common patterns of development of applications that intensively interact with the back end"
-				]
-			}
-		]
-	},
-	{
 		"title": "API Integration Specialist",
 		"location": "Moscow",
 		"blocks": [
@@ -40,7 +14,7 @@
 			{
 				"title": "Requirements:",
 				"elements": [
-					"Basic programming skills in one or more languages (Java/Scala/C#/Python/JavaScript/Go/PHP)",
+					"Basic programming skills in one or more languages (Java / Scala / C# / Python / JavaScript / Go / PHP)",
 					"The desire to learn about new platforms, languages, and libraries",
 					"Good written English",
 					"Basic knowledge of Unix (preferred)"
@@ -219,37 +193,6 @@
 					"Highly motivated and self-disciplined, with the ability to work both independently as well as part of a team",
 					"Strong problem solving skills",
 					"Excellent oral and written communication skills"
-				]
-			}
-		]
-	},
-	{
-		"title": "Head of SMM",
-		"location": "Moscow",
-		"blocks": [
-			{
-				"title": "Responsibilities:",
-				"elements": [
-					"Vividly and appealingly talk about our projects online with videos, graphics, texts, interviews, and other creative methods",
-					"Find fascinating ideas for their realization",
-					"Create and supervise content plans and promotional strategies",
-					"Run the main social media pages (Facebook, VK, Instagram, Reddit, Twitter, Telegram, etc)",
-					"Collaborate with industry friendly networks and SMM channels",
-					"Find content, write posts and blogs",
-					"Develop and organize competitions and events",
-					"Assign work and supervise the process of the copywriters, designers, etc",
-					"Work with bloggers",
-					"Create and carry out budget, and maintain records"
-				]
-			},
-			{
-				"title": "Requirements:",
-				"elements": [
-					"Minimum 3 years work as an SMM manager",
-					"Upper Intermediate level spoken and written English",
-					"Vast experience creating exciting original content",
-					"Experience assigning, delegating, and supervising work",
-					"Strong writing skills (preferred)"
 				]
 			}
 		]
