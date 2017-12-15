@@ -1,42 +1,27 @@
 import React from 'react';
 
-
 import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
+import injectSheet from 'react-jss';
+import styles from './styles';
 
 import { FormattedMessage } from 'react-intl';
 
+const IssuingTokens = ({classes}) => (
+  <Row>
+    <Col xs={12} md={11}>
+      <Typography type="display1">
+        <FormattedMessage id="home.issuingTokens.title" defaultMessage="Issue your own tokens" />
+      </Typography>
 
-const IssuingTokens = () => (
-    <Row centered>
-        <Col xs={12} sm={8} md={6}>
-            <Typography type="display2" align="center">
-                <FormattedMessage
-                    id="home.issuingTokens.title"
-                    defaultMessage="Issue your own tokens"
-                />
-            </Typography>
-
-            <Typography type="body2" align="center">
-                <FormattedMessage
-                    id="home.issuingTokens.text"
-                    defaultMessage="Releasing tokens allows any business to implement their own internal digital currency, using blockchain for crowdfunding or to pay for goods and services within their projects. Companies can also use tokens to create voting systems and loyalty or discount programmes."
-                />
-            </Typography>
-
-            <Margin />
-
-            <Typography type="quote" align="center" color="gray-600">
-                <FormattedMessage
-                    id="feedback.companiesReleased"
-                    defaultMessage="Companies that have released their own tokens on Waves:"
-                />
-            </Typography>
-        </Col>
-    </Row>
-
+      <Typography type="display3" className={classes.text}>
+        <FormattedMessage
+          id="home.issuingTokens.text"
+          defaultMessage="To get your own internal digital currency. Use blockchain for crowdfunding, pay for goods, services. Use tokens to create voting systems and loyalty or discount programmes. They have released their own tokens on Waves:"
+        />
+      </Typography>
+    </Col>
+  </Row>
 );
 
-
-export default IssuingTokens;
+export default injectSheet(styles)(IssuingTokens);

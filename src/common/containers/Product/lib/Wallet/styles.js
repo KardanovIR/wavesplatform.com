@@ -1,27 +1,14 @@
-import bgImage from 'src/common/styles/bgImage';
-import shadow from 'src/common/styles/shadow';
-
-
 const styles = theme => ({
-    icon: {
-        ...shadow,
-        borderRadius: '50%',
+  image: {
+    display: 'block',
+    margin: `${theme.spacing.unit * 8}px auto`,
+    maxWidth: '100%',
+  },
+  [theme.breakpoints.up('md')]: {
+    image: {
+      margin: '0 auto'
     },
-    security: {
-        composes: '$icon',
-        ...bgImage,
-        backgroundImage: `url(${security})`
-    },
-    wallet: {
-        composes: '$icon',
-        ...bgImage,
-        backgroundImage: `url(${wallet})`
-    },
-    transfer: {
-        composes: '$icon',
-        ...bgImage,
-        backgroundImage: `url(${transfer})`
-    },
-})
+  },
+});
 
 export default styles;

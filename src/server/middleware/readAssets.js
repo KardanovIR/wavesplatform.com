@@ -3,8 +3,6 @@ const { readFile } = require('fs');
 
 const readFileAsync = promisify(readFile);
 
-
-
 const readAssets = async (ctx, next) => {
 
     if (process.env.NODE_ENV === 'production') {

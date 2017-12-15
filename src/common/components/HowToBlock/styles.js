@@ -1,21 +1,25 @@
 const styles = theme => ({
-    root: {
-        textAlign: 'center'
-    },
+  title: {
+    display: 'inline-block',
+    paddingBottom: theme.spacing.unit * 2,
+  },
+  quote: {
+    display: 'inline-block',
+  },
+  column: {
+    display: 'flex',
+  },
+  columnContent: {
+    flex: 1,
+    display: 'flex',
+  },
+  [theme.mixins.atMedia('md')]: {
     title: {
-        maxWidth: 540,
-        display: 'inline-block'
+      maxWidth: 540,
+      display: 'inline-block',
+      paddingBottom: 0,
     },
-    quote: {
-        display: 'inline-block'
-    },
-    column: {
-        display: 'flex',
-    },
-    columnContent: {
-        flex: 1,
-        display: 'flex',
-    }
-})
+  }
+});
 
 export default styles;

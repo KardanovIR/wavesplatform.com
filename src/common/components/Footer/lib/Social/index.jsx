@@ -11,25 +11,23 @@ import Link from 'src/common/components/Link';
 
 import icons from './icons';
 
-
-
 const Social = ({ classes }) => (
-    <Row className={classes.wrapper}>
-        {icons.map((icon, index) => (
-            <Col className={classes.col} sm key={`social_icon_${index}`}>
-                <Link
-                    href={icon.href}
-                    target="_blank"
-                    icon={null}
-                    className={classes.icon}
-                    textDecoration={false}
-                >
-                    <Icon name={icon.name} size={20} />
-                </Link>
-            </Col>
-        ))}
-    </Row>
-)
-
+  <Row className={classes.wrapper}>
+    {icons.map((icon, index) => (
+      <Col className={classes.col} sm key={`social_icon_${index}`}>
+        <Link
+          href={icon.href}
+          target="_blank"
+          icon={null}
+          className={classes.icon}
+          textDecoration={false}
+          primary={false}
+        >
+          <Icon name={icon.name} size={20} />
+        </Link>
+      </Col>
+    ))}
+  </Row>
+);
 
 export default injectSheet(styles)(Social);

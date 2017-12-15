@@ -1,154 +1,164 @@
-import flexCentered from '../../styles/flexCentered';
-
-
 export default theme => {
-    const BACKGROUND = "#172947"
-    return {
-        root: {
-            position: 'relative',
-            marginTop: 55
-        },
+  return {
+    root: {
+      position: 'relative',
+    },
 
-        link: {
-            border: 0,
-            textDecoration: 'none',
-            color: theme.palette.gray[600],
-            display: 'inline-block',
-            padding: theme.spacing.getSpacing(1, 1),
-            transition: theme.transitions.create(
-                'color',
-                theme.transitions.durationShort
-            ),
-            '&:hover': {
-                color: theme.palette.gray[0]
-            },
-    
-            [theme.breakpoints.up('sm')]: {
-                padding: theme.spacing.getSpacing(1, 2),
-            }
-        },
+    footer: {
+      padding: theme.spacing.getSpacing(1, 2),
+    },
 
-        // text
-        textGray: {
-            color: theme.palette.gray[600]
-        },
-        textDarkGray: {
-            color: theme.palette.grayBlue[700]
-        },
+    link: {
+      border: 0,
+      textDecoration: 'none',
+      color: theme.palette.gray[400],
+      display: 'inline-block',
+      padding: theme.spacing.getSpacing(2, 2, 2, 0),
+      transition: theme.transitions.create('opacity', theme.transitions.durationShort),
 
-        footer: {
-            padding: theme.spacing.getSpacing(6, 0, 4)
-        },
-        row: {
-            alignItems: 'center'
-        },
+      [theme.breakpoints.up('md')]: {
+        padding: theme.spacing.getSpacing(1, 2),
 
-        backgroundWrapper: {
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            left: 0,
-            bottom: 0
+        '&:last-child': {
+          paddingRight: 0,
         },
-        background: {
-            background: BACKGROUND,
-            transformOrigin: 'left top',
-        },
+      },
+    },
 
-        bgSkewed: {
-            height: '70%',
-            [theme.breakpoints.up('md')]: {
-                height: '100%'
-            }
-        },
+    terms: {
+      // display: 'none',
+      extend: 'link',
+      fontSize: 12,
+      padding: 0,
+      [theme.breakpoints.up('sm')]: {
+        padding: 0,
+      },
+      [theme.breakpoints.up('md')]: {
+        display: 'block',
+      },
+    },
 
-        background2: {
-            composes: '$background',
-            left: '100%',
-        },
+    ony: {
+      textDecoration: 'none',
+      color: theme.palette.gray[400]
+    },
 
-        // blocks
-        social: {
-            marginBottom: theme.spacing.unit * 4,
-        },
-        nav: {
-            marginBottom: theme.spacing.unit * 3
-        },
-        language: {
-            marginBottom: theme.spacing.unit,
-            textAlign: 'center',
-        },
-        copyright: {
-            marginBottom: theme.spacing.unit * 2,
-            textAlign: 'center'
-        },
+    // text
+    textGray: {
+      color: theme.palette.gray[400],
+    },
 
-				logoWrapper: flexCentered,
-				logo: {
-					width: 80
-				},
-        logoLink: {
-            opacity: 0.5,
-            transition: theme.transitions.create('opacity'),
-            '&:hover': {
-                opacity: 1
-            }
-        },
+    row: {
+      alignItems: 'center',
+    },
 
-        navWrapper: {
-            textAlign: 'center',
-            '&:after': {
-                content: '""',
-                display: 'block',
-                clear: 'both'
-            }
-        },
+    // blocks
+    social: {
+      marginBottom: theme.spacing.unit * 4,
+      order: 2,
+    },
+    nav: {
+      margin: theme.spacing.getSpacing(3, 0, 2),
+      order: 1,
+    },
+    language: {
+      order: 5,
+      marginBottom: theme.spacing.unit,
+      marginTop: -theme.spacing.unit,
+      textAlign: 'left',
+    },
+    copyright: {
+      fontSize: 12,
+      display: 'flex',
+      justifyContent: 'space-between',
+      margin: theme.spacing.getSpacing(2, 0),
+      textAlign: 'center',
+      order: 4,
+    },
 
-        [theme.mixins.atMedia('sm')]: {
-            root: {
-                marginTop: 60
-            },
-        },
+    logo: {
+      display: 'flex',
+      alignItems: 'center',
+      order: 3,
+    },
+    logoLink: {
+      position: 'relative',
+      top: -3,
+      opacity: 0.7,
+      transition: theme.transitions.create('opacity'),
+      '&:hover': {
+        opacity: 1,
+      },
+      '& > svg > path:first-child': {
+        fill: theme.palette.gray[400],
+      },
+    },
 
-        [theme.mixins.atMedia('md')]: {
-            root: {
-                marginTop: 115
-            },
-            footer: {
-                padding: theme.spacing.getSpacing(6, 0, 6)
-            },
-            social: {
-                order: 1,
-                margin: 0
-            },
-            nav: {
-                order: 2,
-                margin: 0
-            },
-            logoWrapper: {
-                order: 3,
-								margin: 0,
-								marginBottom: 7
-            },
-            language: {
-                textAlign: 'left',
-                order: 4,
-                marginTop: theme.spacing.unit * 4,
-            },
-            copyright: {
-                order: 5,
-                textAlign: 'right',
-                marginTop: theme.spacing.unit * 4,
-            },
-            navWrapper: {
-                float: 'right',
-            },
+    navWrapper: {
+      '&:after': {
+        content: '""',
+        display: 'block',
+        clear: 'both',
+      },
+    },
+
+    navContainer: {
+      display: 'flex',
+      flexWrap: 'wrap',
+    },
+
+    navLinkContainer: {
+      width: '50%',
+      margin: 0 + '!important',
+    },
+
+    navLinkContainerXsOnly: {
+      display: 'block',
+
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+    },
+
+    [theme.mixins.atMedia('md')]: {
+      footer: {
+        padding: theme.spacing.getSpacing(10, 2),
+      },
+      social: {
+        order: 1,
+        margin: 0,
+      },
+      navContainer: {
+        display: 'block',
+      },
+      navLinkContainer: {
+        width: 'auto',
+        '& + &': {
+          margin: theme.spacing.getSpacing(1, 0, 0),
         },
-        
-        [theme.mixins.atMedia('lg')]: {
-            root: {
-                marginTop: 120
-            },
-        }
-    }
-}
+      },
+      nav: {
+        order: 2,
+        margin: 0,
+      },
+      logo: {
+        margin: 0,
+        justifyContent: 'flex-end',
+      },
+      language: {
+        order: 4,
+        marginTop: theme.spacing.unit * 4,
+      },
+      copyright: {
+        display: 'block',
+        order: 5,
+        textAlign: 'right',
+        margin: theme.spacing.getSpacing(4, 0, 0),
+      },
+      navWrapper: {
+        textAlign: 'center',
+        float: 'right',
+      },
+    },
+  };
+};

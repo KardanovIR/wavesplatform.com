@@ -5,53 +5,58 @@ import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import Background from 'src/common/components/Background';
-import MainScreenBackground from 'src/common/components/Background/MainScreen';
-
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
+import ContentContainer from 'src/common/components/ContentContainer';
+import HowToWallet from 'src/common/components/HowToWallet';
 
 // lib
 import MainScreen from './lib/MainScreen';
-import HowToBuyWaves from './lib/HowToBuyWaves';
 import Exchanges from './lib/Exchanges';
-
-
+import WalletText from './lib/WalletText';
 
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
-
-
+import {fileUrl} from "../../utils/url";
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        
-        <MainScreenBackground type="light">
-            <MainScreen />
-        </MainScreenBackground>
+  <Layout>
+    <BackgroundMainScreen
+      type="image"
+      src={require('./img/bg.jpg')}
+      srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
+      videoSrc={fileUrl('video/blue2_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/blue2_mobile.mp4')}
+      videoFirstFrame={require('./img/mobile_2.jpg')}
+      videoFirstFrameMobile={require('./img/mobile_2_m.jpg')}
+    >
+      <ContentContainer>
+        <MainScreen />
+      </ContentContainer>
+    </BackgroundMainScreen>
 
+    <Section size={3}>
+      <ContentContainer>
+        <HowToWallet eventPage="get-waves" eventSource="buy_waves_in_client">
+          <WalletText />
+        </HowToWallet>
+      </ContentContainer>
+    </Section>
 
-        <Section size={3}>
-            <HowToBuyWaves />
-        </Section>
-
-        <Background className={classes.bgExchanges} skewed={true}>
-            <Section size={4}>
-                <Exchanges />
-            </Section>
-        </Background>
-
-    </Layout>
+    <Section bottom={4}>
+      <ContentContainer>
+        <Exchanges />
+      </ContentContainer>
+    </Section>
+  </Layout>
 );
-
 
 const Page = injectSheet(styles)(PageLayout);
 
-
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
-)
-
-
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
+);
 
 export default App;
