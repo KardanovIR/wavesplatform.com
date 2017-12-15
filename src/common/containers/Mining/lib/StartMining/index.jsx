@@ -24,9 +24,7 @@ const confcol = {
     xs: 12,
     sm: 2,
     lg: 2,
-
 };
-
 
 const StartMining = ({ classes }) => (
     <div>

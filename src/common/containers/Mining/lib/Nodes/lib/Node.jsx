@@ -21,14 +21,14 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     },
     chartOuter: {
         width: '100%',
-        height: spacing.unit * 10,
+        height: spacing.unit * 6,
         position: 'relative',
         background: palette.gray[100],
     },
     chartInner: {
         position: 'absolute',
         // background: '#ED6B60',
-        background: palette.orange[300],
+        background: palette.blue[550],
         height: '100%',
         top: 0,
         left: 0,
@@ -43,8 +43,19 @@ const styles = ({ palette, spacing, breakpoints }) => ({
         background: palette.gray[50],
     },
     copyToClipboardText: {
-        color: palette.primary[700],
-        fontSize: '10px',
+        color: palette.gray[600],
+        fontSize: 12,
+    },
+    panel: {
+        padding: 0,
+    },
+    title: {
+        fontSize: 23,
+        fontWeight: 400,
+    },
+    title: {
+        fontSize: 16,
+        fontWeight: 400,
     },
     [breakpoints.up('md')]: {
         copyToClipboard: {
@@ -53,15 +64,19 @@ const styles = ({ palette, spacing, breakpoints }) => ({
         copyToClipboardText: {
             fontSize: '12px',
         },
+        title: {
+            fontSize: 23,
+            fontWeight: 400,
+        }
     },
 });
 
 const Node = ({ name, balance, share, classes, address, href }) => (
-    <Panel>
+    <Panel className={classes.panel}>
         <Link href={href} target="_blank" className={classes.nodeLink} textDecoration={false} />
 
         <Link href={href} target="_blank" textDecoration={false} icon={null}>
-            <Typography tagName="span" type="display1">
+            <Typography tagName="span" type="display1" className={classes.title}>
                 {name}
             </Typography>
         </Link>

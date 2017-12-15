@@ -24,7 +24,7 @@ const styles = theme => ({
         background: '#d6e0fc',
     },
     bgNodes: {
-        background: theme.palette.gray[50],
+        background: theme.palette.gray[1000],
     }
 });
 
@@ -57,14 +57,13 @@ const PageLayout = ({ classes }) => (
         </Section>
 
         <Background className={classes.bgNodes} skewed>
-            <Section top={4}>
+            <Section top={2}>
                 <WavesNodesMap />
             </Section>
-
-            <Section size={2} bottom={4}>
-                <Nodes />
-            </Section>
         </Background>
+        <Section size={2} top={4} bottom={4}>
+            <Nodes />
+        </Section>
     </Layout>
 );
 
