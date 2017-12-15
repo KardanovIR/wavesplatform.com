@@ -48,17 +48,6 @@ const FeedbackForm = ({
                     <Col xs={12} sm={6}>
                         <div className={classes.inputWrapper}>
                             <Field
-                                name="email"
-                                component={renderInput}
-                                className={classes.input}
-                                type="text"
-                                placeholder={intl.formatMessage(messages.placeholderEmail)}
-                            />
-                        </div>
-                    </Col>
-                    <Col xs={12} sm={6}>
-                        <div className={classes.inputWrapper}>
-                            <Field
                                 name="reason"
                                 component={renderSelect}
                                 className={classes.input}
@@ -87,6 +76,17 @@ const FeedbackForm = ({
                             />
                         </div>
                     </Col>
+                    <Col xs={12} sm={6}>
+                        <div className={classes.inputWrapper}>
+                            <Field
+                                name="email"
+                                component={renderInput}
+                                className={classes.input}
+                                type="text"
+                                placeholder={intl.formatMessage(messages.placeholderEmail)}
+                            />
+                        </div>
+                    </Col>
 
                     <Col xs={12}>
                         <div className={classes.inputWrapper}>
@@ -105,13 +105,14 @@ const FeedbackForm = ({
                             className={classes.button}
                             loading={status === "pending"}
                             type="submit"
-                            secondary
+                            bordered
+                            inverted
                             disabled={submitFailed && invalid}
                         >
                             <span className={classes.buttonFull}>
                                 <FormattedMessage
                                     id="form.submit"
-                                    defaultMessage="Submit"
+                                    defaultMessage="Send Message"
                                 />
                             </span>
                             <span className={classes.buttonIcon}><Icon name="send" size={26} /></span>

@@ -88,13 +88,13 @@ const PageLayout = ({ classes }) => (
       </Section>
     </Background>
 
-    {/*<AnchorScroll anchor="contact">
+    <AnchorScroll anchor="contact">
             <Background className={classes.bgDark} skewed={true}>
                 <Section size={4} className={classes.footerMarginCompensate}>
                     <FeedbackForm />
                 </Section>
             </Background>
-        </AnchorScroll>*/}
+        </AnchorScroll>
   </Layout>
 );
 

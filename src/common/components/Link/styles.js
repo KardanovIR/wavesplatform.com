@@ -27,11 +27,11 @@ const styles = theme => ({
   },
 
   secondary: {
-    color: theme.palette.orange[300],
-    borderColor: theme.palette.opaque(theme.palette.primary[500], 0.5),
+    color: theme.palette.blue[300],
+    borderColor: theme.palette.opaque(theme.palette.blue[500], 0.5),
     ['&:hover, &:active']: {
       color: theme.palette.gray[0],
-      borderColor: theme.palette.opaque(theme.palette.primary[300], 0.5),
+      borderColor: theme.palette.opaque(theme.palette.blue[300], 0.5),
     },
   },
 
