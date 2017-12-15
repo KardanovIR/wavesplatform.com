@@ -44,10 +44,17 @@ const styles = theme => ({
   light: {
     backgroundColor: theme.palette.blue[500],
     border: `1px solid ${theme.palette.blue[500]}`,
+    boxShadow: `0 2px 2px ${theme.palette.blue[300]}`,
     transformOrigin: 'center bottom',
     color: '#fff',
   },
-
+  white: {
+      backgroundColor: theme.palette.gray[0],
+      border: 0,
+      transformOrigin: 'center bottom',
+      color: theme.palette.gray[700],
+      boxShadow: `0 2px 2px ${theme.palette.gray[300]}`
+  },
   bordered: {
     border: `1px solid ${theme.palette.opaque(theme.palette.gray[1000], .9)}`,
     backgroundColor: 'transparent',

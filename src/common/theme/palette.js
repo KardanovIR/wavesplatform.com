@@ -41,6 +41,7 @@ export const grayBlue = colorMigrationProxy(
     500: '#5F7090',
     600: '#4d5d7e', // new
     700: '#415272',
+    750: '#2d374b',
   },
   'grayBlue'
 );

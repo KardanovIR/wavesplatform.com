@@ -48,6 +48,7 @@ class Button extends Component {
             bordered,
             inverted,
             secondary, // eslint-disable-line
+            whited,
 
             children,
             loading,
@@ -67,6 +68,7 @@ class Button extends Component {
             [classes.invertedFill]: !bordered && inverted,
             [classes.light]: !bordered && secondary,
             [classes.dark]: !bordered && !secondary,
+            [classes.white]: !bordered && whited,
         }, className);
 
         const contentWrapperClasses = classnames(
@@ -117,6 +119,7 @@ Button.defaultProps = {
     className: '',
     disabled: false,
     loading: false,
+    whited: false,
     onClick: () => {},
 
     // types
@@ -131,6 +134,7 @@ Button.propTypes = {
     href: PropTypes.string,
     secondary: PropTypes.bool,
     inverted: PropTypes.bool,
+    whited: PropTypes.bool,
     children: PropTypes.node,
     disabled: PropTypes.bool,
     loading: PropTypes.bool,
