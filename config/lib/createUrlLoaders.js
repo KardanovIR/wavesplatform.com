@@ -7,7 +7,7 @@ module.exports = ({ emitFile = true, limit = 8192 }) => [
       loader: 'svg-url-loader',
       options: {
         publicPath: '/static/',
-        name: path.join('images', '[name]_[hash:5].[ext]'),
+        name: 'images/' + '[name]_[hash:5].[ext]',
         limit,
         emitFile,
       },
@@ -19,7 +19,7 @@ module.exports = ({ emitFile = true, limit = 8192 }) => [
       loader: 'url-loader',
       options: {
         publicPath: '/static/',
-        name: path.join('images', '[name]_[hash:5].[ext]'),
+        name: 'images/' + '[name]_[hash:5].[ext]',        
         limit,
         emitFile,
       },

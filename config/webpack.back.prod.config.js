@@ -32,23 +32,12 @@ module.exports = {
         loader: 'json-loader',
       },
       {
-        test: /\.woff2$/,
+        test: /\.woff2?$/,
         use: {
           loader: 'url-loader',
           options: {
             publicPath: '/static/',
-            name: path.join('fonts', '[name].[ext]'),
-            limit: 1,
-          },
-        },
-      },
-      {
-        test: /\.woff$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            publicPath: '/static/',
-            name: path.join('fonts', '[name].[ext]'),
+            name: 'fonts/' + '[name].[ext]',
             limit: 1, // always emit
           },
         },
