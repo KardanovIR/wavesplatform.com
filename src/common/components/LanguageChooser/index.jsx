@@ -6,10 +6,9 @@ import { compose } from 'ramda';
 import injectSheet from 'react-jss';
 import styles from './styles';
 import { withCookies } from 'react-cookie';
-
-
 const createOption = lang => ({ value: lang, name: lang });
-const OPTIONS = ['ru', 'en'].map(createOption);
+
+const availableLocales = typeof window !== 'undefined' && window.__AVAILABLE_LOCALES;
 const DEFAULT_LANG = 'en';
 const COOKIE_LANGUAGE_PATH = 'locale'
 
@@ -25,8 +24,10 @@ class LanguageChooser extends PureComponent {
 
     render() {
         const { cookies } = this.props;
+
+        if (!availableLocales || availableLocales.length === 0) { return null; }
         return <Select
-            options={OPTIONS}
+            options={availableLocales.map(createOption)}
             onSelect={this.handleChange}
             value={cookies.get(COOKIE_LANGUAGE_PATH)}
         />;
