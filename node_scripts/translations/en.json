@@ -5,19 +5,15 @@
   "calcRevenue.total": "Total",
   "calcRevenue.totalAmount": "Total amount of waves",
   "company.feedback.supportLink": "support",
-  "company.feedback.text":
-    "Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}.",
+  "company.feedback.text": "Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}.",
   "company.feedback.title": "Contact us",
-  "company.media.contactUs":
-    "For all media inquiries, please contact the Communications Team",
+  "company.media.contactUs": "For all media inquiries, please contact the Communications Team",
   "company.media.contactUsLink": "contact",
   "company.media.title": "Media",
   "company.title": "We create the economics of free, perfect and instant",
-  "company.vacancies.text":
-    "We’d be happy to welcome you to our team. Come and change the world with us!",
+  "company.vacancies.text": "We’d be happy to welcome you to our team. Come and change the world with us!",
   "company.vacancies.title": "Current openings",
-  "company.whitepaper.text":
-    "WAVES is a decentralized blockchain platform focusing on custom blockchain tokens operations. National currencies transfer is maintained on the WAVES blockchain through compliant gateway operators.",
+  "company.whitepaper.text": "WAVES is a decentralized blockchain platform focusing on custom blockchain tokens operations. National currencies transfer is maintained on the WAVES blockchain through compliant gateway operators.",
   "company.whitepaper.title": "Whitepaper",
   "cta.brandingPackage": "Branding package",
   "cta.getClient": "Get Client",
@@ -26,78 +22,56 @@
   "cta.onlineClient": "Online Client",
   "cta.resume": "Submit a resume",
   "cta.whitepaper": "Download Whitepaper",
-  "developers.DEX.subtitle":
-    "Our nodes contain an order matcher which is used to power our decentralised exchange — enabling token trades that don’t require tokens to be transferred from your blockchain account to a separate exchange.",
-  "developers.DEX.text.p1":
-    "All operations within the DEX are secure and validated by blockchain nodes. Since the DEX is open source and a part of every node, each user can run their own instance of the DEX.",
-  "developers.DEX.text.p2":
-    "The matcher exposes its own REST API for accessing the order book and submitting orders. This allows users to implement any kind of trading UI or trading bots.",
+  "developers.DEX.subtitle": "Our nodes contain an order matcher which is used to power our decentralised exchange — enabling token trades that don’t require tokens to be transferred from your blockchain account to a separate exchange.",
+  "developers.DEX.text.p1": "All operations within the DEX are secure and validated by blockchain nodes. Since the DEX is open source and a part of every node, each user can run their own instance of the DEX.",
+  "developers.DEX.text.p2": "The matcher exposes its own REST API for accessing the order book and submitting orders. This allows users to implement any kind of trading UI or trading bots.",
   "developers.DEX.title": "Decentralised Exchange (DEX)",
   "developers.cta.client": "Client",
   "developers.cta.dexApi": "DEX API",
   "developers.cta.documentation": "Documentation",
   "developers.cta.howToInstallNode": "How to install",
   "developers.cta.wavesNode": "Waves node",
-  "developers.description.algorithm.text":
-    "Waves’s blockchain uses a Proof-of-stake (PoS) algorithm, with participants being rewarded from the commission on transactions made.",
+  "developers.description.algorithm.text": "Waves’s blockchain uses a Proof-of-stake (PoS) algorithm, with participants being rewarded from the commission on transactions made.",
   "developers.description.algorithm.title": "Proof-of-Stake algorithm",
-  "developers.description.fees.text":
-    "The minimum fee for the transfer of funds is 0.001 WAVES. The fixed fee for market orders is 0.001 WAVES. The price of releasing a token is 1 WAVES, and you do not pay to use your own token.",
+  "developers.description.fees.text": "The minimum fee for the transfer of funds is 0.001 WAVES. The fixed fee for market orders is 0.001 WAVES. The price of releasing a token is 1 WAVES, and you do not pay to use your own token.",
   "developers.description.fees.title": "Low, fixed transaction fees",
-  "developers.description.network.text":
-    "Our new PoS consensus algorithm enables vastly increased network bandwidth, allowing for hundreds of transactions per second.",
+  "developers.description.network.text": "Our new PoS consensus algorithm enables vastly increased network bandwidth, allowing for hundreds of transactions per second.",
   "developers.description.network.title": "High network channel capacity",
-  "developers.description.transactions.text":
-    "You don’t need smart contracts to release tokens or for leasing and making deals on the decentralised exchange, because transactions are performed natively.",
-  "developers.description.transactions.title":
-    "Low-level support for various transactions",
-  "developers.friendlyAPI.subtitle":
-    "Our open source client application uses the same API. You can explore it and implement any kind of client application yourself.",
-  "developers.friendlyAPI.text":
-    "Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.",
+  "developers.description.transactions.text": "You don’t need smart contracts to release tokens or for leasing and making deals on the decentralised exchange, because transactions are performed natively.",
+  "developers.description.transactions.title": "Low-level support for various transactions",
+  "developers.friendlyAPI.subtitle": "Our open source client application uses the same API. You can explore it and implement any kind of client application yourself.",
+  "developers.friendlyAPI.text": "Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.",
   "developers.friendlyAPI.title": "Developer-friendly API",
-  "developers.text":
-    "These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.",
+  "developers.text": "These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.",
   "developers.title": "Build applications on the blockchain",
   "developers.wavesEcosystem.explorer": "Function-rich blockchain explorer",
   "developers.wavesEcosystem.forum": "Waves forum",
   "developers.wavesEcosystem.pywaves": "Python API client and useful scripts",
   "developers.wavesEcosystem.title": "Waves Ecosystem",
   "developers.wavesNetwork.explorer": "Explorer",
-  "developers.wavesNetwork.explorers":
-    "Here are explorers for MainNet and TestNet Waves clusters:",
+  "developers.wavesNetwork.explorers": "Here are explorers for MainNet and TestNet Waves clusters:",
   "developers.wavesNetwork.mainNet": "MainNet",
   "developers.wavesNetwork.onlineWallet": "Online wallet",
   "developers.wavesNetwork.testNet": "TestNet",
-  "developers.wavesNetwork.text":
-    "New versions of the Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases.",
+  "developers.wavesNetwork.text": "New versions of the Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases.",
   "developers.wavesNetwork.title": "Waves Network",
-  "developers.wavesNode.subtitle":
-    "Having your own node will allow you to build secure and high-load applications on top of it.",
-  "developers.wavesNode.text":
-    "It’s extremely easy to install and run your own instance of the Waves Node. It allows you to mine WAVES and MRTs (Miners Reward Tokens), and act as a leasing pool to aggregate mining power from other users.",
+  "developers.wavesNode.subtitle": "Having your own node will allow you to build secure and high-load applications on top of it.",
+  "developers.wavesNode.text": "It’s extremely easy to install and run your own instance of the Waves Node. It allows you to mine WAVES and MRTs (Miners Reward Tokens), and act as a leasing pool to aggregate mining power from other users.",
   "developers.wavesNode.title": "Running Your Waves Node",
   "error404.backHome": "Back home",
   "error404.notFound": "Page not found",
   "error404.sorry": "Sorry, this is not the web page you are looking for.",
-  "facts.capitalisation":
-    "Totaling a market capitalisation of more than ${cap}",
+  "facts.capitalisation": "Totaling a market capitalisation of more than ${cap}",
   "facts.tokens": "A total of {number} tokens have been released on Waves",
-  "feedback.companiesReleased":
-    "Companies that have released their own tokens on Waves:",
-  "feedback.mobileGo.description":
-    "Crypto-centric mobile gaming platform and store",
-  "feedback.mobileGo.quote":
-    "MobileGo aims to bring the advantages of cryptocurrency to the gaming industry. The project, which raised $53 million at its crowdfund, is creating a community of gamers and developers around the GStore — an open platform on which all games are purchased for the gamecredits cryptocurrency, via a seamless integration with the GWallet. MobileGo will also use smart contracts to power peer-to-peer e-sports tournaments.",
+  "feedback.companiesReleased": "Companies that have released their own tokens on Waves:",
+  "feedback.mobileGo.description": "Crypto-centric mobile gaming platform and store",
+  "feedback.mobileGo.quote": "MobileGo aims to bring the advantages of cryptocurrency to the gaming industry. The project, which raised $53 million at its crowdfund, is creating a community of gamers and developers around the GStore — an open platform on which all games are purchased for the gamecredits cryptocurrency, via a seamless integration with the GWallet. MobileGo will also use smart contracts to power peer-to-peer e-sports tournaments.",
   "feedback.mobileGo.signature": "MobileGo Team",
-  "feedback.mobileGo.title":
-    "MobileGo becomes largest blockchain crowdsale in history!",
+  "feedback.mobileGo.title": "MobileGo becomes largest blockchain crowdsale in history!",
   "feedback.primalbase.description": "Distributed workspace for tech community",
-  "feedback.primalbase.quote":
-    "We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants. Please stay subscribed to our mailing list to keep informed about project developments and expansions.",
+  "feedback.primalbase.quote": "We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools. Although no further PBT sale will ever be carried out, related complementary projects will be launched to help increase the value of PBT for existing investors as well as provide upsides for any new participants. Please stay subscribed to our mailing list to keep informed about project developments and expansions.",
   "feedback.primalbase.signature": "Primalbase Team",
-  "feedback.primalbase.title":
-    "Real Estate on Blockchain becomes a reality: Primalbase raised over 3000 BTC during crowdsale",
+  "feedback.primalbase.title": "Real Estate on Blockchain becomes a reality: Primalbase raised over 3000 BTC during crowdsale",
   "feedbackForm.chooseTopic": "Choose a topic...",
   "feedbackForm.optionEvents": "Events",
   "feedbackForm.optionJobs": "Jobs",
@@ -109,147 +83,116 @@
   "form.error": "Sorry, something went wrong...",
   "form.errors.emailEmpty": "Please enter an email address",
   "form.errors.emailInvalid": "Invalid email address",
-  "form.errors.general":
-    "Please enter a correct email address, choose a topic and write a message",
+  "form.errors.general": "Please enter a correct email address, choose a topic and write a message",
   "form.placeholderEmail": "Email",
   "form.retry": "Try again",
   "form.submit": "Submit",
-  "form.thanksSubscribe":
-    "Thanks for subscribing! Check your inbox, we've sent a confirmation letter to {email}.",
-  "formFeedback.error":
-    "Sorry, something went wrong... Please refresh the page and try again.",
+  "form.thanksSubscribe": "Thanks for subscribing! Check your inbox, we've sent a confirmation letter to {email}.",
+  "formFeedback.error": "Sorry, something went wrong... Please refresh the page and try again.",
   "formFeedback.success": "Thank you! We appreciate your feedback.",
   "getWaves.exchanges.title": "Buy Waves on Exchanges",
-  "getWaves.howToBuyWaves.quote":
-    "The Waves DEX, a decentralised exchange integrated within the desktop Waves Client, allows you to buy, store, sell or exchange digital assets on the Waves Platform. Just place your order to buy WAVES or your first assets!",
+  "getWaves.howToBuyWaves.quote": "The Waves DEX, a decentralised exchange integrated within the desktop Waves Client, allows you to buy, store, sell or exchange digital assets on the Waves Platform. Just place your order to buy WAVES or your first assets!",
   "getWaves.howToBuyWaves.step1": "First, install the Waves client.",
-  "getWaves.howToBuyWaves.step2":
-    "Deposit Euros, USD, Bitcoin or Ethereum to your Waves wallet",
-  "getWaves.howToBuyWaves.step3":
-    "Place your order on the Waves DEX and buy your first WAVES!",
+  "getWaves.howToBuyWaves.step2": "Deposit Euros, USD, Bitcoin or Ethereum to your Waves wallet",
+  "getWaves.howToBuyWaves.step3": "Place your order on the Waves DEX and buy your first WAVES!",
   "getWaves.howToBuyWaves.title": "To buy WAVES using DEX:",
-  "getWaves.text":
-    "You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC.",
+  "getWaves.text": "You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC.",
   "getWaves.title": "Get Waves",
-  "getWaves.wallet.text":
-    "You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. <br><br> There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC.",
+  "getWaves.wallet.text": "You will need WAVES to create custom tokens and fuel other operations on the Waves platform, like transferring and trading tokens. <br><br> There are lots of ways to get hold of WAVES, including through centralised exchanges, through the Waves DEX, and from the Waves client using a credit card via partnerships with third parties. You can trade them on popular exchanges such as Bittrex, and again on the DEX, against many other counterparty currencies, including EUR, USD and BTC.",
   "getWaves.wallet.title": "Buy Waves in  a Waves client",
-  "home.DEX.fees.text":
-    "Our exchange has a small fixed commission on a per-order basis.",
+  "home.DEX.fees.text": "Our exchange has a small fixed commission on a per-order basis.",
   "home.DEX.fees.title": "Don’t waste money on high commission fees",
   "home.DEX.safety.text": "Funds are kept in your wallet, not on the exchange.",
   "home.DEX.safety.title": "Never worry about the safety of your assets",
   "home.DEX.title": "Decentralised Exchange",
-  "home.DEX.tradeNoLimits.text":
-    "There are no limits on withdrawals, and any cryptocurrency purchased immediately appears in your wallet’s balance.",
+  "home.DEX.tradeNoLimits.text": "There are no limits on withdrawals, and any cryptocurrency purchased immediately appears in your wallet’s balance.",
   "home.DEX.tradeNoLimits.title": "Trade without limits",
-  "home.DEX.tradeQuickly.text":
-    "A centralised matcher and high channel capacity allow you to make deals as quickly as on a centralised exchange, but without the risk of losing your money.",
+  "home.DEX.tradeQuickly.text": "A centralised matcher and high channel capacity allow you to make deals as quickly as on a centralised exchange, but without the risk of losing your money.",
   "home.DEX.tradeQuickly.title": "Trade quickly and safely",
-  "home.audience.developers.text":
-    "Enjoy the benefits of high network throughput capacity, low latency and low transaction fees.",
+  "home.audience.developers.text": "Enjoy the benefits of high network throughput capacity, low latency and low transaction fees.",
   "home.audience.developers.title": "Developers",
-  "home.audience.investors.text":
-    "Become part of a fast-growing area of the crypto world. Create a multiple-currency wallet and invest in verified crypto assets and the underlying WAVES platform token.",
+  "home.audience.investors.text": "Become part of a fast-growing area of the crypto world. Create a multiple-currency wallet and invest in verified crypto assets and the underlying WAVES platform token.",
   "home.audience.investors.title": "Investors",
-  "home.audience.organisations.text":
-    "Issue your own blockchain token to give your business a head start - whatever your needs: crowdfunding, loyalty programs, voting and more.",
+  "home.audience.organisations.text": "Issue your own blockchain token to give your business a head start - whatever your needs: crowdfunding, loyalty programs, voting and more.",
   "home.audience.organisations.title": "Organisations",
-  "home.audience.traders.text":
-    "Store assets securely in the local lite client, whilst also trading them quickly and safely on the built-in decentralised exchange (DEX).",
+  "home.audience.traders.text": "Store assets securely in the local lite client, whilst also trading them quickly and safely on the built-in decentralised exchange (DEX).",
   "home.audience.traders.title": "Traders",
-  "home.issuingTokens.text":
-    "To get your own internal digital currency. Use blockchain for crowdfunding, pay for goods, services. Use tokens to create voting systems and loyalty or discount programmes. They have released their own tokens on Waves:",
+  "home.issuingTokens.text": "To get your own internal digital currency. Use blockchain for crowdfunding, pay for goods, services. Use tokens to create voting systems and loyalty or discount programmes. They have released their own tokens on Waves:",
   "home.issuingTokens.title": "Issue your own tokens",
-  "home.joinUs.quote":
-    "Keep up with the latest news and articles, and find out all about events happening on the Waves Platform",
-  "home.joinUs.text":
-    "Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors",
-  "home.main.text":
-    "Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely.",
+  "home.joinUs.quote": "Keep up with the latest news and articles, and find out all about events happening on the Waves Platform",
+  "home.joinUs.text": "Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors",
+  "home.main.text": "Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely.",
   "home.main.title": "Get started<br>with blockchain",
   "home.numbers.dexVolume": "24h DEX volume",
   "home.numbers.tokens": "tokens issued",
   "home.numbers.wallets": "wallets created",
   "home.numbers.wavesPrice": "waves price",
+  "home.plannedFeatures.0.features.0": "Smart contracts (non-turing)",
+  "home.plannedFeatures.0.features.1": "Hardware wallets, shapeshift",
+  "home.plannedFeatures.0.features.2": "Mobile apps update",
+  "home.plannedFeatures.0.features.3": "Decentralized voting",
+  "home.plannedFeatures.0.features.4": "Simple messaging",
+  "home.plannedFeatures.0.shippingDate": "Winter–Spring 2018",
+  "home.plannedFeatures.1.features.0": "Atomic swap",
+  "home.plannedFeatures.1.features.1": "Voting (front-end)",
+  "home.plannedFeatures.1.shippingDate": "Spring–Summer 2018",
+  "home.plannedFeatures.2.features.0": "Messaging, off-chain, front-end",
+  "home.plannedFeatures.2.shippingDate": "Summer-Fall 2018",
+  "home.plannedFeatures.3.features.0": "Lite-client",
+  "home.plannedFeatures.3.features.1": "Turing complete smart contracts",
+  "home.plannedFeatures.3.shippingDate": "Fall-Winter 2018",
   "home.plannedFeatures.title": "Planned Features",
-  "home.quote":
-    "In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies.",
-  "home.subscribe.text":
-    "We do more than just develop the technical aspects of the platform: we also participate actively in integrating blockchain into real-world applications to grow the crypto economy.",
+  "home.quote": "In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies.",
+  "home.subscribe.text": "We do more than just develop the technical aspects of the platform: we also participate actively in integrating blockchain into real-world applications to grow the crypto economy.",
   "home.subscribe.title": "Don’t Miss Important News",
   "home.wallet.interest": "Receive interest on your Waves account balance",
   "home.wallet.mining": "Start mining — it’s easy with Waves",
-  "home.wallet.security":
-    "Take advantage of our platform’s outstanding security",
-  "home.wallet.text":
-    "Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets.",
+  "home.wallet.security": "Take advantage of our platform’s outstanding security",
+  "home.wallet.text": "Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets.",
   "home.wallet.title": "Wallet",
   "home.wallet.transfer": "Transfer funds from person to person",
   "home.wallet.wallet": "Create a multiple-currency wallet",
-  "home.wavesClient.text":
-    "The current version of the Waves client is a wallet, decentralised exchange (DEX), and a tool to release tokens.",
+  "home.wavesClient.text": "The current version of the Waves client is a wallet, decentralised exchange (DEX), and a tool to release tokens.",
   "home.wavesClient.title": "The Waves Client",
   "howToWallet.step1": "First, install the Waves client",
-  "howToWallet.step2":
-    "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
-  "howToWallet.step3":
-    "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client.",
-  "leasing.description.subtitle":
-    "Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds.",
-  "leasing.description.text":
-    "Custom tokens platform Waves has implemented balance leasing within its lite client, allowing every user to take part in securing the network and profit from transaction fees — without requiring any additional technical knowledge or the need to download the blockchain. Leased WAVES remain in the full control of the account holder, and can be transferred or exchanged at any point.",
+  "howToWallet.step2": "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
+  "howToWallet.step3": "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client.",
+  "leasing.description.subtitle": "Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds.",
+  "leasing.description.text": "Custom tokens platform Waves has implemented balance leasing within its lite client, allowing every user to take part in securing the network and profit from transaction fees — without requiring any additional technical knowledge or the need to download the blockchain. Leased WAVES remain in the full control of the account holder, and can be transferred or exchanged at any point.",
   "leasing.description.title": "What is Waves leasing?",
-  "leasing.nodes.text":
-    "Here you can find a list of the top nodes by WAVES balance. You can find a full list at {pywavesLink}",
+  "leasing.nodes.text": "Here you can find a list of the top nodes by WAVES balance. You can find a full list at {pywavesLink}",
   "leasing.nodes.title": "Top Waves nodes",
-  "leasing.revenue.calc.description":
-    "You can use this tool to calculate how much you can make leasing WAVES, but be aware that results will vary each week.",
-  "leasing.revenue.p1.text1":
-    "The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves {nodesLink} and select the one with the best conditions for you!",
+  "leasing.revenue.calc.description": "You can use this tool to calculate how much you can make leasing WAVES, but be aware that results will vary each week.",
+  "leasing.revenue.p1.text1": "The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves {nodesLink} and select the one with the best conditions for you!",
   "leasing.revenue.p1.text1.link": "nodes",
-  "leasing.revenue.p1.text2":
-    "You can think of leasing your WAVES as a little like depositing money in a bank account. You receive income from them but can still withdraw them at any time.",
+  "leasing.revenue.p1.text2": "You can think of leasing your WAVES as a little like depositing money in a bank account. You receive income from them but can still withdraw them at any time.",
   "leasing.revenue.p1.title": "How much can I earn?",
   "leasing.startLeasing.miningLink": "mining",
   "leasing.startLeasing.p1.title": "1. Download Waves Client",
   "leasing.startLeasing.p2.title": "2. Deposit WAVES to your account",
-  "leasing.startLeasing.p3.title":
-    "3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab.",
-  "leasing.startLeasing.p4.title":
-    "4. You’re done! Your balance will now generate income without even leaving your wallet. Payments are usually transferred once a week.",
-  "leasing.startLeasing.text":
-    "You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES.",
+  "leasing.startLeasing.p3.title": "3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab.",
+  "leasing.startLeasing.p4.title": "4. You’re done! Your balance will now generate income without even leaving your wallet. Payments are usually transferred once a week.",
+  "leasing.startLeasing.text": "You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES.",
   "leasing.startLeasing.title": "Start leasing your funds",
-  "leasing.text":
-    "By helping secure the Waves blockchain you can earn up to 5% per year on your WAVES balance. Simply lease your WAVES to a mining pool and you will receive a share of transaction fees in proportion to the amount you commit.",
+  "leasing.text": "By helping secure the Waves blockchain you can earn up to 5% per year on your WAVES balance. Simply lease your WAVES to a mining pool and you will receive a share of transaction fees in proportion to the amount you commit.",
   "leasing.title": "Use your WAVES balance to generate income",
-  "mining.algorithms.pos.text":
-    "Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance.",
+  "mining.algorithms.pos.text": "Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance.",
   "mining.algorithms.pos.title": "Proof-of-stake",
-  "mining.algorithms.pow.text":
-    "Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work.",
+  "mining.algorithms.pow.text": "Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work.",
   "mining.algorithms.pow.title": "Proof-of-work",
-  "mining.algorithms.text":
-    "Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need.",
+  "mining.algorithms.text": "Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need.",
   "mining.algorithms.title": "Mining in Waves",
   "mining.nodes.copyAddress": "Copy leasing address",
-  "mining.nodes.node1.quote":
-    "WavesGo’s mission is to make blockchain accessible to the masses. This ideal is reflected in our different services. First and foremost, we are proud to run Waves’ largest mining pool, to which hundreds of community members have already leased their stakes. We maintain and develop the officially endorsed, feature-rich blockchain explorer at WavesGo. com, which is visited by thousands of users every single day. We also have more services and products in the pipeline, all of which serve one major goal — to expand the thriving ecosystem around the Waves Platform. WavesGo is more than proud to be able to support Waves in such a meaningful way.",
+  "mining.nodes.node1.quote": "WavesGo’s mission is to make blockchain accessible to the masses. This ideal is reflected in our different services. First and foremost, we are proud to run Waves’ largest mining pool, to which hundreds of community members have already leased their stakes. We maintain and develop the officially endorsed, feature-rich blockchain explorer at WavesGo. com, which is visited by thousands of users every single day. We also have more services and products in the pipeline, all of which serve one major goal — to expand the thriving ecosystem around the Waves Platform. WavesGo is more than proud to be able to support Waves in such a meaningful way.",
   "mining.nodes.node1.signature": "WavesGo Team",
-  "mining.nodes.node1.title":
-    "WavesGo is the foremost Waves node, with the biggest balance and a thriving community of supporters. The node distributes the WavesGo token to anyone who leases their funds to it.",
-  "mining.nodes.node2.quote":
-    "Running our fullnode since the start of the platform gave us a thorough knowledge about the Wavesplatform and we are also providing 30+ years combined experience in IT and 7+ years in Crypto. We have a lot to offer with our Wavesnode.NET fullnode for starting projects on the Wavesplatform and are proud owners of the first shop accepting payments in a Waves asset. With our services we are taking technical work out of our clients hands and providing them a trustfull partner to work with at the Wavesplatform. Clients will have their peace of mind, letting Wavesnode.NET handle all the technical work needed. We can assist clients step by step in the process and provide strategic advice on how to move forward with their projects. All our services to be bought with our WNET token.",
+  "mining.nodes.node1.title": "WavesGo is the foremost Waves node, with the biggest balance and a thriving community of supporters. The node distributes the WavesGo token to anyone who leases their funds to it.",
+  "mining.nodes.node2.quote": "Running our fullnode since the start of the platform gave us a thorough knowledge about the Wavesplatform and we are also providing 30+ years combined experience in IT and 7+ years in Crypto. We have a lot to offer with our Wavesnode.NET fullnode for starting projects on the Wavesplatform and are proud owners of the first shop accepting payments in a Waves asset. With our services we are taking technical work out of our clients hands and providing them a trustfull partner to work with at the Wavesplatform. Clients will have their peace of mind, letting Wavesnode.NET handle all the technical work needed. We can assist clients step by step in the process and provide strategic advice on how to move forward with their projects. All our services to be bought with our WNET token.",
   "mining.nodes.node2.signature": "Wavesnode.NET Team",
-  "mining.nodes.node2.title":
-    "Wavesnode.NET represents a developing community in Holland. The node accepts multiple tokens for fees and has a growing list of supporters — as well as offering unique Waves merchandise!",
+  "mining.nodes.node2.title": "Wavesnode.NET represents a developing community in Holland. The node accepts multiple tokens for fees and has a growing list of supporters — as well as offering unique Waves merchandise!",
   "mining.nodes.share": "Share",
-  "mining.nodes.text":
-    "A Waves node isn’t just a way to get paid for securing the network. These are hubs of activity around which entrepreneurs build new businesses and engage the community. You can find a list of Waves nodes at {pywavesLink}",
+  "mining.nodes.text": "A Waves node isn’t just a way to get paid for securing the network. These are hubs of activity around which entrepreneurs build new businesses and engage the community. You can find a list of Waves nodes at {pywavesLink}",
   "mining.nodes.title": "A focus for the community",
-  "mining.revenue.calc.description":
-    "You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week.",
+  "mining.revenue.calc.description": "You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week.",
   "mining.revenue.calc.option1": "1 week",
   "mining.revenue.calc.option2": "1 month",
   "mining.revenue.calc.option3": "6 months",
@@ -257,166 +200,150 @@
   "mining.revenue.calc.option5": "3 years",
   "mining.revenue.calc.option6": "5 years",
   "mining.revenue.calc.title": "Calculate the reward",
-  "mining.revenue.p1.text1":
-    "Since rewards across the entire network are distributed proportionately, the more WAVES you hold in your node, the greater share of blockchain transaction fees you will receive. The final amount will also depend on overall network activity and the level of fees generated.",
-  "mining.revenue.p1.text2":
-    "In addition to any WAVES they receive, nodes will receive 60 MRT per block for the first 70 blocks they generate per day, with 30 MRT per block awarded thereafter.",
+  "mining.revenue.p1.text1": "Since rewards across the entire network are distributed proportionately, the more WAVES you hold in your node, the greater share of blockchain transaction fees you will receive. The final amount will also depend on overall network activity and the level of fees generated.",
+  "mining.revenue.p1.text2": "In addition to any WAVES they receive, nodes will receive 60 MRT per block for the first 70 blocks they generate per day, with 30 MRT per block awarded thereafter.",
   "mining.revenue.p1.title": "How much will my node earn?",
-  "mining.revenue.p2.text1":
-    "Miners Reward Token (MRT) is a bonus token that is distributed to miners with every block created. MRT is intended to be used as a means for new token issuers to reward nodes for processing their transactions, paying fees in their own token.",
-  "mining.revenue.p2.text2":
-    "As a Waves token, MRT can be transferred and traded freely on Waves’ decentralised exchange (DEX).",
+  "mining.revenue.p2.text1": "Miners Reward Token (MRT) is a bonus token that is distributed to miners with every block created. MRT is intended to be used as a means for new token issuers to reward nodes for processing their transactions, paying fees in their own token.",
+  "mining.revenue.p2.text2": "As a Waves token, MRT can be transferred and traded freely on Waves’ decentralised exchange (DEX).",
   "mining.revenue.p2.title": "What is MRT?",
-  "mining.revenue.text":
-    "By supporting the Waves network, you can earn up to 5% per year on your balance.",
+  "mining.revenue.text": "By supporting the Waves network, you can earn up to 5% per year on your balance.",
   "mining.revenue.title": "Revenues",
   "mining.startMining.configure.button": "Configuration",
   "mining.startMining.configure.title": "3. Configure Node",
-  "mining.startMining.done.title":
-    "4. Ready! Your node automatically starts mining.",
+  "mining.startMining.done.title": "4. Ready! Your node automatically starts mining.",
   "mining.startMining.download.title": "1. Download the Waves Node",
   "mining.startMining.install.title": "2. Install Node",
   "mining.startMining.leasingLink": "lease",
-  "mining.startMining.text":
-    "You don’t need any fancy hardware — just a simple hosted server and at least 10,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
+  "mining.startMining.text": "You don’t need any fancy hardware — just a simple hosted server and at least 10,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
   "mining.startMining.title": "Start mining",
-  "mining.text":
-    "Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance.",
+  "mining.text": "Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance.",
   "mining.title": "Support the Waves Network",
   "mining.wavesNodesMap.countries": "countries",
   "mining.wavesNodesMap.nodes": "nodes",
-  "mining.wavesNodesMap.text":
-    "Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!",
+  "mining.wavesNodesMap.text": "Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!",
   "mining.wavesNodesMap.title": "Waves nodes",
   "nav.blog": "Blog",
   "nav.company": "Company",
   "nav.developers": "Developers",
   "nav.getWaves": "Get Waves",
   "nav.product": "Product",
+  "product.DEX.description": "By trading on a centralized exchange, you risk losing your funds in the event of hacking, which has happened on almost all popular exchanges. The main advantage of our exchange is that the money is always stored in your wallet, and the match only compares orders. <br /> <br /> You retain complete control over your funds when trading them on our decentralized exchange. The DEX is powered by a matcher, which stores user orders and sends token exchange transactions for fulfilled orders.",
   "product.DEX.dexVolume.label": "24h DEX volume",
   "product.DEX.dexVolume.number": "$ {volume}",
   "product.DEX.safety": "Stop worrying about the safety of your assets",
   "product.DEX.title": "Decentralised Exchange",
   "product.DEX.wavesPrice.label": "waves price",
   "product.DEX.wavesPrice.number": "฿ {price}",
-  "product.DEXFeatures.fees.text":
-    "There is a very low and fixed fee on our exchange, which doesn’t depend on the size of the trade. The commission per order is 0.003 WAVES. If an order isn’t executed in full, an incomplete and proportional commission is calculated for you. By canceling the order, you lose nothing.",
+  "product.DEXFeatures.fees.text": "There is a very low and fixed fee on our exchange, which doesn’t depend on the size of the trade. The commission per order is 0.003 WAVES. If an order isn’t executed in full, an incomplete and proportional commission is calculated for you. By canceling the order, you lose nothing.",
   "product.DEXFeatures.fees.title": "Don’t waste money on high fees",
-  "product.DEXFeatures.frontRunning.text":
-    "Your orders are transferred to the matcher over an encrypted channel and are not visible to other participants until the moment of execution. This excludes the possibility of unscrupulous traders manipulating information about an upcoming trade.",
-  "product.DEXFeatures.frontRunning.title":
-    "Protection from front-running and other fraud",
-  "product.DEXFeatures.security.text":
-    "All transactions happen on the blockchain, and only the order list is held on the centralised matcher. This allows us to take full advantage of both centralised and decentralised technologies. In addition, implementing the latest developments has allowed us to increase network capacity to hundreds of transactions per second.",
+  "product.DEXFeatures.frontRunning.text": "Your orders are transferred to the matcher over an encrypted channel and are not visible to other participants until the moment of execution. This excludes the possibility of unscrupulous traders manipulating information about an upcoming trade.",
+  "product.DEXFeatures.frontRunning.title": "Protection from front-running and other fraud",
+  "product.DEXFeatures.security.text": "All transactions happen on the blockchain, and only the order list is held on the centralised matcher. This allows us to take full advantage of both centralised and decentralised technologies. In addition, implementing the latest developments has allowed us to increase network capacity to hundreds of transactions per second.",
   "product.DEXFeatures.security.title": "Trade quickly and securely",
-  "product.DEXFeatures.tradeNoLimits.text":
-    "On centralised exchanges, it’s the administrators who decide which pairs will be traded. Waves’ DEX allows you to trade any token pairs that are on the blockchain. In addition, there are no restrictions on the withdrawal of funds from the DEX. As soon as your transaction is complete, the cryptocurrency will appear in your wallet.",
+  "product.DEXFeatures.tradeNoLimits.text": "On centralised exchanges, it’s the administrators who decide which pairs will be traded. Waves’ DEX allows you to trade any token pairs that are on the blockchain. In addition, there are no restrictions on the withdrawal of funds from the DEX. As soon as your transaction is complete, the cryptocurrency will appear in your wallet.",
   "product.DEXFeatures.tradeNoLimits.title": "Trade without limits",
   "product.DEXTopPairs.title": "Top pairs",
   "product.DEXTopPairs.unavailable": "n/a",
   "product.DEXTopPairs.volume": "Volume (24h)",
   "product.howToToken.step1": "First, install the Waves client",
-  "product.howToToken.step2":
-    "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
-  "product.howToToken.step3":
-    "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance.",
-  "product.howToTrade.text":
-    "After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even sell them at different prices to create bonus conditions for the first investors.",
+  "product.howToToken.step2": "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
+  "product.howToToken.step3": "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance.",
+  "product.howToTrade.text": "After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even sell them at different prices to create bonus conditions for the first investors.",
   "product.howToTrade.title": "How do I start trading on the Waves DEX?",
   "product.howToWallet.step1": "First, download and install the Waves client.",
-  "product.howToWallet.step2":
-    "Fill your wallet with Bitcoin, Ethereum, US dollars or Euros.",
-  "product.howToWallet.step3":
-    "You can convert them to Waves tokens using the decentralised exchange (DEX), which you can find on the Waves client.",
+  "product.howToWallet.step2": "Fill your wallet with Bitcoin, Ethereum, US dollars or Euros.",
+  "product.howToWallet.step3": "You can convert them to Waves tokens using the decentralised exchange (DEX), which you can find on the Waves client.",
   "product.howToWallet.title": "How do I start using my Waves wallet?",
-  "product.interest.leasing.text":
-    "Any sum of Waves can be leased to miners to generate interest. You can refund at any time in 2 clicks.",
+  "product.interest.leasing.text": "Any sum of Waves can be leased to miners to generate interest. You can refund at any time in 2 clicks.",
   "product.interest.leasing.title": "Leasing",
   "product.interest.link": "Learn more",
-  "product.interest.mining.text":
-    "Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 10,000 WAVES in your wallet.",
+  "product.interest.mining.text": "Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 10,000 WAVES in your wallet.",
   "product.interest.mining.title": "Mining",
-  "product.issuingTokens.description.p1":
-    "Cryptographically secured blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.",
-  "product.issuingTokens.description.p2":
-    "The role of the token is determined by the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralised voting, as a rating system, or loyalty program.",
-  "product.issuingTokens.loyalUsers.text":
-    "By holding an ICO not only do you receive money for development, but you also gain loyal users for your product who believe in the project and are ready to become its first followers as well as give honest feedback.",
+  "product.issuingTokens.description.p1": "Cryptographically secured blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.",
+  "product.issuingTokens.description.p2": "The role of the token is determined by the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralised voting, as a rating system, or loyalty program.",
+  "product.issuingTokens.loyalUsers.text": "By holding an ICO not only do you receive money for development, but you also gain loyal users for your product who believe in the project and are ready to become its first followers as well as give honest feedback.",
   "product.issuingTokens.loyalUsers.title": "Get loyal users of your product",
-  "product.issuingTokens.raiseFunds.text":
-    "By releasing blockchain tokens, you provide valuable services to network users, such as the possibility of transferring value in the form of certain convenient units, therefore attracting funds for the development of your project.",
-  "product.issuingTokens.raiseFunds.title":
-    "Raise funds for the development of your project",
+  "product.issuingTokens.raiseFunds.text": "By releasing blockchain tokens, you provide valuable services to network users, such as the possibility of transferring value in the form of certain convenient units, therefore attracting funds for the development of your project.",
+  "product.issuingTokens.raiseFunds.title": "Raise funds for the development of your project",
   "product.issuingTokens.title": "Issuing your tokens, token sales",
-  "product.mobileWallet.text":
-    "Don’t forget to download the mobile wallet for iOS & Android.",
+  "product.mobileWallet.text": "Don’t forget to download the mobile wallet for iOS & Android.",
   "product.mobileWallet.title": "Start using your Waves wallet",
-  "product.text":
-    "Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange.",
+  "product.text": "Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange.",
   "product.title": "Use blockchain —<br>it’s easy with Waves",
-  "product.wallet.createWallet.text":
-    "In addition to Waves tokens, thousands of other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding.",
+  "product.wallet.createWallet.text": "In addition to Waves tokens, thousands of other kinds of tokens have also been released on the platform, many of which have gone through an ICO and have huge potential. We support fiat money ($, €) as well as cryptocurrencies such as bitcoin, ethereum, ethereum classic, and more. The list is constantly expanding.",
   "product.wallet.createWallet.title": "Create a multiple-currency wallet",
-  "product.wallet.security.text":
-    "Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets. Your tokens are stored on a blockchain that only you can access.",
-  "product.wallet.security.title":
-    "Take advantage of our platform’s high security",
-  "product.wallet.transfer.text":
-    "Waves has a high network speed with hundreds of transactions per second and a small commission, which makes it as convenient as possible to transfer cryptocurrency between network members instantly.",
+  "product.wallet.security.text": "Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets. Your tokens are stored on a blockchain that only you can access.",
+  "product.wallet.security.title": "Take advantage of our platform’s high security",
+  "product.wallet.transfer.text": "Waves has a high network speed with hundreds of transactions per second and a small commission, which makes it as convenient as possible to transfer cryptocurrency between network members instantly.",
   "product.wallet.transfer.title": "Transfer funds from person to person",
+  "teamMembers.0.fullName": "Sasha Ivanov",
+  "teamMembers.0.position": "Founder & CEO",
+  "teamMembers.1.fullName": "Maxim Pertsovskiy",
+  "teamMembers.1.position": "CBDO",
+  "teamMembers.10.fullName": "Alexey Kiselev",
+  "teamMembers.10.position": "123",
+  "teamMembers.2.fullName": "Mariya Borovikova",
+  "teamMembers.2.position": "CFO",
+  "teamMembers.3.fullName": "Igor Pugachevsky",
+  "teamMembers.3.position": "Director of Product",
+  "teamMembers.4.fullName": "Natalya Malyova",
+  "teamMembers.4.position": "Head of communications",
+  "teamMembers.5.fullName": "Alexey Kofman",
+  "teamMembers.5.position": "PM of Development Team",
+  "teamMembers.6.fullName": "Ilya Smagin",
+  "teamMembers.6.position": "123",
+  "teamMembers.7.fullName": "Alexey Koloskov",
+  "teamMembers.7.position": "Scala Developer",
+  "teamMembers.8.fullName": "Phil Filippak",
+  "teamMembers.8.position": "Lead Frontend Developer",
+  "teamMembers.9.fullName": "Sergey Tolmachev",
+  "teamMembers.9.position": "Scala Developer",
+  "userCases.1.signature": "MobileGo Team",
+  "userCases.1.text": "MobileGo aims to bring the advantages of cryptocurrency to the gaming industry. The project, which raised $53 million at its crowdfund, is creating a community of gamers and developers around the GStore — an open platform on which all games are purchased for the gamecredits cryptocurrency, via a seamless integration with the GWallet. MobileGo will also use smart contracts to power peer-to-peer e-sports tournaments.",
+  "userCases.1.title": "MobileGo becomes largest blockchain crowdsale in history!",
+  "userCases.1.userName": "The Crypto-Centric Mobile Gaming Platform and Store",
+  "userCases.2.signature": "Primalbase Team",
+  "userCases.2.text": "We are very grateful to all who participated early and provided strong support to the project. Thanks to this and efforts of new executive team we managed to achieve a great deal of positive developments. We are about to open our new offices in Amsterdam and Berlin, and launch a number of supporting digital tools.",
+  "userCases.2.title": "Primalbase raised over 3000 BTC during crowdsale",
+  "userCases.2.userName": "Worldwide coworking spaces for Tech Community",
   "userCases.detailsLink": "Details",
-  "wavesNG.descriptions.1.text":
-    "In a traditional blockchain model, blocks are discovered at roughly similar intervals and the most recent transactions are processed once a miner has earned the right to submit them to the network. This places fundamental limits on the capacity of the blockchain. Bitcoin, for example, has a theoretical maximum of roughly 3 tps.",
+  "wavesNG.descriptions.1.text": "In a traditional blockchain model, blocks are discovered at roughly similar intervals and the most recent transactions are processed once a miner has earned the right to submit them to the network. This places fundamental limits on the capacity of the blockchain. Bitcoin, for example, has a theoretical maximum of roughly 3 tps.",
   "wavesNG.descriptions.1.title": "Traditional blockchain model",
   "wavesNG.descriptions.2.buttonFAQ": "FAQ",
   "wavesNG.descriptions.2.buttonFullDetails": "Full Details",
-  "wavesNG.descriptions.2.text":
-    "In the NG model, the next miner is selected in advance. The miner creates a ‘key block’, which is then immediately filled with microblocks containing transactions, which requires no further proof-of-work. Whilst maintaining the open structure of the protocol, this allows transactions to be confirmed as fast as the network will allow. Waves’ proof-of-stake approach further improves speed, increasing capacity by a factor of a hundred or more.",
+  "wavesNG.descriptions.2.text": "In the NG model, the next miner is selected in advance. The miner creates a ‘key block’, which is then immediately filled with microblocks containing transactions, which requires no further proof-of-work. Whilst maintaining the open structure of the protocol, this allows transactions to be confirmed as fast as the network will allow. Waves’ proof-of-stake approach further improves speed, increasing capacity by a factor of a hundred or more.",
   "wavesNG.descriptions.2.title": "NG model",
   "wavesNG.descriptions.button": "Bitcoin-NG whitepaper",
-  "wavesNG.descriptions.text.p1":
-    "Waves-NG is a next-generation consensus algorithm, based on the Bitcoin-NG proposal made by Cornell Computer Science academics Emin Gün Sirer and Ittay Eyal.",
-  "wavesNG.descriptions.text.p2":
-    "Bitcoin-NG was designed to address bitcoin’s scalability issues, increasing network throughput to hundreds of transactions per second. Waves-NG adapts this proposal to Waves’ proof-of-stake consensus, and is the first ever implementation of the protocol in a production blockchain system.",
+  "wavesNG.descriptions.text.p1": "Waves-NG is a next-generation consensus algorithm, based on the Bitcoin-NG proposal made by Cornell Computer Science academics Emin Gün Sirer and Ittay Eyal.",
+  "wavesNG.descriptions.text.p2": "Bitcoin-NG was designed to address bitcoin’s scalability issues, increasing network throughput to hundreds of transactions per second. Waves-NG adapts this proposal to Waves’ proof-of-stake consensus, and is the first ever implementation of the protocol in a production blockchain system.",
   "wavesNG.descriptions.title": "About Waves-NG",
-  "wavesNG.preview.p1.text":
-    "Anyone will be able to download node version 0.8 with Waves-NG for TestNet. We will lease TestNet WAVES to anyone who wants to run a TestNet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol.",
+  "wavesNG.preview.p1.text": "Anyone will be able to download node version 0.8 with Waves-NG for TestNet. We will lease TestNet WAVES to anyone who wants to run a TestNet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol.",
   "wavesNG.preview.p1.title": "1. TestNet release",
-  "wavesNG.preview.p2.text":
-    "Once the voting conditions have been met, Waves-NG will be activated on TestNet and we will perform a public stress test. Anyone will be able to generate transactions and monitor how the network responds in realtime to the increased throughput.",
+  "wavesNG.preview.p2.text": "Once the voting conditions have been met, Waves-NG will be activated on TestNet and we will perform a public stress test. Anyone will be able to generate transactions and monitor how the network responds in realtime to the increased throughput.",
   "wavesNG.preview.p2.title": "2. Stress test",
-  "wavesNG.preview.p3.text":
-    "When it is clear that the new version works as expected, we will release Waves-NG on MainNet and everyone can upgrade their nodes. Waves-NG will again be activated after the conditions of the Waves Activation Protocol have been met.",
+  "wavesNG.preview.p3.text": "When it is clear that the new version works as expected, we will release Waves-NG on MainNet and everyone can upgrade their nodes. Waves-NG will again be activated after the conditions of the Waves Activation Protocol have been met.",
   "wavesNG.preview.p3.title": "3. MainNet release",
-  "wavesNG.preview.p4.text":
-    "The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 80% of miners have approved the feature after 5,000 blocks or roughly 3.5 days (3,000 blocks on TestNet), it is automatically activated after a further 5,000 blocks.",
+  "wavesNG.preview.p4.text": "The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 80% of miners have approved the feature after 5,000 blocks or roughly 3.5 days (3,000 blocks on TestNet), it is automatically activated after a further 5,000 blocks.",
   "wavesNG.preview.p4.title": "4. Activation",
-  "wavesNG.stressTest.anounce":
-    "Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page.",
-  "wavesNG.stressTest.chart1.text":
-    "Number of transactions waiting in queue for confirmation. The greater the number of transactions processed by the network every minute, the faster this decreases.",
+  "wavesNG.stressTest.anounce": "Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page.",
+  "wavesNG.stressTest.chart1.text": "Number of transactions waiting in queue for confirmation. The greater the number of transactions processed by the network every minute, the faster this decreases.",
   "wavesNG.stressTest.chart1.title": "UtxPool size",
-  "wavesNG.stressTest.chart2.text":
-    "Number of transactions mined (confirmed) by the blockchain per minute.",
+  "wavesNG.stressTest.chart2.text": "Number of transactions mined (confirmed) by the blockchain per minute.",
   "wavesNG.stressTest.chart2.title": "Transaction throughput",
   "wavesNG.stressTest.test.confirmed": "Confirmed txs",
-  "wavesNG.stressTest.test.error":
-    "Whoops! Network is stressed and your transaction did not make it. Try again!",
-  "wavesNG.stressTest.test.errorFatal":
-    "Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later.",
+  "wavesNG.stressTest.test.error": "Whoops! Network is stressed and your transaction did not make it. Try again!",
+  "wavesNG.stressTest.test.errorFatal": "Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later.",
   "wavesNG.stressTest.test.explorer": "Explorer",
   "wavesNG.stressTest.test.run": "Run test",
   "wavesNG.stressTest.test.runAgain": "Run again",
   "wavesNG.stressTest.test.status.connecting": "Connecting...",
   "wavesNG.stressTest.test.status.loading": "Initiating test...",
   "wavesNG.stressTest.test.status.testing": "Running test...",
-  "wavesNG.stressTest.test.text":
-    "When you click this button you will automatically generate a series of transactions. You can watch how network speed and characteristics respond in real time!",
+  "wavesNG.stressTest.test.text": "When you click this button you will automatically generate a series of transactions. You can watch how network speed and characteristics respond in real time!",
   "wavesNG.stressTest.test.title": "Transaction confirmation",
   "wavesNG.stressTest.test.totalTime": "Total time",
   "wavesNG.stressTest.test.unconfirmed": "Unconfirmed txs",
   "wavesNG.stressTest.title": "{logo} Waves-NG activation stages",
-  "wavesNG.text":
-    "Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on TestNet.",
+  "wavesNG.text": "Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on TestNet.",
   "wavesNG.title": "Help us test<br>Waves-NG"
 }

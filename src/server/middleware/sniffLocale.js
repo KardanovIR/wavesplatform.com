@@ -6,7 +6,7 @@ const supported = ['ru', 'en'];
 const cookieDomain = isProd() ? { domain: '*.wavesplatform.com' } : {};
 
 const sniffLocale = async (ctx, next) => {
-  const cookie = ctx.cookies.get('locale');
+  const cookie = ctx.request.universalCookies.get('locale');
 
   if (cookie && ~supported.indexOf(cookie)) {
     ctx.locale = cookie;
@@ -15,7 +15,7 @@ const sniffLocale = async (ctx, next) => {
       .best(new Locales(supported))
       .toString();
 
-    ctx.cookies.set('locale', sniffedLocale, {
+    ctx.request.universalCookies.set('locale', sniffedLocale, {
       maxAge: 15778476000, // 0.5 years
       ...cookieDomain,
     });

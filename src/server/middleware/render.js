@@ -22,18 +22,18 @@ import FontInliner from 'src/server/components/FontInliner';
 import isProd from 'src/common/utils/isProd';
 import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
+import { CookiesProvider } from 'react-cookie';
+
 checkEnvVariable('SERVER_NAME');
 
-export const render = function(
-  {
-    script: scriptName,
-    component: Component = 'span',
-    reducer = s => s,
-    title = 'Waves Platform',
-    // messages = {},
-    description,
-  } = {}
-) {
+export const render = function({
+  script: scriptName,
+  component: Component = 'span',
+  reducer = s => s,
+  title = 'Waves Platform',
+  // messages = {},
+  description,
+} = {}) {
   return async ctx => {
     // enable SSR only for production
     let RenderedComponent;
@@ -51,15 +51,17 @@ export const render = function(
     const sheets = new SheetsRegistry();
     const content = renderToStaticMarkup(
       <JssProvider registry={sheets}>
-        <Provider store={store}>
-          <IntlProvider
-            locale={ctx.locale}
-            defaultLocale="en"
-            messages={locale[ctx.locale]}
-          >
-            {RenderedComponent}
-          </IntlProvider>
-        </Provider>
+        <CookiesProvider cookies={ctx.request.universalCookies}>
+          <Provider store={store}>
+            <IntlProvider
+              locale={ctx.locale}
+              defaultLocale="en"
+              messages={locale[ctx.locale]}
+            >
+              {RenderedComponent}
+            </IntlProvider>
+          </Provider>
+        </CookiesProvider>
       </JssProvider>
     );
     ctx.accessLog.renderTime = new Date() - renderStart;
