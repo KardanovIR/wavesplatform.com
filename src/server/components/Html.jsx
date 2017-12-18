@@ -7,7 +7,8 @@ const Html = ({
   title,
   description,
   locale, // i18n
-  messages, // locale
+	messages, // locale
+	availableLocales,
   content,
   initialState,
   script,
@@ -88,6 +89,7 @@ const Html = ({
         dangerouslySetInnerHTML={{
           __html: `
                     window.__MESSAGES = ${JSON.stringify(messages)};
+                    window.__AVAILABLE_LOCALES = ${JSON.stringify(availableLocales)}
                     window.__LOCALE = ${JSON.stringify(locale)}
                 `,
         }}

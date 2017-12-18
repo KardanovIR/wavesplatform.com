@@ -96,6 +96,7 @@ export const render = function({
         script={script}
         vendorChunk={vendorChunk}
         locale={ctx.locale}
+        availableLocales={ctx.availableLocales}
         messages={locale[ctx.locale]}
         content={content}
         fonts={fonts.toString()}
