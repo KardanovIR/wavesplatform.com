@@ -11,7 +11,7 @@ import { withCookies } from 'react-cookie';
 const createOption = lang => ({ value: lang, name: lang });
 const OPTIONS =['ru', 'en'].map(createOption);
 const DEFAULT_LANG = 'en';
-const COOKIE_LANGUAGE_PATH = 'lang'
+const COOKIE_LANGUAGE_PATH = 'locale'
 
 class LanguageChooser extends PureComponent {
     static propTypes = {
@@ -22,12 +22,13 @@ class LanguageChooser extends PureComponent {
         super(props);
         this.state = { activeLanguage: DEFAULT_LANG };
     }
-    componentWillReceiveProps(nextProps) {
-        this.setState({ activeLanguage: nextProps.cookies.get(COOKIE_LANGUAGE_PATH) })
+    componentWillReceiveProps() {
+        this.setState((prevState, props) => ({ activeLanguage: props.cookies.get(COOKIE_LANGUAGE_PATH) }))
+        console.log(this.state);
     }
     handleChange = language => this.setState({
         activeLanguage: language
-    }, () => this.props.cookies.set(COOKIE_LANGUAGE_PATH, language));
+    }, () => { console.log(1); this.props.cookies.set(COOKIE_LANGUAGE_PATH, language)});
     render() {
     
         return <Select
