@@ -16,7 +16,8 @@ const sniffLocale = async (ctx, next) => {
       .toString();
 
     ctx.request.universalCookies.set('locale', sniffedLocale, {
-      maxAge: 15778476000, // 0.5 years
+			maxAge: 15778476000, // 0.5 years
+			httpOnly: false,
       ...cookieDomain,
     });
 
