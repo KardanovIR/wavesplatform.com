@@ -7,14 +7,13 @@ import Section from 'src/common/components/Section';
 import MainScreen from 'src/common/components/MainScreen';
 import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
-import Typography from 'src/common/components/Typography';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 import ContentContainer from 'src/common/components/ContentContainer';
 
 // lib
 import Team from './lib/Team';
-import FeedbackForm from './lib/FeedbackForm';
+// import FeedbackForm from './lib/FeedbackForm';
 import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import AboutDescription from './lib/AboutDescription';
@@ -59,11 +58,13 @@ const PageLayout = ({ classes }) => (
         <AboutDescription />
       </ContentContainer>
     </Section>
+		
     <Section top={1} bottom={2}>
       <ContentContainer>
         <Team members={teamMembers} />
       </ContentContainer>
     </Section>
+
     <Section top={1} bottom={2}>
       <ContentContainer>
         <Whitepaper />

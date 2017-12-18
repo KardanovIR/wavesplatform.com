@@ -1,3 +1,4 @@
+// @todo locale
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
