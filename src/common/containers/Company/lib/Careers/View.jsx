@@ -22,14 +22,14 @@ const Team = ({
                 <Typography type="display3" align="center" inverted dimmed>
                     <FormattedMessage
                         id="company.careers.title"
-                        defaultMessage="Careers"
+                        
                     />
                 </Typography>
 
                 <Typography type="body2" align="center" inverted dimmed className={classes.narrow}>
                     <FormattedMessage
                         id="company.careers.text"
-                        defaultMessage="We’d be happy to welcome you to our team. Come and change the world with us!"
+                        
                     />
                 </Typography>
 
@@ -42,7 +42,7 @@ const Team = ({
                 >
                     <FormattedMessage
                         id="cta.resume"
-                        defaultMessage="Submit a resume"
+                        
                     />
                 </Button>
             </Col>

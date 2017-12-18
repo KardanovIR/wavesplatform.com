@@ -20,7 +20,7 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
             <div>
               <FormattedHTMLMessage
                 id="howToWallet.step1"
-                defaultMessage="First, install the Waves client"
+                
               />
               <br/>
               <Link
@@ -41,7 +41,7 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
           text: (
             <FormattedMessage
               id="howToWallet.step2"
-              defaultMessage="Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
+              
             />
           ),
         },
@@ -50,7 +50,7 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
           text: (
             <FormattedMessage
               id="howToWallet.step3"
-              defaultMessage="You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
+              
             />
           ),
         },

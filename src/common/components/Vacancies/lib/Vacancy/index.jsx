@@ -58,7 +58,7 @@ const Vacancy = ({
           onClick={onSubmitResumeClick}
           href={`mailto:hr@wavesplatform.com?subject=${title}`}
         >
-          <FormattedMessage id="cta.resume" defaultMessage="Submit a resume" />
+          <FormattedMessage id="cta.resume"  />
         </Button>
       </Margin>
     </div>

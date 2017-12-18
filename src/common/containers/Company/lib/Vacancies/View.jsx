@@ -18,7 +18,7 @@ const VacanciesContainer = ({classes}) => (
                 <Typography type="display2" className={classes.title} align="left">
                     <FormattedMessage
                         id="company.vacancies.title"
-                        defaultMessage="Current openings"
+                        
                     />
                 </Typography>
 
@@ -29,7 +29,7 @@ const VacanciesContainer = ({classes}) => (
                         <Typography type="display2" className={classes.text} align="left">
                             <FormattedMessage
                                 id="company.vacancies.text"
-                                defaultMessage="We’d be happy to welcome you to our team. Come and change the world with us!"
+                                
                             />
                         </Typography>
                     </Col>

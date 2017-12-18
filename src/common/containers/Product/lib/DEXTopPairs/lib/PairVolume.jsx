@@ -39,7 +39,7 @@ const PairVolume = ({ classes, assets, volume }) => (
         </span>
       ) : (
         <span className={classes.grayText}>
-          <FormattedMessage id="product.DEXTopPairs.unavailable" defaultMessage="n/a" />
+          <FormattedMessage id="product.DEXTopPairs.unavailable"  />
         </span>
       )}
     </Typography>

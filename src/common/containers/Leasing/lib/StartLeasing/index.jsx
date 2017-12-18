@@ -25,19 +25,19 @@ const StartLeasing = ({ classes }) => (
             title={
                 <FormattedMessage
                     id="leasing.startLeasing.title"
-                    defaultMessage="Start leasing your funds"
+                    
                 />
             }
             text={
                 <FormattedMessage
                     id="leasing.startLeasing.text"
-                    defaultMessage="You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES."
+                    
                     values={{
                         miningLink: (
                             <Link href={url('mining')}>
                                 <FormattedMessage
                                     id="leasing.startLeasing.miningLink"
-                                    defaultMessage="mining"
+                                    
                                 />
                             </Link>
                         ),
@@ -61,7 +61,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="leasing.startLeasing.p1.title"
-                        defaultMessage="1. Download Waves Client"
+                        
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -71,7 +71,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="cta.getClient"
-                        defaultMessage="Get Client"
+                        
                     />
                 </Button>
                 <Margin bottom={5} />
@@ -91,7 +91,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="leasing.startLeasing.p2.title"
-                        defaultMessage="2. Deposit WAVES to your account"
+                        
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -102,7 +102,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="cta.getWaves"
-                        defaultMessage="Get Waves"
+                        
                     />
                 </Button>
                 <Margin bottom={5} />
@@ -122,7 +122,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="leasing.startLeasing.p3.title"
-                        defaultMessage="3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab."
+                        
                         values={{nodesLink: <Link pseudo href="#nodes">which node</Link>    }}
                     />
                 </Typography>                
@@ -141,7 +141,7 @@ const StartLeasing = ({ classes }) => (
                 >
                     <FormattedMessage
                         id="leasing.startLeasing.p4.title"
-                        defaultMessage="4. You’re done! Your balance will now generate income without even leaving your wallet. Payments are usually transferred once a week."
+                        
                     />
                 </Typography>
                 <Margin bottom={2} />

@@ -21,7 +21,7 @@ const HowToWallet = ({ children, title }) => (
             <div>
               <FormattedMessage
                 id="developers.wavesEcosystem.explorer"
-                defaultMessage="Function-rich blockchain explorer"
+                
               />
               <br />
               <Link
@@ -40,7 +40,7 @@ const HowToWallet = ({ children, title }) => (
             <div>
               <FormattedMessage
                 id="developers.wavesEcosystem.pywaves"
-                defaultMessage="Python API client and useful scripts"
+                
               />
               <br />
               <Link
@@ -59,7 +59,7 @@ const HowToWallet = ({ children, title }) => (
             <div>
               <FormattedMessage
                 id="developers.wavesEcosystem.forum"
-                defaultMessage="Waves forum"
+                
               />
               <br />
               <Link

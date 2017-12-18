@@ -20,13 +20,13 @@ const Algorithms = () => (
             title={
                 <FormattedMessage
                     id="mining.algorithms.title"
-                    defaultMessage="Mining in Waves"
+                    
                 />
             }
             text={
                 <FormattedMessage
                     id="mining.algorithms.text"
-                    defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
+                    
                 />
             }
         />
@@ -36,7 +36,7 @@ const Algorithms = () => (
                     title={
                         <FormattedMessage
                             id="mining.algorithms.pow.title"
-                            defaultMessage="Proof-of-work"
+                            
                         />
                     }
                     imageMobile={<ImagePoWMobile />}
@@ -44,7 +44,7 @@ const Algorithms = () => (
                     text={
                         <FormattedMessage
                             id="mining.algorithms.pow.text"
-                            defaultMessage="Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work. "
+                            
                         />
                     }
                 />
@@ -55,7 +55,7 @@ const Algorithms = () => (
                     title={
                         <FormattedMessage
                             id="mining.algorithms.pos.title"
-                            defaultMessage="Proof-of-stake"
+                            
                         />
                     }
                     imageMobile={<ImagePoSMobile />}
@@ -63,7 +63,7 @@ const Algorithms = () => (
                     text={
                         <FormattedMessage
                             id="mining.algorithms.pos.text"
-                            defaultMessage="Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance."
+                            
                         />
                     }
                 />

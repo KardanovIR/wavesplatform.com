@@ -87,7 +87,7 @@ const PageLayout = ({ classes, initialState }) => (
             title={
               <FormattedMessage
                 id="product.howToWallet.title"
-                defaultMessage="How do I start using my Waves wallet?"
+                
               />
             }
             eventPage="product"
@@ -110,7 +110,7 @@ const PageLayout = ({ classes, initialState }) => (
             <Typography type="display5" inverted>
               <FormattedMessage
                 id="product.DEX.safety"
-                defaultMessage="Stop worrying about the safety of your assets"
+                
               />
             </Typography>
           </Section>
@@ -134,7 +134,7 @@ const PageLayout = ({ classes, initialState }) => (
           <Typography type="display3" weight={600}>
             <FormattedMessage
               id="feedback.companiesReleased"
-              defaultMessage="Companies that have released their own tokens on Waves:"
+              
             />
           </Typography>
         </ContentContainer>

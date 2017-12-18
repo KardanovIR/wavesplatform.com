@@ -27,7 +27,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           ฿ <FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.wavesPrice" defaultMessage="waves price" />
+          <FormattedMessage id="home.numbers.wavesPrice"  />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -35,7 +35,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           $ <FormattedNumber value={dexVolume} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.dexVolume" defaultMessage="24h DEX volume" />
+          <FormattedMessage id="home.numbers.dexVolume"  />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -43,7 +43,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           <FormattedNumber value={dexWallets} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.wallets" defaultMessage="wallets created" />
+          <FormattedMessage id="home.numbers.wallets"  />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -51,7 +51,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           <FormattedNumber value={dexAssets} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.tokens" defaultMessage="tokens issued" />
+          <FormattedMessage id="home.numbers.tokens"  />
         </Typography>
       </ColNumber>
     </Col>

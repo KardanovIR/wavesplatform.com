@@ -76,7 +76,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
                     <Typography type="body">
                         <FormattedMessage
                             id="balance"
-                            defaultMessage="Balance"
+                            
                         />
                     </Typography>
                 </Col>
@@ -109,7 +109,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
                     <Typography type="body">
                         <FormattedMessage
                             id="mining.nodes.share"
-                            defaultMessage="Share"
+                            
                         />
                     </Typography>
                 </Col>
@@ -129,7 +129,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
         <Typography type="body">
             <FormattedMessage
                 id="mining.nodes.copyAddress"
-                defaultMessage="Copy leasing address"
+                
             />
         </Typography>
 

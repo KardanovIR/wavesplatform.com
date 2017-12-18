@@ -51,7 +51,7 @@ const StressTestSection = ({ classes, active }) => (
                             >
                                 <FormattedMessage
                                     id="wavesNG.stressTest.anounce"
-                                    defaultMessage="Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page."
+                                    
                                 />
                             </Typography>
                         </Margin>
@@ -68,13 +68,13 @@ const StressTestSection = ({ classes, active }) => (
                         title={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart1.title"
-                                defaultMessage="UtxPool size"
+                                
                             />
                         }
                         text={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart1.text"
-                                defaultMessage="Number of transactions waiting in queue for confirmation. The greater the number of transactions processed by the network every minute, the faster this decreases."
+                                
                             />
                         }
                     />
@@ -102,13 +102,13 @@ const StressTestSection = ({ classes, active }) => (
                         title={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart2.title"
-                                defaultMessage="Transaction throughput"
+                                
                             />
                         }
                         text={
                             <FormattedMessage
                                 id="wavesNG.stressTest.chart2.text"
-                                defaultMessage="Number of transactions mined (confirmed) by the blockchain per minute."
+                                
                             />
                         }
                     />

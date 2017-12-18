@@ -18,13 +18,13 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
       <Typography type="display2" className={classes.title}>
         <FormattedMessage
           id="company.whitepaper.title"
-          defaultMessage="Whitepaper"
+          
         />
       </Typography>
       <Typography type="body" className={classes.text} cut>
         <FormattedMessage
           id="company.whitepaper.text"
-          defaultMessage="WAVES is a decentralized blockchain platform focusing on custom blockchain tokens operations. National currencies transfer is maintained on the WAVES blockchain through compliant gateway operators."
+          
         />
       </Typography>
 
@@ -38,7 +38,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
       >
         <FormattedMessage
           id="cta.whitepaper"
-          defaultMessage="Download Whitepaper"
+          
         />
       </Button>
     </Col>

@@ -10,13 +10,13 @@ const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
     title={
       <FormattedHTMLMessage
         id="product.title"
-        defaultMessage="Use blockchain —<br>it’s easy with Waves"
+        
       />
     }
     text={
       <FormattedMessage
         id="product.text"
-        defaultMessage="Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange."
+        
       />
     }
     buttons={[
@@ -36,7 +36,7 @@ const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
         target="_blank"
         href="https://waveswallet.io/"
       >
-        <FormattedMessage id="cta.onlineClient" defaultMessage="Online Client" />
+        <FormattedMessage id="cta.onlineClient"  />
       </Button>,
     ]}
   />

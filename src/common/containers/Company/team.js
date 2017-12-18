@@ -36,8 +36,8 @@ import Ilya_Smagin2x from './lib/Team/img/Ilya_Smagin@1x.jpg';
 
 export default [
   {
-    fullName: <FormattedMessage id="teamMembers.0.fullName" defaultMessage="Sasha Ivanov" />,
-    position: <FormattedMessage id="teamMembers.0.position" defaultMessage="Founder & CEO" />,
+    fullName: <FormattedMessage id="teamMembers.0.fullName"  />,
+    position: <FormattedMessage id="teamMembers.0.position"  />,
     imageUrl1x: `url(${Sasha_Ivanov1x})`,
     imageUrl2x: `url(${Sasha_Ivanov2x})`,
     social: [
@@ -60,8 +60,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.1.fullName" defaultMessage="Maxim Pertsovskiy" />,
-    position: <FormattedMessage id="teamMembers.1.position" defaultMessage="CBDO" />,
+    fullName: <FormattedMessage id="teamMembers.1.fullName"  />,
+    position: <FormattedMessage id="teamMembers.1.position"  />,
     imageUrl1x: `url(${Maxim_Pertsovskiy1x})`,
     imageUrl2x: `url(${Maxim_Pertsovskiy2x})`,
     social: [
@@ -69,8 +69,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.2.fullName" defaultMessage="Mariya Borovikova" />,
-    position: <FormattedMessage id="teamMembers.2.position" defaultMessage="CFO" />,
+    fullName: <FormattedMessage id="teamMembers.2.fullName"  />,
+    position: <FormattedMessage id="teamMembers.2.position"  />,
     imageUrl1x: `url(${Mariya_Borovikova1x})`,
     imageUrl2x: `url(${Mariya_Borovikova2x})`,
     social: [
@@ -81,8 +81,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.3.fullName" defaultMessage="Igor Pugachevsky" />,
-    position: <FormattedMessage id="teamMembers.3.position" defaultMessage="Director of Product" />,
+    fullName: <FormattedMessage id="teamMembers.3.fullName"  />,
+    position: <FormattedMessage id="teamMembers.3.position"  />,
     imageUrl1x: `url(${Igor_Pugachevsky1x})`,
     imageUrl2x: `url(${Igor_Pugachevsky2x})`,
     social: [
@@ -101,8 +101,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.4.fullName" defaultMessage="Natalya Malyova" />,
-    position: <FormattedMessage id="teamMembers.4.position" defaultMessage="Head of communications" />,
+    fullName: <FormattedMessage id="teamMembers.4.fullName"  />,
+    position: <FormattedMessage id="teamMembers.4.position"  />,
     imageUrl1x: `url(${Natalya_Malyova1x})`,
     imageUrl2x: `url(${Natalya_Malyova2x})`,
     social: [
@@ -114,8 +114,8 @@ export default [
   },
 
   {
-    fullName: <FormattedMessage id="teamMembers.5.fullName" defaultMessage="Alexey Kofman" />,
-    position: <FormattedMessage id="teamMembers.5.position" defaultMessage="PM of Development Team" />,
+    fullName: <FormattedMessage id="teamMembers.5.fullName"  />,
+    position: <FormattedMessage id="teamMembers.5.position"  />,
     imageUrl1x: `url(${Alexey_Kofman1x})`,
     imageUrl2x: `url(${Alexey_Kofman2x})`,
     social: [
@@ -126,22 +126,22 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.6.fullName" defaultMessage="Ilya Smagin" />,
-    position: <FormattedMessage id="teamMembers.6.position" defaultMessage="123" />,
+    fullName: <FormattedMessage id="teamMembers.6.fullName"  />,
+    position: <FormattedMessage id="teamMembers.6.position"  />,
     imageUrl1x: `url(${Ilya_Smagin1x})`,
     imageUrl2x: `url(${Ilya_Smagin2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.7.fullName" defaultMessage="Alexey Koloskov" />,
-    position: <FormattedMessage id="teamMembers.7.position" defaultMessage="Scala Developer" />,
+    fullName: <FormattedMessage id="teamMembers.7.fullName"  />,
+    position: <FormattedMessage id="teamMembers.7.position"  />,
     imageUrl1x: `url(${Alexey_Koloskov1x})`,
     imageUrl2x: `url(${Alexey_Koloskov2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.8.fullName" defaultMessage="Phil Filippak" />,
-    position: <FormattedMessage id="teamMembers.8.position" defaultMessage="Lead Frontend Developer" />,
+    fullName: <FormattedMessage id="teamMembers.8.fullName"  />,
+    position: <FormattedMessage id="teamMembers.8.position"  />,
     imageUrl1x: `url(${Phil_Filippak1x})`,
     imageUrl2x: `url(${Phil_Filippak2x})`,
     social: [
@@ -156,15 +156,15 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.9.fullName" defaultMessage="Sergey Tolmachev" />,
-    position: <FormattedMessage id="teamMembers.9.position" defaultMessage="Scala Developer" />,
+    fullName: <FormattedMessage id="teamMembers.9.fullName"  />,
+    position: <FormattedMessage id="teamMembers.9.position"  />,
     imageUrl1x: `url(${Sergey_Tolmachev1x})`,
     imageUrl2x: `url(${Sergey_Tolmachev2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.10.fullName" defaultMessage="Alexey Kiselev" />,
-    position: <FormattedMessage id="teamMembers.10.position" defaultMessage="123" />,
+    fullName: <FormattedMessage id="teamMembers.10.fullName"  />,
+    position: <FormattedMessage id="teamMembers.10.position"  />,
     imageUrl1x: `url(${Alexey_Kiselev1x})`,
     imageUrl2x: `url(${Alexey_Kiselev2x})`,
     social: [],

@@ -31,8 +31,8 @@ const StressTest = ({
                 <Typography type="quote" align="center">
                     <FormattedMessage
                         id="wavesNG.stressTest.test.errorFatal"
-                        // defaultMessage="Sorry, it seems your device is unable to connect to our testing server. Please check your network connection and try again."
-                        defaultMessage="Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later."
+                        // 
+                        
                     />
                 </Typography>
                 <Margin bottom={2} />
@@ -45,13 +45,13 @@ const StressTest = ({
                     title={
                         <FormattedMessage
                             id="wavesNG.stressTest.test.title"
-                            defaultMessage="Transaction confirmation"
+                            
                         />
                     }
                     text={
                         <FormattedMessage
                             id="wavesNG.stressTest.test.text"
-                            defaultMessage="When you click this button you will automatically generate a series of transactions. You can watch how network speed and characteristics respond in real time!"
+                            
                         />
                     }
                 />
@@ -64,7 +64,7 @@ const StressTest = ({
                         <Typography type="quote">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.error"
-                                defaultMessage="Whoops! Network is stressed and your transaction did not make it. Try again!"
+                                
                             />
                         </Typography>
                     )}
@@ -112,7 +112,7 @@ const StressTest = ({
                     <Typography type="quote" className={classes.statusMessage}>
                         <FormattedMessage
                             id="wavesNG.stressTest.test.status.connecting"
-                            defaultMessage="Connecting..."
+                            
                         />
                     </Typography>
                 )}
@@ -125,7 +125,7 @@ const StressTest = ({
                     >
                         <FormattedMessage
                             id="wavesNG.stressTest.test.run"
-                            defaultMessage="Run test"
+                            
                         />
                     </Button>
                 )}
@@ -133,7 +133,7 @@ const StressTest = ({
                     <Typography type="quote" className={classes.statusMessage}>
                         <FormattedMessage
                             id="wavesNG.stressTest.test.status.loading"
-                            defaultMessage="Initiating test..."
+                            
                         />
                     </Typography>
                 )}
@@ -141,7 +141,7 @@ const StressTest = ({
                     <Typography type="quote" className={classes.statusMessage}>
                         <FormattedMessage
                             id="wavesNG.stressTest.test.status.testing"
-                            defaultMessage="Running test..."
+                            
                         />
                     </Typography>
                 )}
@@ -153,7 +153,7 @@ const StressTest = ({
                     >
                         <FormattedMessage
                             id="wavesNG.stressTest.test.runAgain"
-                            defaultMessage="Run again"
+                            
                         />
                     </Button>
                 )}
@@ -171,7 +171,7 @@ const StressTest = ({
                         <span className={classes.unconfirmedLegend} />
                         <FormattedMessage
                             id="wavesNG.stressTest.test.unconfirmed"
-                            defaultMessage="Unconfirmed txs"
+                            
                         />
                     </Typography>
                     <Typography
@@ -192,7 +192,7 @@ const StressTest = ({
                         <span className={classes.confirmedLegend} />
                         <FormattedMessage
                             id="wavesNG.stressTest.test.confirmed"
-                            defaultMessage="Confirmed txs"
+                            
                         />
                     </Typography>
                     <Typography
@@ -209,7 +209,7 @@ const StressTest = ({
                         <Typography type="body" tagName="div">
                             <FormattedMessage
                                 id="wavesNG.stressTest.test.totalTime"
-                                defaultMessage="Total time"
+                                
                             />
                         </Typography>
                         <Typography type="numeral" tagName="div">
@@ -247,7 +247,7 @@ const StressTest = ({
                             >
                                 <FormattedMessage
                                     id="wavesNG.stressTest.test.explorer"
-                                    defaultMessage="Explorer"
+                                    
                                 />
                             </Button>
                         )}

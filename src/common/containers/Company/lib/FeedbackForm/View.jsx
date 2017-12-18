@@ -24,13 +24,13 @@ const FeedbackFormSection = ({ onFeedbackFormSubmit }) => (
                     <Typography type="display3" inverted align="center">
                         <FormattedMessage
                             id="company.feedback.title"
-                            defaultMessage="Contact us"
+                            
                         />
                     </Typography>
                     <Typography type="body" inverted align="center">
                         <FormattedMessage
                             id="company.feedback.text"
-                            defaultMessage="Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}."
+                            
                             values={{
                                 link: (
                                     <Link
@@ -38,7 +38,7 @@ const FeedbackFormSection = ({ onFeedbackFormSubmit }) => (
                                         href="https://support.wavesplatform.com"
                                         target="_blank"
                                     >
-                                        <FormattedMessage id="company.feedback.supportLink" defaultMessage="support" />
+                                        <FormattedMessage id="company.feedback.supportLink"  />
                                     </Link>
                                 )
                             }}

@@ -111,7 +111,7 @@ const FeedbackForm = ({
                             <span className={classes.buttonFull}>
                                 <FormattedMessage
                                     id="form.submit"
-                                    defaultMessage="Submit"
+                                    
                                 />
                             </span>
                             <span className={classes.buttonIcon}><Icon name="send" size={26} /></span>
@@ -130,7 +130,7 @@ const FeedbackForm = ({
                 <Typography type="quote" inverted align="center" className={classes.textGray}>
                     <FormattedMessage
                         id="formFeedback.success"
-                        defaultMessage="Thank you! We appreciate your feedback."
+                        
                     />
                 </Typography>
             </div>
@@ -140,7 +140,7 @@ const FeedbackForm = ({
                 <Typography type="quote" inverted align="center" className={classes.textGray}>
                     <FormattedMessage
                         id="formFeedback.error"
-                        defaultMessage="Sorry, something went wrong... Please refresh the page and try again."
+                        
                     />
                 </Typography>
             </div>

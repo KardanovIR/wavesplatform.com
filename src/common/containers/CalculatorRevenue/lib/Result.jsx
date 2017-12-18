@@ -34,7 +34,7 @@ const Result = ({ classes, total, waves, mrt }) => (
                 <Typography type="body">
                     <FormattedMessage
                         id="calcRevenue.interest"
-                        defaultMessage="Interest"
+                        
                     />
                 </Typography>
             </div>
@@ -97,7 +97,7 @@ const Result = ({ classes, total, waves, mrt }) => (
                 <Typography type="body">
                     <FormattedMessage
                         id="calcRevenue.total"
-                        defaultMessage="Total"
+                        
                     />
                 </Typography>
             </div>

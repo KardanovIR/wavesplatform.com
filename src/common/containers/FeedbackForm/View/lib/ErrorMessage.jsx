@@ -23,7 +23,7 @@ const ErrorMessage = ({ error, classes }) =>
         <Typography inverted align="right" className={classes.text}>
             <FormattedMessage
                 id="form.errors.general"
-                defaultMessage="Please enter a correct email address, choose a topic and write a message"
+                
             />
         </Typography>
     )

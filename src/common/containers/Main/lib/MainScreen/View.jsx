@@ -10,12 +10,12 @@ import url from 'src/common/utils/url';
 const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
   <MainScreen
     title={
-      <FormattedHTMLMessage id="home.main.title" defaultMessage="Get started<br>with blockchain" />
+      <FormattedHTMLMessage id="home.main.title"  />
     }
     text={
       <FormattedMessage
       id="home.main.text"
-      defaultMessage="Gain access to the Waves platform’s solutions for storing, trading, managing and issuing your digital assets, easily and securely."
+      
       />
     }
     buttons={[
@@ -26,7 +26,7 @@ const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
         bordered
       >
-        <FormattedMessage id="cta.getClient" defaultMessage="Get client" />
+        <FormattedMessage id="cta.getClient"  />
       </Button>,
       <Button
         onClick={onNewClientClick}
@@ -35,7 +35,7 @@ const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
         secondary
         key="main_cta_button2"
       >
-        <FormattedMessage id="cta.onlineClient" defaultMessage="Online client (beta)" />
+        <FormattedMessage id="cta.onlineClient"  />
       </Button>,
     ]}
     animated={animated}

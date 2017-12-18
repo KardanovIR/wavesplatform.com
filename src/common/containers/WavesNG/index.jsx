@@ -38,7 +38,7 @@ const PageLayout = ({ classes }) => (
             <Typography type="display3" align="center">
                 <FormattedMessage
                     id="wavesNG.stressTest.title"
-                    defaultMessage="{logo} Waves-NG activation stages"
+                    
                     values={{
                         logo: (
                             <span className={classes.logo}>

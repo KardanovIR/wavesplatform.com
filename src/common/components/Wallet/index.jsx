@@ -27,7 +27,7 @@ const Wallet = ({ children, classes }) => (
               text={
                 <FormattedMessage
                   id="home.wallet.security"
-                  defaultMessage="Take advantage of our platform’s outstanding security"
+                  
                 />
               }
             />
@@ -38,7 +38,7 @@ const Wallet = ({ children, classes }) => (
               text={
                 <FormattedMessage
                   id="home.wallet.interest"
-                  defaultMessage="Receive interest on your Waves account balance"
+                  
                 />
               }
             />
@@ -49,7 +49,7 @@ const Wallet = ({ children, classes }) => (
               text={
                 <FormattedMessage
                   id="home.wallet.transfer"
-                  defaultMessage="Transfer funds from person to person"
+                  
                 />
               }
             />
@@ -60,7 +60,7 @@ const Wallet = ({ children, classes }) => (
               text={
                 <FormattedMessage
                   id="home.wallet.mining"
-                  defaultMessage="Start mining — it’s easy with Waves"
+                  
                 />
               }
             />
@@ -71,7 +71,7 @@ const Wallet = ({ children, classes }) => (
               text={
                 <FormattedMessage
                   id="home.wallet.wallet"
-                  defaultMessage="Create a multiple-currency wallet"
+                  
                 />
               }
             />

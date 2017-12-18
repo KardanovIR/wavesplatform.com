@@ -14,14 +14,14 @@ const Audience = ({ classes }) => (
     <Col xs={12} sm={6} lg={4}>
       <Article
         title={
-          <FormattedMessage id="home.audience.developers.title" defaultMessage="Developers">
+          <FormattedMessage id="home.audience.developers.title" >
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
         }
         text={
           <FormattedMessage
             id="home.audience.developers.text"
-            defaultMessage="Enjoy the benefits of high network throughput capacity, low latency and low transaction fees."
+            
           />
         }
       />
@@ -33,7 +33,7 @@ const Audience = ({ classes }) => (
           <FormattedMessage
             className={classes.title}
             id="home.audience.traders.title"
-            defaultMessage="Traders"
+            
           >
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
@@ -41,7 +41,7 @@ const Audience = ({ classes }) => (
         text={
           <FormattedMessage
             id="home.audience.traders.text"
-            defaultMessage="Store assets securely in the local lite client, whilst also trading them quickly and safely on the built-in decentralised exchange (DEX)."
+            
           />
         }
       />
@@ -53,7 +53,7 @@ const Audience = ({ classes }) => (
           <FormattedMessage
             className={classes.title}
             id="home.audience.organisations.title"
-            defaultMessage="Organisations"
+            
           >
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
@@ -61,7 +61,7 @@ const Audience = ({ classes }) => (
         text={
           <FormattedMessage
             id="home.audience.organisations.text"
-            defaultMessage="Issue your own blockchain token to give your business a head start - whatever your needs: crowdfunding, loyalty programs, voting and more."
+            
           />
         }
       />

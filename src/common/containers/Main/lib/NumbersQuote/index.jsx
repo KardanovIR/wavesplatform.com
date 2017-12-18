@@ -19,13 +19,13 @@ const NumbersQuote = ({ classes, dexData }) => (
       <Typography type="display1" className={classes.investorsLabel}>
         <FormattedMessage
           id="home.audience.investors.title"
-          defaultMessage="Investors"
+          
         />
       </Typography>
       <Typography type="display3" className={classes.investorsText}>
         <FormattedMessage
           id="home.audience.investors.text"
-          defaultMessage="Become part of a fast-growing area of the crypto world. Create a multiple-currency wallet and invest in verified crypto assets and the underlying WAVES platform token."
+          
         />
       </Typography>
       <Margin bottom={4} />
@@ -36,7 +36,7 @@ const NumbersQuote = ({ classes, dexData }) => (
         <FormattedMessage
           tagName="div"
           id='home.quote'
-          defaultMessage="In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies."
+          
         />
       </BlockQuote>
       <Margin bottom={1} />

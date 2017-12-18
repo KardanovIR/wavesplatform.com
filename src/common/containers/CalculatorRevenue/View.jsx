@@ -89,7 +89,7 @@ class CalculatorRevenue extends Component {
                 <Typography type="body">
                     <FormattedMessage
                         id="calcRevenue.totalAmount"
-                        defaultMessage="Total amount of waves"
+                        
                     />
                 </Typography>
 
@@ -120,7 +120,7 @@ class CalculatorRevenue extends Component {
                     <Typography type="body">
                         <FormattedMessage
                             id="calcRevenue.miningTerm"
-                            defaultMessage="Mining term"
+                            
                         />
                     </Typography>
                     <Margin bottom={1} />

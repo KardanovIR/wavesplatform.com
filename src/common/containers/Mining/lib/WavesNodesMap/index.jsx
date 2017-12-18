@@ -16,13 +16,13 @@ const WavesNodesMap = ({ classes }) => (
             title={
                 <FormattedMessage
                     id="mining.wavesNodesMap.title"
-                    defaultMessage="Waves nodes"
+                    
                 />
             }
             text={
                 <FormattedMessage
                     id="mining.wavesNodesMap.text"
-                    defaultMessage="Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!"
+                    
                 />
             }
             marginSize={3}
@@ -36,7 +36,7 @@ const WavesNodesMap = ({ classes }) => (
                 <Typography type="body" tagName="span">
                     <FormattedMessage
                         id="mining.wavesNodesMap.nodes"
-                        defaultMessage=" nodes"
+                        
                     />
                 </Typography>
             </div>
@@ -47,7 +47,7 @@ const WavesNodesMap = ({ classes }) => (
                 <Typography type="body" tagName="span">
                     <FormattedMessage
                         id="mining.wavesNodesMap.countries"
-                        defaultMessage=" countries"
+                        
                     />
                 </Typography>
             </div>

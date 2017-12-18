@@ -46,7 +46,7 @@ const PageLayout = ({ classes }) => (
         title={
           <FormattedMessage
             id="company.title"
-            defaultMessage="We create the economics of free, perfect and instant"
+            
           />
         }
       />

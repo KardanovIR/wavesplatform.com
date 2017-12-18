@@ -13,7 +13,7 @@ const Empty = () => (
     <Typography inverted>
         <FormattedMessage
             id="form.errors.emailEmpty"
-            defaultMessage="Please enter an email address"
+            
         />
     </Typography>
 )
@@ -21,7 +21,7 @@ const EmailInvalid = () => (
     <Typography inverted>
         <FormattedMessage
             id="form.errors.emailInvalid"
-            defaultMessage="Invalid email address"
+            
         />
     </Typography>
 )

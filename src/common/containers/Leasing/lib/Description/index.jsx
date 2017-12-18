@@ -39,13 +39,13 @@ const Description = ({ classes }) => (
             title={
                 <FormattedMessage
                     id="leasing.description.title"
-                    defaultMessage="What is Waves leasing?"
+                    
                 />
             }
             text={
                 <FormattedMessage
                     id="leasing.description.subtitle"
-                    defaultMessage="Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds."
+                    
                 />
             }
         />
@@ -62,7 +62,7 @@ const Description = ({ classes }) => (
                     <Typography type="body">
                         <FormattedMessage
                             id="leasing.description.text"
-                            defaultMessage="Custom tokens platform Waves has implemented balance leasing within its lite client, allowing every user to take part in securing the network and profit from transaction fees — without requiring any additional technical knowledge or the need to download the blockchain. Leased WAVES remain in the full control of the account holder, and can be transferred or exchanged at any point."
+                            
                         />
                     </Typography>
                     <Margin bottom={4} xsOnly />
@@ -72,7 +72,7 @@ const Description = ({ classes }) => (
 
         {/* <Row>
             <Col xs={12} sm={6} lg={3}>
-                <List items={[<FormattedMessage id="leasing.description.item1" defaultMessage="" />]} />
+                <List items={[<FormattedMessage id="leasing.description.item1"  />]} />
             </Col>
             <Col xs={12} sm={6} lg={3}>
                 <List />

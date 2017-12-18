@@ -15,7 +15,7 @@ const TitleApp = injectSheet(styles)(({ classes }) => (
     <Margin right={1} className={classes.titleEl}>
       <IconProduct name="applicationWaves" />
     </Margin>
-    <FormattedMessage tagName="div" id="developers.wavesNetwork.mainNet" defaultMessage="MainNet" />
+    <FormattedMessage tagName="div" id="developers.wavesNetwork.mainNet"  />
   </Typography>
 ));
 
@@ -24,7 +24,7 @@ const TitleSettings = injectSheet(styles)(({ classes }) => (
     <Margin right={1} className={classes.titleEl}>
       <IconProduct name="settings" />
     </Margin>
-    <FormattedMessage tagName="div" id="developers.wavesNetwork.testNet" defaultMessage="TestNet" />
+    <FormattedMessage tagName="div" id="developers.wavesNetwork.testNet"  />
   </Typography>
 ));
 
@@ -33,14 +33,14 @@ const TableDesktop = injectSheet(styles)(({classes}) => [
     <Col sm={4} />
     <Col sm={4}>
       <Typography inverted type="body">
-        <FormattedMessage id="developers.wavesNetwork.explorer" defaultMessage="Explorer" />
+        <FormattedMessage id="developers.wavesNetwork.explorer"  />
       </Typography>
     </Col>
     <Col sm={4}>
       <Typography inverted type="body">
         <FormattedMessage
           id="developers.wavesNetwork.onlineWallet"
-          defaultMessage="Online wallet"
+          
         />
       </Typography>
     </Col>
@@ -76,19 +76,19 @@ const WavesNetwork = ({ classes }) => (
     <Row className={classes.text}>
       <Col xs={12} sm={8} md={12}>
         <Typography inverted type="display3">
-          <FormattedMessage id="developers.wavesNetwork.title" defaultMessage="Waves Network" />
+          <FormattedMessage id="developers.wavesNetwork.title"  />
         </Typography>
         <Typography inverted type="body2" weight={400}>
           <FormattedMessage
             id="developers.wavesNetwork.text"
-            defaultMessage="New versions of the Waves Node are tested by the development community on the TestNet cluster, where any developers can play with new features and ensure their applications are ready for upcoming releases."
+            
           />
         </Typography>
         <Margin bottom={3} />
         <Typography inverted type="quote" color="gray-600">
           <FormattedMessage
             id="developers.wavesNetwork.explorers"
-            defaultMessage="Here are explorers for MainNet and TestNet Waves clusters:"
+            
           />
         </Typography>
         <Margin bottom={3} />

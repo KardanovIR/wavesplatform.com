@@ -18,12 +18,12 @@ const Interest = ({ classes }) => (
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>
-            <FormattedMessage id="product.interest.leasing.title" defaultMessage="Leasing" />
+            <FormattedMessage id="product.interest.leasing.title"  />
           </Typography>
           <Typography type="body2" inverted>
             <FormattedMessage
               id="product.interest.leasing.text"
-              defaultMessage="Any sum of Waves can be leased to miners to generate interest. You can refund at any time in 2 clicks."
+              
             />
           </Typography>
 
@@ -31,7 +31,7 @@ const Interest = ({ classes }) => (
 
         <Typography type="display1" inverted className={classes.linkContainer}>
           <Link href={url('leasing')} textDecoration={false} className={classes.link} inverted>
-            <FormattedMessage id="product.interest.link" defaultMessage="Learn more" />
+            <FormattedMessage id="product.interest.link"  />
           </Link>
         </Typography>
       </div>
@@ -41,12 +41,12 @@ const Interest = ({ classes }) => (
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>
-            <FormattedMessage id="product.interest.mining.title" defaultMessage="Mining" />
+            <FormattedMessage id="product.interest.mining.title"  />
           </Typography>
           <Typography type="body2" inverted>
             <FormattedMessage
               id="product.interest.mining.text"
-              defaultMessage="Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 10,000 WAVES in your wallet."
+              
             />
           </Typography>
 
@@ -54,7 +54,7 @@ const Interest = ({ classes }) => (
 
         <Typography type="display1" inverted className={classes.linkContainer}>
           <Link href={url('mining')} inverted textDecoration={false} className={classes.link}>
-            <FormattedMessage id="product.interest.link" defaultMessage="Learn more" />
+            <FormattedMessage id="product.interest.link"  />
           </Link>
         </Typography>
       </div>

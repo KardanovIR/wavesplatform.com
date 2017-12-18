@@ -18,7 +18,7 @@ const Media = ({ classes }) => (
     <Row>
       <Col xs={12} style={{ padding: 0 }}>
         <Typography type="display2" align="left" className={classes.title}>
-          <FormattedMessage id="company.media.title" defaultMessage="Media" />
+          <FormattedMessage id="company.media.title"  />
         </Typography>
         <Margin bottom={1} />
       </Col>

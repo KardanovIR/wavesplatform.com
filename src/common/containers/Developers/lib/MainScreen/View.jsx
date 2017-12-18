@@ -10,13 +10,13 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
     title={
       <FormattedMessage
         id="developers.title"
-        defaultMessage="Build applications on the blockchain"
+        
       />
     }
     text={
       <FormattedMessage
         id="developers.text"
-        defaultMessage="These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property."
+        
       />
     }
     buttons={[
@@ -30,7 +30,7 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
       >
         <FormattedMessage
           id="developers.cta.documentation"
-          defaultMessage="Documentation"
+          
         />
       </IconButton>,
     ]}

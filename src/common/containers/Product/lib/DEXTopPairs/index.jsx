@@ -26,10 +26,10 @@ const DEXTopPairs = ({ classes, pairs }) => (
     <div className={classes.root}>
       <div className={classes.headers}>
         <Typography type="display1" inverted>
-          <FormattedMessage id="product.DEXTopPairs.title" defaultMessage="Top pairs" />
+          <FormattedMessage id="product.DEXTopPairs.title"  />
         </Typography>
         <Typography align="right" noMargin inverted>
-          <FormattedMessage id="product.DEXTopPairs.volume" defaultMessage="Volume (24h)" />
+          <FormattedMessage id="product.DEXTopPairs.volume"  />
         </Typography>
       </div>
 

@@ -26,14 +26,14 @@ class Countdown extends Component {
                     <Typography type="display1" tagName="div" align="center">
                         <FormattedMessage
                             id="wavesNG.stressTest.anounce"
-                            defaultMessage="Public stress test will start on October, 12th"
+                            
                         />
                     </Typography>
                     <Margin />
                     <Typography type="numeral" tagName="div" align="center">
                         <FormattedMessage
                             id="wavesNG.stressTest.remainingTime"
-                            defaultMessage="{days}:{hours}:{minutes}:{seconds}"
+                            
                             values={this.state}
                         />
                     </Typography>

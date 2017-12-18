@@ -49,7 +49,7 @@ const MainScreen = ({ classes }) => (
         <Typography type="body2" className={classes.text} inverted>
           <FormattedMessage
             id="home.joinUs.text"
-            defaultMessage="Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors"
+            
           />
         </Typography>
         <Margin />
@@ -66,7 +66,7 @@ const MainScreen = ({ classes }) => (
         <Typography type="body2" className={classes.text} inverted>
           <FormattedMessage
             id="home.joinUs.quote"
-            defaultMessage="Keep up with the latest news and articles, and find out all about events happening on the Waves Platform"
+            
           />
         </Typography>
         <Margin />

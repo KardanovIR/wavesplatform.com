@@ -10,12 +10,12 @@ const WalletText = () => (
   <Row>
     <Col xs={12} sm={9}>
       <Typography type="display1">
-        <FormattedMessage id="home.wallet.title" defaultMessage="Wallet" />
+        <FormattedMessage id="home.wallet.title"  />
       </Typography>
       <Typography type="body2">
         <FormattedMessage
           id="home.wallet.text"
-          defaultMessage="Your funds are stored in a blockchain address that only you control. You are the only person who can access your crypto assets."
+          
         />
       </Typography>
       <Margin bottom={4} />

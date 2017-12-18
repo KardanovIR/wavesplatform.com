@@ -9,18 +9,18 @@ import PictureBlock from '../PictureBlock';
 const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => (
   <PictureBlock
     title={
-      <FormattedMessage id="developers.wavesNode.title" defaultMessage="Running Your Waves Node" />
+      <FormattedMessage id="developers.wavesNode.title"  />
     }
     subtitle={
       <FormattedMessage
         id="developers.wavesNode.subtitle"
-        defaultMessage="Having your own node will allow you to build secure and high-load applications on top of it."
+        
       />
     }
     text={
       <FormattedMessage
         id="developers.wavesNode.text"
-        defaultMessage="It’s extremely easy to install and run your own instance of the Waves Node. It allows you to mine WAVES and MRTs (Miners Reward Tokens), and act as a leasing pool to aggregate mining power from other users."
+        
       />
     }
     buttons={[
@@ -32,7 +32,7 @@ const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => 
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.wavesNode" defaultMessage="Waves node" />
+        <FormattedMessage id="developers.cta.wavesNode"  />
       </IconButton>,
       <IconButton
         onClick={onWavesNodeInstallClick}
@@ -42,7 +42,7 @@ const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => 
         className={classes.button}
         inverted
       >
-        <FormattedMessage id="developers.cta.howToInstallNode" defaultMessage="How to install" />
+        <FormattedMessage id="developers.cta.howToInstallNode"  />
       </IconButton>,
     ]}
   />

@@ -34,7 +34,7 @@ const UserCaseMobile = ({
       className={classes.link}
       data-slide-link={`${index}`}
     >
-      <FormattedMessage id="userCases.detailsLink" defaultMessage="Details" />
+      <FormattedMessage id="userCases.detailsLink"  />
     </Link>
     <Margin top={4} />
     <img className={classes.image} src={bgMobile} alt="Case Picture" />

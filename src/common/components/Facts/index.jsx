@@ -15,7 +15,7 @@ const Facts = ({ classes, tokens }) => (
       <Typography type="display5" weight={500} className={classes.text}>
         <FormattedMessage
           id="facts.tokens"
-          defaultMessage="A total of {number} tokens have been released on Waves"
+          
           values={{ number: <FormattedNumber value={tokens} /> }}
         />
       </Typography>
@@ -25,7 +25,7 @@ const Facts = ({ classes, tokens }) => (
       <Typography type="display5" weight={500} className={classes.text}>
         <FormattedMessage
           id="facts.capitalisation"
-          defaultMessage="Totaling a market capitalisation of more than ${cap}"
+          
           values={{ cap: <FormattedNumber value={1000000000} /> }}
         />
       </Typography>

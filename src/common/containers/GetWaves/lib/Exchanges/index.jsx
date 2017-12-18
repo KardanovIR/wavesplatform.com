@@ -18,7 +18,7 @@ const Exchanges = ({ classes }) => (
     <Row>
       <Col xs={12} md={7}>
         <Typography type="display5">
-          <FormattedMessage id="getWaves.exchanges.title" defaultMessage="Buy Waves on Exchanges" />
+          <FormattedMessage id="getWaves.exchanges.title"  />
         </Typography>
         <Margin bottom={4} />
       </Col>

@@ -18,13 +18,13 @@ const WavesNodes = ({ wavesTopNodes }) => {
                 title={
                     <FormattedMessage
                         id="leasing.nodes.title"
-                        defaultMessage="Top Waves nodes"
+                        
                     />
                 }
                 text={
                     <FormattedMessage
                         id="leasing.nodes.text"
-                        defaultMessage="Here you can find a list of the top nodes by WAVES balance. You can find a full list at {pywavesLink}"
+                        
                         values={{
                             pywavesLink: (
                                 <Link href="http://dev.pywaves.org/generators-weekly/" target="_blank">dev.pywaves.org</Link>

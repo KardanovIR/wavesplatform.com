@@ -18,7 +18,7 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
           <Typography type="display3Inverted">
             <FormattedMessage
               id="product.mobileWallet.title"
-              defaultMessage="Start using your Waves wallet"
+              
             />
           </Typography>
         </Col>
@@ -27,7 +27,7 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
           <Typography type="body">
             <FormattedMessage
               id="product.mobileWallet.text"
-              defaultMessage="Don’t forget to download the mobile wallet for iOS & Android."
+              
             />
           </Typography>
         </Col>
