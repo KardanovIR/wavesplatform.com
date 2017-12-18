@@ -24,56 +24,31 @@ const Wallet = ({ children, classes }) => (
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="shield" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.security"
-                  
-                />
-              }
+              text={<FormattedMessage id="home.wallet.security" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="leasing" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.interest"
-                  
-                />
-              }
+              text={<FormattedMessage id="home.wallet.interest" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="transaction" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.transfer"
-                  
-                />
-              }
+              text={<FormattedMessage id="home.wallet.transfer" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="mining" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.mining"
-                  
-                />
-              }
+              text={<FormattedMessage id="home.wallet.mining" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="wallet" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.wallet"
-                  
-                />
-              }
+              text={<FormattedMessage id="home.wallet.wallet" />}
             />
           </ColFeature>
         </Row>

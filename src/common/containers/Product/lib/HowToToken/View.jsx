@@ -13,10 +13,7 @@ const HowToStart = ({ onGetClientClick }) => (
         avatar: <IconProduct name="cloud" />,
         text: (
           <div>
-            <FormattedHTMLMessage
-              id="product.howToToken.step1"
-              
-            />
+            <FormattedHTMLMessage id="product.howToToken.step1" />
             <br />
             <Link
               onClick={onGetClientClick}
@@ -32,21 +29,11 @@ const HowToStart = ({ onGetClientClick }) => (
       },
       {
         avatar: <IconProduct name="coins" />,
-        text: (
-          <FormattedMessage
-            id="product.howToToken.step2"
-            
-          />
-        ),
+        text: <FormattedMessage id="product.howToToken.step2" />,
       },
       {
         avatar: <IconProduct name="dex" />,
-        text: (
-          <FormattedMessage
-            id="product.howToToken.step3"
-            
-          />
-        ),
+        text: <FormattedMessage id="product.howToToken.step3" />,
       },
     ]}
   />

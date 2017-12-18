@@ -14,7 +14,10 @@ export default theme => {
       color: theme.palette.gray[400],
       display: 'inline-block',
       padding: theme.spacing.getSpacing(2, 2, 2, 0),
-      transition: theme.transitions.create('opacity', theme.transitions.durationShort),
+      transition: theme.transitions.create(
+        'opacity',
+        theme.transitions.durationShort
+      ),
 
       [theme.breakpoints.up('md')]: {
         padding: theme.spacing.getSpacing(1, 2),
@@ -40,7 +43,7 @@ export default theme => {
 
     ony: {
       textDecoration: 'none',
-      color: theme.palette.gray[400]
+      color: theme.palette.gray[400],
     },
 
     // text

@@ -62,8 +62,8 @@ const styles = theme => ({
       paddingBottom: 0,
 
       '&::after': {
-        display: 'none'
-      }
+        display: 'none',
+      },
     },
     image: {
       position: 'absolute',
@@ -84,7 +84,7 @@ const styles = theme => ({
       top: -60,
       right: '-20%',
       width: 'auto',
-    }
+    },
   },
 });
 

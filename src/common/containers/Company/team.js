@@ -36,8 +36,8 @@ import Ilya_Smagin2x from './lib/Team/img/Ilya_Smagin@1x.jpg';
 
 export default [
   {
-    fullName: <FormattedMessage id="teamMembers.0.fullName"  />,
-    position: <FormattedMessage id="teamMembers.0.position"  />,
+    fullName: <FormattedMessage id="teamMembers.0.fullName" />,
+    position: <FormattedMessage id="teamMembers.0.position" />,
     imageUrl1x: `url(${Sasha_Ivanov1x})`,
     imageUrl2x: `url(${Sasha_Ivanov2x})`,
     social: [
@@ -60,8 +60,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.1.fullName"  />,
-    position: <FormattedMessage id="teamMembers.1.position"  />,
+    fullName: <FormattedMessage id="teamMembers.1.fullName" />,
+    position: <FormattedMessage id="teamMembers.1.position" />,
     imageUrl1x: `url(${Maxim_Pertsovskiy1x})`,
     imageUrl2x: `url(${Maxim_Pertsovskiy2x})`,
     social: [
@@ -69,8 +69,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.2.fullName"  />,
-    position: <FormattedMessage id="teamMembers.2.position"  />,
+    fullName: <FormattedMessage id="teamMembers.2.fullName" />,
+    position: <FormattedMessage id="teamMembers.2.position" />,
     imageUrl1x: `url(${Mariya_Borovikova1x})`,
     imageUrl2x: `url(${Mariya_Borovikova2x})`,
     social: [
@@ -81,8 +81,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.3.fullName"  />,
-    position: <FormattedMessage id="teamMembers.3.position"  />,
+    fullName: <FormattedMessage id="teamMembers.3.fullName" />,
+    position: <FormattedMessage id="teamMembers.3.position" />,
     imageUrl1x: `url(${Igor_Pugachevsky1x})`,
     imageUrl2x: `url(${Igor_Pugachevsky2x})`,
     social: [
@@ -101,8 +101,8 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.4.fullName"  />,
-    position: <FormattedMessage id="teamMembers.4.position"  />,
+    fullName: <FormattedMessage id="teamMembers.4.fullName" />,
+    position: <FormattedMessage id="teamMembers.4.position" />,
     imageUrl1x: `url(${Natalya_Malyova1x})`,
     imageUrl2x: `url(${Natalya_Malyova2x})`,
     social: [
@@ -114,8 +114,8 @@ export default [
   },
 
   {
-    fullName: <FormattedMessage id="teamMembers.5.fullName"  />,
-    position: <FormattedMessage id="teamMembers.5.position"  />,
+    fullName: <FormattedMessage id="teamMembers.5.fullName" />,
+    position: <FormattedMessage id="teamMembers.5.position" />,
     imageUrl1x: `url(${Alexey_Kofman1x})`,
     imageUrl2x: `url(${Alexey_Kofman2x})`,
     social: [
@@ -126,22 +126,22 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.6.fullName"  />,
-    position: <FormattedMessage id="teamMembers.6.position"  />,
+    fullName: <FormattedMessage id="teamMembers.6.fullName" />,
+    position: <FormattedMessage id="teamMembers.6.position" />,
     imageUrl1x: `url(${Ilya_Smagin1x})`,
     imageUrl2x: `url(${Ilya_Smagin2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.7.fullName"  />,
-    position: <FormattedMessage id="teamMembers.7.position"  />,
+    fullName: <FormattedMessage id="teamMembers.7.fullName" />,
+    position: <FormattedMessage id="teamMembers.7.position" />,
     imageUrl1x: `url(${Alexey_Koloskov1x})`,
     imageUrl2x: `url(${Alexey_Koloskov2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.8.fullName"  />,
-    position: <FormattedMessage id="teamMembers.8.position"  />,
+    fullName: <FormattedMessage id="teamMembers.8.fullName" />,
+    position: <FormattedMessage id="teamMembers.8.position" />,
     imageUrl1x: `url(${Phil_Filippak1x})`,
     imageUrl2x: `url(${Phil_Filippak2x})`,
     social: [
@@ -156,15 +156,15 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.9.fullName"  />,
-    position: <FormattedMessage id="teamMembers.9.position"  />,
+    fullName: <FormattedMessage id="teamMembers.9.fullName" />,
+    position: <FormattedMessage id="teamMembers.9.position" />,
     imageUrl1x: `url(${Sergey_Tolmachev1x})`,
     imageUrl2x: `url(${Sergey_Tolmachev2x})`,
     social: [],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.10.fullName"  />,
-    position: <FormattedMessage id="teamMembers.10.position"  />,
+    fullName: <FormattedMessage id="teamMembers.10.fullName" />,
+    position: <FormattedMessage id="teamMembers.10.position" />,
     imageUrl1x: `url(${Alexey_Kiselev1x})`,
     imageUrl2x: `url(${Alexey_Kiselev2x})`,
     social: [],

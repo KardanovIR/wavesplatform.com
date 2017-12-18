@@ -6,23 +6,15 @@ import IconButton from 'src/common/components/Button/Icon';
 
 import PictureBlock from '../PictureBlock';
 
-const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => (
+const FriendlyAPI = ({
+  onWavesNodeClick,
+  onWavesNodeInstallClick,
+  classes,
+}) => (
   <PictureBlock
-    title={
-      <FormattedMessage id="developers.wavesNode.title"  />
-    }
-    subtitle={
-      <FormattedMessage
-        id="developers.wavesNode.subtitle"
-        
-      />
-    }
-    text={
-      <FormattedMessage
-        id="developers.wavesNode.text"
-        
-      />
-    }
+    title={<FormattedMessage id="developers.wavesNode.title" />}
+    subtitle={<FormattedMessage id="developers.wavesNode.subtitle" />}
+    text={<FormattedMessage id="developers.wavesNode.text" />}
     buttons={[
       <IconButton
         onClick={onWavesNodeClick}
@@ -32,7 +24,7 @@ const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => 
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.wavesNode"  />
+        <FormattedMessage id="developers.cta.wavesNode" />
       </IconButton>,
       <IconButton
         onClick={onWavesNodeInstallClick}
@@ -42,7 +34,7 @@ const FriendlyAPI = ({ onWavesNodeClick, onWavesNodeInstallClick, classes }) => 
         className={classes.button}
         inverted
       >
-        <FormattedMessage id="developers.cta.howToInstallNode"  />
+        <FormattedMessage id="developers.cta.howToInstallNode" />
       </IconButton>,
     ]}
   />
@@ -57,9 +49,9 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('sm')]: {
       width: '100%',
-      marginRight: theme.spacing.unit * 10
-    }
-  }
+      marginRight: theme.spacing.unit * 10,
+    },
+  },
 });
 
 export default injectSheets(styles)(FriendlyAPI);

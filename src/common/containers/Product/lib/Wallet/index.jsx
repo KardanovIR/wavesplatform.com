@@ -11,22 +11,16 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const Wallet = ({classes}) => (
+const Wallet = ({ classes }) => (
   <div>
     <Row>
       <Col xs={12}>
         <Typography type="display1">
-          <FormattedMessage
-            id="product.wallet.createWallet.title"
-            
-          />
+          <FormattedMessage id="product.wallet.createWallet.title" />
         </Typography>
 
         <Typography type="body2">
-          <FormattedMessage
-            id="product.wallet.createWallet.text"
-            
-          />
+          <FormattedMessage id="product.wallet.createWallet.text" />
         </Typography>
       </Col>
     </Row>
@@ -43,18 +37,8 @@ const Wallet = ({classes}) => (
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="transaction" />}
-          title={
-            <FormattedMessage
-              id="product.wallet.transfer.title"
-              
-            />
-          }
-          text={
-            <FormattedMessage
-              id="product.wallet.transfer.text"
-              
-            />
-          }
+          title={<FormattedMessage id="product.wallet.transfer.title" />}
+          text={<FormattedMessage id="product.wallet.transfer.text" />}
         />
         <Margin bottom={5} xsOnly />
       </Col>
@@ -62,18 +46,8 @@ const Wallet = ({classes}) => (
         <AvatarTitleText
           twoColumns
           avatar={<IconProduct name="shield" />}
-          title={
-            <FormattedMessage
-              id="product.wallet.security.title"
-              
-            />
-          }
-          text={
-            <FormattedMessage
-              id="product.wallet.security.text"
-              
-            />
-          }
+          title={<FormattedMessage id="product.wallet.security.title" />}
+          text={<FormattedMessage id="product.wallet.security.text" />}
         />
       </Col>
     </Row>

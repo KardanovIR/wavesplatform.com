@@ -18,20 +18,21 @@ const Interest = ({ classes }) => (
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>
-            <FormattedMessage id="product.interest.leasing.title"  />
+            <FormattedMessage id="product.interest.leasing.title" />
           </Typography>
           <Typography type="body2" inverted>
-            <FormattedMessage
-              id="product.interest.leasing.text"
-              
-            />
+            <FormattedMessage id="product.interest.leasing.text" />
           </Typography>
-
         </div>
 
         <Typography type="display1" inverted className={classes.linkContainer}>
-          <Link href={url('leasing')} textDecoration={false} className={classes.link} inverted>
-            <FormattedMessage id="product.interest.link"  />
+          <Link
+            href={url('leasing')}
+            textDecoration={false}
+            className={classes.link}
+            inverted
+          >
+            <FormattedMessage id="product.interest.link" />
           </Link>
         </Typography>
       </div>
@@ -41,20 +42,21 @@ const Interest = ({ classes }) => (
       <div className={classes.panel}>
         <div>
           <Typography type="display1" inverted>
-            <FormattedMessage id="product.interest.mining.title"  />
+            <FormattedMessage id="product.interest.mining.title" />
           </Typography>
           <Typography type="body2" inverted>
-            <FormattedMessage
-              id="product.interest.mining.text"
-              
-            />
+            <FormattedMessage id="product.interest.mining.text" />
           </Typography>
-
         </div>
 
         <Typography type="display1" inverted className={classes.linkContainer}>
-          <Link href={url('mining')} inverted textDecoration={false} className={classes.link}>
-            <FormattedMessage id="product.interest.link"  />
+          <Link
+            href={url('mining')}
+            inverted
+            textDecoration={false}
+            className={classes.link}
+          >
+            <FormattedMessage id="product.interest.link" />
           </Link>
         </Typography>
       </div>

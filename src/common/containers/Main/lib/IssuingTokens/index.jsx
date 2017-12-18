@@ -7,18 +7,15 @@ import styles from './styles';
 
 import { FormattedMessage } from 'react-intl';
 
-const IssuingTokens = ({classes}) => (
+const IssuingTokens = ({ classes }) => (
   <Row>
     <Col xs={12} md={11}>
       <Typography type="display1">
-        <FormattedMessage id="home.issuingTokens.title"  />
+        <FormattedMessage id="home.issuingTokens.title" />
       </Typography>
 
       <Typography type="display3" className={classes.text}>
-        <FormattedMessage
-          id="home.issuingTokens.text"
-          
-        />
+        <FormattedMessage id="home.issuingTokens.text" />
       </Typography>
     </Col>
   </Row>

@@ -1,4 +1,4 @@
-import palette from "../../theme/palette";
+import palette from '../../theme/palette';
 
 const setPlaceholderColor = color => ({
   '&::-webkit-input-placeholder': {

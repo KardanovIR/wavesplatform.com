@@ -14,16 +14,11 @@ const Audience = ({ classes }) => (
     <Col xs={12} sm={6} lg={4}>
       <Article
         title={
-          <FormattedMessage id="home.audience.developers.title" >
+          <FormattedMessage id="home.audience.developers.title">
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
         }
-        text={
-          <FormattedMessage
-            id="home.audience.developers.text"
-            
-          />
-        }
+        text={<FormattedMessage id="home.audience.developers.text" />}
       />
       <Margin bottom={3} />
     </Col>
@@ -33,17 +28,11 @@ const Audience = ({ classes }) => (
           <FormattedMessage
             className={classes.title}
             id="home.audience.traders.title"
-            
           >
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
         }
-        text={
-          <FormattedMessage
-            id="home.audience.traders.text"
-            
-          />
-        }
+        text={<FormattedMessage id="home.audience.traders.text" />}
       />
       <Margin bottom={3} />
     </Col>
@@ -53,17 +42,11 @@ const Audience = ({ classes }) => (
           <FormattedMessage
             className={classes.title}
             id="home.audience.organisations.title"
-            
           >
             {message => <span className={classes.title}>{message}</span>}
           </FormattedMessage>
         }
-        text={
-          <FormattedMessage
-            id="home.audience.organisations.text"
-            
-          />
-        }
+        text={<FormattedMessage id="home.audience.organisations.text" />}
       />
       <Margin bottom={3} />
     </Col>

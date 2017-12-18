@@ -20,7 +20,9 @@ const Section = ({
   ...rest
 }) => {
   const noSizeSpecified =
-    typeof top === 'undefined' && typeof bottom === 'undefined' && typeof size === 'undefined';
+    typeof top === 'undefined' &&
+    typeof bottom === 'undefined' &&
+    typeof size === 'undefined';
 
   const className = classNames(
     {

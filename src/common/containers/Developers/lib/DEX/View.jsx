@@ -33,7 +33,9 @@ const DexImage = injectSheet(styles)(({ classes }) => (
         className={classes.image}
         src={matches ? dexImage : dexImageMob}
         srcSet={
-          matches ? `${dexImage} 1x, ${dexImage2x} 2x` : `${dexImageMob} 1x, ${dexImageMob2x} 2x`
+          matches
+            ? `${dexImage} 1x, ${dexImage2x} 2x`
+            : `${dexImageMob} 1x, ${dexImageMob2x} 2x`
         }
       />
     )}
@@ -42,25 +44,12 @@ const DexImage = injectSheet(styles)(({ classes }) => (
 
 const DEX = ({ onDexApiClick, classes }) => (
   <PictureBlock
-    title={
-      <FormattedMessage id="developers.DEX.title"  />
-    }
-    subtitle={
-      <FormattedMessage
-        id="developers.DEX.subtitle"
-        
-      />
-    }
+    title={<FormattedMessage id="developers.DEX.title" />}
+    subtitle={<FormattedMessage id="developers.DEX.subtitle" />}
     image={<DexImage />}
     text={[
-      <FormattedMessage
-        id="developers.DEX.text.p1"
-        
-      />,
-      <FormattedMessage
-        id="developers.DEX.text.p2"
-        
-      />,
+      <FormattedMessage id="developers.DEX.text.p1" />,
+      <FormattedMessage id="developers.DEX.text.p2" />,
     ]}
     buttons={[
       <IconButton
@@ -71,7 +60,7 @@ const DEX = ({ onDexApiClick, classes }) => (
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.dexApi"  />
+        <FormattedMessage id="developers.cta.dexApi" />
       </IconButton>,
     ]}
   />
@@ -86,9 +75,9 @@ const stylesDEX = theme => ({
     },
     [theme.mixins.atMedia('sm')]: {
       width: '100%',
-      marginRight: theme.spacing.unit * 10
-    }
-  }
+      marginRight: theme.spacing.unit * 10,
+    },
+  },
 });
 
 export default injectSheet(stylesDEX)(DEX);

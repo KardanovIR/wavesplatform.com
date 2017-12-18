@@ -16,19 +16,13 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
       <Row>
         <Col xs={12} sm={10}>
           <Typography type="display3Inverted">
-            <FormattedMessage
-              id="product.mobileWallet.title"
-              
-            />
+            <FormattedMessage id="product.mobileWallet.title" />
           </Typography>
         </Col>
         <Col xs={12} sm={8}>
           <Margin top={2} xsOnly />
           <Typography type="body">
-            <FormattedMessage
-              id="product.mobileWallet.text"
-              
-            />
+            <FormattedMessage id="product.mobileWallet.text" />
           </Typography>
         </Col>
       </Row>

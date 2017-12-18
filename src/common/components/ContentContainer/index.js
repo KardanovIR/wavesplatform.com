@@ -9,15 +9,13 @@ const styles = theme => {
       maxWidth: theme.breakpoints.md,
       margin: '0 auto',
       height: '100%',
-      padding: theme.spacing.getSpacing(0, 3)
+      padding: theme.spacing.getSpacing(0, 3),
     },
   };
 };
 
 const ContentContainer = ({ classes, children, className }) => (
-  <div className={cn(classes.container, className)}>
-    {children}
-  </div>
+  <div className={cn(classes.container, className)}>{children}</div>
 );
 
 export default injectSheet(styles)(ContentContainer);

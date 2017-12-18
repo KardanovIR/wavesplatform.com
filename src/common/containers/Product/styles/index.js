@@ -12,7 +12,7 @@ export default theme => ({
     },
   },
   section: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   centered: {
     textAlign: 'center',

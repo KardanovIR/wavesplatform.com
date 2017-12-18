@@ -9,7 +9,14 @@ import Margin from 'src/common/components/Margin';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const Member = ({ fullName, position, imageUrl1x, imageUrl2x, social, classes }) => (
+const Member = ({
+  fullName,
+  position,
+  imageUrl1x,
+  imageUrl2x,
+  social,
+  classes,
+}) => (
   <div className={classes.root}>
     <div className={classes.image} style={{ backgroundImage: imageUrl2x }} />
 
@@ -44,8 +51,10 @@ Member.defaultProps = {
 };
 
 Member.propTypes = {
-  fullName: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-  position: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  fullName: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
+  position: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+    .isRequired,
   imageUrl1x: PropTypes.string.isRequired,
   imageUrl2x: PropTypes.string.isRequired,
   social: PropTypes.arrayOf(

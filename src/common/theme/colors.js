@@ -4,7 +4,7 @@ const colors = {
   },
   blue: {
     100: '#ADBAD5',
-    400: '#0155FF'
+    400: '#0155FF',
   },
   gray: {
     400: '#acacac',

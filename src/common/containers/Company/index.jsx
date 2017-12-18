@@ -41,15 +41,7 @@ const PageLayout = ({ classes }) => (
       videoFirstFrame={require('./img/ffDesk.jpg')}
       videoFirstFrameMobile={require('./img/ffMob.jpg')}
     >
-      <MainScreen
-        inverted
-        title={
-          <FormattedMessage
-            id="company.title"
-            
-          />
-        }
-      />
+      <MainScreen inverted title={<FormattedMessage id="company.title" />} />
     </MainScreenBackground>
 
     {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
@@ -58,7 +50,7 @@ const PageLayout = ({ classes }) => (
         <AboutDescription />
       </ContentContainer>
     </Section>
-		
+
     <Section top={1} bottom={2}>
       <ContentContainer>
         <Team members={teamMembers} />

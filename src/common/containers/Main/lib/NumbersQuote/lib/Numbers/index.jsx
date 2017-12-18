@@ -14,12 +14,16 @@ const styles = theme => ({
 });
 
 const ColNumber = injectSheet(styles)(({ classes, children }) => (
-  <div className={classes.numberWrapper}>
-    {children}
-  </div>
+  <div className={classes.numberWrapper}>{children}</div>
 ));
 
-const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }) =>
+const NumbersMain = ({
+  wavesBtcRate,
+  dexVolume,
+  dexWallets,
+  dexAssets,
+  ...rest
+}) =>
   wavesBtcRate && dexVolume && dexWallets && dexAssets ? (
     <Col xs={12} sm={4} {...rest}>
       <ColNumber>
@@ -27,7 +31,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           ฿ <FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.wavesPrice"  />
+          <FormattedMessage id="home.numbers.wavesPrice" />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -35,7 +39,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           $ <FormattedNumber value={dexVolume} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.dexVolume"  />
+          <FormattedMessage id="home.numbers.dexVolume" />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -43,7 +47,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           <FormattedNumber value={dexWallets} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.wallets"  />
+          <FormattedMessage id="home.numbers.wallets" />
         </Typography>
       </ColNumber>
       <ColNumber>
@@ -51,7 +55,7 @@ const NumbersMain = ({ wavesBtcRate, dexVolume, dexWallets, dexAssets, ...rest }
           <FormattedNumber value={dexAssets} />
         </Typography>
         <Typography type="body">
-          <FormattedMessage id="home.numbers.tokens"  />
+          <FormattedMessage id="home.numbers.tokens" />
         </Typography>
       </ColNumber>
     </Col>

@@ -34,7 +34,7 @@ const styles = theme => ({
   [theme.breakpoints.up('sm')]: {
     svgrow: {
       display: 'flex',
-    }
+    },
   },
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
@@ -50,7 +50,7 @@ const styles = theme => ({
     },
     title: {
       fontSize: 19,
-    }
+    },
   },
 });
 

@@ -17,27 +17,17 @@ const NumbersQuote = ({ classes, dexData }) => (
     <Numbers {...dexData} className={classes.numbersContainer} />
     <Col xs={12} sm={8} className={classes.investorsContainer}>
       <Typography type="display1" className={classes.investorsLabel}>
-        <FormattedMessage
-          id="home.audience.investors.title"
-          
-        />
+        <FormattedMessage id="home.audience.investors.title" />
       </Typography>
       <Typography type="display3" className={classes.investorsText}>
-        <FormattedMessage
-          id="home.audience.investors.text"
-          
-        />
+        <FormattedMessage id="home.audience.investors.text" />
       </Typography>
       <Margin bottom={4} />
     </Col>
     <Col xs={12} sm={8} smOffset={4}>
       <BlockQuote>
         <div className={classes.deloitteLogo} />
-        <FormattedMessage
-          tagName="div"
-          id='home.quote'
-          
-        />
+        <FormattedMessage tagName="div" id="home.quote" />
       </BlockQuote>
       <Margin bottom={1} />
     </Col>

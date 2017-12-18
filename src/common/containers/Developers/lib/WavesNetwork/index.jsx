@@ -15,7 +15,7 @@ const TitleApp = injectSheet(styles)(({ classes }) => (
     <Margin right={1} className={classes.titleEl}>
       <IconProduct name="applicationWaves" />
     </Margin>
-    <FormattedMessage tagName="div" id="developers.wavesNetwork.mainNet"  />
+    <FormattedMessage tagName="div" id="developers.wavesNetwork.mainNet" />
   </Typography>
 ));
 
@@ -24,24 +24,21 @@ const TitleSettings = injectSheet(styles)(({ classes }) => (
     <Margin right={1} className={classes.titleEl}>
       <IconProduct name="settings" />
     </Margin>
-    <FormattedMessage tagName="div" id="developers.wavesNetwork.testNet"  />
+    <FormattedMessage tagName="div" id="developers.wavesNetwork.testNet" />
   </Typography>
 ));
 
-const TableDesktop = injectSheet(styles)(({classes}) => [
+const TableDesktop = injectSheet(styles)(({ classes }) => [
   <Row key="th" className={classes.tableHeader}>
     <Col sm={4} />
     <Col sm={4}>
       <Typography inverted type="body">
-        <FormattedMessage id="developers.wavesNetwork.explorer"  />
+        <FormattedMessage id="developers.wavesNetwork.explorer" />
       </Typography>
     </Col>
     <Col sm={4}>
       <Typography inverted type="body">
-        <FormattedMessage
-          id="developers.wavesNetwork.onlineWallet"
-          
-        />
+        <FormattedMessage id="developers.wavesNetwork.onlineWallet" />
       </Typography>
     </Col>
   </Row>,
@@ -50,11 +47,15 @@ const TableDesktop = injectSheet(styles)(({classes}) => [
       <TitleApp />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://wavesexplorer.com">wavesexplorer.com</Link>
-			<Margin bottom={1} xsOnly />
+      <Link target="_blank" href="https://wavesexplorer.com">
+        wavesexplorer.com
+      </Link>
+      <Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://waveswallet.io">waveswallet.io</Link>
+      <Link target="_blank" href="https://waveswallet.io">
+        waveswallet.io
+      </Link>
     </Col>
   </Row>,
   <Row key="tr2" className={classes.tableRow}>
@@ -62,11 +63,15 @@ const TableDesktop = injectSheet(styles)(({classes}) => [
       <TitleSettings />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://testnet.wavesexplorer.com">testnet.wavesexplorer.com</Link>
-			<Margin bottom={1} xsOnly />
+      <Link target="_blank" href="https://testnet.wavesexplorer.com">
+        testnet.wavesexplorer.com
+      </Link>
+      <Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://testnet.waveswallet.io">testnet.waveswallet.io</Link>
+      <Link target="_blank" href="https://testnet.waveswallet.io">
+        testnet.waveswallet.io
+      </Link>
     </Col>
   </Row>,
 ]);
@@ -76,20 +81,14 @@ const WavesNetwork = ({ classes }) => (
     <Row className={classes.text}>
       <Col xs={12} sm={8} md={12}>
         <Typography inverted type="display3">
-          <FormattedMessage id="developers.wavesNetwork.title"  />
+          <FormattedMessage id="developers.wavesNetwork.title" />
         </Typography>
         <Typography inverted type="body2" weight={400}>
-          <FormattedMessage
-            id="developers.wavesNetwork.text"
-            
-          />
+          <FormattedMessage id="developers.wavesNetwork.text" />
         </Typography>
         <Margin bottom={3} />
         <Typography inverted type="quote" color="gray-600">
-          <FormattedMessage
-            id="developers.wavesNetwork.explorers"
-            
-          />
+          <FormattedMessage id="developers.wavesNetwork.explorers" />
         </Typography>
         <Margin bottom={3} />
       </Col>

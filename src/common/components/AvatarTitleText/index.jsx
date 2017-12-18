@@ -40,13 +40,18 @@ const styles = theme => ({
     title: {
       fontSize: 19,
       paddingRight: 0,
-      marginLeft: ({ twoColumns }) => (twoColumns ? theme.spacing.unit * 2.5 : 0),
-      paddingTop: ({ twoColumns }) => (twoColumns ? theme.spacing.unit * 0.75 : 0),
-      marginBottom: ({ twoColumns }) => (twoColumns ? 0 : theme.spacing.unit * 2),
+      marginLeft: ({ twoColumns }) =>
+        twoColumns ? theme.spacing.unit * 2.5 : 0,
+      paddingTop: ({ twoColumns }) =>
+        twoColumns ? theme.spacing.unit * 0.75 : 0,
+      marginBottom: ({ twoColumns }) =>
+        twoColumns ? 0 : theme.spacing.unit * 2,
     },
     text: {
       marginLeft: ({ twoColumns, small }) =>
-        twoColumns ? (small ? theme.spacing.unit * 8.5 : theme.spacing.unit * 12.5) : 0,
+        twoColumns
+          ? small ? theme.spacing.unit * 8.5 : theme.spacing.unit * 12.5
+          : 0,
     },
     avatarWrapper: {
       flex: `0 0 ${theme.spacing.unit * 10}px`,
@@ -82,11 +87,23 @@ const AvatarTitleText = ({
           {avatar}
         </div>
         {!twoColumns && <Margin bottom={2} />}
-        <Typography inverted={inverted} className={classes.title} type="display1" tagName="div" cut>
+        <Typography
+          inverted={inverted}
+          className={classes.title}
+          type="display1"
+          tagName="div"
+          cut
+        >
           {title}
         </Typography>
       </div>
-      <Typography inverted={inverted} className={classes.text} type="body" tagName="div" cut>
+      <Typography
+        inverted={inverted}
+        className={classes.text}
+        type="body"
+        tagName="div"
+        cut
+      >
         {text}
       </Typography>
     </div>

@@ -15,17 +15,10 @@ const MainScreen = ({ classes, onGetClientClick }) => (
       <Col xs={12} sm={6}>
         <div className={classes.titleTextCtaWrapper}>
           <TitleTextCTA
-            title={
-              <FormattedMessage id="home.wavesClient.title"  />
-            }
+            title={<FormattedMessage id="home.wavesClient.title" />}
             titleType="display1"
             textType="body2"
-            text={
-              <FormattedMessage
-                id="home.wavesClient.text"
-                
-              />
-            }
+            text={<FormattedMessage id="home.wavesClient.text" />}
             buttons={[
               <Button
                 onClick={onGetClientClick}
@@ -34,7 +27,7 @@ const MainScreen = ({ classes, onGetClientClick }) => (
                 href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
                 secondary
               >
-                <FormattedMessage id="cta.getClient"  />
+                <FormattedMessage id="cta.getClient" />
               </Button>,
             ]}
             inverted

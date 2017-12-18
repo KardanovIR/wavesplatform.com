@@ -84,12 +84,7 @@ const PageLayout = ({ classes, initialState }) => (
       <Section top={4} bottom={2} className={classes.bgGray}>
         <ContentContainer>
           <HowToWallet
-            title={
-              <FormattedMessage
-                id="product.howToWallet.title"
-                
-              />
-            }
+            title={<FormattedMessage id="product.howToWallet.title" />}
             eventPage="product"
             eventSource="how_to_wallet"
           />
@@ -108,10 +103,7 @@ const PageLayout = ({ classes, initialState }) => (
         <ContentContainer>
           <Section size={2}>
             <Typography type="display5" inverted>
-              <FormattedMessage
-                id="product.DEX.safety"
-                
-              />
+              <FormattedMessage id="product.DEX.safety" />
             </Typography>
           </Section>
           <DEXTopPairs pairs={initialState.dexTopPairs} />
@@ -132,10 +124,7 @@ const PageLayout = ({ classes, initialState }) => (
       <Margin top={5} bottom={5}>
         <ContentContainer>
           <Typography type="display3" weight={600}>
-            <FormattedMessage
-              id="feedback.companiesReleased"
-              
-            />
+            <FormattedMessage id="feedback.companiesReleased" />
           </Typography>
         </ContentContainer>
       </Margin>

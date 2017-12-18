@@ -15,20 +15,18 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit,
   },
 
-  numbersContainer: {
-  },
+  numbersContainer: {},
 
   investorsContainer: {
     position: 'relative',
-    marginTop: theme.spacing.unit * 4
+    marginTop: theme.spacing.unit * 4,
   },
 
-  investorsLabel: {
-  },
+  investorsLabel: {},
 
   investorsText: {
     fontWeight: 600,
-    margin: 0 + '!important'
+    margin: 0 + '!important',
   },
 
   [theme.mixins.atMedia('md')]: {
@@ -46,13 +44,13 @@ const styles = theme => ({
     },
     investorsText: {
       fontWeight: 600,
-      margin: 0
+      margin: 0,
     },
     investorsContainer: {
-      marginTop: 0
+      marginTop: 0,
     },
     numbersContainer: {
-      paddingTop: theme.spacing.unit * 2
+      paddingTop: theme.spacing.unit * 2,
     },
     investorsLabel: {
       position: 'absolute',

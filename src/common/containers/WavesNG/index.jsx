@@ -29,55 +29,54 @@ import styles from './styles';
 import WavesNgLogo from '!svg-react-loader!./img/ng-logo.svg';
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        <MainScreenBackground type="dark">
-            <MainScreen />
-        </MainScreenBackground>
+  <Layout>
+    <MainScreenBackground type="dark">
+      <MainScreen />
+    </MainScreenBackground>
 
-        <Section top={3}>
-            <Typography type="display3" align="center">
-                <FormattedMessage
-                    id="wavesNG.stressTest.title"
-                    
-                    values={{
-                        logo: (
-                            <span className={classes.logo}>
-                                <WavesNgLogo />
-                            </span>
-                        ),
-                    }}
-                />
-            </Typography>
-            <Margin bottom={4} />
-            <Steps />
-        </Section>
+    <Section top={3}>
+      <Typography type="display3" align="center">
+        <FormattedMessage
+          id="wavesNG.stressTest.title"
+          values={{
+            logo: (
+              <span className={classes.logo}>
+                <WavesNgLogo />
+              </span>
+            ),
+          }}
+        />
+      </Typography>
+      <Margin bottom={4} />
+      <Steps />
+    </Section>
 
-        <Section top={2} bottom={4}>
-            <AnchorScroll anchor="stress-test">
-                <StressTest active />
-            </AnchorScroll>
-        </Section>
+    <Section top={2} bottom={4}>
+      <AnchorScroll anchor="stress-test">
+        <StressTest active />
+      </AnchorScroll>
+    </Section>
 
-        <Background className={classes.bgDescriptions} skewed={true}>
-            <Section size={4}>
-                <Descriptions />
-            </Section>
-        </Background>
+    <Background className={classes.bgDescriptions} skewed={true}>
+      <Section size={4}>
+        <Descriptions />
+      </Section>
+    </Background>
 
-        <div className={classes.footerMarginCompensate}>
-            <Background className={classes.bgSubscription} skewed={true}>
-                <SubscribeSection />
-            </Background>
-        </div>
-    </Layout>
+    <div className={classes.footerMarginCompensate}>
+      <Background className={classes.bgSubscription} skewed={true}>
+        <SubscribeSection />
+      </Background>
+    </div>
+  </Layout>
 );
 
 const Page = injectSheet(styles)(PageLayout);
 
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
 );
 
 export default App;

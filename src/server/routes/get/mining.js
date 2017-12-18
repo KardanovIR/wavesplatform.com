@@ -8,12 +8,12 @@ import Mining from 'src/common/containers/Mining';
 import reducer from 'src/common/containers/Mining/reducer';
 
 export default compose([
-    getWavesTopNodes,
-    getMrtWavesPrice,
-    render({
-        script: 'mining',
-        component: Mining,
-        reducer,
-        description: 'Support the Waves Network',
-    }),
+  getWavesTopNodes,
+  getMrtWavesPrice,
+  render({
+    script: 'mining',
+    component: Mining,
+    reducer,
+    description: 'Support the Waves Network',
+  }),
 ]);

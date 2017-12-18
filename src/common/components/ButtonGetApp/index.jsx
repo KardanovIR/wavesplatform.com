@@ -9,23 +9,25 @@ import cn from 'classnames';
 
 const styles = theme => ({
   button: {
-    padding: [0, theme.spacing.unit * 4, 0, theme.spacing.unit * 2]
+    padding: [0, theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
   },
   text: {
     ...theme.typography.button,
     lineHeight: 1.3,
     textTransform: 'none',
-    fontSize: 14
+    fontSize: 14,
   },
   [theme.mixins.atMedia('md')]: {
     button: {
-      padding: [0, theme.spacing.unit * 5, 0, theme.spacing.unit * 3]
+      padding: [0, theme.spacing.unit * 5, 0, theme.spacing.unit * 3],
     },
   },
 });
 
-const APP_STORE_HREF = 'https://itunes.apple.com/us/app/waves-wallet/id1233158971?mt=8';
-const GOOGLE_PLAY_HREF = 'https://play.google.com/store/apps/details?id=com.wavesplatform.wallet';
+const APP_STORE_HREF =
+  'https://itunes.apple.com/us/app/waves-wallet/id1233158971?mt=8';
+const GOOGLE_PLAY_HREF =
+  'https://play.google.com/store/apps/details?id=com.wavesplatform.wallet';
 
 const ButtonGetApp = ({ classes, className, type, ...rest }) => (
   <Button

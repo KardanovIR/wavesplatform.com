@@ -14,63 +14,50 @@ import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 const styles = ({ spacing, breakpoints }) => ({
+  imageWrapper: {
+    padding: [spacing.unit * 2, spacing.unit * 4],
+    margin: [0, 'auto'],
+  },
+  col: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  [breakpoints.up('lg')]: {
     imageWrapper: {
-        padding: [spacing.unit * 2, spacing.unit * 4],
-        margin: [0, 'auto'],
+      padding: 0,
     },
-    col: {
-        display: 'flex',
-        alignItems: 'center',
+    panel: {
+      paddingTop: spacing.unit * 8,
+      paddingBottom: spacing.unit * 8,
     },
-    [breakpoints.up('lg')]: {
-        imageWrapper: {
-            padding: 0,
-        },
-        panel: {
-            paddingTop: spacing.unit * 8,
-            paddingBottom: spacing.unit * 8,
-        },
-    },
+  },
 });
 
 const Description = ({ classes }) => (
-    <div>
-        <SectionTitleText
-            title={
-                <FormattedMessage
-                    id="leasing.description.title"
-                    
-                />
-            }
-            text={
-                <FormattedMessage
-                    id="leasing.description.subtitle"
-                    
-                />
-            }
-        />
+  <div>
+    <SectionTitleText
+      title={<FormattedMessage id="leasing.description.title" />}
+      text={<FormattedMessage id="leasing.description.subtitle" />}
+    />
 
-        <Panel className={classes.panel}>
-            <Row>
-                <Col xs={12} sm={6} lg={4} lgOffset={1} className={classes.col}>
-                    <div className={classes.imageWrapper}>
-                        <Image />
-                    </div>
-                    <Margin bottom={4} xsOnly />
-                </Col>
-                <Col xs={12} sm={6} lg={6} lgOffset={1} className={classes.col}>
-                    <Typography type="body">
-                        <FormattedMessage
-                            id="leasing.description.text"
-                            
-                        />
-                    </Typography>
-                    <Margin bottom={4} xsOnly />
-                </Col>
-            </Row>
-        </Panel>
+    <Panel className={classes.panel}>
+      <Row>
+        <Col xs={12} sm={6} lg={4} lgOffset={1} className={classes.col}>
+          <div className={classes.imageWrapper}>
+            <Image />
+          </div>
+          <Margin bottom={4} xsOnly />
+        </Col>
+        <Col xs={12} sm={6} lg={6} lgOffset={1} className={classes.col}>
+          <Typography type="body">
+            <FormattedMessage id="leasing.description.text" />
+          </Typography>
+          <Margin bottom={4} xsOnly />
+        </Col>
+      </Row>
+    </Panel>
 
-        {/* <Row>
+    {/* <Row>
             <Col xs={12} sm={6} lg={3}>
                 <List items={[<FormattedMessage id="leasing.description.item1"  />]} />
             </Col>
@@ -80,7 +67,7 @@ const Description = ({ classes }) => (
             <Col xs={12} sm={6} lg={3} />
             <Col xs={12} sm={6} lg={3} />
         </Row> */}
-    </div>
+  </div>
 );
 
 export default injectSheet(styles)(Description);

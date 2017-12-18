@@ -7,18 +7,8 @@ import { FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
   <MainScreen
-    title={
-      <FormattedMessage
-        id="developers.title"
-        
-      />
-    }
-    text={
-      <FormattedMessage
-        id="developers.text"
-        
-      />
-    }
+    title={<FormattedMessage id="developers.title" />}
+    text={<FormattedMessage id="developers.text" />}
     buttons={[
       <IconButton
         onClick={onDocumentationClick}
@@ -28,10 +18,7 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
         iconName="github"
         secondary
       >
-        <FormattedMessage
-          id="developers.cta.documentation"
-          
-        />
+        <FormattedMessage id="developers.cta.documentation" />
       </IconButton>,
     ]}
     inverted={inverted}

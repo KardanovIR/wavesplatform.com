@@ -4,11 +4,11 @@ import Circle from './Circle';
 import Points from './Points';
 
 function Spinner({ type, ...rest }) {
-    return type === 'circle' ? <Circle {...rest} /> : <Points {...rest} />;
+  return type === 'circle' ? <Circle {...rest} /> : <Points {...rest} />;
 }
 
 Spinner.defaultProps = {
-    type: 'circle',
+  type: 'circle',
 };
 
 export default Spinner;

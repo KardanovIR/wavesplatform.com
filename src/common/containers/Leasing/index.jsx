@@ -18,50 +18,50 @@ import Nodes from './lib/Nodes';
 
 import injectSheet from 'react-jss';
 const styles = theme => ({
-    bgRevenue: {
-        background: '#f0f4fb',
-    },
-    bgNodes: {
-        background: theme.palette.gray[50],
-    },
+  bgRevenue: {
+    background: '#f0f4fb',
+  },
+  bgNodes: {
+    background: theme.palette.gray[50],
+  },
 });
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        <MainScreenBackground type="dark">
-            <MainScreen />
-        </MainScreenBackground>
+  <Layout>
+    <MainScreenBackground type="dark">
+      <MainScreen />
+    </MainScreenBackground>
 
-        <Section top={3} bottom={4}>
-            <Description />
-        </Section>
+    <Section top={3} bottom={4}>
+      <Description />
+    </Section>
 
-        <Background className={classes.bgRevenue} skewed>
-            <Section size={4}>
-                <Revenue />
-            </Section>
-        </Background>
+    <Background className={classes.bgRevenue} skewed>
+      <Section size={4}>
+        <Revenue />
+      </Section>
+    </Background>
 
-        <Section size={4}>
-            <StartLeasing />
-        </Section>
+    <Section size={4}>
+      <StartLeasing />
+    </Section>
 
-        <Background className={classes.bgNodes} skewed>
-            <Section size={4}>
-                <AnchorScroll anchor="nodes">
-                    <Nodes />
-                </AnchorScroll>
-            </Section>
-        </Background>
-    </Layout>
+    <Background className={classes.bgNodes} skewed>
+      <Section size={4}>
+        <AnchorScroll anchor="nodes">
+          <Nodes />
+        </AnchorScroll>
+      </Section>
+    </Background>
+  </Layout>
 );
 
 const Page = injectSheet(styles)(PageLayout);
 
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
 );
 
 export default App;

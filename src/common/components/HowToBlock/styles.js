@@ -19,7 +19,7 @@ const styles = theme => ({
       display: 'inline-block',
       paddingBottom: 0,
     },
-  }
+  },
 });
 
 export default styles;

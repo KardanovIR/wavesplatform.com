@@ -7,10 +7,10 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 const DEX = () => (
   <div>
     <Typography type="display1" inverted>
-      <FormattedMessage id="product.DEX.title"  />
+      <FormattedMessage id="product.DEX.title" />
     </Typography>
     <Typography type="body2" inverted>
-      <FormattedHTMLMessage id="product.DEX.description"  />
+      <FormattedHTMLMessage id="product.DEX.description" />
     </Typography>
   </div>
 );

@@ -10,13 +10,10 @@ const WalletText = () => (
   <Row>
     <Col xs={12} sm={9}>
       <Typography type="display1">
-        <FormattedMessage id="home.wallet.title"  />
+        <FormattedMessage id="home.wallet.title" />
       </Typography>
       <Typography type="body2">
-        <FormattedMessage
-          id="home.wallet.text"
-          
-        />
+        <FormattedMessage id="home.wallet.text" />
       </Typography>
       <Margin bottom={4} />
     </Col>

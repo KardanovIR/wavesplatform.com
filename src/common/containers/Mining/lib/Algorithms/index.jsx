@@ -15,62 +15,32 @@ import ImagePoWMobile from '!svg-react-loader!./img/pow-mobile.svg';
 import { FormattedMessage } from 'react-intl';
 
 const Algorithms = () => (
-    <div>
-        <SectionTitleText
-            title={
-                <FormattedMessage
-                    id="mining.algorithms.title"
-                    
-                />
-            }
-            text={
-                <FormattedMessage
-                    id="mining.algorithms.text"
-                    
-                />
-            }
+  <div>
+    <SectionTitleText
+      title={<FormattedMessage id="mining.algorithms.title" />}
+      text={<FormattedMessage id="mining.algorithms.text" />}
+    />
+    <Row>
+      <Col xs={12} sm={6}>
+        <Card
+          title={<FormattedMessage id="mining.algorithms.pow.title" />}
+          imageMobile={<ImagePoWMobile />}
+          image={<ImagePoW />}
+          text={<FormattedMessage id="mining.algorithms.pow.text" />}
         />
-        <Row>
-            <Col xs={12} sm={6}>
-                <Card
-                    title={
-                        <FormattedMessage
-                            id="mining.algorithms.pow.title"
-                            
-                        />
-                    }
-                    imageMobile={<ImagePoWMobile />}
-                    image={<ImagePoW />}
-                    text={
-                        <FormattedMessage
-                            id="mining.algorithms.pow.text"
-                            
-                        />
-                    }
-                />
-                <Margin bottom={4} xsOnly />
-            </Col>
-            <Col xs={12} sm={6}>
-                <Card
-                    title={
-                        <FormattedMessage
-                            id="mining.algorithms.pos.title"
-                            
-                        />
-                    }
-                    imageMobile={<ImagePoSMobile />}
-                    image={<ImagePoS />}
-                    text={
-                        <FormattedMessage
-                            id="mining.algorithms.pos.text"
-                            
-                        />
-                    }
-                />
-                <Margin bottom={4} xsOnly />
-            </Col>
-        </Row>
-    </div>
+        <Margin bottom={4} xsOnly />
+      </Col>
+      <Col xs={12} sm={6}>
+        <Card
+          title={<FormattedMessage id="mining.algorithms.pos.title" />}
+          imageMobile={<ImagePoSMobile />}
+          image={<ImagePoS />}
+          text={<FormattedMessage id="mining.algorithms.pos.text" />}
+        />
+        <Margin bottom={4} xsOnly />
+      </Col>
+    </Row>
+  </div>
 );
 
 export default Algorithms;

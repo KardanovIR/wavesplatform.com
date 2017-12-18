@@ -19,10 +19,7 @@ const HowToWallet = ({ children, title }) => (
           avatar: <IconProduct name="list" />,
           text: (
             <div>
-              <FormattedMessage
-                id="developers.wavesEcosystem.explorer"
-                
-              />
+              <FormattedMessage id="developers.wavesEcosystem.explorer" />
               <br />
               <Link
                 target="_blank"
@@ -38,10 +35,7 @@ const HowToWallet = ({ children, title }) => (
           avatar: <IconProduct name="script" />,
           text: (
             <div>
-              <FormattedMessage
-                id="developers.wavesEcosystem.pywaves"
-                
-              />
+              <FormattedMessage id="developers.wavesEcosystem.pywaves" />
               <br />
               <Link
                 target="_blank"
@@ -57,10 +51,7 @@ const HowToWallet = ({ children, title }) => (
           avatar: <IconProduct name="message" />,
           text: (
             <div>
-              <FormattedMessage
-                id="developers.wavesEcosystem.forum"
-                
-              />
+              <FormattedMessage id="developers.wavesEcosystem.forum" />
               <br />
               <Link
                 target="_blank"

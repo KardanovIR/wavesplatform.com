@@ -6,41 +6,33 @@ import { Row, Col } from 'src/common/components/Grid';
 
 import Vacancies from 'src/common/containers/Vacancies';
 
-
 import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const VacanciesContainer = ({classes}) => (
-    <Row centered>
-        <Col xs={12} sm={10} md={10}>
-            <div className={classes.div}>
-                <Typography type="display2" className={classes.title} align="left">
-                    <FormattedMessage
-                        id="company.vacancies.title"
-                        
-                    />
-                </Typography>
+const VacanciesContainer = ({ classes }) => (
+  <Row centered>
+    <Col xs={12} sm={10} md={10}>
+      <div className={classes.div}>
+        <Typography type="display2" className={classes.title} align="left">
+          <FormattedMessage id="company.vacancies.title" />
+        </Typography>
 
-                <Margin bottom={1} />
+        <Margin bottom={1} />
 
-                <Row>
-                    <Col xs={12} sm={10} md={9}>
-                        <Typography type="display2" className={classes.text} align="left">
-                            <FormattedMessage
-                                id="company.vacancies.text"
-                                
-                            />
-                        </Typography>
-                    </Col>
-                </Row>
-            </div>
-            <Margin bottom={4} />
+        <Row>
+          <Col xs={12} sm={10} md={9}>
+            <Typography type="display2" className={classes.text} align="left">
+              <FormattedMessage id="company.vacancies.text" />
+            </Typography>
+          </Col>
+        </Row>
+      </div>
+      <Margin bottom={4} />
 
-            <Vacancies />
-        </Col>
-    </Row>
+      <Vacancies />
+    </Col>
+  </Row>
 );
-
 
 export default injectSheet(styles)(VacanciesContainer);

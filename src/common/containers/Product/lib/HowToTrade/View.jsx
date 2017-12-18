@@ -9,16 +9,10 @@ import { FormattedMessage } from 'react-intl';
 const HowToStart = ({ onGetClientClick }) => (
   <div>
     <Typography type="display1">
-      <FormattedMessage
-        id="product.howToTrade.title"
-        
-      />
+      <FormattedMessage id="product.howToTrade.title" />
     </Typography>
     <Typography type="body2">
-      <FormattedMessage
-        id="product.howToTrade.text"
-        
-      />
+      <FormattedMessage id="product.howToTrade.text" />
     </Typography>
     <Margin bottom={2} />
     <Button
@@ -28,7 +22,7 @@ const HowToStart = ({ onGetClientClick }) => (
       href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
       secondary
     >
-      <FormattedMessage id="cta.getDesktopClient"  />
+      <FormattedMessage id="cta.getDesktopClient" />
     </Button>
   </div>
 );

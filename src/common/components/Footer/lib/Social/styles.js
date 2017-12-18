@@ -3,8 +3,14 @@ import flexCentered from '../../../../styles/flexCentered';
 export default theme => ({
   wrapper: {
     margin: 0,
-    borderTop: `1px solid ${theme.palette.opaque(theme.palette.gray[400], .3)}`,
-    borderBottom: `1px solid ${theme.palette.opaque(theme.palette.gray[400], .3)}`,
+    borderTop: `1px solid ${theme.palette.opaque(
+      theme.palette.gray[400],
+      0.3
+    )}`,
+    borderBottom: `1px solid ${theme.palette.opaque(
+      theme.palette.gray[400],
+      0.3
+    )}`,
     padding: theme.spacing.getSpacing(2, 0),
   },
   icon: {
@@ -37,10 +43,10 @@ export default theme => ({
     wrapper: {
       margin: theme.spacing.getSpacing(0, -1.5),
       border: 0,
-      padding: 0
+      padding: 0,
     },
     col: {
-      justifyContent: 'flex-start'
-    }
+      justifyContent: 'flex-start',
+    },
   },
 });

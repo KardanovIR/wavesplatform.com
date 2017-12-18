@@ -12,74 +12,31 @@ import styles from './styles';
 
 const FEATURES_LIST = [
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.0.shippingDate"
-        
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.0.shippingDate" />,
     features: [
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.0"
-        
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.1"
-        
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.2"
-        
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.3"
-        
-      />,
-      <FormattedMessage id="home.plannedFeatures.0.features.4"  />,
+      <FormattedMessage id="home.plannedFeatures.0.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.1" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.2" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.3" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.4" />,
     ],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.1.shippingDate"
-        
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.1.shippingDate" />,
     features: [
-      <FormattedMessage id="home.plannedFeatures.1.features.0"  />,
-      <FormattedMessage
-        id="home.plannedFeatures.1.features.1"
-        
-      />,
+      <FormattedMessage id="home.plannedFeatures.1.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.1.features.1" />,
     ],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.2.shippingDate"
-        
-      />
-    ),
-    features: [
-      <FormattedMessage
-        id="home.plannedFeatures.2.features.0"
-        
-      />,
-    ],
+    shippingDate: <FormattedMessage id="home.plannedFeatures.2.shippingDate" />,
+    features: [<FormattedMessage id="home.plannedFeatures.2.features.0" />],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.3.shippingDate"
-        
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.3.shippingDate" />,
     features: [
-      <FormattedMessage id="home.plannedFeatures.3.features.0"  />,
-      <FormattedMessage
-        id="home.plannedFeatures.3.features.1"
-        
-      />,
+      <FormattedMessage id="home.plannedFeatures.3.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.3.features.1" />,
     ],
   },
 ];
@@ -111,14 +68,16 @@ const Block = ({ classes, features, shippingDate }) => (
 );
 
 Block.propTypes = {
-  features: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.element])),
+  features: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  ),
   shippingDate: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 const PlannedFeatures = ({ classes }) => (
   <div className={classes.root}>
     <Typography type="display3">
-      <FormattedMessage id="home.plannedFeatures.title"  />
+      <FormattedMessage id="home.plannedFeatures.title" />
     </Typography>
     <Margin bottom={4} />
     {FEATURES_LIST.map((block, i) => (

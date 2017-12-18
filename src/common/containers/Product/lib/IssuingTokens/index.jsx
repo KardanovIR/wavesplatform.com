@@ -16,24 +16,15 @@ const IssuingTokens = ({ classes }) => (
     <Row>
       <Col xs={12} md={10}>
         <Typography type="display5" className={classes.title}>
-          <FormattedMessage
-            id="product.issuingTokens.title"
-            
-          />
+          <FormattedMessage id="product.issuingTokens.title" />
         </Typography>
       </Col>
       <Col xs={12} sm={5} md={8}>
         <Typography type="body">
-          <FormattedMessage
-            id="product.issuingTokens.description.p1"
-            
-          />
-          <br/>
-          <br/>
-          <FormattedMessage
-            id="product.issuingTokens.description.p2"
-            
-          />
+          <FormattedMessage id="product.issuingTokens.description.p1" />
+          <br />
+          <br />
+          <FormattedMessage id="product.issuingTokens.description.p2" />
         </Typography>
         <Margin bottom={4} />
       </Col>
@@ -51,17 +42,9 @@ const IssuingTokens = ({ classes }) => (
         <AvatarTitleText
           avatar={<IconProduct name="target" />}
           title={
-            <FormattedMessage
-              id="product.issuingTokens.raiseFunds.title"
-              
-            />
+            <FormattedMessage id="product.issuingTokens.raiseFunds.title" />
           }
-          text={
-            <FormattedMessage
-              id="product.issuingTokens.raiseFunds.text"
-              
-            />
-          }
+          text={<FormattedMessage id="product.issuingTokens.raiseFunds.text" />}
         />
         <Margin bottom={4} />
       </Col>
@@ -69,17 +52,9 @@ const IssuingTokens = ({ classes }) => (
         <AvatarTitleText
           avatar={<IconProduct name="message" />}
           title={
-            <FormattedMessage
-              id="product.issuingTokens.loyalUsers.title"
-              
-            />
+            <FormattedMessage id="product.issuingTokens.loyalUsers.title" />
           }
-          text={
-            <FormattedMessage
-              id="product.issuingTokens.loyalUsers.text"
-              
-            />
-          }
+          text={<FormattedMessage id="product.issuingTokens.loyalUsers.text" />}
         />
         <Margin bottom={4} />
       </Col>

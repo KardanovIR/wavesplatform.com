@@ -6,7 +6,7 @@ import MainScreen from 'src/common/components/MainScreen';
 
 const GetWavesMainScreen = ({ onGetClientClick }) => (
   <MainScreen
-    title={<FormattedMessage id="getWaves.title"  />}
+    title={<FormattedMessage id="getWaves.title" />}
     /* text={
             <FormattedMessage
                 id="getWaves.text"
@@ -21,7 +21,7 @@ const GetWavesMainScreen = ({ onGetClientClick }) => (
         href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
         inverted
       >
-        <FormattedMessage id="cta.getClient"  />
+        <FormattedMessage id="cta.getClient" />
       </Button>,
     ]}
     inverted
