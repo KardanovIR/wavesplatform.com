@@ -1,6 +1,9 @@
 import { Locales } from 'locale';
+import isProd from 'src/common/utils/isProd';
 
 const supported = ['ru', 'en'];
+
+const cookieDomain = isProd() ? { domain: '*.wavesplatform.com' } : {};
 
 const sniffLocale = async (ctx, next) => {
   const cookie = ctx.cookies.get('locale');
@@ -14,7 +17,7 @@ const sniffLocale = async (ctx, next) => {
 
     ctx.cookies.set('locale', sniffedLocale, {
       maxAge: 15778476000, // 0.5 years
-      domain: '*.wavesplatform.com',
+      ...cookieDomain,
     });
 
     ctx.locale = sniffedLocale;
