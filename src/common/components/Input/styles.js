@@ -46,6 +46,7 @@ const styles = theme => ({
     backgroundColor: 'transparent',
     color: theme.palette.gray[0],
     border: `1px solid ${theme.palette.gray[0]}`,
+    paddingTop: theme.spacing.unit / 2,
 
     ...setPlaceholderColor(theme.palette.gray[0]),
   },

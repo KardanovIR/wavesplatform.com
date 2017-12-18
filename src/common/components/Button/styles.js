@@ -44,7 +44,7 @@ const styles = theme => ({
   light: {
     backgroundColor: theme.palette.blue[500],
     border: `1px solid ${theme.palette.blue[500]}`,
-    boxShadow: `0 2px 2px ${theme.palette.blue[300]}`,
+    //boxShadow: `0 2px 2px ${theme.palette.blue[300]}`,
     transformOrigin: 'center bottom',
     color: '#fff',
   },

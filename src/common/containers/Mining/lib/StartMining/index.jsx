@@ -22,8 +22,8 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 const confcol = {
     xs: 12,
-    sm: 2,
-    lg: 2,
+    sm: 3,
+    lg: 3,
 };
 
 const StartMining = ({ classes }) => (
@@ -65,8 +65,8 @@ const StartMining = ({ classes }) => (
                         <Col {...confcol} className={[classes.col, classes.colBlock]}>
                             <div className={classes.imageWrapper}>
                                 <ImageNode />
-                                {/*<div className={classes.arrow} />
-                                <div className={classes.arrowMobile} />*/}
+                                <div className={classes.arrow} />
+                                <div className={classes.arrowMobile} />
                             </div>
                             <Margin bottom={1} />
                             <Typography tagName="div" align="center" className={classes.message}>
@@ -75,18 +75,25 @@ const StartMining = ({ classes }) => (
                                     defaultMessage="1. Download the Waves Node"
                                 />
                             </Typography>
+                            <Margin bottom={5} />
+                            <IconButton
+                                href="https://github.com/wavesplatform/Waves"
+                                target="_blank"
+                                iconName="github"
+                                secondary
+                            >
+                                <FormattedMessage
+                                    id="developers.cta.wavesNode"
+                                    defaultMessage="Waves node"
+                                />
+                            </IconButton>
+                        </Col>
 
-                        </Col>
-                        <Col className={[classes.col, classes.colArrow]}>
-                            <div className={classes.imageWrapper}>
-                                <ImageArrow className={classes.arrowRight} />
-                            </div>
-                        </Col>
                         <Col {...confcol} className={[classes.col, classes.colBlock]}>
                             <div className={classes.imageWrapper}>
                                 <ImageInstall />
-                                {/*<div className={classes.arrow} />
-                                <div className={classes.arrowMobile} />*/}
+                                <div className={classes.arrow} />
+                                <div className={classes.arrowMobile} />
                             </div>
                             <Margin bottom={1} />
                             <Typography tagName="div" align="center" className={classes.message}>
@@ -95,17 +102,25 @@ const StartMining = ({ classes }) => (
                                     defaultMessage="2. Install Node"
                                 />
                             </Typography>
+                            <Margin bottom={5} />
+                            <IconButton
+                                href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+                                target="_blank"
+                                iconName="github"
+                                dark
+                            >
+                                <FormattedMessage
+                                    id="developers.cta.howToInstallNode"
+                                    defaultMessage="How to install"
+                                />
+                            </IconButton>
                         </Col>
-                        <Col className={[classes.col, classes.colArrow]}>
-                            <div className={classes.imageWrapper}>
-                                <ImageArrow className={classes.arrowRight} />
-                            </div>
-                        </Col>
+
                         <Col {...confcol} className={[classes.col, classes.colBlock]}>
                             <div className={classes.imageWrapper}>
                                 <ImageConfigure />
-                                {/*<div className={classes.arrow} />
-                                <div className={classes.arrowMobile} />*/}
+                                <div className={classes.arrow} />
+                                <div className={classes.arrowMobile} />
                             </div>
                             <Margin bottom={1} />
                             <Typography tagName="div" align="center" className={classes.message}>
@@ -114,13 +129,21 @@ const StartMining = ({ classes }) => (
                                     defaultMessage="3. Configure Node"
                                 />
                             </Typography>
+                            <Margin bottom={5} />
+                            <IconButton
+                                href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-configuration-file"
+                                target="_blank"
+                                iconName="github"
+                                dark
+                            >
+                                <FormattedMessage
+                                    id="mining.startMining.configure.button"
+                                    defaultMessage="Configuration"
+                                />
+                            </IconButton>
                         </Col>
-                        <Col className={[classes.col, classes.colArrow]}>
-                            <div className={classes.imageWrapper}>
-                                <ImageArrow className={classes.arrowRight} />
-                            </div>
-                        </Col>
-                        <Col {...confcol} className={[classes.col, classes.colBlock]}>
+
+                        <Col {...confcol} className={[classes.col, classes.colBlock, classes.LastBlock]}>
                             <div className={classes.imageWrapper}>
                                 <ImageDone />
                             </div>
@@ -133,44 +156,6 @@ const StartMining = ({ classes }) => (
                             </Typography>
                             <Margin bottom={2} />
                         </Col>
-                    </div>
-                </Row>
-                <Margin bottom="5"/>
-                <Row className={classes.buttons}>
-                    <div className={classes.scroll}>
-                        <IconButton
-                            href="https://github.com/wavesplatform/Waves"
-                            target="_blank"
-                            iconName="github"
-                            secondary
-                        >
-                            <FormattedMessage
-                                id="developers.cta.wavesNode"
-                                defaultMessage="Waves node"
-                            />
-                        </IconButton>
-                        <IconButton
-                            href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
-                            target="_blank"
-                            iconName="github"
-                            whited
-                        >
-                            <FormattedMessage
-                                id="developers.cta.howToInstallNode"
-                                defaultMessage="How to install"
-                            />
-                        </IconButton>
-                        <IconButton
-                            href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-configuration-file"
-                            target="_blank"
-                            iconName="github"
-                            whited
-                        >
-                            <FormattedMessage
-                                id="mining.startMining.configure.button"
-                                defaultMessage="Configuration"
-                            />
-                        </IconButton>
                     </div>
                 </Row>
             </div>

@@ -3,6 +3,7 @@ import startMiningArrow from './img/start_mining_arrow.svg';
 export default theme => ({
     col: {
         textAlign: 'center',
+        marginBottom: theme.spacing.unit * 4,
     },
     imageWrapper: {
         position: 'relative',
@@ -65,12 +66,12 @@ export default theme => ({
         colArrow: {
             textAlign: 'left',
         },
-        colBlock: {
+        /*colBlock: {
             flexDirection: 'row-reverse',
             display: 'flex',
-        },
+        },*/
         message: {
-            alignItems: 'left',
+            alignItems: 'center',
             flexDirection: 'column',
             display: 'flex',
             justifyContent: 'center',
@@ -88,6 +89,16 @@ export default theme => ({
         }
     },
     [theme.breakpoints.up("tablet")]: {
+        colBlock:{
+            textAlign: 'center',
+            justifyContent: 'space-between',
+            flexDirection: 'column',
+            display: 'flex',
+            marginBottom: 0,
+        },
+        LastBlock: {
+          justifyContent: 'flex-start',
+        },
         imageWrapper: {
             '&>svg': {
                 maxWidth: 120,
