@@ -1,4 +1,3 @@
-// @todo locale
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,26 +12,75 @@ import styles from './styles';
 
 const FEATURES_LIST = [
   {
-    shippingDate: 'Winter–Spring 2018',
+    shippingDate: (
+      <FormattedMessage
+        id="home.plannedFeatures.0.shippingDate"
+        defaultMessage="Winter–Spring 2018"
+      />
+    ),
     features: [
-      'Smart contracts (non-turing)',
-      'Hardware wallets, shapeshift',
-      'Mobile apps update',
-      'Decentralized voting',
-      'Simple messaging',
+      <FormattedMessage
+        id="home.plannedFeatures.0.features.0"
+        defaultMessage="Smart contracts (non-turing)"
+      />,
+      <FormattedMessage
+        id="home.plannedFeatures.0.features.1"
+        defaultMessage="Hardware wallets, shapeshift"
+      />,
+      <FormattedMessage
+        id="home.plannedFeatures.0.features.2"
+        defaultMessage="Mobile apps update"
+      />,
+      <FormattedMessage
+        id="home.plannedFeatures.0.features.3"
+        defaultMessage="Decentralized voting"
+      />,
+      <FormattedMessage id="home.plannedFeatures.0.features.4" defaultMessage="Simple messaging" />,
     ],
   },
   {
-    shippingDate: 'Spring–Summer 2018',
-    features: ['Atomic swap', 'Voting (front-end)'],
+    shippingDate: (
+      <FormattedMessage
+        id="home.plannedFeatures.1.shippingDate"
+        defaultMessage="Spring–Summer 2018"
+      />
+    ),
+    features: [
+      <FormattedMessage id="home.plannedFeatures.1.features.0" defaultMessage="Atomic swap" />,
+      <FormattedMessage
+        id="home.plannedFeatures.1.features.1"
+        defaultMessage="Voting (front-end)"
+      />,
+    ],
   },
   {
-    shippingDate: 'Summer-Fall 2018',
-    features: ['Messaging, off-chain, front-end'],
+    shippingDate: (
+      <FormattedMessage
+        id="home.plannedFeatures.2.shippingDate"
+        defaultMessage="Summer-Fall 2018"
+      />
+    ),
+    features: [
+      <FormattedMessage
+        id="home.plannedFeatures.2.features.0"
+        defaultMessage="Messaging, off-chain, front-end"
+      />,
+    ],
   },
   {
-    shippingDate: 'Fall-Winter 2018',
-    features: ['Lite-client', 'Turing complete smart contracts'],
+    shippingDate: (
+      <FormattedMessage
+        id="home.plannedFeatures.3.shippingDate"
+        defaultMessage="Fall-Winter 2018"
+      />
+    ),
+    features: [
+      <FormattedMessage id="home.plannedFeatures.3.features.0" defaultMessage="Lite-client" />,
+      <FormattedMessage
+        id="home.plannedFeatures.3.features.1"
+        defaultMessage="Turing complete smart contracts"
+      />,
+    ],
   },
 ];
 
@@ -63,8 +111,8 @@ const Block = ({ classes, features, shippingDate }) => (
 );
 
 Block.propTypes = {
-  features: PropTypes.arrayOf(PropTypes.string),
-  shippingDate: PropTypes.string,
+  features: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.element])),
+  shippingDate: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 const PlannedFeatures = ({ classes }) => (
