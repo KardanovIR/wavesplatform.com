@@ -24,6 +24,8 @@ import ru from 'react-intl/locale-data/ru';
 
 addLocaleData([...en, ...ru]);
 
+// Cookies
+import { CookiesProvider } from 'react-cookie';
 
 // custom middleware
 import customMiddleware from './middleware';
@@ -63,7 +65,9 @@ function run(Component, {
             <Provider store={store}>
                 <IntlProvider locale={getLocale()} defaultLocale="en" messages={getMessages()}>
                     <AnchorScrollProvider>
-                        {Component}
+                        <CookiesProvider>
+                            {Component}
+                        </CookiesProvider>
                     </AnchorScrollProvider>
                 </IntlProvider>
             </Provider>
