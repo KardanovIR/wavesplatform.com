@@ -5,20 +5,10 @@ import MainScreen from 'src/common/components/MainScreen';
 import { FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = () => (
-    <MainScreen
-        title={
-            <FormattedMessage
-                id="leasing.title"
-                defaultMessage="Use your WAVES balance to generate income"
-            />
-        }
-        text={
-            <FormattedMessage
-                id="leasing.text"
-                defaultMessage="By helping secure the Waves blockchain you can earn up to 5% per year on your WAVES balance. Simply lease your WAVES to a mining pool and you will receive a share of transaction fees in proportion to the amount you commit. "
-            />
-        }
-    />
+  <MainScreen
+    title={<FormattedMessage id="leasing.title" />}
+    text={<FormattedMessage id="leasing.text" />}
+  />
 );
 
 export default DevelopersMainScreen;

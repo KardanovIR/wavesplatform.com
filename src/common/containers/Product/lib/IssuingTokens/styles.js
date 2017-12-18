@@ -3,7 +3,7 @@ import token from './img/token.svg';
 const styles = theme => ({
   title: {
     marginBottom: theme.spacing.unit * 8,
-    fontSize: 50
+    fontSize: 50,
   },
   imageWrapper: {
     position: 'relative',
@@ -24,7 +24,7 @@ const styles = theme => ({
   [theme.mixins.atMedia('md')]: {
     title: {
       marginBottom: theme.spacing.unit * 5,
-      fontSize: 80
+      fontSize: 80,
     },
     buttonWrapper: {
       display: 'inline-block',
@@ -34,7 +34,7 @@ const styles = theme => ({
       width: '120%',
       height: '120%',
       top: -90,
-      left: '10%'
+      left: '10%',
     },
   },
 });

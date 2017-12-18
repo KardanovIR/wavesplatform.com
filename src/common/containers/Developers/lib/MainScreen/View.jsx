@@ -7,18 +7,8 @@ import { FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
   <MainScreen
-    title={
-      <FormattedMessage
-        id="developers.title"
-        defaultMessage="Build applications on the blockchain"
-      />
-    }
-    text={
-      <FormattedMessage
-        id="developers.text"
-        defaultMessage="These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property."
-      />
-    }
+    title={<FormattedMessage id="developers.title" />}
+    text={<FormattedMessage id="developers.text" />}
     buttons={[
       <IconButton
         onClick={onDocumentationClick}
@@ -28,10 +18,7 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
         iconName="github"
         secondary
       >
-        <FormattedMessage
-          id="developers.cta.documentation"
-          defaultMessage="Documentation"
-        />
+        <FormattedMessage id="developers.cta.documentation" />
       </IconButton>,
     ]}
     inverted={inverted}

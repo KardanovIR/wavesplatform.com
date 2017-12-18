@@ -60,6 +60,7 @@
     "socket.io-client": "^2.0.3",
     "subscribe-ui-event": "^1.0.14",
     "swiper": "^4.0.7",
+    "universal-cookie-koa": "^2.1.2",
     "whatwg-fetch": "^2.0.3",
     "winston": "^2.3.1"
   },

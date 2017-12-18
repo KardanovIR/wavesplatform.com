@@ -14,6 +14,6 @@ export default theme => ({
     backgroundColor: '#000',
   },
   bgDEX: {
-    position: 'relative'
+    position: 'relative',
   },
 });

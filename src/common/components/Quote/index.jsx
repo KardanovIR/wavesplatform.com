@@ -26,7 +26,8 @@ const styles = theme => ({
     overflow: 'hidden',
   },
   quote: {
-    color: ({inverted}) => inverted ? theme.palette.gray[0] : theme.palette.gray[800],
+    color: ({ inverted }) =>
+      inverted ? theme.palette.gray[0] : theme.palette.gray[800],
   },
   withQuotes: {
     '&:before': {
@@ -50,15 +51,31 @@ const styles = theme => ({
   },
 });
 
-const Quote = ({ classes, avatar, children, withQuotes, signature, inverted, className}) => (
+const Quote = ({
+  classes,
+  avatar,
+  children,
+  withQuotes,
+  signature,
+  inverted,
+  className,
+}) => (
   <div className={cx(classes.wrapper, className)}>
     {avatar && <div className={classes.avatarWrapper}>{avatar}</div>}
     <div>
-      <Typography type="quote" className={cx(classes.quote, {[classes.withQuotes]: withQuotes})} inverted={inverted}>
+      <Typography
+        type="quote"
+        className={cx(classes.quote, { [classes.withQuotes]: withQuotes })}
+        inverted={inverted}
+      >
         {children}
       </Typography>
       {signature && (
-        <Typography type="body" className={classes.signature} inverted={inverted}>
+        <Typography
+          type="body"
+          className={classes.signature}
+          inverted={inverted}
+        >
           <br />
           &mdash; {signature}
         </Typography>

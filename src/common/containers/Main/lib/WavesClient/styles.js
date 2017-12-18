@@ -13,7 +13,7 @@ const styles = theme => ({
     width: '100%',
     bottom: -100,
     margin: [theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
-    maxWidth: 420
+    maxWidth: 420,
   },
   imageWrapper: {
     position: 'relative',
@@ -36,7 +36,7 @@ const styles = theme => ({
       right: -theme.spacing.unit * 3,
       bottom: -110,
       width: '50%',
-      maxWidth: '100%'
+      maxWidth: '100%',
     },
     image: {
       width: 'auto',

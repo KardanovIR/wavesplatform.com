@@ -14,30 +14,30 @@ const DEX = ({ classes }) => (
   <div className={classes.root}>
     <Row className={classes.titleRow}>
       <Col xs={12} sm={7} md={7}>
-        <Typography type="display5" tagName="div" className={classes.title} inverted>
-          <FormattedMessage id="home.DEX.title" defaultMessage="Decentralised Exchange" />
+        <Typography
+          type="display5"
+          tagName="div"
+          className={classes.title}
+          inverted
+        >
+          <FormattedMessage id="home.DEX.title" />
         </Typography>
       </Col>
       <div className={classes.imageWrapper}>
-        <img src={require('./img/dexmain@1x.jpg')} srcSet={`${require('./img/dexmain@1x.jpg')} 1x, ${require('./img/dexmain@2x.jpg')} 2x`} alt="" className={classes.image} />
+        <img
+          src={require('./img/dexmain@1x.jpg')}
+          srcSet={`${require('./img/dexmain@1x.jpg')} 1x, ${require('./img/dexmain@2x.jpg')} 2x`}
+          alt=""
+          className={classes.image}
+        />
       </div>
     </Row>
     <Row>
       <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
-            title={
-              <FormattedMessage
-                id="home.DEX.tradeNoLimits.title"
-                defaultMessage="Trade without limits"
-              />
-            }
-            text={
-              <FormattedMessage
-                id="home.DEX.tradeNoLimits.text"
-                defaultMessage="There are no limits on withdrawals, and any cryptocurrency purchased immediately appears in your wallet’s balance."
-              />
-            }
+            title={<FormattedMessage id="home.DEX.tradeNoLimits.title" />}
+            text={<FormattedMessage id="home.DEX.tradeNoLimits.text" />}
             textType="body2"
             inverted
           />
@@ -46,18 +46,8 @@ const DEX = ({ classes }) => (
       <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
-            title={
-              <FormattedMessage
-                id="home.DEX.tradeQuickly.title"
-                defaultMessage="Trade quickly and safely"
-              />
-            }
-            text={
-              <FormattedMessage
-                id="home.DEX.tradeQuickly.text"
-                defaultMessage="A centralised matcher and high channel capacity allow you to make deals as quickly as on a centralised exchange, but without the risk of losing your money."
-              />
-            }
+            title={<FormattedMessage id="home.DEX.tradeQuickly.title" />}
+            text={<FormattedMessage id="home.DEX.tradeQuickly.text" />}
             textType="body2"
             inverted
           />
@@ -66,18 +56,8 @@ const DEX = ({ classes }) => (
       <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
-            title={
-              <FormattedMessage
-                id="home.DEX.fees.title"
-                defaultMessage="Don’t waste money on high commission fees"
-              />
-            }
-            text={
-              <FormattedMessage
-                id="home.DEX.fees.text"
-                defaultMessage="Our exchange has a small fixed commission on a per-order basis."
-              />
-            }
+            title={<FormattedMessage id="home.DEX.fees.title" />}
+            text={<FormattedMessage id="home.DEX.fees.text" />}
             textType="body2"
             inverted
           />
@@ -86,18 +66,8 @@ const DEX = ({ classes }) => (
       <Col xs={12} sm={6} className={classes.article}>
         <Margin bottom={5}>
           <Article
-            title={
-              <FormattedMessage
-                id="home.DEX.safety.title"
-                defaultMessage="Never worry about the safety of your assets"
-              />
-            }
-            text={
-              <FormattedMessage
-                id="home.DEX.safety.text"
-                defaultMessage="Funds are kept in your wallet, not on the exchange."
-              />
-            }
+            title={<FormattedMessage id="home.DEX.safety.title" />}
+            text={<FormattedMessage id="home.DEX.safety.text" />}
             textType="body2"
             inverted
           />

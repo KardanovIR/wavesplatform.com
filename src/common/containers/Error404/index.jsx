@@ -39,8 +39,8 @@ const styles = theme => ({
   button: {
     backgroundColor: '#fff',
     borderColor: '#fff',
-    color: '#002eff'
-  }
+    color: '#002eff',
+  },
 });
 
 const PageLayout = ({ classes }) => (
@@ -50,17 +50,14 @@ const PageLayout = ({ classes }) => (
         <Typography type="display4" inverted>
           404
           <br />
-          <FormattedMessage id="error404.notFound" defaultMessage="Page not found" />
+          <FormattedMessage id="error404.notFound" />
         </Typography>
         <Typography type="body" inverted>
-          <FormattedMessage
-            id="error404.sorry"
-            defaultMessage="Sorry, this is not the web page you are looking for."
-          />
+          <FormattedMessage id="error404.sorry" />
         </Typography>
         <Margin bottom={3} />
         <Button secondary inverted href="/" className={classes.button}>
-          <FormattedMessage id="error404.backHome" defaultMessage="Back home" />
+          <FormattedMessage id="error404.backHome" />
         </Button>
       </div>
     </div>

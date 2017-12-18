@@ -12,74 +12,31 @@ import styles from './styles';
 
 const FEATURES_LIST = [
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.0.shippingDate"
-        defaultMessage="Winter–Spring 2018"
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.0.shippingDate" />,
     features: [
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.0"
-        defaultMessage="Smart contracts (non-turing)"
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.1"
-        defaultMessage="Hardware wallets, shapeshift"
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.2"
-        defaultMessage="Mobile apps update"
-      />,
-      <FormattedMessage
-        id="home.plannedFeatures.0.features.3"
-        defaultMessage="Decentralized voting"
-      />,
-      <FormattedMessage id="home.plannedFeatures.0.features.4" defaultMessage="Simple messaging" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.1" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.2" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.3" />,
+      <FormattedMessage id="home.plannedFeatures.0.features.4" />,
     ],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.1.shippingDate"
-        defaultMessage="Spring–Summer 2018"
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.1.shippingDate" />,
     features: [
-      <FormattedMessage id="home.plannedFeatures.1.features.0" defaultMessage="Atomic swap" />,
-      <FormattedMessage
-        id="home.plannedFeatures.1.features.1"
-        defaultMessage="Voting (front-end)"
-      />,
+      <FormattedMessage id="home.plannedFeatures.1.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.1.features.1" />,
     ],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.2.shippingDate"
-        defaultMessage="Summer-Fall 2018"
-      />
-    ),
-    features: [
-      <FormattedMessage
-        id="home.plannedFeatures.2.features.0"
-        defaultMessage="Messaging, off-chain, front-end"
-      />,
-    ],
+    shippingDate: <FormattedMessage id="home.plannedFeatures.2.shippingDate" />,
+    features: [<FormattedMessage id="home.plannedFeatures.2.features.0" />],
   },
   {
-    shippingDate: (
-      <FormattedMessage
-        id="home.plannedFeatures.3.shippingDate"
-        defaultMessage="Fall-Winter 2018"
-      />
-    ),
+    shippingDate: <FormattedMessage id="home.plannedFeatures.3.shippingDate" />,
     features: [
-      <FormattedMessage id="home.plannedFeatures.3.features.0" defaultMessage="Lite-client" />,
-      <FormattedMessage
-        id="home.plannedFeatures.3.features.1"
-        defaultMessage="Turing complete smart contracts"
-      />,
+      <FormattedMessage id="home.plannedFeatures.3.features.0" />,
+      <FormattedMessage id="home.plannedFeatures.3.features.1" />,
     ],
   },
 ];
@@ -111,14 +68,16 @@ const Block = ({ classes, features, shippingDate }) => (
 );
 
 Block.propTypes = {
-  features: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.element])),
+  features: PropTypes.arrayOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+  ),
   shippingDate: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 const PlannedFeatures = ({ classes }) => (
   <div className={classes.root}>
     <Typography type="display3">
-      <FormattedMessage id="home.plannedFeatures.title" defaultMessage="Planned Features" />
+      <FormattedMessage id="home.plannedFeatures.title" />
     </Typography>
     <Margin bottom={4} />
     {FEATURES_LIST.map((block, i) => (

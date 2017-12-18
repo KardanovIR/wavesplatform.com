@@ -15,62 +15,32 @@ import ImagePoWMobile from '!svg-react-loader!./img/pow-mobile.svg';
 import { FormattedMessage } from 'react-intl';
 
 const Algorithms = () => (
-    <div>
-        <SectionTitleText
-            title={
-                <FormattedMessage
-                    id="mining.algorithms.title"
-                    defaultMessage="Mining in Waves"
-                />
-            }
-            text={
-                <FormattedMessage
-                    id="mining.algorithms.text"
-                    defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
-                />
-            }
+  <div>
+    <SectionTitleText
+      title={<FormattedMessage id="mining.algorithms.title" />}
+      text={<FormattedMessage id="mining.algorithms.text" />}
+    />
+    <Row>
+      <Col xs={12} sm={6}>
+        <Card
+          title={<FormattedMessage id="mining.algorithms.pow.title" />}
+          imageMobile={<ImagePoWMobile />}
+          image={<ImagePoW />}
+          text={<FormattedMessage id="mining.algorithms.pow.text" />}
         />
-        <Row>
-            <Col xs={12} sm={6}>
-                <Card
-                    title={
-                        <FormattedMessage
-                            id="mining.algorithms.pow.title"
-                            defaultMessage="Proof-of-work"
-                        />
-                    }
-                    imageMobile={<ImagePoWMobile />}
-                    image={<ImagePoW />}
-                    text={
-                        <FormattedMessage
-                            id="mining.algorithms.pow.text"
-                            defaultMessage="Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work. "
-                        />
-                    }
-                />
-                <Margin bottom={4} xsOnly />
-            </Col>
-            <Col xs={12} sm={6}>
-                <Card
-                    title={
-                        <FormattedMessage
-                            id="mining.algorithms.pos.title"
-                            defaultMessage="Proof-of-stake"
-                        />
-                    }
-                    imageMobile={<ImagePoSMobile />}
-                    image={<ImagePoS />}
-                    text={
-                        <FormattedMessage
-                            id="mining.algorithms.pos.text"
-                            defaultMessage="Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance."
-                        />
-                    }
-                />
-                <Margin bottom={4} xsOnly />
-            </Col>
-        </Row>
-    </div>
+        <Margin bottom={4} xsOnly />
+      </Col>
+      <Col xs={12} sm={6}>
+        <Card
+          title={<FormattedMessage id="mining.algorithms.pos.title" />}
+          imageMobile={<ImagePoSMobile />}
+          image={<ImagePoS />}
+          text={<FormattedMessage id="mining.algorithms.pos.text" />}
+        />
+        <Margin bottom={4} xsOnly />
+      </Col>
+    </Row>
+  </div>
 );
 
 export default Algorithms;

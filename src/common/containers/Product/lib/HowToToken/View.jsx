@@ -13,10 +13,7 @@ const HowToStart = ({ onGetClientClick }) => (
         avatar: <IconProduct name="cloud" />,
         text: (
           <div>
-            <FormattedHTMLMessage
-              id="product.howToToken.step1"
-              defaultMessage="First, install the Waves client"
-            />
+            <FormattedHTMLMessage id="product.howToToken.step1" />
             <br />
             <Link
               onClick={onGetClientClick}
@@ -32,21 +29,11 @@ const HowToStart = ({ onGetClientClick }) => (
       },
       {
         avatar: <IconProduct name="coins" />,
-        text: (
-          <FormattedMessage
-            id="product.howToToken.step2"
-            defaultMessage="Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
-          />
-        ),
+        text: <FormattedMessage id="product.howToToken.step2" />,
       },
       {
         avatar: <IconProduct name="dex" />,
-        text: (
-          <FormattedMessage
-            id="product.howToToken.step3"
-            defaultMessage="You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance."
-          />
-        ),
+        text: <FormattedMessage id="product.howToToken.step3" />,
       },
     ]}
   />

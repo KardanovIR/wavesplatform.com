@@ -16,13 +16,13 @@ const styles = theme => ({
     [theme.mixins.atMedia(414)]: {
       width: '50%',
       display: 'inline-block',
-      padding: '0 10px 0 0'
+      padding: '0 10px 0 0',
     },
 
     [theme.mixins.atMedia('sm')]: {
       width: '100%',
-      display: 'block'
-    }
+      display: 'block',
+    },
   },
   'button-wrapper-left': {
     composes: '$buttonWrapper',
@@ -72,9 +72,20 @@ const Text = ({ text }) =>
     </Typography>
   ));
 
-const PictureBlock = ({ classes, title, subtitle, image, text, buttons, align }) => (
+const PictureBlock = ({
+  classes,
+  title,
+  subtitle,
+  image,
+  text,
+  buttons,
+  align,
+}) => (
   <div>
-    <Row className={align === 'right' ? classes.rowRight : ''} style={{ alignItems: 'flex-start' }}>
+    <Row
+      className={align === 'right' ? classes.rowRight : ''}
+      style={{ alignItems: 'flex-start' }}
+    >
       <Col xs={12}>
         <Row>
           <Col xs={12} sm={8} lg={7}>
@@ -91,7 +102,10 @@ const PictureBlock = ({ classes, title, subtitle, image, text, buttons, align })
 
       <Col xs={12} sm={5} md={4}>
         {buttons.map((button, index) => (
-          <div className={classes[`button-wrapper-${align}`]} key={`devs_block_button_${index}`}>
+          <div
+            className={classes[`button-wrapper-${align}`]}
+            key={`devs_block_button_${index}`}
+          >
             {button}
           </div>
         ))}
@@ -99,7 +113,11 @@ const PictureBlock = ({ classes, title, subtitle, image, text, buttons, align })
         {text && image && <Margin bottom={3} />}
         {text && image && <Text text={text} />}
       </Col>
-      {image && <Col xs={12} md={8}>{image}</Col>}
+      {image && (
+        <Col xs={12} md={8}>
+          {image}
+        </Col>
+      )}
 
       {text &&
         !image && (

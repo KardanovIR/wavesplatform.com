@@ -35,10 +35,14 @@ const Layout = ({
 }) => (
   <div className={classes.body}>
     <div className={classes.navigationWrapper}>
-      <Navigation desktopLinks={DESKTOP_LINKS} mobileLinks={MOBILE_LINKS} activeLink={activeLink} />
+      <Navigation
+        desktopLinks={DESKTOP_LINKS}
+        mobileLinks={MOBILE_LINKS}
+        activeLink={activeLink}
+      />
       <LanguageChooser />
     </div>
-      {children}
+    {children}
     <Wrapper>
       {!hideFooter && <Footer links={MOBILE_LINKS} />}
       {/* {!hideSnackbar && <SnackbarStressTest />} */}

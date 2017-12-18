@@ -11,110 +11,102 @@ import { FormattedMessage, FormattedNumber } from 'react-intl';
 
 import injectSheet from 'react-jss';
 const styles = ({ palette, spacing, breakpoints }) => ({
-    nodeLink: {
-        float: 'right',
-        fontSize: 20,
-        lineHeight: 1,
-    },
-    spaced: {
-        margin: [spacing.unit * 1.5, 0],
-    },
+  nodeLink: {
+    float: 'right',
+    fontSize: 20,
+    lineHeight: 1,
+  },
+  spaced: {
+    margin: [spacing.unit * 1.5, 0],
+  },
+  copyToClipboard: {
+    marginTop: spacing.unit,
+    borderRadius: spacing.radius,
+    padding: [spacing.unit, spacing.unit * 1],
+    border: [1, 'solid', palette.gray[100]],
+    background: palette.gray[50],
+  },
+  copyToClipboardText: {
+    color: palette.primary[700],
+    fontSize: '9px',
+  },
+  [breakpoints.up('md')]: {
     copyToClipboard: {
-        marginTop: spacing.unit,
-        borderRadius: spacing.radius,
-        padding: [spacing.unit, spacing.unit * 1],
-        border: [1, 'solid', palette.gray[100]],
-        background: palette.gray[50],
+      padding: [spacing.unit, spacing.unit * 2],
     },
     copyToClipboardText: {
-        color: palette.primary[700],
-        fontSize: '9px',
+      fontSize: '12px',
     },
-    [breakpoints.up('md')]: {
-        copyToClipboard: {
-            padding: [spacing.unit, spacing.unit * 2],
-        },
-        copyToClipboardText: {
-            fontSize: '12px',
-        },
-    },
+  },
 });
 
 const Node = ({ name, balance, share, classes, address, href }) => (
-    <Panel>
-        <Link href={href} target="_blank" className={classes.nodeLink} textDecoration={false} />
+  <Panel>
+    <Link
+      href={href}
+      target="_blank"
+      className={classes.nodeLink}
+      textDecoration={false}
+    />
 
-        <Link href={href} target="_blank" textDecoration={false} icon={null}>
-            <Typography tagName="span" type="display1">
-                {name}
-            </Typography>
-        </Link>
+    <Link href={href} target="_blank" textDecoration={false} icon={null}>
+      <Typography tagName="span" type="display1">
+        {name}
+      </Typography>
+    </Link>
 
-        <Margin />
+    <Margin />
 
-        <Divider />
+    <Divider />
 
-        <div className={classes.spaced}>
-            <Row>
-                <Col xs={4}>
-                    <Typography type="body">
-                        <FormattedMessage
-                            id="balance"
-                            defaultMessage="Balance"
-                        />
-                    </Typography>
-                </Col>
+    <div className={classes.spaced}>
+      <Row>
+        <Col xs={4}>
+          <Typography type="body">
+            <FormattedMessage id="balance" />
+          </Typography>
+        </Col>
 
-                <Col xs={8}>
-                    <Typography type="body" align="right">
-                        <FormattedNumber
-                            value={balance}
-                            maximumFractionDigits={0}
-                        />{' '}
-                        WAVES
-                    </Typography>
-                </Col>
-            </Row>
-        </div>
+        <Col xs={8}>
+          <Typography type="body" align="right">
+            <FormattedNumber value={balance} maximumFractionDigits={0} /> WAVES
+          </Typography>
+        </Col>
+      </Row>
+    </div>
 
-        <Divider />
+    <Divider />
 
-        <div className={classes.spaced}>
-            <Row>
-                <Col xs={4}>
-                    <Typography type="body">
-                        <FormattedMessage
-                            id="mining.nodes.share"
-                            defaultMessage="Share"
-                        />
-                    </Typography>
-                </Col>
+    <div className={classes.spaced}>
+      <Row>
+        <Col xs={4}>
+          <Typography type="body">
+            <FormattedMessage id="mining.nodes.share" />
+          </Typography>
+        </Col>
 
-                <Col xs={8}>
-                    <Typography type="numeral" align="right">
-                        <FormattedNumber value={share} /> %
-                    </Typography>
-                </Col>
-            </Row>
-        </div>
+        <Col xs={8}>
+          <Typography type="numeral" align="right">
+            <FormattedNumber value={share} /> %
+          </Typography>
+        </Col>
+      </Row>
+    </div>
 
-        <Margin bottom={2}>
-            <Divider />
-        </Margin>
+    <Margin bottom={2}>
+      <Divider />
+    </Margin>
 
-        <Typography type="body">
-            <FormattedMessage
-                id="mining.nodes.copyAddress"
-                defaultMessage="Copy leasing address"
-            />
-        </Typography>
+    <Typography type="body">
+      <FormattedMessage id="mining.nodes.copyAddress" />
+    </Typography>
 
-        <div className={classes.copyToClipboard}>
-            <Typography className={classes.copyToClipboardText} type="body">
-                {address}
-            </Typography>
-        </div>
-    </Panel>
+    <div className={classes.copyToClipboard}>
+      <Typography className={classes.copyToClipboardText} type="body">
+        {address}
+      </Typography>
+    </div>
+  </Panel>
 );
 
 export default injectSheet(styles)(Node);

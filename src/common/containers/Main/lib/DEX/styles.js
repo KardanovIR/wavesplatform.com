@@ -1,31 +1,30 @@
-
 const styles = theme => ({
   root: {
-    position: 'relative'
+    position: 'relative',
   },
   titleRow: {
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   title: {
     position: 'relative',
-    zIndex: 2
+    zIndex: 2,
   },
   article: {
     marginBottom: theme.spacing.unit * 4,
     position: 'relative',
-    zIndex: 2
+    zIndex: 2,
   },
   imageWrapper: {
     position: 'relative',
     right: -20,
-    margin: [theme.spacing.unit * 1, 0, theme.spacing.unit * 3]
+    margin: [theme.spacing.unit * 1, 0, theme.spacing.unit * 3],
   },
   image: {
     width: '100%',
   },
   [theme.mixins.atMedia('sm')]: {
     titleRow: {
-      justifyContent: 'flex-start'
+      justifyContent: 'flex-start',
     },
     title: {
       marginBottom: theme.spacing.unit * 37,
@@ -35,7 +34,7 @@ const styles = theme => ({
       top: -70,
       right: 100,
       width: '50%',
-      zIndex: 1
+      zIndex: 1,
     },
     image: {
       width: '150%',
@@ -47,7 +46,7 @@ const styles = theme => ({
   [theme.mixins.atMedia('md')]: {
     imageWrapper: {
       right: 40,
-    }
+    },
   },
   [theme.mixins.atMedia('lg')]: {
     image: {

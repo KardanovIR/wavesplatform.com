@@ -8,7 +8,13 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 import HowToBlock from 'src/common/components/HowToBlock';
 
-const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }) => (
+const HowToWallet = ({
+  children,
+  title,
+  getClientClick,
+  eventPage,
+  eventSource,
+}) => (
   <div>
     {children}
     <HowToBlock
@@ -18,13 +24,12 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
           avatar: <IconProduct name="cloud" />,
           text: (
             <div>
-              <FormattedHTMLMessage
-                id="howToWallet.step1"
-                defaultMessage="First, install the Waves client"
-              />
-              <br/>
+              <FormattedHTMLMessage id="howToWallet.step1" />
+              <br />
               <Link
-                onClick={() => getClientClick({ page: eventPage, source: eventSource })}
+                onClick={() =>
+                  getClientClick({ page: eventPage, source: eventSource })
+                }
                 key="main_cta_button"
                 target="_blank"
                 href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
@@ -38,21 +43,11 @@ const HowToWallet = ({ children, title, getClientClick, eventPage, eventSource }
         },
         {
           avatar: <IconProduct name="coins" />,
-          text: (
-            <FormattedMessage
-              id="howToWallet.step2"
-              defaultMessage="Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros."
-            />
-          ),
+          text: <FormattedMessage id="howToWallet.step2" />,
         },
         {
           avatar: <IconProduct name="dex" />,
-          text: (
-            <FormattedMessage
-              id="howToWallet.step3"
-              defaultMessage="You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client."
-            />
-          ),
+          text: <FormattedMessage id="howToWallet.step3" />,
         },
       ]}
     />

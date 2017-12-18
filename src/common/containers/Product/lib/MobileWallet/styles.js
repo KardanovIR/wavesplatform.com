@@ -1,20 +1,17 @@
 const styles = theme => ({
-  root: {
-
-  },
+  root: {},
   imageWrapper: {
     position: 'relative',
     paddingTop: '98%',
     overflow: 'visible',
   },
   imageCol: {
-    display: 'none'
+    display: 'none',
   },
   image: {
     position: 'absolute',
     zIndex: -1,
     top: 0,
-
   },
   buttonWrapper: {
     display: 'inline-block',
@@ -22,7 +19,7 @@ const styles = theme => ({
   },
   [theme.breakpoints.up('sm')]: {
     root: {
-      paddingTop: theme.spacing.unit * 7
+      paddingTop: theme.spacing.unit * 7,
     },
     imageCol: {
       display: 'block',
@@ -31,13 +28,13 @@ const styles = theme => ({
     },
     image: {
       top: '-60%',
-      left: '-90%'
+      left: '-90%',
       // bottom: '80%'
     },
   },
   [theme.breakpoints.up('md')]: {
     image: {
-      left: 0
+      left: 0,
     },
   },
 });

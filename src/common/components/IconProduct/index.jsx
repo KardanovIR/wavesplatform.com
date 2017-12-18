@@ -11,7 +11,8 @@ const IconProduct = ({ classes, className, name, circle, style, size }) => {
   const IconComponent = IconsMap[name];
 
   if (process.env.NODE_ENV !== 'production') {
-    if (!IconComponent) console.warn(`Icon '${name}' not found. Please check icon imports`);
+    if (!IconComponent)
+      console.warn(`Icon '${name}' not found. Please check icon imports`);
   }
 
   const wrapperStyles = cn(

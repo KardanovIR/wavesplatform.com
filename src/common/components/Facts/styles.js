@@ -6,7 +6,7 @@ const styles = theme => ({
     text: {
       fontWeight: 500,
     },
-  }
+  },
 });
 
 export default styles;

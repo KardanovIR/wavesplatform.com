@@ -1,6 +1,6 @@
 const styles = theme => ({
   '@global .swiper-wrapper': {
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   slide: {
     display: 'flex',
@@ -13,7 +13,7 @@ const styles = theme => ({
   },
   row: {
     height: '100%',
-    position: 'relative'
+    position: 'relative',
   },
   body: {
     marginTop: -theme.spacing.unit * 1,
@@ -22,21 +22,21 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
   },
   quote: {
-    marginTop: theme.spacing.unit * 1.5
+    marginTop: theme.spacing.unit * 1.5,
   },
   title: {
     paddingRight: theme.spacing.unit * 4,
-    lineHeight: 1.3
+    lineHeight: 1.3,
   },
   text: {
-    paddingRight: theme.spacing.unit * 4
+    paddingRight: theme.spacing.unit * 4,
   },
   link: {
     fontWeight: 600,
   },
   image: {
     display: 'block',
-    width: '100%'
+    width: '100%',
   },
   popupContainer: {
     paddingTop: theme.spacing.unit * 6,
@@ -55,9 +55,9 @@ const styles = theme => ({
       backgroundSize: 'cover',
       backgroundPosition: '50% 50%',
       height: 690,
-      boxSizing: 'border-box'
+      boxSizing: 'border-box',
     },
-  }
+  },
 });
 
 export default styles;

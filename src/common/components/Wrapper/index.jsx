@@ -8,15 +8,13 @@ const styles = theme => {
     container: {
       maxWidth: theme.breakpoints.desktop1366,
       margin: '0 auto',
-      height: '100%'
+      height: '100%',
     },
   };
 };
 
 const Wrapper = ({ classes, children, className }) => (
-  <div className={cn(classes.container, className)}>
-    {children}
-  </div>
+  <div className={cn(classes.container, className)}>{children}</div>
 );
 
 export default injectSheet(styles)(Wrapper);

@@ -49,7 +49,7 @@ const styles = theme => ({
   },
 
   bordered: {
-    border: `1px solid ${theme.palette.opaque(theme.palette.gray[1000], .9)}`,
+    border: `1px solid ${theme.palette.opaque(theme.palette.gray[1000], 0.9)}`,
     backgroundColor: 'transparent',
 
     '& $content, & $spinner': {

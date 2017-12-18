@@ -36,7 +36,7 @@ const styles = () => ({
   children: {
     position: 'relative',
     zIndex: 1,
-    height: '100%'
+    height: '100%',
   },
 
   centered: flexCentered,
@@ -59,7 +59,18 @@ const styles = () => ({
   },
 });
 
-const MainScreenBackground = ({ classes, children, className, type, src, videoSrc, videoSrcMobile, srcSet, videoFirstFrame, videoFirstFrameMobile }) => (
+const MainScreenBackground = ({
+  classes,
+  children,
+  className,
+  type,
+  src,
+  videoSrc,
+  videoSrcMobile,
+  srcSet,
+  videoFirstFrame,
+  videoFirstFrameMobile,
+}) => (
   <div className={classes.wrapper}>
     <Wrapper>
       <div
@@ -73,12 +84,24 @@ const MainScreenBackground = ({ classes, children, className, type, src, videoSr
           className
         )}
       >
-        {videoSrc && <Video loop className={classes.image} src={videoSrc} srcMobile={videoSrcMobile} firstFrame={videoFirstFrame} firstFrameMobile={videoFirstFrameMobile} poster={src} srcSet={srcSet} />}
-        {!videoSrc && src && <img className={classes.image} src={src} srcSet={srcSet} alt="" />}
+        {videoSrc && (
+          <Video
+            loop
+            className={classes.image}
+            src={videoSrc}
+            srcMobile={videoSrcMobile}
+            firstFrame={videoFirstFrame}
+            firstFrameMobile={videoFirstFrameMobile}
+            poster={src}
+            srcSet={srcSet}
+          />
+        )}
+        {!videoSrc &&
+          src && (
+            <img className={classes.image} src={src} srcSet={srcSet} alt="" />
+          )}
       </div>
-      <div className={classes.children}>
-        {children}
-      </div>
+      <div className={classes.children}>{children}</div>
     </Wrapper>
   </div>
 );

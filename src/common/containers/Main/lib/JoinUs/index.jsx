@@ -32,25 +32,30 @@ const socialButtonStyles = theme => ({
     [theme.mixins.atMedia('sm')]: {
       float: 'left',
       marginRight: theme.spacing.unit * 2,
-    }
+    },
   },
 });
 
-const SocialButton = injectSheet(socialButtonStyles)(({ href, name, classes }) => (
-  <Button bordered inverted href={href} target="_blank" className={classes.button}>
-    <Icon name={name} size={18} color="gray-0" />
-  </Button>
-));
+const SocialButton = injectSheet(socialButtonStyles)(
+  ({ href, name, classes }) => (
+    <Button
+      bordered
+      inverted
+      href={href}
+      target="_blank"
+      className={classes.button}
+    >
+      <Icon name={name} size={18} color="gray-0" />
+    </Button>
+  )
+);
 
 const MainScreen = ({ classes }) => (
   <div>
     <Row className={classes.root}>
       <Col xs={12} sm={6} className={classes.article}>
         <Typography type="body2" className={classes.text} inverted>
-          <FormattedMessage
-            id="home.joinUs.text"
-            defaultMessage="Waves brings together blockchain enthusiasts, project founders from many different sectors, traders, investors"
-          />
+          <FormattedMessage id="home.joinUs.text" />
         </Typography>
         <Margin />
         <Typography type="display1" inverted>
@@ -59,15 +64,16 @@ const MainScreen = ({ classes }) => (
 
         <MQ query={query.sm}>
           <Margin />
-          <div className={classes.socialButtonsContainer}>{links.map(link => <SocialButton key={`social_${link.name}`} {...link} />)}</div>
+          <div className={classes.socialButtonsContainer}>
+            {links.map(link => (
+              <SocialButton key={`social_${link.name}`} {...link} />
+            ))}
+          </div>
         </MQ>
       </Col>
       <Col xs={12} sm={6} className={classes.article}>
         <Typography type="body2" className={classes.text} inverted>
-          <FormattedMessage
-            id="home.joinUs.quote"
-            defaultMessage="Keep up with the latest news and articles, and find out all about events happening on the Waves Platform"
-          />
+          <FormattedMessage id="home.joinUs.quote" />
         </Typography>
         <Margin />
         <Typography type="display1" inverted>
@@ -88,7 +94,9 @@ const MainScreen = ({ classes }) => (
       {matches =>
         !matches && (
           <div className={classes.socialButtonsContainer}>
-            {links.map(link => <SocialButton key={`social_${link.name}`} {...link} />)}
+            {links.map(link => (
+              <SocialButton key={`social_${link.name}`} {...link} />
+            ))}
           </div>
         )
       }
