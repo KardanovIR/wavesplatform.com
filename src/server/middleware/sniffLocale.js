@@ -1,6 +1,6 @@
-// import { Locales } from 'locale';
+import { Locales } from 'locale';
 
-// const supported = new Locales(["ru", "en"]);
+const supported = new Locales(['ru', 'en']);
 
 const sniffLocale = async (ctx, next) => {
   // const sniffedLocale = new Locales(ctx.req.headers["accept-language"], 'en')
