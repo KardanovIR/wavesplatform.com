@@ -37,7 +37,7 @@ export default theme => {
         padding: 0,
       },
       [theme.breakpoints.up('md')]: {
-        display: 'block',
+        marginRight: [theme.spacing.unit * 2],
       },
     },
 

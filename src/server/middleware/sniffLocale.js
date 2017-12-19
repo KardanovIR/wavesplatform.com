@@ -1,7 +1,7 @@
 import { Locales } from 'locale';
 import isProd from 'src/common/utils/isProd';
 
-const supported = ['ru', 'en'];
+const supported = ['ru', 'en', 'ko'];
 
 const cookieDomain = isProd() ? { domain: '*.wavesplatform.com' } : {};
 
