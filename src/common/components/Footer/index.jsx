@@ -32,10 +32,8 @@ const Footer = ({ classes, links }) => (
           </div>
         </Col>
 
-        <Col xs={12} md={6} className={classes.language}>
-          <Typography type="body" className={classes.textGray}>
-            <LanguageChooser />
-          </Typography>
+        <Col xs={6} md={6} className={classes.language}>
+          <LanguageChooser />
         </Col>
 
         <Col xs={12} md={6} className={cn(classes.copyright, classes.textGray)}>
@@ -59,7 +57,7 @@ const Footer = ({ classes, links }) => (
           </span>
         </Col>
 
-        <Col xs={12} md={1} className={classes.logo}>
+        <Col xs={6} md={1} className={classes.logo}>
           <a href={url('home')} className={classes.logoLink}>
             <Logo size="xs" />
           </a>

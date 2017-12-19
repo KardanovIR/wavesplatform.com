@@ -61,6 +61,7 @@ class LanguageChooser extends PureComponent {
   }
 }
 
+@injectSheet(styles)
 class LanguageOption extends PureComponent {
   static propType = {
     children: PropTypes.node,
@@ -79,14 +80,15 @@ class LanguageOption extends PureComponent {
   };
 
   render() {
-    const { option, className } = this.props;
+    const { option, className, classes } = this.props;
     const Icon = iconsMap[option.value];
     return (
       <div
-        className={cn([className])}
+        className={className}
         onClick={this.handleClick}
       >
-        <Icon /> {option.label}
+        <Icon />
+        <span className={classes.optionLabel}>{option.label}</span>
       </div>
     );
   }
