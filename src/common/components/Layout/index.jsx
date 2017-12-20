@@ -43,7 +43,7 @@ const Layout = ({
     {children}
     <Wrapper>
       {!hideFooter && <Footer links={MOBILE_LINKS} />}
-      {!hideSnackbar && <SnackbarCta text="Join our Waves community Telegram group 🏄" buttonText="JOIN" />}
+      {!hideSnackbar && <SnackbarCta text="Join our Waves community Telegram channel 🏄" buttonText="JOIN" />}
     </Wrapper>
   </div>
 );
