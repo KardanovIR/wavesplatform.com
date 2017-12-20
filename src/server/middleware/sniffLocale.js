@@ -9,7 +9,8 @@ const sniffLocale = async (ctx, next) => {
   const cookie = ctx.request.universalCookies.get('locale');
 
   if (cookie && ~supported.indexOf(cookie)) {
-    ctx.locale = cookie;
+    // @todo change when translations are ready
+    // ctx.locale = cookie;
   } else {
     const sniffedLocale = new Locales(ctx.req.headers['accept-language'], 'en')
       .best(new Locales(supported))
@@ -22,11 +23,13 @@ const sniffLocale = async (ctx, next) => {
     });
 
     // @todo change when translations are ready
-    ctx.locale = 'en';
-	}
-	
-	// @todo change when translations are ready
+    // ctx.locale = sniffedLocale;
+  }
+
+  // @todo change when translations are ready
+  ctx.locale = 'en';
   ctx.availableLocales = [];
+
   await next();
 };
 
