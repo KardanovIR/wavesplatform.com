@@ -1,33 +1,23 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import cn from 'classnames';
-import { compose } from 'ramda';
+import window from 'global/window';
+import { pathOr } from 'ramda';
 
 import { withCookies } from 'react-cookie';
-import iconsMap from './lib/iconsMap';
+import { LANGUAGE_MAP, ICONS_MAP } from './lib/constants.js';
 import Select from 'react-select';
-
+import Null from 'config/lib/NoopReact';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const LANGUAGE_MAP = {
-  en: 'English',
-  ru: 'Русский',
-  ko: '한국어',
-};
 const createOption = lang => ({ value: lang, label: LANGUAGE_MAP[lang] });
-const availableLocales =
-  typeof window !== 'undefined' && window.__AVAILABLE_LOCALES;
-
-const DEFAULT_LANG = 'en';
+const availableLocales = pathOr([], ['__AVAILABLE_LOCALES'])(window);
+const OPTIONS = availableLocales.map(createOption);
 const COOKIE_LANGUAGE_PATH = 'locale';
-const Arrow = iconsMap.arrow;
+const Arrow = ICONS_MAP.arrow;
 const arrowUp = <Arrow style={{ transform: 'rotate(180deg)' }} />;
 const arrowDown = <Arrow />;
 const arrowRenderer = ({ isOpen }) => (isOpen ? arrowUp : arrowDown);
-const Null = () => null;
-
-
 
 @injectSheet(styles)
 @withCookies
@@ -50,9 +40,9 @@ class LanguageChooser extends PureComponent {
         arrowRenderer={arrowRenderer}
         onChange={this.handleChange}
         optionComponent={LanguageOption}
-        options={availableLocales.map(createOption)}
+        options={OPTIONS}
         value={cookies.get(COOKIE_LANGUAGE_PATH)}
-        valueComponent={LanguageValue}
+        valueComponent={LanguageValueWithStyles}
         simpleValue
         searchable={false}
         clearRenderer={Null}
@@ -64,7 +54,6 @@ class LanguageChooser extends PureComponent {
 @injectSheet(styles)
 class LanguageOption extends PureComponent {
   static propType = {
-    children: PropTypes.node,
     className: PropTypes.string,
     isDisabled: PropTypes.bool,
     isFocused: PropTypes.bool,
@@ -81,12 +70,9 @@ class LanguageOption extends PureComponent {
 
   render() {
     const { option, className, classes } = this.props;
-    const Icon = iconsMap[option.value];
+    const Icon = ICONS_MAP[option.value];
     return (
-      <div
-        className={className}
-        onClick={this.handleClick}
-      >
+      <div className={className} onClick={this.handleClick}>
         <Icon />
         <span className={classes.optionLabel}>{option.label}</span>
       </div>
@@ -94,23 +80,23 @@ class LanguageOption extends PureComponent {
   }
 }
 
-@injectSheet(styles)
-class LanguageValue extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node,
-    value: PropTypes.object,
-    classes: PropTypes.object,
-  };
-  render() {
-    const { value, classes } = this.props;
-    const Icon = iconsMap[value.value];
-    return (
-      <div type="body" className={classes.value}>
-        <Icon />
-        <span className={classes.valueLabel}>{value.label}</span>
-      </div>
-    );
-  }
-}
+const LanguageValue = props => {
+  const { value, classes } = props;
+  const Icon = ICONS_MAP[value.value];
+
+  return (
+    <div type="body" className={classes.value}>
+      <Icon />
+      <span className={classes.valueLabel}>{value.label}</span>
+    </div>
+  );
+};
+
+LanguageValue.propTypes = {
+  value: PropTypes.object,
+  classes: PropTypes.object,
+};
+
+const LanguageValueWithStyles = injectSheet(styles)(LanguageValue);
 
 export default LanguageChooser;

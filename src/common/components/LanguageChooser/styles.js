@@ -1,4 +1,4 @@
-const styles = ({ spacing, mixins, colors, palette }) => {
+const styles = ({ spacing, colors, palette }) => {
   const OPTION_PADDING = [
     spacing.unit * 3 / 2,
     spacing.unit * 2,
@@ -48,20 +48,17 @@ const styles = ({ spacing, mixins, colors, palette }) => {
           height: `${spacing.unit * 3 / 2}px`,
         },
       },
-
-      '@global': {
-        '.Select-menu-outer': {
-          borderTop: `1px solid ${palette.gray[400]}`,
-          borderLeft: `1px solid ${palette.gray[400]}`,
-          borderRight: `1px solid ${palette.gray[400]}`,
-          position: 'absolute',
-          background: 'white',
-          top: 'auto',
-          bottom: 'calc(100% - 1px)',
-          zIndex: 1,
-          width: '100%',
-          left: '-1px',
-        },
+      '& .Select-menu-outer': {
+        borderTop: `1px solid ${palette.gray[400]}`,
+        borderLeft: `1px solid ${palette.gray[400]}`,
+        borderRight: `1px solid ${palette.gray[400]}`,
+        position: 'absolute',
+        background: 'white',
+        top: 'auto',
+        bottom: 'calc(100% - 1px)',
+        zIndex: 1,
+        width: '100%',
+        left: '-1px',
       },
     },
     value: {
