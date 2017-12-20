@@ -16,7 +16,7 @@ const styles = theme => ({
     left: 0,
     right: 0,
     zIndex: 100,
-    bottom: '0',
+    bottom: '-1px',
     background: '#4f77fc',
     transform: 'translateY(101%)',
     transition: theme.transitions.create(
