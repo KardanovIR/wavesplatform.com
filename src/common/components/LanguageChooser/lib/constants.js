@@ -3,9 +3,15 @@ import en from '!svg-react-loader!./svg/en.svg';
 import ru from '!svg-react-loader!./svg/ru.svg';
 import ko from '!svg-react-loader!./svg/ko.svg';
 
-export default {
+export const ICONS_MAP = {
   arrow,
   en,
   ru,
   ko,
+};
+
+export const LANGUAGE_MAP = {
+  en: 'English',
+  ru: 'Русский',
+  ko: '한국어',
 };
