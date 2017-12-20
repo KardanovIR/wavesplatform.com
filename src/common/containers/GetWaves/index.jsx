@@ -17,7 +17,7 @@ import WalletText from './lib/WalletText';
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
-import {fileUrl} from "../../utils/url";
+import { fileUrl } from '../../utils/url';
 
 const PageLayout = ({ classes }) => (
   <Layout>

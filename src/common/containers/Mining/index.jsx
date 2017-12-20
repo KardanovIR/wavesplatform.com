@@ -19,52 +19,52 @@ import Nodes from './lib/Nodes';
 
 import injectSheet from 'react-jss';
 const styles = theme => ({
-    bgRevenue: {
-        background: '#f0f4fb',
-    },
-    bgNodes: {
-        background: theme.palette.gray[50],
-    }
+  bgRevenue: {
+    background: '#f0f4fb',
+  },
+  bgNodes: {
+    background: theme.palette.gray[50],
+  },
 });
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        <MainScreenBackground type="dark">
-            <MainScreen />
-        </MainScreenBackground>
+  <Layout>
+    <MainScreenBackground type="dark">
+      <MainScreen />
+    </MainScreenBackground>
 
-        <Section top={3} bottom={4}>
-            <Algorithms />
-        </Section>
+    <Section top={3} bottom={4}>
+      <Algorithms />
+    </Section>
 
-        <Background className={classes.bgRevenue} skewed>
-            <Section size={4}>
-                <Revenue />
-            </Section>
-        </Background>
+    <Background className={classes.bgRevenue} skewed>
+      <Section size={4}>
+        <Revenue />
+      </Section>
+    </Background>
 
-        <Section size={4}>
-            <StartMining />
-        </Section>
+    <Section size={4}>
+      <StartMining />
+    </Section>
 
-        <Background className={classes.bgNodes} skewed>
-            <Section top={4}>
-                <WavesNodesMap />
-            </Section>
+    <Background className={classes.bgNodes} skewed>
+      <Section top={4}>
+        <WavesNodesMap />
+      </Section>
 
-            <Section size={2} bottom={4}>
-                <Nodes />
-            </Section>
-        </Background>
-    </Layout>
+      <Section size={2} bottom={4}>
+        <Nodes />
+      </Section>
+    </Background>
+  </Layout>
 );
 
 const Page = injectSheet(styles)(PageLayout);
 
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
 );
 
 export default App;

@@ -6,7 +6,7 @@ const styles = theme => ({
   },
   [theme.breakpoints.up('md')]: {
     image: {
-      margin: '0 auto'
+      margin: '0 auto',
     },
   },
 });

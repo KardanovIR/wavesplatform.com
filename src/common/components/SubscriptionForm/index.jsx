@@ -55,7 +55,14 @@ class SubscriptionForm extends Component {
   };
 
   render() {
-    const { classes, errors, showErrors, status, onStartOver, intl } = this.props;
+    const {
+      classes,
+      errors,
+      showErrors,
+      status,
+      onStartOver,
+      intl,
+    } = this.props;
 
     const invalid = !!(showErrors && errors.email.length);
 
@@ -86,7 +93,7 @@ class SubscriptionForm extends Component {
                   disabled={invalid}
                 >
                   <span className={classes.buttonFull}>
-                    <FormattedMessage id="form.submit" defaultMessage="Submit" />
+                    <FormattedMessage id="form.submit" />
                   </span>
                   <span className={classes.buttonIcon}>
                     <Icon name="send" size={26} />
@@ -101,10 +108,14 @@ class SubscriptionForm extends Component {
 
         {status === 'subscribed' && (
           <div>
-            <Typography type="quote" inverted align="center" className={classes.textGray}>
+            <Typography
+              type="quote"
+              inverted
+              align="center"
+              className={classes.textGray}
+            >
               <FormattedMessage
                 id="form.thanksSubscribe"
-                defaultMessage="Thanks for subscribing! Check your inbox, we've sent a confirmation letter to {email}."
                 values={{
                   email: (
                     <Typography inverted tagName="span">
@@ -116,8 +127,13 @@ class SubscriptionForm extends Component {
             </Typography>
             <Margin bottom={1} />
             <Typography type="body" inverted align="center">
-              <Link className={classes.textGray} pseudo inverted onClick={this.handleStartOver}>
-                <FormattedMessage id="form.anotherEmail" defaultMessage="Another email" />
+              <Link
+                className={classes.textGray}
+                pseudo
+                inverted
+                onClick={this.handleStartOver}
+              >
+                <FormattedMessage id="form.anotherEmail" />
               </Link>
             </Typography>
           </div>
@@ -125,14 +141,24 @@ class SubscriptionForm extends Component {
 
         {status === 'error' && (
           <div>
-            <Typography type="quote" inverted align="center" className={classes.textGray}>
-              <FormattedMessage id="form.error" defaultMessage="Sorry, something went wrong..." />
+            <Typography
+              type="quote"
+              inverted
+              align="center"
+              className={classes.textGray}
+            >
+              <FormattedMessage id="form.error" />
             </Typography>
             {!!onStartOver && (
               <Typography type="body" inverted align="center">
                 <Margin top={1} />
-                <Link className={classes.textGray} pseudo inverted onClick={this.handleStartOver}>
-                  <FormattedMessage id="form.retry" defaultMessage="Try again" />
+                <Link
+                  className={classes.textGray}
+                  pseudo
+                  inverted
+                  onClick={this.handleStartOver}
+                >
+                  <FormattedMessage id="form.retry" />
                 </Link>
               </Typography>
             )}

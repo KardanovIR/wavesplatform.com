@@ -9,13 +9,13 @@ import WavesNGReducer from 'src/common/containers/WavesNG/reducer';
 const subdomains = new Router();
 
 subdomains.get(
-    '/waves-ng',
-    render({
-        script: 'wavesNG',
-        component: WavesNG,
-        description: 'Help us test Waves-NG',
-        reducer: WavesNGReducer,
-    })
+  '/waves-ng',
+  render({
+    script: 'wavesNG',
+    component: WavesNG,
+    description: 'Help us test Waves-NG',
+    reducer: WavesNGReducer,
+  })
 );
 
 export default subdomains;

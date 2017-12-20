@@ -21,11 +21,10 @@ const Branding = ({ classes, onBrandingPackageClick }) => (
         <Typography type="body2" inverted>
           <FormattedMessage
             id="company.media.contactUs"
-            defaultMessage="For all media inquiries, please contact the Communications Team"
             values={{
               link: (
                 <Link pseudo href="#contact">
-                  <FormattedMessage id="company.media.contactUsLink" defaultMessage="contact" />
+                  <FormattedMessage id="company.media.contactUsLink" />
                 </Link>
               ),
             }}
@@ -42,7 +41,7 @@ const Branding = ({ classes, onBrandingPackageClick }) => (
           inverted
         >
           <Typography type="body2" style={{ fontSize: 22 }} inverted>
-            <FormattedMessage id="cta.brandingPackage" defaultMessage="Branding package" />
+            <FormattedMessage id="cta.brandingPackage" />
           </Typography>
         </Button>
       </Col>

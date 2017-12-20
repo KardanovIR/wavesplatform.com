@@ -16,16 +16,10 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
   <Row alignItems="left" className={classes.twoblocks}>
     <Col xs={12} sm={6} md={8} className={classes.blockText}>
       <Typography type="display2" className={classes.title}>
-        <FormattedMessage
-          id="company.whitepaper.title"
-          defaultMessage="Whitepaper"
-        />
+        <FormattedMessage id="company.whitepaper.title" />
       </Typography>
       <Typography type="body" className={classes.text} cut>
-        <FormattedMessage
-          id="company.whitepaper.text"
-          defaultMessage="WAVES is a decentralized blockchain platform focusing on custom blockchain tokens operations. National currencies transfer is maintained on the WAVES blockchain through compliant gateway operators."
-        />
+        <FormattedMessage id="company.whitepaper.text" />
       </Typography>
 
       <Margin bottom={3} />
@@ -36,10 +30,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
         target="_blank"
         secondary
       >
-        <FormattedMessage
-          id="cta.whitepaper"
-          defaultMessage="Download Whitepaper"
-        />
+        <FormattedMessage id="cta.whitepaper" />
       </Button>
     </Col>
     <Col xs={12} sm={6} md={4} className={classes.svgrow}>

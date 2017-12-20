@@ -11,7 +11,7 @@ const styles = theme => ({
     boxSizing: 'border-box',
   },
   imageWrapper: {
-    position: 'relative'
+    position: 'relative',
   },
   block: {
     position: 'absolute',
@@ -33,9 +33,7 @@ const styles = theme => ({
       zIndex: -1,
     },
   },
-  description: {
-
-  },
+  description: {},
   [theme.mixins.atMedia('md')]: {
     block: {
       padding: theme.spacing.getSpacing(1.5),
@@ -47,9 +45,7 @@ const CompanyImage = ({ classes, image, logo, description }) => (
   <div className={classes.wrapper}>
     <div className={classes.imageWrapper}>
       {image}
-      <div className={classes.block}>
-        {logo}
-      </div>
+      <div className={classes.block}>{logo}</div>
     </div>
     <Typography className={classes.description} type="muted">
       {description}

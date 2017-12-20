@@ -36,7 +36,7 @@ class Video extends Component {
   }
 
   componentDidMount() {
-    if (! this.state.canPlaysInline) {
+    if (!this.state.canPlaysInline) {
       this.setState({
         canPlaysInline: 'playsInline' in document.createElement('video'),
       });
@@ -63,12 +63,22 @@ class Video extends Component {
     const { canPlaysInline } = this.state;
 
     if (!canUseDOM) {
-      return (
-        firstFrame ? [
-          <img key="ffMob" src={firstFrameMobile} alt="" className={cx(className, classes.ssrImgMob)} />,
-          <img key="ffDesktop" src={firstFrame} alt="" className={cx(className, classes.ssrImgDesk)} />
-        ] : null
-      );
+      return firstFrame
+        ? [
+            <img
+              key="ffMob"
+              src={firstFrameMobile}
+              alt=""
+              className={cx(className, classes.ssrImgMob)}
+            />,
+            <img
+              key="ffDesktop"
+              src={firstFrame}
+              alt=""
+              className={cx(className, classes.ssrImgDesk)}
+            />,
+          ]
+        : null;
     }
 
     return (
@@ -99,15 +109,15 @@ const styles = theme => ({
   ssrImgMob: {
     display: 'block',
     [theme.mixins.atMedia('sm')]: {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   ssrImgDesk: {
     display: 'none',
     [theme.mixins.atMedia('sm')]: {
-      display: 'block'
-    }
-  }
+      display: 'block',
+    },
+  },
 });
 
 export default injectSheets(styles)(Video);

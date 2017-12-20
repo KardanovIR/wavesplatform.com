@@ -4,34 +4,35 @@ import injectSheet from 'react-jss';
 import cn from 'classnames';
 import styles from './styles';
 
-
-
 export const Panel = ({
-    classes,
-    className,
-    type,
+  classes,
+  className,
+  type,
 
-    sheet,	// eslint-disable-line
-    theme,	// eslint-disable-line
+  sheet, // eslint-disable-line
+  theme, // eslint-disable-line
 
-    element: Element,
-    
-    ...rest
+  element: Element,
+
+  ...rest
 }) => (
-        <Element
-            className={cn(classes.root, {
-                [classes.light]: type === 'light',
-                [classes.dark]: type === 'dark',
-                [classes.bordered]: type === 'bordered',
-            }, className)}
-            { ...rest }
-         />
-    )
+  <Element
+    className={cn(
+      classes.root,
+      {
+        [classes.light]: type === 'light',
+        [classes.dark]: type === 'dark',
+        [classes.bordered]: type === 'bordered',
+      },
+      className
+    )}
+    {...rest}
+  />
+);
 
 Panel.defaultProps = {
-    element: 'div',
-    type: 'light'
-}
+  element: 'div',
+  type: 'light',
+};
 
-
-export default injectSheet(styles)(Panel)
+export default injectSheet(styles)(Panel);

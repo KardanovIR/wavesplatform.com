@@ -49,8 +49,10 @@ class IOSNoBodyScroll extends Component {
     const $cc = document.querySelector(this.props.layoutContainerID);
     $cc && $cc.removeEventListener('scroll', this.blockScroll);
     $cc && $cc.removeEventListener('touchmove', this.blockScroll);
-    this.$root && this.$root.removeEventListener('touchstart', this.blockMenuScroll);
-    this.$root && this.$root.removeEventListener('touchmove', this.blockMenuScroll);
+    this.$root &&
+      this.$root.removeEventListener('touchstart', this.blockMenuScroll);
+    this.$root &&
+      this.$root.removeEventListener('touchmove', this.blockMenuScroll);
   };
 
   blockScroll = e => this.props.on && preventEvent(e);
@@ -72,7 +74,8 @@ class IOSNoBodyScroll extends Component {
               this.$container.scrollTop <= 0 && preventEvent(event);
             } else {
               this.$container.scrollTop >=
-                this.$container.scrollHeight - this.$container.offsetHeight && preventEvent(event);
+                this.$container.scrollHeight - this.$container.offsetHeight &&
+                preventEvent(event);
             }
 
             this._startY = false;
@@ -85,13 +88,13 @@ class IOSNoBodyScroll extends Component {
   };
 
   render() {
-    const {children, rootProps} = this.props;
+    const { children, rootProps } = this.props;
 
     return (
       <div {...rootProps}>
         {typeof children === 'function' &&
           children({
-            rootRef: ref => this.$root = ref,
+            rootRef: ref => (this.$root = ref),
             containerRef: ref => (this.$container = ref),
           })}
       </div>

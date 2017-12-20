@@ -58,11 +58,11 @@ class Viewport {
     return this.state_.width;
   }
 
-  _handleScroll(_, {scroll}) {
+  _handleScroll(_, { scroll }) {
     this.state_.pageY = scroll.top;
   }
 
-  _handleResize(_, {resize}) {
+  _handleResize(_, { resize }) {
     this.state_.width = resize.width;
     this.state_.height = resize.height;
   }
@@ -73,7 +73,6 @@ class Viewport {
       ...options,
     });
   }
-
 }
 
 export default new Viewport();

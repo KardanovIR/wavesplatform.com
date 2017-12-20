@@ -2,6 +2,7 @@ import 'babel-polyfill';
 
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
+import cookiesMiddleware from 'universal-cookie-koa';
 
 import Raven from 'raven';
 Raven.config(
@@ -25,8 +26,9 @@ app
   .use(initLogger)
   .use(accessLog)
   .use(serverErrorHandling)
-  .use(sniffLocale)
+  .use(cookiesMiddleware())
   .use(bodyParser())
+  .use(sniffLocale)
   .use(serveStatic)
   .use(readAssets)
   .use(router.routes());

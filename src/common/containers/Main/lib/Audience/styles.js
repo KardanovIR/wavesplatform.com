@@ -1,5 +1,5 @@
 export default {
   title: {
-    fontSize: 19
-  }
-}
+    fontSize: 19,
+  },
+};

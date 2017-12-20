@@ -1,8 +1,8 @@
 export default function(theme) {
   return {
     '@keyframes closeButtonShow': {
-      from: {opacity: 0, transform: 'translateY(5px)'},
-      to: {opacity: 1, transform: 'translateY(0)'}
+      from: { opacity: 0, transform: 'translateY(5px)' },
+      to: { opacity: 1, transform: 'translateY(0)' },
     },
     textContainer: {
       position: 'fixed',
@@ -66,6 +66,6 @@ export default function(theme) {
       '&::after, &::before': {
         backgroundColor: '#fff',
       },
-    }
+    },
   };
 }

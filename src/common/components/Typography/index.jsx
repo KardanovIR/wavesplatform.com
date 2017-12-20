@@ -25,7 +25,8 @@ const Typography = ({
   const className = cn(
     classes[type],
     {
-      [classes[`align-${String(align)}`]]: align !== Typography.defaultProps.align,
+      [classes[`align-${String(align)}`]]:
+        align !== Typography.defaultProps.align,
       [classes.noMargin]: noMargin,
       [classes.inverted]: inverted && !dimmed,
       [classes.dimmed]: dimmed,

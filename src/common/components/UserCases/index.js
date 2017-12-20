@@ -21,7 +21,9 @@ class UserCases extends Component {
   handleSlideClick = e => {
     e.preventDefault();
 
-    const target = e.target.hasAttribute('data-slide-link') ? e.target : e.target.parentNode;
+    const target = e.target.hasAttribute('data-slide-link')
+      ? e.target
+      : e.target.parentNode;
 
     if (target.hasAttribute('data-slide-link')) {
       this.setState({
@@ -38,8 +40,13 @@ class UserCases extends Component {
       <MQ query={query.sm}>
         {matches =>
           matches ? (
-            <Gallery className={classes.gallery} swiperProps={GALLERY_SETTINGS_D}>
-              {SLIDES_DATA.map((data, i) => <UserCaseDesktop key={i} {...data} />)}
+            <Gallery
+              className={classes.gallery}
+              swiperProps={GALLERY_SETTINGS_D}
+            >
+              {SLIDES_DATA.map((data, i) => (
+                <UserCaseDesktop key={i} {...data} />
+              ))}
             </Gallery>
           ) : (
             [

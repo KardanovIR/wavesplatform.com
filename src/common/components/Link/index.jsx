@@ -26,7 +26,8 @@ const Link = ({
   const targetBlank = target === '_blank' || target === 'blank';
   const Element = href ? 'a' : 'span';
 
-  if (targetBlank && !href) throw new Error('A link with target="_blank" requires href attribute');
+  if (targetBlank && !href)
+    throw new Error('A link with target="_blank" requires href attribute');
 
   const className = cn(
     {
@@ -42,7 +43,8 @@ const Link = ({
     [classes.noDecoration]: !textDecoration,
   });
 
-  const iconElement = icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
+  const iconElement =
+    icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
 
   return (
     <Element

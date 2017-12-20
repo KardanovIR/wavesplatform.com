@@ -8,7 +8,7 @@ export default function(theme) {
       width: '100%',
       zIndex: 10,
       bottom: 'auto!important',
-      margin: theme.spacing.getSpacing(5, 0, 2)
+      margin: theme.spacing.getSpacing(5, 0, 2),
     },
     bullet: {
       width: theme.spacing.unit * 2,
@@ -23,10 +23,10 @@ export default function(theme) {
       borderRadius: 0,
       margin: [0, theme.spacing.unit * 1.25],
       cursor: 'pointer',
-      outline: 'none'
+      outline: 'none',
     },
     bulletActive: {
-      background: '#000'
+      background: '#000',
     },
     [theme.mixins.atMedia('md')]: {
       bulletContainer: {
@@ -36,11 +36,11 @@ export default function(theme) {
         bottom: `${theme.spacing.unit * 5}px!important`,
       },
       bullet: {
-        borderColor: '#fff'
+        borderColor: '#fff',
       },
       bulletActive: {
-        background: '#fff'
-      }
-    }
+        background: '#fff',
+      },
+    },
   };
 }

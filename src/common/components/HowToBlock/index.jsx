@@ -13,7 +13,11 @@ const HowToBlock = ({ classes, title, steps, quote, inverted }) => (
   <Row className={classes.root}>
     {title && (
       <Col xs={12}>
-        <Typography inverted={inverted} className={classes.title} type="display3Inverted">
+        <Typography
+          inverted={inverted}
+          className={classes.title}
+          type="display3Inverted"
+        >
           {title}
         </Typography>
       </Col>
@@ -21,7 +25,9 @@ const HowToBlock = ({ classes, title, steps, quote, inverted }) => (
     {steps.map((step, index) => (
       <Col key={`step_${index}`} xs={12} sm={4} className={classes.column}>
         <div bottom={3} className={classes.columnContent}>
-          <Step inverted={inverted} avatar={step.avatar}>{step.text}</Step>
+          <Step inverted={inverted} avatar={step.avatar}>
+            {step.text}
+          </Step>
         </div>
       </Col>
     ))}
@@ -30,7 +36,11 @@ const HowToBlock = ({ classes, title, steps, quote, inverted }) => (
         <Margin bottom={3}>
           <Row centered>
             <Col xs={12} md={10}>
-              <Typography inverted={inverted} className={classes.quote} type="quote">
+              <Typography
+                inverted={inverted}
+                className={classes.quote}
+                type="quote"
+              >
                 {quote}
               </Typography>
             </Col>

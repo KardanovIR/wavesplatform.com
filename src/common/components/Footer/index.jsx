@@ -46,9 +46,14 @@ const Footer = ({ classes, links }) => (
         <Col xs={12} md={6} className={cn(classes.copyright, classes.textGray)}>
           <span>© Waves Platform</span>
           <MQ query={query.md}>
-            <br/>
+            <br />
           </MQ>
-          <span>Made by <a href="https://ony.ru" className={classes.ony}>ONY</a></span>
+          <span>
+            Made by{' '}
+            <a href="https://ony.ru" className={classes.ony}>
+              ONY
+            </a>
+          </span>
         </Col>
 
         <Col xs={12} md={1} className={classes.logo}>

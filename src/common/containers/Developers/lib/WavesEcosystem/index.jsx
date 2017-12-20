@@ -11,7 +11,7 @@ const WavesEcosystem = () => (
   <div>
     <Steps>
       <Typography type="display3" inverted>
-        <FormattedMessage id="developers.wavesEcosystem.title" defaultMessage="Waves Ecosystem" />
+        <FormattedMessage id="developers.wavesEcosystem.title" />
       </Typography>
       <Margin bottom={4} />
     </Steps>

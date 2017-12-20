@@ -4,7 +4,7 @@ import piwik from './piwik';
 import logCalculatorInteraction from './logCalculatorInteraction';
 
 export default compose(
-	applyMiddleware(googleAnalytics),
-	applyMiddleware(piwik),
-	applyMiddleware(logCalculatorInteraction),
-)
+  applyMiddleware(googleAnalytics),
+  applyMiddleware(piwik),
+  applyMiddleware(logCalculatorInteraction)
+);

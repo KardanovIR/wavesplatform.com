@@ -14,11 +14,11 @@ const styles = theme => ({
       backgroundColor: theme.palette.blue[500],
     },
     '&:last-child': {
-      paddingBottom: 0
+      paddingBottom: 0,
     },
     '&:last-child:after': {
-      display: 'none'
-    }
+      display: 'none',
+    },
   },
   romb: {
     width: 25,
@@ -31,17 +31,17 @@ const styles = theme => ({
   date: {
     color: theme.palette.gray[600],
     fontSize: 12,
-    padding: theme.spacing.getSpacing(.75, 0, 0)
+    padding: theme.spacing.getSpacing(0.75, 0, 0),
   },
   list: {
     listStyleType: 'none',
     padding: 0,
-    margin: theme.spacing.getSpacing(2, 0)
+    margin: theme.spacing.getSpacing(2, 0),
   },
   listItem: {
     fontSize: 20,
     lineHeight: 1.4,
-    padding: theme.spacing.getSpacing(0, 0, 2)
+    padding: theme.spacing.getSpacing(0, 0, 2),
   },
   [theme.mixins.atMedia('sm')]: {
     block: {
@@ -52,15 +52,15 @@ const styles = theme => ({
       },
     },
     list: {
-      margin: 0
+      margin: 0,
     },
     date: {
       color: theme.palette.gray[600],
       fontSize: 13,
-      padding: theme.spacing.getSpacing(1, 0, 0)
+      padding: theme.spacing.getSpacing(1, 0, 0),
     },
     listItem: {
-      fontSize: 24
+      fontSize: 24,
     },
     romb: {
       width: 35,

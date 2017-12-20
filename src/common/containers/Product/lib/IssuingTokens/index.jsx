@@ -16,24 +16,15 @@ const IssuingTokens = ({ classes }) => (
     <Row>
       <Col xs={12} md={10}>
         <Typography type="display5" className={classes.title}>
-          <FormattedMessage
-            id="product.issuingTokens.title"
-            defaultMessage="Issuing your tokens, token sales"
-          />
+          <FormattedMessage id="product.issuingTokens.title" />
         </Typography>
       </Col>
       <Col xs={12} sm={5} md={8}>
         <Typography type="body">
-          <FormattedMessage
-            id="product.issuingTokens.description.p1"
-            defaultMessage="Cryptographically secured blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms."
-          />
-          <br/>
-          <br/>
-          <FormattedMessage
-            id="product.issuingTokens.description.p2"
-            defaultMessage="The role of the token is determined by the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralised voting, as a rating system, or loyalty program."
-          />
+          <FormattedMessage id="product.issuingTokens.description.p1" />
+          <br />
+          <br />
+          <FormattedMessage id="product.issuingTokens.description.p2" />
         </Typography>
         <Margin bottom={4} />
       </Col>
@@ -51,17 +42,9 @@ const IssuingTokens = ({ classes }) => (
         <AvatarTitleText
           avatar={<IconProduct name="target" />}
           title={
-            <FormattedMessage
-              id="product.issuingTokens.raiseFunds.title"
-              defaultMessage="Raise funds for the development of your project"
-            />
+            <FormattedMessage id="product.issuingTokens.raiseFunds.title" />
           }
-          text={
-            <FormattedMessage
-              id="product.issuingTokens.raiseFunds.text"
-              defaultMessage="By releasing blockchain tokens, you provide valuable services to network users, such as the possibility of transferring value in the form of certain convenient units, therefore attracting funds for the development of your project."
-            />
-          }
+          text={<FormattedMessage id="product.issuingTokens.raiseFunds.text" />}
         />
         <Margin bottom={4} />
       </Col>
@@ -69,17 +52,9 @@ const IssuingTokens = ({ classes }) => (
         <AvatarTitleText
           avatar={<IconProduct name="message" />}
           title={
-            <FormattedMessage
-              id="product.issuingTokens.loyalUsers.title"
-              defaultMessage="Get loyal users of your product"
-            />
+            <FormattedMessage id="product.issuingTokens.loyalUsers.title" />
           }
-          text={
-            <FormattedMessage
-              id="product.issuingTokens.loyalUsers.text"
-              defaultMessage="By holding an ICO not only do you receive money for development, but you also gain loyal users for your product who believe in the project and are ready to become its first followers as well as give honest feedback."
-            />
-          }
+          text={<FormattedMessage id="product.issuingTokens.loyalUsers.text" />}
         />
         <Margin bottom={4} />
       </Col>
