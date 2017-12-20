@@ -21,11 +21,12 @@ const sniffLocale = async (ctx, next) => {
       ...cookieDomain,
     });
 
-    // @todo change when locales are ready
+    // @todo change when translations are ready
     ctx.locale = 'en';
-  }
-
-  ctx.availableLocales = supported;
+	}
+	
+	// @todo change when translations are ready
+  ctx.availableLocales = [];
   await next();
 };
 
