@@ -33,7 +33,9 @@ const DexImage = injectSheet(styles)(({ classes }) => (
         className={classes.image}
         src={matches ? dexImage : dexImageMob}
         srcSet={
-          matches ? `${dexImage} 1x, ${dexImage2x} 2x` : `${dexImageMob} 1x, ${dexImageMob2x} 2x`
+          matches
+            ? `${dexImage} 1x, ${dexImage2x} 2x`
+            : `${dexImageMob} 1x, ${dexImageMob2x} 2x`
         }
       />
     )}
@@ -42,25 +44,12 @@ const DexImage = injectSheet(styles)(({ classes }) => (
 
 const DEX = ({ onDexApiClick, classes }) => (
   <PictureBlock
-    title={
-      <FormattedMessage id="developers.DEX.title" defaultMessage="Decentralised Exchange (DEX)" />
-    }
-    subtitle={
-      <FormattedMessage
-        id="developers.DEX.subtitle"
-        defaultMessage="Our nodes contain an order matcher which is used to power our decentralised exchange — enabling token trades that don’t require tokens to be transferred from your blockchain account to a separate exchange."
-      />
-    }
+    title={<FormattedMessage id="developers.DEX.title" />}
+    subtitle={<FormattedMessage id="developers.DEX.subtitle" />}
     image={<DexImage />}
     text={[
-      <FormattedMessage
-        id="developers.DEX.text.p1"
-        defaultMessage="All operations within the DEX are secure and validated by blockchain nodes. Since the DEX is open source and a part of every node, each user can run their own instance of the DEX."
-      />,
-      <FormattedMessage
-        id="developers.DEX.text.p2"
-        defaultMessage="The matcher exposes its own REST API for accessing the order book and submitting orders. This allows users to implement any kind of trading UI or trading bots."
-      />,
+      <FormattedMessage id="developers.DEX.text.p1" />,
+      <FormattedMessage id="developers.DEX.text.p2" />,
     ]}
     buttons={[
       <IconButton
@@ -71,7 +60,7 @@ const DEX = ({ onDexApiClick, classes }) => (
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.dexApi" defaultMessage="DEX API" />
+        <FormattedMessage id="developers.cta.dexApi" />
       </IconButton>,
     ]}
   />
@@ -86,9 +75,9 @@ const stylesDEX = theme => ({
     },
     [theme.mixins.atMedia('sm')]: {
       width: '100%',
-      marginRight: theme.spacing.unit * 10
-    }
-  }
+      marginRight: theme.spacing.unit * 10,
+    },
+  },
 });
 
 export default injectSheet(stylesDEX)(DEX);

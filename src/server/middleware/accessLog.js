@@ -1,9 +1,9 @@
 export default async (ctx, next) => {
-    const start = Date.now();
-    ctx.accessLog = {};
+  const start = Date.now();
+  ctx.accessLog = {};
 
-    await next();
+  await next();
 
-    const ms = Date.now() - start;
-    ctx.logger.info(`${ctx.method} ${ctx.url} ${ms}ms`, ctx.accessLog || {});
+  const ms = Date.now() - start;
+  ctx.logger.info(`${ctx.method} ${ctx.url} ${ms}ms`, ctx.accessLog || {});
 };

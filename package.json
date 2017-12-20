@@ -42,6 +42,7 @@
     "raven": "^2.1.1",
     "rc-slider": "^8.3.5",
     "react": "^16.0.0",
+    "react-cookie": "^2.1.2",
     "react-dom": "^16.0.0",
     "react-icons": "^2.2.5",
     "react-intl": "^2.4.0",
@@ -59,6 +60,7 @@
     "socket.io-client": "^2.0.3",
     "subscribe-ui-event": "^1.0.14",
     "swiper": "^4.0.7",
+    "universal-cookie-koa": "^2.1.2",
     "whatwg-fetch": "^2.0.3",
     "winston": "^2.3.1"
   },

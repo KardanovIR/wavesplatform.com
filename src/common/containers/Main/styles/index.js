@@ -28,6 +28,6 @@ export default theme => ({
     textAlign: 'center',
   },
   overflowHidden: {
-    overflow: 'hidden'
-  }
+    overflow: 'hidden',
+  },
 });

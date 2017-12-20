@@ -31,7 +31,14 @@ router
     })
   )
   .get('/company', company)
-  .get('/get-waves', render({ script: 'getWaves', component: GetWaves, description: 'Get Waves' }))
+  .get(
+    '/get-waves',
+    render({
+      script: 'getWaves',
+      component: GetWaves,
+      description: 'Get Waves',
+    })
+  )
   .get('/mining', mining)
   .get('/leasing', leasing)
   .use('/api', api.routes())

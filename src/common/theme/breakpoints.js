@@ -17,7 +17,11 @@ export const query = Object.keys(defaultBreakpoints).reduce((acc, label) => {
 }, {});
 
 // Keep in mind that @media is inclusive by the CSS specification.
-function createBreakpoints(breakpoints = defaultBreakpoints, unit = 'px', step = 1) {
+function createBreakpoints(
+  breakpoints = defaultBreakpoints,
+  unit = 'px',
+  step = 1
+) {
   const values = keys.map(key => breakpoints[key]);
 
   function up(key) {
@@ -28,7 +32,7 @@ function createBreakpoints(breakpoints = defaultBreakpoints, unit = 'px', step =
     } else {
       value = breakpoints[key] || key;
     }
-    return `@media (min-width:${value}${unit})`
+    return `@media (min-width:${value}${unit})`;
   }
 
   function down(key) {

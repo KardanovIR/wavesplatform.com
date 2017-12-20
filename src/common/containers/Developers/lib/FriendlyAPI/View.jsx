@@ -8,21 +8,9 @@ import PictureBlock from '../PictureBlock';
 
 const FriendlyAPI = ({ onDocumentationClick, onClientClick, classes }) => (
   <PictureBlock
-    title={
-      <FormattedMessage id="developers.friendlyAPI.title" defaultMessage="Developer-friendly API" />
-    }
-    subtitle={
-      <FormattedMessage
-        id="developers.friendlyAPI.subtitle"
-        defaultMessage="Our open source client application uses the same API. You can explore it and implement any kind of client application yourself."
-      />
-    }
-    text={
-      <FormattedMessage
-        id="developers.friendlyAPI.text"
-        defaultMessage="Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically."
-      />
-    }
+    title={<FormattedMessage id="developers.friendlyAPI.title" />}
+    subtitle={<FormattedMessage id="developers.friendlyAPI.subtitle" />}
+    text={<FormattedMessage id="developers.friendlyAPI.text" />}
     buttons={[
       <IconButton
         onClick={onDocumentationClick}
@@ -32,7 +20,7 @@ const FriendlyAPI = ({ onDocumentationClick, onClientClick, classes }) => (
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.documentation" defaultMessage="Documentation" />
+        <FormattedMessage id="developers.cta.documentation" />
       </IconButton>,
       <IconButton
         onClick={onClientClick}
@@ -42,7 +30,7 @@ const FriendlyAPI = ({ onDocumentationClick, onClientClick, classes }) => (
         className={classes.button}
         inverted
       >
-        <FormattedMessage id="developers.cta.client" defaultMessage="Client" />
+        <FormattedMessage id="developers.cta.client" />
       </IconButton>,
     ]}
   />
@@ -57,9 +45,9 @@ const styles = theme => ({
     },
     [theme.mixins.atMedia('sm')]: {
       width: '100%',
-      marginRight: theme.spacing.unit * 10
-    }
-  }
+      marginRight: theme.spacing.unit * 10,
+    },
+  },
 });
 
 export default injectSheets(styles)(FriendlyAPI);

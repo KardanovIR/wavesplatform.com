@@ -2,23 +2,22 @@ import flexCentered from 'src/common/styles/flexCentered';
 
 const styles = theme => ({
   root: {
-    padding: theme.spacing.getSpacing(0, 1.5)
+    padding: theme.spacing.getSpacing(0, 1.5),
   },
   imageCol: {
     display: 'none',
-    position: 'relative'
+    position: 'relative',
   },
   imageContainer: {
     position: 'absolute',
     right: 0,
-    top: 114
+    top: 114,
   },
-  image: {
-  },
+  image: {},
   col: {
     padding: 0,
     border: `1px solid ${theme.palette.gray[100]}`,
-    margin: '-1px 0 0 -1px'
+    margin: '-1px 0 0 -1px',
   },
   media: {
     ...flexCentered,
@@ -39,9 +38,9 @@ const styles = theme => ({
   },
   [theme.mixins.atMedia('md')]: {
     imageCol: {
-      display: 'block'
-    }
-  }
+      display: 'block',
+    },
+  },
 });
 
 export default styles;

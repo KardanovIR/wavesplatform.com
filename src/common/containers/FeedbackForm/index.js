@@ -7,29 +7,24 @@ import { sendForm } from './actions';
 import View from './View';
 import validate from './validate';
 
-
-
-
 const FeedbackFormContainer = compose(
-    connect(
-        ({ feedbackForm }) => feedbackForm,
-        (dispatch, ownProps) => ({
-            onSubmit: (formData) => {
-                dispatch(sendForm(formData));
-                ownProps.onSubmit(formData);
-            }
-        })
-    ),
-    reduxForm({
-        form: 'feedbackForm',
-        validate
-    }),
+  connect(
+    ({ feedbackForm }) => feedbackForm,
+    (dispatch, ownProps) => ({
+      onSubmit: formData => {
+        dispatch(sendForm(formData));
+        ownProps.onSubmit(formData);
+      },
+    })
+  ),
+  reduxForm({
+    form: 'feedbackForm',
+    validate,
+  })
 )(View);
 
-
 FeedbackFormContainer.defaultProps = {
-    onSubmit: () => {}
-}
-
+  onSubmit: () => {},
+};
 
 export default FeedbackFormContainer;

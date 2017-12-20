@@ -1,10 +1,4 @@
-import {
-	compose,
-	not,
-	isEmpty,
-	filter
-} from 'ramda';
-
+import { compose, not, isEmpty, filter } from 'ramda';
 
 export const isNotEmpty = compose(not, isEmpty);
 

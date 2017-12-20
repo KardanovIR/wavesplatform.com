@@ -1,6 +1,11 @@
 import React from 'react';
 import injectSheet from 'react-jss';
-import Transition, { ENTERING, ENTERED, EXITED, EXITING } from 'react-transition-group/Transition';
+import Transition, {
+  ENTERING,
+  ENTERED,
+  EXITED,
+  EXITING,
+} from 'react-transition-group/Transition';
 import cx from 'classnames';
 
 const s = {
@@ -20,7 +25,15 @@ const s = {
   },
 };
 
-const FadeTransition = ({ children, classes, className, onClick, sheet, innerRef, ...rest }) => (
+const FadeTransition = ({
+  children,
+  classes,
+  className,
+  onClick,
+  sheet,
+  innerRef,
+  ...rest
+}) => (
   <Transition
     timeout={{
       enter: 0,

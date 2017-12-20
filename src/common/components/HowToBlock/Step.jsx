@@ -21,11 +21,11 @@ const styles = theme => ({
 
     '& svg': {
       width: '100%',
-      height: '100%'
-    }
+      height: '100%',
+    },
   },
   children: {
-    paddingLeft: theme.spacing.unit * 2
+    paddingLeft: theme.spacing.unit * 2,
   },
   [theme.mixins.atMedia('md')]: {
     panel: {
@@ -37,19 +37,21 @@ const styles = theme => ({
       width: theme.spacing.unit * 10,
       height: theme.spacing.unit * 10,
       flex: `0 0 ${theme.spacing.unit * 10}px`,
-      marginRight: theme.spacing.unit * 5
+      marginRight: theme.spacing.unit * 5,
     },
     children: {
       paddingLeft: 0,
-      paddingTop: theme.spacing.unit * 2
-    }
+      paddingTop: theme.spacing.unit * 2,
+    },
   },
 });
 
 const Step = ({ avatar, children, classes, inverted }) => (
   <div className={classes.panel}>
     <div className={classes.avatar}>{avatar}</div>
-    <Typography inverted={inverted} className={classes.children}>{children}</Typography>
+    <Typography inverted={inverted} className={classes.children}>
+      {children}
+    </Typography>
   </div>
 );
 

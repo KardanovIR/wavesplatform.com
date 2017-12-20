@@ -32,14 +32,20 @@ const PairVolume = ({ classes, assets, volume }) => (
     <Typography type="body" className={classes.assets} inverted>
       {assets[0]}/{assets[1]}
     </Typography>
-    <Typography type="body" align="right" className={classes.volume} noMargin inverted>
+    <Typography
+      type="body"
+      align="right"
+      className={classes.volume}
+      noMargin
+      inverted
+    >
       {volume ? (
         <span>
           $ <FormattedNumber value={volume} />
         </span>
       ) : (
         <span className={classes.grayText}>
-          <FormattedMessage id="product.DEXTopPairs.unavailable" defaultMessage="n/a" />
+          <FormattedMessage id="product.DEXTopPairs.unavailable" />
         </span>
       )}
     </Typography>

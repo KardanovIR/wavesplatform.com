@@ -12,7 +12,8 @@ const getStylesForBreakpoint = (theme, breakpoint) => {
 
   for (let size = 0; size <= 12; size++) {
     // 6 significant digits
-    const width = `${Math.round(size / 12 * Math.pow(10, 6)) / Math.pow(10, 4)}%`;
+    const width = `${Math.round(size / 12 * Math.pow(10, 6)) /
+      Math.pow(10, 4)}%`;
 
     styles[`${breakpoint}-${size}`] = {
       flexBasis: width,
@@ -38,7 +39,10 @@ export const getColumnStyles = theme => {
   };
 
   theme.breakpoints.keys.slice(1).forEach(breakpoint => {
-    styles[theme.mixins.atMedia(breakpoint)] = getStylesForBreakpoint(theme, breakpoint);
+    styles[theme.mixins.atMedia(breakpoint)] = getStylesForBreakpoint(
+      theme,
+      breakpoint
+    );
   });
 
   return styles;

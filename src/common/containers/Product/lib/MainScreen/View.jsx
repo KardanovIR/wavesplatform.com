@@ -7,18 +7,8 @@ import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
   <MainScreen
-    title={
-      <FormattedHTMLMessage
-        id="product.title"
-        defaultMessage="Use blockchain —<br>it’s easy with Waves"
-      />
-    }
-    text={
-      <FormattedMessage
-        id="product.text"
-        defaultMessage="Issue, store, manage, trade, and analyze your digital assets safely with Waves blockchain platform and decentralized exchange."
-      />
-    }
+    title={<FormattedHTMLMessage id="product.title" />}
+    text={<FormattedMessage id="product.text" />}
     buttons={[
       <Button
         onClick={onGetClientClick}
@@ -36,7 +26,7 @@ const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
         target="_blank"
         href="https://waveswallet.io/"
       >
-        <FormattedMessage id="cta.onlineClient" defaultMessage="Online Client" />
+        <FormattedMessage id="cta.onlineClient" />
       </Button>,
     ]}
   />

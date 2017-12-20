@@ -1,8 +1,7 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
-import stressTest from 'src/common/containers/StressTest/ducks'
-
+import stressTest from 'src/common/containers/StressTest/ducks';
 
 export default combineReducers({
-    stressTest
-})
+  stressTest,
+});

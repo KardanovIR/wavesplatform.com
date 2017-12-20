@@ -16,23 +16,22 @@ import FaApple from 'react-icons/lib/fa/apple';
 import MdSend from 'react-icons/lib/md/send';
 import FaEvelope from 'react-icons/lib/fa/envelope';
 
-
 export default {
-    // social
-    twitter: FaTwitter,
-    github: FaGithub,
-    slack: FaSlack,
-    facebook: FaFacebook,
-    bitcoin: FaBitcoin,
-    telegram: FaPaperPlane,
-    vkontakte: FaVk,
-    wechat: FaWechat,
-    reddit: FaRedditAlien,
-    weibo: FaWeibo,
-    medium: FaMedium,
-    youtube: FaYoutubePlay,
-    apple: FaApple,
-    send: MdSend,
-    email: FaEvelope,
-    linkedin: FaLinkedin,
-}
+  // social
+  twitter: FaTwitter,
+  github: FaGithub,
+  slack: FaSlack,
+  facebook: FaFacebook,
+  bitcoin: FaBitcoin,
+  telegram: FaPaperPlane,
+  vkontakte: FaVk,
+  wechat: FaWechat,
+  reddit: FaRedditAlien,
+  weibo: FaWeibo,
+  medium: FaMedium,
+  youtube: FaYoutubePlay,
+  apple: FaApple,
+  send: MdSend,
+  email: FaEvelope,
+  linkedin: FaLinkedin,
+};

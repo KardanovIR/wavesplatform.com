@@ -19,7 +19,7 @@ export default theme => ({
   logo: {
     position: 'absolute',
     top: 26,
-    left: theme.spacing.unit * 3
+    left: theme.spacing.unit * 3,
   },
   linksWrapper: {
     padding: theme.spacing.getSpacing(14, 0, 7),
@@ -39,8 +39,8 @@ export default theme => ({
       backgroundColor: theme.palette.grayBlue[300],
     },
     '& + $linkSecondary': {
-      marginTop: theme.spacing.unit * 3
-    }
+      marginTop: theme.spacing.unit * 3,
+    },
   },
   linkSecondary: {
     ...theme.typography.body2,

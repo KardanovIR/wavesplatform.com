@@ -45,7 +45,9 @@ class Popup extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return this.state.show !== nextState.show || this.props.show !== nextProps.show;
+    return (
+      this.state.show !== nextState.show || this.props.show !== nextProps.show
+    );
   }
 
   open = () => {
@@ -88,7 +90,9 @@ class Popup extends Component {
                 <div className={classes.textOuter}>
                   <CloseButton
                     onClick={onClose}
-                    className={cx(classes.closeButton, { [classes.closeButtonInverted]: inverted })}
+                    className={cx(classes.closeButton, {
+                      [classes.closeButtonInverted]: inverted,
+                    })}
                   />
                   <div className={classes.text} ref={containerRef}>
                     {children}

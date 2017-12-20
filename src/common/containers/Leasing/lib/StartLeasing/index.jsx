@@ -20,134 +20,95 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const StartLeasing = ({ classes }) => (
-    <div>
-        <SectionTitleText
-            title={
-                <FormattedMessage
-                    id="leasing.startLeasing.title"
-                    defaultMessage="Start leasing your funds"
-                />
-            }
-            text={
-                <FormattedMessage
-                    id="leasing.startLeasing.text"
-                    defaultMessage="You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES."
-                    values={{
-                        miningLink: (
-                            <Link href={url('mining')}>
-                                <FormattedMessage
-                                    id="leasing.startLeasing.miningLink"
-                                    defaultMessage="mining"
-                                />
-                            </Link>
-                        ),
-                    }}
-                />
-            }
+  <div>
+    <SectionTitleText
+      title={<FormattedMessage id="leasing.startLeasing.title" />}
+      text={
+        <FormattedMessage
+          id="leasing.startLeasing.text"
+          values={{
+            miningLink: (
+              <Link href={url('mining')}>
+                <FormattedMessage id="leasing.startLeasing.miningLink" />
+              </Link>
+            ),
+          }}
         />
+      }
+    />
 
-        <Row>
-            <Col xs={12} sm={6} lg={3} className={classes.col}>
-                <div className={classes.imageWrapper}>
-                    <Image1 />
-                    <div className={classes.arrow} />
-                    <div className={classes.arrowMobile} />
-                </div>
-                <Margin bottom={1} />
-                <Typography
-                    tagName="div"
-                    align="center"
-                    className={classes.message}
-                >
-                    <FormattedMessage
-                        id="leasing.startLeasing.p1.title"
-                        defaultMessage="1. Download Waves Client"
-                    />
-                </Typography>
-                <Margin bottom={2} />
-                <Button
-                    target="_blank"
-                    href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
-                >
-                    <FormattedMessage
-                        id="cta.getClient"
-                        defaultMessage="Get Client"
-                    />
-                </Button>
-                <Margin bottom={5} />
-            </Col>
+    <Row>
+      <Col xs={12} sm={6} lg={3} className={classes.col}>
+        <div className={classes.imageWrapper}>
+          <Image1 />
+          <div className={classes.arrow} />
+          <div className={classes.arrowMobile} />
+        </div>
+        <Margin bottom={1} />
+        <Typography tagName="div" align="center" className={classes.message}>
+          <FormattedMessage id="leasing.startLeasing.p1.title" />
+        </Typography>
+        <Margin bottom={2} />
+        <Button
+          target="_blank"
+          href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+        >
+          <FormattedMessage id="cta.getClient" />
+        </Button>
+        <Margin bottom={5} />
+      </Col>
 
-            <Col xs={12} sm={6} lg={3} className={classes.col}>
-                <div className={classes.imageWrapper}>
-                    <Image2 />
-                    <div className={classes.arrow} />
-                    <div className={classes.arrowMobile} />
-                </div>
-                <Margin bottom={1} />
-                <Typography
-                    tagName="div"
-                    align="center"
-                    className={classes.message}
-                >
-                    <FormattedMessage
-                        id="leasing.startLeasing.p2.title"
-                        defaultMessage="2. Deposit WAVES to your account"
-                    />
-                </Typography>
-                <Margin bottom={2} />
-                <Button
-                    href={url('get-waves')}
-                    withLoader
-                    secondary
-                >
-                    <FormattedMessage
-                        id="cta.getWaves"
-                        defaultMessage="Get Waves"
-                    />
-                </Button>
-                <Margin bottom={5} />
-            </Col>
+      <Col xs={12} sm={6} lg={3} className={classes.col}>
+        <div className={classes.imageWrapper}>
+          <Image2 />
+          <div className={classes.arrow} />
+          <div className={classes.arrowMobile} />
+        </div>
+        <Margin bottom={1} />
+        <Typography tagName="div" align="center" className={classes.message}>
+          <FormattedMessage id="leasing.startLeasing.p2.title" />
+        </Typography>
+        <Margin bottom={2} />
+        <Button href={url('get-waves')} withLoader secondary>
+          <FormattedMessage id="cta.getWaves" />
+        </Button>
+        <Margin bottom={5} />
+      </Col>
 
-            <Col xs={12} sm={6} lg={3} className={classes.col}>
-                <div className={classes.imageWrapper}>
-                    <Image3 />
-                    <div className={classes.arrow} />
-                    <div className={classes.arrowMobile} />
-                </div>
-                <Margin bottom={1} />
-                <Typography
-                    tagName="div"
-                    align="center"
-                    className={classes.message}
-                >
-                    <FormattedMessage
-                        id="leasing.startLeasing.p3.title"
-                        defaultMessage="3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab."
-                        values={{nodesLink: <Link pseudo href="#nodes">which node</Link>    }}
-                    />
-                </Typography>                
-                <Margin bottom={5} />
-            </Col>
+      <Col xs={12} sm={6} lg={3} className={classes.col}>
+        <div className={classes.imageWrapper}>
+          <Image3 />
+          <div className={classes.arrow} />
+          <div className={classes.arrowMobile} />
+        </div>
+        <Margin bottom={1} />
+        <Typography tagName="div" align="center" className={classes.message}>
+          <FormattedMessage
+            id="leasing.startLeasing.p3.title"
+            values={{
+              nodesLink: (
+                <Link pseudo href="#nodes">
+                  which node
+                </Link>
+              ),
+            }}
+          />
+        </Typography>
+        <Margin bottom={5} />
+      </Col>
 
-            <Col xs={12} sm={6} lg={3} className={classes.col}>
-                <div className={classes.imageWrapper}>
-                    <Image4 />
-                </div>
-                <Margin bottom={1} />
-                <Typography
-                    tagName="div"
-                    align="center"
-                    className={classes.message}
-                >
-                    <FormattedMessage
-                        id="leasing.startLeasing.p4.title"
-                        defaultMessage="4. You’re done! Your balance will now generate income without even leaving your wallet. Payments are usually transferred once a week."
-                    />
-                </Typography>
-                <Margin bottom={2} />
-            </Col>
-        </Row>
-    </div>
+      <Col xs={12} sm={6} lg={3} className={classes.col}>
+        <div className={classes.imageWrapper}>
+          <Image4 />
+        </div>
+        <Margin bottom={1} />
+        <Typography tagName="div" align="center" className={classes.message}>
+          <FormattedMessage id="leasing.startLeasing.p4.title" />
+        </Typography>
+        <Margin bottom={2} />
+      </Col>
+    </Row>
+  </div>
 );
 
 export default injectSheet(styles)(StartLeasing);

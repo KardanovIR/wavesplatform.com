@@ -5,4 +5,4 @@ export default (email, message) => `
 
 	Message:
 	${message}
-`
+`;

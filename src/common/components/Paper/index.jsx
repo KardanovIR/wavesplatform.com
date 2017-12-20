@@ -3,23 +3,16 @@ import injectSheet from 'react-jss';
 
 import cn from 'classnames';
 
-
-
 const styles = theme => ({
-    wrapper: {
-        background: theme.palette.primary[0],
-        borderRadius: theme.spacing.radius,
-        boxShadow: `0 2px 10px ${theme.palette.gray[600]}`
-    }
-})
-
-
+  wrapper: {
+    background: theme.palette.primary[0],
+    borderRadius: theme.spacing.radius,
+    boxShadow: `0 2px 10px ${theme.palette.gray[600]}`,
+  },
+});
 
 const Paper = ({ classes, className, children }) => (
-    <div className={cn(classes.wrapper, className)}>
-        { children }
-    </div>
-)
-
+  <div className={cn(classes.wrapper, className)}>{children}</div>
+);
 
 export default injectSheet(styles)(Paper);

@@ -17,27 +17,17 @@ const NumbersQuote = ({ classes, dexData }) => (
     <Numbers {...dexData} className={classes.numbersContainer} />
     <Col xs={12} sm={8} className={classes.investorsContainer}>
       <Typography type="display1" className={classes.investorsLabel}>
-        <FormattedMessage
-          id="home.audience.investors.title"
-          defaultMessage="Investors"
-        />
+        <FormattedMessage id="home.audience.investors.title" />
       </Typography>
       <Typography type="display3" className={classes.investorsText}>
-        <FormattedMessage
-          id="home.audience.investors.text"
-          defaultMessage="Become part of a fast-growing area of the crypto world. Create a multiple-currency wallet and invest in verified crypto assets and the underlying WAVES platform token."
-        />
+        <FormattedMessage id="home.audience.investors.text" />
       </Typography>
       <Margin bottom={4} />
     </Col>
     <Col xs={12} sm={8} smOffset={4}>
       <BlockQuote>
         <div className={classes.deloitteLogo} />
-        <FormattedMessage
-          tagName="div"
-          id='home.quote'
-          defaultMessage="In 2017 we partnered with Deloitte to launch the development of a legal framework for wider adoption of blockchain technologies."
-        />
+        <FormattedMessage tagName="div" id="home.quote" />
       </BlockQuote>
       <Margin bottom={1} />
     </Col>

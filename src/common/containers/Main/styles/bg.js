@@ -1,4 +1,4 @@
-import palette from "../../../theme/palette";
+import palette from '../../../theme/palette';
 
 export default theme => ({
   desktopOnly: {
@@ -27,12 +27,12 @@ export default theme => ({
   bgJoinUs: {
     backgroundSize: 'cover',
     backgroundImage: `url(${require('../img/bgJoinUs.jpg')})`,
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
   },
 
   bgBlack: {
     backgroundColor: theme.palette.gray[1000],
-    position: 'relative'
+    position: 'relative',
   },
 
   bgGray: {

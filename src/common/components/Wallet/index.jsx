@@ -24,56 +24,31 @@ const Wallet = ({ children, classes }) => (
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="shield" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.security"
-                  defaultMessage="Take advantage of our platform’s outstanding security"
-                />
-              }
+              text={<FormattedMessage id="home.wallet.security" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="leasing" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.interest"
-                  defaultMessage="Receive interest on your Waves account balance"
-                />
-              }
+              text={<FormattedMessage id="home.wallet.interest" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="transaction" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.transfer"
-                  defaultMessage="Transfer funds from person to person"
-                />
-              }
+              text={<FormattedMessage id="home.wallet.transfer" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="mining" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.mining"
-                  defaultMessage="Start mining — it’s easy with Waves"
-                />
-              }
+              text={<FormattedMessage id="home.wallet.mining" />}
             />
           </ColFeature>
           <ColFeature className={classes.feature}>
             <AvatarWithText
               avatar={<IconProduct name="wallet" circle />}
-              text={
-                <FormattedMessage
-                  id="home.wallet.wallet"
-                  defaultMessage="Create a multiple-currency wallet"
-                />
-              }
+              text={<FormattedMessage id="home.wallet.wallet" />}
             />
           </ColFeature>
         </Row>

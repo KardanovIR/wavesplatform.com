@@ -18,7 +18,7 @@ const Exchanges = ({ classes }) => (
     <Row>
       <Col xs={12} md={7}>
         <Typography type="display5">
-          <FormattedMessage id="getWaves.exchanges.title" defaultMessage="Buy Waves on Exchanges" />
+          <FormattedMessage id="getWaves.exchanges.title" />
         </Typography>
         <Margin bottom={4} />
       </Col>
@@ -30,10 +30,20 @@ const Exchanges = ({ classes }) => (
     </Row>
     <Row>
       {exchanges.map((contact, index) => (
-        <Col key={`media_org_${index}`} xs={12} sm={6} md={4} className={classes.col}>
+        <Col
+          key={`media_org_${index}`}
+          xs={12}
+          sm={6}
+          md={4}
+          className={classes.col}
+        >
           <a href={contact.url} target="_blank" className={classes.link}>
             <div className={classes.media}>
-              <img src={contact.logo} className={classes.logo} alt="Exchange contact" />
+              <img
+                src={contact.logo}
+                className={classes.logo}
+                alt="Exchange contact"
+              />
             </div>
           </a>
         </Col>

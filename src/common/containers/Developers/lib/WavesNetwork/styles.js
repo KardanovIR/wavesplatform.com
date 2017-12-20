@@ -9,15 +9,15 @@ const styles = theme => ({
     textAlign: 'center',
     '& svg': {
       width: 80,
-      height: 80
-    }
+      height: 80,
+    },
   },
   tableHeader: {
-    display: 'none'
+    display: 'none',
   },
   tableRow: {
     marginBottom: theme.spacing.unit * 3,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   titleCol: {
     borderBottom: `1px solid ${theme.palette.gray[600]}`,
@@ -32,18 +32,18 @@ const styles = theme => ({
   [theme.mixins.atMedia('sm')]: {
     tableHeader: {
       display: 'flex',
-      paddingBottom: theme.spacing.unit * 1.5
+      paddingBottom: theme.spacing.unit * 1.5,
     },
     tableRow: {
       height: 115,
       borderTop: `1px solid ${theme.palette.gray[600]}`,
-      marginBottom: 0
+      marginBottom: 0,
     },
     titleCol: {
       borderBottom: 0,
       paddingBottom: 0,
-      marginBottom: 0
-    }
+      marginBottom: 0,
+    },
   },
   [theme.mixins.atMedia('md')]: {
     buttonWrapper: {

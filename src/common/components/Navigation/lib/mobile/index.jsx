@@ -7,7 +7,7 @@ import cn from 'classnames';
 
 import Logo from 'src/common/components/Logo';
 import Popup from 'src/common/components/Popup';
-import url from "../../../../utils/url";
+import url from '../../../../utils/url';
 
 const burger = {
   root: {
@@ -46,8 +46,18 @@ const burger = {
 
 const Burger = injectSheet(burger)(({ classes, open, inverted }) => (
   <button className={cn(classes.root, { [classes.open]: open })}>
-    <div className={cn(classes.bar, { [classes.barOpen]: open, [classes.inverted]: inverted })} />
-    <div className={cn(classes.bar, { [classes.barOpen]: open, [classes.inverted]: inverted })} />
+    <div
+      className={cn(classes.bar, {
+        [classes.barOpen]: open,
+        [classes.inverted]: inverted,
+      })}
+    />
+    <div
+      className={cn(classes.bar, {
+        [classes.barOpen]: open,
+        [classes.inverted]: inverted,
+      })}
+    />
   </button>
 ));
 
@@ -77,10 +87,7 @@ class MobileNav extends Component {
           <div className={classes.linksWrapper}>
             <div className={classes.logo}>
               <a href={url('home')}>
-                <Logo
-                  color={'#fff'}
-                  flat
-                />
+                <Logo color={'#fff'} flat />
               </a>
             </div>
 
@@ -88,7 +95,9 @@ class MobileNav extends Component {
               <a
                 key={`mobile_nav_link${index}`}
                 href={link.href}
-                className={cn(classes.link, { [classes.linkSecondary]: link.type === 'secondary' })}
+                className={cn(classes.link, {
+                  [classes.linkSecondary]: link.type === 'secondary',
+                })}
               >
                 {link.text}
               </a>
