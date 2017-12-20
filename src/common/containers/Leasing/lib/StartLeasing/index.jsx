@@ -8,7 +8,7 @@ import { Row, Col } from 'src/common/components/Grid';
 import ContentContainer from 'src/common/components/ContentContainer';
 
 import Image1 from '!svg-react-loader!./img/start_leasing_download_client.svg';
-import Image2 from '!svg-react-loader!./img/start_leasing_deposit_waves.svg';
+import Image2 from '!svg-react-loader!./img/start.svg';
 import Image3 from '!svg-react-loader!./img/start_leasing_choose_node.svg';
 import Image4 from '!svg-react-loader!./img/start_leasing_done_leasing.svg';
 
