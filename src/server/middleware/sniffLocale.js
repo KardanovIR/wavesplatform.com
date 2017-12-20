@@ -10,7 +10,7 @@ const sniffLocale = async (ctx, next) => {
 
   if (cookie && ~supported.indexOf(cookie)) {
     // @todo change when translations are ready
-    // ctx.locale = cookie;
+    ctx.locale = cookie;
   } else {
     const sniffedLocale = new Locales(ctx.req.headers['accept-language'], 'en')
       .best(new Locales(supported))
@@ -23,12 +23,15 @@ const sniffLocale = async (ctx, next) => {
     });
 
     // @todo change when translations are ready
-    // ctx.locale = sniffedLocale;
+    ctx.locale = sniffedLocale;
   }
 
   // @todo change when translations are ready
-  ctx.locale = 'en';
-  ctx.availableLocales = [];
+  ctx.availableLocales = supported;
+
+  // @todo change when translations are ready
+  // ctx.locale = 'en';
+  // ctx.availableLocales = [];
 
   await next();
 };
