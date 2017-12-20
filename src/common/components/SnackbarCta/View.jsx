@@ -113,12 +113,13 @@ class SnackbarCta extends Component {
 
     handleClick = () => {
         this.props.onClick();
+        this.setState({ open: false });
     };
 
     render() {
         const { classes, text, buttonText } = this.props;
         return (
-            <a href={url('waves-ng')} onClick={this.handleClick}>
+            <a href="https://t.me/wavesnews" target="_blank" onClick={this.handleClick}>
                 <Snackbar open={this.state.open} className={classes.snackbar}>
                     <div className={classes.grid}>
                         <div className={classes.textWrapper}>
