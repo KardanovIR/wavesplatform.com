@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import Snackbar from 'src/common/components/Snackbar';
 import Typography from 'src/common/components/Typography';
 
+import url from 'src/common/utils/url';
 
 import injectSheet from 'react-jss';
-
 
 const styles = theme => ({
     grid: {
@@ -15,47 +15,47 @@ const styles = theme => ({
 
     textWrapper: {
         flex: '1 1 100%',
-        marginBottom: theme.spacing.unit * 2
-    },    
+        marginBottom: theme.spacing.unit * 2,
+    },
 
     text: {
-        width: '100%'
+        width: '100%',
     },
 
     button: {
         ...theme.typography.button,
-
         whiteSpace: 'nowrap',
-
         boxSizing: 'border-box',
         transition: theme.transitions.create('color'),
         cursor: 'pointer',
-        padding: [theme.spacing.unit * 2, theme.spacing.unit * 2]
+        padding: [theme.spacing.unit * 2, theme.spacing.unit * 2],
     },
 
     passButton: {
         composes: '$button',
-        color: '#fcbc32',
+        color: '#fff',
         '&:hover': {
             color: theme.palette.gray[0],
         },
         marginLeft: -theme.spacing.unit * 2,
+        whiteSpace: 'nowrap',
     },
 
     closeButton: {
         composes: '$button',
-        color: theme.palette.gray[600],
+        color: '#a7bbfd',
         '&:hover': {
             color: theme.palette.gray[0],
         },
         marginRight: -theme.spacing.unit * 2,
-        float: 'right'
+        float: 'right',
+        whiteSpace: 'nowrap',
+        textTransform: 'uppercase',
     },
 
     buttonWrapper: {
         flex: '0 0 50%',
     },
-
 
     [theme.breakpoints.up('sm')]: {
         container: {
@@ -70,7 +70,7 @@ const styles = theme => ({
             flexBasis: 'auto',
             margin: 0,
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
         },
 
         buttonWrapper: {
@@ -78,67 +78,67 @@ const styles = theme => ({
         },
 
         passButton: {
-            margin: 0
+            margin: 0,
         },
+    },
+});
 
-    }
-})
-
-
-class SnackbarFeedback extends Component {
+class SnackbarCta extends Component {
+    static defaultProps = {
+        onShow: () => {},
+        onClose: () => {},
+        onClick: () => {},
+        showDelay: 5000,
+    };
 
     state = {
-        open: false
-    }
+        open: false,
+    };
 
     componentDidMount() {
-        setTimeout(() => {
-            this.props.onGiveFeedbackShow();
-            this.setState({ open: true });
-        }, 10000);
+        if (this.props.show) {
+            setTimeout(() => {
+                this.props.onShow();
+                this.setState({ open: true });
+            }, this.props.showDelay);
+        }
     }
 
     handleClose = e => {
         e.preventDefault();
         e.stopPropagation();
-        this.props.onGiveFeedbackClose();
+        this.props.onClose();
         this.setState({ open: false });
-    }
+    };
 
     handleClick = () => {
-        this.props.onGiveFeedbackClick();
-        this.setState({ open: false });
-    }
+        this.props.onClick();
+    };
 
     render() {
-        const {
-            classes
-        } = this.props;
+        const { classes, text, buttonText } = this.props;
         return (
-            <a href="https://www.surveymonkey.com/r/S2YCMR2" target="_blank" onClick={this.handleClick}>   
+            <a href={url('waves-ng')} onClick={this.handleClick}>
                 <Snackbar open={this.state.open} className={classes.snackbar}>
                     <div className={classes.grid}>
                         <div className={classes.textWrapper}>
-                            <Typography inverted cut className={classes.text}>Please leave your feedback and help us make our website better 🙏🏼</Typography>
+                            <Typography inverted cut className={classes.text}>
+                                {text}
+                            </Typography>
                         </div>
                         <div className={classes.buttonWrapper}>
-                            <div className={classes.passButton}>Give Feedback</div>
+                            <div className={classes.passButton}>{buttonText}</div>
                         </div>
                         <div className={classes.buttonWrapper}>
-                            <div className={classes.closeButton} onClick={this.handleClose}>Close</div>
+                            <div className={classes.closeButton} onClick={this.handleClose}>
+                                Close
+                            </div>
                         </div>
                     </div>
                 </Snackbar>
             </a>
-        )
+        );
     }
-
 }
 
-
-SnackbarFeedback.defaultProps = {
-    open: true
-}
-
-
-export default injectSheet(styles)(SnackbarFeedback);
+export default injectSheet(styles)(SnackbarCta);

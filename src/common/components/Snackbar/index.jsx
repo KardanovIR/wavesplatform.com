@@ -16,9 +16,9 @@ const styles = theme => ({
         position: 'fixed',
         left: 0,
         right: 0,
+        zIndex: 100,
         top: '100%',
-        background: '#000726',
-        opacity: 0.87,
+        background: '#4f77fc',
 
         transition: theme.transitions.create('transform', theme.transitions.durationLong)
     },
@@ -26,7 +26,7 @@ const styles = theme => ({
         transform: 'translateY(-100%)'
     },
     test: {
-        height: 100
+        height: 100,
     },
     content: {
         position: 'relative',

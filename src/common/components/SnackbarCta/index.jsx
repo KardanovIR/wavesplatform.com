@@ -10,6 +10,7 @@ const EnhancedSnackbar = withLocalStorage(
         onClick={() => onLocalStorageUpdate('shown')}
         onClose={() => onLocalStorageUpdate('shown')}
 		show={initialValue !== 'shown'}
+        {...rest}
     />
 ));
 
