@@ -1,43 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
-  <g fill="none" transform="translate(1 2)">
-    <path fill="#DAE1E9" d="M0.5,0.625 L0.5,11.625 L17.5,11.625 L17.5,0.625 L0.5,0.625 Z M18.5,-0.375 L18.5,12.625 L-0.5,12.625 L-0.5,-0.375 L18.5,-0.375 Z"/>
-    <g transform="translate(1)">
-      <g fill="#000" transform="rotate(56.31 5.1 12.385)">
-        <g transform="translate(0 1.5)">
-          <rect width="1.375" height="1"/>
-          <rect width="1.375" height="1" x="1.625"/>
-        </g>
-        <rect width="3" height="1" transform="translate(0 .75)"/>
-        <rect width="1.375" height="1"/>
-        <rect width="1.375" height="1" x="1.625"/>
-        <rect width="3" height="1" transform="translate(0 11)"/>
-        <g transform="translate(0 11.75)">
-          <rect width="1.375" height="1"/>
-          <rect width="1.375" height="1" x="1.625"/>
-        </g>
-        <g transform="translate(0 12.5)">
-          <rect width="3" height="1"/>
-        </g>
-      </g>
-      <g transform="rotate(-56.31 5.15 1.641)">
-        <rect width="3" height="1" fill="#000" transform="translate(1.5 1.5)"/>
-        <rect width="3" height="1" fill="#000" transform="translate(1.5 .75)"/>
-        <rect width="3" height="1" fill="#000" transform="translate(1.5)"/>
-        <g fill="#000" transform="translate(1.5 11)">
-          <rect width="1.375" height="1"/>
-          <rect width="1.375" height="1" x="1.625"/>
-        </g>
-        <g fill="#000" transform="translate(1.5 11.75)">
-          <rect width="1.375" height="1"/>
-          <rect width="1.375" height="1" x="1.625"/>
-        </g>
-        <g fill="#000" transform="translate(1.5 12.5)">
-          <rect width="1.375" height="1"/>
-          <rect width="1.375" height="1" x="1.625"/>
-        </g>
-        <path fill="#C60C30" d="M3,9.5 C4.65685425,9.5 6,8.15685425 6,6.5 C6,4.84314575 4.65685425,3.5 3,3.5 C1.75735931,3.5 0.75,4.50735931 0.75,5.75 C0.75,6.99264069 1.75735931,8 3,8"/>
-        <path fill="#1F5AF6" d="M3,3.5 C2.17157288,3.5 1.5,4.17157288 1.5,5 C1.5,5.82842712 2.17157288,6.5 3,6.5 C3.82842712,6.5 4.5,7.17157288 4.5,8 C4.5,8.82842712 3.82842712,9.5 3,9.5 C1.34314575,9.5 4.4408921e-16,8.15685425 0,6.5 C0,4.84314575 1.34314575,3.5 3,3.5"/>
-      </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 12">
+  <g fill="none">
+    <path fill="#DAE1E9" d="M0.947368421,0.923076923 L0.947368421,11.0769231 L17.0526316,11.0769231 L17.0526316,0.923076923 L0.947368421,0.923076923 Z M18,0 L18,12 L0,12 L0,0 L18,0 Z"/>
+    <g transform="translate(2 1)">
+      <rect width="1.375" height="1" x="9.814" y="1.564" fill="#000" transform="rotate(56.31 10.502 1.814)"/>
+      <rect width="1.375" height="1" x="10.715" y="2.916" fill="#000" transform="rotate(56.31 11.403 3.166)"/>
+      <rect width="3" height="1" x="10.076" y="1.824" fill="#000" transform="rotate(56.31 11.576 2.074)"/>
+      <rect width="1.375" height="1" x="11.062" y=".732" fill="#000" transform="rotate(56.31 11.75 .982)"/>
+      <rect width="1.375" height="1" x="11.964" y="2.084" fill="#000" transform="rotate(56.31 12.651 2.334)"/>
+      <rect width="3" height="1" x="1.548" y="7.51" fill="#000" transform="rotate(56.31 3.048 7.76)"/>
+      <rect width="1.375" height="1" x="1.286" y="7.25" fill="#000" transform="rotate(56.31 1.973 7.5)"/>
+      <rect width="1.375" height="1" x="2.187" y="8.602" fill="#000" transform="rotate(56.31 2.874 8.852)"/>
+      <rect width="3" height="1" x=".3" y="8.342" fill="#000" transform="rotate(56.31 1.8 8.592)"/>
+      <rect width="3" height="1" x="1.548" y="2.24" fill="#000" transform="rotate(-56.31 3.048 2.49)"/>
+      <rect width="3" height="1" x=".924" y="1.824" fill="#000" transform="rotate(-56.31 2.424 2.074)"/>
+      <rect width="3" height="1" x=".3" y="1.408" fill="#000" transform="rotate(-56.31 1.8 1.658)"/>
+      <rect width="1.375" height="1" x="9.814" y="8.186" fill="#000" transform="rotate(-56.31 10.502 8.436)"/>
+      <rect width="1.375" height="1" x="10.715" y="6.834" fill="#000" transform="rotate(-56.31 11.403 7.084)"/>
+      <rect width="1.375" height="1" x="10.438" y="8.602" fill="#000" transform="rotate(-56.31 11.126 8.852)"/>
+      <rect width="1.375" height="1" x="11.339" y="7.25" fill="#000" transform="rotate(-56.31 12.027 7.5)"/>
+      <rect width="1.375" height="1" x="11.062" y="9.018" fill="#000" transform="rotate(-56.31 11.75 9.268)"/>
+      <rect width="1.375" height="1" x="11.964" y="7.666" fill="#000" transform="rotate(-56.31 12.651 7.916)"/>
+      <path fill="#C60C30" d="M6.83301221,7.81298089 C8.48986646,7.81298089 9.83301221,6.46983514 9.83301221,4.81298089 C9.83301221,3.15612664 8.48986646,1.81298089 6.83301221,1.81298089 C5.59037152,1.81298089 4.58301221,2.82034021 4.58301221,4.06298089 C4.58301221,5.30562158 5.59037152,6.31298089 6.83301221,6.31298089" transform="rotate(-56.31 7.208 4.813)"/>
+      <path fill="#1F5AF6" d="M7.33397559,2.74903821 C6.50554846,2.74903821 5.83397559,3.42061109 5.83397559,4.24903821 C5.83397559,5.07746534 6.50554846,5.74903821 7.33397559,5.74903821 C8.16240271,5.74903821 8.83397559,6.42061109 8.83397559,7.24903821 C8.83397559,8.07746534 8.16240271,8.74903821 7.33397559,8.74903821 C5.67712134,8.74903821 4.33397559,7.40589246 4.33397559,5.74903821 C4.33397559,4.09218396 5.67712134,2.74903821 7.33397559,2.74903821" transform="rotate(-56.31 6.584 5.749)"/>
     </g>
   </g>
 </svg>

@@ -19,6 +19,7 @@ const arrowUp = <Arrow style={{ transform: 'rotate(180deg)' }} />;
 const arrowDown = <Arrow />;
 const arrowRenderer = ({ isOpen }) => (isOpen ? arrowUp : arrowDown);
 
+
 @injectSheet(styles)
 @withCookies
 class LanguageChooser extends PureComponent {
@@ -42,7 +43,7 @@ class LanguageChooser extends PureComponent {
         optionComponent={LanguageOption}
         options={OPTIONS}
         value={cookies.get(COOKIE_LANGUAGE_PATH)}
-        valueComponent={LanguageValueWithStyles}
+        valueComponent={LanguageValue }
         simpleValue
         searchable={false}
         clearRenderer={Null}
@@ -51,7 +52,6 @@ class LanguageChooser extends PureComponent {
   }
 }
 
-@injectSheet(styles)
 class LanguageOption extends PureComponent {
   static propType = {
     className: PropTypes.string,
@@ -69,34 +69,31 @@ class LanguageOption extends PureComponent {
   };
 
   render() {
-    const { option, className, classes } = this.props;
+    const { option, className } = this.props;
     const Icon = ICONS_MAP[option.value];
     return (
       <div className={className} onClick={this.handleClick}>
         <Icon />
-        <span className={classes.optionLabel}>{option.label}</span>
+        <span className='Select-option-label'>{option.label}</span>
       </div>
     );
   }
 }
 
 const LanguageValue = props => {
-  const { value, classes } = props;
+  const { value } = props;
   const Icon = ICONS_MAP[value.value];
 
   return (
-    <div type="body" className={classes.value}>
+    <div type="body" className='Select-value'>
       <Icon />
-      <span className={classes.valueLabel}>{value.label}</span>
+      <span className='Select-value-label'>{value.label}</span>
     </div>
   );
 };
 
 LanguageValue.propTypes = {
   value: PropTypes.object,
-  classes: PropTypes.object,
 };
-
-const LanguageValueWithStyles = injectSheet(styles)(LanguageValue);
 
 export default LanguageChooser;

@@ -5,7 +5,12 @@ const styles = ({ spacing, colors, palette }) => {
     spacing.unit,
     spacing.unit * 2,
   ];
-  return ({
+  const iconSizes = {
+    height: '12px',
+    width: '18px',
+  };
+
+  return {
     select: {
       color: palette.gray[400],
       fontSize: '12px',
@@ -13,13 +18,15 @@ const styles = ({ spacing, colors, palette }) => {
       borderRadius: spacing.radius,
       '&:hover, &.is-open': {
         borderColor: palette.gray[400],
+        '& .Select-value-label': {
+          opacity: 1,
+        },
       },
 
       display: 'inline-block',
       position: 'relative',
       '& .Select-control': {
         padding: OPTION_PADDING,
-        paddingRight: '11px',
         display: 'flex',
       },
 
@@ -44,9 +51,7 @@ const styles = ({ spacing, colors, palette }) => {
         '&.is-selected': {
           display: 'none',
         },
-        '& svg': {
-          height: `${spacing.unit * 3 / 2}px`,
-        },
+        '& svg': iconSizes,
       },
       '& .Select-menu-outer': {
         borderTop: `1px solid ${palette.gray[400]}`,
@@ -60,23 +65,23 @@ const styles = ({ spacing, colors, palette }) => {
         width: '100%',
         left: '-1px',
       },
-    },
-    value: {
-      display: 'inline-flex',
-      justifyContent: 'start',
-      cursor: 'default',
-      '& svg': {
-        height: `${spacing.unit * 3 / 2}px`,
+      '& .Select-value-label': {
+        marginLeft: [spacing.unit / 2],
+        marginRight: [spacing.unit / 2],
+        opacity: '0.7',
+      },
+      '& .Select-value': {
+        display: 'inline-flex',
+        justifyContent: 'start',
+        cursor: 'default',
+        '& svg': iconSizes,
+      },
+      '& .Select-option-label': {
+        marginLeft: [spacing.unit / 2],
+        marginRight: [spacing.unit / 2],
       },
     },
-    valueLabel: {
-      marginLeft: [spacing.unit / 2],
-      marginRight: [spacing.unit / 2],
-    },
-    optionLabel: {
-      marginLeft: [spacing.unit / 2],
-      marginRight: [spacing.unit / 2],
-    },
-  });
+  };
 };
+
 export default styles;
