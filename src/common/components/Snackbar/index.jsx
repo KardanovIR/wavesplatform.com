@@ -16,16 +16,16 @@ const styles = theme => ({
     left: 0,
     right: 0,
     zIndex: 100,
-    top: '100%',
+    bottom: '0',
     background: '#4f77fc',
-
+    transform: 'translateY(101%)',
     transition: theme.transitions.create(
       'transform',
       theme.transitions.durationLong
     ),
   },
   open: {
-    transform: 'translateY(-100%)',
+    transform: 'translateY(0%)',
   },
   test: {
     height: 100,
