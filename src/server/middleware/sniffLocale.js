@@ -23,15 +23,15 @@ const sniffLocale = async (ctx, next) => {
     });
 
     // @todo change when translations are ready
-    ctx.locale = sniffedLocale;
+    // ctx.locale = sniffedLocale;
   }
 
   // @todo change when translations are ready
-  ctx.availableLocales = supported;
+  // ctx.availableLocales = supported;
 
   // @todo change when translations are ready
-  // ctx.locale = 'en';
-  // ctx.availableLocales = [];
+  ctx.locale = 'en';
+  ctx.availableLocales = [];
 
   await next();
 };

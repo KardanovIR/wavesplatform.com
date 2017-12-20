@@ -17,8 +17,9 @@ import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
+import ko from 'react-intl/locale-data/ko';
 
-addLocaleData([...en, ...ru]);
+addLocaleData([...en, ...ru, ...ko]);
 
 // Cookies
 import { CookiesProvider } from 'react-cookie';
