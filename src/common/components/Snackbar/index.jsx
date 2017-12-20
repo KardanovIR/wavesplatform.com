@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Wrapper from 'src/common/components/Wrapper';
+import ContentContainer from 'src/common/components/ContentContainer';
 
 import injectSheet from 'react-jss';
 import cn from 'classnames';
@@ -51,9 +51,9 @@ const styles = theme => ({
 
 const Snackbar = ({ classes, open, children }) => (
   <div className={cn(classes.snackbar, { [classes.open]: open })}>
-    <Wrapper className={classes.container}>
+    <ContentContainer className={classes.container}>
       <div className={classes.content}>{children}</div>
-    </Wrapper>
+    </ContentContainer>
   </div>
 );
 
