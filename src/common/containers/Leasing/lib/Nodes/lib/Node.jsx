@@ -16,6 +16,10 @@ const styles = ({ palette, spacing, breakpoints }) => ({
         fontSize: 20,
         lineHeight: 1,
     },
+    percent: {
+        color: palette.blue[500],
+        fontWeight: 400,
+    },
     spaced: {
         margin: [spacing.unit * 1.5, 0],
     },
@@ -91,7 +95,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
                 </Col>
 
                 <Col xs={8}>
-                    <Typography type="numeral" align="right">
+                    <Typography className={classes.percent} type="numeral" align="right">
                         <FormattedNumber value={share} /> %
                     </Typography>
                 </Col>

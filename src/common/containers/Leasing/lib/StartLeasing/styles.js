@@ -1,11 +1,15 @@
 import startMiningArrow from './img/start_mining_arrow.svg';
 
-const styles = ({ breakpoints }) => ({
+const styles = ({ breakpoints, spacing }) => ({
     col: {
-        textAlign: 'center',
+        textAlign: 'left',
     },
     imageWrapper: {
         position: 'relative',
+        textAlign: 'center',
+        '& > svg': {
+            maxWidth: '80%',
+        }
     },
     arrow: {
         position: 'absolute',
@@ -19,12 +23,61 @@ const styles = ({ breakpoints }) => ({
     },
     message: {
         maxWidth: 242,
-        margin: [0, 'auto']
+        //margin: [0, 'auto']
+        flexDirection: 'column',
+        justifyContent: 'center',
+        display: 'flex',
+        fontSize: 16,
         // padding: [0, '20%']
+    },
+    title: {
+        fontSize: 16,
+        fontWeight: 400,
+    },
+    text: {
+        fontSize: 23,
+        fontWeight: 400,
+    },
+    flexRow: {
+        flexDirection: "row-reverse",
+        display: 'flex',
+    },
+    colMargin: {
+        marginBottom: spacing.unit * 4,
+    },
+    [breakpoints.up("md")]: {
+        imageWrapper: {
+            '& > svg': {
+                maxWidth: 'auto',
+            }
+        },
+        title: {
+            fontSize: 23,
+            fontWeight: 400,
+        },
+        text: {
+            fontSize: 32,
+        },
+        flexer: {
+            display: 'flex',
+            flexDirection: 'row',
+
+        },
+        flexRow: {
+            display: 'flex',
+            flexDirection: "row",
+        },
+        message: {
+            fontSize: 17,
+            fontWeight: 400,
+        },
     },
     [breakpoints.up('lg')]: {
         arrow: {
-            display: 'block'
+            display: 'block',
+            transform: 'rotate(90deg)',
+            position: 'relative',
+            top: spacing.unit * 3,
         }
     }
 });

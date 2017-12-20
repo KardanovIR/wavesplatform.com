@@ -19,7 +19,7 @@ import Nodes from './lib/Nodes';
 import injectSheet from 'react-jss';
 const styles = theme => ({
     bgRevenue: {
-        background: '#f0f4fb',
+        background: '#d6e0fc',
     },
     bgNodes: {
         background: theme.palette.gray[50],
