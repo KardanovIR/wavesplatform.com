@@ -9,6 +9,7 @@ const EnhancedSnackbar = withLocalStorage('snackbarStressTest')(
       onClick={() => onLocalStorageUpdate('shown')}
       onClose={() => onLocalStorageUpdate('shown')}
       show={initialValue !== 'shown'}
+      {...rest}
     />
   )
 );

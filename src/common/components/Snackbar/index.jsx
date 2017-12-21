@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Wrapper from 'src/common/components/Wrapper';
+import ContentContainer from 'src/common/components/ContentContainer';
 
 import injectSheet from 'react-jss';
 import cn from 'classnames';
@@ -15,17 +15,17 @@ const styles = theme => ({
     position: 'fixed',
     left: 0,
     right: 0,
-    top: '100%',
-    background: '#000726',
-    opacity: 0.87,
-
+    zIndex: 100,
+    bottom: '-1px',
+    background: '#4f77fc',
+    transform: 'translateY(101%)',
     transition: theme.transitions.create(
       'transform',
       theme.transitions.durationLong
     ),
   },
   open: {
-    transform: 'translateY(-100%)',
+    transform: 'translateY(0%)',
   },
   test: {
     height: 100,
@@ -51,9 +51,9 @@ const styles = theme => ({
 
 const Snackbar = ({ classes, open, children }) => (
   <div className={cn(classes.snackbar, { [classes.open]: open })}>
-    <Wrapper className={classes.container}>
+    <ContentContainer className={classes.container}>
       <div className={classes.content}>{children}</div>
-    </Wrapper>
+    </ContentContainer>
   </div>
 );
 

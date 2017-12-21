@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import Snackbar from 'src/common/components/Snackbar';
 import Typography from 'src/common/components/Typography';
 
-import url from 'src/common/utils/url';
-
 import injectSheet from 'react-jss';
 
 const styles = theme => ({
@@ -24,9 +22,7 @@ const styles = theme => ({
 
   button: {
     ...theme.typography.button,
-
     whiteSpace: 'nowrap',
-
     boxSizing: 'border-box',
     transition: theme.transitions.create('color'),
     cursor: 'pointer',
@@ -35,21 +31,24 @@ const styles = theme => ({
 
   passButton: {
     composes: '$button',
-    color: '#fcbc32',
+    color: '#fff',
     '&:hover': {
       color: theme.palette.gray[0],
     },
     marginLeft: -theme.spacing.unit * 2,
+    whiteSpace: 'nowrap',
   },
 
   closeButton: {
     composes: '$button',
-    color: theme.palette.gray[600],
+    color: '#a7bbfd',
     '&:hover': {
       color: theme.palette.gray[0],
     },
     marginRight: -theme.spacing.unit * 2,
     float: 'right',
+    whiteSpace: 'nowrap',
+    textTransform: 'uppercase',
   },
 
   buttonWrapper: {
@@ -82,7 +81,7 @@ const styles = theme => ({
   },
 });
 
-class SnackbarStressTest extends Component {
+class SnackbarCta extends Component {
   static defaultProps = {
     onShow: () => {},
     onClose: () => {},
@@ -112,22 +111,26 @@ class SnackbarStressTest extends Component {
 
   handleClick = () => {
     this.props.onClick();
+    this.setState({ open: false });
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, text, buttonText } = this.props;
     return (
-      <a href={url('waves-ng')} onClick={this.handleClick}>
+      <a
+        href="https://t.me/wavesnews"
+        target="_blank"
+        onClick={this.handleClick}
+      >
         <Snackbar open={this.state.open} className={classes.snackbar}>
           <div className={classes.grid}>
             <div className={classes.textWrapper}>
               <Typography inverted cut className={classes.text}>
-                Hi there! We’re currently stress testing our awesome new
-                Waves-NG algorithm. Check it out! 🚀
+                {text}
               </Typography>
             </div>
             <div className={classes.buttonWrapper}>
-              <div className={classes.passButton}>Check it out</div>
+              <div className={classes.passButton}>{buttonText}</div>
             </div>
             <div className={classes.buttonWrapper}>
               <div className={classes.closeButton} onClick={this.handleClose}>
@@ -141,4 +144,4 @@ class SnackbarStressTest extends Component {
   }
 }
 
-export default injectSheet(styles)(SnackbarStressTest);
+export default injectSheet(styles)(SnackbarCta);

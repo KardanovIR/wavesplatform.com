@@ -3,7 +3,7 @@ import React from 'react';
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
-// import SnackbarStressTest from 'src/common/components/SnackbarStressTest';
+import SnackbarCta from 'src/common/components/SnackbarCta';
 
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
@@ -30,7 +30,7 @@ const Layout = ({
   classes,
   activeLink,
   hideFooter,
-  // hideSnackbar,
+  hideSnackbar,
 }) => (
   <div className={classes.body}>
     <div className={classes.navigationWrapper}>
@@ -43,7 +43,7 @@ const Layout = ({
     {children}
     <Wrapper>
       {!hideFooter && <Footer links={MOBILE_LINKS} />}
-      {/* {!hideSnackbar && <SnackbarStressTest />} */}
+      {!hideSnackbar && <SnackbarCta text="Join our Waves community Telegram channel 🏄" buttonText="JOIN" />}
     </Wrapper>
   </div>
 );
