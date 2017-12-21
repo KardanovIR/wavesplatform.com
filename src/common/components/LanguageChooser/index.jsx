@@ -6,7 +6,7 @@ import { pathOr } from 'ramda';
 import { withCookies } from 'react-cookie';
 import { LANGUAGE_MAP, ICONS_MAP } from './lib/constants.js';
 import Select from 'react-select';
-import Null from 'config/lib/NoopReact';
+import Null from 'src/common/components/Null';
 import injectSheet from 'react-jss';
 import styles from './styles';
 

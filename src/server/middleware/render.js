@@ -89,7 +89,6 @@ export const render = function({
           : `/static/${scriptName}.js`;
 		}
 		
-		console.log(ctx.locale, ctx.availableLocales)
 
     const html = renderToStaticMarkup(
       <Html
