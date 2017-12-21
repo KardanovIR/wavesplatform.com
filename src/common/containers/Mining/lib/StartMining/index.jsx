@@ -8,10 +8,10 @@ import IconButton from 'src/common/components/Button/Icon';
 import { Row, Col } from 'src/common/components/Grid';
 import ContentContainer from 'src/common/components/ContentContainer';
 
-import ImageNode from '!svg-react-loader!./img/start_mining_node.svg';
-import ImageInstall from '!svg-react-loader!./img/start_mining_install.svg';
-import ImageConfigure from '!svg-react-loader!./img/start_mining_configure.svg';
-import ImageDone from '!svg-react-loader!./img/start_mining_done_mining.svg';
+import ImageNode from '!svg-react-loader!./img/start_mining_node_new.svg';
+import ImageInstall from '!svg-react-loader!./img/start_mining_install_new.svg';
+import ImageConfigure from '!svg-react-loader!./img/start_mining_configure_new.svg';
+import ImageDone from '!svg-react-loader!./img/start_mining_done_mining_new.svg';
 import ImageArrow from '!svg-react-loader!./img/start_mining_arrow.svg';
 
 import { FormattedMessage } from 'react-intl';

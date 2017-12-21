@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="170px" height="111px" viewBox="0 0 170 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mining" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-758.000000, -3677.000000)">
+        <g id="3" transform="translate(758.000000, 3677.000000)">
+            <polygon id="Fill-29" fill="#E0E1E6" points="141 78 15 78 15 4.5594215 19.7125703 0 136.28743 0 141 4.5594215"></polygon>
+            <path d="M155,86 L0,86 L0,84.3341361 C0,80.2841662 3.53936088,77 7.90468078,77 L155,77 L155,86 Z" id="Fill-30" fill="#E0E1E6"></path>
+            <polygon id="Fill-31" fill="#0053FE" points="150 111 130 91.5 150 72 170 91.5"></polygon>
+            <polygon id="Fill-32" fill="#FFFFFF" points="23 77 133 77 133 8 23 8"></polygon>
+            <polygon id="Fill-33" fill="#BABFC8" points="51 42 106 42 106 34 51 34"></polygon>
+            <polygon id="Fill-34" fill="#BABFC8" points="51 52 106 52 106 44 51 44"></polygon>
+            <path d="M147,94 L145,96" id="Stroke-36" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M155,86 L149,92" id="Stroke-37" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M148,86 L141,93" id="Stroke-38" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M151,83 L150,84" id="Stroke-39" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M153,94 L148,99" id="Stroke-40" stroke="#FFFFFF" stroke-width="2"></path>
+            <path d="M158,89 L155,92" id="Stroke-41" stroke="#FFFFFF" stroke-width="2"></path>
+            <polygon id="Stroke-42" stroke="#FFFFFF" stroke-width="2" points="149.00031 83 147 84.999381 149.00031 87 151 84.999381"></polygon>
+            <polygon id="Stroke-43" stroke="#FFFFFF" stroke-width="2" points="154 91 152 92.9996905 154 95 156 92.9996905"></polygon>
+            <polygon id="Stroke-44" stroke="#FFFFFF" stroke-width="2" points="147.99969 91 146 92.9996905 147.99969 95 150 92.9996905"></polygon>
+        </g>
+    </g>
+</svg>
