@@ -23,6 +23,8 @@ import fingerprint from '!svg-react-loader!./svg/fingerprint.svg';
 import document from '!svg-react-loader!./svg/document.svg';
 import product from '!svg-react-loader!./svg/product.svg';
 import money from '!svg-react-loader!./svg/money.svg';
+import play from '!svg-react-loader!./svg/play.svg';
+import done from '!svg-react-loader!./svg/done.svg';
 
 export default {
   coins,
@@ -50,4 +52,6 @@ export default {
   document,
   product,
   money,
+  play,
+  done
 };

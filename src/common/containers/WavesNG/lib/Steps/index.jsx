@@ -33,7 +33,7 @@ const Steps = () => {
         <Col xs={12} sm={6} lg={3}>
           <Step
             complete
-            iconName="script"
+            iconName="done"
             title={<FormattedMessage id="wavesNG.preview.p1.title" />}
             text={<FormattedMessage id="wavesNG.preview.p1.text" />}
           />
@@ -41,7 +41,7 @@ const Steps = () => {
         <Col xs={12} sm={6} lg={3}>
           <Step
             complete
-            iconName="script"
+            iconName="done"
             title={<FormattedMessage id="wavesNG.preview.p2.title" />}
             text={<FormattedMessage id="wavesNG.preview.p2.text" />}
           />
@@ -49,14 +49,14 @@ const Steps = () => {
         <Col xs={12} sm={6} lg={3}>
           <Step
             complete
-            iconName="script"
+            iconName="done"
             title={<FormattedMessage id="wavesNG.preview.p3.title" />}
             text={<FormattedMessage id="wavesNG.preview.p3.text" />}
           />
         </Col>
         <Col xs={12} sm={6} lg={3}>
           <Step
-            iconName="noLimits"
+            iconName="play"
             title={<FormattedMessage id="wavesNG.preview.p4.title" />}
             text={<FormattedMessage id="wavesNG.preview.p4.text" />}
           />
