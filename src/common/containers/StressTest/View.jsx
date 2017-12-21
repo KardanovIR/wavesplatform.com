@@ -29,10 +29,7 @@ const StressTest = ({
     <Row centered>
       <Col xs={12} md={6} lg={4}>
         <Typography type="quote" align="center">
-          <FormattedMessage
-            id="wavesNG.stressTest.test.errorFatal"
-            //
-          />
+          <FormattedMessage id="wavesNG.stressTest.test.errorFatal" />
         </Typography>
         <Margin bottom={2} />
       </Col>

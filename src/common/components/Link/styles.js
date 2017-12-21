@@ -2,10 +2,13 @@ const styles = theme => ({
   link: {
     textDecoration: 'none',
     cursor: 'pointer',
+    whiteSpace: 'nowrap',
   },
 
   text: {
-    display: 'inline-block',
+    // display: 'inline-block',
+    whiteSpace: 'normal',
+    paddingRight: '1.2em',
   },
 
   pseudo: {
@@ -45,10 +48,9 @@ const styles = theme => ({
 
   icon: {
     display: 'inline-block',
-    marginLeft: '0.5em',
+    marginLeft: '-.7em',
     height: '.7em',
     width: '.7em',
-    verticalAlign: '-3%',
   },
 });
 

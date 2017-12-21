@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
-
 import MainScreen from 'src/common/components/MainScreen';
 
-const MainScreenSection = () => (
+import { FormattedMessage } from 'react-intl';
+
+const DevelopersMainScreen = ({ inverted }) => (
   <MainScreen
-    title={<FormattedHTMLMessage id="wavesNG.title" />}
+    title={<FormattedMessage id="wavesNG.title" />}
     text={<FormattedMessage id="wavesNG.text" />}
+    inverted={inverted}
   />
 );
 
-export default MainScreenSection;
+export default DevelopersMainScreen;

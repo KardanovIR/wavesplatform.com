@@ -1,22 +1,25 @@
-import bgImage from 'src/common/styles/bgImage';
-
-import install from './img/install.svg';
-
-const styles = theme => ({
-  icon: {
-    ...bgImage,
+const styles = ({ spacing, palette, breakpoints }) => ({
+  column: {
+    paddingBottom: spacing.unit * 4,
   },
-  iconInstall: {
-    composes: '$icon',
-    backgroundImage: `url(${install})`,
+  bgBlue: {
+    background: palette.blue[300],
   },
-  iconCoins: {
-    composes: '$icon',
-    backgroundImage: `url(${install})`,
+  bgGray: {
+    background: palette.gray[700],
   },
-  iconExchange: {
-    composes: '$icon',
-    backgroundImage: `url(${install})`,
+  panel: {
+    padding: spacing.getSpacing(8, 0, 5),
+  },
+  imageWrapper: {
+    width: '60%',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  },
+  [breakpoints.up('md')]: {
+    panel: {
+      padding: spacing.getSpacing(4, 2, 5),
+    },
   },
 });
 

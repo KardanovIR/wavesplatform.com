@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -8,8 +8,8 @@ import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import Margin from 'src/common/components/Margin';
 import Typography from 'src/common/components/Typography';
-import Background from 'src/common/components/Background';
-import MainScreenBackground from 'src/common/components/Background/MainScreen';
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
+import ContentContainer from 'src/common/components/ContentContainer';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
@@ -21,53 +21,64 @@ import MainScreen from './lib/MainScreen';
 import StressTest from './lib/StressTest';
 import Descriptions from './lib/Descriptions';
 import Steps from './lib/Steps';
+import News from './lib/News';
 
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-import WavesNgLogo from '!svg-react-loader!./img/ng-logo.svg';
+import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ classes }) => (
   <Layout>
-    <MainScreenBackground type="dark">
-      <MainScreen />
-    </MainScreenBackground>
+    <BackgroundMainScreen
+      type="image"
+      src={require('./lib/MainScreen/img/bg.jpg')}
+      srcSet={`${require('./lib/MainScreen/img/bg.jpg')} 1x, ${require('./lib/MainScreen/img/bg@2x.jpg')} 2x`}
+      videoSrc={fileUrl('video/black2_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/black2_mobile.mp4')}
+      videoFirstFrame={require('./lib/MainScreen/img/w_black_dev_1.jpg')}
+      videoFirstFrameMobile={require('./lib/MainScreen/img/w_phone_black_1.jpg')}
+    >
+      <ContentContainer>
+        <MainScreen inverted />
+      </ContentContainer>
+    </BackgroundMainScreen>
 
-    <Section top={3}>
-      <Typography type="display3" align="center">
-        <FormattedMessage
-          id="wavesNG.stressTest.title"
-          values={{
-            logo: (
-              <span className={classes.logo}>
-                <WavesNgLogo />
-              </span>
-            ),
-          }}
-        />
-      </Typography>
-      <Margin bottom={4} />
-      <Steps />
+    <Section size={4}>
+      <ContentContainer>
+        <Typography type="display3">
+          <FormattedHTMLMessage
+            id="wavesNG.stressTest.title"
+            defaultMessage="Waves-NG<br>activation stages"
+          />
+        </Typography>
+        <Margin bottom={4} />
+        <Steps />
+      </ContentContainer>
     </Section>
 
-    <Section top={2} bottom={4}>
-      <AnchorScroll anchor="stress-test">
-        <StressTest active />
-      </AnchorScroll>
+    <Section size={4} className={classes.bgGray}>
+      <ContentContainer>
+        <AnchorScroll anchor="stress-test">
+          <StressTest active />
+        </AnchorScroll>
+      </ContentContainer>
     </Section>
 
-    <Background className={classes.bgDescriptions} skewed={true}>
-      <Section size={4}>
+    <Section size={4}>
+      <ContentContainer>
         <Descriptions />
-      </Section>
-    </Background>
+      </ContentContainer>
+    </Section>
 
-    <div className={classes.footerMarginCompensate}>
-      <Background className={classes.bgSubscription} skewed={true}>
+    <Section size={4} className={classes.bgJoinUs}>
+      <ContentContainer>
+        <News />
+				<Margin bottom={5} />
         <SubscribeSection />
-      </Background>
-    </div>
+      </ContentContainer>
+    </Section>
   </Layout>
 );
 

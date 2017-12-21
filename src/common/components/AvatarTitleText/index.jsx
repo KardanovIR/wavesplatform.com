@@ -75,6 +75,9 @@ const AvatarTitleText = ({
   title,
   twoColumns,
   inverted,
+  cut,
+  titleClassName,
+  textClassName,
 }) => {
   return (
     <div className={className}>
@@ -89,20 +92,20 @@ const AvatarTitleText = ({
         {!twoColumns && <Margin bottom={2} />}
         <Typography
           inverted={inverted}
-          className={classes.title}
+          className={cn(classes.title, titleClassName)}
           type="display1"
           tagName="div"
-          cut
+          cut={cut}
         >
           {title}
         </Typography>
       </div>
       <Typography
         inverted={inverted}
-        className={classes.text}
+        className={cn(classes.text, textClassName)}
         type="body"
         tagName="div"
-        cut
+        cut={cut}
       >
         {text}
       </Typography>
@@ -113,6 +116,7 @@ const AvatarTitleText = ({
 AvatarTitleText.defaultProps = {
   centered: false,
   twoColumns: false,
+  cut: true,
 };
 
 export default injectSheet(styles)(AvatarTitleText);
