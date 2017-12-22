@@ -6,7 +6,6 @@ const styles = theme => ({
   },
 
   text: {
-    // display: 'inline-block',
     whiteSpace: 'normal',
     paddingRight: '1.2em',
   },
