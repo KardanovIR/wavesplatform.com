@@ -30,7 +30,7 @@ import styles from './styles';
 import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ classes }) => (
-  <Layout>
+  <Layout hideSnackbar>
     <BackgroundMainScreen
       type="image"
       src={require('./lib/MainScreen/img/bg.jpg')}
