@@ -23,7 +23,7 @@ const News = () => {
         </Typography>
         <Margin bottom={4} xsOnly />
       </Col>
-      <Col xs={12} sm={6}>
+      <Col xs={12} sm={6} smOffset={1}>
         <Typography type="display2" align="center">
           <Link
             textDecoration={false}
