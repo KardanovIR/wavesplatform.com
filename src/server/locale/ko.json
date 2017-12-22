@@ -1,0 +1,464 @@
+{
+  "balance": "Balance",
+  "calcRevenue.interest": "Interest",
+  "calcRevenue.miningTerm": "Mining term",
+  "calcRevenue.total": "Total",
+  "calcRevenue.totalAmount": "Total amount of waves",
+  "company.feedback.supportLink": "support",
+  "company.feedback.text":
+    "Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}.",
+  "company.feedback.title": "Contact us",
+  "company.media.contactUs":
+    "For all media inquiries, please contact the Communications Team",
+  "company.media.contactUsLink": "contact",
+  "company.media.title": "미디어",
+  "company.title": "We create the economics of free, perfect and instant",
+  "company.vacancies.text":
+    "우리 팀에서 당신을 기대합니다. 우리와 함께 세상을 바꿔보세요!",
+  "company.vacancies.title": "채용공고",
+  "company.whitepaper.text":
+    "Waves는 맞춤형 블록체인 토큰 거래에 초점을 맞춘 탈중앙화된 블록체인 플랫폼입니다. 국제 통화 송금은 Waves 블록체인에서 항의 게이트웨이 교환원들을 통해 유지됩니다.",
+  "company.whitepaper.title": "백서",
+  "cta.brandingPackage": "브랜드 패키지",
+  "cta.getClient": "Get Client",
+  "cta.getDesktopClient": "Get desktop client",
+  "cta.getWaves": "Get Waves",
+  "cta.onlineClient": "Online Client",
+  "cta.resume": "Submit a resume",
+  "cta.whitepaper": "백서 다운로드",
+  "developers.DEX.subtitle":
+    "우리 노드들은 우리 분산화된 거래소를 작동하는 주문 매처를 포함되어 있음으로 토큰들을 블록체인 계좌에서 다른 거래소로 송금할 필요없이 토큰 트레이딩을 가능하게 합니다.",
+  "developers.DEX.text.p1":
+    "DEX에 이루어지는 모든 거래가 안전하고 블록체인 노드로 검증 받습니다. \nDEX는 오픈 소스이자 각각 노드의 일부이기 때문에 각 사용자가 DEX의 자기 인스턴스를 실행할 수 있습니다.",
+  "developers.DEX.text.p2":
+    "매처는 주문장에 접속과 주문을 보내기 위해 자기 REST API를 노출합니다. 덕분에 사용자들이 트레이딩 UI 또는 트레이딩 보트의 아무 종류를 도입할 수 있습니다.",
+  "developers.DEX.title": "분산화된 거래소 (DEX)",
+  "developers.cta.client": "클라이언트",
+  "developers.cta.dexApi": "DEX API",
+  "developers.cta.documentation": "문서",
+  "developers.cta.howToInstallNode": "설치 과정",
+  "developers.cta.wavesNode": "Waves node",
+  "developers.description.algorithm.text":
+    "Waves 블록체인이 지분증명 (PoS) 알고리즘을 사용하고 있습니다. 참여자들은 거래 수수료로 보상을 받게 되어 있습니다.",
+  "developers.description.algorithm.title": "지분증명 (PoS) 알고리즘을",
+  "developers.description.fees.text":
+    "자산 송금 최저 수수료는 0.001 WAVES입니다. 시장주문을 위해 고정된 수수료도 0.001 WAVES입니다. 토큰 발행 가격은 1 WAVES이며, 본인의 토큰을 사용하기 위해 수수료를 내지 않습니다.",
+  "developers.description.fees.title": "저렴하고 고정된 수수료",
+  "developers.description.network.text":
+    "우리의 새로운 PoS 일치 알고리즘은 네트워크 대역폭을 엄청나게 증가시켜 초당 몇 백 거래를 가능하게 합니다.",
+  "developers.description.network.title": "높은 네트워크 채널 수용력",
+  "developers.description.transactions.text":
+    "거래들이 기본적으로 실행되기 때문에 토큰을 발행하거나 분산화된 거래소를 통해 리즈와 거래를 진행하기 위해 스마트계약이 필요없습니다.",
+  "developers.description.transactions.title": "다종 거래를 위한 저급 지원",
+  "developers.friendlyAPI.subtitle":
+    "우리 오픈 소스 클라이언트 애플리케이션은 같은 API를 사용합니다. 귀하는 이것을 탐색하고 클라이언트 애플리케이션의 어느 종류든 스스로 시행하실 수 있습니다.",
+  "developers.friendlyAPI.text":
+    "우리 노드들은 모든 블록체인 데이터(거래내역, 잔액, 등)와 새로운 거래를 실행하기 위한 작업에 접속을 할 수 있게 하는 REST API를 노출합니다. 프로그램적으로 송금이나 교환, 토큰 발행이나 자신 리즈를 하는 것이 용이합니다.",
+  "developers.friendlyAPI.title": "개발자 친화적 API",
+  "developers.text":
+    "These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.",
+  "developers.title": "블록체인에 앱 개발",
+  "developers.wavesEcosystem.explorer": "기능이 풍부한 블록체인 탐색기",
+  "developers.wavesEcosystem.forum": "Waves 포럼",
+  "developers.wavesEcosystem.pywaves":
+    "Python API 클라이언트와 유용한 스크립트들",
+  "developers.wavesEcosystem.title": "Waves 생태계",
+  "developers.wavesNetwork.explorer": "탐색기",
+  "developers.wavesNetwork.explorers": "MainNet과 TestNet 클러스터 탐색기",
+  "developers.wavesNetwork.mainNet": "MainNet",
+  "developers.wavesNetwork.onlineWallet": "온라인 지갑",
+  "developers.wavesNetwork.testNet": "TestNet",
+  "developers.wavesNetwork.text":
+    "Waves 너드의 새 버전들은 TestNet 클러스터에서 개발자 커뮤니티로 검증됩니다. TestNet이란 개발자들이 새로운 기능을 작용해보고 개발된 앱들이 출시하기 위해 준비되어 있는 확인할 수 있는 곳입니다.",
+  "developers.wavesNetwork.title": "Waves 네트워크",
+  "developers.wavesNode.subtitle":
+    "개인 노드를 보유하는 것이 노드에 기반을 두는 안전하고 고하중 애플리케이션을 개발하는 것을 가능하게 합니다",
+  "developers.wavesNode.text":
+    "Waves Node를 설치하고 본인의 인스턴스를 만드는 것이 매우 쉽습니다. 이것이 WAVES와 MRT (Miners Reward Tokens)를 마이닝하는 것과 다른 사용자들의 마이닝 세력을 합계하는 리징 풀로 활동하는 것을 할 수 있게 합니다. [WAVES NODE] [설치하기]",
+  "developers.wavesNode.title": "Waves Node 실행하기",
+  "error404.backHome": "Back home",
+  "error404.notFound": "Page not found",
+  "error404.sorry": "Sorry, this is not the web page you are looking for.",
+  "facts.capitalisation": "시장 자본화 ${cap} 에 도달했습니다",
+  "facts.tokens": "Waves에서 총 {number} 토큰이 발행되었으며",
+  "feedback.companiesReleased": "Waves에서 토큰을 발행한 산업:",
+  "feedback.mobileGo.description": "암호화 중심 모바일 게이밍 플랫폼과 스토어",
+  "feedback.mobileGo.quote":
+    "MobileGo는 암호화폐의 이점을 게이밍 산업으로 가져오는 것을 목표합니다. 크라우드펀딩을 통해 $5300만 지원을 받은 이 프로젝트가 GStore에 게이머와 개발자의 커뮤니티를 운영하고 있습니다. GStore는 GWallet과 솔기가 없는 통합을 통해 모든 게임이 구매되는 오픈형 플랫폼입니다. 또한MobileGo는 P2P 이스포츠 경기를 개최하기 위해 스마트계약을 사용할 예정니다.",
+  "feedback.mobileGo.signature": "MobileGo Team",
+  "feedback.mobileGo.title":
+    "MobileGo becomes largest blockchain crowdsale in history!",
+  "feedback.primalbase.description": "기술 커뮤니티 위한 분배 워크스페이스",
+  "feedback.primalbase.quote":
+    "우리는 초기에 참여해서 프로젝트에 열정적인 지원을 해드린 모든 참여자들에게 진심으로 감사드립니다. 이 노력과 새로운 운영 팀 덕분에 우리는 성취를 달성할 수 있었습니다. 이제 곧 암스테르담과 베를린에서 새로운 브렌치를 오픈할 예정이며 추가적인 툴을 개시될 예정입니다. \nPBT 판매가 더 이상 시행되지 않을 것이지만 기존 투자자들 위해 PBT의 가치를 증가시키도록 또한 새로운 참여자들에게 기회를 제공하는 목적으로 추가적인 프로젝트들이 개시될 예정니다. 프로젝트 신개발과 확대에 대해 새로운 소식을 받으려면 메일링리스트를 떠나지 마십시오.",
+  "feedback.primalbase.signature": "Primalbase Team",
+  "feedback.primalbase.title":
+    "Real Estate on Blockchain becomes a reality: Primalbase raised over 3000 BTC during crowdsale",
+  "feedbackForm.chooseTopic": "Choose a topic...",
+  "feedbackForm.optionEvents": "Events",
+  "feedbackForm.optionJobs": "채용공고",
+  "feedbackForm.optionMedia": "미디어",
+  "feedbackForm.optionPartnership": "Partnership",
+  "feedbackForm.placeholderEmail": "Email address",
+  "feedbackForm.placeholderMessage": "Message",
+  "form.anotherEmail": "Another email",
+  "form.error": "Sorry, something went wrong...",
+  "form.errors.emailEmpty": "Please enter an email address",
+  "form.errors.emailInvalid": "Invalid email address",
+  "form.errors.general":
+    "Please enter a correct email address, choose a topic and write a message",
+  "form.placeholderEmail": "Email",
+  "form.retry": "Try again",
+  "form.submit": "Submit",
+  "form.thanksSubscribe":
+    "Thanks for subscribing! Check your inbox, we've sent a confirmation letter to {email}.",
+  "formFeedback.error":
+    "Sorry, something went wrong... Please refresh the page and try again.",
+  "formFeedback.success": "Thank you! We appreciate your feedback.",
+  "getWaves.exchanges.title": "거래소에서 WAVES 구매하기",
+  "getWaves.howToBuyWaves.quote":
+    "PC 버전Waves 클라이언트와 통합된 분산된 거래소 Waves DEX는 Waves 플랫폼에서 디지털 자산 구매, 보관, 판매와 교환을 가능하게 합니다. WAVES나 첫 잔금을 구매하기 위해 주문만 하면 됩니다!",
+  "getWaves.howToBuyWaves.step1": "1)\tWaves 클라이언트를 다운로드 받기",
+  "getWaves.howToBuyWaves.step2":
+    "2)\t유로, 미국 달러, 비트코인, 이더리움을 Waves 지갑에 입금하기",
+  "getWaves.howToBuyWaves.step3":
+    "3)\tWaves DEX에 주문을 하고 WAVES를 구매하기",
+  "getWaves.howToBuyWaves.title": "DEX를 통해 WAVES를 구매하기:",
+  "getWaves.text":
+    "맞춤 토큰 발행과 Waves 플랫폼을 통한 토큰 송금, 트레이딩 등 작전을 실행하기 위해 WAVES가 필요합니다. 중앙화거래소, Waves DEX, 신용카드나 제삼자와 동반을 통해 Waves 클라이언트 이용 등 여러 방법을 통해 WAVES를 받을 수 있습니다. 귀하는 Bitterex, DEX 등 인기 거래소를 통해 또한 EUR, USD와 BTC를 포함해서 상대 통화를 이용해서 트레이딩이 가능합니다.",
+  "getWaves.title": "Waves 받기",
+  "getWaves.wallet.text":
+    "맞춤 토큰 발행과 Waves 플랫폼을 통한 토큰 송금, 트레이딩 등 작전을 실행하기 위해 WAVES가 필요합니다. 중앙화거래소, Waves DEX, 신용카드나 제삼자와 동반을 통해 Waves 클라이언트 이용 등 여러 방법을 통해 WAVES를 받을 수 있습니다. 귀하는 Bitterex, DEX 등 인기 거래소를 통해 또한 EUR, USD와 BTC를 포함해서 상대 통화를 이용해서 트레이딩이 가능합니다.",
+  "getWaves.wallet.title": "Buy Waves in a Waves client",
+  "home.DEX.fees.text": "우리 거래소에 낮고 고정된 수수료가 주문별 부과됩니다.",
+  "home.DEX.fees.title": "높은 수수료로 돈을 낭비하지 마십시오.",
+  "home.DEX.safety.text": "자산은 거래소에 아니라 지갑에 보관되어 있습니다.",
+  "home.DEX.safety.title": "자산의 안전을 걱정하지 마십시오.",
+  "home.DEX.title": "분산화된 거래소",
+  "home.DEX.tradeNoLimits.text":
+    "인출에 대한 제한이 없고 구매된 암호화폐를 지갑 잔액에서 바로 확인할 수 있습니다.",
+  "home.DEX.tradeNoLimits.title": "제한 없이 거래하십시오.",
+  "home.DEX.tradeQuickly.text":
+    "중앙화된 매처와 높은 채널 수용력은 중앙화거래소의 빠른 속도로 거래 처리를 제공하며 손해를 볼 위험을 없앱니다.",
+  "home.DEX.tradeQuickly.title": "높은 수수료로 돈을 낭비하지 마십시오.",
+  "home.audience.developers.text":
+    "수용력, 짧은 대기 시간, 낮은 수수료를 통해 네트워크의 혜택을 즐기십시오.",
+  "home.audience.developers.title": "개발자들",
+  "home.audience.investors.text":
+    "암호 세계의 급속히 성장하는 분야에 가입하십시오. 복수통화 지갑을 만들어서 검증된 암호 자산과 기본적인WAVES 플랫폼 토큰에 투자하십시오.",
+  "home.audience.investors.title": "투자자들",
+  "home.audience.organisations.text":
+    "산업의 유리한 출발 – 크라우드펀딩, 고객보상 프로그램, 투표 등을 위해서 볼록체인을 직접 발행하십시오.",
+  "home.audience.organisations.title": "기관들",
+  "home.audience.traders.text":
+    "보안이 뛰어난 로컬 라이트 클라이언트에 자산을 보관하면서 자산을 분산화거래소 (DEX)를 통해 빠르고 안전하게 거래하십시오.",
+  "home.audience.traders.title": "트레이더들",
+  "home.issuingTokens.text":
+    "To get your own internal digital currency. Use blockchain for crowdfunding, pay for goods, services. Use tokens to create voting systems and loyalty or discount programmes. They have released their own tokens on Waves:",
+  "home.issuingTokens.title": "직접 하는 토큰 발행",
+  "home.joinUs.quote":
+    "최근 소식과 뉴스 그리고 Waves 플랫폼에 진행되는 모든 이벤트를 at wavescommunity.com에 우리 커뮤니티와 알아보세요.",
+  "home.joinUs.text":
+    "Waves는 블록체인의 열광적인 지지자들, 여러 분야의 프로젝트 창립자들, 트레이더들, 투자자들 등 암호 세계의 최첨단에 서있는 사람들을 모입니다.",
+  "home.main.text":
+    "Waves 플랫폼이 제공하는 디지털 자산 보관, 트레이딩, 관리와 발행 솔루션에 액세스하기.",
+  "home.main.title": "블록체인 시작하기",
+  "home.numbers.dexVolume": "24h DEX 불륨",
+  "home.numbers.tokens": "토큰이 발행됨",
+  "home.numbers.wallets": "지갑이 개설됨",
+  "home.numbers.wavesPrice": "waves price",
+  "home.plannedFeatures.0.features.0": "Smart contracts (non-turing)",
+  "home.plannedFeatures.0.features.1": "Hardware wallets, shapeshift",
+  "home.plannedFeatures.0.features.2": "Mobile apps update",
+  "home.plannedFeatures.0.features.3": "Decentralized voting",
+  "home.plannedFeatures.0.features.4": "Simple messaging",
+  "home.plannedFeatures.0.shippingDate": "Winter–Spring 2018",
+  "home.plannedFeatures.1.features.0": "Atomic swap",
+  "home.plannedFeatures.1.features.1": "Voting (front-end)",
+  "home.plannedFeatures.1.shippingDate": "Spring–Summer 2018",
+  "home.plannedFeatures.2.features.0": "Messaging, off-chain, front-end",
+  "home.plannedFeatures.2.shippingDate": "Summer-Fall 2018",
+  "home.plannedFeatures.3.features.0": "Lite-client",
+  "home.plannedFeatures.3.features.1": "Turing complete smart contracts",
+  "home.plannedFeatures.3.shippingDate": "Fall-Winter 2018",
+  "home.plannedFeatures.title": "Planned Features",
+  "home.quote":
+    "2017년에 우리는 블록체인 기술의 더 포괄적인 활용을 위해 법률 체계 개발을 시작할 목적으로 Deloitte와 협력했습니다.",
+  "home.subscribe.text":
+    "우리는 플랫폼의 기술적인 기능을 개발하는 것뿐만 아니라 암호 경제를 성장시키기 위해 블록체인을 실제 애플리케이션으로 통합하는 데에 활발히 참여합니다.",
+  "home.subscribe.title": "중요한 소식을 놓치지 마십시오",
+  "home.wallet.interest": "Waves 계정 잔금에 대한 관심 받기",
+  "home.wallet.mining": "채굴 시작 – Waves와 간편하게",
+  "home.wallet.security": "우리 플랫폼의 위대한 보안으로 혜택",
+  "home.wallet.text":
+    "귀하의 자산은 본인만 관리하는 블록체인 주소에 보관합니다. 본인만 암호 자산에 접근 가능합니다.",
+  "home.wallet.title": "지갑",
+  "home.wallet.transfer": "사람에서 사람으로 자산 송금",
+  "home.wallet.wallet":
+    "복수통화 지갑을 만들어서 검증된 암호 자산과 기본적인WAVES 플랫폼 토큰에 투자하십시오.",
+  "home.wavesClient.text":
+    "Waves 클라이언트의 현재 버전은 지갑, 분산화거래소 (DEX), 토큰 발행 툴을 포합합니다.",
+  "home.wavesClient.title": "Waves 클라이언트",
+  "howToWallet.step1": "1)\tWaves 클라이언트를 다운로드 받기",
+  "howToWallet.step2":
+    "2)\t유로, 미국 달러, 비트코인, 이더리움을 Waves 지갑에 입금하기",
+  "howToWallet.step3": "3)        Waves DEX에 주문을 하고 WAVES를 구매하기",
+  "leasing.description.subtitle":
+    "Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds.",
+  "leasing.description.text":
+    "Custom tokens platform Waves has implemented balance leasing within its lite client, allowing every user to take part in securing the network and profit from transaction fees — without requiring any additional technical knowledge or the need to download the blockchain. Leased WAVES remain in the full control of the account holder, and can be transferred or exchanged at any point.",
+  "leasing.description.title": "What is Waves leasing?",
+  "leasing.nodes.text":
+    "Here you can find a list of the top nodes by WAVES balance. You can find a full list at {pywavesLink}",
+  "leasing.nodes.title": "Top Waves nodes",
+  "leasing.revenue.calc.description":
+    "You can use this tool to calculate how much you can make leasing WAVES, but be aware that results will vary each week.",
+  "leasing.revenue.p1.text1":
+    "The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves {nodesLink} and select the one with the best conditions for you!",
+  "leasing.revenue.p1.text1.link": "nodes",
+  "leasing.revenue.p1.text2":
+    "You can think of leasing your WAVES as a little like depositing money in a bank account. You receive income from them but can still withdraw them at any time.",
+  "leasing.revenue.p1.title": "How much can I earn?",
+  "leasing.startLeasing.miningLink": "mining",
+  "leasing.startLeasing.p1.title": "1. Download Waves Client",
+  "leasing.startLeasing.p2.title": "2. Deposit WAVES to your account",
+  "leasing.startLeasing.p3.title":
+    "3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab.",
+  "leasing.startLeasing.p4.title":
+    "4. You’re done! Your balance will now generate income without even leaving your wallet. Payments are usually transferred once a week.",
+  "leasing.startLeasing.text":
+    "You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES.",
+  "leasing.startLeasing.title": "Start leasing your funds",
+  "leasing.text":
+    "By helping secure the Waves blockchain you can earn up to 5% per year on your WAVES balance. Simply lease your WAVES to a mining pool and you will receive a share of transaction fees in proportion to the amount you commit.",
+  "leasing.title": "Use your WAVES balance to generate income",
+  "mining.algorithms.pos.text":
+    "Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance.",
+  "mining.algorithms.pos.title": "지분증명",
+  "mining.algorithms.pow.text":
+    "Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work.",
+  "mining.algorithms.pow.title": "Proof-of-work",
+  "mining.algorithms.text":
+    "Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need.",
+  "mining.algorithms.title": "Mining in Waves",
+  "mining.nodes.copyAddress": "Copy leasing address",
+  "mining.nodes.node1.quote":
+    "WavesGo’s mission is to make blockchain accessible to the masses. This ideal is reflected in our different services. First and foremost, we are proud to run Waves’ largest mining pool, to which hundreds of community members have already leased their stakes. We maintain and develop the officially endorsed, feature-rich blockchain explorer at WavesGo. com, which is visited by thousands of users every single day. We also have more services and products in the pipeline, all of which serve one major goal — to expand the thriving ecosystem around the Waves Platform. WavesGo is more than proud to be able to support Waves in such a meaningful way.",
+  "mining.nodes.node1.signature": "WavesGo Team",
+  "mining.nodes.node1.title":
+    "WavesGo is the foremost Waves node, with the biggest balance and a thriving community of supporters. The node distributes the WavesGo token to anyone who leases their funds to it.",
+  "mining.nodes.node2.quote":
+    "Running our fullnode since the start of the platform gave us a thorough knowledge about the Wavesplatform and we are also providing 30+ years combined experience in IT and 7+ years in Crypto. We have a lot to offer with our Wavesnode.NET fullnode for starting projects on the Wavesplatform and are proud owners of the first shop accepting payments in a Waves asset. With our services we are taking technical work out of our clients hands and providing them a trustfull partner to work with at the Wavesplatform. Clients will have their peace of mind, letting Wavesnode.NET handle all the technical work needed. We can assist clients step by step in the process and provide strategic advice on how to move forward with their projects. All our services to be bought with our WNET token.",
+  "mining.nodes.node2.signature": "Wavesnode.NET Team",
+  "mining.nodes.node2.title":
+    "Wavesnode.NET represents a developing community in Holland. The node accepts multiple tokens for fees and has a growing list of supporters — as well as offering unique Waves merchandise!",
+  "mining.nodes.share": "Share",
+  "mining.nodes.text":
+    "A Waves node isn’t just a way to get paid for securing the network. These are hubs of activity around which entrepreneurs build new businesses and engage the community. You can find a list of Waves nodes at {pywavesLink}",
+  "mining.nodes.title": "A focus for the community",
+  "mining.revenue.calc.description":
+    "You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week.",
+  "mining.revenue.calc.option1": "1 week",
+  "mining.revenue.calc.option2": "1 month",
+  "mining.revenue.calc.option3": "6 months",
+  "mining.revenue.calc.option4": "1 year",
+  "mining.revenue.calc.option5": "3 years",
+  "mining.revenue.calc.option6": "5 years",
+  "mining.revenue.calc.title": "Calculate the reward",
+  "mining.revenue.p1.text1":
+    "Since rewards across the entire network are distributed proportionately, the more WAVES you hold in your node, the greater share of blockchain transaction fees you will receive. The final amount will also depend on overall network activity and the level of fees generated.",
+  "mining.revenue.p1.text2":
+    "In addition to any WAVES they receive, nodes will receive 60 MRT per block for the first 70 blocks they generate per day, with 30 MRT per block awarded thereafter.",
+  "mining.revenue.p1.title": "How much will my node earn?",
+  "mining.revenue.p2.text1":
+    "Miners Reward Token (MRT) is a bonus token that is distributed to miners with every block created. MRT is intended to be used as a means for new token issuers to reward nodes for processing their transactions, paying fees in their own token.",
+  "mining.revenue.p2.text2":
+    "As a Waves token, MRT can be transferred and traded freely on Waves’ decentralised exchange (DEX).",
+  "mining.revenue.p2.title": "What is MRT?",
+  "mining.revenue.text":
+    "By supporting the Waves network, you can earn up to 5% per year on your balance.",
+  "mining.revenue.title": "Revenues",
+  "mining.startMining.configure.button": "Configuration",
+  "mining.startMining.configure.title": "3. Configure Node",
+  "mining.startMining.done.title":
+    "4. Ready! Your node automatically starts mining.",
+  "mining.startMining.download.title": "1. Download the Waves Node",
+  "mining.startMining.install.title": "2. Install Node",
+  "mining.startMining.leasingLink": "lease",
+  "mining.startMining.text":
+    "You don’t need any fancy hardware — just a simple hosted server and at least 10,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
+  "mining.startMining.title": "Start mining",
+  "mining.text":
+    "Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance.",
+  "mining.title": "Support the Waves Network",
+  "mining.wavesNodesMap.countries": "countries",
+  "mining.wavesNodesMap.nodes": "nodes",
+  "mining.wavesNodesMap.text":
+    "Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!",
+  "mining.wavesNodesMap.title": "Waves nodes",
+  "nav.blog": "Blog",
+  "nav.company": "Company",
+  "nav.developers": "개발자들",
+  "nav.getWaves": "Waves 받기",
+  "nav.product": "Product",
+  "product.DEX.description":
+    "거래가 중앙화된 거래소를 통해 진행될 경우 해킹 인한 손해를 보게 될 위험이 있습니다. 거의 모든 거래소가 해킹을 당한 적이 있습니다. \n우리 거래소의 가장 큰 장점은 자금이 항상 귀하의 지갑에 보관되어 있고 매칭 과정이 단순히 주문을 페어합니다. \n분산화된 거래 (DEX)는 사용자들의 주문을 보관하는 그리고 이행된 주문을 위한 토큰 교환을 진행하는 매처 기술을 사용하고 있습니다.",
+  "product.DEX.dexVolume.label": "24h DEX 볼륨",
+  "product.DEX.dexVolume.number": "$ {volume}",
+  "product.DEX.safety": "자산 안전을 더 이상 걱정하지 마세요",
+  "product.DEX.title": "분산화된 거래소",
+  "product.DEX.wavesPrice.label": "waves price",
+  "product.DEX.wavesPrice.number": "฿ {price}",
+  "product.DEXFeatures.fees.text":
+    "우리 거래소의 수수료는 거래 규모와 상관없이 낮고 고정된 수수료입니다. 각 주문별 수수료는0.003 WAVES입니다. 주문이 전적으로 진행되지 않을 경우 수수료가 비율적으로 부과됩니다. 주문을 취소할 경우 부과되는 비용이 없습니다.",
+  "product.DEXFeatures.fees.title": "높은 수수료로 돈 낭비 끝",
+  "product.DEXFeatures.frontRunning.text":
+    "귀하의 주문은 암호화된 채널을 통해 매처에게 전송되며 완료될 때까지 다른 사용자들이 주문을 볼 수 없습니다. 덕분에 부도덕한 거래자들에 의해 다가오는 거래에 대한 정보 조종이 막게 됩니다.",
+  "product.DEXFeatures.frontRunning.title": "선행매매와 각종 사기로부터 보호",
+  "product.DEXFeatures.security.text":
+    "모든 거래가 블록체인에서 진행되며 주문장만 중앙화된 매처에 있습니다. 덕분에 중앙화된 기술과 분산화된 기술 모두를 최적으로 활용할 수 있습니다. 더하여 최근에 개발된 기술 도입(비트코인 NG를 자산증명에 적응) 덕분에 네트워크 수용력을 초당 몇 백 거래를 진행하는 것까지 가능하게 되었습니다.",
+  "product.DEXFeatures.security.title": "간편하고 안전한 거래",
+  "product.DEXFeatures.tradeNoLimits.text":
+    "중안화된 거래소에 거래될 페어를 관리자들 의해 결정됩니다. Waves DEX는 블록체인에 있는 어느 토큰 조합으로든 거래를 가능하게 합니다. 또한 DEX에서 자산 인출에 대해 아무 제한이 없습니다. 거래가 완료된 대로 지갑에서 암호화폐를 볼 수 있습니다.",
+  "product.DEXFeatures.tradeNoLimits.title": "경계 없는 거래",
+  "product.DEXTopPairs.title": "Top pairs",
+  "product.DEXTopPairs.unavailable": "n/a",
+  "product.DEXTopPairs.volume": "24h 볼륨",
+  "product.howToToken.step1": "1)\tWaves 클라이언트를 다운로드 받기",
+  "product.howToToken.step2":
+    "2)\t유로, 미국 달러, 비트코인, 이더리움을 Waves 지갑에 입금하기",
+  "product.howToToken.step3":
+    "귀하는 Waves를 통해서 통화 조합으로 거래할 경우 작은 수수료가 부과되기 때문에 WAVES를 미리 구입하십시오.",
+  "product.howToTrade.text":
+    "그 다음에 프로젝트 자금조달 목표에 옳은 가격을 기재하고 DEX 탭에서 토큰을 발매하십시오. 다른 통화를 받을 경우에는 주문을 여러 조합으로 만들 수 있고 초기 투자자들에게 보너스를 제공하기 위해 여러 가격으로 판매할 수 있습니다.",
+  "product.howToTrade.title": "Waves DEX를 통해 거래 시작하기",
+  "product.howToWallet.step1": "1)\tWaves 클라이언트를 다운로드 받기",
+  "product.howToWallet.step2":
+    "2)\t유로, 미국 달러, 비트코인, 이더리움을 Waves 지갑에 입금하기",
+  "product.howToWallet.step3":
+    "3)        Waves DEX에 주문을 하고 WAVES를 구매하기",
+  "product.howToWallet.title": "Waves 지갑 사용 시작하기",
+  "product.interest.leasing.text":
+    "WAVES의 어느 금액이든 관심을 일으키기 위해 마이너들에게 리즈 할 수 있습니다. 리즈 취소는 두 클릭크로 언제나 가능합니다.",
+  "product.interest.leasing.title": "Leasing",
+  "product.interest.link": "Learn more",
+  "product.interest.mining.text":
+    "Waves는 자산증명 (PoS) 알고리즘을 사용하고 있습니다. 마이닝을 시작하기 위해 노드를 다운로드 받아 시작하는 것과 10,000 WAVES를 지갑에 있는 것만 필요합니다.",
+  "product.interest.mining.title": "Mining",
+  "product.issuingTokens.description.p1":
+    "암호화적으로 안전한 블록체인 토큰들은 각종 종류의 산업들에게 프로젝트 내에 제품과 서비스 결제를 위한 자기 내부적 디지털 통화를 발행하는 것을 가능하게 합니다. 토큰의 실제 가격은 (특수 애플리케이션 토큰) 오픈 마켓 매카니즘을 통해 확립됩니다.",
+  "product.issuingTokens.description.p2":
+    "토큰의 역할은 각 프로젝트 본질로 결정되고 단순히 내부 통화로 뿐만 아니라 분산화된 투표, 랭킹 시스템, 고객보상 프로그램으로 통합될 수 있습니다.",
+  "product.issuingTokens.loyalUsers.text":
+    "ICO를 통해 개발을 위한 지원을 받는 것뿐만 아니라 프로젝트에 믿고 첫 팔로우가 되어 진실적인 피드백은 줄 수 있는 단골 유저들을 끌어당길 수 있습니다.",
+  "product.issuingTokens.loyalUsers.title": "Get loyal users of your product",
+  "product.issuingTokens.raiseFunds.text":
+    "블록체인 토큰을 발행하는 것을 통해서 네트워크 사용자들에게 가치 있는 서비스를 제공함으로서 그 가치를 이용할 수 있는 특정한 유닛으로 교환할 수 있는 기회를 제공하기 때문에 프로젝트 개발을 위해 지원을 끌어당깁니다.",
+  "product.issuingTokens.raiseFunds.title": "프로젝트 개발을 위해 지원 받기",
+  "product.issuingTokens.title": "토큰 발행과 토큰 판매",
+  "product.mobileWallet.text":
+    "iOS와 Android 모바일 지갑을 다운로드 받기 잊지 마십시오",
+  "product.mobileWallet.title": "Start using your Waves wallet",
+  "product.text":
+    "Waves 블록체인 플랫폼과 분산화된 생태계를 통해서 디지털 자산을 안전하게 보관하고, 관리하고, 거래하고 분석하십시오.",
+  "product.title": "블록체인 사용하기 – <br>Waves와 편리하게",
+  "product.wallet.createWallet.text":
+    "WAVES 토큰에 더하여 다른 종류의 7000 개 토큰이 플랫폼에서 공개되었고 그 중에 대다수가 ICO를 통해 발행되었으며 많은 잠재력을 갖지고 있습니다. 우리는 통화 ($, €) 그리고 비트코인, 이더리움, 이더리움 클래식 등 암호화폐를 지원합니다. 지원 대상이 계속 확장되고 있습니다.",
+  "product.wallet.createWallet.title": "Create a multiple-currency wallet",
+  "product.wallet.security.text":
+    "Your balance is stored on a blockchain that only you can access. Only you can manage your crypto assets. Your tokens are stored on a blockchain that only you can access.",
+  "product.wallet.security.title":
+    "Take advantage of our platform’s high security",
+  "product.wallet.transfer.text":
+    "Waves has a high network speed with hundreds of transactions per second and a small commission, which makes it as convenient as possible to transfer cryptocurrency between network members instantly.",
+  "product.wallet.transfer.title": "Transfer funds from person to person",
+  "teamMembers.0.fullName": "Sasha Ivanov",
+  "teamMembers.0.position": "Founder & CEO",
+  "teamMembers.1.fullName": "Maxim Pertsovskiy",
+  "teamMembers.1.position": "CBDO",
+  "teamMembers.10.fullName": "Alexey Kiselev",
+  "teamMembers.10.position": 123,
+  "teamMembers.2.fullName": "Mariya Borovikova",
+  "teamMembers.2.position": "CFO",
+  "teamMembers.3.fullName": "Igor Pugachevsky",
+  "teamMembers.3.position": "Director of Product",
+  "teamMembers.4.fullName": "Natalya Malyova",
+  "teamMembers.4.position": "Head of communications",
+  "teamMembers.5.fullName": "Alexey Kofman",
+  "teamMembers.5.position": "PM of Development Team",
+  "teamMembers.6.fullName": "Ilya Smagin",
+  "teamMembers.6.position": 123,
+  "teamMembers.7.fullName": "Alexey Koloskov",
+  "teamMembers.7.position": "Scala Developer",
+  "teamMembers.8.fullName": "Phil Filippak",
+  "teamMembers.8.position": "Lead Frontend Developer",
+  "teamMembers.9.fullName": "Sergey Tolmachev",
+  "teamMembers.9.position": "Scala Developer",
+  "userCases.1.signature": "MobileGo Team",
+  "userCases.1.text":
+    "MobileGo는 암호화폐의 이점을 게이밍 산업으로 가져오는 것을 목표합니다. 크라우드펀딩을 통해 $5300만 지원을 받은 이 프로젝트가 GStore에 게이머와 개발자의 커뮤니티를 만들고 있습니다. GStore는 GWallet과 솔기가 없는 통합을 통해 모든 게임이 구매되는 오픈형 플랫폼입니다. 또한MobileGo는 P2P 이스포츠 경기를 개최하기 위해 스마트계약을 사용할 겁니다.",
+  "userCases.1.title":
+    "MobileGo becomes largest blockchain crowdsale in history!",
+  "userCases.1.userName": "암호화 중심 모바일 게이밍 플랫폼과 스토어",
+  "userCases.2.signature": "Primalbase Team",
+  "userCases.2.text":
+    "우리는 초기에 참여해서 프로젝트에 열정적인 지원을 해드린 모든 참여자들에게 진심으로 감사드립니다. 이 노력과 새로운 운영 팀 덕분에 우리는 성취를 달성할 수 있었습니다. 이제 곧 암스테르담과 베를린에서 새로운 브렌치를 오픈할 예정이며 추가적인 툴을 개시될 예정입니다. \nPBT 판매가 더 이상 시행되지 않을 것이지만 기존 투자자들 위해 PBT의 가치를 증가시키도록 또한 새로운 참여자들에게 기회를 제공하는 목적으로 추가적인 프로젝트들이 개시될 예정니다. 프로젝트 신개발과 확대에 대해 새로운 소식을 받으려면 메일링리스트를 떠나지 마십시오.",
+  "userCases.2.title":
+    "Primalbase가 크라우드세일을 통해서 3000 BTC 이상의 지원을 받았습니다.",
+  "userCases.2.userName": "Worldwide coworking spaces for Tech Community",
+  "userCases.detailsLink": "Details",
+  "wavesNG.descriptions.1.text":
+    "In a traditional blockchain model, blocks are discovered at roughly similar intervals and the most recent transactions are processed once a miner has earned the right to submit them to the network. This places fundamental limits on the capacity of the blockchain. Bitcoin, for example, has a theoretical maximum of roughly 3 tps.",
+  "wavesNG.descriptions.1.title": "Traditional blockchain model",
+  "wavesNG.descriptions.2.buttonFAQ": "FAQ",
+  "wavesNG.descriptions.2.buttonFullDetails": "Full Details",
+  "wavesNG.descriptions.2.text":
+    "In the NG model, the next miner is selected in advance. The miner creates a ‘key block’, which is then immediately filled with microblocks containing transactions, which requires no further proof-of-work. Whilst maintaining the open structure of the protocol, this allows transactions to be confirmed as fast as the network will allow. Waves’ proof-of-stake approach further improves speed, increasing capacity by a factor of a hundred or more.",
+  "wavesNG.descriptions.2.title": "NG model",
+  "wavesNG.descriptions.button": "Bitcoin-NG whitepaper",
+  "wavesNG.descriptions.text.p1":
+    "Waves-NG is a next-generation consensus algorithm, based on the Bitcoin-NG proposal made by Cornell Computer Science academics Emin Gün Sirer and Ittay Eyal.",
+  "wavesNG.descriptions.text.p2":
+    "Bitcoin-NG was designed to address bitcoin’s scalability issues, increasing network throughput to hundreds of transactions per second. Waves-NG adapts this proposal to Waves’ proof-of-stake consensus, and is the first ever implementation of the protocol in a production blockchain system.",
+  "wavesNG.descriptions.title": "About Waves-NG",
+  "wavesNG.preview.p1.text":
+    "Anyone will be able to download node version 0.8 with Waves-NG for TestNet. We will lease TestNet WAVES to anyone who wants to run a TestNet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol.",
+  "wavesNG.preview.p1.title": "1. TestNet release",
+  "wavesNG.preview.p2.text":
+    "Once the voting conditions have been met, Waves-NG will be activated on TestNet and we will perform a public stress test. Anyone will be able to generate transactions and monitor how the network responds in realtime to the increased throughput.",
+  "wavesNG.preview.p2.title": "2. Stress test",
+  "wavesNG.preview.p3.text":
+    "When it is clear that the new version works as expected, we will release Waves-NG on MainNet and everyone can upgrade their nodes. Waves-NG will again be activated after the conditions of the Waves Activation Protocol have been met.",
+  "wavesNG.preview.p3.title": "3. MainNet release",
+  "wavesNG.preview.p4.text":
+    "The Waves Activation Protocol ensures that hardforks required for upgrades occur smoothly. Miners set approval flags for new features in their blocks. If 80% of miners have approved the feature after 5,000 blocks or roughly 3.5 days (3,000 blocks on TestNet), it is automatically activated after a further 5,000 blocks.",
+  "wavesNG.preview.p4.title": "4. Activation",
+  "wavesNG.stressTest.anounce":
+    "Charts below show current TestNet statistics. After the public stress test starts you will be able to generate TestNet transactions from this page.",
+  "wavesNG.stressTest.chart1.text":
+    "Number of transactions waiting in queue for confirmation. The greater the number of transactions processed by the network every minute, the faster this decreases.",
+  "wavesNG.stressTest.chart1.title": "UtxPool size",
+  "wavesNG.stressTest.chart2.text":
+    "Number of transactions mined (confirmed) by the blockchain per minute.",
+  "wavesNG.stressTest.chart2.title": "Transaction throughput",
+  "wavesNG.stressTest.test.confirmed": "Confirmed txs",
+  "wavesNG.stressTest.test.error":
+    "Whoops! Network is stressed and your transaction did not make it. Try again!",
+  "wavesNG.stressTest.test.errorFatal":
+    "Sorry, it seems our testing server is experiencing some network issues. We're working on it, please try again later.",
+  "wavesNG.stressTest.test.explorer": "Explorer",
+  "wavesNG.stressTest.test.run": "Run test",
+  "wavesNG.stressTest.test.runAgain": "Run again",
+  "wavesNG.stressTest.test.status.connecting": "Connecting...",
+  "wavesNG.stressTest.test.status.loading": "Initiating test...",
+  "wavesNG.stressTest.test.status.testing": "Running test...",
+  "wavesNG.stressTest.test.text":
+    "When you click this button you will automatically generate a series of transactions. You can watch how network speed and characteristics respond in real time!",
+  "wavesNG.stressTest.test.title": "Transaction confirmation",
+  "wavesNG.stressTest.test.totalTime": "Total time",
+  "wavesNG.stressTest.test.unconfirmed": "Unconfirmed txs",
+  "wavesNG.stressTest.title": "{logo} Waves-NG activation stages",
+  "wavesNG.text":
+    "Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on TestNet.",
+  "wavesNG.title": "Help us test<br>Waves-NG"
+}

@@ -15,6 +15,8 @@ import Link from 'src/common/components/Link';
 import Social from './lib/Social';
 import FooterNav from './lib/FooterNav';
 
+import LanguageChooser from '../LanguageChooser';
+
 import url from 'src/common/utils/url';
 
 const Footer = ({ classes, links }) => (
@@ -30,20 +32,19 @@ const Footer = ({ classes, links }) => (
           </div>
         </Col>
 
-        <Col xs={12} md={6} className={classes.language}>
-          <Typography type="body" className={classes.textGray}>
-            <Link
-              href={url('files.terms_conditions')}
-              className={classes.terms}
-              textDecoration={false}
-              primary={false}
-            >
-              Terms and conditions
-            </Link>
-          </Typography>
+        <Col xs={6} md={6} className={classes.language}>
+          <LanguageChooser />
         </Col>
 
         <Col xs={12} md={6} className={cn(classes.copyright, classes.textGray)}>
+          <Link
+            href={url('files.terms_conditions')}
+            className={classes.terms}
+            textDecoration={false}
+            primary={false}
+          >
+            Terms and conditions
+          </Link>
           <span>© Waves Platform</span>
           <MQ query={query.md}>
             <br />
@@ -56,7 +57,7 @@ const Footer = ({ classes, links }) => (
           </span>
         </Col>
 
-        <Col xs={12} md={1} className={classes.logo}>
+        <Col xs={6} md={1} className={classes.logo}>
           <a href={url('home')} className={classes.logoLink}>
             <Logo size="xs" />
           </a>
