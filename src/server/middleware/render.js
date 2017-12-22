@@ -87,7 +87,8 @@ export const render = function({
         scriptName.indexOf('.js') > -1
           ? scriptName
           : `/static/${scriptName}.js`;
-    }
+		}
+		
 
     const html = renderToStaticMarkup(
       <Html
@@ -96,6 +97,7 @@ export const render = function({
         script={script}
         vendorChunk={vendorChunk}
         locale={ctx.locale}
+        availableLocales={ctx.availableLocales}
         messages={locale[ctx.locale]}
         content={content}
         fonts={fonts.toString()}

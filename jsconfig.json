@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "ES5",
-    "jsx": "react"
+    "jsx": "react",
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"]
 }

@@ -2,6 +2,7 @@ import React from 'react';
 
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
+
 import Footer from '../Footer';
 import SnackbarCta from 'src/common/components/SnackbarCta';
 

@@ -37,7 +37,7 @@ export default theme => {
         padding: 0,
       },
       [theme.breakpoints.up('md')]: {
-        display: 'block',
+        marginRight: [theme.spacing.unit * 2],
       },
     },
 
@@ -65,10 +65,17 @@ export default theme => {
       order: 1,
     },
     language: {
-      order: 5,
+      order: 4,
       marginBottom: theme.spacing.unit,
       marginTop: -theme.spacing.unit,
       textAlign: 'left',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      [theme.breakpoints.up('md')]: {
+        order: 5,
+        justifyContent: 'flex-start'
+      },
+
     },
     copyright: {
       fontSize: 12,
@@ -76,7 +83,10 @@ export default theme => {
       justifyContent: 'space-between',
       margin: theme.spacing.getSpacing(2, 0),
       textAlign: 'center',
-      order: 4,
+      order: 5,
+      [theme.breakpoints.up('md')]: {
+        order: 4,
+      },
     },
 
     logo: {
