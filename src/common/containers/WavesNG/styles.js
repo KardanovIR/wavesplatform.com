@@ -1,25 +1,16 @@
 export default theme => ({
-  bgDescriptions: {
-    backgroundColor: '#f0f4fb',
+  bgBlue: {
+    background: theme.palette.blue[50],
   },
-  footerMarginCompensate: {
-    marginBottom: -theme.spacing.unit * 2,
+  bgGray: {
+    background: theme.palette.gray[50],
   },
-  bgSubscription: {
-    backgroundColor: '#233556',
+  bgBlack: {
+    background: theme.palette.gray[1000],
   },
-  logo: {
-    display: 'inline-block',
-    verticalAlign: '-11%',
-    marginRight: theme.spacing.unit / 2,
-    height: theme.spacing.unit * 4,
-    width: theme.spacing.unit * 4,
-  },
-  [theme.breakpoints.up('md')]: {
-    logo: {
-      marginRight: theme.spacing.unit,
-      height: theme.spacing.unit * 6,
-      width: theme.spacing.unit * 6,
-    },
+  bgJoinUs: {
+    backgroundSize: 'cover',
+    backgroundImage: `url(${require('./img/bgJoinUs.jpg')})`,
+    backgroundPosition: 'center',
   },
 });

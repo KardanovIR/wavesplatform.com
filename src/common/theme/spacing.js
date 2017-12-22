@@ -34,8 +34,8 @@ const createSpacing = (
 
   body2: {
     '& + $body': combineMobileDesktopStyles(
-      { marginTop: unit * 1 },
-      { marginTop: unit * 1.5 }
+      { marginTop: unit * 1.5 },
+      { marginTop: unit * 2.5 }
     ),
     '& + $body2': combineMobileDesktopStyles(
       { marginTop: unit * 1.5 },

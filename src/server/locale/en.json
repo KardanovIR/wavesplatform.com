@@ -343,7 +343,9 @@
   "wavesNG.stressTest.test.title": "Transaction confirmation",
   "wavesNG.stressTest.test.totalTime": "Total time",
   "wavesNG.stressTest.test.unconfirmed": "Unconfirmed txs",
-  "wavesNG.stressTest.title": "{logo} Waves-NG activation stages",
-  "wavesNG.text": "Waves network is implementing a ground-breaking new protocol that will allow its blockchain to process hundreds of transactions per second. We need the community to help us stress test Waves-NG on TestNet.",
-  "wavesNG.title": "Help us test<br>Waves-NG"
+  "wavesNG.stressTest.title": "Waves-NG<br>activation stages",
+  "wavesNG.text": "The Waves network has implemented a ground-breaking new protocol that will allow its blockchain to process thousands of transactions per minute.",
+	"wavesNG.title": "Waves — the fastest ever blockchain",
+	"wavesNG.news.1": "Waves-NG stress test: results in!",
+	"wavesNG.news.2": "Waves Set To Become 'Fastest' Decentralized Blockchain Platform Globally"
 }

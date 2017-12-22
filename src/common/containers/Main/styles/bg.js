@@ -1,5 +1,3 @@
-import palette from '../../../theme/palette';
-
 export default theme => ({
   desktopOnly: {
     display: 'none',
