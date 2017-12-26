@@ -13,6 +13,9 @@ export default theme => ({
         display: 'flex',
         flexDirection: 'column',
     },
+    infograph: {
+        maxWidth: '80%',
+    },
     [theme.breakpoints.up("md")]:{
         title: {
             fontSize: 23,

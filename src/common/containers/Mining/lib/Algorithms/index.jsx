@@ -54,8 +54,8 @@ const Algorithms = ({classes}) => (
                                 />
                             </Typography>
                         }
-                        imageMobile={<ImagePoWMobile />}
-                        image={<ImagePoW />}
+                        imageMobile={<ImagePoWMobile className={classes.infograph} />}
+                        image={<ImagePoW className={classes.infograph} />}
                         text={
                             <FormattedMessage
                                 id="mining.algorithms.pow.text"
@@ -74,8 +74,8 @@ const Algorithms = ({classes}) => (
                                 />
                             </Typography>
                         }
-                        imageMobile={<ImagePoSMobile />}
-                        image={<ImagePoS />}
+                        imageMobile={<ImagePoSMobile className={classes.infograph} />}
+                        image={<ImagePoS className={classes.infograph} />}
                         text={
                             <Typography className={classes.textDescription}>
                                 <FormattedMessage
