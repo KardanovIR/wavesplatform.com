@@ -1,59 +1,63 @@
 [
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/bittrex.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/bittrex.svg",
 		"url": "https://bittrex.com"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/tidex.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/tidex.svg",
 		"url": "https://tidex.com"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/exmo.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/exmo.svg",
 		"url": "https://exmo.me/"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/changelly.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/changelly.svg",
 		"url": "https://changelly.com"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/shapeshift.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/shapeshift.svg",
 		"url": "https://shapeshift.io"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/liqui.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/binance.svg",
+		"url": "https://www.binance.com"
+	},
+	{
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/liqui.svg",
 		"url": "https://liqui.io"
 	},
 
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/yobit.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/yobit.svg",
 		"url": "https://yobit.net"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/ch.svg",
-		"url": "http://www.touzibi.com"
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/bitcoin_co_id.svg",
+		"url": "https://www.bitcoin.co.id"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/livecoin.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/livecoin.svg",
 		"url": "https://www.livecoin.net"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/litebit.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/litebit.svg",
 		"url": "http://litebit.eu/"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/coss.svg",
-		"url": "https://www.coss.io/"
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/coinbe.svg",
+		"url": "https://coinbe.net"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/hitbtc.svg",
-		"url": "https://hitbtc.com"
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/cryptomate.svg",
+		"url": "https://cryptomate.co.uk"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/kuna.svg",
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/kuna.svg",
 		"url": "https://kuna.io"
 	},
 	{
-		"logo": "https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/exchange_logo/openledger.svg",
-		"url": "https://openledger.io"
+		"logo": "https://wavesplatform.com/files/images/exchange_logo/evercoin.svg",
+		"url": "https://evercoin.com"
 	}
 ]
