@@ -62,40 +62,52 @@ const StartLeasing = ({ classes }) => (
                         </Col>
 
                         <Col xs={12} sm={6} lg={6} className={classes.col}>
-                            <div className={classes.flexRow}>
-                                <div className={classes.imageWrapper}>
-                                    <Image1 />
+                            <div className={classes.flexCol}>
+                                <div className={classes.flexRow}>
+                                    <div className={classes.imageWrapper}>
+                                        <Image1 />
+                                        {/*<div className={classes.arrow} />
+                                         <div className={classes.arrowMobile} />*/}
+                                    </div>
+                                    <Typography
+                                        tagName="div"
+                                        align="center"
+                                        className={classes.message}
+                                    >
+                                        <FormattedMessage
+                                            id="leasing.startLeasing.p1.title"
+                                            defaultMessage="1. Download Waves Client"
+                                        />
+                                    </Typography>
+                                </div>
+                                <div className={classes.arrowDiv}>
                                     <div className={classes.arrow} />
                                     <div className={classes.arrowMobile} />
                                 </div>
-                                <Typography
-                                    tagName="div"
-                                    align="center"
-                                    className={classes.message}
-                                >
-                                    <FormattedMessage
-                                        id="leasing.startLeasing.p1.title"
-                                        defaultMessage="1. Download Waves Client"
-                                    />
-                                </Typography>
                             </div>
                             <Margin bottom={5} />
-                            <div className={classes.flexRow}>
-                                <div className={classes.imageWrapper}>
-                                    <Image2 />
+                            <div className={classes.flexCol}>
+                                <div className={classes.flexRow}>
+                                    <div className={classes.imageWrapper}>
+                                        <Image2 />
+                                        {/*<div className={classes.arrow} />
+                                        <div className={classes.arrowMobile} />*/}
+                                    </div>
+                                    <Typography
+                                        tagName="div"
+                                        align="center"
+                                        className={classes.message}
+                                    >
+                                        <FormattedMessage
+                                            id="leasing.startLeasing.p2.title"
+                                            defaultMessage="2. Deposit WAVES to your account"
+                                        />
+                                    </Typography>
+                                </div>
+                                <div className={classes.arrowDiv}>
                                     <div className={classes.arrow} />
                                     <div className={classes.arrowMobile} />
                                 </div>
-                                <Typography
-                                    tagName="div"
-                                    align="center"
-                                    className={classes.message}
-                                >
-                                    <FormattedMessage
-                                        id="leasing.startLeasing.p2.title"
-                                        defaultMessage="2. Deposit WAVES to your account"
-                                    />
-                                </Typography>
                             </div>
                             {/*<Margin bottom={2} />
                             <Button
@@ -109,23 +121,29 @@ const StartLeasing = ({ classes }) => (
                                 />
                             </Button>*/}
                             <Margin bottom={5} />
-                            <div className={classes.flexRow}>
-                                <div className={classes.imageWrapper}>
-                                    <Image3 />
+                            <div className={classes.flexCol}>
+                                <div className={classes.flexRow}>
+                                    <div className={classes.imageWrapper}>
+                                        <Image3 />
+                                      {/*  <div className={classes.arrow} />
+                                        <div className={classes.arrowMobile} />*/}
+                                    </div>
+                                    <Typography
+                                        tagName="div"
+                                        align="center"
+                                        className={classes.message}
+                                    >
+                                        <FormattedMessage
+                                            id="leasing.startLeasing.p3.title"
+                                            defaultMessage="3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab."
+                                            values={{nodesLink: <Link pseudo href="#nodes">which node</Link>    }}
+                                        />
+                                    </Typography>
+                                </div>
+                                <div className={classes.arrowDiv}>
                                     <div className={classes.arrow} />
                                     <div className={classes.arrowMobile} />
                                 </div>
-                                <Typography
-                                    tagName="div"
-                                    align="center"
-                                    className={classes.message}
-                                >
-                                    <FormattedMessage
-                                        id="leasing.startLeasing.p3.title"
-                                        defaultMessage="3. Decide {nodesLink} to support with your WAVES. Paste the node’s address in the required field in the LEASING tab."
-                                        values={{nodesLink: <Link pseudo href="#nodes">which node</Link>    }}
-                                    />
-                                </Typography>
                             </div>
                             <Margin bottom={5} />
                             <div className={classes.flexRow}>

@@ -8,6 +8,7 @@ import Background from 'src/common/components/Background';
 import MainScreenBackground from 'src/common/components/Background/MainScreen';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
+import { fileUrl } from 'src/common/utils/url';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -27,9 +28,18 @@ const styles = theme => ({
 });
 
 const PageLayout = ({ classes }) => (
-    <Layout>
-        <MainScreenBackground type="dark">
-            <MainScreen />
+    <Layout activeLink="leasing">
+        <MainScreenBackground
+            type="image"
+            src={require('./img/w_black_d_1.jpg')}
+            srcSet={`${require('./img/w_black_d_1.jpg')} 1x, ${require('./img/w_black_d_2.jpg')} 2x`}
+            videoSrc={fileUrl('video/w_black_d_1.mp4')}
+            videoSrcMobile={fileUrl('video/w_black_m_1.mp4')}
+            videoFirstFrame={require('./img/w_black_d_1.jpg')}
+            videoFirstFrameMobile={require('./img/w_black_m_1.jpg')}
+
+        >
+            <MainScreen inverted />
         </MainScreenBackground>
 
         <Section top={3} bottom={4}>

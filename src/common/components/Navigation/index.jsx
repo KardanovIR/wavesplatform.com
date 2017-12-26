@@ -16,6 +16,7 @@ import url from 'src/common/utils/url';
 const INVERTED_SKIN_LINKS = {
   'get-waves': true,
   developers: true,
+  leasing: true,
   company: true
 };
 

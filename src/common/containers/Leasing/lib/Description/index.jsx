@@ -38,6 +38,9 @@ const styles = ({ spacing, breakpoints }) => ({
         fontSize: 16,
         lineHeight: 1.44,
     },
+    panel: {
+        padding: 0,
+    },
     [breakpoints.up("md")]:{
         textCol: {
             display: 'flex',

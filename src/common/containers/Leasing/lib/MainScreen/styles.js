@@ -7,6 +7,7 @@ export default theme => ({
     },
     description: {
         fontSize: 16,
+        padding: [0, theme.spacing.unit * 2],
     },
     [theme.breakpoints.up("md")]:{
         Title: {
@@ -14,6 +15,7 @@ export default theme => ({
         },
         description: {
             fontSize: 23,
+            padding: 0,
         },
     }
 });

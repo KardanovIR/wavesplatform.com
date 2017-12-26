@@ -42,8 +42,17 @@ const styles = ({ breakpoints, spacing }) => ({
         flexDirection: "row-reverse",
         display: 'flex',
     },
+    flexCol: {
+        flexDirection: "column",
+        display: 'flex',
+    },
     colMargin: {
         marginBottom: spacing.unit * 4,
+    },
+    arrowDiv:{
+        display: 'flex',
+        flexDirection: 'row',
+        paddingLeft: spacing.unit * 20,
     },
     [breakpoints.up("md")]: {
         imageWrapper: {

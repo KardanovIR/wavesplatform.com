@@ -32,20 +32,23 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     },
     copyToClipboardText: {
         color: palette.primary[700],
-        fontSize: '9px',
+        fontSize: '0.65rem',
     },
     [breakpoints.up('md')]: {
         copyToClipboard: {
             padding: [spacing.unit, spacing.unit * 2],
         },
         copyToClipboardText: {
-            fontSize: '12px',
+            fontSize: '0.7rem',
         },
+        nodeBlock: {
+            padding: spacing.unit * 2,
+        }
     },
 });
 
 const Node = ({ name, balance, share, classes, address, href }) => (
-    <Panel>
+    <Panel className={classes.nodeBlock}>
         <Link href={href} target="_blank" className={classes.nodeLink} textDecoration={false} />
 
         <Link href={href} target="_blank" textDecoration={false} icon={null}>
