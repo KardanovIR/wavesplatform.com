@@ -33,8 +33,8 @@ const PageLayout = ({ classes }) => (
             type="image"
             src={require('./img/w_black_d_1.jpg')}
             srcSet={`${require('./img/w_black_d_1.jpg')} 1x, ${require('./img/w_black_d_2.jpg')} 2x`}
-            videoSrc={fileUrl('video/w_black_d_1.mp4')}
-            videoSrcMobile={fileUrl('video/w_black_m_1.mp4')}
+            videoSrc={fileUrl('video/black3_desktop.mp4')}
+            videoSrcMobile={fileUrl('video/black3_mobile.mp4')}
             videoFirstFrame={require('./img/w_black_d_1.jpg')}
             videoFirstFrameMobile={require('./img/w_black_m_1.jpg')}
 
