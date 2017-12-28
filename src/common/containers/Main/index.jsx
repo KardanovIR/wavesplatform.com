@@ -20,6 +20,7 @@ import NumbersQuote from './lib/NumbersQuote';
 import WavesClient from './lib/WavesClient';
 import Wallet from '../../components/Wallet';
 import WalletText from './lib/WalletText';
+import WavesNG from './lib/WavesNG';
 import DEX from './lib/DEX';
 import IssuingTokens from './lib/IssuingTokens';
 import PlannedFeatures from './lib/PlannedFeatures';
@@ -60,6 +61,12 @@ const PageLayout = ({ initialState, classes }) => (
       <Section bottom={2}>
         <ContentContainer>
           <Audience />
+        </ContentContainer>
+      </Section>
+
+      <Section top={4} bottom={1} className={classes.bgWallet}>
+        <ContentContainer>
+          <WavesNG />
         </ContentContainer>
       </Section>
 
