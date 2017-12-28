@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -20,7 +20,6 @@ import SubscribeSection from 'src/common/containers/SubscribeSection';
 import MainScreen from './lib/MainScreen';
 import StressTest from './lib/StressTest';
 import Descriptions from './lib/Descriptions';
-import Steps from './lib/Steps';
 import News from './lib/News';
 
 // styles
@@ -47,14 +46,15 @@ const PageLayout = ({ classes }) => (
 
     <Section size={4}>
       <ContentContainer>
-        <Typography type="display3">
-          <FormattedHTMLMessage
-            id="wavesNG.stressTest.title"
-            defaultMessage="Waves-NG<br>activation stages"
-          />
+        <Typography type="display1">
+          <FormattedMessage id="wavesNG.fastest.title" />
         </Typography>
-        <Margin bottom={4} />
-        <Steps />
+        <Typography type="body2">
+          <FormattedMessage id="wavesNG.fastest.text1" />
+        </Typography>
+        <Typography type="body2">
+          <FormattedMessage id="wavesNG.fastest.text2" />
+        </Typography>
       </ContentContainer>
     </Section>
 
@@ -75,7 +75,7 @@ const PageLayout = ({ classes }) => (
     <Section size={4} className={classes.bgJoinUs}>
       <ContentContainer>
         <News />
-				<Margin bottom={5} />
+        <Margin bottom={5} />
         <SubscribeSection />
       </ContentContainer>
     </Section>
