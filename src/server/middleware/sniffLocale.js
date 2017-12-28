@@ -3,7 +3,7 @@ import isProd from 'src/common/utils/isProd';
 
 const supported = ['ru', 'ko', 'en'];
 
-const cookieDomain = isProd() ? { domain: '*.wavesplatform.com' } : {};
+const cookieDomain = isProd() ? { domain: '.wavesplatform.com' } : {};
 
 const sniffLocale = async (ctx, next) => {
   const cookie = ctx.request.universalCookies.get('locale');

@@ -27,7 +27,7 @@ class LanguageChooser extends PureComponent {
     cookies: PropTypes.object.isRequired,
   };
   handleChange = language => {
-    this.props.cookies.set(COOKIE_LANGUAGE_PATH, language);
+    this.props.cookies.set(COOKIE_LANGUAGE_PATH, language, { domain: '.wavesplatform.com' });
     document.location.reload();
   };
   render() {
