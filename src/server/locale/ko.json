@@ -23,7 +23,8 @@
   "cta.getClient": "Get Client",
   "cta.getDesktopClient": "Get desktop client",
   "cta.getWaves": "Get Waves",
-  "cta.onlineClient": "Online Client",
+  "cta.onlineClient": "Online Client (Beta)",
+  "cta.onlineClientOld": "Online Client",
   "cta.resume": "Submit a resume",
   "cta.whitepaper": "백서 다운로드",
   "developers.DEX.subtitle":
