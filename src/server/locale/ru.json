@@ -23,7 +23,8 @@
   "cta.getClient": "Сделать Клиента",
   "cta.getDesktopClient": "На рабочем столе клиента",
   "cta.getWaves": "Сделать Волны",
-  "cta.onlineClient": "Онлайн Клиент",
+  "cta.onlineClient": "Онлайн Клиент (Бета)",
+  "cta.onlineClientOld": "Онлайн Клиент",
   "cta.resume": "Отправляйте резюме",
   "cta.whitepaper": "Техническое Описание Скачать",
   "developers.DEX.subtitle":

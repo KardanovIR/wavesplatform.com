@@ -26,7 +26,7 @@ const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
         target="_blank"
         href="https://waveswallet.io/"
       >
-        <FormattedMessage id="cta.onlineClient" />
+        <FormattedMessage id="cta.onlineClientOld" />
       </Button>,
     ]}
   />
