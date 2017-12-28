@@ -12,9 +12,8 @@ const styles = ({ spacing, palette, breakpoints }) => ({
     padding: spacing.getSpacing(8, 0, 5),
   },
   imageWrapper: {
-    width: '60%',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    display: 'flex',
+    justifyContent: 'center',
   },
   [breakpoints.up('md')]: {
     panel: {

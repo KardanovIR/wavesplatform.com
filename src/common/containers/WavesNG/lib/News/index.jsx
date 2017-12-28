@@ -17,7 +17,7 @@ const News = ({ classes }) => (
   <div className={classes.root}>
     <Row>
       <Col xs={12} md={7}>
-        <Typography type="display4">
+        <Typography type="display3">
           <FormattedHTMLMessage id="wavesNG.news.title" />
         </Typography>
       </Col>

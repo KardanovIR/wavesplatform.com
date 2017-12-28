@@ -24,7 +24,11 @@ const styles = theme => ({
     padding: [0, theme.spacing.unit * 5],
 
     transition: theme.transitions.create(['transform']),
-    willChange: 'transform',
+
+    // Disabling willChange since it has issues
+    // with webkit scaling
+    // willChange: 'transform',
+
     // transformOrigin: 'center bottom',
 
     '&:hover': {
