@@ -1,43 +1,53 @@
 import React from 'react';
 
-import { FormattedMessage } from 'react-intl';
-
-import { Row, Col } from 'src/common/components/Grid';
-import Margin from 'src/common/components/Margin';
 import Typography from 'src/common/components/Typography';
-import Link from 'src/common/components/Link';
+import Margin from 'src/common/components/Margin';
+import { Row, Col } from 'src/common/components/Grid';
 
-const News = () => {
-  return (
+const image = require('!svg-url-loader?noquotes!./img/image.svg');
+
+import { FormattedHTMLMessage } from 'react-intl';
+
+import injectSheet from 'react-jss';
+import styles from './styles';
+
+import news from './news.js';
+
+const News = ({ classes }) => (
+  <div className={classes.root}>
     <Row>
-      <Col xs={12} sm={4} smOffset={1}>
-        <Typography type="display2" align="center">
-          <Link
-            textDecoration={false}
-            target="_blank"
-            href="https://blog.wavesplatform.com/waves-ng-stress-test-results-in-44090f59bb15"
-            inverted
-          >
-            <FormattedMessage id="wavesNG.news.1" />
-          </Link>
+      <Col xs={12} md={7}>
+        <Typography type="display4">
+          <FormattedHTMLMessage id="wavesNG.news.title" />
         </Typography>
-        <Margin bottom={4} xsOnly />
       </Col>
-      <Col xs={12} sm={6} smOffset={1}>
-        <Typography type="display2" align="center">
-          <Link
-            textDecoration={false}
-            target="_blank"
-            href="https://www.forbes.com/forbes/welcome/?toURL=https://www.forbes.com/sites/rogeraitken/2017/11/08/waves-set-to-become-fastest-decentralized-blockchain-platform-globally/&refURL=&referrer=#6a3f27d938b6"
-            inverted
-          >
-            <FormattedMessage id="wavesNG.news.2" />
-          </Link>
-        </Typography>
-        <Margin bottom={4} xsOnly />
+      <Col md={5} className={classes.imageCol}>
+        <div className={classes.imageContainer}>
+          <img src={image} className={classes.image} />
+        </div>
       </Col>
     </Row>
-  );
-};
+    <Margin bottom={4} />    
+    <Row>
+      {news.map(({ Logo, url }, index) => (
+        <Col
+          key={`media_org_${index}`}
+          xs={12}
+          sm={6}
+          md={4}
+          className={classes.col}
+        >
+          <a href={url} target="_blank" className={classes.link}>
+            <div className={classes.media}>
+              <Logo
+                className={classes.logo}
+              />
+            </div>
+          </a>
+        </Col>
+      ))}
+    </Row>
+  </div>
+);
 
-export default News;
+export default injectSheet(styles)(News);

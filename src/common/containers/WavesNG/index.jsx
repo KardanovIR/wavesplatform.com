@@ -58,6 +58,11 @@ const PageLayout = ({ classes }) => (
       </ContentContainer>
     </Section>
 
+    <Section size={4}>
+      <ContentContainer>
+        <News />
+      </ContentContainer>
+    </Section>
     <Section size={4} className={classes.bgGray}>
       <ContentContainer>
         <AnchorScroll anchor="stress-test">
@@ -74,8 +79,6 @@ const PageLayout = ({ classes }) => (
 
     <Section size={4} className={classes.bgJoinUs}>
       <ContentContainer>
-        <News />
-        <Margin bottom={5} />
         <SubscribeSection />
       </ContentContainer>
     </Section>
