@@ -1,7 +1,7 @@
 import { Locales } from 'locale';
 import isProd from 'src/common/utils/isProd';
 
-const supported = ['ru', 'ko', 'en'];
+const supported = ['ko', 'en'];
 
 const cookieDomain = isProd() ? { domain: '.wavesplatform.com' } : {};
 
@@ -22,16 +22,10 @@ const sniffLocale = async (ctx, next) => {
       ...cookieDomain,
     });
 
-    // @todo change when translations are ready
-    // ctx.locale = sniffedLocale;
+    ctx.locale = sniffedLocale;
   }
 
-  // @todo change when translations are ready
-  // ctx.availableLocales = supported;
-
-  // @todo change when translations are ready
-  ctx.locale = 'en';
-  ctx.availableLocales = [];
+  ctx.availableLocales = supported;
 
   await next();
 };
