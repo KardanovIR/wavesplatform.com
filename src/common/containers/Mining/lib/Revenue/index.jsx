@@ -115,9 +115,8 @@ const StartMining = ({classes}) => (
                 <Col className={classes.calculator} xs={12} md={9}>
                     <Calculator minWaves={10000} />
                 </Col>
-
                 <Col xs={12} md={3}>
-                    <Typography type="quote" tagName="div">
+                    <Typography className={classes.revDescr} type="quote" tagName="div">
                         <FormattedMessage
                             id="mining.revenue.calc.description"
                             defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."

@@ -16,6 +16,9 @@ export default theme => ({
     cards: {
         display: 'flex',
         flexDirection: 'column',
+        '& div':{
+           marginBottom: theme.spacing.unit * 2,
+        }
     },
     titleBox: {
         display: "flex",
@@ -24,6 +27,9 @@ export default theme => ({
     },
     calculator: {
         maxWidth: 650,
+    },
+    revDescr: {
+        marginTop: theme.spacing.unit * 2,
     },
     [theme.breakpoints.up("md")]:{
         title: {
