@@ -81,26 +81,6 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.3.fullName" />,
-    position: <FormattedMessage id="teamMembers.3.position" />,
-    imageUrl1x: `url(${Igor_Pugachevsky1x})`,
-    imageUrl2x: `url(${Igor_Pugachevsky2x})`,
-    social: [
-      {
-        type: 'twitter',
-        url: 'https://twitter.com/pugachevsky',
-      },
-      {
-        type: 'facebook',
-        url: 'https://www.facebook.com/pugachevsky',
-      },
-      {
-        type: 'linkedin',
-        url: 'https://www.linkedin.com/in/pugachevsky/',
-      },
-    ],
-  },
-  {
     fullName: <FormattedMessage id="teamMembers.4.fullName" />,
     position: <FormattedMessage id="teamMembers.4.position" />,
     imageUrl1x: `url(${Natalya_Malyova1x})`,
