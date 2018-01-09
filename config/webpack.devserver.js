@@ -8,7 +8,7 @@ const compiler = webpack(webpackConfig);
 
 const server = new WebpackDevServer(compiler, {
   contentBase: path.resolve(__dirname, '../dist'),
-  host: '0.0.0.0',
+  host: '127.0.0.1',
   port: '3000',
   hot: true,
   inline: true,

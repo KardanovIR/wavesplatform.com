@@ -27,7 +27,7 @@ class Select extends PureComponent {
 
   handleChange = e => {
     this.props.onChange(e);
-    this.props.onSelect(e.target.value);
+    this.props.onSelect && this.props.onSelect(e.target.value);
   };
 
   render() {

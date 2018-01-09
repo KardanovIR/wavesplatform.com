@@ -13,7 +13,7 @@ import ContentContainer from 'src/common/components/ContentContainer';
 
 // lib
 import Team from './lib/Team';
-// import FeedbackForm from './lib/FeedbackForm';
+import FeedbackForm from './lib/FeedbackForm';
 import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import AboutDescription from './lib/AboutDescription';
@@ -84,13 +84,13 @@ const PageLayout = ({ classes }) => (
       </Section>
     </Background>
 
-    {/*<AnchorScroll anchor="contact">
+    <AnchorScroll anchor="contact">
             <Background className={classes.bgDark} skewed={true}>
                 <Section size={4} className={classes.footerMarginCompensate}>
                     <FeedbackForm />
                 </Section>
             </Background>
-        </AnchorScroll>*/}
+        </AnchorScroll>
   </Layout>
 );
 
