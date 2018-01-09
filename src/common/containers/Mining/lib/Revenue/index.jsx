@@ -12,6 +12,14 @@ import { Row, Col } from 'src/common/components/Grid';
 import Calculator from 'src/common/containers/CalculatorRevenue';
 
 import { FormattedMessage } from 'react-intl';
+const IncorrectAmountText = ({ min }) => (
+  <Typography type="body">
+    <FormattedMessage
+      id="calcRevenue.incorrectAmount.mining"
+      values={{ min }}
+    />
+  </Typography>
+);
 
 const StartMining = () => (
   <div>
@@ -60,7 +68,7 @@ const StartMining = () => (
 
     <Row>
       <Col xs={12} md={9}>
-        <Calculator minWaves={10000} />
+        <Calculator minWaves={1000} IncorrectAmountText={IncorrectAmountText} />
       </Col>
 
       <Col xs={12} md={3}>

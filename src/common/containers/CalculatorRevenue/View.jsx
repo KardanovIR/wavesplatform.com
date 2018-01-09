@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import pt from 'prop-types';
 
 import Margin from 'src/common/components/Margin';
 import Panel from 'src/common/components/Panel';
@@ -56,6 +57,14 @@ const styles = theme => ({
 });
 
 class CalculatorRevenue extends Component {
+  static propTypes = {
+    IncorrectAmountText: pt.func,
+    onAmountChange: pt.func.isRequired,
+    onAmountBlur: pt.func.isRequired,
+  };
+  static defaultProps = {
+    IncorrectAmountText: () => null
+  };
   componentDidMount() {
     this.props.onAmountChange(this.props.initialValue);
   }
@@ -67,6 +76,7 @@ class CalculatorRevenue extends Component {
 
   handleInputChange = e => this.props.onAmountChange(e.target.value);
 
+  handleBlur = () => this.props.onAmountBlur(this.props.amount);
   render() {
     const {
       minWaves,
@@ -81,7 +91,7 @@ class CalculatorRevenue extends Component {
       term,
       onAmountChange,
       onTermChange,
-      onAmountBlur,
+      IncorrectAmountText
     } = this.props;
 
     return (
@@ -107,8 +117,10 @@ class CalculatorRevenue extends Component {
             className={classes.input}
             secondary
             onChange={this.handleInputChange}
-            onBlur={onAmountBlur}
+            onBlur={this.handleBlur}
             value={amount}
+            min={minWaves}
+            max={maxWaves}
             type="number"
           />
         </Margin>
@@ -142,7 +154,11 @@ class CalculatorRevenue extends Component {
           <Divider />
         </Margin>
 
-        {<Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />}
+        {
+          amount >= minWaves && amount <= maxWaves
+          ? <Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />
+          : <IncorrectAmountText min={minWaves} />
+        }
       </Panel>
     );
   }

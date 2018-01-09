@@ -19,7 +19,6 @@ const ScaledSlider = ({
   const scaledMin = reverse(min);
   const scaledMax = reverse(max);
   const scaledTipFormatter = compose(tipFormatter, transform);
-
   return (
     <Slider
       value={reverse(value)}

@@ -10,9 +10,9 @@ const CalculatorRevenueContainer = connect(
     mrtWavesPrice,
   }),
   (dispatch, { minWaves, maxWaves }) => ({
-    onAmountChange: value => { dispatch(changeAmount({ value, min: minWaves, max: maxWaves })); },
+    onAmountChange: amount => dispatch(changeAmount({ amount })),
     onTermChange: v => dispatch(changeTerm(v)),
-    onAmountBlur: () => dispatch(amountBlur({ min: minWaves, max: maxWaves })),
+    onAmountBlur: amount => dispatch(amountBlur({ min: minWaves, max: maxWaves, amount })),
   })
 )(View);
 
