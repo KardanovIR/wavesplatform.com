@@ -1,4 +1,4 @@
-import { assoc } from 'ramda';
+import { assoc, cond, always, T } from 'ramda';
 import calculateRewards from './lib/calculateRewards';
 
 export const CHANGE_AMOUNT = 'ChangeAmount';
@@ -24,13 +24,20 @@ const initialState = {
   ...calculateRewards(10000, '1m'),
 };
 
+const valueOrRangeBorder = ({ value, min, max }) => cond([
+  [() => value < min, always(min)],
+  [() => value > max, always(max)],
+  [T, always(value)],
+])();
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_AMOUNT: {
+      const value = valueOrRangeBorder(action.payload);
       return {
         ...state,
-        amount: action.payload,
-        ...calculateRewards(action.payload, state.term),
+        amount: value,
+        ...calculateRewards(value, state.term),
       };
     }
     case CHANGE_TERM: {
