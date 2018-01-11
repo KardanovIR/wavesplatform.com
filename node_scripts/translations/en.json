@@ -4,6 +4,8 @@
   "calcRevenue.miningTerm": "Mining term",
   "calcRevenue.total": "Total",
   "calcRevenue.totalAmount": "Total amount of waves",
+  "calcRevenue.incorrectAmount.mining": "The minimum mining balance is {min} WAVES",
+  "calcRevenue.incorrectAmount.leasing": "You cannot lease less than {min} WAVES",
   "company.feedback.supportLink": "support",
   "company.feedback.text": "Use this form for any media, events or partnership inquiries. If you are experiencing problems with any of Waves' products, please contact {link}.",
   "company.feedback.title": "Contact us",

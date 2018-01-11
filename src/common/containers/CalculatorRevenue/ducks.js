@@ -1,4 +1,4 @@
-import { assoc } from 'ramda';
+import { cond, always, T } from 'ramda';
 import calculateRewards from './lib/calculateRewards';
 
 export const CHANGE_AMOUNT = 'ChangeAmount';
@@ -24,13 +24,21 @@ const initialState = {
   ...calculateRewards(10000, '1m'),
 };
 
+const amountOrRangeBorder = ({ amount, min, max }) =>
+  cond([
+    [() => +amount < min, always(min)],
+    [() => +amount > max, always(max)],
+    [T, always(amount)],
+  ])();
+
 export default (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_AMOUNT: {
+      const { amount } = action.payload;
       return {
         ...state,
-        amount: action.payload,
-        ...calculateRewards(action.payload, state.term),
+        amount,
+        ...calculateRewards(amount, state.term),
       };
     }
     case CHANGE_TERM: {
@@ -41,13 +49,13 @@ export default (state = initialState, action) => {
       };
     }
     case AMOUNT_BLUR: {
-      if (state.amount < action.payload.min) {
-        return assoc('amount', action.payload.min, state);
-      }
-      if (state.amount > action.payload.max) {
-        return assoc('amount', action.payload.max, state);
-      }
-      return state;
+      const amount = amountOrRangeBorder(action.payload);
+
+      return {
+        ...state,
+        amount,
+        ...calculateRewards(amount, state.term),
+      };
     }
     default: {
       return state;

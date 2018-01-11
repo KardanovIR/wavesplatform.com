@@ -107,7 +107,7 @@ const Result = ({ classes, total, waves, mrt }) => (
             </div>
             <div>
                 <Typography className={classes.val} type="numeral" tagName="span">
-                    <FormattedNumber value={total} maximumFractionDigits={0} />
+                    <FormattedNumber value={total} maximumFractionDigits={1} />
                 </Typography>{' '}
                 <Typography
                     type="body"

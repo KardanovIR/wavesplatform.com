@@ -15,6 +15,14 @@ import Calculator from 'src/common/containers/CalculatorRevenue';
 import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
+const IncorrectAmountText = ({ min }) => (
+  <Typography type="body">
+    <FormattedMessage
+      id="calcRevenue.incorrectAmount.mining"
+      values={{ min }}
+    />
+  </Typography>
+);
 
 const StartMining = ({classes}) => (
     <div>
@@ -113,7 +121,7 @@ const StartMining = ({classes}) => (
             <Margin bottom={1} />
             <Row>
                 <Col className={classes.calculator} xs={12} md={9}>
-                    <Calculator minWaves={10000} />
+                    <Calculator minWaves={'1000'} IncorrectAmountText={IncorrectAmountText}/>
                 </Col>
                 <Col xs={12} md={3}>
                     <Typography className={classes.revDescr} type="quote" tagName="div">
@@ -126,7 +134,26 @@ const StartMining = ({classes}) => (
             </Row>
         </ContentContainer>
 
+<<<<<<< HEAD
     </div>
+=======
+    <Margin bottom={3} />
+
+    <Row>
+      <Col xs={12} md={9}>
+        <Calculator minWaves={'1000'} IncorrectAmountText={IncorrectAmountText} />
+      </Col>
+
+      <Col xs={12} md={3}>
+        <Margin top={4}>
+          <Typography type="quote" tagName="div">
+            <FormattedMessage id="mining.revenue.calc.description" />
+          </Typography>
+        </Margin>
+      </Col>
+    </Row>
+  </div>
+>>>>>>> WEB-140-fix-calculator
 );
 
 export default injectSheet(styles)(StartMining);

@@ -16,7 +16,14 @@ import Calculator from 'src/common/containers/CalculatorRevenue';
 import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
-
+const IncorrectAmountText = ({ min }) => (
+  <Typography type="body">
+    <FormattedMessage
+      id="calcRevenue.incorrectAmount.leasing"
+      values={{ min }}
+    />
+  </Typography>
+);
 const StartMining = ({classes}) => (
     <div>
         <Row>
@@ -125,7 +132,7 @@ const StartMining = ({classes}) => (
             <Row>
 
                 <Col className={classes.calculator} xs={12} md={9}>
-                    <Calculator minWaves={1} initialValue={1000} />
+                    <Calculator minWaves={1} initialValue={1000}  IncorrectAmountText={IncorrectAmountText} />
                 </Col>
 
 
