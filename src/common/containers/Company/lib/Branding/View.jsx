@@ -35,7 +35,7 @@ const Branding = ({ classes, onBrandingPackageClick }) => (
 
         <Button
           onClick={onBrandingPackageClick}
-          href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_1.2.zip"
+          href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_new.zip"
           target="_blank"
           bordered
           inverted
