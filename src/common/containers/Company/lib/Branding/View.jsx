@@ -33,7 +33,6 @@ const Branding = ({ classes, onBrandingPackageClick }) => (
 
         <Margin bottom={3} />
 
-
         <Button
           onClick={onBrandingPackageClick}
           href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/Waves_brand_pack_new.zip"
