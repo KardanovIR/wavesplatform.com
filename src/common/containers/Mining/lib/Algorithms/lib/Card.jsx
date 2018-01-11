@@ -10,30 +10,39 @@ import Divider from 'src/common/components/Divider';
 // import cn from 'classnames';
 
 const styles = theme => ({
-  [theme.mixins.atMedia('sm')]: {
-    wrapper: {
-      height: '100%',
+    [theme.mixins.atMedia('md')]: {
+        wrapper: {
+            height: '100%',
+            maxWidth: '47%',
+        },
     },
-  },
+    wrapper: {
+        padding: 0,
+    },
+    [theme.breakpoints.up("md")]:{
+
+    }
+
+
 });
 
 const Card = ({ classes, imageMobile, image, text, title }) => {
-  return (
-    <Panel className={classes.wrapper}>
-      <Typography type="display1" tagName="div">
-        {title}
-      </Typography>
-      <Margin bottom={3} />
-      <Hidden smUp>{image}</Hidden>
-      <Hidden smDown>{imageMobile}</Hidden>
-      <Margin top={3} bottom={2}>
-        <Divider />
-      </Margin>
-      <Typography type="body" tagName="div">
-        {text}
-      </Typography>
-    </Panel>
-  );
+    return (
+        <Panel className={classes.wrapper}>
+            <Typography type="display1" tagName="div">
+                {title}
+            </Typography>
+            <Margin bottom={3} />
+            <Hidden smUp>{image}</Hidden>
+            <Hidden smDown>{imageMobile}</Hidden>
+            <Margin top={3} bottom={2}>
+                <Divider />
+            </Margin>
+            <Typography type="body" tagName="div">
+                {text}
+            </Typography>
+        </Panel>
+    );
 };
 
 export default injectSheet(styles)(Card);

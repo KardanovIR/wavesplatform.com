@@ -45,7 +45,8 @@ const styles = theme => ({
   primary: {
     backgroundColor: 'transparent',
     color: theme.palette.gray[0],
-    borderBottom: `1px solid ${theme.palette.gray[0]}`,
+    border: `1px solid ${theme.palette.gray[0]}`,
+    paddingTop: theme.spacing.unit / 2,
 
     ...setPlaceholderColor(theme.palette.gray[0]),
   },
@@ -56,7 +57,7 @@ const styles = theme => ({
     border: `1px solid ${theme.palette.gray[400]}`,
 
     '&:focus': {
-      borderColor: theme.palette.primary[700],
+      borderColor: theme.palette.gray[0],
     },
 
     ...setPlaceholderColor(theme.palette.grayBlue[400]),
@@ -69,13 +70,16 @@ const styles = theme => ({
     resize: 'none',
     paddingTop: theme.spacing.unit,
     paddingBottom: theme.spacing.unit,
+    border: `1px solid ${theme.palette.gray[0]}`,
   },
   disabled: {
     opacity: 0.6,
     pointerEvents: 'none',
   },
   invalid: {
-    boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`,
+    //boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`,
+    border: `1px solid ${theme.palette.danger[500]}`,
+
   },
 });
 

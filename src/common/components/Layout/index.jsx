@@ -24,6 +24,9 @@ const styles = theme => ({
   body: {
     backgroundColor: ({ inverted }) => inverted && theme.palette.gray[800],
   },
+  ftwrapper: {
+    backgroundColor: ({ darkFooter }) => darkFooter && theme.palette.gray[9999],
+  },
 });
 
 const Layout = ({
@@ -31,6 +34,7 @@ const Layout = ({
   classes,
   activeLink,
   hideFooter,
+  darkFooter,
   hideSnackbar,
 }) => (
   <div className={classes.body}>
@@ -42,9 +46,14 @@ const Layout = ({
       />
     </div>
     {children}
-    <Wrapper>
+    <Wrapper className={classes.ftwrapper}>
       {!hideFooter && <Footer links={MOBILE_LINKS} />}
-      {!hideSnackbar && <SnackbarCta text="Join our Waves community Telegram channel 🏄" buttonText="JOIN" />}
+      {!hideSnackbar && (
+        <SnackbarCta
+          text="Join our Waves community Telegram channel 🏄"
+          buttonText="JOIN"
+        />
+      )}
     </Wrapper>
   </div>
 );

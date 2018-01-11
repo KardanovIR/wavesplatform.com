@@ -21,95 +21,112 @@ class Button extends Component {
     if (this.props.withLoader) {
       this.setState({ loading: true });
     }
-    this.props.onClick(e);
-  };
+  }
+    render() {
 
-  render() {
-    const {
-      type,
-      href,
-      icon,
-      classes,
-      className,
+        const {
+            type,
+            href,
+            icon,
+            classes,
+            className,
 
-      // types
-      bordered,
-      inverted,
-      secondary, // eslint-disable-line
+            // types
+            bordered,
+            inverted,
+            secondary, // eslint-disable-line
+            whited,
 
-      children,
-      loading,
+            children,
+            loading,
 
-      withLoader, // eslint-disable-line
-      theme, // eslint-disable-line
-      sheet, // eslint-disable-line
+            withLoader,	// eslint-disable-line
+            theme,      // eslint-disable-line
+            sheet,      // eslint-disable-line
 
-      ...others
+            ...others,
     } = this.props;
 
-    const showLoader = loading || this.state.loading;
+        const showLoader = loading || this.state.loading;
 
-    const buttonElementClasses = classnames(
-      classes.button,
-      {
-        [classes.bordered]: bordered,
-        [classes.inverted]: bordered && inverted,
-        [classes.invertedFill]: !bordered && inverted,
-        [classes.light]: !bordered && secondary,
-        [classes.dark]: !bordered && !secondary,
-      },
-      className
-    );
+        const buttonElementClasses = classnames(classes.button, {
+            [classes.bordered]: bordered,
+            [classes.inverted]: bordered && inverted,
+            [classes.invertedFill]: !bordered && inverted,
+            [classes.light]: !bordered && secondary,
+            [classes.dark]: !bordered && !secondary,
+            [classes.white]: !bordered && whited,
+        }, className);
 
-    const contentWrapperClasses = classnames(classes.text, classes.content, {
-      [classes.contentHidden]: showLoader,
-    });
+        const contentWrapperClasses = classnames(
+            classes.text,
+            classes.content,
+            { [classes.contentHidden]: showLoader }
+        );
 
-    const Element = href ? AnchorElement : ButtonElement;
+        const Element = href ? AnchorElement : ButtonElement;
 
-    const elementProps = {
-      ...others,
-      href,
-      className: buttonElementClasses,
-      type: !href ? type : null,
-    };
+        const elementProps = {
+            ...others,
+            href,
+            className: buttonElementClasses,
+            type: !href ? type : null,
+        };
 
-    return (
-      <Element {...elementProps} onClick={this.handleClick}>
-        {showLoader && <Spinner className={classes.spinner} />}
 
-        <div className={contentWrapperClasses}>
-          {icon && <span className={classes.icon}>{icon}</span>}
+        return (
+            <Element {...elementProps} onClick={this.handleClick}>
 
-          {children && <span className={classes.children}>{children}</span>}
-        </div>
-      </Element>
-    );
-  }
+                {showLoader && (
+                    <Spinner className={classes.spinner} />
+                )}
+
+                <div className={contentWrapperClasses}>
+                    {icon &&
+                        <span className={classes.icon}>
+                            {icon}
+                        </span>
+                    }
+
+                    {children &&
+                        <span className={classes.children}>
+                            {children}
+                        </span>
+                    }
+                </div>
+
+            </Element>
+        )
+    }
 }
 
 Button.defaultProps = {
-  type: 'button',
-  className: '',
-  disabled: false,
-  loading: false,
-  onClick: () => {},
+    type: 'button',
+    className: '',
+    disabled: false,
+    loading: false,
+    whited: false,
+    onClick: () => {},
 
-  // types
-  secondary: false,
-  bordered: false,
+    // types
+    secondary: false,
+    bordered: false,
 };
 
 Button.propTypes = {
-  type: PropTypes.string,
-  className: PropTypes.string,
-  href: PropTypes.string,
-  secondary: PropTypes.bool,
-  inverted: PropTypes.bool,
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  loading: PropTypes.bool,
-  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
+    type: PropTypes.string,
+    className: PropTypes.string,
+    href: PropTypes.string,
+    secondary: PropTypes.bool,
+    inverted: PropTypes.bool,
+    whited: PropTypes.bool,
+    children: PropTypes.node,
+    disabled: PropTypes.bool,
+    loading: PropTypes.bool,
+    icon: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+    ])
 };
 
 export default injectSheet(styles)(Button);

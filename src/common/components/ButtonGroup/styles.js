@@ -16,11 +16,11 @@ const styles = ({ spacing, palette, transitions }) => ({
 
     whiteSpace: 'nowrap',
     textAlign: 'center',
-
-    padding: [0, spacing.unit * 2.5],
+    fontSize: 14,
+    padding: [0, spacing.unit],
 
     background: palette.gray[0],
-    color: palette.gray[600],
+    color: palette.gray[300],
 
     boxSizing: 'border-box',
     border: '1px solid #f0f0f0',

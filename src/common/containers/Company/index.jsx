@@ -32,7 +32,7 @@ import teamMembers from './team';
 import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ classes }) => (
-  <Layout activeLink="company">
+  <Layout activeLink="company" darkFooter>
     <MainScreenBackground
       type="image"
       src={require('./img/Artboard.jpg')}
@@ -84,13 +84,13 @@ const PageLayout = ({ classes }) => (
       </Section>
     </Background>
 
-    {/*<AnchorScroll anchor="contact">
+    <AnchorScroll anchor="contact">
             <Background className={classes.bgDark} skewed={true}>
                 <Section size={4} className={classes.footerMarginCompensate}>
                     <FeedbackForm />
                 </Section>
             </Background>
-        </AnchorScroll>*/}
+        </AnchorScroll>
   </Layout>
 );
 

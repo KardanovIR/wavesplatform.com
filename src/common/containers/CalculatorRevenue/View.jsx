@@ -21,131 +21,141 @@ import { transform, reverse } from './lib/sliderScale';
 import injectSheet from 'react-jss';
 
 const styles = theme => ({
-  buttonGroup: {
-    width: '100%',
-  },
-  divider: {},
+    buttonGroup: {
+        width: '90%',
+    },
+    divider: {},
 
-  // slider and input
-  rowInput: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  select: {
-    width: '100%',
-  },
-  sliderWrapper: {
-    display: 'none',
-    flex: 1,
-    paddingRight: theme.spacing.unit * 3,
-  },
-
-  input: {
-    display: 'block',
-    flex: [0, 0, '100%'],
-  },
-
-  [theme.breakpoints.up('md')]: {
+    // slider and input
+    rowInput: {
+        display: 'flex',
+        alignItems: 'center',
+    },
+    select: {
+        width: '100%',
+    },
     sliderWrapper: {
-      display: 'block',
+        display: 'none',
+        flex: [0, 0, '70%'],
+        paddingRight: theme.spacing.unit * 3,
     },
+
     input: {
-      flex: [0, 0, '120px'],
+        display: 'block',
+        flex: [0, 0, '100%'],
+        borderColor: theme.palette.gray[300],
+        color: theme.palette.gray[1000],
+        fontWeight: 400,
     },
-  },
+
+    [theme.breakpoints.up('md')]: {
+        sliderWrapper: {
+            display: 'block',
+        },
+        input: {
+            flex: 0,
+            maxWidth: '25%',
+        },
+    },
 });
 
 class CalculatorRevenue extends Component {
-  componentDidMount() {
-    this.props.onAmountChange(this.props.initialValue);
-  }
+    componentDidMount() {
+        this.props.onAmountChange(this.props.initialValue);
+    }
 
-  static defaultProps = {
-    mrtWavesPrice: 0.02,
-    initialValue: 10000,
-  };
+    static defaultProps = {
+        mrtWavesPrice: 0.02,
+        initialValue: 10000,
+    };
 
-  handleInputChange = e => this.props.onAmountChange(e.target.value);
+    handleInputChange = e => this.props.onAmountChange(e.target.value);
 
-  render() {
-    const {
-      minWaves,
-      maxWaves,
-      classes,
-      waves,
-      mrt,
-      mrtWavesPrice,
-      intl,
+    render() {
+        const {
+            minWaves,
+            maxWaves,
+            classes,
+            waves,
+            mrt,
+            mrtWavesPrice,
+            intl,
 
-      amount,
-      term,
-      onAmountChange,
-      onTermChange,
-      onAmountBlur,
-    } = this.props;
+            amount,
+            term,
+            onAmountChange,
+            onTermChange,
+            onAmountBlur,
+        } = this.props;
 
-    return (
-      <Panel>
-        <Typography type="body">
-          <FormattedMessage id="calcRevenue.totalAmount" />
-        </Typography>
+        return (
+            <Panel>
+                <Typography type="body">
+                    <FormattedMessage
+                        id="calcRevenue.totalAmount"
+                        defaultMessage="Total amount of waves"
+                    />
+                </Typography>
 
-        <Margin top={1} bottom={2} className={classes.rowInput}>
-          <div className={classes.sliderWrapper}>
-            <ScaledSlider
-              transform={transform}
-              reverse={reverse}
-              min={minWaves}
-              max={maxWaves}
-              value={amount}
-              onChange={onAmountChange}
-              stepsNumber={300}
-            />
-          </div>
-          <Input
-            /* placeholder={intl.formatMessage()} */
-            className={classes.input}
-            secondary
-            onChange={this.handleInputChange}
-            onBlur={onAmountBlur}
-            value={amount}
-            type="number"
-          />
-        </Margin>
+                <Margin top={1} bottom={2} className={classes.rowInput}>
+                    <div className={classes.sliderWrapper}>
+                        <ScaledSlider
+                            transform={transform}
+                            reverse={reverse}
+                            min={minWaves}
+                            max={maxWaves}
+                            value={amount}
+                            onChange={onAmountChange}
+                            stepsNumber={300}
+                        />
+                    </div>
+                    <Input
+                        /* placeholder={intl.formatMessage()} */
+                        className={classes.input}
+                        secondary
+                        onChange={this.handleInputChange}
+                        onBlur={onAmountBlur}
+                        value={amount}
+                        type="number"
+                    />
+                </Margin>
 
-        <Margin>
-          <Typography type="body">
-            <FormattedMessage id="calcRevenue.miningTerm" />
-          </Typography>
-          <Margin bottom={1} />
+                <Margin>
+                    <Typography type="body">
+                        <FormattedMessage
+                            id="calcRevenue.miningTerm"
+                            defaultMessage="Mining term"
+                        />
+                    </Typography>
+                    <Margin bottom={1} />
 
-          <Hidden mdUp>
-            <Select
-              className={classes.select}
-              options={timeOptions(intl)}
-              value={term}
-              onSelect={onTermChange}
-            />
-          </Hidden>
+                    <Hidden mdUp>
+                        <Select
+                            className={classes.select}
+                            options={timeOptions(intl)}
+                            value={term}
+                            onSelect={onTermChange}
+                        />
+                    </Hidden>
 
-          <Hidden mdDown>
-            <ButtonGroup
-              className={classes.buttonGroup}
-              options={timeOptions(intl)}
-              value={term}
-              onSelect={onTermChange}
-            />
-          </Hidden>
-        </Margin>
+                    <Hidden mdDown>
+                        <ButtonGroup
+                            className={classes.buttonGroup}
+                            options={timeOptions(intl)}
+                            value={term}
+                            onSelect={onTermChange}
+                        />
+                    </Hidden>
+                </Margin>
 
-        <Margin top={3} bottom={3}>
-          <Divider />
-        </Margin>
+                <Margin top={3} bottom={3}>
+                    <Divider />
+                </Margin>
 
-        {<Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />}
-      </Panel>
-    );
-  }
+                {<Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />}
+            </Panel>
+        );
+    }
 }
 
 export default compose(injectSheet(styles), injectIntl)(CalculatorRevenue);

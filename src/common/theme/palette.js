@@ -10,6 +10,7 @@ export const blue = {
   100: '#D6E0FC',
   300: '#6BA6FF',
   500: '#0056FF',
+  550: '#002eff',
   700: '#263f6f',
   900: '#0a1b43',
 };
@@ -22,12 +23,14 @@ export const gray = colorMigrationProxy(
     100: '#ebecf0',
     // 200: '#d8dbed',  // moved to grayBlue
     // 300: '#9cb4e1',  // moved to grayBlue
+    300: '#c6c6c6',
     400: '#AEAEAE',
     500: '#979797',
     600: '#656565',
     700: '#444444',
     800: '#232323',
     1000: '#161616',
+    9999: '#000',
   },
   'gray'
 );
@@ -40,6 +43,7 @@ export const grayBlue = colorMigrationProxy(
     500: '#5F7090',
     600: '#4d5d7e', // new
     700: '#415272',
+    750: '#2d374b',
   },
   'grayBlue'
 );
