@@ -29,16 +29,22 @@ const styles = theme => ({
     boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .09)',
     flexDirection: 'row',
     alignItems: 'center',
+
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
+    maxWidth: 282,
+    height: 374,
+    //padding: theme.spacing.getSpacing(4, 4),
   },
-  [theme.breakpoints.up('sm')]: {
-    svgrow: {
-      display: 'flex',
+    [theme.breakpoints.up('sm')]: {
+        svgrow: {
+            display: 'flex',
+        }
     },
-  },
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
       flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     svgrow: {
       margin: 0,
@@ -50,8 +56,9 @@ const styles = theme => ({
     },
     title: {
       fontSize: 19,
-    },
+    }
   },
+
 });
 
 export default styles;

@@ -16,18 +16,15 @@ import url from 'src/common/utils/url';
 const INVERTED_SKIN_LINKS = {
   'get-waves': true,
   developers: true,
-  company: true,
+  leasing: true,
+  company: true
 };
 
 const isInverted = link => link === undefined || INVERTED_SKIN_LINKS[link];
 
 const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => {
   return (
-    <nav
-      className={cx(classes.wrapper, {
-        [classes.wrapperAnimated]: activeLink === 'home',
-      })}
-    >
+    <nav className={cx(classes.wrapper, { [classes.wrapperAnimated]: activeLink === 'home' })}>
       <Wrapper>
         <ContentContainer>
           <div className={classes.logo}>
