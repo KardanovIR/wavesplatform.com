@@ -63,7 +63,7 @@ class CalculatorRevenue extends Component {
     onAmountBlur: pt.func.isRequired,
   };
   static defaultProps = {
-    IncorrectAmountText: () => null
+    IncorrectAmountText: () => null,
   };
   componentDidMount() {
     this.props.onAmountChange(this.props.initialValue);
@@ -86,12 +86,11 @@ class CalculatorRevenue extends Component {
       mrt,
       mrtWavesPrice,
       intl,
-
       amount,
       term,
       onAmountChange,
       onTermChange,
-      IncorrectAmountText
+      IncorrectAmountText,
     } = this.props;
 
     return (
@@ -154,11 +153,11 @@ class CalculatorRevenue extends Component {
           <Divider />
         </Margin>
 
-        {
-          amount >= minWaves && amount <= maxWaves
-          ? <Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />
-          : <IncorrectAmountText min={minWaves} />
-        }
+        {amount >= minWaves ? (
+          <Result total={mrt * mrtWavesPrice} waves={waves} mrt={mrt} />
+        ) : (
+          <IncorrectAmountText min={minWaves} />
+        )}
       </Panel>
     );
   }

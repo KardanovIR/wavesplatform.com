@@ -78,7 +78,7 @@ const StartMining = () => (
     <Row>
       <Col xs={12} md={9}>
         <Calculator
-          minWaves={'0.00000001'}
+          minWaves={'1'}
           initialValue={1000}
           IncorrectAmountText={IncorrectAmountText}
         />
