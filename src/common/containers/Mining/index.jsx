@@ -1,4 +1,5 @@
 import React from 'react';
+import { fileUrl } from 'src/common/utils/url';
 
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
@@ -34,8 +35,10 @@ const PageLayout = ({ classes }) => (
             type="image"
             src={require('./lib/MainScreen/img/bg.jpg')}
             srcSet={`${require('./lib/MainScreen/img/bg.jpg')} 1x, ${require('./lib/MainScreen/img/bg@2x.jpg')} 2x`}
-            videoSrc={require('./lib/MainScreen/video/w_black_dev_1.mp4')}
-            videoSrcMobile={require('./lib/MainScreen/video/w_phone_black_1.mp4')}
+            videoSrc={fileUrl('video/black4_desktop.mp4')}
+            videoSrcMobile={fileUrl('video/black4_mobile.mp4')}
+            videoFirstFrame={require('./lib/MainScreen/img/w_black_d_1.jpg')}
+            videoFirstFrameMobile={require('./lib/MainScreen/img/w_black_m_1.jpg')}
         >
             <ContentContainer>
                 <MainScreen />

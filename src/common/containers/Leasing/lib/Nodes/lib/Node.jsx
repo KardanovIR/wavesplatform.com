@@ -33,6 +33,7 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     copyToClipboardText: {
         color: palette.primary[700],
         fontSize: '0.65rem',
+        wordWrap: 'break-word',
     },
     [breakpoints.up('md')]: {
         copyToClipboard: {

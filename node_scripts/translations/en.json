@@ -172,7 +172,7 @@
   "leasing.revenue.p1.text1": "The more WAVES you lease to a node, the more rewards you will receive. Nodes pay out different proportions of the transaction fees and MRT they receive, and some also use their own tokens as rewards. Check the list of Waves {nodesLink} and select the one with the best conditions for you!",
   "leasing.revenue.p1.text1.link": "nodes",
   "leasing.revenue.p1.text2": "You can think of leasing your WAVES as a little like depositing money in a bank account. You receive income from them but can still withdraw them at any time.",
-  "leasing.revenue.p1.title": "How much can I earn?",
+  "leasing.revenue.p1.title": "How much will my node earn?",
   "leasing.startLeasing.miningLink": "mining",
   "leasing.startLeasing.p1.title": "1. Download Waves Client",
   "leasing.startLeasing.p2.title": "2. Deposit WAVES to your account",

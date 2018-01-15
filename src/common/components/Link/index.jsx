@@ -38,13 +38,14 @@ const Link = ({
     classNameProp
   );
 
+  const iconElement =
+    icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
+
   const classNameText = cn(classes.text, {
     [classes.pseudo]: pseudo,
     [classes.noDecoration]: !textDecoration,
+    [classes.withPaddingForIcon]: !!iconElement
   });
-
-  const iconElement =
-    icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
 
   return (
     <Element

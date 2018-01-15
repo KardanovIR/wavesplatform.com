@@ -7,13 +7,15 @@ const styles = theme => ({
 
   text: {
     whiteSpace: 'normal',
-    paddingRight: '1.2em',
   },
 
   pseudo: {
     borderBottom: '1px dashed',
   },
 
+  withPaddingForIcon: {
+    paddingRight: '1.2em',
+  },
   noDecoration: {
     border: 0,
   },

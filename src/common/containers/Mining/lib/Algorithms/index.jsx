@@ -18,78 +18,77 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const Algorithms = ({classes}) => (
-    <div>
-        <Row>
-            <ContentContainer>
-                <SectionTitleText
-                    align="left"
-                    title={
-                        <Typography className={classes.title}>
-                            <FormattedMessage
-                                id="mining.algorithms.title"
-                                defaultMessage="Mining in Waves"
-                            />
-                        </Typography>
-                    }
-                    text={
-                        <Typography className={classes.text}>
-                            <FormattedMessage
-                                id="mining.algorithms.text"
-                                defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
-                            />
-                        </Typography>
-                    }
+const Algorithms = ({ classes }) => (
+  <div>
+    <ContentContainer>
+      <SectionTitleText
+        align="left"
+        title={
+          <Typography className={classes.title}>
+            <FormattedMessage
+              id="mining.algorithms.title"
+              defaultMessage="Mining in Waves"
+            />
+          </Typography>
+        }
+        text={
+          <Typography type="body2">
+            <FormattedMessage
+              id="mining.algorithms.text"
+              defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
+            />
+          </Typography>
+        }
+      />
+      <Row className={classes.cards}>
+        <Col xs={12} sm={8} md={6} lg={5}>
+          <Card
+            title={
+              <Typography className={classes.title}>
+                <FormattedMessage
+                  id="mining.algorithms.pow.title"
+                  defaultMessage="Proof-of-work"
                 />
-            </ContentContainer>
-        </Row>
-        <Row>
-            <ContentContainer className={classes.cards}>
-                    <Card
-                        title={
-                            <Typography className={classes.title}>
-                                <FormattedMessage
-                                    id="mining.algorithms.pow.title"
-                                    defaultMessage="Proof-of-work"
-                                />
-                            </Typography>
-                        }
-                        imageMobile={<ImagePoWMobile className={classes.infograph} />}
-                        image={<ImagePoW className={classes.infograph} />}
-                        text={
-                            <FormattedMessage
-                                id="mining.algorithms.pow.text"
-                                defaultMessage="Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work. "
-                            />
-                        }
-                    />
-                    <Margin bottom={4} xsOnly />
+              </Typography>
+            }
+            imageMobile={<ImagePoWMobile className={classes.infograph} />}
+            image={<ImagePoW className={classes.infograph} />}
+            text={
+              <FormattedMessage
+                id="mining.algorithms.pow.text"
+                defaultMessage="Mining cryptocurrencies often requires expensive hardware, specialist knowledge and hours of dedicated work and patience. That’s because most cryptocurrencies are mined through Proof-of-Work. "
+              />
+            }
+          />
+        </Col>
+        <Margin bottom={4} xsOnly />
 
-                    <Card
-                        title={
-                            <Typography className={classes.title}>
-                                <FormattedMessage
-                                    id="mining.algorithms.pos.title"
-                                    defaultMessage="Proof-of-stake"
-                                />
-                            </Typography>
-                        }
-                        imageMobile={<ImagePoSMobile className={classes.infograph} />}
-                        image={<ImagePoS className={classes.infograph} />}
-                        text={
-                            <Typography className={classes.textDescription}>
-                                <FormattedMessage
-                                    id="mining.algorithms.pos.text"
-                                    defaultMessage="Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance."
-                                />
-                            </Typography>
-                        }
-                    />
-                    <Margin bottom={4} xsOnly />
-
-            </ContentContainer>
-        </Row>
-    </div>
+        <Col xs={12} sm={8} md={6} lg={5}>
+          <Card
+            title={
+              <Typography className={classes.title}>
+                <FormattedMessage
+                  id="mining.algorithms.pos.title"
+                  defaultMessage="Proof-of-stake"
+                />
+              </Typography>
+            }
+            imageMobile={<ImagePoSMobile className={classes.infograph} />}
+            image={<ImagePoS className={classes.infograph} />}
+            text={
+              <Typography className={classes.textDescription}>
+                <FormattedMessage
+                  id="mining.algorithms.pos.text"
+                  defaultMessage="Waves use a Proof-of-Stake algorithm in which the WAVES you own (or that have been leased to you) reflect your mining power. The more you own, the higher your chances of processing the next block and receiving the transaction fees as a reward. Essentially it’s a form of interest on your balance."
+                />
+              </Typography>
+            }
+          />
+        </Col>
+        <Margin bottom={4} xsOnly />
+      </Row>
+    </ContentContainer>
+  </div>
 );
 
 export default injectSheet(styles)(Algorithms);
