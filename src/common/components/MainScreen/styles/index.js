@@ -54,7 +54,7 @@ const styles = theme => ({
   buttonWrapper: {
     display: 'inline-block',
     margin: [0, theme.spacing.unit * 0.5],
-    width: '50%',
+    width: '68%',
   },
 
   button: {

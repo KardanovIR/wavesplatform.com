@@ -34,7 +34,7 @@ const WavesNodes = ({ classes, wavesTopNodes }) => {
             </Typography>
           }
           text={
-            <Typography className={classes.text}>
+            <Typography type="display3">
               <FormattedMessage
                 id="mining.nodes.text"
                 defaultMessage="A Waves node isn’t just a way to get paid for securing the network. These are hubs of activity around which entrepreneurs build new businesses and engage the community. You can find a list of Waves nodes at {pywavesLink}"

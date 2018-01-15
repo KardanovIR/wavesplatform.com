@@ -28,21 +28,16 @@ const StartMining = ({ classes }) => (
   <ContentContainer>
     <SectionTitleText
       align="left"
+      titleType="display1"
+      titleWeight={600}
       title={
-        <Typography className={classes.title}>
-          <FormattedMessage
-            id="mining.revenue.title"
-            defaultMessage="Revenues"
-          />
-        </Typography>
+        <FormattedMessage id="mining.revenue.title" defaultMessage="Revenues" />
       }
       text={
-        <Typography type="body2">
-          <FormattedMessage
-            id="mining.revenue.text"
-            defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
-          />
-        </Typography>
+        <FormattedMessage
+          id="mining.revenue.text"
+          defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
+        />
       }
     />
     <Margin bottom={6} />
@@ -61,6 +56,7 @@ const StartMining = ({ classes }) => (
               }
             />
             <Margin bottom={2} />
+            <Margin bottom={1} xsOnly />
             <Typography type="body" cut>
               <FormattedMessage
                 id="leasing.revenue.p1.text1"
@@ -97,6 +93,7 @@ const StartMining = ({ classes }) => (
             }
           />
           <Margin bottom={2} />
+          <Margin bottom={1} xsOnly />
 
           <Typography type="body" cut>
             <FormattedMessage
@@ -125,7 +122,7 @@ const StartMining = ({ classes }) => (
         </Typography>
       </Col>
     </Row>
-    <Margin bottom={1} />
+    <Margin bottom={2} />
 
     <Row>
       <Col xs={12} md={3} className={classes.calcDescription}>

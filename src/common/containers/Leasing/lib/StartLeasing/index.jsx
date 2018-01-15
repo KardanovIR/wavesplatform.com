@@ -37,13 +37,14 @@ const StartLeasing = ({ classes }) => {
             lg={6}
             className={[classes.col, classes.colMargin]}
           >
-            <Typography className={classes.title}>
+          
+            <Typography type="display1" weight={600}>
               <FormattedMessage
                 id="leasing.startLeasing.title"
                 defaultMessage="Start leasing your funds"
               />
             </Typography>
-            <Typography type="body2" className={classes.text}>
+            <Typography type="body2">
               <FormattedMessage
                 id="leasing.startLeasing.text"
                 defaultMessage="You can lease any sum from 0.002 WAVES. Your funds remain in your wallet and you can cancel the lease and regain access to the WAVES at any time, with just two clicks. You can also set up your own node and start {miningLink} yourself if you have at least 10,000 WAVES."

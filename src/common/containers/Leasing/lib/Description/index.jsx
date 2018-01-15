@@ -53,6 +53,7 @@ const styles = ({ spacing, breakpoints }) => ({
     },
     title: {
       fontSize: 19,
+      fontWeight: 500
     },
     descr: {
       fontSize: 32,
@@ -79,21 +80,19 @@ const Description = ({ classes }) => (
       <SectionTitleText
         marginSize={1}
         align="left"
+        titleType="display1"
+        titleWeight={600}
         title={
-          <Typography className={classes.title}>
             <FormattedMessage
               id="leasing.description.title"
               defaultMessage="What is Waves leasing?"
             />
-          </Typography>
         }
         text={
-          <Typography type="body2">
             <FormattedMessage
               id="leasing.description.subtitle"
               defaultMessage="Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds."
             />
-          </Typography>
         }
       />
       <Margin bottom={4} />

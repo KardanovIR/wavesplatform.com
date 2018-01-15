@@ -29,11 +29,11 @@ export default theme => ({
   [theme.breakpoints.up('md')]: {
     title: {
       fontSize: 23,
-      fontWeight: 400,
+      fontWeight: 500,
     },
     titleTwo: {
       fontSize: 32,
-      fontWeight: 400,
+      fontWeight: 500,
     },
     text: {
       fontSize: 32,

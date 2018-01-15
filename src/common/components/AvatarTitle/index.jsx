@@ -9,9 +9,6 @@ const styles = theme => ({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  titleText: {
-    fontSize: 20,
-  },
   icon: {
     height: theme.spacing.unit * 6,
     width: theme.spacing.unit * 6,
@@ -23,9 +20,6 @@ const styles = theme => ({
     }
   },
   [theme.breakpoints.up('md')]: {
-    titleText: {
-      fontSize: 23,
-    },
     title: {
       flexDirection: 'column',
       alignItems: 'flex-start',

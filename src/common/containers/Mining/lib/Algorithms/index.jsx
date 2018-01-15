@@ -23,21 +23,19 @@ const Algorithms = ({ classes }) => (
     <ContentContainer>
       <SectionTitleText
         align="left"
+        titleType="display1"
+        titleWeight={600}
         title={
-          <Typography className={classes.title}>
-            <FormattedMessage
-              id="mining.algorithms.title"
-              defaultMessage="Mining in Waves"
-            />
-          </Typography>
+          <FormattedMessage
+            id="mining.algorithms.title"
+            defaultMessage="Mining in Waves"
+          />
         }
         text={
-          <Typography type="body2">
-            <FormattedMessage
-              id="mining.algorithms.text"
-              defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
-            />
-          </Typography>
+          <FormattedMessage
+            id="mining.algorithms.text"
+            defaultMessage="Install your node and help us power the Waves blockchain. A simple hosted server is all the hardware you’ll need."
+          />
         }
       />
       <Row className={classes.cards}>

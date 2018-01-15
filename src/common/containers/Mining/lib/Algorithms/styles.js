@@ -1,7 +1,7 @@
 export default theme => ({
   title: {
     fontSize: 16,
-    fontWeight: 400,
+    fontWeight: 500,
   },
   text: {
     fontSize: 23,
@@ -19,7 +19,7 @@ export default theme => ({
   [theme.breakpoints.up('md')]: {
     title: {
       fontSize: 23,
-      fontWeight: 400,
+      fontWeight: 500,
     },
     text: {
       fontSize: 32,

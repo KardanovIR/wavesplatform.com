@@ -29,26 +29,24 @@ const StartMining = ({ classes }) => (
     <ContentContainer>
       <SectionTitleText
         align="left"
+        titleType="display1"
+        titleWeight={600}
         title={
-          <Typography className={classes.title}>
-            <FormattedMessage
-              id="mining.revenue.title"
-              defaultMessage="Revenues"
-            />
-          </Typography>
+          <FormattedMessage
+            id="mining.revenue.title"
+            defaultMessage="Revenues"
+          />
         }
         text={
-          <Typography className={classes.text}>
-            <FormattedMessage
-              id="mining.revenue.text"
-              defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
-            />
-          </Typography>
+          <FormattedMessage
+            id="mining.revenue.text"
+            defaultMessage="By supporting the Waves network, you can earn up to 5% per year on your balance."
+          />
         }
       />
-
+      <Margin bottom={6} />
       <Row>
-        <Col xs={12} sm={8} md={6} lg={5}>
+        <Col xs={12} sm={6} md={6}>
           <div>
             <AvatarTitle
               avatar={<IconProduct name="fees" />}
@@ -60,6 +58,7 @@ const StartMining = ({ classes }) => (
               }
             />
             <Margin bottom={2} />
+            <Margin bottom={1} xsOnly />
             <Typography type="body" cut>
               <FormattedMessage
                 id="mining.revenue.p1.text1"
@@ -72,9 +71,11 @@ const StartMining = ({ classes }) => (
                 defaultMessage="In addition to any WAVES they receive, nodes will receive 60 MRT per block for the first 70 blocks they generate per day, with 30 MRT per block awarded thereafter."
               />
             </Typography>
+            <Margin bottom={6} />
           </div>
         </Col>
-        <Col xs={12} sm={8} md={6} lg={5}>
+
+        <Col xs={12} sm={6} md={6}>
           <div>
             <AvatarTitle
               avatar={<IconProduct name="mining" />}
@@ -86,6 +87,7 @@ const StartMining = ({ classes }) => (
               }
             />
             <Margin bottom={2} />
+            <Margin bottom={1} xsOnly />
             <Typography type="body" cut>
               <FormattedMessage
                 id="mining.revenue.p2.text1"
@@ -98,11 +100,10 @@ const StartMining = ({ classes }) => (
                 defaultMessage="As a Waves token, MRT can be transferred and traded freely on Waves’ decentralised exchange (DEX)."
               />
             </Typography>
+            <Margin bottom={6} />
           </div>
         </Col>
       </Row>
-
-      <Margin bottom={5} />
 
       <Row>
         <Col xs={12}>
@@ -115,7 +116,6 @@ const StartMining = ({ classes }) => (
           <Margin bottom={2} />
         </Col>
       </Row>
-      <Margin bottom={1} />
       <Row>
         <Col className={classes.calculator} xs={12} md={9}>
           <Calculator
@@ -124,12 +124,13 @@ const StartMining = ({ classes }) => (
           />
         </Col>
         <Col xs={12} md={3}>
-          <Typography className={classes.revDescr} type="quote" tagName="div">
+          <Typography type="quote" tagName="div">
             <FormattedMessage
               id="mining.revenue.calc.description"
               defaultMessage="You can use this tool to calculate how much you can make by mining WAVES, but be aware that results will vary each week."
             />
           </Typography>
+          <Margin bottom={4} />
         </Col>
       </Row>
     </ContentContainer>

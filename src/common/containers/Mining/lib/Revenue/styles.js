@@ -1,54 +1,58 @@
 export default theme => ({
+  title: {
+    fontSize: 16,
+    fontWeight: 500,
+  },
+  titleTwo: {
+    fontSize: 26,
+    fontWeight: 500,
+  },
+  text: {
+    fontSize: 23,
+  },
+  textDescription: {
+    fontSize: 16,
+  },
+  cards: {
+    display: 'flex',
+    flexDirection: 'column',
+    '& div': {
+      marginBottom: theme.spacing.unit * 2,
+    },
+  },
+  titleBox: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    boxSizing: 'border-box',
+  },
+  calculator: {
+    maxWidth: 650,
+    order:2
+  },
+  revDescr: {
+    marginTop: theme.spacing.unit * 2,
+  },
+  [theme.breakpoints.up('md')]: {
     title: {
-        fontSize: 16,
-        fontWeight: 400,
+      fontSize: 23,
+      fontWeight: 500,
     },
     titleTwo: {
-        fontSize: 26,
-        fontWeight: 400,
-    },
-    text: {
-        fontSize: 23,
-    },
-    textDescription: {
-        fontSize: 16,
-    },
-    cards: {
-        display: 'flex',
-        flexDirection: 'column',
-        '& div':{
-           marginBottom: theme.spacing.unit * 2,
-        }
-    },
-    titleBox: {
-        display: "flex",
-        flexWrap: "wrap",
-        boxSizing: "border-box",
+      fontSize: 32,
+      fontWeight: 500,
     },
     calculator: {
-        maxWidth: 650,
+      order:0
     },
-    revDescr: {
-        marginTop: theme.spacing.unit * 2,
+    text: {
+      fontSize: 32,
     },
-    [theme.breakpoints.up("md")]:{
-        title: {
-            fontSize: 23,
-            fontWeight: 400,
-        },
-        titleTwo: {
-            fontSize: 32,
-            fontWeight: 400,
-        },
-        text: {
-            fontSize: 32,
-        },
-        textDescription: {
-            fontSize: 17,
-        },
-        cards: {
-            display: 'flex',
-            flexDirection: 'row',
-        },
-    }
+    textDescription: {
+      fontSize: 17,
+    },
+    cards: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
+  },
 });
