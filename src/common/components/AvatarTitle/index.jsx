@@ -14,10 +14,6 @@ const styles = theme => ({
     width: theme.spacing.unit * 6,
     flex: [0, 0, `${theme.spacing.unit * 6}px`],
     marginRight: theme.spacing.unit * 2,
-    '& svg': {
-      width: '100%',
-      height: '100%',
-    }
   },
   [theme.breakpoints.up('md')]: {
     title: {
