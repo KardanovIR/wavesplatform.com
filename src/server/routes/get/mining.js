@@ -14,6 +14,6 @@ export default compose([
     script: 'mining',
     component: Mining,
     reducer,
-    description: 'Support the Waves Network',
+    description: 'Join the Waves Network',
   }),
 ]);

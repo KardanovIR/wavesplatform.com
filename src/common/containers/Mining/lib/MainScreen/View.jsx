@@ -14,7 +14,7 @@ const DevelopersMainScreen = ({ onWavesNodeClick }) => (
         title={
             <FormattedMessage
                 id="mining.title"
-                defaultMessage="Support the Waves Network"
+                defaultMessage="Join the Waves Network"
             />
         }
         text={

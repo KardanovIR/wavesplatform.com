@@ -13,25 +13,12 @@ import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 const styles = ({ spacing, breakpoints }) => ({
-  title: {
-    fontSize: 16,
-    fontWeight: 400,
-  },
-  descr: {
-    fontSize: 26,
-    lineHeight: 1.23,
-    fontWeight: 400,
-  },
   imageWrapper: {
     padding: [spacing.unit * 2, 0],
   },
   col: {
     display: 'flex',
     alignItems: 'left',
-  },
-  imageDescripion: {
-    fontSize: 16,
-    lineHeight: 1.44,
   },
   panel: {
     padding: 0,
@@ -47,17 +34,6 @@ const styles = ({ spacing, breakpoints }) => ({
     },
     imageWrapper: {
       width: '80%',
-    },
-    title: {
-      fontSize: 19,
-      fontWeight: 500,
-    },
-    descr: {
-      fontSize: 32,
-    },
-    imageDescripion: {
-      fontSize: 17,
-      lineHeight: 1.35,
     },
   },
   [breakpoints.up('lg')]: {
@@ -108,7 +84,7 @@ const Description = ({ classes }) => (
             lgOffset={1}
             className={[classes.col, classes.textCol]}
           >
-            <Typography type="body" className={classes.imageDescripion}>
+            <Typography type="body">
               <FormattedMessage
                 id="leasing.description.text"
                 defaultMessage="Custom tokens platform Waves has implemented balance leasing within its lite client, allowing every user to take part in securing the network and profit from transaction fees — without requiring any additional technical knowledge or the need to download the blockchain. Leased WAVES remain in the full control of the account holder, and can be transferred or exchanged at any point."

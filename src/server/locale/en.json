@@ -223,7 +223,7 @@
   "mining.startMining.text": "You don’t need any fancy hardware — just a simple hosted server and at least 1,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
   "mining.startMining.title": "Start mining",
   "mining.text": "Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance.",
-  "mining.title": "Support the Waves Network",
+  "mining.title": "Join the Waves Network",
   "mining.wavesNodesMap.countries": "countries",
   "mining.wavesNodesMap.nodes": "nodes",
   "mining.wavesNodesMap.text": "Nodes are a critical part of our ecosystem. Run a Waves node, help process transactions, ask the community to lease their WAVES to you and get paid for securing the network!",

@@ -14,6 +14,6 @@ export default compose([
     script: 'leasing',
     component: Leasing,
     reducer,
-    description: 'Support the Waves Network',
+    description: 'Join the Waves Network',
   }),
 ]);
