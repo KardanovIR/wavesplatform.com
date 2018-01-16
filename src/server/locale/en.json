@@ -263,7 +263,7 @@
   "product.interest.leasing.text": "Any sum of Waves can be leased to miners to generate interest. You can refund at any time in 2 clicks.",
   "product.interest.leasing.title": "Leasing",
   "product.interest.link": "Learn more",
-  "product.interest.mining.text": "Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 10,000 WAVES in your wallet.",
+  "product.interest.mining.text": "Waves uses a proof-of-stake algorithm. To start mining, all you need to do is to download and launch the node, and have 1,000 WAVES in your wallet.",
   "product.interest.mining.title": "Mining",
   "product.issuingTokens.description.p1": "Cryptographically secured blockchain tokens allow any business to issue its own internal digital currency on the blockchain to pay for goods and services within its project. The actual cost of tokens (Custom Application Tokens) is established using open market mechanisms.",
   "product.issuingTokens.description.p2": "The role of the token is determined by the nature of each individual project and can be integrated into it not only as an internal currency but also as a token for decentralised voting, as a rating system, or loyalty program.",
