@@ -77,10 +77,11 @@ const StartMining = () => (
 
     <Row>
       <Col xs={12} md={9}>
+      {/* Using string to bypass rc-slider's boundaries-based behaviour */}
         <Calculator
           minWaves={'1'}
           initialValue={1000}
-          IncorrectAmountText={IncorrectAmountText}
+          incorrectAmountTextRenderer={IncorrectAmountText}
         />
       </Col>
 
