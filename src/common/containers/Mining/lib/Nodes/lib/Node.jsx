@@ -27,7 +27,6 @@ const styles = ({ palette, spacing, breakpoints }) => ({
   },
   chartInner: {
     position: 'absolute',
-    // background: '#ED6B60',
     background: palette.blue[550],
     height: '100%',
     top: 0,
@@ -50,25 +49,13 @@ const styles = ({ palette, spacing, breakpoints }) => ({
   panel: {
     padding: 0,
   },
-  title: {
-    fontSize: 23,
-    fontWeight: 400,
-  },
-  title: {
-    fontSize: 16,
-    fontWeight: 400,
-  },
   [breakpoints.up('md')]: {
     copyToClipboard: {
       padding: [spacing.unit, spacing.unit * 2],
     },
     copyToClipboardText: {
       fontSize: '12px',
-    },
-    title: {
-      fontSize: 23,
-      fontWeight: 400,
-    },
+    }
   },
 });
 
@@ -82,7 +69,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
     />
 
     <Link href={href} target="_blank" textDecoration={false} icon={null}>
-      <Typography tagName="span" type="display1" className={classes.title}>
+      <Typography tagName="span" type="display1">
         {name}
       </Typography>
     </Link>

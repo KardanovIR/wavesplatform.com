@@ -2,16 +2,9 @@ const styles = theme => ({
   image: {
     display: 'block',
     maxWidth: '100%',
-    //margin: [theme.spacing.unit * 8, 0, 0],
     padding: theme.spacing.getSpacing(3, 0, 3, 0),
     margin: [0, 'auto'],
   },
-  /*image: {
-    display: 'block',
-    //maxWidth: '100%',
-    margin: [0, 'auto'],
-
-  },*/
   text: {
     lineHeight: 1.25,
     paddingRight: 0,
@@ -33,13 +26,12 @@ const styles = theme => ({
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
     maxWidth: 282,
     height: 374,
-    //padding: theme.spacing.getSpacing(4, 4),
   },
-    [theme.breakpoints.up('sm')]: {
-        svgrow: {
-            display: 'flex',
-        }
+  [theme.breakpoints.up('sm')]: {
+    svgrow: {
+      display: 'flex',
     },
+  },
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
       flexDirection: 'row',
@@ -56,9 +48,8 @@ const styles = theme => ({
     },
     title: {
       fontSize: 19,
-    }
+    },
   },
-
 });
 
 export default styles;

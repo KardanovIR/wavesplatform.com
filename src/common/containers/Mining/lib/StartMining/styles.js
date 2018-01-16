@@ -7,6 +7,9 @@ export default theme => ({
   },
   imageWrapper: {
     position: 'relative',
+    flexBasis: 100,
+    display: 'flex',
+    justifyContent: 'center',
   },
   arrow: {
     position: 'absolute',
@@ -21,7 +24,6 @@ export default theme => ({
   message: {
     maxWidth: 242,
     margin: [0, 'auto'],
-    // padding: [0, '20%']
     fontSize: 16,
     color: theme.palette.grayBlue[750],
     opacity: 0.8,
@@ -37,7 +39,7 @@ export default theme => ({
   },
   text: {
     fontSize: 23,
-    fontWeight: 500
+    fontWeight: 500,
   },
   [theme.breakpoints.down('tablet')]: {
     flexVers: {
@@ -47,18 +49,6 @@ export default theme => ({
     scroll: {
       display: 'flex',
     },
-    buttons: {
-      overflowX: 'auto',
-      overflowY: 'hidden',
-      '&::-webkit-scrollbar': {
-        width: 0,
-      },
-      '-ms-overflow-style': 'none',
-      overflow: '-moz-scrollbars-none',
-      '& a': {
-        marginRight: [theme.spacing.unit * 4.5],
-      },
-    },
     arrowRight: {
       transform: 'rotate(90deg)',
       width: '9%',
@@ -66,26 +56,14 @@ export default theme => ({
     colArrow: {
       textAlign: 'left',
     },
-    /*colBlock: {
-            flexDirection: 'row-reverse',
-            display: 'flex',
-        },*/
     message: {
       alignItems: 'center',
       flexDirection: 'column',
       display: 'flex',
       justifyContent: 'center',
     },
-    imageWrapper: {
-      '&>svg': {
-        maxWidth: 120,
-      },
-    },
-    flexBlocks: {
-      width: '100%',
-      '&>div': {
-        maxWidth: '95%',
-      },
+    image: {
+      maxWidth: 120,
     },
   },
   [theme.breakpoints.up('tablet')]: {
@@ -99,29 +77,13 @@ export default theme => ({
     LastBlock: {
       justifyContent: 'flex-start',
     },
-    imageWrapper: {
-      '&>svg': {
-        maxWidth: 120,
-      },
-    },
-    flexBlocks: {
-      display: 'flex',
-      flexDirection: 'row',
+    image: {
+      maxWidth: 120,
     },
     arrowRight: {
       position: 'relative',
       width: '60%',
       top: [theme.spacing.unit * 7],
-    },
-    buttons: {
-      '& a': {
-        marginRight: [theme.spacing.unit * 2.5],
-        boxSizing: 'border-box',
-        maxWidth: 160,
-        '& span': {
-          fontWeight: 400,
-        },
-      },
     },
   },
   [theme.breakpoints.up('md')]: {
@@ -132,29 +94,14 @@ export default theme => ({
     text: {
       fontSize: 32,
     },
-    flexBlocks: {
-      display: 'flex',
-      flexDirection: 'row',
+    image: {
+      maxWidth: 150,
     },
-    imageWrapper: {
-      '&>svg': {
-        maxWidth: 150,
-      },
-    },
+
     arrowRight: {
       position: 'relative',
       width: '60%',
       top: [theme.spacing.unit * 7],
-    },
-    buttons: {
-      '& a': {
-        marginRight: [theme.spacing.unit * 4.5],
-        boxSizing: 'border-box',
-        maxWidth: 250,
-        '& span': {
-          fontWeight: 400,
-        },
-      },
     },
   },
 });

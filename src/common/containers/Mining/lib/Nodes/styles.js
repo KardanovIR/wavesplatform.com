@@ -17,14 +17,6 @@ export default theme => ({
     fontWeight: 400,
   },
   [theme.breakpoints.up('md')]: {
-    flexer: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      '&>div:first-child': {
-        marginRight: theme.spacing.unit * 3,
-      },
-    },
     title: {
       fontSize: 23,
       fontWeight: 500,

@@ -2,10 +2,8 @@ import React from 'react';
 
 import Margin from 'src/common/components/Margin';
 import Panel from 'src/common/components/Panel';
-import Hidden from 'src/common/components/Hidden';
 import SectionTitleText from 'src/common/components/SectionTitleText';
 import Typography from 'src/common/components/Typography';
-import List from 'src/common/components/List';
 import { Row, Col } from 'src/common/components/Grid';
 import ContentContainer from 'src/common/components/ContentContainer';
 
@@ -26,7 +24,6 @@ const styles = ({ spacing, breakpoints }) => ({
   },
   imageWrapper: {
     padding: [spacing.unit * 2, 0],
-    //margin: [0, 'auto'],
   },
   col: {
     display: 'flex',
@@ -53,7 +50,7 @@ const styles = ({ spacing, breakpoints }) => ({
     },
     title: {
       fontSize: 19,
-      fontWeight: 500
+      fontWeight: 500,
     },
     descr: {
       fontSize: 32,
@@ -83,16 +80,16 @@ const Description = ({ classes }) => (
         titleType="display1"
         titleWeight={600}
         title={
-            <FormattedMessage
-              id="leasing.description.title"
-              defaultMessage="What is Waves leasing?"
-            />
+          <FormattedMessage
+            id="leasing.description.title"
+            defaultMessage="What is Waves leasing?"
+          />
         }
         text={
-            <FormattedMessage
-              id="leasing.description.subtitle"
-              defaultMessage="Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds."
-            />
+          <FormattedMessage
+            id="leasing.description.subtitle"
+            defaultMessage="Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds."
+          />
         }
       />
       <Margin bottom={4} />
@@ -111,7 +108,6 @@ const Description = ({ classes }) => (
             lgOffset={1}
             className={[classes.col, classes.textCol]}
           >
-           
             <Typography type="body" className={classes.imageDescripion}>
               <FormattedMessage
                 id="leasing.description.text"
@@ -122,17 +118,6 @@ const Description = ({ classes }) => (
           </Col>
         </Row>
       </Panel>
-
-      {/* <Row>
-                <Col xs={12} sm={6} lg={3}>
-                    <List items={[<FormattedMessage id="leasing.description.item1" defaultMessage="" />]} />
-                </Col>
-                <Col xs={12} sm={6} lg={3}>
-                    <List />
-                </Col>
-                <Col xs={12} sm={6} lg={3} />
-                <Col xs={12} sm={6} lg={3} />
-            </Row> */}
     </ContentContainer>
   </div>
 );

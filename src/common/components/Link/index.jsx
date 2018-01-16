@@ -1,12 +1,18 @@
 import React from 'react';
 
 import cn from 'classnames';
-
+import { cond } from 'ramda';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
 import Newtab from '!svg-react-loader!./img/newtab.svg';
 
+const getIconElement = ({ icon, targetBlank }) =>
+  cond([
+    [() => icon !== undefined, () => icon],
+    [() => Boolean(targetBlank), Newtab],
+    [() => true, () => null],
+  ])();
 const Link = ({
   classes,
   className: classNameProp,
@@ -38,13 +44,12 @@ const Link = ({
     classNameProp
   );
 
-  const iconElement =
-    icon !== undefined ? icon : targetBlank ? <Newtab /> : null;
+  const iconElement = getIconElement({ icon, targetBlank });
 
   const classNameText = cn(classes.text, {
     [classes.pseudo]: pseudo,
     [classes.noDecoration]: !textDecoration,
-    [classes.withPaddingForIcon]: !!iconElement
+    [classes.withPaddingForIcon]: !!iconElement,
   });
 
   return (

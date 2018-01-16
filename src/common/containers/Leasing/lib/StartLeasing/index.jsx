@@ -9,7 +9,7 @@ import ContentContainer from 'src/common/components/ContentContainer';
 import StartMiningArrow from '!svg-react-loader!./img/start_mining_arrow.svg';
 
 import Image1 from '!svg-react-loader!./img/start_leasing_download_client.svg';
-import Image2 from '!svg-react-loader!./img/start.svg';
+import Image2 from '!svg-react-loader!./img/start_leasing_deposit_waves.svg';
 import Image3 from '!svg-react-loader!./img/start_leasing_choose_node.svg';
 import Image4 from '!svg-react-loader!./img/start_leasing_done_leasing.svg';
 
@@ -78,8 +78,6 @@ const StartLeasing = ({ classes }) => {
               <div className={classes.flexRow}>
                 <div className={classes.imageWrapper}>
                   <Image1 />
-                  {/*<div className={classes.arrow} />
-                                         <div className={classes.arrowMobile} />*/}
                 </div>
                 <Typography
                   tagName="div"
@@ -98,8 +96,6 @@ const StartLeasing = ({ classes }) => {
               <div className={classes.flexRow}>
                 <div className={classes.imageWrapper}>
                   <Image2 />
-                  {/*<div className={classes.arrow} />
-                                        <div className={classes.arrowMobile} />*/}
                 </div>
                 <Typography
                   tagName="div"
@@ -120,8 +116,6 @@ const StartLeasing = ({ classes }) => {
               <div className={classes.flexRow}>
                 <div className={classes.imageWrapper}>
                   <Image3 />
-                  {/*  <div className={classes.arrow} />
-                                        <div className={classes.arrowMobile} />*/}
                 </div>
                 <Typography
                   tagName="div"
