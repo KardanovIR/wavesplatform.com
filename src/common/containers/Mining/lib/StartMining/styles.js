@@ -33,14 +33,6 @@ export default theme => ({
       display: 'block',
     },
   },
-  title: {
-    fontSize: 16,
-    fontWeight: 500,
-  },
-  text: {
-    fontSize: 23,
-    fontWeight: 500,
-  },
   [theme.breakpoints.down('tablet')]: {
     flexVers: {
       display: 'flex',
@@ -87,17 +79,9 @@ export default theme => ({
     },
   },
   [theme.breakpoints.up('md')]: {
-    title: {
-      fontSize: 23,
-      fontWeight: 500,
-    },
-    text: {
-      fontSize: 32,
-    },
     image: {
       maxWidth: 150,
     },
-
     arrowRight: {
       position: 'relative',
       width: '60%',
