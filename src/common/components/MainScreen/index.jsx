@@ -91,8 +91,8 @@ MainScreen.defaultProps = {
 };
 
 MainScreen.propTypes = {
-  title: PropTypes.node.isRequired,
-  text: PropTypes.node.isRequired,
+  title: PropTypes.node,
+  text: PropTypes.node,
   buttons: PropTypes.arrayOf(PropTypes.node),
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,

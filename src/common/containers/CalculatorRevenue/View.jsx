@@ -62,12 +62,12 @@ const styles = theme => ({
 
 class CalculatorRevenue extends Component {
   static propTypes = {
-    IncorrectAmountText: pt.func,
+    renderIncorrectAmountText: pt.func,
     onAmountChange: pt.func.isRequired,
     onAmountBlur: pt.func.isRequired,
   };
   static defaultProps = {
-    IncorrectAmountText: () => null,
+    renderIncorrectAmountText: () => null,
   };
   componentDidMount() {
     this.props.onAmountChange(this.props.initialValue);
@@ -94,7 +94,7 @@ class CalculatorRevenue extends Component {
       term,
       onAmountChange,
       onTermChange,
-      IncorrectAmountText,
+      incorrectAmountTextRenderer: IncorrectAmountText,
     } = this.props;
 
     return (

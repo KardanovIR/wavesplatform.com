@@ -11,7 +11,7 @@ const IconButton = ({ iconName, ...rest }) => (
   />
 );
 
-IconButton.PropTypes = {
+IconButton.propTypes = {
   iconName: PropTypes.string.isRequired,
 };
 

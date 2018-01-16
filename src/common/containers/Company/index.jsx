@@ -13,7 +13,7 @@ import ContentContainer from 'src/common/components/ContentContainer';
 
 // lib
 import Team from './lib/Team';
-// import FeedbackForm from './lib/FeedbackForm';
+import FeedbackForm from './lib/FeedbackForm';
 import Vacancies from './lib/Vacancies';
 import Whitepaper from './lib/Whitepaper';
 import AboutDescription from './lib/AboutDescription';

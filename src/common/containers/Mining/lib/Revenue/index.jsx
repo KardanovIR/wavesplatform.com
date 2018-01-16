@@ -118,9 +118,10 @@ const StartMining = ({ classes }) => (
       </Row>
       <Row>
         <Col className={classes.calculator} xs={12} md={9}>
+          {/* Using string to bypass rc-slider's boundaries-based behaviour */}
           <Calculator
             minWaves={'1000'}
-            IncorrectAmountText={IncorrectAmountText}
+            incorrectAmountTextRenderer={IncorrectAmountText}
           />
         </Col>
         <Col xs={12} md={3}>
