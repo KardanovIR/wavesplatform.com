@@ -27,7 +27,7 @@ class Select extends PureComponent {
 
   handleChange = e => {
     this.props.onChange(e);
-    this.props.onSelect && this.props.onSelect(e.target.value);
+    this.props.onSelect(e.target.value);
   };
 
   render() {
@@ -80,6 +80,7 @@ class Select extends PureComponent {
 
 Select.defaultProps = {
   onChange: () => {},
+  onSelect: () => {},
 };
 
 export default injectSheet(styles)(Select);
