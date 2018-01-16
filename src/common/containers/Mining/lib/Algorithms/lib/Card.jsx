@@ -7,7 +7,6 @@ import Panel from 'src/common/components/Panel';
 import Hidden from 'src/common/components/Hidden';
 import Divider from 'src/common/components/Divider';
 
-// import cn from 'classnames';
 
 const styles = theme => ({
   [theme.mixins.atMedia('md')]: {
