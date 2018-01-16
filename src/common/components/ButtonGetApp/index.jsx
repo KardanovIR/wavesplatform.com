@@ -51,7 +51,7 @@ const ButtonGetApp = ({ classes, className, type, ...rest }) => (
   </Button>
 );
 
-ButtonGetApp.PropTypes = {
+ButtonGetApp.propTypes = {
   type: PropTypes.oneOf(['app-store', 'google-play']).isRequired,
 };
 

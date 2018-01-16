@@ -80,6 +80,7 @@ class Select extends PureComponent {
 
 Select.defaultProps = {
   onChange: () => {},
+  onSelect: () => {},
 };
 
 export default injectSheet(styles)(Select);
