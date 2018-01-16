@@ -220,7 +220,7 @@
   "mining.startMining.download.title": "1. Download the Waves Node",
   "mining.startMining.install.title": "2. Install Node",
   "mining.startMining.leasingLink": "lease",
-  "mining.startMining.text": "You don’t need any fancy hardware — just a simple hosted server and at least 10,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
+  "mining.startMining.text": "You don’t need any fancy hardware — just a simple hosted server and at least 1,000 WAVES. You can also run a public mining pool and have users {leasingLink} their funds to you, thereby increasing your profits and sharing them with the community.",
   "mining.startMining.title": "Start mining",
   "mining.text": "Install your node and help us to secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance.",
   "mining.title": "Support the Waves Network",
