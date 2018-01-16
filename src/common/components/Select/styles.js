@@ -29,8 +29,9 @@ const styles = theme => ({
 
     borderRadius: theme.spacing.radius,
 
-    backgroundColor: theme.palette.grayBlue[500],
-    color: theme.palette.grayBlue[200],
+    backgroundColor: theme.palette.gray[1000],
+    color: theme.palette.gray[0],
+    border: `1px solid ${theme.palette.gray[0]}`,
 
     boxSizing: 'border-box',
     padding: [0, theme.spacing.unit * 3, 0, theme.spacing.unit * 1.5],
@@ -49,7 +50,7 @@ const styles = theme => ({
     pointerEvents: 'none',
   },
   invalid: {
-    boxShadow: `inset 0 0 0 1px ${theme.palette.danger[500]}`,
+    border: `1px solid ${theme.palette.danger[500]}`,
   },
 });
 

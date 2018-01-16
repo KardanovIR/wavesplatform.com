@@ -2,16 +2,9 @@ const styles = theme => ({
   image: {
     display: 'block',
     maxWidth: '100%',
-    //margin: [theme.spacing.unit * 8, 0, 0],
     padding: theme.spacing.getSpacing(3, 0, 3, 0),
     margin: [0, 'auto'],
   },
-  /*image: {
-    display: 'block',
-    //maxWidth: '100%',
-    margin: [0, 'auto'],
-
-  },*/
   text: {
     lineHeight: 1.25,
     paddingRight: 0,
@@ -29,7 +22,10 @@ const styles = theme => ({
     boxShadow: '0 3px 20px 1px rgba(39, 47, 89, .09)',
     flexDirection: 'row',
     alignItems: 'center',
+
     margin: theme.spacing.getSpacing(3, 1, 3, 1),
+    maxWidth: 282,
+    height: 374,
   },
   [theme.breakpoints.up('sm')]: {
     svgrow: {
@@ -39,6 +35,8 @@ const styles = theme => ({
   [theme.breakpoints.up('tablet')]: {
     twoblocks: {
       flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
     },
     svgrow: {
       margin: 0,

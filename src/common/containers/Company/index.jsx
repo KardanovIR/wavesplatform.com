@@ -32,7 +32,7 @@ import teamMembers from './team';
 import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ classes }) => (
-  <Layout activeLink="company">
+  <Layout activeLink="company" darkFooter>
     <MainScreenBackground
       type="image"
       src={require('./img/Artboard.jpg')}

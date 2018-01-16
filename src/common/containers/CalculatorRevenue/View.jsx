@@ -23,7 +23,7 @@ import injectSheet from 'react-jss';
 
 const styles = theme => ({
   buttonGroup: {
-    width: '100%',
+    width: '90%',
   },
   divider: {},
 
@@ -37,13 +37,16 @@ const styles = theme => ({
   },
   sliderWrapper: {
     display: 'none',
-    flex: 1,
+    flex: [0, 0, '70%'],
     paddingRight: theme.spacing.unit * 3,
   },
 
   input: {
     display: 'block',
     flex: [0, 0, '100%'],
+    borderColor: theme.palette.gray[300],
+    color: theme.palette.gray[1000],
+    fontWeight: 400,
   },
 
   [theme.breakpoints.up('md')]: {
@@ -51,7 +54,8 @@ const styles = theme => ({
       display: 'block',
     },
     input: {
-      flex: [0, 0, '120px'],
+      flex: 0,
+      maxWidth: '25%',
     },
   },
 });

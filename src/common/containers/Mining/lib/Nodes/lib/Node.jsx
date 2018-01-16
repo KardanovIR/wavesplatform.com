@@ -21,14 +21,13 @@ const styles = ({ palette, spacing, breakpoints }) => ({
   },
   chartOuter: {
     width: '100%',
-    height: spacing.unit * 10,
+    height: spacing.unit * 6,
     position: 'relative',
     background: palette.gray[100],
   },
   chartInner: {
     position: 'absolute',
-    // background: '#ED6B60',
-    background: palette.orange[300],
+    background: palette.blue[550],
     height: '100%',
     top: 0,
     left: 0,
@@ -43,8 +42,12 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     background: palette.gray[50],
   },
   copyToClipboardText: {
-    color: palette.primary[700],
-    fontSize: '10px',
+    color: palette.gray[600],
+    fontSize: 12,
+    wordWrap: 'break-word',
+  },
+  panel: {
+    padding: 0,
   },
   [breakpoints.up('md')]: {
     copyToClipboard: {
@@ -52,12 +55,12 @@ const styles = ({ palette, spacing, breakpoints }) => ({
     },
     copyToClipboardText: {
       fontSize: '12px',
-    },
+    }
   },
 });
 
 const Node = ({ name, balance, share, classes, address, href }) => (
-  <Panel>
+  <Panel className={classes.panel}>
     <Link
       href={href}
       target="_blank"
@@ -79,7 +82,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
       <Row>
         <Col xs={4}>
           <Typography type="body">
-            <FormattedMessage id="balance" />
+            <FormattedMessage id="balance" defaultMessage="Balance" />
           </Typography>
         </Col>
 
@@ -105,7 +108,7 @@ const Node = ({ name, balance, share, classes, address, href }) => (
       <Row>
         <Col xs={4}>
           <Typography type="body">
-            <FormattedMessage id="mining.nodes.share" />
+            <FormattedMessage id="mining.nodes.share" defaultMessage="Share" />
           </Typography>
         </Col>
 
@@ -122,7 +125,10 @@ const Node = ({ name, balance, share, classes, address, href }) => (
     </Margin>
 
     <Typography type="body">
-      <FormattedMessage id="mining.nodes.copyAddress" />
+      <FormattedMessage
+        id="mining.nodes.copyAddress"
+        defaultMessage="Copy leasing address"
+      />
     </Typography>
 
     <div className={classes.copyToClipboard}>

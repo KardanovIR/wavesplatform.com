@@ -7,14 +7,17 @@ import Panel from 'src/common/components/Panel';
 import Hidden from 'src/common/components/Hidden';
 import Divider from 'src/common/components/Divider';
 
-// import cn from 'classnames';
 
 const styles = theme => ({
-  [theme.mixins.atMedia('sm')]: {
+  [theme.mixins.atMedia('md')]: {
     wrapper: {
       height: '100%',
     },
   },
+  wrapper: {
+    padding: 0,
+  },
+  [theme.breakpoints.up('md')]: {},
 });
 
 const Card = ({ classes, imageMobile, image, text, title }) => {

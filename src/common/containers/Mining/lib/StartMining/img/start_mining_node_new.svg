@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100%" height="100%" viewBox="0 0 130 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mining" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-281.000000, -3677.000000)">
+        <g id="1" transform="translate(281.000000, 3677.000000)">
+            <polygon id="Fill-22" fill="#BABFC8" points="0 27 110 27 110 0 0 0"></polygon>
+            <polygon id="Fill-24" fill="#E0E1E6" points="0 56 110 56 110 29 0 29"></polygon>
+            <polygon id="Fill-25" fill="#E0E1E6" points="0 86 110 86 110 59 0 59"></polygon>
+            <polygon id="Fill-27" fill="#0053FE" points="110 106 90 86.5 110 67 130 86.5"></polygon>
+            <path d="M115.200386,84.6666667 L114.868362,84.6666667 C114.085918,82.5322271 111.980527,81 109.5,81 C107.01883,81 104.914725,82.5322271 104.130994,84.6666667 L103.799614,84.6666667 C101.7013,84.6666667 100,86.3081612 100,88.3327125 C100,90.3578846 101.7013,92 103.799614,92 L115.200386,92 C117.299343,92 119,90.3578846 119,88.3327125 C119,86.3081612 117.299343,84.6666667 115.200386,84.6666667 Z" id="Stroke-45" stroke="#FFFFFF" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>

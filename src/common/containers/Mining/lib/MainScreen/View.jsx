@@ -9,22 +9,36 @@ import IconButton from 'src/common/components/Button/Icon';
 import { FormattedMessage } from 'react-intl';
 
 const DevelopersMainScreen = ({ onWavesNodeClick }) => (
-  <MainScreen
-    title={<FormattedMessage id="mining.title" />}
-    text={<FormattedMessage id="mining.text" />}
-    buttons={[
-      <IconButton
-        onClick={onWavesNodeClick}
-        key="main_cta_button"
-        href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
-        target="_blank"
-        iconName="github"
-        secondary
-      >
-        <FormattedMessage id="developers.cta.wavesNode" />
-      </IconButton>,
-    ]}
-  />
+    <MainScreen
+        inverted
+        title={
+            <FormattedMessage
+                id="mining.title"
+                defaultMessage="Join the Waves Network"
+            />
+        }
+        text={
+            <FormattedMessage
+                id="mining.text"
+                defaultMessage="Install your node and help us secure the network and power the Waves blockchain. You don’t need any fancy hardware and can earn up to 5% yearly on your WAVES balance."
+            />
+        }
+        buttons={[
+            <IconButton
+                onClick={onWavesNodeClick}
+                key="main_cta_button"
+                href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+                target="_blank"
+                iconName="github"
+                secondary
+            >
+                <FormattedMessage
+                    id="developers.cta.wavesNode"
+                    defaultMessage="Waves Node"
+                />
+            </IconButton>,
+        ]}
+    />
 );
 
 export default DevelopersMainScreen;

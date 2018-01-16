@@ -290,7 +290,7 @@
   "mining.startMining.install.title": "2. 노드 설치",
   "mining.startMining.leasingLink": "리스",
   "mining.startMining.text":
-    "복잡한 하드웨어가 필요 없이 - 단순하게 호스트된 서버와 최소 10,000 WAVES만 필요합니다. 공개적인 채굴 툴을 실행하고 다른 사용자들이 귀하에게 자산을 {leasingLink} 함으로 수익을 창출하고 커뮤니티와 공유할 수 있습니다.",
+    "복잡한 하드웨어가 필요 없이 - 단순하게 호스트된 서버와 최소 1,000 WAVES만 필요합니다. 공개적인 채굴 툴을 실행하고 다른 사용자들이 귀하에게 자산을 {leasingLink} 함으로 수익을 창출하고 커뮤니티와 공유할 수 있습니다.",
   "mining.startMining.title": "채굴 시작",
   "mining.text":
     "노드를 설치하고 네트워크의 안전과 Waves 블록체인을 운영하는 데에 우리에게 도와주십시오. 복잡한 하드웨어가 필요 없고 WAVES 잔액의 연 5%까지 받는 것이 가능합니다. ",
@@ -349,7 +349,7 @@
   "product.interest.leasing.title": "리스",
   "product.interest.link": "자세히 알아보기",
   "product.interest.mining.text":
-    "Waves는 지분증명 (PoS) 알고리즘을 사용하고 있습니다. 채굴을 시작하기 위해 노드를 다운로드 받아 실행하는 것과 10,000 WAVES를 지갑에 있는 것만 필요합니다. ",
+    "Waves는 지분증명 (PoS) 알고리즘을 사용하고 있습니다. 채굴을 시작하기 위해 노드를 다운로드 받아 실행하는 것과 1,000 WAVES를 지갑에 있는 것만 필요합니다. ",
   "product.interest.mining.title": "채굴",
   "product.issuingTokens.description.p1":
     "암호화적으로 안전한 블록체인 토큰들은 각종 산업에게 프로젝트 내에 상품과 서비스 결제를 위한 내부용 디지털 통화를 발행하는 것을 가능하게 합니다. 토큰의 실제 가격은 (특수 애플리케이션 토큰) 오픈 마켓 매커니즘을 통해 확립됩니다. ",

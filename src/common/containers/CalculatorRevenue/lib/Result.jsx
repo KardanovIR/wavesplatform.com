@@ -15,7 +15,7 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit,
   },
   currency: {
-    color: theme.palette.primary[700],
+    color: theme.palette.gray[1000],
   },
   textBlock: {
     composes: '$inlineBlock',
@@ -32,13 +32,16 @@ const Result = ({ classes, total, waves, mrt }) => (
     <div className={classes.inlineBlock}>
       <div className={classes.resultTitle}>
         <Typography type="body">
-          <FormattedMessage id="calcRevenue.interest" />
+          <FormattedMessage
+            id="calcRevenue.interest"
+            defaultMessage="Interest"
+          />
         </Typography>
       </div>
 
       <div className={classes.inlineBlock}>
         <div className={classes.textBlock}>
-          <Typography type="numeral" tagName="span">
+          <Typography type="display2" tagName="span">
             <FormattedNumber value={waves} maximumFractionDigits={0} />
           </Typography>{' '}
           <Typography type="body" tagName="span" className={classes.currency}>
@@ -51,7 +54,7 @@ const Result = ({ classes, total, waves, mrt }) => (
           </Margin>
         </div>
         <div className={classes.textBlock}>
-          <Typography type="numeral" tagName="span">
+          <Typography type="display2" tagName="span">
             <FormattedNumber value={mrt} maximumFractionDigits={0} />
           </Typography>{' '}
           <Typography type="body" tagName="span" className={classes.currency}>
@@ -70,11 +73,11 @@ const Result = ({ classes, total, waves, mrt }) => (
     <div className={classes.inlineBlock}>
       <div className={classes.resultTitle}>
         <Typography type="body">
-          <FormattedMessage id="calcRevenue.total" />
+          <FormattedMessage id="calcRevenue.total" defaultMessage="Total" />
         </Typography>
       </div>
       <div>
-        <Typography type="numeral" tagName="span">
+        <Typography type="display2" tagName="span">
           <FormattedNumber value={total} maximumFractionDigits={1} />
         </Typography>{' '}
         <Typography type="body" tagName="span" className={classes.currency}>

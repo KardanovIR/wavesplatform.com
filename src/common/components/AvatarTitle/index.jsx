@@ -6,12 +6,25 @@ import Typography from 'src/common/components/Typography';
 const styles = theme => ({
   title: {
     display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
   },
   icon: {
-    height: theme.spacing.unit * 5,
-    flex: [0, 0, `${theme.spacing.unit * 5}px`],
+    height: theme.spacing.unit * 6,
+    width: theme.spacing.unit * 6,
+    flex: [0, 0, `${theme.spacing.unit * 6}px`],
     marginRight: theme.spacing.unit * 2,
+  },
+  [theme.breakpoints.up('md')]: {
+    title: {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    },
+    icon: {
+      height: theme.spacing.unit * 11,
+      width: theme.spacing.unit * 11,
+      marginBottom: theme.spacing.unit * 4,
+    },
   },
 });
 
@@ -19,7 +32,9 @@ const AvatarTitle = ({ classes, avatar, title, titleType }) => {
   return (
     <div className={classes.title}>
       <div className={classes.icon}>{avatar}</div>
-      <Typography type={titleType}>{title}</Typography>
+      <Typography className={classes.titleText} type={titleType}>
+        {title}
+      </Typography>
     </div>
   );
 };

@@ -6,7 +6,7 @@ export default theme => ({
     background: theme.palette.gray[50],
   },
   bgDark: {
-    background: '#233556',
+    background: '#000',
   },
   bgBranding: {
     backgroundImage: `url(${img1x})`,

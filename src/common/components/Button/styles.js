@@ -51,7 +51,13 @@ const styles = theme => ({
     transformOrigin: 'center bottom',
     color: '#fff',
   },
-
+  white: {
+    backgroundColor: theme.palette.gray[0],
+    border: 0,
+    transformOrigin: 'center bottom',
+    color: theme.palette.gray[700],
+    boxShadow: `0 2px 2px ${theme.palette.gray[300]}`,
+  },
   bordered: {
     border: `1px solid ${theme.palette.opaque(theme.palette.gray[1000], 0.9)}`,
     backgroundColor: 'transparent',
