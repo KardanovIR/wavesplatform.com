@@ -49,14 +49,15 @@ export const render = function({
     const store = createStore(reducer, ctx.state.initialState);
     // render component markup and styles
     const sheets = new SheetsRegistry();
+    const localeToUse = ctx.locale || 'en';
     const content = renderToStaticMarkup(
       <JssProvider registry={sheets}>
         <CookiesProvider cookies={ctx.request.universalCookies}>
           <Provider store={store}>
             <IntlProvider
-              locale={ctx.locale}
+              locale={localeToUse}
               defaultLocale="en"
-              messages={locale[ctx.locale]}
+              messages={locale[localeToUse]}
             >
               {RenderedComponent}
             </IntlProvider>
@@ -64,6 +65,7 @@ export const render = function({
         </CookiesProvider>
       </JssProvider>
     );
+
     ctx.accessLog.renderTime = new Date() - renderStart;
 
     // fonts
@@ -87,8 +89,7 @@ export const render = function({
         scriptName.indexOf('.js') > -1
           ? scriptName
           : `/static/${scriptName}.js`;
-		}
-		
+    }
 
     const html = renderToStaticMarkup(
       <Html
