@@ -49,15 +49,14 @@ export const render = function({
     const store = createStore(reducer, ctx.state.initialState);
     // render component markup and styles
     const sheets = new SheetsRegistry();
-    const localeToUse = ctx.locale || 'en';
     const content = renderToStaticMarkup(
       <JssProvider registry={sheets}>
         <CookiesProvider cookies={ctx.request.universalCookies}>
           <Provider store={store}>
             <IntlProvider
-              locale={localeToUse}
+              locale={ctx.locale}
               defaultLocale="en"
-              messages={locale[localeToUse]}
+              messages={locale[ctx.locale]}
             >
               {RenderedComponent}
             </IntlProvider>
