@@ -80,6 +80,8 @@
   "feedbackForm.optionJobs": "Jobs",
   "feedbackForm.optionMedia": "Media",
   "feedbackForm.optionPartnership": "Partnership",
+  "feedbackForm.optionIcoBusiness": "ICO. Business Questions",
+  "feedbackForm.optionIcoTechnical": "ICO. Technical Questions",
   "feedbackForm.placeholderEmail": "Email address",
   "feedbackForm.placeholderMessage": "Message",
   "form.anotherEmail": "Another email",
