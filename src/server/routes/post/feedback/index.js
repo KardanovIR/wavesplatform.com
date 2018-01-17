@@ -13,6 +13,8 @@ const createMailOptions = data => {
     'EMAIL_EVENTS',
     'EMAIL_MEDIA',
     'EMAIL_JOBS',
+    'EMAIL_ICO_BUSINESS',
+    'EMAIL_ICO_TECHNICAL',
   ]);
 
   const addressMap = {
@@ -20,6 +22,8 @@ const createMailOptions = data => {
     events: process.env.EMAIL_EVENTS,
     media: process.env.EMAIL_MEDIA,
     jobs: process.env.EMAIL_JOBS,
+    icoBusiness: process.env.EMAIL_ICO_BUSINESS,
+    icoTechnical: process.env.EMAIL_ICO_TECHNICAL,
   };
 
   return {

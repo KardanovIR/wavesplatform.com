@@ -29,4 +29,12 @@ export default defineMessages({
     id: 'feedbackForm.optionJobs',
     defaultMessage: 'Jobs',
   },
+  icoBusiness: {
+    id: 'feedbackForm.optionIcoBusiness',
+    defaultMessage: 'ICO. Business Questions',
+  },
+  icoTechnical: {
+    id: 'feedbackForm.optionIcoTechnical',
+    defaultMessage: 'ICO. Technical Questions',
+  },
 });

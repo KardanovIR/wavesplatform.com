@@ -10,7 +10,7 @@ import Newtab from '!svg-react-loader!./img/newtab.svg';
 const getIconElement = ({ icon, targetBlank }) =>
   cond([
     [() => icon !== undefined, () => icon],
-    [() => Boolean(targetBlank), Newtab],
+    [() => Boolean(targetBlank), () => <Newtab />],
     [() => true, () => null],
   ])();
 const Link = ({
