@@ -64,6 +64,7 @@ export const render = function({
         </CookiesProvider>
       </JssProvider>
     );
+
     ctx.accessLog.renderTime = new Date() - renderStart;
 
     // fonts
@@ -87,8 +88,7 @@ export const render = function({
         scriptName.indexOf('.js') > -1
           ? scriptName
           : `/static/${scriptName}.js`;
-		}
-		
+    }
 
     const html = renderToStaticMarkup(
       <Html

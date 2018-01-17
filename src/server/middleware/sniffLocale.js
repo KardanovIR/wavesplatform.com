@@ -24,7 +24,8 @@ const sniffLocale = async (ctx, next) => {
 
     ctx.locale = sniffedLocale;
   }
-
+  //@hack if sniffer screws
+  ctx.locale = ctx.locale || 'en';
   ctx.availableLocales = supported;
 
   await next();
