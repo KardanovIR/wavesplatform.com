@@ -24,7 +24,7 @@ const isInverted = link => link === undefined || INVERTED_SKIN_LINKS[link];
 
 const Nav = ({ classes, desktopLinks, mobileLinks, activeLink }) => {
   return (
-    <nav className={cx(classes.wrapper, { [classes.wrapperAnimated]: activeLink === 'home' })}>
+    <nav className={classes.wrapper}>
       <Wrapper>
         <ContentContainer>
           <div className={classes.logo}>

@@ -47,7 +47,7 @@ const PageLayout = ({ initialState, classes }) => (
       videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
     >
       <ContentContainer>
-        <MainScreen animated />
+        <MainScreen />
       </ContentContainer>
     </BackgroundMainScreen>
 

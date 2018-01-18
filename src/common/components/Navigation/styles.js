@@ -13,10 +13,6 @@ export default theme => ({
       clear: 'both',
     },
   },
-  wrapperAnimated: {
-    animation: 'show-0 .65s ease 4.5s forwards',
-    opacity: 0,
-  },
   logo: {
     float: 'left',
     height: 40,
