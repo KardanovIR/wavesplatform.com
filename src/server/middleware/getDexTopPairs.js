@@ -22,6 +22,4 @@ export default async (ctx, next) => {
     duration: `${ms}ms`,
   });
   ctx.accessLog.APIResponseTime = (ctx.accessLog.APIResponseTime || 0) + ms;
-
-  await next();
 };

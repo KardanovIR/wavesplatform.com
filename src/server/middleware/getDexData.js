@@ -16,6 +16,4 @@ export default async (ctx, next) => {
   const ms = Date.now() - start;
   ctx.logger.info('API_request', { target: 'dex_data', duration: `${ms}ms` });
   ctx.accessLog.APIResponseTime = (ctx.accessLog.APIResponseTime || 0) + ms;
-
-  await next();
 };
