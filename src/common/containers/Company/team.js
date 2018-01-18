@@ -65,7 +65,14 @@ export default [
     imageUrl1x: `url(${Maxim_Pertsovskiy1x})`,
     imageUrl2x: `url(${Maxim_Pertsovskiy2x})`,
     social: [
-      // @todo add
+      {
+        type: 'facebook',
+        url: 'https://www.facebook.com/mpertsovskiy',
+      },
+      {
+        type: 'email',
+        url: 'mailto:max@wavesplatform.com',
+      },
     ],
   },
   {
@@ -98,12 +105,7 @@ export default [
     position: <FormattedMessage id="teamMembers.5.position" />,
     imageUrl1x: `url(${Alexey_Kofman1x})`,
     imageUrl2x: `url(${Alexey_Kofman2x})`,
-    social: [
-      {
-        type: 'email',
-        url: 'mailto:kofman@wavesplatform.com',
-      },
-    ],
+    social: [],
   },
   {
     fullName: <FormattedMessage id="teamMembers.6.fullName" />,
