@@ -26,8 +26,8 @@ const styles = theme => ({
 
   title: {
     lineHeight: 1.05,
-    opacity: ({ animated }) => (animated ? 0 : 1),
-    animation: ({ animated }) => animated && 'show-0 .65s ease 3s forwards',
+    opacity: 0,
+    animation: 'show-0 .65s ease .5s forwards',
   },
 
   imageColMargin: {
@@ -39,15 +39,15 @@ const styles = theme => ({
     fontSize: 16,
     lineHeight: 2,
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
-    opacity: ({ animated }) => (animated ? 0 : 1),
-    animation: ({ animated }) => animated && 'show-0 .65s ease 4.5s forwards',
+    opacity: 0,
+    animation: 'show-0 .65s ease 1s forwards',
   },
 
   buttonsContainer: {
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
-    opacity: ({ animated }) => (animated ? 0 : 1),
-    animation: ({ animated }) => animated && 'show-0 .65s ease 4.5s forwards',
+    opacity: 0,
+    animation: 'show-0 .65s ease 1s forwards',
     justifyContent: 'center',
   },
 
