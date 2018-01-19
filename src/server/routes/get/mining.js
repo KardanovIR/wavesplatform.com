@@ -1,8 +1,10 @@
 import compose from 'koa-compose';
 
-import getWavesTopNodes from 'src/server/middleware/getWavesTopNodes';
-import getMrtWavesPrice from 'src/server/middleware/getMrtWavesPrice';
-import runApiRequests from 'src/server/middleware/runApiRequests';
+import runApiRequests, {
+  getWavesTopNodes,
+  getMrtWavesPrice,
+} from 'src/server/middleware/api';
+
 import { render } from 'src/server/middleware/render';
 
 import Mining from 'src/common/containers/Mining';
