@@ -20,6 +20,7 @@
   "author": "Dmitry Shuranov <dvshur@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "array.from": "^1.0.3",
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
     "cross-env": "^5.1.1",
