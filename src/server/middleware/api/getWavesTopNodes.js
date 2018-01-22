@@ -17,4 +17,7 @@ const getWavesTopNodes = async (ctx, next) => {
 
   await next();
 };
-export default withTimer('waves_top_nodes', getWavesTopNodes);
+export default withTimer({
+  target: 'waves_top_nodes',
+  middleware: getWavesTopNodes,
+});

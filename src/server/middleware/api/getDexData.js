@@ -14,4 +14,4 @@ const getDexData = async (ctx, next) => {
   await next();
 };
 
-export default withTimer('dex_data', getDexData);
+export default withTimer({ target: 'dex_data', middleware: getDexData });

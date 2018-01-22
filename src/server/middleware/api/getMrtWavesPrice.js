@@ -23,4 +23,7 @@ const getMrtWavesPrice = async (ctx, next) => {
   await next();
 };
 
-export default withTimer('mrt_waves_price', getMrtWavesPrice);
+export default withTimer({
+  target: 'mrt_waves_price',
+  middleware: getMrtWavesPrice,
+});
