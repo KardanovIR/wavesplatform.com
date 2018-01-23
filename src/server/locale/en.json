@@ -162,7 +162,7 @@
   "home.wallet.wallet": "Create a multiple-currency wallet",
   "home.wavesClient.text": "The current version of the Waves client is a wallet, decentralised exchange (DEX), and a tool to release tokens.",
   "home.wavesClient.title": "The Waves Client",
-  "howToWallet.step1": "First, create an account",
+  "howToWallet.step1": "First, create an account.",
   "howToWallet.step2": "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
   "howToWallet.step3": "You can convert them to Waves tokens using the decentralized exchange, which you can find on the Waves client.",
   "leasing.description.subtitle": "Leased proof-of-stake (LPoS) allows Waves holders to profit by using their balances to secure the network — whilst retaining full control of their funds.",
