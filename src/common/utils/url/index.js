@@ -46,9 +46,12 @@ const URL = {
   leasing: {
     pathname: '/leasing',
   },
-  'online-client': {
+  'online-client(beta)': {
     subdomain: 'beta',
     pathname: '/',
+  },
+  'online-client': {
+    pathname: 'https://waveswallet.io',
   },
   blog: {
     subdomain: 'blog',

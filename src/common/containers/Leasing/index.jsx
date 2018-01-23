@@ -19,59 +19,58 @@ import Nodes from './lib/Nodes';
 
 import injectSheet from 'react-jss';
 const styles = theme => ({
-    bgRevenue: {
-        background: '#d6e0fc',
-    },
-    bgNodes: {
-        background: theme.palette.gray[50],
-    },
+  bgRevenue: {
+    background: '#d6e0fc',
+  },
+  bgNodes: {
+    background: theme.palette.gray[50],
+  },
 });
 
 const PageLayout = ({ classes }) => (
-    <Layout activeLink="leasing">
-        <MainScreenBackground
-            type="image"
-            src={require('./img/w_black_d_1.jpg')}
-            srcSet={`${require('./img/w_black_d_1.jpg')} 1x, ${require('./img/w_black_d_2.jpg')} 2x`}
-            videoSrc={fileUrl('video/black3_desktop.mp4')}
-            videoSrcMobile={fileUrl('video/black3_mobile.mp4')}
-            videoFirstFrame={require('./img/w_black_d_1.jpg')}
-            videoFirstFrameMobile={require('./img/w_black_m_1.jpg')}
+  <Layout activeLink="leasing">
+    <MainScreenBackground
+      type="image"
+      src={require('./img/w_black_d_1.jpg')}
+      srcSet={`${require('./img/w_black_d_1.jpg')} 1x, ${require('./img/w_black_d_2.jpg')} 2x`}
+      videoSrc={fileUrl('video/black3_desktop.mp4')}
+      videoSrcMobile={fileUrl('video/black3_mobile.mp4')}
+      videoFirstFrame={require('./img/w_black_d_1.jpg')}
+      videoFirstFrameMobile={require('./img/w_black_m_1.jpg')}
+    >
+      <MainScreen inverted />
+    </MainScreenBackground>
 
-        >
-            <MainScreen inverted />
-        </MainScreenBackground>
+    <Section top={3} bottom={4}>
+      <Description />
+    </Section>
 
-        <Section top={3} bottom={4}>
-            <Description />
-        </Section>
+    <Background className={classes.bgRevenue} skewed>
+      <Section size={4}>
+        <Revenue />
+      </Section>
+    </Background>
 
-        <Background className={classes.bgRevenue} skewed>
-            <Section size={4}>
-                <Revenue />
-            </Section>
-        </Background>
+    <Section size={4}>
+      <StartLeasing />
+    </Section>
 
-        <Section size={4}>
-            <StartLeasing />
-        </Section>
-
-        <Background className={classes.bgNodes} skewed>
-            <Section size={4}>
-                <AnchorScroll anchor="nodes">
-                    <Nodes />
-                </AnchorScroll>
-            </Section>
-        </Background>
-    </Layout>
+    <Background className={classes.bgNodes} skewed>
+      <Section size={4}>
+        <AnchorScroll anchor="nodes">
+          <Nodes />
+        </AnchorScroll>
+      </Section>
+    </Background>
+  </Layout>
 );
 
 const Page = injectSheet(styles)(PageLayout);
 
 const App = () => (
-    <ThemeProvider>
-        <Page />
-    </ThemeProvider>
+  <ThemeProvider>
+    <Page />
+  </ThemeProvider>
 );
 
 export default App;

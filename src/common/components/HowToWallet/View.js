@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Link from 'src/common/components/Link';
 import IconProduct from 'src/common/components/IconProduct';
+import url from 'src/common/utils/url';
 
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
@@ -32,11 +33,11 @@ const HowToWallet = ({
                 }
                 key="main_cta_button"
                 target="_blank"
-                href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                href={url('online-client')}
                 textDecoration={false}
                 icon={null}
               >
-                <FormattedMessage id="cta.getClient" />
+                <FormattedMessage id="cta.onlineClientOld" />
               </Link>
             </div>
           ),
