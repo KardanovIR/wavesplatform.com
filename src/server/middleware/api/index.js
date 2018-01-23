@@ -3,10 +3,14 @@ import { withTimer } from 'src/server/middleware/withTimer';
 const emptyNext = () => Promise.resolve();
 
 export default apiRequests =>
-  withTimer('all_requests', async (ctx, next) => {
-    const requestPromises = apiRequests.map(r => r(ctx, emptyNext));
-    await Promise.all(requestPromises);
-    await next();
+  withTimer({
+    target: 'all_requests',
+    middleware: async (ctx, next) => {
+      const requestPromises = apiRequests.map(r => r(ctx, emptyNext));
+      await Promise.all(requestPromises);
+      await next();
+    },
+    addAccessLog: true,
   });
 
 export { default as getDexData } from './getDexData';

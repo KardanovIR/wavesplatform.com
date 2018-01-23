@@ -17,4 +17,7 @@ const getDexTopPairs = async (ctx, next) => {
   await next();
 };
 
-export default withTimer('dex_top_pairs', getDexTopPairs);
+export default withTimer({
+  target: 'dex_top_pairs',
+  middleware: getDexTopPairs,
+});
