@@ -64,11 +64,11 @@ const StartLeasing = ({ classes }) => {
             <Button
               secondary
               target="_blank"
-              href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+              href={url('online-client')}
             >
               <FormattedMessage
                 id="cta.getClient"
-                defaultMessage="Get Client"
+                defaultMessage="Online client"
               />
             </Button>
           </Col>
