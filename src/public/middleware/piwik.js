@@ -1,5 +1,6 @@
 import {
   GET_CLIENT_CLICK,
+  NEW_CLIENT_CLICK,
   GET_WAVES_CLICK,
   ONLINE_CLIENT_CLICK,
   ANDROID_CLIENT_CLICK,
@@ -23,7 +24,7 @@ const CONTACT = 'Contact';
 
 const categoryMap = {
   [GET_CLIENT_CLICK]: PRODUCT,
-  [GET_CLIENT_CLICK]: PRODUCT,
+  [NEW_CLIENT_CLICK]: PRODUCT,
   [GET_WAVES_CLICK]: PRODUCT,
   [ONLINE_CLIENT_CLICK]: PRODUCT,
   [ANDROID_CLIENT_CLICK]: PRODUCT,
@@ -45,7 +46,14 @@ const categoryMap = {
 
 export default store => next => action => {
   if (action.log && window._paq) {
-    window._paq.push(['trackEvent', categoryMap[action.type], action.type]);
+    window._paq.push([
+      'trackEvent',
+      categoryMap[action.type],
+      action.type,
+      ...(action.page && action.source
+        ? [`${action.page}.${action.source}`]
+        : []),
+    ]);
   }
   next(action);
 };

@@ -1,12 +1,15 @@
 import { connect } from 'react-redux';
 
-import { getClientClick, onlineClientClick } from 'src/public/actions';
+import { getClientClick, newClientClick } from 'src/public/actions';
 
 import View from './View';
 
-export default connect(s => s, {
-  onGetClientClick: () =>
-    getClientClick({ page: 'product', source: 'main_screen' }),
-  onOnlineClientClick: () =>
-    onlineClientClick({ page: 'product', source: 'main_screen' }),
-})(View);
+export default connect(
+  s => s,
+  dispatch => ({
+    onGetClientClick: () =>
+      dispatch(getClientClick({ page: 'Product', source: 'MainScreen' })),
+    onOnlineClientClick: () =>
+      dispatch(newClientClick({ page: 'Product', source: 'MainScreen' })),
+  })
+)(View);

@@ -6,5 +6,5 @@ import View from './View';
 
 export default connect(s => s, {
   onGetClientClick: () =>
-    getClientClick({ page: 'product', source: 'how_to_trade' }),
+    getClientClick({ page: 'Product', source: 'HowToTrade' }),
 })(View);

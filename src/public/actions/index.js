@@ -1,6 +1,7 @@
 // our products
-export const NEW_CLIENT_CLICK = 'NewClientClick';
-export const GET_CLIENT_CLICK = 'GetClientClick';
+export const NEW_CLIENT_CLICK = 'GetClient.OnlineBeta.Click';
+export const GET_CLIENT_CLICK = 'GetClient.Online.Click';
+
 export const GET_WAVES_CLICK = 'GetWavesClick';
 export const ONLINE_CLIENT_CLICK = 'OnlineClientClick';
 export const ANDROID_CLIENT_CLICK = 'AndroidClientClick';
