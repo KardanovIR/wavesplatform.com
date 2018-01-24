@@ -1,9 +1,11 @@
 import { Locales } from 'locale';
 import isProd from 'src/common/utils/isProd';
+import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
 const supported = ['ko', 'en'];
 
 const cookieDomain = isProd() ? { domain: '.wavesplatform.com' } : {};
+checkEnvVariable('LANG');
 
 const sniffLocale = async (ctx, next) => {
   const cookie = ctx.request.universalCookies.get('locale');
@@ -12,7 +14,10 @@ const sniffLocale = async (ctx, next) => {
     // @todo change when translations are ready
     ctx.locale = cookie;
   } else {
-    const sniffedLocale = new Locales(ctx.req.headers['accept-language'], 'en')
+    const sniffedLocale = new Locales(
+      ctx.req.headers['accept-language'],
+      process.env.LANG
+    )
       .best(new Locales(supported))
       .toString();
 
@@ -25,7 +30,7 @@ const sniffLocale = async (ctx, next) => {
     ctx.locale = sniffedLocale;
   }
   //@hack if sniffer screws
-  ctx.locale = ctx.locale || 'en';
+  ctx.locale = ctx.locale || process.env.LANG;
   ctx.availableLocales = supported;
 
   await next();
