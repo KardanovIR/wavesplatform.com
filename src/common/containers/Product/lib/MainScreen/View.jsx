@@ -2,6 +2,7 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
+import url from 'src/common/utils/url';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
@@ -14,19 +15,19 @@ const DevelopersMainScreen = ({ onGetClientClick, onOnlineClientClick }) => (
         onClick={onGetClientClick}
         key="main_cta_button"
         target="_blank"
-        href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+        href={url('online-client')}
         bordered
       >
-        <FormattedMessage id="cta.getClient" />
+        <FormattedMessage id="cta.onlineClientOld" />
       </Button>,
       <Button
         onClick={onOnlineClientClick}
         secondary
         key="main_cta_button2"
         target="_blank"
-        href="https://waveswallet.io/"
+        href={url('online-client(beta)')}
       >
-        <FormattedMessage id="cta.onlineClientOld" />
+        <FormattedMessage id="cta.onlineClient" />
       </Button>,
     ]}
   />

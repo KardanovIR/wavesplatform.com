@@ -85,8 +85,8 @@ const PageLayout = ({ classes, initialState }) => (
         <ContentContainer>
           <HowToWallet
             title={<FormattedMessage id="product.howToWallet.title" />}
-            eventPage="product"
-            eventSource="how_to_wallet"
+            eventPage="Product"
+            eventSource="HowToWallet"
           />
         </ContentContainer>
       </Section>

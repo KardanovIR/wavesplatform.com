@@ -37,7 +37,7 @@ const PageLayout = ({ classes }) => (
 
     <Section size={3}>
       <ContentContainer>
-        <HowToWallet eventPage="get-waves" eventSource="buy_waves_in_client">
+        <HowToWallet eventPage="GetWaves" eventSource="HowToWallet">
           <WalletText />
         </HowToWallet>
       </ContentContainer>

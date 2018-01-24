@@ -16,14 +16,14 @@ const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
         onClick={onGetClientClick}
         key="main_cta_button"
         target="_blank"
-        href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+        href={url('online-client')}
         bordered
       >
-        <FormattedMessage id="cta.getClient" />
+        <FormattedMessage id="cta.onlineClientOld" />
       </Button>,
       <Button
         onClick={onNewClientClick}
-        href={url('online-client')}
+        href={url('online-client(beta)')}
         withLoader
         secondary
         key="main_cta_button2"

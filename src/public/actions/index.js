@@ -1,8 +1,8 @@
 // our products
-export const NEW_CLIENT_CLICK = 'NewClientClick';
-export const GET_CLIENT_CLICK = 'GetClientClick';
+export const ONLINE_BETA_CLIENT_CLICK = 'GetClient.OnlineBeta.Click';
+export const ONLINE_CLIENT_CLICK = 'GetClient.Online.Click';
+
 export const GET_WAVES_CLICK = 'GetWavesClick';
-export const ONLINE_CLIENT_CLICK = 'OnlineClientClick';
 export const ANDROID_CLIENT_CLICK = 'AndroidClientClick';
 export const IOS_CLIENT_CLICK = 'IosClientClick';
 
@@ -33,10 +33,9 @@ const createAC = type => meta => ({
 });
 
 // our products
-export const newClientClick = createAC(NEW_CLIENT_CLICK);
-export const getClientClick = createAC(GET_CLIENT_CLICK);
+export const newClientClick = createAC(ONLINE_BETA_CLIENT_CLICK);
+export const getClientClick = createAC(ONLINE_CLIENT_CLICK);
 export const getWavesClick = createAC(GET_WAVES_CLICK);
-export const onlineClientClick = createAC(ONLINE_CLIENT_CLICK);
 export const androidClientClick = createAC(ANDROID_CLIENT_CLICK);
 export const iosClientClick = createAC(IOS_CLIENT_CLICK);
 

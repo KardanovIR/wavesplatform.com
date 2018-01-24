@@ -3,6 +3,7 @@ import React from 'react';
 import TitleTextCTA from 'src/common/components/TitleTextCTA';
 import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
+import url from 'src/common/utils/url';
 
 import { FormattedMessage } from 'react-intl';
 
@@ -24,10 +25,10 @@ const MainScreen = ({ classes, onGetClientClick }) => (
                 onClick={onGetClientClick}
                 key="main_cta_button"
                 target="_blank"
-                href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+                href={url('online-client')}
                 secondary
               >
-                <FormattedMessage id="cta.getClient" />
+                <FormattedMessage id="cta.onlineClientOld" />
               </Button>,
             ]}
             inverted

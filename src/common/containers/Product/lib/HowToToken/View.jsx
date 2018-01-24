@@ -3,6 +3,7 @@ import React from 'react';
 import Link from 'src/common/components/Link';
 import IconProduct from 'src/common/components/IconProduct';
 import HowToBlock from 'src/common/components/HowToBlock';
+import url from 'src/common/utils/url';
 
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
@@ -19,7 +20,7 @@ const HowToStart = ({ onGetClientClick }) => (
               onClick={onGetClientClick}
               key="main_cta_button"
               target="_blank"
-              href="https://chrome.google.com/webstore/detail/wavesliteapp/kfmcaklajknfekomaflnhkjjkcjabogm"
+              href={url('online-client')}
               textDecoration={false}
             >
               <FormattedMessage id="cta.getClient" />

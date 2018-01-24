@@ -1,7 +1,7 @@
 import {
-  GET_CLIENT_CLICK,
-  GET_WAVES_CLICK,
   ONLINE_CLIENT_CLICK,
+  ONLINE_BETA_CLIENT_CLICK,
+  GET_WAVES_CLICK,
   ANDROID_CLIENT_CLICK,
   IOS_CLIENT_CLICK,
   API_DOCUMENTATION_CLICK,
@@ -22,10 +22,9 @@ const DOWNLOAD = 'Download';
 const CONTACT = 'Contact';
 
 const categoryMap = {
-  [GET_CLIENT_CLICK]: PRODUCT,
-  [GET_CLIENT_CLICK]: PRODUCT,
-  [GET_WAVES_CLICK]: PRODUCT,
   [ONLINE_CLIENT_CLICK]: PRODUCT,
+  [ONLINE_BETA_CLIENT_CLICK]: PRODUCT,
+  [GET_WAVES_CLICK]: PRODUCT,
   [ANDROID_CLIENT_CLICK]: PRODUCT,
   [IOS_CLIENT_CLICK]: PRODUCT,
 
@@ -45,7 +44,14 @@ const categoryMap = {
 
 export default store => next => action => {
   if (action.log && window._paq) {
-    window._paq.push(['trackEvent', categoryMap[action.type], action.type]);
+    window._paq.push([
+      'trackEvent',
+      categoryMap[action.type],
+      action.type,
+      ...(action.page && action.source
+        ? [`${action.page}.${action.source}`]
+        : []),
+    ]);
   }
   next(action);
 };

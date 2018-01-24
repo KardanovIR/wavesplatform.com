@@ -6,7 +6,7 @@ import View from './View';
 
 export default connect(s => s, {
   onNewClientClick: () =>
-    newClientClick({ page: 'index', source: 'main_screen' }),
+    newClientClick({ page: 'Home', source: 'MainScreen' }),
   onGetClientClick: () =>
-    getClientClick({ page: 'index', source: 'main_screen' }),
+    getClientClick({ page: 'Home', source: 'MainScreen' }),
 })(View);
