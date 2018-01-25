@@ -28,6 +28,7 @@
     "eases": "^1.0.8",
     "email-validator": "^1.1.1",
     "es6-shim": "^0.35.3",
+    "etag": "^1.8.1",
     "global": "^4.3.2",
     "intl": "^1.2.5",
     "koa": "^2.0.0-alpha.7",
