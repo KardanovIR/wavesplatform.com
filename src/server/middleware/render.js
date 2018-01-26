@@ -1,5 +1,6 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
+
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
 import { createStore } from 'redux';
@@ -23,7 +24,6 @@ import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
 import { CookiesProvider } from 'react-cookie';
 
-// const etag = require('etag');
 checkEnvVariable('SERVER_NAME');
 
 export const render = function({
