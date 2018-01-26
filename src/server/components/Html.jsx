@@ -94,6 +94,14 @@ const Html = ({
                 `,
         }}
       />
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.addEventListener("beforeunload", _ => _);
+                `,
+        }}
+      />
 
       {/* Page fonts */}
       <style type="text/css" dangerouslySetInnerHTML={{ __html: fonts }} />

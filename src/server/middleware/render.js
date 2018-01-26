@@ -1,6 +1,5 @@
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import etag from 'etag';
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
 import { createStore } from 'redux';
@@ -24,6 +23,7 @@ import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
 import { CookiesProvider } from 'react-cookie';
 
+// const etag = require('etag');
 checkEnvVariable('SERVER_NAME');
 
 export const render = function({
@@ -110,7 +110,7 @@ export const render = function({
         serverName={process.env.SERVER_NAME}
       />
     );
-    ctx.set('ETag', etag(content));
+
     ctx.body = `<!DOCTYPE html>${html}`;
   };
 };

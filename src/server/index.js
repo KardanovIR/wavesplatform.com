@@ -16,7 +16,6 @@ import accessLog from './middleware/accessLog';
 import initLogger from './middleware/initLogger';
 import serveStatic from './middleware/serveStatic';
 import sniffLocale from './middleware/sniffLocale';
-import noCacheControl from './middleware/noCacheControl';
 
 import isProd from 'src/common/utils/isProd';
 
@@ -32,7 +31,6 @@ app
   .use(sniffLocale)
   .use(serveStatic)
   .use(readAssets)
-  .use(noCacheControl)
   .use(router.routes());
 
 if (process.env.NODE_ENV === 'production') {
