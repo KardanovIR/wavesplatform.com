@@ -21,7 +21,6 @@ const styles = theme => ({
 
   title: {
     lineHeight: 1.05,
-    opacity: 1,
   },
 
   imageColMargin: {
@@ -33,13 +32,11 @@ const styles = theme => ({
     fontSize: 16,
     lineHeight: 2,
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
-    opacity: 1,
   },
 
   buttonsContainer: {
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
-    opacity: 1,
     justifyContent: 'center',
   },
 
