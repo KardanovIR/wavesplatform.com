@@ -41,11 +41,6 @@ export default theme => {
       },
     },
 
-    ony: {
-      textDecoration: 'none',
-      color: theme.palette.gray[400],
-    },
-
     // text
     textGray: {
       color: theme.palette.gray[400],
@@ -73,9 +68,8 @@ export default theme => {
       justifyContent: 'flex-end',
       [theme.breakpoints.up('md')]: {
         order: 5,
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
       },
-
     },
     copyright: {
       fontSize: 12,
