@@ -4,11 +4,6 @@ import flexCentered from 'src/common/styles/flexCentered';
 const styles = theme => ({
   ...image(theme),
 
-  '@keyframes show-0': {
-    from: { opacity: 0, transform: 'translateY(5px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-  },
-
   xsHidden: {
     display: 'none',
   },
@@ -26,8 +21,6 @@ const styles = theme => ({
 
   title: {
     lineHeight: 1.05,
-    opacity: 0,
-    animation: 'show-0 .65s ease .5s forwards',
   },
 
   imageColMargin: {
@@ -39,15 +32,11 @@ const styles = theme => ({
     fontSize: 16,
     lineHeight: 2,
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
-    opacity: 0,
-    animation: 'show-0 .65s ease 1s forwards',
   },
 
   buttonsContainer: {
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
-    opacity: 0,
-    animation: 'show-0 .65s ease 1s forwards',
     justifyContent: 'center',
   },
 
