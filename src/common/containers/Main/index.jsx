@@ -28,6 +28,8 @@ import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
 import UserCases from '../../components/UserCases';
 
+import ButtonDropdown from 'src/common/components/ButtonDropdown';
+
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -37,91 +39,15 @@ import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ initialState, classes }) => (
   <Layout activeLink="home">
-    <BackgroundMainScreen
-      type="image"
-      src={require('./img/bg.jpg')}
-      srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
-      videoSrc={fileUrl('video/white_desktop.mp4')}
-      videoSrcMobile={fileUrl('video/white_mobile.mp4')}
-      videoFirstFrame={require('./img/bgDesktopFF.jpg')}
-      videoFirstFrameMobile={require('./img/bgMobileFF.jpg')}
-    >
-      <ContentContainer>
-        <MainScreen />
-      </ContentContainer>
-    </BackgroundMainScreen>
 
     <Wrapper>
       <Section top={3} bottom={2}>
         <ContentContainer>
-          <NumbersQuote dexData={initialState.dexData} />
+         <ButtonDropdown>1325</ButtonDropdown>
         </ContentContainer>
       </Section>
 
-      <Section bottom={2}>
-        <ContentContainer>
-          <Audience />
-        </ContentContainer>
-      </Section>
-
-      <Section top={4} bottom={1} className={classes.bgWallet}>
-        <ContentContainer>
-          <WavesNG />
-        </ContentContainer>
-      </Section>
-
-      <Section size={4} className={classes.bgBlack}>
-        <ContentContainer>
-          <WavesClient />
-        </ContentContainer>
-      </Section>
-
-      <Section top={4} bottom={1} className={classes.bgWallet}>
-        <ContentContainer>
-          <Wallet>
-            <WalletText />
-          </Wallet>
-        </ContentContainer>
-      </Section>
-
-      <Section top={4} className={cx(classes.bgBlack, classes.overflowHidden)}>
-        <ContentContainer>
-          <DEX />
-        </ContentContainer>
-      </Section>
-
-      <Section top={5} className={classes.issuingTokens}>
-        <ContentContainer>
-          <IssuingTokens />
-        </ContentContainer>
-      </Section>
-
-      <ContentContainer>
-        <UserCases />
-      </ContentContainer>
-
-      <Section size={4}>
-        <ContentContainer>
-          <Facts tokens={initialState.dexData.dexAssets} />
-        </ContentContainer>
-      </Section>
-
-      <Section size={2} className={classes.bgGray}>
-        <ContentContainer>
-          <PlannedFeatures />
-        </ContentContainer>
-      </Section>
-
-      <Section top={2} bottom={1} className={classes.bgJoinUs}>
-        <ContentContainer>
-          <JoinUs />
-          <Margin bottom={5} />
-          <br />
-          <Margin top={5} />
-          <SubscribeSection />
-        </ContentContainer>
-      </Section>
-    </Wrapper>
+      </Wrapper>
   </Layout>
 );
 
