@@ -14,7 +14,7 @@ import Logo from 'src/common/components/Logo';
 import url from 'src/common/utils/url';
 
 const INVERTED_SKIN_LINKS = {
-  'get-waves': true,
+  'get-waves': false,
   developers: true,
   leasing: true,
   company: true

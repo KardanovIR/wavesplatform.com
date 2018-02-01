@@ -63,7 +63,7 @@ const MainScreen = ({
         </Col>
       )}
 
-      <Col xs={12} sm={8} lg={6} smOffset={2} lgOffset={3}>
+      <Col xs={12} sm={10} lg={8} smOffset={1} lgOffset={2}>
         <div className={classes.descriptionText}>{text}</div>
 
         {buttons && buttons.length > 0 && <Margin bottom={text ? 3 : 6} />}

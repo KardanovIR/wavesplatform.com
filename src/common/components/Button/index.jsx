@@ -38,6 +38,7 @@ class Button extends Component {
         inverted,
         secondary, // eslint-disable-line
         whited,
+        coloredHover,
 
         children,
         loading,
@@ -58,6 +59,7 @@ class Button extends Component {
       [classes.light]: !bordered && secondary,
       [classes.dark]: !bordered && !secondary,
       [classes.white]: !bordered && whited,
+      [classes.coloredHover]: coloredHover
     }, className);
 
     const contentWrapperClasses = classnames(
@@ -122,6 +124,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   inverted: PropTypes.bool,
   whited: PropTypes.bool,
+  coloredHover: PropTypes.bool,
   children: PropTypes.node,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
