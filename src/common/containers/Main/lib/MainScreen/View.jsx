@@ -16,13 +16,10 @@ const IndexMainScreen = ({ onNewClientClick, animated, logSettings }) => (
       <DownloadClientDropdown
         key="main_cta_button"
         logSettings={logSettings}
-      >
-        <FormattedMessage id="cta.onlineClientOld" />
-      </DownloadClientDropdown>,
+      />,
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
-        withLoader
         key="main_cta_button2"
         bordered
       >

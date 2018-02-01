@@ -7,12 +7,12 @@ import { FormattedMessage } from 'react-intl';
 import Typography from 'src/common/components/Typography';
 import injectSheet from 'react-jss';
 import Button from 'src/common/components/Button';
-
+import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
 
 import url from 'src/common/utils/url';
 import styles from './styles';
 
-const LeasingMainScreen = ({ classes, onGetClientClick, onNewClientClick }) => (
+const LeasingMainScreen = ({ classes, logSettings, onNewClientClick }) => (
   <MainScreen
     title={
       <Typography className={classes.Title} inverted>
@@ -31,22 +31,15 @@ const LeasingMainScreen = ({ classes, onGetClientClick, onNewClientClick }) => (
       </Typography>
     }
     buttons={[
-      <Button
-        onClick={onGetClientClick}
+      <DownloadClientDropdown
         key="main_cta_button"
-        target="_blank"
-        href={url('online-client')}
-        bordered
-        inverted
-      >
-        <FormattedMessage id="cta.onlineClientOld" />
-      </Button>,
+        logSettings={logSettings}
+      />,
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
         key="main_cta_button2"
-        withLoader
-        secondary
+        bordered
         inverted
       >
         <FormattedMessage id="cta.onlineClient" />

@@ -2,35 +2,27 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import url from 'src/common/utils/url';
 
+import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
 import Button from 'src/common/components/Button';
 import MainScreen from 'src/common/components/MainScreen';
 
-const GetWavesMainScreen = ({ onGetClientClick, onNewClientClick }) => (
+const GetWavesMainScreen = ({ logSettings, onNewClientClick }) => (
   <MainScreen
     title={<FormattedMessage id="getWaves.title" />}
     buttons={[
-      <Button
-        onClick={onGetClientClick}
+      <DownloadClientDropdown
         key="main_cta_button"
-        target="_blank"
-        href={url('online-client')}
-        bordered
-        inverted
-      >
-        <FormattedMessage id="cta.onlineClientOld" />
-      </Button>,
+        logSettings={logSettings}
+      />,
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
-        withLoader
-        secondary
         key="main_cta_button2"
-        inverted
+        bordered
       >
         <FormattedMessage id="cta.onlineClient" />
       </Button>,
     ]}
-    inverted
   />
 );
 

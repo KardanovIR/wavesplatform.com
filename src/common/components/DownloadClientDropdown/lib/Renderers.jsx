@@ -14,8 +14,6 @@ const optionStyles = () => ({
 @injectSheet(optionStyles)
 class OptionRenderer extends React.Component {
   handleClick = event => {
-    event.preventDefault();
-    event.stopPropagation();
     this.props.onSelect(this.props.option, event);
   };
   render() {

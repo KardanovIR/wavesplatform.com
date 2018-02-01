@@ -37,13 +37,13 @@ const OPTIONS = [
   {
     value: 'Windows',
     label: 'cta.getClient.windows',
-    link: '	https://s3.ca-central-1.amazonaws.com/wavesdb.com/Waves+Lite+Client%5Bmainnet%5D-1.0.0-beta.10-win.zip',
+    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/Waves+Lite+Client%5Bmainnet%5D-1.0.0-beta.10-win.zip',
     clickHandler: HANDLERS.Windows,
   },
   {
     value: 'Mac',
     label: 'cta.getClient.mac',
-    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/Waves+Lite+Client%5Bmainnet%5D-1.0.0-beta.10-linux.deb',
+    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/Waves+Lite+Client%5Bmainnet%5D-1.0.0-beta.10-mac.dmg',
     clickHandler: HANDLERS.Mac,
   },
   {
