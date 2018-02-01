@@ -2,31 +2,29 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
+import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
 
-const IndexMainScreen = ({ onNewClientClick, onGetClientClick, animated }) => (
+const IndexMainScreen = ({ onNewClientClick, animated, logSettings }) => (
   <MainScreen
     title={<FormattedHTMLMessage id="home.main.title" />}
     text={<FormattedMessage id="home.main.text" />}
     buttons={[
-      <Button
-        onClick={onGetClientClick}
+      <DownloadClientDropdown
         key="main_cta_button"
-        target="_blank"
-        href={url('online-client')}
-        bordered
+        logSettings={logSettings}
       >
         <FormattedMessage id="cta.onlineClientOld" />
-      </Button>,
+      </DownloadClientDropdown>,
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
         withLoader
-        secondary
         key="main_cta_button2"
+        bordered
       >
         <FormattedMessage id="cta.onlineClient" />
       </Button>,

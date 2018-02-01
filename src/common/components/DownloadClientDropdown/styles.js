@@ -1,22 +1,14 @@
-const styles = ({ spacing, colors, palette }) => {
-  const OPTION_PADDING = [
-    spacing.unit * 3 / 2,
-    spacing.unit * 2,
-    spacing.unit,
-    spacing.unit * 2,
-  ];
-  const iconSizes = {
-    height: '12px',
-    width: '18px',
-  };
-
+const styles = ({ spacing, colors, palette, breakpoints }) => {
   return {
     select: {
+      display: 'none',
       color: palette.gray[400],
       fontSize: '12px',
 
-      display: 'inline-block',
       position: 'relative',
+      '& .Select-input': {
+        outline: 'none',
+      },
       '& .Select-control': {
         display: 'flex',
       },
@@ -27,13 +19,23 @@ const styles = ({ spacing, colors, palette }) => {
       '& .Select-arrow-zone': {
         lineHeight: `50px`,
         position: 'absolute',
-        right: 2 * spacing.unit,
+        right: 3 * spacing.unit,
+        top: 1, // visual aid
       },
       '& .Select-option': {
+        boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'start',
+        '&:not(:last-child)': {
+          borderBottom: '1px solid #f1f1f1',
+          '& > a': {
+            boxShadow: '0 0px 2px #c6c6c6', //fixing button's overflowing shadow
+          },
+        },
         '& > *': {
           width: '100%',
+          marginRight: 1,
+          marginLeft: 1,
         },
         cursor: 'pointer',
         color: colors.black.default,
@@ -44,13 +46,10 @@ const styles = ({ spacing, colors, palette }) => {
         '&.is-selected': {
           display: 'none',
         },
-        '& svg': iconSizes,
       },
       '& .Select-menu-outer': {
         position: 'absolute',
         background: 'white',
-        // top: 'auto',
-        // bottom: 'calc(100% - 1px)',
         zIndex: 10,
         width: '100%',
       },
@@ -63,11 +62,15 @@ const styles = ({ spacing, colors, palette }) => {
         display: 'inline-flex',
         justifyContent: 'start',
         cursor: 'default',
-        '& svg': iconSizes,
       },
       '& .Select-option-label': {
         marginLeft: [spacing.unit / 2],
         marginRight: [spacing.unit / 2],
+      },
+    },
+    [breakpoints.up('md')]: {
+      select: {
+        display: 'inline-block',
       },
     },
   };

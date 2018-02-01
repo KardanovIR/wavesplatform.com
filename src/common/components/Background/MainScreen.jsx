@@ -10,12 +10,17 @@ import bgDark from './img/dark_bgr.svg';
 // import bgCommon from './img/common_bgr.svg';
 // import bgProduct from './img/product_bgr.svg';
 
-const styles = () => ({
+const styles = (theme) => ({
   wrapper: {
     position: 'relative',
     overflow: 'hidden',
     height: '100vh',
     width: '100%',
+  },
+  [theme.breakpoints.up('md')]: {
+    wrapper: {
+      minHeight: 768
+    }
   },
   background: {
     position: 'absolute',
