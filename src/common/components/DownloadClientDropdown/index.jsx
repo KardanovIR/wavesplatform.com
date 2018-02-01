@@ -34,12 +34,12 @@ export const withHandlers = connect(undefined, (dispatch, { logSettings }) => {
 
 const OPTIONS = [
   { value: 'initial', label: 'cta.getClient' },
-  {
-    value: 'Windows',
-    label: 'cta.getClient.windows',
-    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-win.zip',
-    clickHandler: HANDLERS.Windows,
-  },
+  // {
+  //   value: 'Windows',
+  //   label: 'cta.getClient.windows',
+  //   link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-win.zip',
+  //   clickHandler: HANDLERS.Windows,
+  // },
   {
     value: 'Mac',
     label: 'cta.getClient.mac',
