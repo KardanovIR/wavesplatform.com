@@ -1,7 +1,7 @@
 const styles = ({ spacing, colors, palette, breakpoints }) => {
   return {
     select: {
-      display: 'none',
+      display: 'inline-block',
       color: palette.gray[400],
       fontSize: '12px',
 
@@ -66,11 +66,6 @@ const styles = ({ spacing, colors, palette, breakpoints }) => {
       '& .Select-option-label': {
         marginLeft: [spacing.unit / 2],
         marginRight: [spacing.unit / 2],
-      },
-    },
-    [breakpoints.up('md')]: {
-      select: {
-        display: 'inline-block',
       },
     },
   };
