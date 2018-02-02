@@ -8,12 +8,12 @@ import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
-const IndexMainScreen = ({ onNewClientClick, logSettings, isDesktop }) => (
+const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
   <MainScreen
     title={<FormattedHTMLMessage id="home.main.title" />}
     text={<FormattedMessage id="home.main.text" />}
     buttons={[
-      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" logSettings={logSettings} />]: [],
+      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" onChange={onDownloadChange} />]: [],
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
