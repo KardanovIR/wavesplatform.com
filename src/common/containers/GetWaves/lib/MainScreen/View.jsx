@@ -7,11 +7,22 @@ import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown
 import Button from 'src/common/components/Button';
 import MainScreen from 'src/common/components/MainScreen';
 
-const GetWavesMainScreen = ({ onNewClientClick, isDesktop, onDropdownChange }) => (
+const GetWavesMainScreen = ({
+  onNewClientClick,
+  isDesktop,
+  onDropdownChange,
+}) => (
   <MainScreen
     title={<FormattedMessage id="getWaves.title" />}
     buttons={[
-      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" onChange={onDropdownChange} />]: [],
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDropdownChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}

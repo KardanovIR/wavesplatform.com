@@ -8,12 +8,23 @@ import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
-const ProductMainScreen = ({ onDownloadChange, onOnlineClientClick, isDesktop }) => (
+const ProductMainScreen = ({
+  onDownloadChange,
+  onOnlineClientClick,
+  isDesktop,
+}) => (
   <MainScreen
     title={<FormattedHTMLMessage id="product.title" />}
     text={<FormattedMessage id="product.text" />}
     buttons={[
-      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" onChange={onDownloadChange} />]: [],
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onOnlineClientClick}
         bordered

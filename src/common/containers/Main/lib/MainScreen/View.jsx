@@ -13,7 +13,14 @@ const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
     title={<FormattedHTMLMessage id="home.main.title" />}
     text={<FormattedMessage id="home.main.text" />}
     buttons={[
-      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" onChange={onDownloadChange} />]: [],
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -24,6 +31,6 @@ const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
       </Button>,
     ]}
   />
-  );
+);
 
 export default withIsDesktopFlag(IndexMainScreen);

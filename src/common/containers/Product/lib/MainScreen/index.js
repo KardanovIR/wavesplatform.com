@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { newClientClick } from 'src/public/actions';
-import { downloadClientChange } from 'src/common/components/DownloadClientDropdown/lib/handlers';
+import { downloadClientChange } from 'src/common/components/DownloadClientDropdown/lib/actions';
 
 import View from './View';
 

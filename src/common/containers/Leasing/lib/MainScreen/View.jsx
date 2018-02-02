@@ -14,7 +14,12 @@ import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 import url from 'src/common/utils/url';
 import styles from './styles';
 
-const LeasingMainScreen = ({ classes, onDownloadChange, onNewClientClick, isDesktop }) => (
+const LeasingMainScreen = ({
+  classes,
+  onDownloadChange,
+  onNewClientClick,
+  isDesktop,
+}) => (
   <MainScreen
     title={
       <Typography className={classes.Title} inverted>
@@ -32,8 +37,15 @@ const LeasingMainScreen = ({ classes, onDownloadChange, onNewClientClick, isDesk
         />
       </Typography>
     }
-    buttons={[      
-      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" onChange={onDownloadChange} />]: [],
+    buttons={[
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -47,7 +59,6 @@ const LeasingMainScreen = ({ classes, onDownloadChange, onNewClientClick, isDesk
   />
 );
 
-export default compose(
-  withIsDesktopFlag,
-  injectSheet(styles)
-)(LeasingMainScreen);
+export default compose(withIsDesktopFlag, injectSheet(styles))(
+  LeasingMainScreen
+);
