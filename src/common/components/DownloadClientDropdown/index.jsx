@@ -1,12 +1,12 @@
 import React from 'react';
+import { compose } from 'ramda';
+import { connect } from 'react-redux';
 
 import Select from 'react-select';
 import Null from 'src/common/components/Null';
 import injectSheet from 'react-jss';
 import styles from './styles';
 import { ValueRenderer, OptionRenderer, ArrowRenderer } from './lib/Renderers';
-
-import { connect } from 'react-redux';
 
 import {
   getElectronWindowsClick,
@@ -23,12 +23,12 @@ const HANDLERS = {
   Linux: 'onLinuxClick',
 };
 
-export const withHandlers = connect(undefined, (dispatch, { logSettings }) => {
+const withHandlers = connect(undefined, (dispatch, { logSettings }) => {
   const createHandler = handler => () => dispatch(handler(logSettings));
   return ({
     [HANDLERS.Windows]: createHandler(getElectronWindowsClick),
     [HANDLERS.Mac]: createHandler(getElectronMacClick),
-    [HANDLERS.Linux]: createHandler(getElectronLinuxClick)
+    [HANDLERS.Linux]: createHandler(getElectronLinuxClick),
   });
 });
 
@@ -43,13 +43,15 @@ const OPTIONS = [
   {
     value: 'Mac',
     label: 'cta.getClient.mac',
-    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-mac.dmg',
+    link:
+      'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-mac.dmg',
     clickHandler: HANDLERS.Mac,
   },
   {
     value: 'Linux',
     label: 'cta.getClient.linux',
-    link: 'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-linux.deb',
+    link:
+      'https://s3.ca-central-1.amazonaws.com/wavesdb.com/WavesClient-1.0.0-beta.10-linux.deb',
     clickHandler: HANDLERS.Linux,
   },
 ];
@@ -80,5 +82,7 @@ class DownloadClientDropdown extends React.PureComponent {
   }
 }
 
-
-export default injectSheet(styles)(withHandlers(DownloadClientDropdown));
+export default compose(
+  injectSheet(styles),
+  withHandlers
+)(DownloadClientDropdown);

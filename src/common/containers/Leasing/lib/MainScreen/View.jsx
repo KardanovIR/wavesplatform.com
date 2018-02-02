@@ -3,16 +3,18 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 
 import { FormattedMessage } from 'react-intl';
+import { compose } from 'ramda';
 
 import Typography from 'src/common/components/Typography';
 import injectSheet from 'react-jss';
 import Button from 'src/common/components/Button';
 import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
+import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import url from 'src/common/utils/url';
 import styles from './styles';
 
-const LeasingMainScreen = ({ classes, logSettings, onNewClientClick }) => (
+const LeasingMainScreen = ({ classes, logSettings, onNewClientClick, isDesktop }) => (
   <MainScreen
     title={
       <Typography className={classes.Title} inverted>
@@ -30,11 +32,8 @@ const LeasingMainScreen = ({ classes, logSettings, onNewClientClick }) => (
         />
       </Typography>
     }
-    buttons={[
-      <DownloadClientDropdown
-        key="main_cta_button"
-        logSettings={logSettings}
-      />,
+    buttons={[      
+      ...isDesktop ? [<DownloadClientDropdown key="main_cta_button1" logSettings={logSettings} />]: [],
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -48,4 +47,7 @@ const LeasingMainScreen = ({ classes, logSettings, onNewClientClick }) => (
   />
 );
 
-export default injectSheet(styles)(LeasingMainScreen);
+export default compose(
+  withIsDesktopFlag,
+  injectSheet(styles)
+)(LeasingMainScreen);
