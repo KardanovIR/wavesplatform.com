@@ -21,6 +21,7 @@ const styles = ({ spacing, colors, palette, breakpoints }) => {
         position: 'absolute',
         right: 3 * spacing.unit,
         top: 1, // visual aid
+        pointerEvents: 'none',
       },
       '& .Select-option': {
         boxSizing: 'border-box',
