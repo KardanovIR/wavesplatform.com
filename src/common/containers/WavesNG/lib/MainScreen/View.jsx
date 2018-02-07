@@ -2,7 +2,7 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
-import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 
 import { FormattedMessage } from 'react-intl';
 import withIsDesktopFlag from 'src/public/hoc/isDesktop';

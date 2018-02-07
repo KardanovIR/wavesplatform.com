@@ -8,7 +8,7 @@ import { compose } from 'ramda';
 import Typography from 'src/common/components/Typography';
 import injectSheet from 'react-jss';
 import Button from 'src/common/components/Button';
-import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import url from 'src/common/utils/url';
