@@ -41,6 +41,10 @@ export default theme => {
       },
     },
 
+    ony: {
+      textDecoration: 'none',
+      color: theme.palette.gray[400],
+    },
     // text
     textGray: {
       color: theme.palette.gray[400],

@@ -25,7 +25,8 @@ const styles = theme => ({
     backgroundColor: ({ inverted }) => inverted && theme.palette.gray[800],
   },
   ftwrapper: {
-    backgroundColor: ({ darkFooter }) => darkFooter ? theme.palette.gray[9999] : 'transparent',
+    backgroundColor: ({ darkFooter }) =>
+      darkFooter ? theme.palette.gray[9999] : 'transparent',
   },
 });
 
@@ -35,6 +36,7 @@ const Layout = ({
   activeLink,
   hideFooter,
   hideSnackbar,
+  hideOny = false,
 }) => (
   <div className={classes.body}>
     <div className={classes.navigationWrapper}>
@@ -47,7 +49,7 @@ const Layout = ({
     {children}
     <div className={classes.ftwrapper}>
       <Wrapper>
-        {!hideFooter && <Footer links={MOBILE_LINKS} />}
+        {!hideFooter && <Footer links={MOBILE_LINKS} hideOny={hideOny} />}
         {!hideSnackbar && (
           <SnackbarCta
             text="Join our Waves community Telegram channel 🏄"
