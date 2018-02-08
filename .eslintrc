@@ -28,7 +28,8 @@
         "indent": [
             "error",
             2,
-            { "SwitchCase": 1 }
+            { "SwitchCase": 1 },
+            { "ArrayExpression": 0 }
         ],
         "no-irregular-whitespace": "warn",
         "react/prop-types": [

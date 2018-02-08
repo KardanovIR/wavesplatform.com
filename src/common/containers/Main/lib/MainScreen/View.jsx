@@ -2,21 +2,25 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
-import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
+import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
-
-const IndexMainScreen = ({ onNewClientClick, animated, logSettings }) => (
+const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
   <MainScreen
     title={<FormattedHTMLMessage id="home.main.title" />}
     text={<FormattedMessage id="home.main.text" />}
     buttons={[
-      <DownloadClientDropdown
-        key="main_cta_button"
-        logSettings={logSettings}
-      />,
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -26,8 +30,7 @@ const IndexMainScreen = ({ onNewClientClick, animated, logSettings }) => (
         <FormattedMessage id="cta.onlineClient" />
       </Button>,
     ]}
-    animated={animated}
   />
 );
 
-export default IndexMainScreen;
+export default withIsDesktopFlag(IndexMainScreen);

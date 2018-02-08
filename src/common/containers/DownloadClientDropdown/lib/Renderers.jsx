@@ -39,8 +39,7 @@ const buttonStyles = ({ spacing }) => ({
     width: '100%',
     overflow: 'hidden',
     '& > *': {
-      position: 'relative',
-      left: -0.5 * spacing.unit, //visual aid
+      marginRight: .5 * spacing.unit, //visual aid
     },
   },
 });

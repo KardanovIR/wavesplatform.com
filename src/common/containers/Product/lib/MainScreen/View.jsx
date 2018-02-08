@@ -3,19 +3,28 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 import url from 'src/common/utils/url';
-import DownloadClientDropdown from 'src/common/components/DownloadClientDropdown';
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
+import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
-const DevelopersMainScreen = ({ logSettings, onOnlineClientClick }) => (
+const ProductMainScreen = ({
+  onDownloadChange,
+  onOnlineClientClick,
+  isDesktop,
+}) => (
   <MainScreen
     title={<FormattedHTMLMessage id="product.title" />}
     text={<FormattedMessage id="product.text" />}
     buttons={[
-      <DownloadClientDropdown
-      key="main_cta_button"
-      logSettings={logSettings}
-    />,
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onOnlineClientClick}
         bordered
@@ -29,4 +38,4 @@ const DevelopersMainScreen = ({ logSettings, onOnlineClientClick }) => (
   />
 );
 
-export default DevelopersMainScreen;
+export default withIsDesktopFlag(ProductMainScreen);
