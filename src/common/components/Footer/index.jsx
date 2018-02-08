@@ -19,7 +19,7 @@ import LanguageChooser from '../LanguageChooser';
 
 import url from 'src/common/utils/url';
 
-const Footer = ({ classes, links }) => (
+const Footer = ({ classes, links, hideCredentials }) => (
   <div className={classes.root}>
     <footer className={classes.footer}>
       <Row className={classes.row}>
@@ -49,12 +49,14 @@ const Footer = ({ classes, links }) => (
           <MQ query={query.md}>
             <br />
           </MQ>
-          <span>
-            Made by{' '}
-            <a href="https://ony.ru" className={classes.ony}>
-              ONY
-            </a>
-          </span>
+          {!hideCredentials && (
+            <span>
+              Made by{' '}
+              <a href="https://ony.ru" className={classes.ony}>
+                ONY
+              </a>
+            </span>
+          )}
         </Col>
 
         <Col xs={6} md={1} className={classes.logo}>

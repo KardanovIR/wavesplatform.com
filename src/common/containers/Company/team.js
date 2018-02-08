@@ -82,8 +82,8 @@ export default [
     imageUrl2x: `url(${Mariya_Borovikova2x})`,
     social: [
       {
-        type: 'facebook',
-        url: 'https://www.facebook.com/profile.php?id=100001562743926',
+        type: 'email',
+        url: 'mailto:borovikova@wavesplatform.com',
       },
     ],
   },

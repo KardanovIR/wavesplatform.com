@@ -40,6 +40,11 @@ const styles = theme => ({
       pointerEvents: 'none',
     },
   },
+  coloredHover: {
+    '&:hover': {
+      transform: 'none',
+    },
+  },
   dark: {
     backgroundColor: theme.palette.gray[1000],
     border: `1px solid ${theme.palette.gray[1000]}`,
@@ -50,6 +55,10 @@ const styles = theme => ({
     border: `1px solid ${theme.palette.blue[500]}`,
     transformOrigin: 'center bottom',
     color: '#fff',
+    '&$coloredHover:hover': {
+      backgroundColor: '#4c74f7',
+      border: `1px solid #4c74f7`,
+    },
   },
   white: {
     backgroundColor: theme.palette.gray[0],
@@ -57,6 +66,9 @@ const styles = theme => ({
     transformOrigin: 'center bottom',
     color: theme.palette.gray[700],
     boxShadow: `0 2px 2px ${theme.palette.gray[300]}`,
+    '&$coloredHover:hover': {
+      backgroundColor: '#d6e0fd',
+    },
   },
   bordered: {
     border: `1px solid ${theme.palette.opaque(theme.palette.gray[1000], 0.9)}`,
