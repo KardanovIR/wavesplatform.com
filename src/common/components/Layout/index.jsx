@@ -36,7 +36,7 @@ const Layout = ({
   activeLink,
   hideFooter,
   hideSnackbar,
-  hideOny = false,
+  hideCredentials = false,
 }) => (
   <div className={classes.body}>
     <div className={classes.navigationWrapper}>
@@ -49,7 +49,9 @@ const Layout = ({
     {children}
     <div className={classes.ftwrapper}>
       <Wrapper>
-        {!hideFooter && <Footer links={MOBILE_LINKS} hideOny={hideOny} />}
+        {!hideFooter && (
+          <Footer links={MOBILE_LINKS} hideCredentials={hideCredentials} />
+        )}
         {!hideSnackbar && (
           <SnackbarCta
             text="Join our Waves community Telegram channel 🏄"
