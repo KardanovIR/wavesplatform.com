@@ -63,13 +63,6 @@ const PageLayout = ({ classes }) => (
         <News />
       </ContentContainer>
     </Section>
-    <Section size={4} className={classes.bgGray}>
-      <ContentContainer>
-        <AnchorScroll anchor="stress-test">
-          <StressTest active />
-        </AnchorScroll>
-      </ContentContainer>
-    </Section>
 
     <Section size={4}>
       <ContentContainer>

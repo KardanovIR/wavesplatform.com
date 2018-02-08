@@ -2,6 +2,10 @@
 export const ONLINE_BETA_CLIENT_CLICK = 'GetClient.OnlineBeta.Click';
 export const ONLINE_CLIENT_CLICK = 'GetClient.Online.Click';
 
+export const ELECTRON_CLIENT_WINDOWS_CLICK = 'GetClient.Windows.Click';
+export const ELECTRON_CLIENT_MAC_CLICK = 'GetClient.Mac.Click';
+export const ELECTRON_CLIENT_LINUX_CLICK = 'GetClient.Linux.Click';
+
 export const GET_WAVES_CLICK = 'GetWavesClick';
 export const ANDROID_CLIENT_CLICK = 'AndroidClientClick';
 export const IOS_CLIENT_CLICK = 'IosClientClick';
@@ -38,6 +42,9 @@ export const getClientClick = createAC(ONLINE_CLIENT_CLICK);
 export const getWavesClick = createAC(GET_WAVES_CLICK);
 export const androidClientClick = createAC(ANDROID_CLIENT_CLICK);
 export const iosClientClick = createAC(IOS_CLIENT_CLICK);
+export const getElectronWindowsClick = createAC(ELECTRON_CLIENT_WINDOWS_CLICK);
+export const getElectronMacClick = createAC(ELECTRON_CLIENT_MAC_CLICK);
+export const getElectronLinuxClick = createAC(ELECTRON_CLIENT_LINUX_CLICK);
 
 // developers
 export const apiDocumentationClick = createAC(API_DOCUMENTATION_CLICK);

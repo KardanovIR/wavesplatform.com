@@ -3,16 +3,23 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 
 import { FormattedMessage } from 'react-intl';
+import { compose } from 'ramda';
 
 import Typography from 'src/common/components/Typography';
 import injectSheet from 'react-jss';
 import Button from 'src/common/components/Button';
-
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
+import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import url from 'src/common/utils/url';
 import styles from './styles';
 
-const LeasingMainScreen = ({ classes, onGetClientClick, onNewClientClick }) => (
+const LeasingMainScreen = ({
+  classes,
+  onDownloadChange,
+  onNewClientClick,
+  isDesktop,
+}) => (
   <MainScreen
     title={
       <Typography className={classes.Title} inverted>
@@ -31,22 +38,19 @@ const LeasingMainScreen = ({ classes, onGetClientClick, onNewClientClick }) => (
       </Typography>
     }
     buttons={[
-      <Button
-        onClick={onGetClientClick}
-        key="main_cta_button"
-        target="_blank"
-        href={url('online-client')}
-        bordered
-        inverted
-      >
-        <FormattedMessage id="cta.onlineClientOld" />
-      </Button>,
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDownloadChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
         key="main_cta_button2"
-        withLoader
-        secondary
+        bordered
         inverted
       >
         <FormattedMessage id="cta.onlineClient" />
@@ -55,4 +59,6 @@ const LeasingMainScreen = ({ classes, onGetClientClick, onNewClientClick }) => (
   />
 );
 
-export default injectSheet(styles)(LeasingMainScreen);
+export default compose(withIsDesktopFlag, injectSheet(styles))(
+  LeasingMainScreen
+);

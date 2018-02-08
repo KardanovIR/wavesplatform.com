@@ -1,37 +1,38 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import url from 'src/common/utils/url';
+import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
+import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 import Button from 'src/common/components/Button';
 import MainScreen from 'src/common/components/MainScreen';
 
-const GetWavesMainScreen = ({ onGetClientClick, onNewClientClick }) => (
+const GetWavesMainScreen = ({
+  onNewClientClick,
+  isDesktop,
+  onDropdownChange,
+}) => (
   <MainScreen
     title={<FormattedMessage id="getWaves.title" />}
     buttons={[
-      <Button
-        onClick={onGetClientClick}
-        key="main_cta_button"
-        target="_blank"
-        href={url('online-client')}
-        bordered
-        inverted
-      >
-        <FormattedMessage id="cta.onlineClientOld" />
-      </Button>,
+      ...(isDesktop
+        ? [
+            <DownloadClientDropdown
+              key="main_cta_button1"
+              onChange={onDropdownChange}
+            />,
+          ]
+        : []),
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
-        withLoader
-        secondary
         key="main_cta_button2"
-        inverted
+        bordered
       >
         <FormattedMessage id="cta.onlineClient" />
       </Button>,
     ]}
-    inverted
   />
 );
 
-export default GetWavesMainScreen;
+export default withIsDesktopFlag(GetWavesMainScreen);
