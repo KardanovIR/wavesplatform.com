@@ -380,6 +380,8 @@
   "product.wallet.transfer.text":
     "Waves는 낮은 수수료와 초당 몇 백 거래를 수행할 수 있는 고속 네트워크를 보유하고 있기 때문에 사람들 간의 즉시적인 암호화폐 송금을 최대한 간편하게 합니다. ",
   "product.wallet.transfer.title": "사람에서 사람으로 하는 송금 ",
+  "products.wallet.title":"Create a multi&shy;currency wallet",
+  "products.wallet.text":"The Waves wallet includes fiat (USD, EURO, TRY) and cryptocurrency gateways (BTC, ETH, LTC, ZCASH). These currencies can be sent anywhere in the world in seconds, because Waves is the fastest open blockchain in existence. They can also be traded on the built-in decentralised exchange (DEX) against thousands of other tokens. To date, around 10,000 different assets exist on the Waves blockchain.",
   "teamMembers.0.fullName": "Sasha Ivanov",
   "teamMembers.0.position": "Founder & CEO",
   "teamMembers.1.fullName": "Maxim Pertsovskiy",

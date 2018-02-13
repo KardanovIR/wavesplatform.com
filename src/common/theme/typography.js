@@ -15,6 +15,7 @@ const creatyTypography = (palette, breakpoints) => {
   const base = {
     ...global,
     color: palette.gray[1000],
+    hyphens: 'manual',
   };
 
   const display = {
@@ -101,6 +102,19 @@ const creatyTypography = (palette, breakpoints) => {
       },
       {
         fontSize: 19,
+      }
+    ),
+    displayCustom: combineMobileDesktopStyles(
+      {
+        ...base,
+        ...display,
+        fontSize: 40,
+        lineHeight: 1.2,
+        margin: 0,
+      },
+      {
+        fontSize: 60,
+        lineHeight: 1.12,
       }
     ),
     body: combineMobileDesktopStyles(base, {
