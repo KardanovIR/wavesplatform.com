@@ -43,6 +43,10 @@ const styles = theme => ({
     extend: [theme.typography.display1, theme.spacing.display1],
     fontWeight: ({ weight }) => weight || theme.typography.display1.fontWeight,
   },
+  displayCustom: {
+    extend: [theme.typography.displayCustom, theme.spacing.display1],
+    fontWeight: ({ weight }) => weight || theme.typography.display1.fontWeight,
+  },
   quote: {
     extend: [theme.typography.quote, theme.spacing.quote],
     fontWeight: ({ weight }) => weight || theme.typography.quote.fontWeight,
@@ -64,6 +68,9 @@ const styles = theme => ({
   // colored: {
   //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
   // },
+  'align-left': {
+    textAlign: 'left',
+  },
   'align-right': {
     textAlign: 'right',
   },

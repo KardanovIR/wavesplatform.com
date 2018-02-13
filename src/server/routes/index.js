@@ -4,6 +4,7 @@ import Router from 'koa-router';
 import { render } from '../middleware/render';
 import home from './get/home';
 import product from './get/product';
+import wallet from './get/products/wallet';
 import mining from './get/mining';
 import leasing from './get/leasing';
 import Error404 from './get/Error404';
@@ -22,6 +23,7 @@ const router = new Router();
 router
   .get('/', home)
   .get('/product', product)
+  .get('/product/wallet', wallet)
   .get(
     '/developers',
     render({

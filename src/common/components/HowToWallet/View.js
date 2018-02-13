@@ -33,11 +33,11 @@ const HowToWallet = ({
                 }
                 key="main_cta_button"
                 target="_blank"
-                href={url('online-client')}
+                href={url('online-client(beta)')}
                 textDecoration={false}
                 icon={null}
               >
-                <FormattedMessage id="cta.onlineClientOld" />
+                <FormattedMessage id="cta.onlineClient" />
               </Link>
             </div>
           ),

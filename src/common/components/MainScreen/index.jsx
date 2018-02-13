@@ -8,7 +8,29 @@ import { Row, Col } from 'src/common/components/Grid';
 import injectSheet from 'react-jss';
 import styles from './styles';
 import cn from 'classnames';
-
+const alignToSizeMap = {
+  left: {
+    xs: 10,
+    sm: 8,
+    lg: 8,
+    xsOffset: 1,
+    lgOffset: 0,
+  },
+  center: {
+    xs: 10,
+    sm: 10,
+    lg: 10,
+    xsOffset: 1,
+    lgOffset: 1,
+  },
+  right: {
+    xs: 10,
+    sm: 10,
+    lg: 8,
+    xsOffset: 1,
+    lgOffset: 2,
+  },
+};
 const MainScreen = ({
   title,
   text,
@@ -16,16 +38,19 @@ const MainScreen = ({
   imageMobile,
   classes,
   buttons,
+  align,
   inverted,
+  titleType,
 }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
-      <Col xs={10} sm={10} lg={10} xsOffset={1} lgOffset={1}>
+      <Col {...alignToSizeMap[align]}>
         <Typography
-          type="display5"
+          type={titleType}
           weight={700}
           className={classes.title}
           inverted={inverted}
+          align={align}
         >
           {title}
         </Typography>
@@ -63,7 +88,7 @@ const MainScreen = ({
         </Col>
       )}
 
-      <Col xs={12} sm={10} lg={8} smOffset={1} lgOffset={2}>
+      <Col {...alignToSizeMap[align]}>
         <div className={classes.descriptionText}>{text}</div>
 
         {buttons && buttons.length > 0 && <Margin bottom={text ? 3 : 6} />}
@@ -88,14 +113,18 @@ const MainScreen = ({
 
 MainScreen.defaultProps = {
   buttons: [],
+  align: 'center',
+  titleType: 'display5',
 };
 
 MainScreen.propTypes = {
   title: PropTypes.node,
+  titleType: PropTypes.string,
   text: PropTypes.node,
   buttons: PropTypes.arrayOf(PropTypes.node),
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,
+  align: PropTypes.oneOf(['left', 'right', 'center']),
 };
 
 export default injectSheet(styles)(MainScreen);

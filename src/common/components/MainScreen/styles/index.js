@@ -15,7 +15,7 @@ const styles = theme => ({
   },
 
   inner: {
-    paddingTop: theme.spacing.unit * 4,
+    // paddingTop: theme.spacing.unit * 4,
     width: '100%',
   },
 
@@ -31,6 +31,7 @@ const styles = theme => ({
   descriptionText: {
     fontSize: 16,
     lineHeight: 2,
+    textAlign: ({ align }) => align,
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
   },
 
@@ -38,11 +39,32 @@ const styles = theme => ({
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.up('md')]: {
+      justifyContent: ({ align }) => {
+        switch (align) {
+          case 'left':
+            return 'flex-start';
+          case 'right':
+            return 'flex-end';
+          case 'center':
+            return 'center';
+        }
+      },
+    },
   },
 
   buttonWrapper: {
     display: 'inline-block',
-    margin: [0, theme.spacing.unit * 0.5],
+    margin: ({ align }) => {
+      switch (align) {
+        case 'left':
+          return `0 ${theme.spacing.unit * 0.5}px 0 0`;
+        case 'right':
+          return `0 0 0 ${theme.spacing.unit * 0.5}px`;
+        case 'center':
+          return [0, theme.spacing.unit * 0.5];
+      }
+    },
     width: '68%',
   },
 
@@ -83,10 +105,10 @@ const styles = theme => ({
       fontSize: 23,
       lineHeight: 1.4,
     },
-    buttonsContainer: {
-      margin: 0,
-      display: 'block',
-    },
+    // buttonsContainer: {
+    //   margin: 0,
+    //   display: 'block',
+    // },
     buttonWrapper: {
       margin: theme.spacing.getSpacing(0, 2),
       width: 'auto',
