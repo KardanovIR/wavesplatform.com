@@ -101,10 +101,6 @@ const styles = theme => ({
       fontSize: 23,
       lineHeight: 1.4,
     },
-    // buttonsContainer: {
-    //   margin: 0,
-    //   display: 'block',
-    // },
     buttonWrapper: {
       margin: theme.spacing.getSpacing(0, 2),
       width: 'auto',

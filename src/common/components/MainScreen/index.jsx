@@ -25,6 +25,9 @@ const alignToSizeMap = {
     lgOffset: 1,
   },
 };
+const AlignedCol = ({ align, children }) => (
+  <Col {...alignToSizeMap[align]}>{children}</Col>
+);
 
 const MainScreen = ({
   title,
@@ -40,7 +43,7 @@ const MainScreen = ({
 }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
-      <Col {...alignToSizeMap[align]}>
+      <AlignedCol align={align}>
         <Typography
           type={titleType}
           weight={700}
@@ -52,7 +55,7 @@ const MainScreen = ({
           {title}
         </Typography>
         <Margin />
-      </Col>
+      </AlignedCol>
 
       {(imageDesktop || imageDesktop) && (
         <Col
@@ -85,7 +88,7 @@ const MainScreen = ({
         </Col>
       )}
 
-      <Col {...alignToSizeMap[align]}>
+      <AlignedCol align={align}>
         <div className={classes.descriptionText}>{text}</div>
 
         {buttons && buttons.length > 0 && <Margin bottom={text ? 3 : 6} />}
@@ -106,7 +109,7 @@ const MainScreen = ({
               </div>
             ))}
         </div>
-      </Col>
+      </AlignedCol>
     </div>
   </Row>
 );
