@@ -48,8 +48,6 @@ const styles = theme => ({
         switch (align) {
           case 'left':
             return 'flex-start';
-          case 'right':
-            return 'flex-end';
           case 'center':
             return 'center';
         }
@@ -62,9 +60,7 @@ const styles = theme => ({
     margin: ({ align }) => {
       switch (align) {
         case 'left':
-          return `0 ${theme.spacing.unit * 0.5}px 0 0`;
-        case 'right':
-          return `0 0 0 ${theme.spacing.unit * 0.5}px`;
+          return `0 ${theme.spacing.unit * 4}px 0 0`;
         case 'center':
           return [0, theme.spacing.unit * 0.5];
       }

@@ -2,11 +2,11 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
-import url from 'src/common/utils/url';
 import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
-import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 import Typography from 'src/common/components/Typography';
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
+
+import url from 'src/common/utils/url';
 import injectSheet from 'react-jss';
 
 const styles = theme => ({
@@ -39,7 +39,6 @@ const WalletMainScreen = ({
         onChange={onDownloadChange}
         containerClassName={classes.downloadButton}
       />,
-
       <Button
         onClick={onOnlineClientClick}
         bordered

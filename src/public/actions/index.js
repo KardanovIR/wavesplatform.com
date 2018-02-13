@@ -7,8 +7,8 @@ export const ELECTRON_CLIENT_MAC_CLICK = 'GetClient.Mac.Click';
 export const ELECTRON_CLIENT_LINUX_CLICK = 'GetClient.Linux.Click';
 
 export const GET_WAVES_CLICK = 'GetWavesClick';
-export const ANDROID_CLIENT_CLICK = 'AndroidClientClick';
-export const IOS_CLIENT_CLICK = 'IosClientClick';
+export const ANDROID_CLIENT_CLICK = 'GetClient.Android.Click';
+export const IOS_CLIENT_CLICK = 'GetClient.Ios.Click';
 
 // developers
 export const API_DOCUMENTATION_CLICK = 'DocumentationClick';

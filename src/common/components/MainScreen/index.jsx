@@ -18,22 +18,14 @@ const alignToSizeMap = {
     lgOffset: 0,
   },
   center: {
-    xs: 12,
+    xs: 10,
     sm: 10,
     lg: 10,
-    xsOffset: 0,
-    smOffset: 2,
+    xsOffset: 1,
     lgOffset: 1,
   },
-  right: {
-    xs: 12,
-    sm: 10,
-    lg: 8,
-    xsOffset: 0,
-    smOffset: 2,
-    lgOffset: 2,
-  },
 };
+
 const MainScreen = ({
   title,
   text,
@@ -133,8 +125,8 @@ MainScreen.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.node),
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,
-  align: PropTypes.oneOf(['left', 'right', 'center']),
-  alignMobile: PropTypes.oneOf(['left', 'right', 'center']),
+  align: PropTypes.oneOf(['left', 'center']),
+  alignMobile: PropTypes.oneOf(['left', 'center']),
 };
 
 export default injectSheet(styles)(MainScreen);
