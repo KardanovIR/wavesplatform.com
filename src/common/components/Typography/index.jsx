@@ -16,6 +16,7 @@ const Typography = ({
   tagMap,
   children,
   align,
+  alignMobile,
   inverted,
   dimmed,
   noMargin,
@@ -25,8 +26,7 @@ const Typography = ({
   const className = cn(
     classes[type],
     {
-      [classes[`align-${String(align)}`]]:
-        align !== Typography.defaultProps.align,
+      [classes[`align-${String(align)}`]]: true,
       [classes.noMargin]: noMargin,
       [classes.inverted]: inverted && !dimmed,
       [classes.dimmed]: dimmed,
@@ -60,7 +60,8 @@ Typography.defaultProps = {
     muted: 'div',
   },
   className: '',
-  align: 'auto',
+  align: 'left',
+  alignMobile: 'left',
 };
 
 const types = [

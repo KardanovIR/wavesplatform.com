@@ -47,7 +47,7 @@ const PageLayout = ({ classes, initialState }) => (
     </BackgroundMainScreen>
 
     <Wrapper>
-      <Section top={3} bottom={2}>
+      <Section top={4} bottom={1}>
         <AnchorScroll anchor="wallet">
           <ContentContainer>
             <Wallet />
@@ -55,13 +55,13 @@ const PageLayout = ({ classes, initialState }) => (
         </AnchorScroll>
       </Section>
 
-      <Section top={4} bottom={3}>
+      <Section top={1} bottom={4}>
         <ContentContainer>
           <MobileWallet />
         </ContentContainer>
       </Section>
 
-      <Section top={4} bottom={2} className={classes.bgGray}>
+      <Section top={4} bottom={4} className={classes.bgGray}>
         <ContentContainer>
           <HowToWallet
             title={<FormattedMessage id="product.howToWallet.title" />}

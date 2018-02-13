@@ -10,24 +10,27 @@ import styles from './styles';
 import cn from 'classnames';
 const alignToSizeMap = {
   left: {
-    xs: 10,
+    xs: 12,
     sm: 8,
     lg: 8,
-    xsOffset: 1,
+    xsOffset: 0,
+    smOffset: 2,
     lgOffset: 0,
   },
   center: {
-    xs: 10,
+    xs: 12,
     sm: 10,
     lg: 10,
-    xsOffset: 1,
+    xsOffset: 0,
+    smOffset: 2,
     lgOffset: 1,
   },
   right: {
-    xs: 10,
+    xs: 12,
     sm: 10,
     lg: 8,
-    xsOffset: 1,
+    xsOffset: 0,
+    smOffset: 2,
     lgOffset: 2,
   },
 };
@@ -41,6 +44,7 @@ const MainScreen = ({
   align,
   inverted,
   titleType,
+  alignMobile,
 }) => (
   <Row className={classes.root}>
     <div className={classes.inner}>
@@ -51,6 +55,7 @@ const MainScreen = ({
           className={classes.title}
           inverted={inverted}
           align={align}
+          alignMobile={alignMobile}
         >
           {title}
         </Typography>
@@ -97,7 +102,10 @@ const MainScreen = ({
           {buttons &&
             buttons.map((button, index) => (
               <div
-                className={classes.buttonWrapper}
+                className={cn(
+                  classes.buttonWrapper,
+                  button.props.containerClassName
+                )}
                 key={`main_cta_wrapper${index}`}
               >
                 {cloneElement(button, {
@@ -114,6 +122,7 @@ const MainScreen = ({
 MainScreen.defaultProps = {
   buttons: [],
   align: 'center',
+  alignMobile: 'center',
   titleType: 'display5',
 };
 
@@ -125,6 +134,7 @@ MainScreen.propTypes = {
   imageDesktop: PropTypes.node,
   imageMobile: PropTypes.node,
   align: PropTypes.oneOf(['left', 'right', 'center']),
+  alignMobile: PropTypes.oneOf(['left', 'right', 'center']),
 };
 
 export default injectSheet(styles)(MainScreen);

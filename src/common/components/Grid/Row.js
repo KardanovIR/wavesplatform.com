@@ -33,6 +33,7 @@ const Row = ({
   centered,
   direction,
   alignItems,
+  justifyContent,
 }) => {
   const className = cn(
     classes.row,

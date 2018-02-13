@@ -15,7 +15,7 @@ const styles = theme => ({
   },
 
   inner: {
-    // paddingTop: theme.spacing.unit * 4,
+    paddingTop: theme.spacing.unit * 8,
     width: '100%',
   },
 
@@ -31,7 +31,11 @@ const styles = theme => ({
   descriptionText: {
     fontSize: 16,
     lineHeight: 2,
-    textAlign: ({ align }) => align,
+    textAlign: ({ alignMobile }) => alignMobile,
+
+    [theme.breakpoints.up('md')]: {
+      textAlign: ({ align }) => align,
+    },
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
   },
 
@@ -73,16 +77,12 @@ const styles = theme => ({
     width: '100%',
     boxSizing: 'border-box',
   },
-
   [theme.mixins.atMedia('sm')]: {
     xsOnly: {
       display: 'none',
     },
     xsHidden: {
       display: 'block',
-    },
-    inner: {
-      paddingTop: theme.spacing.unit * 8,
     },
     imageCol: {
       position: 'relative',

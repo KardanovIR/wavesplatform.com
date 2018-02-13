@@ -10,6 +10,17 @@ const getCutStyle = paddingDirection => ({ align, cut }) => {
   return `${cut === true ? 20 : cut}%`;
 };
 
+const generateAligns = theme =>
+  ['left', 'right', 'center'].reduce((acc, v) => {
+    acc[`align-${v}`] = {
+      textAlign: ({ alignMobile }) => alignMobile,
+      [theme.breakpoints.up('md')]: {
+        textAlign: ({ align }) => align,
+      },
+    };
+    return acc;
+  }, {});
+
 const styles = theme => ({
   body: {
     extend: [theme.typography.body, theme.spacing.body],
@@ -68,15 +79,7 @@ const styles = theme => ({
   // colored: {
   //     color: ({ color }) => color ? theme.palette.getColor(color) : 'inherit'
   // },
-  'align-left': {
-    textAlign: 'left',
-  },
-  'align-right': {
-    textAlign: 'right',
-  },
-  'align-center': {
-    textAlign: 'center',
-  },
+  ...generateAligns(theme),
 
   noMargin: {
     margin: '0 !important',

@@ -7,30 +7,39 @@ import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown
 import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 import Typography from 'src/common/components/Typography';
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
+import injectSheet from 'react-jss';
 
-const ProductMainScreen = ({
+const styles = theme => ({
+  downloadButton: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
+});
+
+const WalletMainScreen = ({
   onDownloadChange,
   onOnlineClientClick,
-  isDesktop,
+  classes,
 }) => (
   <MainScreen
     title={<FormattedHTMLMessage id="products.wallet.title" />}
     titleType="displayCustom"
     text={
-      <Typography type="body">
+      <Typography type="body" alignMobile="center" align="left">
         <FormattedMessage id="products.wallet.text" />
       </Typography>
     }
     align="left"
+    alignMobile="center"
     buttons={[
-      ...(isDesktop
-        ? [
-            <DownloadClientDropdown
-              key="main_cta_button1"
-              onChange={onDownloadChange}
-            />,
-          ]
-        : []),
+      <DownloadClientDropdown
+        key="main_cta_button1"
+        onChange={onDownloadChange}
+        containerClassName={classes.downloadButton}
+      />,
+
       <Button
         onClick={onOnlineClientClick}
         bordered
@@ -44,4 +53,4 @@ const ProductMainScreen = ({
   />
 );
 
-export default withIsDesktopFlag(ProductMainScreen);
+export default injectSheet(styles)(WalletMainScreen);

@@ -101,6 +101,12 @@ const createSpacing = (
       { marginTop: unit * 2.5 }
     ),
   },
+  displayCustom: {
+    '& + $body': combineMobileDesktopStyles(
+      { marginTop: unit * 1 },
+      { marginTop: unit * 2 }
+    ),
+  },
 
   quote: {
     // '& + $body': combineMobileDesktopStyles({ marginTop: unit * 1 }, { marginTop: unit * 1.5 }),

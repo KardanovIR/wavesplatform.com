@@ -1,34 +1,47 @@
 const styles = theme => ({
   root: {},
+  buttonRow: {
+    margin: 0,
+    justifyContent: 'center',
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: 'flex-start',
+    },
+  },
   imageWrapper: {
     position: 'relative',
-    paddingTop: '98%',
     overflow: 'visible',
   },
-  imageCol: {
-    display: 'none',
-  },
   image: {
-    position: 'absolute',
-    zIndex: -1,
-    top: 0,
+    width: '100%',
   },
+  imageCol: {
+    display: 'block',
+    order: -1,
+  },
+
   buttonWrapper: {
     display: 'inline-block',
     verticalAlign: 'middle',
   },
   [theme.breakpoints.up('sm')]: {
-    root: {
-      paddingTop: theme.spacing.unit * 7,
-    },
     imageCol: {
       display: 'block',
-      height: 0,
+      // height: 0,
       overflow: 'visible',
+      order: 1,
     },
     image: {
-      top: '-60%',
+      top: '-200px',
       left: '-20%',
+      position: 'absolute',
+      zIndex: -1,
+      width: 'auto',
+    },
+  },
+  [theme.breakpoints.up('lg')]: {
+    image: { top: 0 },
+    imageWrapper: {
+      paddingTop: '98%',
     },
   },
 });

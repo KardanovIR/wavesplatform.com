@@ -29,12 +29,18 @@ const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick }) => (
 
       <Margin bottom={5} />
 
-      <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-        <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
-      </Margin>
-      <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-        <ButtonGetApp onClick={onIosClientClick} type="app-store" />
-      </Margin>
+      <Row className={classes.buttonRow}>
+        <Col>
+          <Margin bottom={1} right={1} className={classes.buttonWrapper}>
+            <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
+          </Margin>
+        </Col>
+        <Col>
+          <Margin bottom={1} right={1} className={classes.buttonWrapper}>
+            <ButtonGetApp onClick={onIosClientClick} type="app-store" />
+          </Margin>
+        </Col>
+      </Row>
     </Col>
     <Col xs={12} sm={4} md={6} className={classes.imageCol}>
       <div className={classes.imageWrapper}>
