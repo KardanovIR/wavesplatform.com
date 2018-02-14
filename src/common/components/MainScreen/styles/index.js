@@ -57,13 +57,16 @@ const styles = theme => ({
 
   buttonWrapper: {
     display: 'inline-block',
-    margin: ({ align }) => {
-      switch (align) {
-        case 'left':
-          return `0 ${theme.spacing.unit * 4}px 0 0`;
-        case 'center':
-          return [0, theme.spacing.unit * 0.5];
-      }
+    margin: 0,
+    '&:not(:last-child)': {
+      margin: ({ align }) => {
+        switch (align) {
+          case 'left':
+            return `0 ${theme.spacing.unit * 4}px 0 0`;
+          case 'center':
+            return [0, theme.spacing.unit * 0.5];
+        }
+      },
     },
     width: '68%',
   },

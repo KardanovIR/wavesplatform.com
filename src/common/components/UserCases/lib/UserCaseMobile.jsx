@@ -24,7 +24,7 @@ const UserCaseMobile = ({
       {userName}
     </Typography>
     <Margin top={2} />
-    <Typography type="display3" weight={700} className={classes.text}>
+    <Typography type="display3Inverted" className={classes.text}>
       {title}
     </Typography>
     <Margin top={3} />

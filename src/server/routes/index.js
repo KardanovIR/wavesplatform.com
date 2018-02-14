@@ -5,6 +5,7 @@ import { render } from '../middleware/render';
 import home from './get/home';
 import product from './get/product';
 import wallet from './get/products/wallet';
+import token from './get/products/token';
 import mining from './get/mining';
 import leasing from './get/leasing';
 import Error404 from './get/Error404';
@@ -24,6 +25,7 @@ router
   .get('/', home)
   .get('/product', product)
   .get('/product/wallet', wallet)
+  .get('/product/token', token)
   .get(
     '/developers',
     render({

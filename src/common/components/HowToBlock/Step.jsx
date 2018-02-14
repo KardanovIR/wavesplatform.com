@@ -37,7 +37,7 @@ const styles = theme => ({
       width: theme.spacing.unit * 10,
       height: theme.spacing.unit * 10,
       flex: `0 0 ${theme.spacing.unit * 10}px`,
-      marginRight: theme.spacing.unit * 5,
+      marginRight: theme.spacing.unit * 2,
     },
     children: {
       paddingLeft: 0,

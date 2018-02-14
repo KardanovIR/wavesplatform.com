@@ -210,6 +210,11 @@
     "지갑을 비트코인, 이더리움, 이더리움 클래식, 미국 달러나 유로로 채우십시오. ",
   "howToWallet.step3":
     "화폐를 Waves 클라이언트에 있는 분산화거래소(DEX)를 통해 Waves 토큰으로 변환하실 수 있습니다. ",
+  "howToToken.step1": "First, create an account.",
+  "howToToken.step2":
+    "To release tokens, you’ll need 1 Waves to pay the commission. You can buy it directly in the client with $ or €.",
+  "howToToken.step3":
+    "Go to the Token Creation tab and fill out a simple form. Your token will appear on the network within about a minute.",
   "leasing.description.subtitle":
     "리스된 지분증명(LPoS)은 Waves 사용자들에게 자산에 대한  완전한 제어를 제공하는 한편 네트워크를 보존함으로서 이익을 창출할 수 있는 기회를 제공합니다. ",
   "leasing.description.text":
@@ -380,8 +385,16 @@
   "product.wallet.transfer.text":
     "Waves는 낮은 수수료와 초당 몇 백 거래를 수행할 수 있는 고속 네트워크를 보유하고 있기 때문에 사람들 간의 즉시적인 암호화폐 송금을 최대한 간편하게 합니다. ",
   "product.wallet.transfer.title": "사람에서 사람으로 하는 송금 ",
-  "products.wallet.title":"Create a multi&shy;currency wallet",
-  "products.wallet.text":"The Waves wallet includes fiat (USD, EURO, TRY) and cryptocurrency gateways (BTC, ETH, LTC, ZCASH). These currencies can be sent anywhere in the world in seconds, because Waves is the fastest open blockchain in existence. They can also be traded on the built-in decentralised exchange (DEX) against thousands of other tokens. To date, around 10,000 different assets exist on the Waves blockchain.",
+  "products.wallet.title": "Create a multi&shy;currency wallet",
+  "products.wallet.text":
+    "The Waves wallet includes fiat (USD, EURO, TRY) and cryptocurrency gateways (BTC, ETH, LTC, ZCASH). These currencies can be sent anywhere in the world in seconds, because Waves is the fastest open blockchain in existence. They can also be traded on the built-in decentralised exchange (DEX) against thousands of other tokens. To date, around 10,000 different assets exist on the Waves blockchain.",
+  "products.token.title": "Issue, distribute and use your tokens",
+  "products.token.description":
+    "The Waves blockchain is capable of processing thousands of transactions per minute. The platform can be used to create, distribute and use custom-designed tokens. Issuing a token on the Waves platform offers multiple benefits, including the ability to trade the token freely on the built-in decentralised exchange.",
+  "products.token.howToStartTrading.title":
+    "How do I start trading on the Waves DEX?",
+  "products.token.howToStartTrading.descr":
+    "After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even sell them at different prices to create bonus conditions for the first investors.",
   "teamMembers.0.fullName": "Sasha Ivanov",
   "teamMembers.0.position": "Founder & CEO",
   "teamMembers.1.fullName": "Maxim Pertsovskiy",
