@@ -1,13 +1,17 @@
 import React from 'react';
-import { connect } from 'react-redux';
-// components
+
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
-import { Col, Row } from 'src/common/components/Grid';
+import { Col } from 'src/common/components/Grid';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
+import HowToToken from 'src/common/components/HowToToken';
+import Typography from 'src/common/components/Typography';
+import Margin from 'src/common/components/Margin';
+import UserCases from 'src/common/components/UserCases';
+import Facts from 'src/common/components/Facts';
 import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 
 // lib
@@ -15,24 +19,11 @@ import MainScreen from './lib/MainScreen';
 import IssuingTokens from './lib/IssuingTokens';
 
 // intl
+import { FormattedMessage } from 'react-intl';
 
 // styles
 import injectSheet from 'react-jss';
 import styles from './styles';
-
-// url
-import HowToToken from 'src/common/components/HowToToken';
-import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
-import { FormattedMessage } from 'react-intl';
-import UserCases from 'src/common/components/UserCases';
-import Facts from 'src/common/components/Facts';
-import { downloadClientChange } from 'src/common/containers/DownloadClientDropdown/lib/actions';
-const logSettings = { page: 'GetWaves', source: 'MainScreen' };
-
-const withHandlers = connect(undefined, {
-  onDropdownChange: downloadClientChange(logSettings),
-});
 
 const PageLayout = ({ initialState, classes, onDropdownChange }) => (
   <Layout activeLink="product">
@@ -66,7 +57,7 @@ const PageLayout = ({ initialState, classes, onDropdownChange }) => (
       </Section>
       <Section className={classes.bgBlue}>
         <ContentContainer>
-          <HowToToken />
+          <HowToToken eventPage="ProductToken" eventSource="HowToToken" />
           <Margin bottom={4} />
           <Col xs={12} md={6}>
             <Typography type="display3Inverted">
@@ -99,4 +90,4 @@ const App = props => (
   </ThemeProvider>
 );
 
-export default withHandlers(App);
+export default App;

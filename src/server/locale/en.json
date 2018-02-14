@@ -260,7 +260,7 @@
   "product.DEXTopPairs.unavailable": "n/a",
   "product.DEXTopPairs.volume": "Volume (24h)",
   "product.howToToken.step1": "First, install the Waves client",
-  "product.howToToken.step2": "Fill your wallet with bitcoins, ethereum, ethereum classic, US dollars or Euros.",
+  "product.howToToken.step2": "Fill your wallet with bitcoins, ethereum, litecoin, zcash, US dollars or Euros.",
   "product.howToToken.step3": "You will need to pay a small commission in Waves to trade any pairs, so buy Waves in advance.",
   "product.howToTrade.text": "After that, put the token on sale in the DEX tab at a price that will ensure that you achieve your project’s fundraising goals. You can create orders in several pairs if you want to accept different currencies, and you can even sell them at different prices to create bonus conditions for the first investors.",
   "product.howToTrade.title": "How do I start trading on the Waves DEX?",

@@ -3,24 +3,31 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
-import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
-const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
+import injectSheet from 'react-jss';
+
+const styles = theme => ({
+  downloadButton: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
+});
+const IndexMainScreen = ({ onNewClientClick, onDownloadChange, classes }) => (
   <MainScreen
     title={<FormattedHTMLMessage id="home.main.title" />}
     text={<FormattedMessage id="home.main.text" />}
     buttons={[
-      ...(isDesktop
-        ? [
-            <DownloadClientDropdown
-              key="main_cta_button1"
-              onChange={onDownloadChange}
-            />,
-          ]
-        : []),
+      <DownloadClientDropdown
+        key="main_cta_button1"
+        onChange={onDownloadChange}
+        containerClassName={classes.downloadButton}
+      />,
+
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -33,4 +40,4 @@ const IndexMainScreen = ({ onNewClientClick, onDownloadChange, isDesktop }) => (
   />
 );
 
-export default withIsDesktopFlag(IndexMainScreen);
+export default injectSheet(styles)(IndexMainScreen);
