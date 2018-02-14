@@ -69,8 +69,8 @@ const creatyTypography = (palette, breakpoints) => {
       extend: 'display3',
       ...combineMobileDesktopStyles(
         {
-          fontSize: 50,
-          lineHeight: 1.1,
+          fontSize: 40,
+          lineHeight: 1.2,
         },
         {
           fontSize: 44,

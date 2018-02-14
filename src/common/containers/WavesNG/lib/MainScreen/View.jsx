@@ -5,28 +5,34 @@ import Button from 'src/common/components/Button';
 import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 
 import { FormattedMessage } from 'react-intl';
-import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 import url from 'src/common/utils/url';
+import injectSheet from 'react-jss';
 
+const styles = theme => ({
+  downloadButton: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
+});
 const DevelopersMainScreen = ({
   inverted,
   onNewClientClick,
   onDownloadChange,
-  isDesktop,
+  classes,
 }) => (
   <MainScreen
     title={<FormattedMessage id="wavesNG.title" />}
     text={<FormattedMessage id="wavesNG.text" />}
     inverted={inverted}
     buttons={[
-      ...(isDesktop
-        ? [
-            <DownloadClientDropdown
-              key="main_cta_button1"
-              onChange={onDownloadChange}
-            />,
-          ]
-        : []),
+      <DownloadClientDropdown
+        key="main_cta_button1"
+        onChange={onDownloadChange}
+        containerClassName={classes.downloadButton}
+      />,
+
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -40,4 +46,4 @@ const DevelopersMainScreen = ({
   />
 );
 
-export default withIsDesktopFlag(DevelopersMainScreen);
+export default injectSheet(styles)(DevelopersMainScreen);

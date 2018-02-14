@@ -49,7 +49,7 @@ const PageLayout = ({ classes }) => (
         </AnchorScroll>
       </Section>
 
-      <Section top={1} bottom={2}>
+      <Section top={1} bottom={4}>
         <ContentContainer>
           <MobileWallet />
         </ContentContainer>

@@ -17,4 +17,10 @@ export default theme => ({
       padding: 0,
     },
   },
+  downloadButton: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
 });

@@ -57,15 +57,18 @@ const styles = theme => ({
 
   buttonWrapper: {
     display: 'inline-block',
+    width: '68%',
     margin: ({ align }) => {
       switch (align) {
         case 'left':
           return `0 ${theme.spacing.unit * 4}px 0 0`;
         case 'center':
-          return [0, theme.spacing.unit * 0.5];
+          return `0 ${theme.spacing.unit * 0.5}px 0 0`;
       }
     },
-    width: '68%',
+    '&:last-child': {
+      marginRight: 0,
+    },
   },
 
   button: {

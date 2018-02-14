@@ -6,13 +6,10 @@ import Margin from 'src/common/components/Margin';
 
 import { FormattedMessage, FormattedNumber } from 'react-intl';
 
-import injectSheet from 'react-jss';
-import styles from './styles';
-
-const Facts = ({ classes, tokens }) => (
+const Facts = ({ tokens }) => (
   <Row>
     <Col xs={12}>
-      <Typography type="display5" weight={500} className={classes.text}>
+      <Typography type="display3Inverted" weight={500}>
         <FormattedMessage
           id="facts.tokens"
           values={{ number: <FormattedNumber value={tokens} /> }}
@@ -21,7 +18,7 @@ const Facts = ({ classes, tokens }) => (
       <Margin bottom={5} />
     </Col>
     <Col xs={12}>
-      <Typography type="display5" weight={500} className={classes.text}>
+      <Typography type="display3Inverted" weight={500}>
         <FormattedMessage
           id="facts.capitalisation"
           values={{ cap: <FormattedNumber value={1000000000} /> }}
@@ -31,4 +28,4 @@ const Facts = ({ classes, tokens }) => (
   </Row>
 );
 
-export default injectSheet(styles)(Facts);
+export default Facts;
