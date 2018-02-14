@@ -12,7 +12,7 @@ const defaultBreakpoints = {
 };
 
 export const query = Object.keys(defaultBreakpoints).reduce((acc, label) => {
-  acc[label] = `(min-width: ${defaultBreakpoints[label] / 16}em)`;
+  acc[label] = `(min-width: ${defaultBreakpoints[label]}px)`;
   return acc;
 }, {});
 
