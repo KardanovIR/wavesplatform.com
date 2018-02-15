@@ -14,10 +14,12 @@ const styles = ({ spacing, colors, palette }) => {
     select: {
       color: palette.gray[400],
       fontSize: '12px',
-      border: `1px solid ${colors.gray[300]}`,
+      border: ({ inverted }) =>
+        `1px solid ${inverted ? palette.gray[400] : colors.gray[300]}`,
       borderRadius: spacing.radius,
       '&:hover, &.is-open': {
-        borderColor: palette.gray[400],
+        borderColor: ({ inverted }) =>
+          inverted ? palette.gray[300] : palette.gray[400],
         '& .Select-value-label': {
           opacity: 1,
         },
