@@ -27,11 +27,11 @@ const WalletMainScreen = ({
     title={<FormattedHTMLMessage id="products.wallet.title" />}
     titleType="displayCustom"
     text={
-      <Typography type="body" alignMobile="center" align="left">
+      <Typography type="body" alignMobile="center" align="center">
         <FormattedMessage id="products.wallet.text" />
       </Typography>
     }
-    align="left"
+    align="center"
     alignMobile="center"
     buttons={[
       <DownloadClientDropdown
