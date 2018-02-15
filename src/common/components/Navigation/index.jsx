@@ -17,7 +17,8 @@ const INVERTED_SKIN_LINKS = {
   'get-waves': false,
   developers: true,
   leasing: true,
-  company: true
+  company: true,
+  dex: true,
 };
 
 const isInverted = link => link === undefined || INVERTED_SKIN_LINKS[link];

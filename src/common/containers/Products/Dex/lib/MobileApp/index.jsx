@@ -10,19 +10,19 @@ import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-const MobileWallet = ({ classes, onAndroidClientClick, onIosClientClick }) => (
+const MobileApp = ({ classes, onAndroidClientClick, onIosClientClick }) => (
   <Row className={classes.root} alignItems="center">
-    <Col xs={12} sm={8} md={6}>
+    <Col xs={12} sm={8} md={8}>
       <Row>
         <Col xs={12} sm={10}>
-          <Typography type="display3Inverted">
-            <FormattedMessage id="product.mobileWallet.title" />
+          <Typography type="display3Inverted" inverted>
+            <FormattedMessage id="products.dex.mobileApp.title" />
           </Typography>
         </Col>
-        <Col xs={12} sm={8}>
+        <Col xs={12} sm={6}>
           <Margin top={2} xsOnly />
-          <Typography type="body">
-            <FormattedMessage id="product.mobileWallet.text" />
+          <Typography type="body" inverted>
+            <FormattedMessage id="products.dex.mobileApp.text" />
           </Typography>
         </Col>
       </Row>
@@ -32,27 +32,21 @@ const MobileWallet = ({ classes, onAndroidClientClick, onIosClientClick }) => (
       <Row className={classes.buttonRow}>
         <Col>
           <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-            <ButtonGetApp onClick={onAndroidClientClick} type="google-play" />
+            <ButtonGetApp
+              onClick={onAndroidClientClick}
+              type="google-play"
+              whited
+            />
           </Margin>
         </Col>
         <Col>
           <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-            <ButtonGetApp onClick={onIosClientClick} type="app-store" />
+            <ButtonGetApp onClick={onIosClientClick} type="app-store" whited />
           </Margin>
         </Col>
       </Row>
     </Col>
-    <Col xs={12} sm={4} md={6} className={classes.imageCol}>
-      <div className={classes.imageWrapper}>
-        <img
-          src={require('./img/tablet@1x.jpg')}
-          srcSet={`${require('./img/tablet@1x.jpg')} 1x, ${require('./img/tablet@2x.jpg')} 2x`}
-          alt="Download Mobile Client"
-          className={classes.image}
-        />
-      </div>
-    </Col>
   </Row>
 );
 
-export default injectSheet(styles)(MobileWallet);
+export default injectSheet(styles)(MobileApp);

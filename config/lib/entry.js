@@ -5,6 +5,7 @@ module.exports = {
   product: 'src/public/entries/product',
   wallet: 'src/public/entries/products/wallet',
   token: 'src/public/entries/products/token',
+  dex: 'src/public/entries/products/dex',
   getWaves: 'src/public/entries/getWaves',
   error404: 'src/public/entries/error404',
   wavesNG: 'src/public/entries/wavesNG',
