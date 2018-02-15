@@ -35,7 +35,7 @@ const DEXStats = ({ classes, dexData }) => (
         <Col xs={12} sm={6}>
           <Typography type="numeral" className={classes.number} inverted>
             <FormattedMessage
-              id="products.dex.dexVolume.numberlabel"
+              id="products.dex.dexVolume.number"
               values={{ volume: <FormattedNumber value={dexData.dexVolume} /> }}
             />
           </Typography>
