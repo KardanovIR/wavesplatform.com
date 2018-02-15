@@ -13,8 +13,8 @@ const DEXFeatures = () => (
       <Margin bottom={3} xsOnly />
       <AvatarTitleText
         avatar={<IconProduct name="safe" />}
-        title={<FormattedMessage id="product.DEXFeatures.security.title" />}
-        text={<FormattedMessage id="product.DEXFeatures.security.text" />}
+        title={<FormattedMessage id="products.dex.features.security.title" />}
+        text={<FormattedMessage id="products.dex.features.security.title" />}
         inverted
       />
       <Margin bottom={5} />
@@ -25,9 +25,11 @@ const DEXFeatures = () => (
       <AvatarTitleText
         avatar={<IconProduct name="noLimits" />}
         title={
-          <FormattedMessage id="product.DEXFeatures.tradeNoLimits.title" />
+          <FormattedMessage id="products.dex.features.tradeNoLimits.title" />
         }
-        text={<FormattedMessage id="product.DEXFeatures.tradeNoLimits.text" />}
+        text={
+          <FormattedMessage id="products.dex.features.tradeNoLimits.text" />
+        }
         inverted
       />
       <Margin bottom={5} />
@@ -37,8 +39,8 @@ const DEXFeatures = () => (
     <Col xs={12} sm={6}>
       <AvatarTitleText
         avatar={<IconProduct name="fees" />}
-        title={<FormattedMessage id="product.DEXFeatures.fees.title" />}
-        text={<FormattedMessage id="product.DEXFeatures.fees.text" />}
+        title={<FormattedMessage id="products.dex.features.fees.title" />}
+        text={<FormattedMessage id="products.dex.features.fees.text" />}
         inverted
       />
       <Margin bottom={5} />
@@ -48,8 +50,10 @@ const DEXFeatures = () => (
     <Col xs={12} sm={6}>
       <AvatarTitleText
         avatar={<IconProduct name="invisible" />}
-        title={<FormattedMessage id="product.DEXFeatures.frontRunning.title" />}
-        text={<FormattedMessage id="product.DEXFeatures.frontRunning.text" />}
+        title={
+          <FormattedMessage id="products.dex.features.frontRunning.title" />
+        }
+        text={<FormattedMessage id="products.dex.features.frontRunning.text" />}
         inverted
       />
       <Margin bottom={5} />

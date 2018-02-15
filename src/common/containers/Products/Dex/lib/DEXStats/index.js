@@ -16,7 +16,7 @@ const DEXStats = ({ classes, dexData }) => (
           <Margin bottom={1} xsOnly />
           <Typography type="numeral" className={classes.number} inverted>
             <FormattedMessage
-              id="product.DEX.wavesPrice.number"
+              id="products.dex.wavesPrice.number"
               values={{
                 price: (
                   <FormattedNumber
@@ -28,19 +28,19 @@ const DEXStats = ({ classes, dexData }) => (
             />
           </Typography>
           <Typography type="body" inverted>
-            <FormattedMessage id="product.DEX.wavesPrice.label" />
+            <FormattedMessage id="products.dex.wavesPrice.label" />
           </Typography>
           <Margin bottom={3} xsOnly />
         </Col>
         <Col xs={12} sm={6}>
           <Typography type="numeral" className={classes.number} inverted>
             <FormattedMessage
-              id="product.DEX.dexVolume.number"
+              id="products.dex.dexVolume.numberlabel"
               values={{ volume: <FormattedNumber value={dexData.dexVolume} /> }}
             />
           </Typography>
           <Typography type="body" inverted>
-            <FormattedMessage id="product.DEX.dexVolume.label" />
+            <FormattedMessage id="products.dex.dexVolume.label" />
           </Typography>
         </Col>
       </Row>

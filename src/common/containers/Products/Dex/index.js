@@ -15,6 +15,7 @@ const logSettings = {
   },
   MobileApp: { page: 'ProductDex', source: 'MobileApp' },
 };
+
 export default connect(undefined, {
   onDownloadClient: downloadClientChange({
     page: 'ProductDex',
