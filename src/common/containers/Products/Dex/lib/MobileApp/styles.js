@@ -1,5 +1,8 @@
 const styles = theme => ({
   root: {},
+  noShadow: {
+    boxShadow: 'none',
+  },
   buttonRow: {
     margin: 0,
     justifyContent: 'center',
