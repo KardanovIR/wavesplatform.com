@@ -8,4 +8,9 @@ export default theme => ({
   bgBlack: {
     background: theme.palette.gray[1000],
   },
+  bgMobileApp: {
+    backgroundSize: 'cover',
+    backgroundImage: `url(${require('../img/bgMobileApp.jpg')})`,
+    backgroundPosition: 'top',
+  },
 });

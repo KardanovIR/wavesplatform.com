@@ -24,13 +24,14 @@ const WalletMainScreen = ({
   classes,
 }) => (
   <MainScreen
-    title={<FormattedMessage id="products.token.title" />}
+    title={<FormattedMessage id="products.dex.title" />}
     titleType="displayCustom"
     text={
-      <Typography type="body" alignMobile="center" align="left">
-        <FormattedMessage id="products.token.description" />
+      <Typography type="body" alignMobile="center" align="left" inverted>
+        <FormattedMessage id="products.dex.description" />
       </Typography>
     }
+    inverted
     align="left"
     alignMobile="center"
     buttons={[
@@ -44,6 +45,7 @@ const WalletMainScreen = ({
         bordered
         key="main_cta_button2"
         target="_blank"
+        inverted
         href={url('online-client(beta)')}
       >
         <FormattedMessage id="cta.onlineClient" />

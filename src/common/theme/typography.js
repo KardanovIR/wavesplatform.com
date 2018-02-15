@@ -117,11 +117,18 @@ const creatyTypography = (palette, breakpoints) => {
         lineHeight: 1.12,
       }
     ),
-    body: combineMobileDesktopStyles(base, {
-      fontSize: 17,
-      lineHeight: 1.6,
-      margin: 0,
-    }),
+    body: combineMobileDesktopStyles(
+      base,
+      {
+        fontSize: 20,
+        lineHeight: 1.5,
+        margin: 0,
+      },
+      {
+        fontSize: 17,
+        lineHeight: 1.6,
+      }
+    ),
     body2: combineMobileDesktopStyles(
       {
         ...base,
