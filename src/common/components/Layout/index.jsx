@@ -33,6 +33,7 @@ const styles = theme => ({
 const Layout = ({
   children,
   classes,
+  inverted,
   activeLink,
   hideFooter,
   hideSnackbar,
@@ -50,7 +51,11 @@ const Layout = ({
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (
-          <Footer links={MOBILE_LINKS} hideCredentials={hideCredentials} />
+          <Footer
+            links={MOBILE_LINKS}
+            hideCredentials={hideCredentials}
+            inverted={inverted}
+          />
         )}
         {!hideSnackbar && (
           <SnackbarCta

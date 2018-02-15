@@ -9,7 +9,6 @@ import cn from 'classnames';
 import Logo from 'src/common/components/Logo';
 
 import { Row, Col } from 'src/common/components/Grid';
-import Typography from 'src/common/components/Typography';
 import Link from 'src/common/components/Link';
 
 import Social from './lib/Social';
@@ -19,7 +18,7 @@ import LanguageChooser from '../LanguageChooser';
 
 import url from 'src/common/utils/url';
 
-const Footer = ({ classes, links, hideCredentials }) => (
+const Footer = ({ classes, links, hideCredentials, inverted }) => (
   <div className={classes.root}>
     <footer className={classes.footer}>
       <Row className={classes.row}>
@@ -33,7 +32,7 @@ const Footer = ({ classes, links, hideCredentials }) => (
         </Col>
 
         <Col xs={6} md={6} className={classes.language}>
-          <LanguageChooser />
+          <LanguageChooser inverted={inverted} />
         </Col>
 
         <Col xs={12} md={6} className={cn(classes.copyright, classes.textGray)}>
