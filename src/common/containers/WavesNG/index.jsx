@@ -6,19 +6,15 @@ import { FormattedMessage } from 'react-intl';
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
-import Margin from 'src/common/components/Margin';
 import Typography from 'src/common/components/Typography';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import ContentContainer from 'src/common/components/ContentContainer';
-
-import AnchorScroll from 'src/public/components/AnchorScroll';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
 
 // lib
 import MainScreen from './lib/MainScreen';
-import StressTest from './lib/StressTest';
 import Descriptions from './lib/Descriptions';
 import News from './lib/News';
 
@@ -29,7 +25,7 @@ import styles from './styles';
 import { fileUrl } from 'src/common/utils/url';
 
 const PageLayout = ({ classes }) => (
-  <Layout hideSnackbar>
+  <Layout>
     <BackgroundMainScreen
       type="image"
       src={require('./lib/MainScreen/img/bg.jpg')}
