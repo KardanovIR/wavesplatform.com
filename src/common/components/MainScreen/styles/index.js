@@ -58,7 +58,7 @@ const styles = theme => ({
   buttonWrapper: {
     display: 'inline-block',
     width: '68%',
-    margin: `0 ${theme.spacing.unit * 4}px 0 0`,
+    margin: [0, theme.spacing.unit * 4, 0, 0],
     '&:last-child': {
       marginRight: 0,
     },
