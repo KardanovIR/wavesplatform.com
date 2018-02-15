@@ -31,7 +31,7 @@ const PageLayout = ({
   onAndroidClientClick,
   onIosClientClick,
 }) => (
-  <Layout inverted activeLink="dex">
+  <Layout inverted hideCredentials activeLink="dex">
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
       <ContentContainer>
         <MainScreen onDownloadChange={onDownloadClient} />

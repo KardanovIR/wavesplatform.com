@@ -36,7 +36,6 @@ const Layout = ({
   inverted,
   activeLink,
   hideFooter,
-  hideSnackbar,
   hideCredentials = false,
 }) => (
   <div className={classes.body}>
@@ -55,12 +54,6 @@ const Layout = ({
             links={MOBILE_LINKS}
             hideCredentials={hideCredentials}
             inverted={inverted}
-          />
-        )}
-        {!hideSnackbar && (
-          <SnackbarCta
-            text="Join our Waves community Telegram channel 🏄"
-            buttonText="JOIN"
           />
         )}
       </Wrapper>
