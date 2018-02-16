@@ -26,7 +26,7 @@ router
   .get('/', home)
   .get('/product', product)
   .get('/product/wallet', wallet)
-  .get('/product/token', token)
+  .get('/product/token-launcher', token)
   .get('/product/dex', dex)
   .get(
     '/developers',

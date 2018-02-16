@@ -5,7 +5,7 @@ import { downloadClientChange } from 'src/common/containers/DownloadClientDropdo
 
 import View from './View';
 
-const logSettings = { page: 'Product', source: 'MainScreen' };
+const logSettings = { page: 'ProductWallet', source: 'MainScreen' };
 
 export default connect(undefined, {
   onOnlineClientClick: () => newClientClick(logSettings),
