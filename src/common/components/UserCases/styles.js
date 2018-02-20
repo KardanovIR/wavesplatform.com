@@ -1,18 +1,18 @@
 const styles = theme => ({
-  '@global .swiper-wrapper': {
-    alignItems: 'flex-end',
+  '@global .swiper-slide ': {
+    height: 'auto',
   },
   slide: {
     display: 'flex',
+    flexGrow: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'space-between',
     backgroundSize: 'cover',
     backgroundPosition: '50% 50%',
     width: `calc(100vw - ${theme.spacing.unit * 6}px)`,
     boxSizing: 'border-box',
   },
   row: {
-    height: '100%',
     position: 'relative',
   },
   body: {

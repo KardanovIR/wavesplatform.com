@@ -1,28 +1,35 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import url from 'src/common/utils/url';
-import withIsDesktopFlag from 'src/public/hoc/isDesktop';
 
 import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 import Button from 'src/common/components/Button';
 import MainScreen from 'src/common/components/MainScreen';
+import injectSheet from 'react-jss';
+
+const styles = theme => ({
+  downloadButton: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
+      display: 'block',
+    },
+  },
+});
 
 const GetWavesMainScreen = ({
   onNewClientClick,
-  isDesktop,
   onDropdownChange,
+  classes,
 }) => (
   <MainScreen
     title={<FormattedMessage id="getWaves.title" />}
     buttons={[
-      ...(isDesktop
-        ? [
-            <DownloadClientDropdown
-              key="main_cta_button1"
-              onChange={onDropdownChange}
-            />,
-          ]
-        : []),
+      <DownloadClientDropdown
+        key="main_cta_button1"
+        onChange={onDropdownChange}
+        containerClassName={classes.downloadButton}
+      />,
+
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
@@ -35,4 +42,4 @@ const GetWavesMainScreen = ({
   />
 );
 
-export default withIsDesktopFlag(GetWavesMainScreen);
+export default injectSheet(styles)(GetWavesMainScreen);

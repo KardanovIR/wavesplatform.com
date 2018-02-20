@@ -33,9 +33,9 @@ const styles = theme => ({
 const Layout = ({
   children,
   classes,
+  inverted,
   activeLink,
   hideFooter,
-  hideSnackbar,
   hideCredentials = false,
 }) => (
   <div className={classes.body}>
@@ -50,12 +50,10 @@ const Layout = ({
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (
-          <Footer links={MOBILE_LINKS} hideCredentials={hideCredentials} />
-        )}
-        {!hideSnackbar && (
-          <SnackbarCta
-            text="Join our Waves community Telegram channel 🏄"
-            buttonText="JOIN"
+          <Footer
+            links={MOBILE_LINKS}
+            hideCredentials={hideCredentials}
+            inverted={inverted}
           />
         )}
       </Wrapper>

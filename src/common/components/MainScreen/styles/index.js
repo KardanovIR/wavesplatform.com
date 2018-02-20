@@ -15,7 +15,7 @@ const styles = theme => ({
   },
 
   inner: {
-    paddingTop: theme.spacing.unit * 4,
+    paddingTop: theme.spacing.unit * 8,
     width: '100%',
   },
 
@@ -31,6 +31,11 @@ const styles = theme => ({
   descriptionText: {
     fontSize: 16,
     lineHeight: 2,
+    textAlign: ({ alignMobile }) => alignMobile,
+
+    [theme.breakpoints.up('md')]: {
+      textAlign: ({ align }) => align,
+    },
     color: ({ inverted }) => (inverted ? theme.palette.gray[0] : 'inherit'),
   },
 
@@ -38,12 +43,25 @@ const styles = theme => ({
     margin: [0, -theme.spacing.unit * 0.5],
     display: 'flex',
     justifyContent: 'center',
+    [theme.breakpoints.up('md')]: {
+      justifyContent: ({ align }) => {
+        switch (align) {
+          case 'left':
+            return 'flex-start';
+          case 'center':
+            return 'center';
+        }
+      },
+    },
   },
 
   buttonWrapper: {
     display: 'inline-block',
-    margin: [0, theme.spacing.unit * 0.5],
     width: '68%',
+    margin: [0, theme.spacing.unit * 4, 0, 0],
+    '&:last-child': {
+      marginRight: 0,
+    },
   },
 
   button: {
@@ -51,16 +69,12 @@ const styles = theme => ({
     width: '100%',
     boxSizing: 'border-box',
   },
-
   [theme.mixins.atMedia('sm')]: {
     xsOnly: {
       display: 'none',
     },
     xsHidden: {
       display: 'block',
-    },
-    inner: {
-      paddingTop: theme.spacing.unit * 8,
     },
     imageCol: {
       position: 'relative',
@@ -82,10 +96,6 @@ const styles = theme => ({
     descriptionText: {
       fontSize: 23,
       lineHeight: 1.4,
-    },
-    buttonsContainer: {
-      margin: 0,
-      display: 'block',
     },
     buttonWrapper: {
       margin: theme.spacing.getSpacing(0, 2),

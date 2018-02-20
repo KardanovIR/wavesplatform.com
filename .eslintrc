@@ -1,67 +1,57 @@
 {
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "commonjs": true,
-        "es6": true
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": "off",
+
+    "no-irregular-whitespace": "warn",
+    "react/prop-types": [
+      "off",
+      {
+        "skipUndeclared": true
+      }
     ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
+    "react/jsx-no-bind": [
+      "warn",
+      {
+        "ignoreRefs": true,
+        "allowArrowFunctions": false,
+        "allowBind": false
+      }
     ],
-    "rules": {
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": "off",
-        "indent": [
-            "error",
-            2,
-            { "SwitchCase": 1 },
-            { "ArrayExpression": 0 }
-        ],
-        "no-irregular-whitespace": "warn",
-        "react/prop-types": [
-            "off",
-            {
-                "skipUndeclared": true
-            }
-        ],
-        "react/jsx-no-bind": [
-            "warn",
-            {
-                "ignoreRefs": true,
-                "allowArrowFunctions": false,
-                "allowBind": false
-            }
-        ],
-        "react/jsx-space-before-closing": [
-            "warn",
-            "always"
-        ],
-        "react/jsx-key": "error",
-        "react/no-did-update-set-state": "error",
-        "react/self-closing-comp": "warn",
-        "react/no-string-refs": "error",
-        "react/prefer-stateless-function": "error",
-        "react/jsx-wrap-multilines": "warn",
-        "no-constant-condition": ["error", { "checkLoops": false }]
-    },
-    "globals": {
-        "__dirname": false,
-        "__filename": false,
-        "process": false,
-        "NODE_ENV": false
-    }
+    "react/jsx-space-before-closing": ["warn", "always"],
+    "react/jsx-key": "error",
+    "react/no-did-update-set-state": "error",
+    "react/self-closing-comp": "warn",
+    "react/no-string-refs": "error",
+    "react/prefer-stateless-function": "error",
+    "react/jsx-wrap-multilines": "warn",
+    "no-constant-condition": ["error", { "checkLoops": false }]
+  },
+  "globals": {
+    "__dirname": false,
+    "__filename": false,
+    "process": false,
+    "NODE_ENV": false
+  }
 }

@@ -12,4 +12,4 @@ const handlersMap = {
 };
 
 export const downloadClientChange = logSettings => ({ handler }) =>
-  handlersMap[handler](logSettings);
+  handler ? handlersMap[handler](logSettings) : _ => _;
