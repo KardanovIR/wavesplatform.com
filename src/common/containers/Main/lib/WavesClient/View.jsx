@@ -25,10 +25,10 @@ const MainScreen = ({ classes, onGetClientClick }) => (
                 onClick={onGetClientClick}
                 key="main_cta_button"
                 target="_blank"
-                href={url('online-client')}
+                href={url('online-client(beta)')}
                 secondary
               >
-                <FormattedMessage id="cta.onlineClientOld" />
+                <FormattedMessage id="cta.onlineClient" />
               </Button>,
             ]}
             inverted

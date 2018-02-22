@@ -18,7 +18,7 @@ const styles = theme => ({
   },
 });
 
-const WalletMainScreen = ({
+const DexMainScreen = ({
   onDownloadChange,
   onOnlineClientClick,
   classes,
@@ -54,4 +54,4 @@ const WalletMainScreen = ({
   />
 );
 
-export default injectSheet(styles)(WalletMainScreen);
+export default injectSheet(styles)(DexMainScreen);

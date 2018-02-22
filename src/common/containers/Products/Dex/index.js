@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import App from './View.jsx';
+import View from './View.jsx';
 import { downloadClientChange } from 'src/common/containers/DownloadClientDropdown/lib/actions';
 import {
   androidClientClick,
@@ -25,4 +25,4 @@ export default connect(undefined, {
 
   onAndroidClientClick: () => androidClientClick(logSettings.MobileApp),
   onIosClientClick: () => iosClientClick(logSettings.MobileApp),
-})(App);
+})(View);
