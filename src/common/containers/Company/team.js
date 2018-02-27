@@ -88,19 +88,6 @@ export default [
     ],
   },
   {
-    fullName: <FormattedMessage id="teamMembers.4.fullName" />,
-    position: <FormattedMessage id="teamMembers.4.position" />,
-    imageUrl1x: `url(${Natalya_Malyova1x})`,
-    imageUrl2x: `url(${Natalya_Malyova2x})`,
-    social: [
-      {
-        type: 'email',
-        url: 'mailto:malyova@wavesplatform.com',
-      },
-    ],
-  },
-
-  {
     fullName: <FormattedMessage id="teamMembers.5.fullName" />,
     position: <FormattedMessage id="teamMembers.5.position" />,
     imageUrl1x: `url(${Alexey_Kofman1x})`,
