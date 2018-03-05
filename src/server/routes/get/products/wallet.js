@@ -1,5 +1,7 @@
 import compose from 'koa-compose';
+
 import { render } from 'src/server/middleware/render';
+
 import Wallet from 'src/common/containers/Products/Wallet';
 
 export default compose([

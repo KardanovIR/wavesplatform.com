@@ -32,7 +32,8 @@ const GetWavesMainScreen = ({
 
       <Button
         onClick={onNewClientClick}
-        href={url('online-client(beta)')}
+				href={url('online-client(beta)')}
+				target="_blank"
         key="main_cta_button2"
         bordered
       >

@@ -1,10 +1,13 @@
 import compose from 'koa-compose';
-import { render } from 'src/server/middleware/render';
-import Dex from 'src/common/containers/Products/Dex';
+
 import runApiRequests, {
   getDexData,
   getDexTopPairs,
 } from 'src/server/middleware/api';
+import { render } from 'src/server/middleware/render';
+
+import Dex from 'src/common/containers/Products/Dex';
+
 export default compose([
   runApiRequests([getDexTopPairs, getDexData]),
   render({

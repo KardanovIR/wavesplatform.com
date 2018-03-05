@@ -31,7 +31,8 @@ const IndexMainScreen = ({ onNewClientClick, onDownloadChange, classes }) => (
       <Button
         onClick={onNewClientClick}
         href={url('online-client(beta)')}
-        key="main_cta_button2"
+				key="main_cta_button2"
+				target="_blank"
         bordered
       >
         <FormattedMessage id="cta.onlineClient" />

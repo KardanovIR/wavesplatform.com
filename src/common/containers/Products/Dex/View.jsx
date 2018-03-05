@@ -28,13 +28,17 @@ const PageLayout = ({
   initialState,
   classes,
   onDownloadClient,
+  onOnlineClientClick,
   onAndroidClientClick,
   onIosClientClick,
 }) => (
-  <Layout inverted activeLink="dex">
+  <Layout inverted hideCredentials activeLink="dex">
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
       <ContentContainer>
-        <MainScreen onDownloadChange={onDownloadClient} />
+        <MainScreen
+          onDownloadChange={onDownloadClient}
+          onOnlineClientClick={onOnlineClientClick}
+        />
       </ContentContainer>
     </BackgroundMainScreen>
 

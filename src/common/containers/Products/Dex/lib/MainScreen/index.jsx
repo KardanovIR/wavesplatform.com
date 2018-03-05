@@ -18,7 +18,7 @@ const styles = theme => ({
   },
 });
 
-const WalletMainScreen = ({
+const DexMainScreen = ({
   onDownloadChange,
   onOnlineClientClick,
   classes,
@@ -27,12 +27,12 @@ const WalletMainScreen = ({
     title={<FormattedMessage id="products.dex.title" />}
     titleType="displayCustom"
     text={
-      <Typography type="body" alignMobile="center" align="left" inverted>
+      <Typography type="body" alignMobile="center" align="center" inverted>
         <FormattedMessage id="products.dex.description" />
       </Typography>
     }
     inverted
-    align="left"
+    align="center"
     alignMobile="center"
     buttons={[
       <DownloadClientDropdown
@@ -54,4 +54,4 @@ const WalletMainScreen = ({
   />
 );
 
-export default injectSheet(styles)(WalletMainScreen);
+export default injectSheet(styles)(DexMainScreen);

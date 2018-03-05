@@ -36,12 +36,18 @@ const MobileApp = ({ classes, onAndroidClientClick, onIosClientClick }) => (
               onClick={onAndroidClientClick}
               type="google-play"
               whited
+              className={classes.noShadow}
             />
           </Margin>
         </Col>
         <Col>
           <Margin bottom={1} right={1} className={classes.buttonWrapper}>
-            <ButtonGetApp onClick={onIosClientClick} type="app-store" whited />
+            <ButtonGetApp
+              onClick={onIosClientClick}
+              type="app-store"
+              className={classes.noShadow}
+              whited
+            />
           </Margin>
         </Col>
       </Row>

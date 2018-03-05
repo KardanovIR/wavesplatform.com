@@ -53,8 +53,8 @@ const TableDesktop = injectSheet(styles)(({ classes }) => [
       <Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://waveswallet.io">
-        waveswallet.io
+      <Link target="_blank" href="https://beta.wavesplatform.com">
+				beta.wavesplatform.com
       </Link>
     </Col>
   </Row>,
@@ -69,9 +69,9 @@ const TableDesktop = injectSheet(styles)(({ classes }) => [
       <Margin bottom={1} xsOnly />
     </Col>
     <Col xs={12} sm={4} className={classes.elipsis}>
-      <Link target="_blank" href="https://testnet.waveswallet.io">
-        testnet.waveswallet.io
-      </Link>
+      <Typography inverted dimmed type="body">
+				—
+      </Typography>
     </Col>
   </Row>,
 ]);
