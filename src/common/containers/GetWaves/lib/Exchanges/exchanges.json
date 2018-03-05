@@ -59,5 +59,9 @@
 	{
 		"logo": "https://wavesplatform.com/files/images/exchange_logo/evercoin.svg",
 		"url": "https://evercoin.com"
-	}
+  },
+  {
+    "logo":"https://wavesplatform.com/files/images/exchange_logo/indacoin-logo.svg",
+    "url": "https://indacoin.com/xx_xx/change/buy-waves-with-cardusd"
+  }
 ]
