@@ -8,8 +8,11 @@ export const withLocalStorage = field => WrappedComponent =>
       super(props);
       this.available = isLocalStorageAvailable();
       this.initialValue = this.getInitialValue();
+      this.state = { value: this.initialValue };
     }
-
+    forceUpdate() {
+      this.setState({ seed: Math.random() });
+    }
     getInitialValue() {
       return this.available ? localStorage[field] : undefined;
     }
@@ -17,6 +20,7 @@ export const withLocalStorage = field => WrappedComponent =>
     handleLocalStorageUpdate = newValue => {
       if (this.available) {
         localStorage[field] = newValue;
+        this.setState({ value: newValue });
       }
     };
 
@@ -24,7 +28,8 @@ export const withLocalStorage = field => WrappedComponent =>
       return (
         <WrappedComponent
           onLocalStorageUpdate={this.handleLocalStorageUpdate}
-          initialValue={this.initialValue}
+          initialValue={this.getInitialValue}
+          value={this.state.value}
           {...this.props}
         />
       );

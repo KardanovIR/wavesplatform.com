@@ -9,6 +9,8 @@ import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown
 import shadow from 'src/common/styles/shadow';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
+import { withLocalStorage } from 'src/public/hoc/localStorage';
+
 const styles = theme => ({
   textContainer: {
     position: 'fixed',
@@ -57,22 +59,23 @@ const styles = theme => ({
     boxSizing: 'border-box',
   },
 });
-let opened = true;
-const containerHoc = Component =>
+const containerHoc = Component => {
+  @withLocalStorage('telegramPopup')
   class Container extends React.Component {
-    handlePopupClose = () =>
-      this.setState(({ opened }) => ({ opened: !opened }));
-    state = { opened: true };
+    handlePopupClose = () => this.props.onLocalStorageUpdate('shown');
     render() {
       return (
         <Component
           onClose={this.handlePopupClose}
-          opened={this.state.opened}
+          opened={this.props.value !== 'shown'}
           {...this.props}
         />
       );
     }
-  };
+  }
+  return Container;
+};
+
 const Background = ({ className }) => (
   <img
     className={className}
