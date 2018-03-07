@@ -26,31 +26,40 @@ const styles = theme => ({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   inner: {
-    width: 800,
-    height: 400,
-    backgroundImage: `url(${require('./bg.jpg')})`,
-    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'center',
     boxShadow: '0 2px 20px rgba(0, 0, 0, 0.3)',
   },
-  // closeButton: {
-  //   display: 'none',
-  // },
-  textOuter: { position: 'relative' },
+  innerText: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingLeft: theme.spacing.unit * 4,
+    paddingRight: theme.spacing.unit * 4,
+    paddingTop: theme.spacing.unit * 8,
+    paddingBottom: theme.spacing.unit * 8,
+    boxSizing: 'border-box',
+  },
+  [theme.breakpoints.up('tablet')]: {
+    inner: {
+      width: 800,
+      height: 400,
+    },
+    innerText: {
+      width: '50%',
+      alignItems: 'flex-start',
+    },
+  },
+
+  textOuter: { position: 'relative', overflow: 'hidden' },
   text: {
     width: '100%',
     height: '100%',
     display: 'inherit',
-  },
-
-  innerText: {
-    width: '50%',
-    paddingLeft: theme.spacing.unit * 4,
-    paddingTop: theme.spacing.unit * 8,
-    paddingBottom: theme.spacing.unit * 8,
-    boxSizing: 'border-box',
   },
 });
 import { joinTelegramClick } from 'src/public/actions';
@@ -82,7 +91,7 @@ const containerHoc = Component => {
     handlePopupClose = () => this.props.onLocalStorageUpdate('shown');
     handleTelegramClick = () => this.props.onTelegramClick();
     getTelegramHref = () =>
-      pathOr('', [this.props.getLocale()], TELEGRAM_LINKS);
+      pathOr(TELEGRAM_LINKS['en'], [this.props.getLocale()], TELEGRAM_LINKS);
     render() {
       return (
         <Component
@@ -97,21 +106,55 @@ const containerHoc = Component => {
   }
   return Container;
 };
-const stylesBg = {
+const stylesBg = theme => ({
   bg: {
     position: 'absolute',
     right: 0,
     top: 0,
     zIndex: -1,
-    height: '100%',
-    width: 'auto',
+    bottom: 0,
+    left: 0,
   },
-};
+  img: {
+    display: 'none',
+  },
+  imgMobile: {
+    display: 'block',
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    zIndex: -1,
+    height: 'auto',
+    width: '100%',
+  },
+  [theme.breakpoints.up('tablet')]: {
+    img: {
+      display: 'block',
+      position: 'absolute',
+      right: 0,
+      top: 0,
+      zIndex: -1,
+      bottom: 0,
+      width: 'auto',
+    },
+    imgMobile: {
+      display: 'none',
+    },
+  },
+});
 const Background = injectSheet(stylesBg)(({ classes }) => (
-  <img
-    className={classes.bg}
-    srcSet={`${require('./bg.jpg')} 1x, ${require('./bg@2x.jpg')} 2x`}
-  />
+  <div className={classes.bg}>
+    <img
+      className={classes.img}
+      src={require('./bg.jpg')}
+      srcSet={`${require('./bg.jpg')} 1x, ${require('./bg@2x.jpg')} 2x`}
+    />
+    <img
+      className={classes.imgMobile}
+      src={require('./bgMobile.jpg')}
+      srcSet={`${require('./bgMobile.jpg')} 1x, ${require('./bgMobile@2x.jpg')} 2x`}
+    />
+  </div>
 ));
 
 const View = ({ classes, onClose, opened, onTelegramClick, telegramHref }) => (
@@ -119,11 +162,24 @@ const View = ({ classes, onClose, opened, onTelegramClick, telegramHref }) => (
     <div className={classes.inner}>
       <div className={classes.innerText}>
         <Background />
-        <Typography type="display3" tagName="div" cut inverted weight={700}>
-          Join our Telegram channel
+        <Typography
+          type="display3"
+          align="left"
+          alignMobile="center"
+          cut
+          inverted
+          weight={700}
+        >
+          <FormattedHTMLMessage id="popup.telegram.title" />
         </Typography>
-        <Typography type="body" inverted weight={400}>
-          Get the latest Waves news!
+        <Typography
+          type="body"
+          align="left"
+          alignMobile="center"
+          inverted
+          weight={400}
+        >
+          <FormattedMessage id="popup.telegram.text" />
         </Typography>
         <Margin bottom={3} />
         <Button
@@ -133,7 +189,7 @@ const View = ({ classes, onClose, opened, onTelegramClick, telegramHref }) => (
           target="_blank"
           inverted
         >
-          Join channel
+          <FormattedMessage id="popup.telegram.cta" />
         </Button>
       </div>
     </div>

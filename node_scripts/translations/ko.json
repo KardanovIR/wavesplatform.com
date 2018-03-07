@@ -313,6 +313,9 @@
   "nav.developers": "개발자들",
   "nav.getWaves": "Waves 받기",
   "nav.product": "상품",
+  "popup.telegram.title": "텔레그램<br/>채널에<br/>참여하세요",
+  "popup.telegram.text": "Waves의 최신 소식을 받아보세요!",
+  "popup.telegram.cta": "채널에 참여",
   "product.DEX.description":
     "By trading on a centralized exchange, you risk losing your funds in the event of hacking, which has happened on almost all popular exchanges. The main advantage of our exchange is that the money is always stored in your wallet, and the match only compares orders. <br /> <br /> You retain complete control over your funds when trading them on our decentralized exchange. The DEX is powered by a matcher, which stores user orders and sends token exchange transactions for fulfilled orders.",
   "product.DEX.dexVolume.label": "24시간 DEX 볼륨",

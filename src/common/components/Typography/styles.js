@@ -14,7 +14,7 @@ const generateAligns = theme =>
   ['left', 'right', 'center'].reduce((acc, v) => {
     acc[`align-${v}`] = {
       textAlign: ({ alignMobile }) => alignMobile,
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('tablet')]: {
         textAlign: ({ align }) => align,
       },
     };
