@@ -28,6 +28,7 @@ export default function(theme) {
       WebkitOverflowScrolling: 'touch',
     },
     closeButton: {
+      cursor: 'pointer',
       position: 'absolute',
       top: 17,
       right: 20,
@@ -49,7 +50,7 @@ export default function(theme) {
         top: '50%',
         left: '50%',
         width: 26,
-        height: 3,
+        height: 1,
         backgroundColor: '#000',
         transformOrigin: '50% 50%',
       },

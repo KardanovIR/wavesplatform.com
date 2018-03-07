@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-
+import PopupTelegram from 'src/common/components/PopupTelegram';
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
@@ -121,6 +121,7 @@ const PageLayout = ({ initialState, classes }) => (
           <SubscribeSection />
         </ContentContainer>
       </Section>
+      <PopupTelegram />
     </Wrapper>
   </Layout>
 );
