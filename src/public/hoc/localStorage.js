@@ -10,9 +10,7 @@ export const withLocalStorage = field => WrappedComponent =>
       this.initialValue = this.getInitialValue();
       this.state = { value: this.initialValue };
     }
-    forceUpdate() {
-      this.setState({ seed: Math.random() });
-    }
+
     getInitialValue() {
       return this.available ? localStorage[field] : undefined;
     }
@@ -28,8 +26,8 @@ export const withLocalStorage = field => WrappedComponent =>
       return (
         <WrappedComponent
           onLocalStorageUpdate={this.handleLocalStorageUpdate}
-          initialValue={this.getInitialValue}
-          value={this.state.value}
+          initialValue={this.initialValue}
+          currentValue={this.state.value}
           {...this.props}
         />
       );

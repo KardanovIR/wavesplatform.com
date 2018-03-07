@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import window from 'global/window';
 import { pathOr } from 'ramda';
 
-import { withCookies } from 'react-cookie';
 import { LANGUAGE_MAP, ICONS_MAP } from './lib/constants.js';
 import Select from 'react-select';
 import Null from 'src/common/components/Null';
@@ -13,30 +12,32 @@ import styles from './styles';
 const createOption = lang => ({ value: lang, label: LANGUAGE_MAP[lang] });
 const availableLocales = pathOr([], ['__AVAILABLE_LOCALES'])(window);
 const OPTIONS = availableLocales.map(createOption);
-const COOKIE_LANGUAGE_PATH = 'locale';
 const Arrow = ICONS_MAP.arrow;
 const arrowUp = <Arrow style={{ transform: 'rotate(180deg)' }} />;
 const arrowDown = <Arrow />;
 const arrowRenderer = ({ isOpen }) => (isOpen ? arrowUp : arrowDown);
 
+import { withLocaleCookie } from 'src/public/hoc/withLocaleCookie';
+
+@withLocaleCookie
 @injectSheet(styles)
-@withCookies
 class LanguageChooser extends PureComponent {
   static propTypes = {
-    cookies: PropTypes.object.isRequired,
+    onLocaleChange: PropTypes.func,
+    getLocale: PropTypes.func,
     inverted: PropTypes.bool,
   };
   static defaultProps = {
     inverted: false,
+    onLocaleChange: _ => _,
+    getLocale: _ => _,
   };
   handleChange = language => {
-    this.props.cookies.set(COOKIE_LANGUAGE_PATH, language, {
-      domain: '.wavesplatform.com',
-    });
+    this.props.onLocaleChange(language);
     document.location.reload(true);
   };
   render() {
-    const { cookies, classes } = this.props;
+    const { classes, getLocale } = this.props;
     if (!availableLocales || availableLocales.length === 0) {
       return null;
     }
@@ -47,7 +48,7 @@ class LanguageChooser extends PureComponent {
         onChange={this.handleChange}
         optionComponent={LanguageOption}
         options={OPTIONS}
-        value={cookies.get(COOKIE_LANGUAGE_PATH)}
+        value={getLocale()}
         valueComponent={LanguageValue}
         simpleValue
         searchable={false}

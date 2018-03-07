@@ -54,6 +54,8 @@ const styles = theme => ({
   },
 });
 import { joinTelegramClick } from 'src/public/actions';
+import { withLocaleCookie } from 'src/public/hoc/withLocaleCookie';
+import { pathOr } from 'ramda';
 
 const configAnalyticsHoc = logSettings =>
   connect(undefined, {
@@ -61,22 +63,33 @@ const configAnalyticsHoc = logSettings =>
   });
 
 const containerHoc = Component => {
+  const TELEGRAM_LINKS = {
+    en: 'https://t.me/Wavescommunity',
+    ko: 'https://t.me/WavesKR',
+  };
   @withLocalStorage('telegramPopup')
+  @withLocaleCookie
   class Container extends React.Component {
     static propTypes = {
       onTelegramClick: pt.func,
+      getLocale: pt.func,
+      currentValue: pt.string,
     };
     static defaultProps = {
       onTelegramClick: _ => _,
+      getLocale: _ => _,
     };
     handlePopupClose = () => this.props.onLocalStorageUpdate('shown');
     handleTelegramClick = () => this.props.onTelegramClick();
+    getTelegramHref = () =>
+      pathOr('', [this.props.getLocale()], TELEGRAM_LINKS);
     render() {
       return (
         <Component
           onClose={this.handlePopupClose}
-          opened={this.props.value !== 'shown'}
+          opened={this.props.currentValue !== 'shown'}
           onTelegramClick={this.handleTelegramClick}
+          telegramHref={this.getTelegramHref()}
           {...this.props}
         />
       );
@@ -100,7 +113,8 @@ const Background = injectSheet(stylesBg)(({ classes }) => (
     srcSet={`${require('./bg.jpg')} 1x, ${require('./bg@2x.jpg')} 2x`}
   />
 ));
-const View = ({ classes, onClose, opened, onTelegramClick }) => (
+
+const View = ({ classes, onClose, opened, onTelegramClick, telegramHref }) => (
   <Popup show={opened} classes={classes} inverted onClose={onClose}>
     <div className={classes.inner}>
       <div className={classes.innerText}>
@@ -114,7 +128,7 @@ const View = ({ classes, onClose, opened, onTelegramClick }) => (
         <Margin bottom={3} />
         <Button
           onClick={onTelegramClick}
-          // href={url('online-client(beta)')}
+          href={telegramHref}
           key="main_cta_button2"
           target="_blank"
           inverted
