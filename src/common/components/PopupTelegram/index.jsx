@@ -5,8 +5,9 @@ import Typography from 'src/common/components/Typography';
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
 import Margin from 'src/common/components/Margin';
-import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
-import shadow from 'src/common/styles/shadow';
+import { connect } from 'react-redux';
+import { compose } from 'ramda';
+import pt from 'prop-types';
 
 import { FormattedHTMLMessage, FormattedMessage } from 'react-intl';
 import { withLocalStorage } from 'src/public/hoc/localStorage';
@@ -43,14 +44,7 @@ const styles = theme => ({
     height: '100%',
     display: 'inherit',
   },
-  bg: {
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    zIndex: -1,
-    height: '100%',
-    width: 'auto',
-  },
+
   innerText: {
     width: '50%',
     paddingLeft: theme.spacing.unit * 4,
@@ -59,15 +53,30 @@ const styles = theme => ({
     boxSizing: 'border-box',
   },
 });
+import { joinTelegramClick } from 'src/public/actions';
+
+const configAnalyticsHoc = logSettings =>
+  connect(undefined, {
+    onTelegramClick: () => joinTelegramClick(logSettings),
+  });
+
 const containerHoc = Component => {
   @withLocalStorage('telegramPopup')
   class Container extends React.Component {
+    static propTypes = {
+      onTelegramClick: pt.func,
+    };
+    static defaultProps = {
+      onTelegramClick: _ => _,
+    };
     handlePopupClose = () => this.props.onLocalStorageUpdate('shown');
+    handleTelegramClick = () => this.props.onTelegramClick();
     render() {
       return (
         <Component
           onClose={this.handlePopupClose}
           opened={this.props.value !== 'shown'}
+          onTelegramClick={this.handleTelegramClick}
           {...this.props}
         />
       );
@@ -75,18 +84,27 @@ const containerHoc = Component => {
   }
   return Container;
 };
-
-const Background = ({ className }) => (
+const stylesBg = {
+  bg: {
+    position: 'absolute',
+    right: 0,
+    top: 0,
+    zIndex: -1,
+    height: '100%',
+    width: 'auto',
+  },
+};
+const Background = injectSheet(stylesBg)(({ classes }) => (
   <img
-    className={className}
+    className={classes.bg}
     srcSet={`${require('./bg.jpg')} 1x, ${require('./bg@2x.jpg')} 2x`}
   />
-);
-const View = ({ classes, onClose, opened }) => (
+));
+const View = ({ classes, onClose, opened, onTelegramClick }) => (
   <Popup show={opened} classes={classes} inverted onClose={onClose}>
     <div className={classes.inner}>
       <div className={classes.innerText}>
-        <Background className={classes.bg} />
+        <Background />
         <Typography type="display3" tagName="div" cut inverted weight={700}>
           Join our Telegram channel
         </Typography>
@@ -95,7 +113,7 @@ const View = ({ classes, onClose, opened }) => (
         </Typography>
         <Margin bottom={3} />
         <Button
-          // onClick={onNewClientClick}
+          onClick={onTelegramClick}
           // href={url('online-client(beta)')}
           key="main_cta_button2"
           target="_blank"
@@ -107,4 +125,11 @@ const View = ({ classes, onClose, opened }) => (
     </div>
   </Popup>
 );
-export default injectSheet(styles)(containerHoc(View));
+
+const logSettings = { page: 'Home' };
+
+export default compose(
+  configAnalyticsHoc(logSettings),
+  containerHoc,
+  injectSheet(styles)
+)(View);
