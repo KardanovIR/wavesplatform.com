@@ -4,7 +4,7 @@ import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 
 import Footer from '../Footer';
-import SnackbarCta from 'src/common/components/SnackbarCta';
+import PopupTelegram from 'src/common/containers/PopupTelegram';
 
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
@@ -47,6 +47,7 @@ const Layout = ({
       />
     </div>
     {children}
+    <PopupTelegram page={activeLink} />
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (

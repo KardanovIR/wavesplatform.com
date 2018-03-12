@@ -29,7 +29,7 @@ import styles from './styles';
 // url
 
 const PageLayout = ({ classes }) => (
-  <Layout activeLink="product" hideCredentials>
+  <Layout activeLink="product/wallet" hideCredentials>
     <BackgroundMainScreen
       type="image"
       src={require('./img/bg.jpg')}

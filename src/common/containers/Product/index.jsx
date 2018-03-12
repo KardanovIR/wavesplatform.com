@@ -18,6 +18,7 @@ import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 // containers
 import UserCases from 'src/common/components/UserCases';
 import HowToWallet from 'src/common/components/HowToWallet';
+import PopupTelegram from 'src/common/containers/PopupTelegram';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -146,6 +147,7 @@ const PageLayout = ({ classes, initialState }) => (
           <HowToTrade />
         </ContentContainer>
       </Section>
+      <PopupTelegram page="Product" />
     </Wrapper>
   </Layout>
 );

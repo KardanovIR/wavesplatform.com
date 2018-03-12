@@ -12,7 +12,6 @@ import Facts from 'src/common/components/Facts';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
-import PopupTelegram from 'src/common/containers/PopupTelegram';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -121,7 +120,6 @@ const PageLayout = ({ initialState, classes }) => (
           <SubscribeSection />
         </ContentContainer>
       </Section>
-      <PopupTelegram page="Main" />
     </Wrapper>
   </Layout>
 );

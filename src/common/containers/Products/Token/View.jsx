@@ -26,7 +26,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const PageLayout = ({ initialState, classes, onDropdownChange }) => (
-  <Layout activeLink="product" hideCredentials>
+  <Layout activeLink="product/token" hideCredentials>
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
       <ContentContainer>
         <MainScreen />
