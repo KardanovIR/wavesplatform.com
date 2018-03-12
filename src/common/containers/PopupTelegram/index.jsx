@@ -19,7 +19,7 @@ const configAnalyticsHoc = connect(undefined, (dispatch, { page }) => ({
   onTelegramClick: () => dispatch(joinTelegramClick({ page })),
   onCloseClick: () => dispatch(closeTelegramClick({ page })),
 }));
-
+const noop = _ => _;
 const containerHoc = Component => {
   @withLocalStorage('telegramPopup')
   @withLocaleCookie
@@ -28,18 +28,30 @@ const containerHoc = Component => {
       onTelegramClick: pt.func,
       onCloseClick: pt.func,
       getLocale: pt.func,
-      currentValue: pt.string,
+      onLocalStorageUpdate: pt.func,
+      initialValue: pt.string,
     };
 
     static defaultProps = {
-      onTelegramClick: _ => _,
-      onCloseClick: _ => _,
-      getLocale: _ => _,
+      onTelegramClick: noop,
+      onCloseClick: noop,
+      getLocale: noop,
+      onLocalStorageUpdate: noop,
     };
 
+    constructor(props, ...etc) {
+      super(props, ...etc);
+      this.state = {
+        opened: props.initialValue !== 'shown',
+      };
+    }
+
     handlePopupClose = () => {
-      this.props.onCloseClick();
-      this.props.onLocalStorageUpdate('shown');
+      const { onCloseClick, onLocalStorageUpdate } = this.props;
+
+      onCloseClick();
+      onLocalStorageUpdate('shown');
+      this.setState({ opened: false });
     };
 
     handleTelegramClick = () => this.props.onTelegramClick();
@@ -51,7 +63,7 @@ const containerHoc = Component => {
       return (
         <Component
           onClose={this.handlePopupClose}
-          opened={this.props.currentValue !== 'shown'}
+          opened={this.state.opened}
           onTelegramClick={this.handleTelegramClick}
           telegramHref={this.getTelegramHref()}
           {...this.props}
