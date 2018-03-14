@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-
 // components
 import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
