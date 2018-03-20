@@ -13,6 +13,8 @@ import { pathOr } from 'ramda';
 const TELEGRAM_LINKS = {
   en: 'https://t.me/Wavescommunity',
   ko: 'https://t.me/WavesKR',
+  ru: 'https://t.me/WavesCommunityRU',
+  zh: 'https://t.me/waveschina',
 };
 
 const configAnalyticsHoc = connect(undefined, (dispatch, { page }) => ({
