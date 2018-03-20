@@ -4,24 +4,31 @@ export const styles = theme => ({
     top: 0,
     right: 0,
     width: '100%',
-    height: '100%',
+    height: '110%', // needed to counter overscrolling
     zIndex: 900,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
+  textOuter: {
+    height: '100%',
+    width: '100%',
+    position: 'relative',
+    overflow: 'hidden',
+  },
   inner: {
-    width: '100vw',
+    width: '100%',
     height: '100vh',
     display: 'flex',
     justifyContent: 'flex-end',
+    position: 'relative',
     alignItems: 'flex-end',
     boxShadow: '0 2px 20px rgba(0, 0, 0, 0.3)',
   },
   innerText: {
     width: '100%',
-    height: '50%',
+    height: '50vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -42,9 +49,12 @@ export const styles = theme => ({
       width: '50%',
       alignItems: 'flex-start',
     },
+    textOuter: {
+      width: 'auto',
+      height: 'auto',
+    },
   },
 
-  textOuter: { position: 'relative', overflow: 'hidden' },
   text: {
     width: '100%',
     height: '100%',
