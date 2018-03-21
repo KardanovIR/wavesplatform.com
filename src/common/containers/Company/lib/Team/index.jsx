@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
@@ -13,7 +13,7 @@ const Team = ({ classes, members }) => (
     <Row>
       <Col xs={12}>
         <Typography className={classes.title} type="display2">
-          Our Team
+          <FormattedMessage id="company.team.title" />
         </Typography>
         <Margin bottom={2} />
       </Col>
