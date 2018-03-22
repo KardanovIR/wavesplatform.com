@@ -13,7 +13,7 @@ const Team = ({ classes, members }) => (
     <Row>
       <Col xs={12}>
         <Typography className={classes.title} type="display2">
-          <FormattedMessage id="company.team.title" />
+          <FormattedMessage id="company.team.title" defaultMessage="Our Team" />
         </Typography>
         <Margin bottom={2} />
       </Col>
