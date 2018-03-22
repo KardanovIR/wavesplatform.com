@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { FormattedHTMLMessage } from 'react-intl';
 import Button from '../Button';
 import Icon from 'src/common/components/Icon';
 
@@ -44,9 +45,11 @@ const ButtonGetApp = ({ classes, className, type, ...rest }) => (
     {...rest}
   >
     <span className={classes.text}>
-      Get it on
-      <br />
-      {type === 'google-play' ? 'Google Play' : 'APP STORE'}
+      {type === 'google-play' ? (
+        <FormattedHTMLMessage id="components.buttonGetApp.title.android" />
+      ) : (
+        <FormattedHTMLMessage id="components.buttonGetApp.title.ios" />
+      )}
     </span>
   </Button>
 );

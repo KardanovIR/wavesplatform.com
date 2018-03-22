@@ -59,7 +59,10 @@ const MainScreen = ({ classes }) => (
         </Typography>
         <Margin />
         <Typography type="display1" inverted>
-          Join the Waves Community
+          <FormattedMessage
+            id="home.joinUs.text2"
+            defaultMessage="Join the Waves Community"
+          />
         </Typography>
 
         <MQ query={query.sm}>
