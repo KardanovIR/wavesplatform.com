@@ -19,6 +19,8 @@
   "company.whitepaper.text":
     "Waves는 맞춤형 블록체인 토큰 거래에 초점을 맞춘 탈중앙화된 블록체인 기반의 플랫폼입니다. 해외송금은 Waves 블록체인에서 호환 게이트웨이 관리자들을 통해 유지됩니다.",
   "company.whitepaper.title": "백서",
+  "components.buttonGetApp.title.android":"Get it on<br/>Google Play",
+  "components.buttonGetApp.title.ios":"Get it on<br/>APP STORE",
   "cta.brandingPackage": "브랜딩 패키지",
   "cta.getClient": "클라이언트 받기",
   "cta.getClient.windows": "Windows",
@@ -163,7 +165,8 @@
     "최신 소식과 뉴스 기사 그리고 Waves 플랫폼에 진행되는 모든 이벤트를 우리 커뮤니티와 wavescommunity.com에 알아보세요. ",
   "home.joinUs.text":
     "Waves는 블록체인의 열광적인 지지자들, 여러 분야의 프로젝트 창립자들, 트레이더들, 투자자들 등 암호 세계의 최첨단에 서있는 사람들을 모입니다. ",
-  "home.main.text":
+    "home.joinUs.text2": "Join the Waves Community",  
+    "home.main.text":
     "Waves 플랫폼이 제공하는 디지털 자산 보관, 트레이딩, 관리와 발행 솔루션에 액세스하기.",
   "home.main.title": "블록체인 시작하기",
   "home.numbers.dexVolume": "24시간 DEX 볼륨",
