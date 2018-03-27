@@ -331,6 +331,8 @@
   "products.dex.topPairs.title": "Top pairs",
   "products.dex.topPairs.unavailable": "n/a",
   "products.dex.topPairs.volume": "Volume (24h)",
+  "smartContracts.title":"Failsafe operation for business logic",
+  "smartContracts.description":"Outstanding functionality for implementing different types of transaction parameters.",
   "teamMembers.0.fullName": "Sasha Ivanov",
   "teamMembers.0.position": "Founder & CEO",
   "teamMembers.1.fullName": "Maxim Pertsovskiy",

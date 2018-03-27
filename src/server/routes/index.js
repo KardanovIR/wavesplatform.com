@@ -11,6 +11,7 @@ import mining from './get/mining';
 import leasing from './get/leasing';
 import Error404 from './get/Error404';
 import company from './get/company';
+import smartContracts from './get/smartContracts';
 
 // page components
 import Developers from 'src/common/containers/Developers';
@@ -37,6 +38,7 @@ router
     })
   )
   .get('/company', company)
+  .get('/smart-contracts', smartContracts)
   .get(
     '/get-waves',
     render({
