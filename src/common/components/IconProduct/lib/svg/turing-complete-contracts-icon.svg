@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <circle id="a" cx="22" cy="22" r="22"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#0053FF" fill-rule="nonzero" d="M40 79.13L79.13 40H.87zM.87 40h78.26L40 .87z"/>
+        <g transform="translate(18 18)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <use fill="#003598" fill-rule="nonzero" xlink:href="#a"/>
+            <path fill="#FFF" d="M-5 19h40v2H-5z" mask="url(#b)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M38 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" mask="url(#b)"/>
+            <path fill="#FFF" d="M32 28h18v2H32z" mask="url(#b)" transform="matrix(-1 0 0 1 82 0)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M29 33a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" mask="url(#b)" transform="matrix(-1 0 0 1 58 0)"/>
+            <path fill="#FFF" d="M19.874 48A4.002 4.002 0 0 1 12 47a4 4 0 0 1 7.874-1H37v2H19.874zM16 49a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" mask="url(#b)" transform="rotate(90 24.5 47)"/>
+            <path fill="#FFF" d="M10.236 14l3.4-3.4 1.414 1.414L11.065 16H11V16H1v-2h9.236z" mask="url(#b)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M16 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" mask="url(#b)"/>
+            <path fill="#FFF" d="M10.236 28.4l3.4-3.4 1.414 1.414-3.985 3.984H11v.002H-1v-2h11.236z" mask="url(#b)" transform="matrix(1 0 0 -1 0 55.4)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M16 36a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" mask="url(#b)" transform="matrix(1 0 0 -1 0 64)"/>
+            <path fill="#FFF" d="M41.186 8.4l3.4-3.4L46 6.414l-3.984 3.984h-.066v.002h-12v-2h11.236z" mask="url(#b)" transform="rotate(-180 37.975 7.7)"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M29 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" mask="url(#b)" transform="rotate(-180 29 12)"/>
+        </g>
+    </g>
+</svg>
