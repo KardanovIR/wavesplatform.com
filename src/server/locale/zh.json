@@ -360,6 +360,8 @@
   "userCases.2.title": "Primalbase在众筹期间募集了3000BTC",
   "userCases.2.userName": "全球技术社区的合作空间",
   "userCases.detailsLink": "详细信息",
+  "wavesNG.descriptions.costPerTxs":"交易费用",
+  "wavesNG.descriptions.txsPerSecond":"每秒交易次数",
   "wavesNG.descriptions.1.text": "在传统的区块链模型中，区块出现在在大致相似的时间间隔，一旦矿工获得了提交权利，就会处理最近的交易。这就产生了区块链容量的基础限制。例如，比特币的理论最大值约为3tps。",
   "wavesNG.descriptions.1.title": "传统的区块链模型",
   "wavesNG.descriptions.2.buttonFAQ": "常见问题",

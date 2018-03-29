@@ -24,7 +24,6 @@ import MainScreen from './lib/MainScreen';
 import Wallet from './lib/Wallet';
 import Interest from './lib/Interest';
 import MobileWallet from './lib/MobileWallet';
-import HowToTrade from './lib/HowToTrade';
 import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
 
@@ -142,8 +141,6 @@ const PageLayout = ({ classes, initialState }) => (
       <Section top={2} bottom={4} className={classes.bgBlue}>
         <ContentContainer>
           <HowToToken />
-          <Margin bottom={5} xsOnly />
-          <HowToTrade />
         </ContentContainer>
       </Section>
     </Wrapper>

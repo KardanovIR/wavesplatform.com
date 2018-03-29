@@ -4,6 +4,8 @@
   "calcRevenue.miningTerm": "채굴 용어",
   "calcRevenue.total": "총",
   "calcRevenue.totalAmount": "waves의 총 수량",
+  "company.team.title": "Waves Team",
+  "company.about.text": " Waves 플랫폼은 2016년에 설립된 글로벌 퍼블릭 블록체인 플랫폼입니다. Waves 플랫폼의 사명은 공유된 사회 기반 시설을 제공하여 전세계 기업가 정신의 DNA를 혁신하는것이며 사용하기 쉬운 고기능성 툴을 제공하여 블록체인을 모든 사람과들 기관들이 플랫폼으로부터 이익을 얻을 수 있게 만드는 것 입니다.",
   "company.feedback.supportLink": "지원",
   "company.feedback.text":
     "미디어, 이벤트, 협력 문의를 위해 이 형식을 사용하십시오. Waves의 상품에 관한 문제가 발생될 경우 {link}로 연락하십시오. ",
@@ -19,8 +21,8 @@
   "company.whitepaper.text":
     "Waves는 맞춤형 블록체인 토큰 거래에 초점을 맞춘 탈중앙화된 블록체인 기반의 플랫폼입니다. 해외송금은 Waves 블록체인에서 호환 게이트웨이 관리자들을 통해 유지됩니다.",
   "company.whitepaper.title": "백서",
-  "components.buttonGetApp.title.android":"Get it on<br/>Google Play",
-  "components.buttonGetApp.title.ios":"Get it on<br/>APP STORE",
+  "components.buttonGetApp.title.android":"구글 플레이에서 다운로드 받으세요",
+  "components.buttonGetApp.title.ios":"앱스토어에서 다운로드 받으세요",
   "cta.brandingPackage": "브랜딩 패키지",
   "cta.getClient": "클라이언트 받기",
   "cta.getClient.windows": "Windows",
@@ -165,8 +167,8 @@
     "최신 소식과 뉴스 기사 그리고 Waves 플랫폼에 진행되는 모든 이벤트를 우리 커뮤니티와 wavescommunity.com에 알아보세요. ",
   "home.joinUs.text":
     "Waves는 블록체인의 열광적인 지지자들, 여러 분야의 프로젝트 창립자들, 트레이더들, 투자자들 등 암호 세계의 최첨단에 서있는 사람들을 모입니다. ",
-    "home.joinUs.text2": "Join the Waves Community",  
-    "home.main.text":
+  "home.joinUs.text2": "Waves 커뮤니티에 참여하세요",    
+  "home.main.text":
     "Waves 플랫폼이 제공하는 디지털 자산 보관, 트레이딩, 관리와 발행 솔루션에 액세스하기.",
   "home.main.title": "블록체인 시작하기",
   "home.numbers.dexVolume": "24시간 DEX 볼륨",
