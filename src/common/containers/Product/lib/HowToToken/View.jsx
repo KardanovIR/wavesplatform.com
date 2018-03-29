@@ -23,7 +23,7 @@ const HowToStart = ({ onGetClientClick }) => (
               href={url('online-client(beta)')}
               textDecoration={false}
             >
-              <FormattedMessage id="cta.getClient" />
+              <FormattedMessage id="cta.onlineClient" />
             </Link>
           </div>
         ),
