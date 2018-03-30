@@ -31,21 +31,22 @@ const styles = theme => ({
     },
     imageWrapper: {
       position: 'absolute',
-      top: -70,
-      right: 100,
+      top: 20,
+      right: 80,
       width: '50%',
       zIndex: 1,
     },
     image: {
-      width: '150%',
-      height: '150%',
+      width: '130%',
+      height: '130%',
       top: -150,
       left: -10,
     },
   },
   [theme.mixins.atMedia('md')]: {
     imageWrapper: {
-      right: 40,
+      right: -50,
+      top: 40,
     },
   },
   [theme.mixins.atMedia('lg')]: {
