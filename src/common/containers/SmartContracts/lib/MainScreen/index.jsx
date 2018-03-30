@@ -3,7 +3,7 @@ import React from 'react';
 import MainScreen from 'src/common/components/MainScreen';
 import Typography from 'src/common/components/Typography';
 import { FormattedMessage } from 'react-intl';
-import IconButton from 'src/common/components/Button/Icon';
+import Button from 'src/common/components/Button';
 
 import injectSheet from 'react-jss';
 
@@ -16,7 +16,7 @@ const styles = theme => ({
   },
 });
 
-const DexMainScreen = ({ classes }) => (
+const SmartContractsMainScreen = ({ classes, onDocumentationClick }) => (
   <MainScreen
     title={<FormattedMessage id="smartContracts.title" />}
     titleType="displayCustom"
@@ -29,18 +29,18 @@ const DexMainScreen = ({ classes }) => (
     align="center"
     alignMobile="center"
     buttons={[
-      <IconButton
+      <Button
+        onClick={onDocumentationClick}
         key={1}
-        href="https://github.com/wavesplatform/WavesGUI"
+        href="#"
         target="_blank"
-        iconName="github"
         className={classes.button}
         secondary
       >
-        <FormattedMessage id="developers.cta.documentation" />
-      </IconButton>,
+        <FormattedMessage id="smartContracts.cta.documentation" />
+      </Button>,
     ]}
   />
 );
 
-export default injectSheet(styles)(DexMainScreen);
+export default injectSheet(styles)(SmartContractsMainScreen);

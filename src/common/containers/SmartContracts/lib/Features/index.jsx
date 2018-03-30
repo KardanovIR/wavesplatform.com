@@ -11,13 +11,13 @@ import { FormattedMessage } from 'react-intl';
 const SCFeatures = () => (
   <div>
     <Row>
-      <Col xs={6} xsOffset={3}>
-        <Typography type="display2" inverted align="center">
-          What Will Smart Contracts Bring to Waves?
+      <Col xs={10} md={8} mdOffset={2}>
+        <Typography type="display3" inverted align="center" alignMobile="left">
+          <FormattedMessage id="smartContracts.features.title" />
         </Typography>
       </Col>
     </Row>
-    <Margin bottom={4} />
+    <Margin bottom={6} />
     <Row>
       <Col xs={12} sm={6}>
         <Margin bottom={3} xsOnly />

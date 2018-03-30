@@ -8,9 +8,12 @@ export default theme => ({
   bgBlack: {
     background: theme.palette.gray[1000],
   },
-  bgMobileApp: {
+  bgBlackNight: {
+    background: theme.palette.gray[9999],
+  },
+  bgJoinUs: {
     backgroundSize: 'cover',
-    backgroundImage: `url(${require('../img/bgMobileApp.jpg')})`,
-    backgroundPosition: 'top',
+    backgroundImage: `url(${require('../img/bgJoinUs.jpg')})`,
+    backgroundPosition: 'center',
   },
 });

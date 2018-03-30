@@ -18,7 +18,9 @@ export default theme => ({
   marginSmall: {
     marginBottom: theme.spacing.unit,
   },
-
+  additionalPadding: {
+    padding: '10px 20px',
+  },
   footerMarginCompensate: {
     marginBottom: -theme.spacing.unit * 8,
     [theme.mixins.atMedia('sm')]: {

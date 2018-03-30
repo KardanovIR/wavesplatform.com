@@ -29,6 +29,7 @@ router
   .get('/product/wallet', wallet)
   .get('/product/token-launcher', token)
   .get('/product/dex', dex)
+  .get('/developers/smart-contracts', smartContracts)
   .get(
     '/developers',
     render({
@@ -38,7 +39,6 @@ router
     })
   )
   .get('/company', company)
-  .get('/smart-contracts', smartContracts)
   .get(
     '/get-waves',
     render({
