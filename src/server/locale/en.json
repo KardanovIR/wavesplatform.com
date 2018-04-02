@@ -374,7 +374,7 @@
   "wavesNG.descriptions.txsPerSecond":"Transaction per second",
   "wavesNG.fastest.title": "Waves — fastest blockchain in the world",
   "wavesNG.fastest.text1": "Waves NG is making the platform easier and faster. It allows us to handle hundreds of transactions per second and means we are the fastest blockchain in the world.",
-  "wavesNG.fastest.text2": "The Waves-NG code was deployed on mainnet, with miners tasked with signalling whether the proposal should be activated. After the required threshold of 80% of blocks within the voting period was reached, NG was locked in on Monday. The subsequent waiting period has now elapsed and we are pleased to announce that NG is live!",
+  "wavesNG.fastest.text2": "The Waves-NG code was deployed on mainnet, with miners tasked with signalling whether the proposal should be activated. After the required threshold of 80% of blocks within the voting period was reached, NG was launched. The subsequent waiting period has now elapsed and we are pleased to announce that NG is live!",
   "wavesNG.news.title": "News about<br>Waves-NG",
   "wavesNG.preview.p1.text": "Anyone will be able to download node version 0.8 with Waves-NG for TestNet. We will lease TestNet WAVES to anyone who wants to run a TestNet node. Nodes will start voting for Waves-NG using the new Waves Activation Protocol.",
   "wavesNG.preview.p1.title": "1. TestNet release",

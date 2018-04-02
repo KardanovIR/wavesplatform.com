@@ -15,7 +15,12 @@ import styles from './styles';
 const LeasingMainScreen = ({ classes, onDownloadChange, onNewClientClick }) => (
   <MainScreen
     title={
-      <Typography className={classes.Title} inverted>
+      <Typography
+        className={classes.Title}
+        inverted
+        align="center"
+        alignMobile="center"
+      >
         <FormattedMessage
           id="leasing.title"
           defaultMessage="Use your WAVES balance to generate income"
@@ -23,7 +28,12 @@ const LeasingMainScreen = ({ classes, onDownloadChange, onNewClientClick }) => (
       </Typography>
     }
     text={
-      <Typography className={classes.description} inverted>
+      <Typography
+        className={classes.description}
+        inverted
+        align="center"
+        alignMobile="center"
+      >
         <FormattedMessage
           id="leasing.text"
           defaultMessage="By helping secure the Waves blockchain you can earn up to 5% per year on your WAVES balance. Simply lease your WAVES to a mining pool and you will receive a share of transaction fees in proportion to the amount you commit. "
