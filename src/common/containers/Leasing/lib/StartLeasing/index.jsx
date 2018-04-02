@@ -62,7 +62,7 @@ const StartLeasing = ({ classes }) => {
             <Margin bottom={5} />
             <Button secondary target="_blank" href={url('online-client(beta)')}>
               <FormattedMessage
-                id="cta.getClient"
+                id="cta.onlineClient"
                 defaultMessage="Online client"
               />
             </Button>
@@ -123,7 +123,10 @@ const StartLeasing = ({ classes }) => {
                     values={{
                       nodesLink: (
                         <Link pseudo href="#nodes">
-                          which node
+                          <FormattedMessage
+                            id="leasing.startLeasing.p3.nodesLink"
+                            defaultMessage="which node"
+                          />
                         </Link>
                       ),
                     }}
