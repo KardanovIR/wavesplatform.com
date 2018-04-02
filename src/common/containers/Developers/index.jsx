@@ -17,6 +17,8 @@ import DEX from './lib/DEX';
 import WavesNetwork from './lib/WavesNetwork';
 import WavesEcosystem from './lib/WavesEcosystem';
 import Description from './lib/Description';
+import WavesNgInfo from './lib/WavesNgInfo';
+import SmartContractsInfo from './lib/SmartContractsInfo';
 
 // styles
 import injectSheet from 'react-jss';
@@ -44,6 +46,18 @@ const PageLayout = ({ classes }) => (
     <Section top={3} bottom={1} className={classes.bgDark}>
       <ContentContainer>
         <Description />
+      </ContentContainer>
+    </Section>
+
+    <Section top={3} bottom={3} className={classes.bgNg}>
+      <ContentContainer>
+        <WavesNgInfo />
+      </ContentContainer>
+    </Section>
+
+    <Section top={3} bottom={3} className={classes.bgDark}>
+      <ContentContainer>
+        <SmartContractsInfo />
       </ContentContainer>
     </Section>
 

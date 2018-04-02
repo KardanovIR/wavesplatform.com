@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="340" height="410" viewBox="0 0 340 410">
+    <defs>
+        <path id="a" d="M104 0h18v70h-18z"/>
+        <path id="b" d="M52 19h32v32H52z"/>
+        <path id="c" d="M0 19h32v32H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#161616" fill-rule="nonzero" d="M170 70L0 240l170 170 170-170z"/>
+        <path fill="#0053FF" fill-rule="nonzero" d="M170 0L0 170l170 170 170-170z"/>
+        <g transform="translate(85 85)">
+            <circle cx="85" cy="85" r="85" fill="#003598" fill-rule="nonzero"/>
+            <g transform="translate(21 50)">
+                <use fill="#003598" xlink:href="#a"/>
+                <path stroke="#FFF" stroke-width="6" d="M107 3h12v64h-12z"/>
+            </g>
+            <path fill="#FFF" fill-rule="nonzero" d="M108.5 87.5v-5h5v5zM116.5 87.5v-5h5v5z"/>
+            <g transform="translate(21 50)">
+                <use fill="#003598" xlink:href="#b"/>
+                <path stroke="#FFF" stroke-width="6" d="M55 22h26v26H55z"/>
+            </g>
+            <path fill="#FFF" fill-rule="nonzero" d="M56.5 87.5v-5h5v5zM64.5 87.5v-5h5v5z"/>
+            <g transform="translate(21 50)">
+                <use fill="#003598" xlink:href="#c"/>
+                <path stroke="#FFF" stroke-width="6" d="M3 22h26v26H3z"/>
+            </g>
+        </g>
+    </g>
+</svg>
