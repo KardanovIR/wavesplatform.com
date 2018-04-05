@@ -52,6 +52,16 @@
   "developers.friendlyAPI.subtitle": "Our open source client application uses the same API. You can explore it and implement any kind of client application yourself.",
   "developers.friendlyAPI.text": "Our nodes expose the REST API allowing access to all blockchain data (transaction history, balances, etc.) as well as operations for creating a new transaction — it’s easy to make a transfer, exchange, issue of tokens or lease fund transactions programmatically.",
   "developers.friendlyAPI.title": "Developer-friendly API",
+  "developers.ng.title": "Unbeatable speed and throughput",
+  "developers.ng.subtitle":
+    "Based on the Waves-NG protocol, our system supports up to 6,000 transactions per minute, leaving other blockchains far behind.",
+  "developers.ng.text":
+    "In the NG model, the next miner is selected in advance. This miner creates a ‘key block’, which is then immediately filled with microblocks containing transactions, which requires no further proof-of-work. Whilst maintaining the open structure of the protocol, this allows transactions to be confirmed as fast as network latency will allow.",
+  "developers.ng.cta": "Learn more",
+  "developers.smart.title":"Failsafe operation for business logic",
+  "developers.smart.subtitle": "Outstanding functionality for implementing different types of transaction parameters.",
+  "developers.smart.text":"Safe, secure and transparent business operations are already a reality. Provide the transactions with whatever conditions are required, based on a range of different parameters, including two-factor authentication, elapsed time and real-world data.<br><br>Waves blockchain is already the fastest and most user-friendly in existence. Nevertheless, we are improving our platform all the time! The next revolution from Waves is already on the horizon: smart contracts, packed with powerful features.",
+  "developers.smart.cta": "Learn more",
   "developers.text": "These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.",
   "developers.title": "Build applications on the blockchain",
   "developers.wavesEcosystem.explorer": "Function-rich blockchain explorer",

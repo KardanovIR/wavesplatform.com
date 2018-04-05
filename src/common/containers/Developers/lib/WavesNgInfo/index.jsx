@@ -10,6 +10,8 @@ import { Row, Col } from 'src/common/components/Grid';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 
+import url from 'src/common/utils/url/';
+
 const WavesNgInfo = ({ classes }) => (
   <Row className={classes.rowWithOrders}>
     <Col xs={12} sm={8}>
@@ -42,7 +44,7 @@ const WavesNgInfo = ({ classes }) => (
     </Col>
     <Col xs={12} sm={12}>
       <Margin />
-      <Button secondary>
+      <Button href={url('waves-ng')} secondary>
         <FormattedMessage id="developers.ng.cta" defaultMessage="Learn more" />
       </Button>
     </Col>
