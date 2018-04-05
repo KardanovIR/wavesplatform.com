@@ -4,6 +4,11 @@ export default theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'center center',
   },
+  bgNg: {
+    backgroundImage: `url(${require('../lib/WavesNgInfo/img/bg.jpg')})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+  },
   bgDark: {
     backgroundColor: theme.palette.gray[800],
   },
