@@ -21,7 +21,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const PageLayout = ({ onDocumentationClick, classes }) => (
-  <Layout inverted hideCredentials activeLink="dex">
+  <Layout inverted hideCredentials activeLink="developers">
     <BackgroundMainScreen
       type="image"
       src={require('./img/bg.jpg')}
