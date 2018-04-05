@@ -25,8 +25,14 @@ import product from '!svg-react-loader!./svg/product.svg';
 import money from '!svg-react-loader!./svg/money.svg';
 import play from '!svg-react-loader!./svg/play.svg';
 import done from '!svg-react-loader!./svg/done.svg';
+import atomicSwap from '!svg-react-loader!./svg/atomic-swaps-icon.svg';
+import tokenFreeze from '!svg-react-loader!./svg/token-freeze-icon.svg';
+import turingContracts from '!svg-react-loader!./svg/turing-complete-contracts-icon.svg';
 
 export default {
+  atomicSwap,
+  tokenFreeze,
+  turingContracts,
   coins,
   dex,
   fees,
@@ -53,5 +59,5 @@ export default {
   product,
   money,
   play,
-  done
+  done,
 };

@@ -20,6 +20,7 @@ export const DEX_API_CLICK = 'DexApiClick';
 // files downloads
 export const WHITEPAPER_DOWNLOAD = 'WhitepaperDownload';
 export const BRANDING_PACKAGE_DOWNLOAD = 'BrandingPackageDownload';
+export const SMART_CONTRACTS_WP_DOWNLOAD = 'SmartContracts.WhitepaperDownload';
 
 // contact
 export const SUBMIT_RESUME_CLICK = 'SubmitResumeClick';
@@ -60,6 +61,7 @@ export const wavesNodeInstallClick = createAC(WAVES_NODE_INSTALL_CLICK);
 // files downloads
 export const whitepaperDownload = createAC(WHITEPAPER_DOWNLOAD);
 export const brandingPackageDownload = createAC(BRANDING_PACKAGE_DOWNLOAD);
+export const smartContractsWPDownload = createAC(SMART_CONTRACTS_WP_DOWNLOAD);
 
 // contact
 export const submitResumeClick = createAC(SUBMIT_RESUME_CLICK);

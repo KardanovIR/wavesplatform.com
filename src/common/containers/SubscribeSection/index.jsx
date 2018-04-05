@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
 
 import SubscriptionForm from 'src/common/containers/SubscriptionForm';
 
@@ -13,10 +12,10 @@ import styles from './styles';
 const Subscribe = ({ classes }) => (
   <div className={classes.root}>
     <div className={classes.textCentered}>
-      <Typography type="body2" inverted>
+      <Typography type="body2" inverted align="center">
         <FormattedMessage id="home.subscribe.title" />
       </Typography>
-      <Typography type="body" inverted>
+      <Typography type="body" inverted align="center">
         <FormattedMessage id="home.subscribe.text" />
       </Typography>
     </div>
