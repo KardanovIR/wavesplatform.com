@@ -52,7 +52,6 @@ const styles = theme => ({
     marginLeft: '-.7em',
     height: '.7em',
     width: '.7em',
-    marginRight: '0.2em',
   },
 });
 
