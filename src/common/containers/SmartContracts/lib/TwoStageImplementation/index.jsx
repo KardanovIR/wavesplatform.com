@@ -12,23 +12,53 @@ import styles from './styles';
 
 const FEATURES_LIST = [
   {
-    shippingDate: <FormattedMessage id="smartContracts.plans.stage1.date" />,
-    features: [
-      <FormattedMessage id="smartContracts.plans.stage1.title" />,
-      <FormattedMessage id="smartContracts.plans.stage1.feature" />,
+    leftColumn: [
+      <FormattedMessage
+        id="smartContracts.plans.stage1.left.title"
+        defaultMessage="Stage 1"
+      />,
+      <FormattedMessage
+        id="smartContracts.plans.stage1.left.subtitle"
+        defaultMessage="Non-Turing-complete Contracts"
+      />,
+    ],
+    rightColumn: [
+      <FormattedMessage
+        id="smartContracts.plans.stage1.right.title"
+        defaultMessage="RIDE language."
+      />,
+      <FormattedMessage
+        id="smartContracts.plans.stage1.right.subtitle"
+        defaultMessage="Lightweight implementation of smart contracts via smart assets and smart accounts. Release in a testnet in Spring 2018."
+      />,
     ],
   },
 
   {
-    shippingDate: <FormattedMessage id="smartContracts.plans.stage2.date" />,
-    features: [
-      <FormattedMessage id="smartContracts.plans.stage2.title" />,
-      <FormattedMessage id="smartContracts.plans.stage2.feature" />,
+    leftColumn: [
+      <FormattedMessage
+        id="smartContracts.plans.stage2.left.title"
+        defaultMessage="Stage 2"
+      />,
+      <FormattedMessage
+        id="smartContracts.plans.stage2.left.subtitle"
+        defaultMessage="Turing-complete Contracts"
+      />,
+    ],
+    rightColumn: [
+      <FormattedMessage
+        id="smartContracts.plans.stage2.right.title"
+        defaultMessage="RIDEON language."
+      />,
+      <FormattedMessage
+        id="smartContracts.plans.stage2.right.subtitle"
+        defaultMessage="Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the first release of smart accounts in Spring 2018 and extensive testing and feedback, Turing-complete smart contracts will follow, enabling developers to implement sophisticated logic to address almost any computational task."
+      />,
     ],
   },
 ];
 
-const Block = ({ classes, features, shippingDate }) => (
+const Block = ({ classes, leftColumn, rightColumn }) => (
   <Row className={classes.block}>
     <Col xs={2} sm={1}>
       <div className={classes.romb} />
@@ -37,7 +67,7 @@ const Block = ({ classes, features, shippingDate }) => (
       <Row>
         <Col xs={12} sm={3}>
           <ul className={classes.list}>
-            {features.map((str, i) => (
+            {leftColumn.map((str, i) => (
               <li key={i} className={classes.listItem}>
                 <Typography inverted {...(i === 0 ? {} : { weight: 600 })}>
                   {str}
@@ -47,9 +77,16 @@ const Block = ({ classes, features, shippingDate }) => (
           </ul>
         </Col>
         <Col xs={12} sm={8} smOffset={1}>
-          <Typography type="body" inverted>
-            {shippingDate}
-          </Typography>
+          {rightColumn.map((str, i) => (
+            <Typography
+              type="body"
+              inverted
+              key={i}
+              {...(i === 0 ? { weight: 600 } : {})}
+            >
+              {str}
+            </Typography>
+          ))}
         </Col>
       </Row>
     </Col>
@@ -66,16 +103,14 @@ Block.propTypes = {
 const TwoStageImplementation = ({ classes }) => (
   <div className={classes.root}>
     <Typography type="display3" inverted>
-      <FormattedMessage id="smartContracts.plans.title" />
+      <FormattedMessage
+        id="smartContracts.plans.title"
+        defaultMessage="Two-stage Implementation"
+      />
     </Typography>
     <Margin bottom={4} />
     {FEATURES_LIST.map((block, i) => (
-      <Block
-        key={i}
-        classes={classes}
-        features={block.features}
-        shippingDate={block.shippingDate}
-      />
+      <Block key={i} classes={classes} {...block} />
     ))}
   </div>
 );

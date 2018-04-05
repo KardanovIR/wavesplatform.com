@@ -38,12 +38,18 @@ const PageLayout = ({ onDocumentationClick, classes }) => (
           <Row>
             <Col xs={12} md={6} className={classes.additionalPadding}>
               <Typography type="body2" weight={400} inverted>
-                <FormattedMessage id="smartContracts.block1.text1" />
+                <FormattedMessage
+                  id="smartContracts.block1.text1"
+                  defaultMessage="Safe, secure and transparent business operations are already a reality. Provide the transactions with whatever conditions are required, based on a range of different parameters, including two-factor authentication, elapsed time and real-world data."
+                />
               </Typography>
             </Col>
             <Col xs={12} md={6} className={classes.additionalPadding}>
               <Typography type="body2" weight={400} inverted>
-                <FormattedMessage id="smartContracts.block1.text2" />
+                <FormattedMessage
+                  id="smartContracts.block1.text2"
+                  defaultMessage="Waves blockchain is already the fastest and most user-friendly in existence. Nevertheless, we are improving our platform all the time! The next revolution from Waves is already on the horizon: smart contracts, packed with powerful features."
+                />
               </Typography>
             </Col>
           </Row>
