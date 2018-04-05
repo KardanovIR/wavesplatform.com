@@ -7,8 +7,9 @@ import styles from './styles';
 
 import Newtab from '!svg-react-loader!./img/newtab.svg';
 
-const getIconElement = ({ icon, targetBlank }) =>
+const getIconElement = ({ icon, targetBlank, noIcon }) =>
   cond([
+    [() => noIcon, () => null],
     [() => icon !== undefined, () => icon],
     [() => Boolean(targetBlank), () => <Newtab />],
     [() => true, () => null],
@@ -25,6 +26,7 @@ const Link = ({
   theme, // eslint-disable-line
   href,
   target,
+  noIcon,
   icon,
   children,
   ...rest
@@ -44,7 +46,7 @@ const Link = ({
     classNameProp
   );
 
-  const iconElement = getIconElement({ icon, targetBlank });
+  const iconElement = getIconElement({ icon, targetBlank, noIcon });
 
   const classNameText = cn(classes.text, {
     [classes.pseudo]: pseudo,
@@ -68,6 +70,7 @@ const Link = ({
 Link.defaultProps = {
   textDecoration: true,
   primary: true,
+  noIcon: false,
 };
 
 export default injectSheet(styles)(Link);
