@@ -13,7 +13,7 @@ import styles from './styles';
 const DEX = ({ classes }) => (
   <div className={classes.root}>
     <Row className={classes.titleRow}>
-      <Col xs={12} sm={7} md={12}>
+      <Col xs={12} md={11}>
         <Typography
           type="display5"
           tagName="div"

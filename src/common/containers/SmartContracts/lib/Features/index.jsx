@@ -9,7 +9,7 @@ import Link from 'src/common/components/Link';
 import { FormattedMessage } from 'react-intl';
 
 const ResearchLink = () => (
-  <Link href="http://blockchaininstitute.io/#grant-2">
+  <Link href="http://blockchaininstitute.io/#grant-2" target="_blank" noIcon>
     <FormattedMessage
       id="smartContracts.features.2.link"
       defaultMessage="research"
