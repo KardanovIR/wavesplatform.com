@@ -1,31 +1,12 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
-import { Row, Col } from 'src/common/components/Grid';
 
-import Member from './lib/Member';
-import styles from './styles';
 import injectSheet from 'react-jss';
+import styles from './styles';
 
-const Team = ({ classes, members }) => (
-  <div>
-    <Row>
-      <Col xs={12}>
-        <Typography className={classes.title} type="display2">
-          <FormattedMessage id="company.team.title" defaultMessage="Our Team" />
-        </Typography>
-        <Margin bottom={2} />
-      </Col>
-    </Row>
-    <Row className={classes.Team}>
-      {members.map((member, index) => (
-        <Col key={`team_member_${index}`} xs={9} sm={3} md={3}>
-          <Member {...member} />
-          <Margin bottom={3} />
-        </Col>
-      ))}
-    </Row>
+const Team = ({ classes }) => (
+  <div className={classes.bg}>
+    <img className={classes.img} src={require('./img/desktop.jpg')} />
+    <img className={classes.imgMobile} src={require('./img/mobile.jpg')} />
   </div>
 );
 

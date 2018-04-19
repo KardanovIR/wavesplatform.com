@@ -26,7 +26,6 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 import { FormattedMessage } from 'react-intl';
-import teamMembers from './team';
 
 // url
 import { fileUrl } from 'src/common/utils/url';
@@ -53,7 +52,7 @@ const PageLayout = ({ classes }) => (
 
     <Section top={1} bottom={2}>
       <ContentContainer>
-        <Team members={teamMembers} />
+        <Team />
       </ContentContainer>
     </Section>
 
@@ -85,12 +84,12 @@ const PageLayout = ({ classes }) => (
     </Background>
 
     <AnchorScroll anchor="contact">
-            <Background className={classes.bgDark} skewed={true}>
-                <Section size={4} className={classes.footerMarginCompensate}>
-                    <FeedbackForm />
-                </Section>
-            </Background>
-        </AnchorScroll>
+      <Background className={classes.bgDark} skewed={true}>
+        <Section size={4} className={classes.footerMarginCompensate}>
+          <FeedbackForm />
+        </Section>
+      </Background>
+    </AnchorScroll>
   </Layout>
 );
 

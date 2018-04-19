@@ -1,25 +1,27 @@
 const styles = theme => ({
-  Team: {
-    flexDirection: 'row',
-    overflowY: 'hidden',
-    flexWrap: 'nowrap',
-
-    '&::-webkit-scrollbar': {
-      width: 0,
-    },
-    '-ms-overflow-style': 'none',
-    overflow: '-moz-scrollbars-none',
+  bg: {
+    marginLeft: -theme.spacing.unit * 6,
+    marginRight: -theme.spacing.unit * 6,
   },
-  title: {
-    fontSize: 16,
+  img: {
+    display: 'none',
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover',
+  },
+  imgMobile: {
+    display: 'block',
+
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover',
   },
   [theme.breakpoints.up('tablet')]: {
-    Team: {
-      overflowY: 'hidden',
-      flexWrap: 'wrap',
+    img: {
+      display: 'block',
     },
-    title: {
-      fontSize: 19,
+    imgMobile: {
+      display: 'none',
     },
   },
 });
