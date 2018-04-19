@@ -5,7 +5,7 @@ import Margin from 'src/common/components/Margin';
 import Article from 'src/common/components/Article';
 import { Row, Col } from 'src/common/components/Grid';
 
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -13,14 +13,14 @@ import styles from './styles';
 const DEX = ({ classes }) => (
   <div className={classes.root}>
     <Row className={classes.titleRow}>
-      <Col xs={12} sm={7} md={7}>
+      <Col xs={12} md={11}>
         <Typography
           type="display5"
           tagName="div"
           className={classes.title}
           inverted
         >
-          <FormattedMessage id="home.DEX.title" />
+          <FormattedHTMLMessage id="home.DEX.title" />
         </Typography>
       </Col>
       <div className={classes.imageWrapper}>

@@ -20,11 +20,16 @@ export const DEX_API_CLICK = 'DexApiClick';
 // files downloads
 export const WHITEPAPER_DOWNLOAD = 'WhitepaperDownload';
 export const BRANDING_PACKAGE_DOWNLOAD = 'BrandingPackageDownload';
+export const SMART_CONTRACTS_WP_DOWNLOAD = 'SmartContracts.WhitepaperDownload';
 
 // contact
 export const SUBMIT_RESUME_CLICK = 'SubmitResumeClick';
 export const SUBSCRIBE = 'Subscribe';
 export const FEEDBACK_FORM_SUBMIT = 'FeedbackFormSubmit';
+
+// telegram
+export const TELEGRAM_POPUP_JOIN_CLICK = 'TelegramPopup.Join.Click';
+export const TELEGRAM_POPUP_CLOSE = 'TelegramPopup.Close';
 
 // export const GIVE_FEEDBACK_CLICK = 'GiveFeedbackClick';
 // export const GIVE_FEEDBACK_CLOSE = 'GiveFeedbackClose';
@@ -56,11 +61,16 @@ export const wavesNodeInstallClick = createAC(WAVES_NODE_INSTALL_CLICK);
 // files downloads
 export const whitepaperDownload = createAC(WHITEPAPER_DOWNLOAD);
 export const brandingPackageDownload = createAC(BRANDING_PACKAGE_DOWNLOAD);
+export const smartContractsWPDownload = createAC(SMART_CONTRACTS_WP_DOWNLOAD);
 
 // contact
 export const submitResumeClick = createAC(SUBMIT_RESUME_CLICK);
 export const subscribe = createAC(SUBSCRIBE);
 export const feedbackFormSubmit = createAC(FEEDBACK_FORM_SUBMIT);
+
+// telegram
+export const joinTelegramClick = createAC(TELEGRAM_POPUP_JOIN_CLICK);
+export const closeTelegramClick = createAC(TELEGRAM_POPUP_CLOSE);
 
 // export const giveFeedbackShow = createAC(GIVE_FEEDBACK_SHOW);
 // export const giveFeedbackClick = createAC(GIVE_FEEDBACK_CLICK);

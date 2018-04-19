@@ -121,6 +121,7 @@ export default theme => {
     navLinkContainer: {
       width: '50%',
       margin: 0 + '!important',
+      fontSize: '.8em',
     },
 
     navLinkContainerXsOnly: {

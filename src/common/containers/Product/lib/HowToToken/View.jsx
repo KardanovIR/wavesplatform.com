@@ -20,10 +20,10 @@ const HowToStart = ({ onGetClientClick }) => (
               onClick={onGetClientClick}
               key="main_cta_button"
               target="_blank"
-              href={url('online-client')}
+              href={url('online-client(beta)')}
               textDecoration={false}
             >
-              <FormattedMessage id="cta.getClient" />
+              <FormattedMessage id="cta.onlineClient" />
             </Link>
           </div>
         ),

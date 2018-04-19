@@ -63,6 +63,9 @@ const URL = {
   file: {
     pathname: '/files/',
   },
+  'smart-contracts': {
+    pathname: '/developers/smart-contracts',
+  },
 };
 
 export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {

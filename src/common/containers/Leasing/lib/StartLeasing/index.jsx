@@ -37,7 +37,6 @@ const StartLeasing = ({ classes }) => {
             lg={6}
             className={[classes.col, classes.colMargin]}
           >
-          
             <Typography type="display1" weight={600}>
               <FormattedMessage
                 id="leasing.startLeasing.title"
@@ -61,13 +60,9 @@ const StartLeasing = ({ classes }) => {
               />
             </Typography>
             <Margin bottom={5} />
-            <Button
-              secondary
-              target="_blank"
-              href={url('online-client')}
-            >
+            <Button secondary target="_blank" href={url('online-client(beta)')}>
               <FormattedMessage
-                id="cta.getClient"
+                id="cta.onlineClient"
                 defaultMessage="Online client"
               />
             </Button>
@@ -128,7 +123,10 @@ const StartLeasing = ({ classes }) => {
                     values={{
                       nodesLink: (
                         <Link pseudo href="#nodes">
-                          which node
+                          <FormattedMessage
+                            id="leasing.startLeasing.p3.nodesLink"
+                            defaultMessage="which node"
+                          />
                         </Link>
                       ),
                     }}

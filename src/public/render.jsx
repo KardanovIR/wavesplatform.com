@@ -18,8 +18,9 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import ru from 'react-intl/locale-data/ru';
 import ko from 'react-intl/locale-data/ko';
+import zh from 'react-intl/locale-data/zh';
 
-addLocaleData([...en, ...ru, ...ko]);
+addLocaleData([...en, ...ko, ...zh, ...ru]);
 
 // Cookies
 import { CookiesProvider } from 'react-cookie';

@@ -26,7 +26,7 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const PageLayout = ({ initialState, classes, onDropdownChange }) => (
-  <Layout activeLink="product" hideCredentials>
+  <Layout activeLink="product/token" hideCredentials>
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
       <ContentContainer>
         <MainScreen />
@@ -58,24 +58,6 @@ const PageLayout = ({ initialState, classes, onDropdownChange }) => (
       <Section className={classes.bgBlue}>
         <ContentContainer>
           <HowToToken eventPage="ProductToken" eventSource="HowToToken" />
-          <Margin bottom={4} />
-          <Col xs={12} md={6}>
-            <Typography type="display3Inverted">
-              <FormattedMessage id="products.token.howToStartTrading.title" />
-            </Typography>
-            <Margin bottom={2} />
-          </Col>
-          <Col xs={12}>
-            <Typography type="body">
-              <FormattedMessage id="products.token.howToStartTrading.descr" />
-            </Typography>
-            <Margin bottom={2} />
-            <DownloadClientDropdown
-              key="main_cta_button1"
-              onChange={onDropdownChange}
-            />
-            <Margin bottom={2} />
-          </Col>
         </ContentContainer>
       </Section>
     </Wrapper>

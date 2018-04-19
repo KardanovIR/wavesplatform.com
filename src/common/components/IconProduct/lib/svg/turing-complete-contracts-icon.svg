@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>turing-complete-contracts-icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="40" cy="40" r="22"></circle>
+        <circle id="path-3" cx="40" cy="40" r="22"></circle>
+        <circle id="path-5" cx="40" cy="40" r="22"></circle>
+        <circle id="path-7" cx="40" cy="40" r="22"></circle>
+        <circle id="path-9" cx="40" cy="40" r="22"></circle>
+        <circle id="path-11" cx="40" cy="40" r="22"></circle>
+        <circle id="path-13" cx="40" cy="40" r="22"></circle>
+        <circle id="path-15" cx="40" cy="40" r="22"></circle>
+        <circle id="path-17" cx="40" cy="40" r="22"></circle>
+        <circle id="path-19" cx="40" cy="40" r="22"></circle>
+        <circle id="path-21" cx="40" cy="40" r="22"></circle>
+    </defs>
+    <g id="turing-complete-contracts-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M40,79.13 L79.13,40 L0.87,40 L40,79.13 Z M0.87,40 L79.13,40 L40,0.87 L0.87,40 Z" id="Shape" fill="#0053FF" fill-rule="nonzero"></path>
+        <circle id="a" fill="#003598" fill-rule="nonzero" cx="40" cy="40" r="22"></circle>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="a"></g>
+        <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)" points="13 37 53 37 53 39 13 39"></polygon>
+        <mask id="mask-4" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M56,42 C53.790861,42 52,40.209139 52,38 C52,35.790861 53.790861,34 56,34 C58.209139,34 60,35.790861 60,38 C60,40.209139 58.209139,42 56,42 Z M56,40 C57.1045695,40 58,39.1045695 58,38 C58,36.8954305 57.1045695,36 56,36 C54.8954305,36 54,36.8954305 54,38 C54,39.1045695 54.8954305,40 56,40 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-4)"></path>
+        <mask id="mask-6" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <g id="a"></g>
+        <rect id="Rectangle-2" fill="#FFFFFF" mask="url(#mask-6)" x="50" y="46" width="13" height="2"></rect>
+        <mask id="mask-8" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M47,51 C44.790861,51 43,49.209139 43,47 C43,44.790861 44.790861,43 47,43 C49.209139,43 51,44.790861 51,47 C51,49.209139 49.209139,51 47,51 Z M47,49 C48.1045695,49 49,48.1045695 49,47 C49,45.8954305 48.1045695,45 47,45 C45.8954305,45 45,45.8954305 45,47 C45,48.1045695 45.8954305,49 47,49 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-8)" transform="translate(47.000000, 47.000000) scale(-1, 1) translate(-47.000000, -47.000000) "></path>
+        <mask id="mask-10" fill="white">
+            <use xlink:href="#path-9"></use>
+        </mask>
+        <g id="a"></g>
+        <mask id="mask-12" fill="white">
+            <use xlink:href="#path-11"></use>
+        </mask>
+        <g id="a"></g>
+        <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-12)" points="28.236 32 31.636 28.6 33.05 30.014 29.065 34 29 34 29 34 19 34 19 32"></polygon>
+        <mask id="mask-14" fill="white">
+            <use xlink:href="#path-13"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M34,31 C31.790861,31 30,29.209139 30,27 C30,24.790861 31.790861,23 34,23 C36.209139,23 38,24.790861 38,27 C38,29.209139 36.209139,31 34,31 Z M34,29 C35.1045695,29 36,28.1045695 36,27 C36,25.8954305 35.1045695,25 34,25 C32.8954305,25 32,25.8954305 32,27 C32,28.1045695 32.8954305,29 34,29 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-14)"></path>
+        <mask id="mask-16" fill="white">
+            <use xlink:href="#path-15"></use>
+        </mask>
+        <g id="a"></g>
+        <polygon id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-16)" transform="translate(25.025000, 45.700000) scale(-1, 1) rotate(-180.000000) translate(-25.025000, -45.700000) " points="28.236 46.4 31.636 43 33.05 44.414 29.065 48.398 29 48.398 29 48.4 17 48.4 17 46.4 28.236 46.4"></polygon>
+        <mask id="mask-18" fill="white">
+            <use xlink:href="#path-17"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M34,54 C31.790861,54 30,52.209139 30,50 C30,47.790861 31.790861,46 34,46 C36.209139,46 38,47.790861 38,50 C38,52.209139 36.209139,54 34,54 Z M34,52 C35.1045695,52 36,51.1045695 36,50 C36,48.8954305 35.1045695,48 34,48 C32.8954305,48 32,48.8954305 32,50 C32,51.1045695 32.8954305,52 34,52 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-18)" transform="translate(34.000000, 50.000000) scale(-1, 1) rotate(-180.000000) translate(-34.000000, -50.000000) "></path>
+        <mask id="mask-20" fill="white">
+            <use xlink:href="#path-19"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M53.7284287,23 L57,23 L57,25 L52.7284287,25 L49.8142151,27.9142136 L48.4000015,26.5 L51.9018898,22.9981117 L53.728373,22.9999443 L53.7284287,23 Z" id="Combined-Shape" fill="#FFFFFF" mask="url(#mask-20)"></path>
+        <mask id="mask-22" fill="white">
+            <use xlink:href="#path-21"></use>
+        </mask>
+        <g id="a"></g>
+        <path d="M47,34 C44.790861,34 43,32.209139 43,30 C43,27.790861 44.790861,26 47,26 C49.209139,26 51,27.790861 51,30 C51,32.209139 49.209139,34 47,34 Z M47,32 C48.1045695,32 49,31.1045695 49,30 C49,28.8954305 48.1045695,28 47,28 C45.8954305,28 45,28.8954305 45,30 C45,31.1045695 45.8954305,32 47,32 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-22)" transform="translate(47.000000, 30.000000) rotate(-180.000000) translate(-47.000000, -30.000000) "></path>
+        <path d="M42.5,60.5 C40.290861,60.5 38.5,58.709139 38.5,56.5 C38.5,54.290861 40.290861,52.5 42.5,52.5 C44.709139,52.5 46.5,54.290861 46.5,56.5 C46.5,58.709139 44.709139,60.5 42.5,60.5 Z M42.5,58.5 C43.6045695,58.5 44.5,57.6045695 44.5,56.5 C44.5,55.3954305 43.6045695,54.5 42.5,54.5 C41.3954305,54.5 40.5,55.3954305 40.5,56.5 C40.5,57.6045695 41.3954305,58.5 42.5,58.5 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-22)" transform="translate(42.500000, 56.500000) rotate(-180.000000) translate(-42.500000, -56.500000) "></path>
+        <rect id="Rectangle-3" fill="#FFFFFF" mask="url(#mask-22)" x="41.5" y="60" width="2" height="3"></rect>
+    </g>
+</svg>
