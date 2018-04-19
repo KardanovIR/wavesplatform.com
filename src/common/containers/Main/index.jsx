@@ -105,12 +105,6 @@ const PageLayout = ({ initialState, classes }) => (
         </ContentContainer>
       </Section>
 
-      <Section size={2} className={classes.bgGray}>
-        <ContentContainer>
-          <PlannedFeatures />
-        </ContentContainer>
-      </Section>
-
       <Section top={2} bottom={1} className={classes.bgJoinUs}>
         <ContentContainer>
           <JoinUs />
