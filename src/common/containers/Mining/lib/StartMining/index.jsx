@@ -108,7 +108,7 @@ const StartMining = ({ classes }) => (
             </Typography>
             <Margin bottom={5} />
             <IconButton
-              href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+              href="https://docs.wavesplatform.com/waves-full-node/how-to-install-a-node/how-to-install-a-node.html"
               target="_blank"
               iconName="github"
             >
@@ -138,7 +138,7 @@ const StartMining = ({ classes }) => (
             </Typography>
             <Margin bottom={5} />
             <IconButton
-              href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-configuration-file"
+              href="https://docs.wavesplatform.com/waves-full-node/how-to-configure-a-node.html"
               target="_blank"
               iconName="github"
             >

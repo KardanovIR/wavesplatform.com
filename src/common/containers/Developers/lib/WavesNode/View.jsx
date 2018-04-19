@@ -28,7 +28,7 @@ const FriendlyAPI = ({
       </IconButton>,
       <IconButton
         onClick={onWavesNodeInstallClick}
-        href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+        href="https://docs.wavesplatform.com/waves-full-node/how-to-install-a-node/how-to-install-a-node.html"
         target="_blank"
         iconName="github"
         className={classes.button}

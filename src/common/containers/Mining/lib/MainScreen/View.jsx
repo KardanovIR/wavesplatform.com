@@ -27,7 +27,7 @@ const DevelopersMainScreen = ({ onWavesNodeClick }) => (
       <IconButton
         onClick={onWavesNodeClick}
         key="main_cta_button"
-        href="https://github.com/wavesplatform/Waves/wiki/How-to-install-Waves-node"
+        href="https://docs.wavesplatform.com/waves-full-node/how-to-install-a-node/how-to-install-a-node.html"
         target="_blank"
         iconName="github"
         secondary

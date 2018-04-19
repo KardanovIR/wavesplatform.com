@@ -90,7 +90,7 @@ const Descriptions = ({ classes }) => (
 
         <Button
           target="_blank"
-          href="https://github.com/wavesplatform/Waves/wiki/Waves-NG-Protocol"
+          href="https://docs.wavesplatform.com/platform-features/waves-ng-protocol.html"
         >
           <FormattedMessage id="wavesNG.descriptions.2.buttonFullDetails" />
         </Button>

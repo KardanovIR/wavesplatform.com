@@ -13,7 +13,7 @@ const DevelopersMainScreen = ({ onDocumentationClick, inverted }) => (
       <IconButton
         onClick={onDocumentationClick}
         key="main_cta_button"
-        href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+        href="https://docs.wavesplatform.com/"
         target="_blank"
         iconName="github"
         secondary
