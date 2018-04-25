@@ -12,10 +12,11 @@ import en from 'react-intl/locale-data/en';
 import ko from 'react-intl/locale-data/ko';
 import zh from 'react-intl/locale-data/zh';
 import ru from 'react-intl/locale-data/ru';
+import hi from 'react-intl/locale-data/hi';
 
 import locale from 'src/server/locale';
 
-addLocaleData([...en, ...ko, ...zh, ...ru]);
+addLocaleData([...en, ...ko, ...zh, ...ru, ...hi]);
 
 // React html component with <html>, <head> etc.
 import Html from 'src/server/components/Html';

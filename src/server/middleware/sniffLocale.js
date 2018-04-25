@@ -2,7 +2,7 @@ import { Locales } from 'locale';
 import isProd from 'src/common/utils/isProd';
 import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
-const supported = ['ko', 'en', 'zh', 'ru'];
+const supported = ['ko', 'en', 'zh', 'ru', 'hi'];
 
 const cookieDomain = isProd() ? { domain: '.wavesplatform.com' } : {};
 checkEnvVariable('LANG');
