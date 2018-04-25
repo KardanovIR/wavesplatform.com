@@ -54,7 +54,7 @@ const DEX = ({ onDexApiClick, classes }) => (
     buttons={[
       <IconButton
         onClick={onDexApiClick}
-        href="https://github.com/wavesplatform/Waves/wiki/Matcher"
+        href="https://docs.wavesplatform.com/application-development-and-api/dex-api/matcher.html"
         target="_blank"
         iconName="github"
         className={classes.button}
