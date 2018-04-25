@@ -1,38 +1,42 @@
 [
-	{
-		"name": "telegram",
-		"href": "https://telegram.me/wavesnews"
-	},
-	{
-		"name": "facebook",
-		"href": "https://www.facebook.com/wavesplatform"
-	},
-	{
-		"name": "twitter",
-		"href": "https://twitter.com/wavesplatform"
-	},
-	{
-		"name": "bitcoin",
-		"href": "https://bitcointalk.org/index.php?topic=3223136.new#new"
-	},
-	{
-		"name": "vkontakte",
-		"href": "https://vk.com/wavesplatform"
-	},
-	{
-		"name": "medium",
-		"href": "https://blog.wavesplatform.com/"
-	},
-	{
-		"name": "reddit",
-		"href": "https://www.reddit.com/r/Wavesplatform/"
-	},
-	{
-		"name": "youtube",
-		"href": "https://www.youtube.com/channel/UCYDQN4Fo4rGnOZ22L5plNIw"
+  {
+    "name": "telegram",
+    "href": "https://telegram.me/wavesnews"
+  },
+  {
+    "name": "facebook",
+    "href": "https://www.facebook.com/wavesplatform"
+  },
+  {
+    "name": "twitter",
+    "href": "https://twitter.com/wavesplatform"
+  },
+  {
+    "name": "bitcoin",
+    "href": "https://bitcointalk.org/index.php?topic=3223136.new#new"
+  },
+  {
+    "name": "vkontakte",
+    "href": "https://vk.com/wavesplatform"
+  },
+  {
+    "name": "medium",
+    "href": "https://blog.wavesplatform.com/"
+  },
+  {
+    "name": "reddit",
+    "href": "https://www.reddit.com/r/Wavesplatform/"
+  },
+  {
+    "name": "youtube",
+    "href": "https://www.youtube.com/channel/UCYDQN4Fo4rGnOZ22L5plNIw"
   },
   {
     "name": "discord",
     "href": "https://discord.gg/cnFmDyA"
+  },
+  {
+    "name": "github",
+    "href": "https://github.com/wavesplatform/"
   }
 ]
