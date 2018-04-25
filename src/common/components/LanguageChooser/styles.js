@@ -8,10 +8,12 @@ const styles = ({ spacing, colors, palette }) => {
   const iconSizes = {
     height: '12px',
     width: '18px',
+    flex: 'none',
   };
 
   return {
     select: {
+      minWidth: 100,
       color: palette.gray[400],
       fontSize: '12px',
       border: ({ inverted }) =>
@@ -34,6 +36,7 @@ const styles = ({ spacing, colors, palette }) => {
 
       '& .Select-multi-value-wrapper': {
         display: 'block',
+        flex: 1,
         height: `${spacing.unit * 2}px`,
       },
       '& .Select-arrow-zone': {
@@ -71,8 +74,10 @@ const styles = ({ spacing, colors, palette }) => {
         marginLeft: [spacing.unit / 2],
         marginRight: [spacing.unit / 2],
         opacity: '0.7',
+        flex: 1,
       },
       '& .Select-value': {
+        width: '100%',
         display: 'inline-flex',
         justifyContent: 'start',
         cursor: 'default',
@@ -81,6 +86,7 @@ const styles = ({ spacing, colors, palette }) => {
       '& .Select-option-label': {
         marginLeft: [spacing.unit / 2],
         marginRight: [spacing.unit / 2],
+        flex: 1,
       },
     },
   };
