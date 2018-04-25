@@ -1,8 +1,4 @@
 const styles = theme => ({
-  bg: {
-    marginLeft: -theme.spacing.unit * 6,
-    marginRight: -theme.spacing.unit * 6,
-  },
   img: {
     display: 'none',
     height: '100%',

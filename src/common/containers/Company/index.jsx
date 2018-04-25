@@ -51,7 +51,9 @@ const PageLayout = ({ classes }) => (
     </Section>
 
     <Section top={1} bottom={2}>
-      <Team />
+      <ContentContainer>
+        <Team />
+      </ContentContainer>
     </Section>
 
     <Section top={1} bottom={2}>
