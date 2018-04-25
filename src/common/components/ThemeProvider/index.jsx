@@ -15,7 +15,7 @@ const styles = {
     padding: 0,
   },
   '@global #app': {
-    overflowX: 'hidden',
+    overflow: 'hidden',
   },
 };
 
