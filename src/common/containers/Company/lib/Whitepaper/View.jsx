@@ -5,6 +5,8 @@ import { Row, Col } from 'src/common/components/Grid';
 import Button from 'src/common/components/Button';
 import Margin from 'src/common/components/Margin';
 
+import { fileUrl } from 'src/common/utils/url';
+
 const wpImageSrc = require('!svg-url-loader?noquotes!./img/paper_ico.svg');
 
 import { FormattedMessage } from 'react-intl';
@@ -26,7 +28,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
 
       <Button
         onClick={onWhitepaperClick}
-        href="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/whitepaper_v0.pdf"
+        href={fileUrl('images/whitepaper_v0.pdf')}
         target="_blank"
         secondary
       >
