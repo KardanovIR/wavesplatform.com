@@ -6,8 +6,8 @@ import Margin from 'src/common/components/Margin';
 import Link from 'src/common/components/Link';
 import Input from 'src/common/components/Input';
 import Icon from 'src/common/components/Icon';
-
-import ErrorMessage from './lib/ErrorMessage';
+import FormFieldError from 'src/common/components/Form/FormFieldError';
+import FormFieldConsent from 'src/common/components/Form/FormFieldConsent';
 
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 
@@ -26,28 +26,14 @@ const messages = defineMessages({
 class SubscriptionForm extends Component {
   static defaultProps = {
     onSubmit: () => {},
-    onEmailChange: () => {},
-    initialEmail: '',
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: this.props.initialEmail,
-    };
-  }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    this.props.onSubmit();
   };
-
-  handleChange = e => {
-    this.setState({
-      email: e.target.value,
-    });
-    this.props.onEmailChange(e.target.value);
-  };
+  handleChange = (field, valueField = 'value') => e =>
+    this.props.onValueChange(field, e.target[valueField]);
 
   handleStartOver = e => {
     e.preventDefault();
@@ -57,14 +43,15 @@ class SubscriptionForm extends Component {
   render() {
     const {
       classes,
-      errors,
+      hasErrors,
       showErrors,
+      values,
       status,
       onStartOver,
       intl,
     } = this.props;
 
-    const invalid = !!(showErrors && errors.email.length);
+    const invalid = Boolean(showErrors && hasErrors);
 
     return (
       <div className={classes.wrapper}>
@@ -75,8 +62,8 @@ class SubscriptionForm extends Component {
                 <Input
                   className={classes.input}
                   type="text"
-                  value={this.state.email}
-                  onChange={this.handleChange}
+                  value={values.email}
+                  onChange={this.handleChange('email')}
                   onBlur={this.props.onBlur}
                   placeholder={intl.formatMessage(messages.placeholderEmail)}
                   invalid={invalid}
@@ -101,8 +88,25 @@ class SubscriptionForm extends Component {
                 </Button>
               </div>
             </div>
-
-            {showErrors && <ErrorMessage errors={errors.email} />}
+            <div className={classes.checkboxesContainer}>
+              <FormFieldConsent
+                invalid={invalid}
+                inverted
+                wrapperClassName={classes.checkboxesContainer}
+                agreeCookies={values.agreeCookies}
+                agreeNews={values.agreeNews}
+                onCookiesChange={this.handleChange('agreeCookies', 'checked')}
+                onNewsChange={this.handleChange('agreeNews', 'checked')}
+              />
+              {invalid && (
+                <FormFieldError inverted>
+                  <FormattedMessage
+                    id="form.errorMessage"
+                    defaultMessage="Please enter a valid email address, then agree to the privacy policy and to receive marketing information."
+                  />
+                </FormFieldError>
+              )}
+            </div>
           </form>
         )}
 
@@ -119,7 +123,7 @@ class SubscriptionForm extends Component {
                 values={{
                   email: (
                     <Typography inverted tagName="span">
-                      {this.state.email}
+                      {values.email}
                     </Typography>
                   ),
                 }}
@@ -169,4 +173,7 @@ class SubscriptionForm extends Component {
   }
 }
 
-export default compose(injectSheet(styles), injectIntl)(SubscriptionForm);
+export default compose(
+  injectSheet(styles),
+  injectIntl
+)(SubscriptionForm);

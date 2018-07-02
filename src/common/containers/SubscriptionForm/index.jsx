@@ -10,10 +10,13 @@ import SubscriptionForm from '../../components/SubscriptionForm';
 
 // validation
 import { withValidation } from '../../../public/hoc/validation';
-import { isEmpty, isEmailInvalid } from '../../../public/utils/validation';
+import {
+  isEmpty,
+  isEmailInvalid,
+  isNotChecked,
+} from '../../../public/utils/validation';
 
 // for submit
-import { handleFetchError } from '../../../common/utils/handleFetchError';
 import sendToApi from 'src/public/utils/sendToApi';
 
 // localStorage read and write email
@@ -32,8 +35,11 @@ class SubscriptionFormContainer extends Component {
     // validation
     onValidate: PropTypes.func,
     onValidationStart: PropTypes.func,
+    onValidationStop: PropTypes.func,
     errors: PropTypes.shape({
       email: PropTypes.arrayOf(PropTypes.string),
+      agreeCookies: PropTypes.arrayOf(PropTypes.string),
+      agreeNews: PropTypes.arrayOf(PropTypes.string),
     }),
     showErrors: PropTypes.bool,
 
@@ -46,40 +52,57 @@ class SubscriptionFormContainer extends Component {
     // status: 'idle' | 'pending' | 'subscribed' | 'error'
     this.state = {
       status: this.props.initialValue ? 'subscribed' : 'idle',
+      values: {
+        email: this.props.initialValue || '',
+        agreeCookies: false,
+        agreeNews: false,
+      },
     };
   }
 
-  componentDidMount() {
-    // trigger change for initial value
-    this.handleEmailChange(this.props.initialValue || '');
+  componentWillUpdate(_, nextState) {
+    if (nextState !== this.state) {
+      this.props.onValidate(nextState.values);
+    }
   }
-
   sendForm = email => {
     this.setState({ status: 'pending' });
 
     sendToApi('subscription', { email })
       .then(() => this.setState({ status: 'subscribed' }))
       .catch(err => {
-        console.warn(err);
+        console.warn(err); // eslint-disable-line no-console
         this.setState({ status: 'error' });
       });
   };
 
-  handleEmailChange = newValue => this.props.onValidate({ email: newValue });
+  handleChange = (field, value) =>
+    this.setState(({ values, ...rest }) => ({
+      ...rest,
+      values: { ...values, [field]: value },
+    }));
 
-  handleSubmit = formData => {
-    this.props.onValidate(formData);
+  handleSubmit = () => {
+    const { values } = this.state;
     this.props.onValidationStart();
 
-    if (!this.props.errors.email.length) {
-      this.sendForm(formData.email);
-      this.props.onLocalStorageUpdate(formData.email);
-      this.props.onSubmit(formData);
+    if (!this.props.hasErrors) {
+      this.sendForm(values.email);
+      this.props.onLocalStorageUpdate(values.email);
+      this.props.onSubmit(values);
     }
   };
 
   handleStartOver = () => {
-    this.setState({ status: 'idle' });
+    this.props.onValidationStop();
+    this.setState({
+      status: 'idle',
+      values: {
+        email: this.props.initialValue || '',
+        agreeCookies: false,
+        agreeNews: false,
+      },
+    });
   };
 
   handleBlur = e => {
@@ -87,17 +110,17 @@ class SubscriptionFormContainer extends Component {
   };
 
   render() {
-    const { initialValue, errors, showErrors } = this.props;
+    const { hasErrors, showErrors } = this.props;
 
     return (
       <SubscriptionForm
         onSubmit={this.handleSubmit}
         onBlur={this.handleBlur}
-        onEmailChange={this.handleEmailChange}
+        onValueChange={this.handleChange}
         onStartOver={this.handleStartOver}
         status={this.state.status}
-        initialEmail={initialValue}
-        errors={errors}
+        values={this.state.values}
+        hasErrors={hasErrors}
         showErrors={showErrors}
       />
     );
@@ -106,6 +129,13 @@ class SubscriptionFormContainer extends Component {
 
 export default compose(
   withLocalStorage('subscriptionEmail'),
-  withValidation({ email: [isEmpty, isEmailInvalid] }),
-  connect(s => s, { onSubmit: subscribe })
+  withValidation({
+    email: [isEmpty, isEmailInvalid],
+    agreeCookies: [isNotChecked],
+    agreeNews: [isNotChecked],
+  }),
+  connect(
+    s => s,
+    { onSubmit: subscribe }
+  )
 )(SubscriptionFormContainer);
