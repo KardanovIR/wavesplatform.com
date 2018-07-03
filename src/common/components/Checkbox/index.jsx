@@ -7,6 +7,7 @@ import cn from 'classnames';
 const Checkbox = props => (
   <Input
     {...props}
+    checked={props.checked || props.value === true}
     type="checkbox"
     className={cn(props.className, props.classes.checkbox)}
   />
