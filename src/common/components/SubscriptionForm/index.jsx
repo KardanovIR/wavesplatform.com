@@ -14,7 +14,7 @@ import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-import { compose } from 'ramda';
+import { compose, memoize } from 'ramda';
 
 const messages = defineMessages({
   placeholderEmail: {
@@ -32,8 +32,9 @@ class SubscriptionForm extends Component {
     e.preventDefault();
     this.props.onSubmit();
   };
-  handleChange = (field, valueField = 'value') => e =>
-    this.props.onValueChange(field, e.target[valueField]);
+  handleChange = memoize((field, valueField = 'value') => e =>
+    this.props.onValueChange(field, e.target[valueField])
+  );
 
   handleStartOver = e => {
     e.preventDefault();

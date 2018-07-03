@@ -11,7 +11,6 @@ import Icon from 'src/common/components/Icon';
 import Typography from 'src/common/components/Typography';
 
 // error message
-// import ErrorMessage from './lib/ErrorMessage';
 import FormFieldError from 'src/common/components/Form/FormFieldError';
 import FormFieldConsent from 'src/common/components/Form/FormFieldConsent';
 
@@ -23,7 +22,7 @@ import styles from './styles';
 
 import { compose, memoize } from 'ramda';
 
-class FeedbackFormC extends React.Component {
+class FeedbackFormView extends React.Component {
   static defaultProps = {
     onSubmit: () => {},
   };
@@ -208,4 +207,4 @@ class FeedbackFormC extends React.Component {
 export default compose(
   injectSheet(styles),
   injectIntl
-)(FeedbackFormC);
+)(FeedbackFormView);
