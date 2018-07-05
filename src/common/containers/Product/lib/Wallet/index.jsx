@@ -28,7 +28,6 @@ const Wallet = ({ classes }) => (
       <img
         className={classes.image}
         src={require('../../img/ipad_iphone@1x.jpg')}
-        srcSet={`${require('../../img/ipad_iphone@1x.jpg')} 1x, ${require('../../img/ipad_iphone@2x.jpg')} 2x`}
         alt=""
       />
     </Margin>

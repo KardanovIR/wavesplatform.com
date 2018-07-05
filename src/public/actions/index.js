@@ -1,5 +1,6 @@
 // our products
 export const ONLINE_BETA_CLIENT_CLICK = 'GetClient.OnlineBeta.Click';
+export const NEW_DEX_CLICK = 'GetClient.NewDex.Click';
 export const ONLINE_CLIENT_CLICK = 'GetClient.Online.Click';
 
 export const ELECTRON_CLIENT_WINDOWS_CLICK = 'GetClient.Windows.Click';
@@ -43,6 +44,7 @@ const createAC = type => meta => ({
 
 // our products
 export const newClientClick = createAC(ONLINE_BETA_CLIENT_CLICK);
+export const newDexClick = createAC(NEW_DEX_CLICK);
 export const getClientClick = createAC(ONLINE_CLIENT_CLICK);
 export const getWavesClick = createAC(GET_WAVES_CLICK);
 export const androidClientClick = createAC(ANDROID_CLIENT_CLICK);

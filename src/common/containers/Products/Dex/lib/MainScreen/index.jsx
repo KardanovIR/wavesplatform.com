@@ -2,9 +2,8 @@ import React from 'react';
 
 import MainScreen from 'src/common/components/MainScreen';
 import Button from 'src/common/components/Button';
-import DownloadClientDropdown from 'src/common/containers/DownloadClientDropdown';
 import Typography from 'src/common/components/Typography';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 import url from 'src/common/utils/url';
 import injectSheet from 'react-jss';
@@ -18,13 +17,9 @@ const styles = theme => ({
   },
 });
 
-const DexMainScreen = ({
-  onDownloadChange,
-  onOnlineClientClick,
-  classes,
-}) => (
+const DexMainScreen = ({ onNewDexClick }) => (
   <MainScreen
-    title={<FormattedMessage id="products.dex.title" />}
+    title={<FormattedHTMLMessage id="products.dex.title" />}
     titleType="displayCustom"
     text={
       <Typography type="body" alignMobile="center" align="center" inverted>
@@ -35,20 +30,14 @@ const DexMainScreen = ({
     align="center"
     alignMobile="center"
     buttons={[
-      <DownloadClientDropdown
-        key="main_cta_button1"
-        onChange={onDownloadChange}
-        containerClassName={classes.downloadButton}
-      />,
       <Button
-        onClick={onOnlineClientClick}
-        bordered
-        key="main_cta_button2"
+        secondary
+        onClick={onNewDexClick}
+        key="main_cta_button"
         target="_blank"
-        inverted
-        href={url('online-client(beta)')}
+        href={url('dex-demo')}
       >
-        <FormattedMessage id="cta.onlineClient" />
+        <FormattedMessage id="cta.newDex" defaultMessage="Exchange" />
       </Button>,
     ]}
   />

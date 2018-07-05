@@ -66,6 +66,9 @@ const URL = {
   'smart-contracts': {
     pathname: '/developers/smart-contracts',
   },
+  'dex-demo': {
+    pathname: 'https://beta.wavesplatform.com/dex-demo',
+  },
 };
 
 export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {

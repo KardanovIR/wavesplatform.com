@@ -27,18 +27,14 @@ import styles from './styles';
 const PageLayout = ({
   initialState,
   classes,
-  onDownloadClient,
-  onOnlineClientClick,
+  onNewDexClick,
   onAndroidClientClick,
   onIosClientClick,
 }) => (
   <Layout inverted hideCredentials activeLink="dex">
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
       <ContentContainer>
-        <MainScreen
-          onDownloadChange={onDownloadClient}
-          onOnlineClientClick={onOnlineClientClick}
-        />
+        <MainScreen onNewDexClick={onNewDexClick} />
       </ContentContainer>
     </BackgroundMainScreen>
 

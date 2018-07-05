@@ -108,7 +108,7 @@ const creatyTypography = (palette, breakpoints) => {
       {
         ...base,
         ...display,
-        fontSize: 40,
+        fontSize: 36,
         lineHeight: 1.2,
         margin: 0,
       },
