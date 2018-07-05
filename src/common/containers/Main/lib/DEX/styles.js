@@ -33,6 +33,7 @@ const styles = theme => ({
     imageWrapper: {
       position: 'absolute',
       right: '0',
+      width: '80%',
       top: `calc(${8 * theme.spacing.unit}px + 4em)`,
     },
   },
@@ -42,8 +43,14 @@ const styles = theme => ({
     },
     imageWrapper: {
       position: 'absolute',
+      width: '60%',
       right: '0',
       top: `calc(${16 * theme.spacing.unit}px + 4em)`,
+    },
+  },
+  [theme.breakpoints.up('lg')]: {
+    imageWrapper: {
+      width: '55%',
     },
   },
 });

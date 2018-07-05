@@ -26,7 +26,6 @@ const DEX = ({ classes }) => (
       <div className={classes.imageWrapper}>
         <img
           src={require('./img/dexmain@1x.jpg')}
-          srcSet={`${require('./img/dexmain@1x.jpg')} 1x, ${require('./img/dexmain@2x.jpg')} 2x`}
           alt=""
           className={classes.image}
         />

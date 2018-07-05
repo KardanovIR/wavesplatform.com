@@ -9,7 +9,7 @@ const styles = theme => ({
   },
   imageCol: {
     position: 'absolute',
-    right: -20,
+    right: 0,
     width: '100%',
     bottom: -100,
     margin: [theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
@@ -28,12 +28,16 @@ const styles = theme => ({
     left: 0,
     width: '100%',
   },
+  [theme.breakpoints.up('tablet')]: {
+    imageCol: {
+      right: '10vw',
+    },
+  },
   [theme.breakpoints.up('sm')]: {
     root: {
       marginBottom: 0,
     },
     imageCol: {
-      right: -theme.spacing.unit * 3,
       bottom: -110,
       width: '50%',
       maxWidth: '100%',
@@ -42,12 +46,13 @@ const styles = theme => ({
       width: 'auto',
     },
   },
-  [theme.breakpoints.up('md')]: {
+
+  [theme.breakpoints.up('lg')]: {
     imageCol: {
-      right: theme.spacing.unit * 1.5,
+      overflow: 'hidden',
+      right: 0,
     },
   },
-  [theme.breakpoints.up('lg')]: {},
 });
 
 export default styles;
