@@ -1,6 +1,6 @@
 {
   "name": "framework-server-render",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Framework server render prototype",
   "main": "index.js",
   "repository": {
