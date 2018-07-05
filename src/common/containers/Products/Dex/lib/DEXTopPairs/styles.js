@@ -86,7 +86,6 @@ const styles = theme => ({
     image: {
       top: -60,
       right: '-20%',
-      width: 'auto',
     },
   },
 });

@@ -3,6 +3,7 @@ const styles = theme => ({
   imageWrapper: {
     position: 'relative',
     paddingTop: '98%',
+    left: '-10%',
     overflow: 'visible',
   },
   imageCol: {

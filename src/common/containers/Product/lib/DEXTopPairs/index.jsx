@@ -21,11 +21,6 @@ const DEXTopPairs = ({ classes, pairs }) => (
               ? require('./img/dex@1x.jpg')
               : require('./img/dexMobile.jpg')
           }
-          srcSet={
-            matches
-              ? `${require('./img/dex@1x.jpg')} 1x, ${require('./img/dex@2x.jpg')} 2x`
-              : null
-          }
           className={classes.image}
           alt=""
         />
