@@ -9,7 +9,12 @@ import Icon from 'src/common/components/Icon';
 import FormFieldError from 'src/common/components/Form/FormFieldError';
 import FormFieldConsent from 'src/common/components/Form/FormFieldConsent';
 
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
+import {
+  FormattedMessage,
+  FormattedHTMLMessage,
+  defineMessages,
+  injectIntl,
+} from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
@@ -94,16 +99,16 @@ class SubscriptionForm extends Component {
                 invalid={invalid}
                 inverted
                 wrapperClassName={classes.checkboxesContainer}
-                agreeCookies={values.agreeCookies}
-                agreeNews={values.agreeNews}
-                onCookiesChange={this.handleChange('agreeCookies', 'checked')}
-                onNewsChange={this.handleChange('agreeNews', 'checked')}
+                cookiesConsent={values.cookiesConsent}
+                newsConsent={values.newsConsent}
+                onCookiesChange={this.handleChange('cookiesConsent', 'checked')}
+                onNewsChange={this.handleChange('newsConsent', 'checked')}
               />
               {invalid && (
                 <FormFieldError inverted>
-                  <FormattedMessage
+                  <FormattedHTMLMessage
                     id="form.errorMessage"
-                    defaultMessage="Please enter a valid email address, then agree to the privacy policy and to receive marketing information."
+                    defaultMessage="Please enter a&nbsp;valid email address, then agree to&nbsp;the privacy policy and to&nbsp;receive marketing information."
                   />
                 </FormFieldError>
               )}

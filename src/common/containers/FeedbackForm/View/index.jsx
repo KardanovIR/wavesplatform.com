@@ -14,7 +14,7 @@ import Typography from 'src/common/components/Typography';
 import FormFieldError from 'src/common/components/Form/FormFieldError';
 import FormFieldConsent from 'src/common/components/Form/FormFieldConsent';
 
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { FormattedMessage, injectIntl, FormattedHTMLMessage } from 'react-intl';
 import messages from './messages';
 
 import injectSheet from 'react-jss';
@@ -124,13 +124,13 @@ class FeedbackFormView extends React.Component {
                     invalid={invalid}
                     inverted
                     wrapperClassName={classes.checkboxesContainer}
-                    agreeCookies={values.agreeCookies}
-                    agreeNews={values.agreeNews}
+                    cookiesConsent={values.cookiesConsent}
+                    newsConsent={values.newsConsent}
                     onCookiesChange={this.handleChange(
-                      'agreeCookies',
+                      'cookiesConsent',
                       'checked'
                     )}
-                    onNewsChange={this.handleChange('agreeNews', 'checked')}
+                    onNewsChange={this.handleChange('newsConsent', 'checked')}
                   />
                 </div>
               </Col>
@@ -138,9 +138,9 @@ class FeedbackFormView extends React.Component {
                 {invalid && (
                   <div className={classes.inputWrapper}>
                     <FormFieldError inverted>
-                      <FormattedMessage
+                      <FormattedHTMLMessage
                         id="formFeedback.errorMessage"
-                        defaultMessage="Please enter a valid email address, choose a topic and write a message. Then agree to the privacy policy and to receive marketing information before clicking Submit"
+                        defaultMessage="Please enter a&nbsp;valid email address, choose a&nbsp;topic and write a&nbsp;message. Then agree to&nbsp;the privacy policy and to&nbsp;receive marketing information before clicking Submit"
                       />
                     </FormFieldError>
                   </div>

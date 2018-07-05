@@ -3,7 +3,7 @@ import { validate as validateEmail } from 'email-validator';
 // error codes
 export const EMPTY = 'empty';
 export const EMAIL_INVALID = 'emailInvalid';
-export const NOTCHECKED = 'notChecked';
+export const NOT_CHECKED = 'notChecked';
 // export const PHONE_INVALID = 'phoneInvalid';
 // export const GMAIL_CORRECTION = 'gmailCorrection';
 
@@ -17,7 +17,7 @@ export const isEmailInvalid = value => {
 };
 
 export const isNotChecked = value => {
-  return value === true ? '' : NOTCHECKED;
+  return value === true ? '' : NOT_CHECKED;
 };
 // export const needsGmailCorrection = value => {
 //     return ~value.indexOf('gmail.ru') ? GMAIL_CORRECTION : '';

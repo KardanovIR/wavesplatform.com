@@ -1,9 +1,9 @@
-const checkMark = {
+const checkMark = theme => ({
   content: '""',
-  bottom: 4,
-  left: 4,
-  width: 4,
-  height: 8,
+  bottom: theme.spacing.unit / 2,
+  left: theme.spacing.unit / 2,
+  width: theme.spacing.unit / 2,
+  height: theme.spacing.unit,
   border: 'solid black',
   borderWidth: '0 2px 2px 0',
   '-webkit-transform': 'rotate(45deg)',
@@ -11,22 +11,22 @@ const checkMark = {
   transform: 'rotate(45deg)',
   display: 'block',
   position: 'absolute',
-};
+});
 
-const styles = () => ({
+const styles = theme => ({
   checkbox: {
     flex: 'none',
     '-webkit-appearance': 'none',
     display: 'inline-block',
     padding: 0,
-    marginBottom: 4,
-    height: 16,
-    width: 16,
+    marginBottom: theme.spacing.unit / 2,
+    height: theme.spacing.unit * 2,
+    width: theme.spacing.unit * 2,
     background: 'transparent',
     position: 'relative',
     ['&:checked']: {
       background: 'white',
-      ['&::after']: checkMark,
+      ['&::after']: checkMark(theme),
     },
   },
 });

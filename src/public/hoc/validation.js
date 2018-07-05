@@ -4,10 +4,7 @@ import { map, mapObjIndexed, empty } from 'ramda';
 
 import { combineRules } from '../utils/validation';
 
-const hasErrors = errors =>
-  Object.values(errors)
-    .map(a => a.join())
-    .filter(a => a !== '').length !== 0;
+const hasErrors = errors => Object.values(errors).some(es => es.length);
 /**
  *
  * @param {object} fieldRules

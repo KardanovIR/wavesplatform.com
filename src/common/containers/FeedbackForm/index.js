@@ -20,8 +20,8 @@ const getDefaultState = () => ({
     email: '',
     reason: '',
     message: '',
-    agreeCookies: '',
-    agreeNews: '',
+    cookiesConsent: '',
+    newsConsent: '',
   },
 });
 
@@ -58,7 +58,6 @@ class FeedbackFormContainer extends Component {
       sendToApi('feedback', values)
         .then(() => this.setState({ status: 'success' }))
         .catch(err => {
-          console.warn(err); // eslint-disable-line no-console
           this.setState({ status: 'error' });
         });
     }
@@ -95,6 +94,6 @@ export default withValidation({
   email: [isEmpty, isEmailInvalid],
   reason: [isEmpty],
   message: [isEmpty],
-  agreeCookies: [isNotChecked],
-  agreeNews: [isNotChecked],
+  cookiesConsent: [isNotChecked],
+  newsConsent: [isNotChecked],
 })(FeedbackFormContainer);

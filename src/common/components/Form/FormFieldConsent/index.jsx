@@ -7,7 +7,7 @@ import Checkbox from 'src/common/components/Checkbox';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import Link from 'src/common/components/Link';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 
 const FormFieldConsentStyles = theme => ({
   checkbox: { marginRight: theme.spacing.unit },
@@ -15,8 +15,8 @@ const FormFieldConsentStyles = theme => ({
 const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
   ({
     inverted,
-    agreeCookies,
-    agreeNews,
+    cookiesConsent,
+    newsConsent,
     invalid,
     onCookiesChange,
     onNewsChange,
@@ -26,18 +26,18 @@ const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
       <label>
         <Typography type="quote" inverted={inverted}>
           <Checkbox
-            value={agreeCookies}
+            value={cookiesConsent}
             onChange={onCookiesChange}
             invalid={invalid}
             className={classes.checkbox}
           />
-          <FormattedMessage
+          <FormattedHTMLMessage
             id="form.consent.privacyAndCookies"
             values={{
               privacyLink: <PrivacyPolicyLink />,
               cookiesLink: <CookiesPolicyLink />,
             }}
-            defaultMessage="I have read and agree with the {privacyLink} and the {cookiesLink}"
+            defaultMessage="I&nbsp;have read and agree with the {privacyLink} and the {cookiesLink}"
           />
         </Typography>
       </label>
@@ -45,13 +45,15 @@ const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
       <label>
         <Typography type="quote" inverted={inverted}>
           <Checkbox
-            value={agreeNews}
+            value={newsConsent}
             onChange={onNewsChange}
             invalid={invalid}
             className={classes.checkbox}
           />
-          I agree to receive marketing information and newsletters from Waves by
-          email
+          <FormattedHTMLMessage
+            id="form.consent.marketingAndNewsletter"
+            defaultMessage="I&nbsp;agree to&nbsp;receive marketing information and newsletters from Waves by&nbsp;email"
+          />
         </Typography>
       </label>
     </div>

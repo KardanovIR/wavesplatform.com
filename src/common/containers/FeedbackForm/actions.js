@@ -21,9 +21,6 @@ export const sendForm = formData => {
 
     sendToApi('feedback', formData)
       .then(() => dispatch(success()))
-      .catch(err => {
-        console.warn(err);
-        dispatch(error());
-      });
+      .catch(() => dispatch(error()));
   };
 };

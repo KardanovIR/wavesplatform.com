@@ -38,8 +38,8 @@ class SubscriptionFormContainer extends Component {
     onValidationStop: PropTypes.func,
     errors: PropTypes.shape({
       email: PropTypes.arrayOf(PropTypes.string),
-      agreeCookies: PropTypes.arrayOf(PropTypes.string),
-      agreeNews: PropTypes.arrayOf(PropTypes.string),
+      cookiesConsent: PropTypes.arrayOf(PropTypes.string),
+      newsConsent: PropTypes.arrayOf(PropTypes.string),
     }),
     showErrors: PropTypes.bool,
 
@@ -54,8 +54,8 @@ class SubscriptionFormContainer extends Component {
       status: this.props.initialValue ? 'subscribed' : 'idle',
       values: {
         email: this.props.initialValue || '',
-        agreeCookies: false,
-        agreeNews: false,
+        cookiesConsent: false,
+        newsConsent: false,
       },
     };
   }
@@ -70,10 +70,7 @@ class SubscriptionFormContainer extends Component {
 
     sendToApi('subscription', { email })
       .then(() => this.setState({ status: 'subscribed' }))
-      .catch(err => {
-        console.warn(err); // eslint-disable-line no-console
-        this.setState({ status: 'error' });
-      });
+      .catch(() => this.setState({ status: 'error' }));
   };
 
   handleChange = (field, value) =>
@@ -99,8 +96,8 @@ class SubscriptionFormContainer extends Component {
       status: 'idle',
       values: {
         email: this.props.initialValue || '',
-        agreeCookies: false,
-        agreeNews: false,
+        cookiesConsent: false,
+        newsConsent: false,
       },
     });
   };
@@ -131,8 +128,8 @@ export default compose(
   withLocalStorage('subscriptionEmail'),
   withValidation({
     email: [isEmpty, isEmailInvalid],
-    agreeCookies: [isNotChecked],
-    agreeNews: [isNotChecked],
+    cookiesConsent: [isNotChecked],
+    newsConsent: [isNotChecked],
   }),
   connect(
     s => s,
