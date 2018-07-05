@@ -4,6 +4,7 @@ import { map, mapObjIndexed, empty } from 'ramda';
 
 import { combineRules } from '../utils/validation';
 
+const hasErrors = errors => Object.values(errors).some(es => es.length);
 /**
  *
  * @param {object} fieldRules
@@ -42,16 +43,15 @@ export const withValidation = fieldRules => WrappedForm =>
         },
       }));
     };
-
-    showErrors = () => {
-      this.setState({ showErrors: true });
-    };
-
+    hideErrors = () => this.setState({ showErrors: false });
+    showErrors = () => this.setState({ showErrors: true });
     render() {
       return (
         <WrappedForm
           onValidate={this.validate}
           onValidationStart={this.showErrors}
+          onValidationStop={this.hideErrors}
+          hasErrors={hasErrors(this.state.errors)}
           {...this.state}
           {...this.props}
         />

@@ -6,15 +6,20 @@ import Margin from 'src/common/components/Margin';
 import Link from 'src/common/components/Link';
 import Input from 'src/common/components/Input';
 import Icon from 'src/common/components/Icon';
+import FormFieldError from 'src/common/components/Form/FormFieldError';
+import FormFieldConsent from 'src/common/components/Form/FormFieldConsent';
 
-import ErrorMessage from './lib/ErrorMessage';
-
-import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
+import {
+  FormattedMessage,
+  FormattedHTMLMessage,
+  defineMessages,
+  injectIntl,
+} from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-import { compose } from 'ramda';
+import { compose, memoize } from 'ramda';
 
 const messages = defineMessages({
   placeholderEmail: {
@@ -26,28 +31,15 @@ const messages = defineMessages({
 class SubscriptionForm extends Component {
   static defaultProps = {
     onSubmit: () => {},
-    onEmailChange: () => {},
-    initialEmail: '',
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: this.props.initialEmail,
-    };
-  }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.onSubmit(this.state);
+    this.props.onSubmit();
   };
-
-  handleChange = e => {
-    this.setState({
-      email: e.target.value,
-    });
-    this.props.onEmailChange(e.target.value);
-  };
+  handleChange = memoize((field, valueField = 'value') => e =>
+    this.props.onValueChange(field, e.target[valueField])
+  );
 
   handleStartOver = e => {
     e.preventDefault();
@@ -57,14 +49,15 @@ class SubscriptionForm extends Component {
   render() {
     const {
       classes,
-      errors,
+      hasErrors,
       showErrors,
+      values,
       status,
       onStartOver,
       intl,
     } = this.props;
 
-    const invalid = !!(showErrors && errors.email.length);
+    const invalid = Boolean(showErrors && hasErrors);
 
     return (
       <div className={classes.wrapper}>
@@ -75,8 +68,8 @@ class SubscriptionForm extends Component {
                 <Input
                   className={classes.input}
                   type="text"
-                  value={this.state.email}
-                  onChange={this.handleChange}
+                  value={values.email}
+                  onChange={this.handleChange('email')}
                   onBlur={this.props.onBlur}
                   placeholder={intl.formatMessage(messages.placeholderEmail)}
                   invalid={invalid}
@@ -101,8 +94,25 @@ class SubscriptionForm extends Component {
                 </Button>
               </div>
             </div>
-
-            {showErrors && <ErrorMessage errors={errors.email} />}
+            <div className={classes.checkboxesContainer}>
+              <FormFieldConsent
+                invalid={invalid}
+                inverted
+                wrapperClassName={classes.checkboxesContainer}
+                cookiesConsent={values.cookiesConsent}
+                newsConsent={values.newsConsent}
+                onCookiesChange={this.handleChange('cookiesConsent', 'checked')}
+                onNewsChange={this.handleChange('newsConsent', 'checked')}
+              />
+              {invalid && (
+                <FormFieldError inverted>
+                  <FormattedHTMLMessage
+                    id="form.errorMessage"
+                    defaultMessage="Please enter a&nbsp;valid email address, then agree to&nbsp;the privacy policy and to&nbsp;receive marketing information."
+                  />
+                </FormFieldError>
+              )}
+            </div>
           </form>
         )}
 
@@ -119,7 +129,7 @@ class SubscriptionForm extends Component {
                 values={{
                   email: (
                     <Typography inverted tagName="span">
-                      {this.state.email}
+                      {values.email}
                     </Typography>
                   ),
                 }}
@@ -169,4 +179,7 @@ class SubscriptionForm extends Component {
   }
 }
 
-export default compose(injectSheet(styles), injectIntl)(SubscriptionForm);
+export default compose(
+  injectSheet(styles),
+  injectIntl
+)(SubscriptionForm);

@@ -1,7 +1,7 @@
 export default theme => ({
   inputs: {
     display: 'flex',
-    marginBottom: theme.spacing.unit,
+    marginBottom: 4 * theme.spacing.unit,
   },
   inputWrapper: {
     flex: '1',
@@ -14,7 +14,12 @@ export default theme => ({
   textGray: {
     color: theme.palette.grayBlue[200],
   },
-
+  checkboxesContainer: {
+    [theme.breakpoints.up('tablet')]: {
+      marginLeft: -16 * theme.spacing.unit,
+      marginRight: -16 * theme.spacing.unit,
+    },
+  },
   buttonWrapper: {
     flex: '0 0',
     flexBasis: 'content',
@@ -29,9 +34,6 @@ export default theme => ({
     },
   },
   [theme.breakpoints.up('sm')]: {
-    wrapper: {
-      height: 100,
-    },
     buttonIcon: {
       display: 'none',
     },

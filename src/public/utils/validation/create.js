@@ -6,14 +6,13 @@ import {
   isNil,
   juxt,
   mapObjIndexed,
-  propOr,
-  forEach,
+  defaultTo,
 } from 'ramda';
 
 import { isNotEmpty } from 'src/common/utils/helpers';
 
-const applyRulesIfExist = rules => (val, key) =>
-  juxt(propOr([], key, rules))(val);
+const applyRulesIfExist = values => (val, key) =>
+  juxt(defaultTo([], val))(values[key]);
 
 /**
  *
@@ -49,5 +48,5 @@ export default rules =>
   compose(
     reject(isNil),
     map(find(isNotEmpty)),
-    mapObjIndexed(applyRulesIfExist(rules))
+    values => mapObjIndexed(applyRulesIfExist(values))(rules)
   );

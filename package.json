@@ -55,7 +55,6 @@
     "react-select": "^1.1.0",
     "react-transition-group": "^2.2.0",
     "redux": "^3.7.2",
-    "redux-form": "^7.0.4",
     "redux-observable": "^0.16.0",
     "redux-thunk": "^2.2.0",
     "reflect-metadata": "^0.1.9",
