@@ -28,7 +28,7 @@ const styles = theme => ({
       overflow: 'visible',
     },
     image: {
-      top: '-60%',
+      top: '-50%',
       left: '-90%',
       // bottom: '80%'
     },
