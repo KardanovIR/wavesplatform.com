@@ -31,13 +31,13 @@ const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
             invalid={invalid}
             className={classes.checkbox}
           />
-          <FormattedHTMLMessage
+          <FormattedMessage
             id="form.consent.privacyAndCookies"
             values={{
               privacyLink: <PrivacyPolicyLink />,
               cookiesLink: <CookiesPolicyLink />,
             }}
-            defaultMessage="I&nbsp;have read and agree with the {privacyLink} and the {cookiesLink}"
+            defaultMessage="I have read and agree with the {privacyLink} and the {cookiesLink}"
           />
         </Typography>
       </label>
