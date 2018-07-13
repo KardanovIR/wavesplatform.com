@@ -58,6 +58,7 @@ class SubscriptionFormContainer extends Component {
         newsConsent: false,
       },
     };
+    props.onValidate(this.state.values);
   }
 
   componentWillUpdate(_, nextState) {
