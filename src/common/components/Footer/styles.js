@@ -80,6 +80,7 @@ export default theme => {
       display: 'flex',
       justifyContent: 'space-between',
       margin: theme.spacing.getSpacing(2, 0),
+      padding: 0,
       textAlign: 'center',
       flexWrap: 'wrap',
       order: 5,
