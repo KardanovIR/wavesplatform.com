@@ -33,11 +33,11 @@ export default theme => {
       extend: 'link',
       fontSize: 12,
       padding: 0,
+      ['&:not(:last-child)']: {
+        marginRight: [theme.spacing.unit * 2],
+      },
       [theme.breakpoints.up('sm')]: {
         padding: 0,
-      },
-      [theme.breakpoints.up('md')]: {
-        marginRight: [theme.spacing.unit * 2],
       },
     },
 
@@ -81,6 +81,7 @@ export default theme => {
       justifyContent: 'space-between',
       margin: theme.spacing.getSpacing(2, 0),
       textAlign: 'center',
+      flexWrap: 'wrap',
       order: 5,
       [theme.breakpoints.up('md')]: {
         order: 4,
