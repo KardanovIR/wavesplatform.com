@@ -9,11 +9,11 @@ const styles = theme => ({
   },
   imageCol: {
     position: 'absolute',
-    right: -20,
     width: '100%',
+    left: 0,
+    right: 0,
     bottom: -100,
     margin: [theme.spacing.unit * 4, 0, theme.spacing.unit * 2],
-    maxWidth: 420,
   },
   imageWrapper: {
     position: 'relative',
@@ -22,32 +22,36 @@ const styles = theme => ({
     overflow: 'hidden',
   },
   image: {
+    maxWidth: 420,
     display: 'block',
     zIndex: -1,
     top: 0,
-    left: 0,
     width: '100%',
+    margin: '0 auto',
   },
+
   [theme.breakpoints.up('sm')]: {
     root: {
       marginBottom: 0,
     },
     imageCol: {
-      right: -theme.spacing.unit * 3,
+      left: 'auto',
+      right: '10%',
       bottom: -110,
       width: '50%',
-      maxWidth: '100%',
     },
     image: {
+      maxWidth: 'none',
       width: 'auto',
     },
   },
-  [theme.breakpoints.up('md')]: {
+
+  [theme.breakpoints.up('lg')]: {
     imageCol: {
-      right: theme.spacing.unit * 1.5,
+      overflow: 'hidden',
+      right: 0,
     },
   },
-  [theme.breakpoints.up('lg')]: {},
 });
 
 export default styles;

@@ -1,6 +1,7 @@
 import React from 'react';
 import MQ from 'react-responsive';
 import { query } from 'src/common/theme/breakpoints';
+import { FormattedMessage } from 'react-intl';
 import styles from './styles';
 
 import injectSheet from 'react-jss';
@@ -16,7 +17,7 @@ import FooterNav from './lib/FooterNav';
 
 import LanguageChooser from '../LanguageChooser';
 
-import url from 'src/common/utils/url';
+import url, { fileUrl, FILES } from 'src/common/utils/url';
 
 const Footer = ({ classes, links, hideCredentials, inverted }) => (
   <div className={classes.root}>
@@ -36,25 +37,53 @@ const Footer = ({ classes, links, hideCredentials, inverted }) => (
         </Col>
 
         <Col xs={12} md={6} className={cn(classes.copyright, classes.textGray)}>
-          <Link
-            href={url('files.terms_conditions')}
-            className={classes.terms}
-            textDecoration={false}
-            primary={false}
-          >
-            Terms and conditions
-          </Link>
-          <span>© Waves Platform</span>
+          <Col xs={12}>
+            <Link
+              href={fileUrl(FILES.privacy_policy)}
+              className={classes.terms}
+              textDecoration={false}
+              primary={false}
+            >
+              <FormattedMessage
+                id="form.consent.privacy"
+                defaultMessage="Privacy policy"
+              />
+            </Link>
+            <Link
+              href={fileUrl(FILES.cookies_policy)}
+              className={classes.terms}
+              textDecoration={false}
+              primary={false}
+            >
+              <FormattedMessage
+                id="form.consent.cookies"
+                defaultMessage="Cookies policy"
+              />
+            </Link>
+          </Col>
+          <Col xs={12}>
+            <Link
+              href={fileUrl(FILES.terms_conditions)}
+              className={classes.terms}
+              textDecoration={false}
+              primary={false}
+            >
+              Terms and conditions
+            </Link>
+            <span>© Waves Platform</span>
+          </Col>
           <MQ query={query.md}>
             <br />
           </MQ>
           {!hideCredentials && (
-            <span>
-              Made by{' '}
-              <a href="https://ony.ru" className={classes.ony}>
-                ONY
-              </a>
-            </span>
+            <Col xs={12}>
+              <span>
+                Made by{' '}
+                <a href="https://ony.ru" className={classes.ony}>
+                  ONY
+                </a>
+              </span>
+            </Col>
           )}
         </Col>
 

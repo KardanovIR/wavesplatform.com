@@ -57,9 +57,6 @@ const URL = {
     subdomain: 'blog',
     pathname: '/',
   },
-  'files.terms_conditions': {
-    pathname: '/files/docs/Waves_terms_and_conditions.pdf',
-  },
   file: {
     pathname: '/files/',
   },
@@ -69,6 +66,12 @@ const URL = {
   'dex-demo': {
     pathname: 'https://beta.wavesplatform.com/dex-demo',
   },
+};
+
+export const FILES = {
+  terms_conditions: 'docs/Waves_terms_and_conditions.pdf',
+  privacy_policy: 'docs/Waves_privacy_policy.pdf',
+  cookies_policy: 'docs/Waves_сookies_policy.pdf',
 };
 
 export const createUrlFromObj = ({ protocol, domain, subdomain, pathname }) => {

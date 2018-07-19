@@ -1,7 +1,7 @@
 import React from 'react';
 import injectSheet from 'react-jss';
 
-import { fileUrl } from 'src/common/utils/url';
+import { fileUrl, FILES } from 'src/common/utils/url';
 
 import Checkbox from 'src/common/components/Checkbox';
 import Typography from 'src/common/components/Typography';
@@ -31,13 +31,13 @@ const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
             invalid={invalid}
             className={classes.checkbox}
           />
-          <FormattedHTMLMessage
+          <FormattedMessage
             id="form.consent.privacyAndCookies"
             values={{
               privacyLink: <PrivacyPolicyLink />,
               cookiesLink: <CookiesPolicyLink />,
             }}
-            defaultMessage="I&nbsp;have read and agree with the {privacyLink} and the {cookiesLink}"
+            defaultMessage="I have read and agree with the {privacyLink} and the {cookiesLink}"
           />
         </Typography>
       </label>
@@ -61,11 +61,7 @@ const FormFieldConsent = injectSheet(FormFieldConsentStyles)(
 );
 
 const PrivacyPolicyLink = () => (
-  <Link
-    href={fileUrl('docs/Waves_privacy_policy.pdf')}
-    textDecoration={false}
-    secondary
-  >
+  <Link href={fileUrl(FILES.privacy_policy)} textDecoration={false} secondary>
     <FormattedMessage
       id="form.consent.privacy"
       defaultMessage="Privacy policy"
@@ -74,11 +70,7 @@ const PrivacyPolicyLink = () => (
 );
 
 const CookiesPolicyLink = () => (
-  <Link
-    href={fileUrl('docs/Waves_сookies_policy.pdf')}
-    textDecoration={false}
-    secondary
-  >
+  <Link href={fileUrl(FILES.cookies_policy)} textDecoration={false} secondary>
     <FormattedMessage
       id="form.consent.cookies"
       defaultMessage="Cookies policy"
