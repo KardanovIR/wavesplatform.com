@@ -25,6 +25,11 @@ import product from '!svg-react-loader!./svg/product.svg';
 import money from '!svg-react-loader!./svg/money.svg';
 import play from '!svg-react-loader!./svg/play.svg';
 import done from '!svg-react-loader!./svg/done.svg';
+import ui from '!svg-react-loader!./svg/ui.svg';
+import trading from '!svg-react-loader!./svg/trading.svg';
+import dexList from '!svg-react-loader!./svg/dex-list.svg';
+import device from '!svg-react-loader!./svg/device.svg';
+import liquidity from '!svg-react-loader!./svg/liquidity.svg';
 import atomicSwap from '!svg-react-loader!./svg/atomic-swaps-icon.svg';
 import tokenFreeze from '!svg-react-loader!./svg/token-freeze-icon.svg';
 import turingContracts from '!svg-react-loader!./svg/turing-complete-contracts-icon.svg';
@@ -59,5 +64,10 @@ export default {
   product,
   money,
   play,
+  ui,
+  liquidity,
+  trading,
+  dexList,
+  device,
   done,
 };

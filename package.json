@@ -8,7 +8,7 @@
     "url": "git+https://github.com/dvshur/framework-server-render.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./config/webpack.devserver.config.js",
+    "start:front": "webpack-dev-server --config ./config/webpack.devserver.config.js",
     "build:be": "cross-env NODE_ENV=development webpack --config ./config/webpack.back.dev.config.js",
     "build:be-prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.back.prod.config.js",
     "server": "nodemon --delay 2 config/server.js",
@@ -20,6 +20,7 @@
   "author": "Dmitry Shuranov <dvshur@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "@waves/data-service-client-js": "^0.6.0",
     "array.from": "^1.0.3",
     "babel-polyfill": "^6.22.0",
     "classnames": "^2.2.5",
@@ -39,6 +40,7 @@
     "koa-static": "^3.0.0",
     "locale": "^0.1.0",
     "node-env-file": "^0.1.8",
+    "node-fetch": "^2.1.2",
     "nodemailer": "^4.1.2",
     "raf": "^3.4.0",
     "ramda": "^0.24.1",
@@ -47,6 +49,7 @@
     "react": "^16.0.0",
     "react-cookie": "^2.1.2",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^4.3.3",
     "react-icons": "^2.2.5",
     "react-intl": "^2.4.0",
     "react-jss": "^8.2.1",

@@ -3,6 +3,7 @@ const webpack = require('webpack');
 // const fs = require('fs');
 const path = require('path');
 const webpackConfig = require('./webpack.front.config');
+webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
 
 const compiler = webpack(webpackConfig);
 
@@ -30,6 +31,6 @@ const server = new WebpackDevServer(compiler, {
   // It's a required option.
   publicPath: '/static/',
   stats: { colors: true },
-  open: true
+  open: true,
 });
 server.listen(3000, 'localhost', () => {});

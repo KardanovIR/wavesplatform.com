@@ -1,25 +1,23 @@
 import { connect } from 'react-redux';
 
 import View from './View.jsx';
-import {
-  androidClientClick,
-  iosClientClick,
-  newDexClick,
-} from 'src/public/actions';
+import { newDexClick } from 'src/public/actions';
+import { downloadClientChange } from 'src/common/containers/DownloadClientDropdown/lib/actions';
+import { newClientClick } from 'src/public/actions';
 
 const logSettings = {
   MainScreen: {
     page: 'ProductDex',
     source: 'MainScreen',
   },
-  MobileApp: { page: 'ProductDex', source: 'MobileApp' },
+  GetClient: { page: 'ProductDex', source: 'Footer' },
 };
 
 export default connect(
-  undefined,
+  ({ pairs }) => ({ pairs }),
   {
     onNewDexClick: () => newDexClick(logSettings.MainScreen),
-    onAndroidClientClick: () => androidClientClick(logSettings.MobileApp),
-    onIosClientClick: () => iosClientClick(logSettings.MobileApp),
+    onNewClientClick: () => newClientClick(logSettings.GetClient),
+    onClientDownload: downloadClientChange(logSettings.GetClient),
   }
 )(View);

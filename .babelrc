@@ -3,12 +3,13 @@
   "plugins": [
     "babel-plugin-transform-react-stateless-component-name",
     "transform-decorators-legacy",
+    "react-hot-loader/babel",
     "ramda",
     [
       "react-intl",
       {
         "messagesDir": "./dist/messages/"
       }
-    ]
+    ],
   ]
 }

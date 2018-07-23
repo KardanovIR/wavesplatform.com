@@ -1,49 +1,99 @@
 import React from 'react';
-import MQ from 'react-responsive';
-// @todo refactor inject query
-import { query } from 'src/common/theme/breakpoints.js';
 import Typography from 'src/common/components/Typography';
 
-import PairVolume from './lib/PairVolume';
+import PairRow from './lib/PairRow';
+import { Row, Col } from 'src/common/components/Grid';
 
 import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
-
-const DEXTopPairs = ({ classes, pairs }) => (
-  <div className={classes.container}>
-    <MQ query={query.sm}>
-      {matches => (
-        <img
-          src={
-            matches
-              ? require('./img/dex@1x.jpg')
-              : require('./img/dexMobile.jpg')
-          }
-          className={classes.image}
-          alt=""
-        />
-      )}
-    </MQ>
-    <div className={classes.root}>
-      <div className={classes.headers}>
-        <Typography inverted>
+import MQ from 'react-responsive';
+import { query } from 'src/common/theme/breakpoints';
+import Margin from 'src/common/components/Margin';
+const Unavailable = () => (
+  <Typography inverted type="display1">
+    <FormattedMessage
+      id="products.dex.topPairs.notAvailable"
+      defaultMessage="Service is temporarily unavalaible. Try to refresh page."
+    />
+  </Typography>
+);
+const DEXTopPairs = ({ classes, pairs }) => {
+  if (!pairs || pairs.length === 0) {
+    return (
+      <Col xs={12}>
+        <Typography inverted type="display2">
           <FormattedMessage id="products.dex.topPairs.title" />
         </Typography>
-        <Typography align="right" noMargin inverted>
-          <FormattedMessage id="products.dex.topPairs.volume" />
-        </Typography>
-      </div>
+        <Margin />
+        <Unavailable />
+      </Col>
+    );
+  }
+  return (
+    <Col xs={12}>
+      <Typography inverted type="display2">
+        <FormattedMessage id="products.dex.topPairs.title" />
+      </Typography>
+      <Margin />
+      <Row>
+        <Col xs={6} tablet={3}>
+          <Typography noMargin inverted className={classes.header}>
+            <FormattedMessage
+              id="products.dex.topPairs.pair"
+              defaultMessage="Pair"
+            />
+          </Typography>
+        </Col>
+        <MQ query={query.tablet}>
+          <Col tablet={3}>
+            <Typography
+              align="right"
+              noMargin
+              inverted
+              className={classes.header}
+            >
+              <FormattedMessage
+                id="products.dex.topPairs.price"
+                defaultMessage="Price"
+              />
+            </Typography>
+          </Col>
+          <Col tablet={3}>
+            <Typography
+              align="right"
+              noMargin
+              inverted
+              className={classes.header}
+            >
+              <FormattedMessage
+                id="products.dex.topPairs.chg"
+                defaultMessage="Chg"
+              />
+            </Typography>
+          </Col>
+        </MQ>
 
+        <Col xs={6} tablet={3}>
+          <Typography
+            align="right"
+            alignMobile="right"
+            noMargin
+            inverted
+            className={classes.header}
+          >
+            <FormattedMessage id="products.dex.topPairs.volume" />
+          </Typography>
+        </Col>
+      </Row>
+      <Margin bottom={1} />
       {pairs.map((pair, index) => (
-        <div key={`top_pair_${index}`} className={classes.pairContainer}>
-          <PairVolume {...pair} />
-        </div>
+        <PairRow pair={pair} key={`pair-${index}`} />
       ))}
-    </div>
-  </div>
-);
+    </Col>
+  );
+};
 
 DEXTopPairs.defaultProps = {
   pairs: [],
