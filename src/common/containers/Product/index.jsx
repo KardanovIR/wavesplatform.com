@@ -28,10 +28,8 @@ import HowToToken from './lib/HowToToken';
 import IssuingTokens from './lib/IssuingTokens';
 
 // DEX blocks
-import DEX from './lib/DEX';
-import DEXFeatures from './lib/DEXFeatures';
-import DEXTopPairs from './lib/DEXTopPairs';
-import DEXStats from './lib/DEXStats';
+import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
+import DEXOtherFeatures from 'src/common/containers/Products/Dex/lib/DEXOtherFeatures';
 
 // intl
 import { FormattedMessage } from 'react-intl';
@@ -90,27 +88,19 @@ const PageLayout = ({ classes, initialState }) => (
         </ContentContainer>
       </Section>
 
-      <Section top={4} bottom={2} className={classes.bgBlack}>
+      <Section
+        top={4}
+        bottom={2}
+        className={cx(classes.bgBlack, classes.section)}
+      >
         <AnchorScroll anchor="dex">
           <ContentContainer>
-            <DEX />
+            <DEXFeatures />
+            <Margin bottom={4} />
+            <DEXOtherFeatures />
           </ContentContainer>
         </AnchorScroll>
       </Section>
-
-      <div className={cx(classes.bgBlack, classes.section)}>
-        <ContentContainer>
-          <Section size={2}>
-            <Typography type="display5" inverted>
-              <FormattedMessage id="product.DEX.safety" />
-            </Typography>
-          </Section>
-          <DEXTopPairs pairs={initialState.dexTopPairs} />
-          <DEXStats dexData={initialState.dexData} />
-          <Margin bottom={5} />
-          <DEXFeatures />
-        </ContentContainer>
-      </div>
 
       <Section top={4} bottom={3}>
         <AnchorScroll anchor="token-launcher">
