@@ -28,7 +28,7 @@ const avatarStyles = theme => ({
   },
 });
 
-const AvatarWithTitleText = ({ avatar, title, text, classes, inverted }) => (
+const AvatarTitleTextRow = ({ avatar, title, text, classes, inverted }) => (
   <div className={classes.container}>
     <div className={classes.avatar}>{avatar}</div>
     <div className={classes.textContainer}>
@@ -43,4 +43,4 @@ const AvatarWithTitleText = ({ avatar, title, text, classes, inverted }) => (
   </div>
 );
 
-export default injectSheet(avatarStyles)(AvatarWithTitleText);
+export default injectSheet(avatarStyles)(AvatarTitleTextRow);

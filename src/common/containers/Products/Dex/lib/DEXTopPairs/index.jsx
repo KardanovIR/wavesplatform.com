@@ -15,7 +15,7 @@ const Unavailable = () => (
   <Typography inverted type="display1">
     <FormattedMessage
       id="products.dex.topPairs.notAvailable"
-      defaultMessage="Service is temporarily unavalaible. Try to refresh page."
+      defaultMessage="Could not fetch DEX pairs data. Try to refresh page."
     />
   </Typography>
 );
