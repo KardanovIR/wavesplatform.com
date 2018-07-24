@@ -53,7 +53,6 @@ const PageLayout = ({ initialState, classes }) => (
     <Wrapper>
       <Section top={3} bottom={2}>
         <ContentContainer>
-          rwfsvx31
           <NumbersQuote dexData={initialState.dexData} />
         </ContentContainer>
       </Section>
