@@ -26,7 +26,7 @@ const GetClient = ({ classes, onClientDownload, onNewClientClick }) => (
           >
             <FormattedMessage
               id="products.dex.getClient.title"
-              defaultMessage="Use client for quick access to the DEX"
+              defaultMessage="Use Waves Client for fast access to the DEX."
             />
           </Typography>
         </Col>
