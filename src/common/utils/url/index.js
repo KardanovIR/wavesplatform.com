@@ -47,7 +47,7 @@ const URL = {
     pathname: '/leasing',
   },
   'online-client(beta)': {
-    subdomain: 'beta',
+    subdomain: 'client',
     pathname: '/',
   },
   'online-client': {
@@ -64,7 +64,7 @@ const URL = {
     pathname: '/developers/smart-contracts',
   },
   'dex-demo': {
-    pathname: 'https://beta.wavesplatform.com/dex-demo',
+    pathname: 'https://client.wavesplatform.com/dex-demo',
   },
 };
 
