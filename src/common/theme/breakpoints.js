@@ -1,5 +1,5 @@
 // Sorted ASC by size. That's important.
-export const keys = ['xs', 'sm', 'md', 'lg', 'desktop1366', 'xl'];
+export const keys = ['xs', 'sm', 'tablet', 'md', 'lg', 'desktop1366', 'xl'];
 
 const defaultBreakpoints = {
   xs: 360,

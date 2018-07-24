@@ -7,7 +7,10 @@ import View from './View';
 
 const logSettings = { page: 'GetWaves', source: 'MainScreen' };
 
-export default connect(undefined, {
-  onNewClientClick: () => newClientClick(logSettings),
-  onDropdownChange: downloadClientChange(logSettings),
-})(View);
+export default connect(
+  undefined,
+  {
+    onNewClientClick: () => newClientClick(logSettings),
+    onDropdownChange: downloadClientChange(logSettings),
+  }
+)(View);

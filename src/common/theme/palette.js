@@ -8,6 +8,7 @@ export const blue = {
   0: 'white',
   50: '#F3F5FA',
   100: '#D6E0FC',
+  200: '#5a81ea',
   300: '#6BA6FF',
   500: '#0056FF',
   550: '#002eff',
@@ -49,6 +50,7 @@ export const grayBlue = colorMigrationProxy(
 );
 
 export const orange = {
+  200: '#ef4829',
   300: '#FCBC32',
 };
 

@@ -17,3 +17,4 @@ export { default as getDexData } from './getDexData';
 export { default as getDexTopPairs } from './getDexTopPairs';
 export { default as getMrtWavesPrice } from './getMrtWavesPrice';
 export { default as getWavesTopNodes } from './getWavesTopNodes';
+export { default as getPairsData } from './getPairsData';

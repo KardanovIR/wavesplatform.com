@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="78.32" height="97.9" viewBox="0 0 78.32 97.9"><title>Artboard 121</title><rect x="11.47" y="31.05" width="55.38" height="55.38" transform="translate(-30.07 44.9) rotate(-45)" fill="#003597"/><polygon points="39.16 0 0.01 39.17 39.16 78.32 78.31 39.17 39.16 0" fill="#0053ff"/><path d="M46.44,52.51H28.26v-12H46.44l3.62,3.62v4.78Zm-16-2.22h15L47.83,48V45l-2.31-2.31h-15Z" fill="#fff"/><path d="M46.44,42.72H28.26v-12H46.44l3.62,3.62V39.1Zm-16-2.22h15l2.31-2.31V35.25l-2.31-2.31h-15Z" fill="#fff"/><rect x="38.06" y="22.03" width="2.2" height="9.79" fill="#fff"/><rect x="38.06" y="51.39" width="2.2" height="9.8" fill="#fff"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="98px" viewBox="0 0 79 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>065EE3F5-ADAC-4CF9-8A8C-6D937EC6DF2B</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="dex_2_0" transform="translate(-230.000000, -2226.000000)" fill-rule="nonzero">
+            <g id="Group-8" transform="translate(229.000000, 1958.000000)">
+                <g id="coins" transform="translate(1.000000, 268.000000)">
+                    <rect id="Rectangle-path" fill="#003598" transform="translate(39.168215, 58.535220) rotate(-45.000000) translate(-39.168215, -58.535220) " x="11.5587233" y="30.9257282" width="55.2189826" height="55.2189826"></rect>
+                    <polygon id="Shape" fill="#0053FF" points="39.0243902 0 0 39.0243902 39.0243902 78.0487805 78.0487805 39.0243902"></polygon>
+                    <path d="M33,48.7317073 L45.7586577,48.7317073 L47.7804878,45.9928329 L47.7804878,42.1047281 L45.7586577,39.3658537 L33,39.3658537 L33,48.7317073 Z M46.7681715,37.3658537 L49.7804878,41.4464914 L49.7804878,46.6510696 L46.7681715,50.7317073 L31,50.7317073 L31,37.3658537 L46.7681715,37.3658537 Z" id="Shape" fill="#FFFFFF"></path>
+                    <path d="M33,37.3658537 L44.2117769,37.3658537 L46,34.655896 L46,30.7099576 L44.2117769,28 L33,28 L33,37.3658537 Z M45.2882231,26 L48,30.1095546 L48,35.2562991 L45.2882231,39.3658537 L31,39.3658537 L31,26 L45.2882231,26 Z" id="Shape" fill="#FFFFFF"></path>
+                    <polygon id="Shape" fill="#FFFFFF" points="38.0243902 27.6097561 36.0243902 27.6097561 36.0243902 21.8536585 38.0243902 21.8536585"></polygon>
+                    <polygon id="Shape" fill="#FFFFFF" points="42.0243902 27.6097561 40.0243902 27.6097561 40.0243902 21.8536585 42.0243902 21.8536585"></polygon>
+                    <polygon id="Shape" fill="#FFFFFF" points="38.0243902 55.6097561 36.0243902 55.6097561 36.0243902 49.8536585 38.0243902 49.8536585"></polygon>
+                    <polygon id="Shape" fill="#FFFFFF" points="42.0243902 55.6097561 40.0243902 55.6097561 40.0243902 49.8536585 42.0243902 49.8536585"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

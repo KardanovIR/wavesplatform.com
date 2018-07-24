@@ -5,20 +5,15 @@ import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
-import { Col } from 'src/common/components/Grid';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
-import Typography from 'src/common/components/Typography';
-import Margin from 'src/common/components/Margin';
+import { hot } from 'react-hot-loader';
 
-import DEXTopPairs from './lib/DEXTopPairs';
-import DEXStats from './lib/DEXStats';
-import MobileApp from './lib/MobileApp';
 // lib
 import MainScreen from './lib/MainScreen';
+import DEXTopPairs from './lib/DEXTopPairs';
 import DEXFeatures from './lib/DEXFeatures';
-
-// intl
-import { FormattedMessage } from 'react-intl';
+import DEXOtherFeatures from './lib/DEXOtherFeatures';
+import GetClient from './lib/GetClient';
 
 // styles
 import injectSheet from 'react-jss';
@@ -28,8 +23,8 @@ const PageLayout = ({
   initialState,
   classes,
   onNewDexClick,
-  onAndroidClientClick,
-  onIosClientClick,
+  onClientDownload,
+  onNewClientClick,
 }) => (
   <Layout inverted hideCredentials activeLink="dex">
     <BackgroundMainScreen type="image" src={require('./img/bg.jpg')}>
@@ -39,29 +34,32 @@ const PageLayout = ({
     </BackgroundMainScreen>
 
     <Wrapper>
-      <Section top={4}>
+      <Section top={4} bottom={4}>
         <ContentContainer>
-          <DEXFeatures />
+          <DEXTopPairs pairs={initialState.pairs} />
         </ContentContainer>
       </Section>
-      <Section className={cx(classes.bgBlack, classes.noOverflow)}>
+      <Section
+        top={4}
+        bottom={4}
+        className={cx(classes.bgBlack, classes.noOverflow)}
+      >
+        <DEXFeatures />
+      </Section>
+      <Section
+        top={4}
+        bottom={4}
+        className={cx(classes.bgBlack, classes.noOverflow)}
+      >
         <ContentContainer>
-          <Col xs={12} md={8}>
-            <Typography type="display3" inverted>
-              <FormattedMessage id="products.dex.trade" />
-            </Typography>
-            <Margin bottom={4} />
-          </Col>
-
-          <DEXTopPairs pairs={initialState.dexTopPairs} />
-          <DEXStats dexData={initialState.dexData} />
+          <DEXOtherFeatures />
         </ContentContainer>
       </Section>
       <Section className={classes.bgMobileApp}>
         <ContentContainer>
-          <MobileApp
-            onAndroidClientClick={onAndroidClientClick}
-            onIosClientClick={onIosClientClick}
+          <GetClient
+            onClientDownload={onClientDownload}
+            onNewClientClick={onNewClientClick}
           />
         </ContentContainer>
       </Section>
@@ -70,11 +68,10 @@ const PageLayout = ({
 );
 
 const Page = injectSheet(styles)(PageLayout);
-
 const App = props => (
   <ThemeProvider>
     <Page {...props} />
   </ThemeProvider>
 );
 
-export default App;
+export default hot(module)(App);

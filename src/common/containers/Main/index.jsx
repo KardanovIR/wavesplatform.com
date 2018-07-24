@@ -20,9 +20,8 @@ import WavesClient from './lib/WavesClient';
 import Wallet from '../../components/Wallet';
 import WalletText from './lib/WalletText';
 import WavesNG from './lib/WavesNG';
-import DEX from './lib/DEX';
+import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
 import IssuingTokens from './lib/IssuingTokens';
-import PlannedFeatures from './lib/PlannedFeatures';
 import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
 import UserCases from '../../components/UserCases';
@@ -33,6 +32,7 @@ import styles from './styles';
 
 // url
 import { fileUrl } from 'src/common/utils/url';
+import { hot } from 'react-hot-loader';
 
 const PageLayout = ({ initialState, classes }) => (
   <Layout activeLink="home">
@@ -53,6 +53,7 @@ const PageLayout = ({ initialState, classes }) => (
     <Wrapper>
       <Section top={3} bottom={2}>
         <ContentContainer>
+          rwfsvx31
           <NumbersQuote dexData={initialState.dexData} />
         </ContentContainer>
       </Section>
@@ -83,13 +84,15 @@ const PageLayout = ({ initialState, classes }) => (
         </ContentContainer>
       </Section>
 
-      <Section top={4} className={cx(classes.bgBlack, classes.overflowHidden)}>
-        <ContentContainer>
-          <DEX />
-        </ContentContainer>
+      <Section
+        top={4}
+        bottom={4}
+        className={cx(classes.bgBlack, classes.overflowHidden)}
+      >
+        <DEXFeatures />
       </Section>
 
-      <Section top={5} className={classes.issuingTokens}>
+      <Section top={4} className={classes.issuingTokens}>
         <ContentContainer>
           <IssuingTokens />
         </ContentContainer>
@@ -126,4 +129,4 @@ const App = props => (
   </ThemeProvider>
 );
 
-export default App;
+export default hot(module)(App);

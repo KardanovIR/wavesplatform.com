@@ -14,12 +14,14 @@ const Column = ({
 
   xs,
   sm,
+  tablet,
   md,
   lg,
   xl,
 
   xsOffset,
   smOffset,
+  tabletOffset,
   mdOffset,
   lgOffset,
   xlOffset,
@@ -36,6 +38,8 @@ const Column = ({
       [classes[`xs-${String(xs)}`]]: xs && xs !== true,
       [classes['sm']]: sm === true,
       [classes[`sm-${String(sm)}`]]: sm && sm !== true,
+      [classes['tablet']]: sm === true,
+      [classes[`tablet-${String(tablet)}`]]: tablet && tablet !== true,
       [classes['md']]: md === true,
       [classes[`md-${String(md)}`]]: md && md !== true,
       [classes['lg']]: lg === true,
@@ -44,6 +48,8 @@ const Column = ({
       [classes[`xl-${String(xl)}`]]: xl && xl !== true,
       [classes[`xs-offset-${String(xsOffset)}`]]: xsOffset !== undefined,
       [classes[`sm-offset-${String(smOffset)}`]]: smOffset !== undefined,
+      [classes[`tablet-offset-${String(tabletOffset)}`]]:
+        tabletOffset !== undefined,
       [classes[`md-offset-${String(mdOffset)}`]]: mdOffset !== undefined,
       [classes[`lg-offset-${String(lgOffset)}`]]: lgOffset !== undefined,
       [classes[`xl-offset-${String(xlOffset)}`]]: xlOffset !== undefined,
