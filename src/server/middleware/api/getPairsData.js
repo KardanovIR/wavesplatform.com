@@ -33,7 +33,9 @@ const pairs = [
 
 const getPrice = pair => (pair.lastPrice + pair.firstPrice) / 2;
 const addVolumeInUSD = ([usdWavesPair, ...pairs]) =>
-  pairs.map(p => ({ ...p, volumeUSD: p.volumeWaves * getPrice(usdWavesPair) }));
+  pairs.map(
+    p => p && { ...p, volumeUSD: p.volumeWaves * getPrice(usdWavesPair) }
+  );
 const getPairsData = async (ctx, next) => {
   await clientDS
     .getPairs(
@@ -51,7 +53,7 @@ const getPairsData = async (ctx, next) => {
           pairs: zipWith(
             assoc('pair'),
             pairs.slice(1),
-            addVolumeInUSD(ps.data.filter(x => x !== null))
+            addVolumeInUSD(ps.data)
           ),
         })
     )
