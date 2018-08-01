@@ -55,9 +55,9 @@ const getPairsData = async (ctx, next) => {
           ),
         })
     )
-    .catch(() =>
-      ctx.throw(500, 'Unable to fetch pairs data from data service')
-    );
+    .catch(() => {
+      throw new Error('Unable to fetch pairs data from data service');
+    });
   await next();
 };
 
