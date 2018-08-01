@@ -51,7 +51,7 @@ const getPairsData = async (ctx, next) => {
           pairs: zipWith(
             assoc('pair'),
             pairs.slice(1),
-            addVolumeInUSD(ps.data)
+            addVolumeInUSD(ps.data.filter(x => x !== null))
           ),
         })
     )
