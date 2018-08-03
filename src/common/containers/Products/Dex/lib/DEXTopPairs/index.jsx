@@ -88,9 +88,9 @@ const DEXTopPairs = ({ classes, pairs }) => {
         </Col>
       </Row>
       <Margin bottom={1} />
-      {pairs.map((pair, index) => (
-        <PairRow pair={pair} key={`pair-${index}`} />
-      ))}
+      {pairs.map(
+        (pair, index) => pair && <PairRow pair={pair} key={`pair-${index}`} />
+      )}
     </Col>
   );
 };

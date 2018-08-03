@@ -86,7 +86,21 @@ const PairVolume = ({ classes, pair }) => (
 
 const PairChange = ({ classes, pair }) => {
   const change = ((pair.lastPrice - pair.firstPrice) / pair.firstPrice) * 100;
-  if (isNaN(change)) return <Unavailable />;
+  if (isNaN(change)) {
+    return (
+      <Typography
+        type="body"
+        align="right"
+        className={cn({
+          [classes.change]: true,
+        })}
+        noMargin
+        inverted
+      >
+        <Unavailable />
+      </Typography>
+    );
+  }
   return (
     <Typography
       type="body"
