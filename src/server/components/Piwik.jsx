@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Piwik = () => (
-  <script
+  <noscript
+    data-cookie-managed="true"
     type="text/javascript"
     dangerouslySetInnerHTML={{
       __html: `var _paq = _paq || [];

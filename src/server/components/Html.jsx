@@ -2,13 +2,14 @@ import React from 'react';
 
 import { GtmHead, GtmBody } from './Gtm';
 import Piwik from './Piwik';
+import CookieConsentChecker from 'src/public/CookieConsentChecker';
 
 const Html = ({
   title,
   description,
   locale, // i18n
-	messages, // locale
-	availableLocales,
+  messages, // locale
+  availableLocales,
   content,
   initialState,
   script,
@@ -40,7 +41,11 @@ const Html = ({
         property="og:image"
         content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGImage.jpg"
       />
-
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `(${CookieConsentChecker.toString()})()`,
+        }}
+      />
       {/* sentry enable */}
       {sentryEnabled && (
         <script
@@ -89,7 +94,9 @@ const Html = ({
         dangerouslySetInnerHTML={{
           __html: `
                     window.__MESSAGES = ${JSON.stringify(messages)};
-                    window.__AVAILABLE_LOCALES = ${JSON.stringify(availableLocales)}
+                    window.__AVAILABLE_LOCALES = ${JSON.stringify(
+                      availableLocales
+                    )}
                     window.__LOCALE = ${JSON.stringify(locale)}
                 `,
         }}
