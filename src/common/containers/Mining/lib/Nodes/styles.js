@@ -16,6 +16,9 @@ export default theme => ({
     lineHeight: 1.35,
     fontWeight: 400,
   },
+  forumLink: {
+    display: 'inline-block',
+  },
   [theme.breakpoints.up('md')]: {
     title: {
       fontSize: 23,
