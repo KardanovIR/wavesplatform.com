@@ -28,7 +28,7 @@ const NumbersMain = ({
     <Col xs={12} sm={4} {...rest}>
       <ColNumber>
         <Typography type="numeral">
-          ฿ <FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />
+          ฿<FormattedNumber value={wavesBtcRate} maximumFractionDigits={8} />
         </Typography>
         <Typography type="body">
           <FormattedMessage id="home.numbers.wavesPrice" />
@@ -36,7 +36,7 @@ const NumbersMain = ({
       </ColNumber>
       <ColNumber>
         <Typography type="numeral">
-          $ <FormattedNumber value={dexVolume} />
+          $<FormattedNumber value={dexVolume} />
         </Typography>
         <Typography type="body">
           <FormattedMessage id="home.numbers.dexVolume" />
@@ -44,7 +44,9 @@ const NumbersMain = ({
       </ColNumber>
       <ColNumber>
         <Typography type="numeral">
-          <FormattedNumber value={dexWallets} />
+          &gt;
+          {/* @todo add value from postgres */}
+          <FormattedNumber value={800000} />
         </Typography>
         <Typography type="body">
           <FormattedMessage id="home.numbers.wallets" />
