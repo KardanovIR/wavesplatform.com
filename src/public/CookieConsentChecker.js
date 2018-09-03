@@ -1,6 +1,8 @@
 export default function() {
   window.CookieConsentChecker = (function() {
-    var essentialCookies = new Set(['locale']);
+    var CONSENT_PROP = '__cookieConsent';
+    var essentialCookies = new Set(['locale', '__cfduid']);
+
     var Cookies = new Set();
     var cookiesInterceptionEnabled = false;
     var originalCookie =
@@ -56,7 +58,7 @@ export default function() {
 
     function processWithholdedCookies() {
       cookiesInterceptionEnabled = false;
-      localStorage['__cookieConsent'] = true;
+      localStorage[CONSENT_PROP] = true;
       Cookies.forEach(cookie => (document.cookie = cookie));
       enableScripts();
     }
@@ -67,17 +69,22 @@ export default function() {
       Object.defineProperty(document, 'cookie', originalCookie);
       enableScripts();
     }
+    function isConsentHandled() {
+      return localStorage.hasOwnProperty(CONSENT_PROP);
+    }
+    function reset() {
+      return delete localStorage[CONSENT_PROP];
+    }
     function isConsentGranted() {
-      return localStorage['__cookieConsent'] === 'true';
+      return localStorage[CONSENT_PROP] === 'true';
     }
     function grantConsent() {
-      localStorage['__cookieConsent'] = 'true';
+      localStorage[CONSENT_PROP] = 'true';
       processWithholdedCookies();
     }
     function withdrawConsent() {
       clearCookies();
-      localStorage['__cookieConsent'] = 'false';
-      document.location.reload();
+      localStorage[CONSENT_PROP] = 'false';
     }
     return {
       enable: enableCookiesWithhold,
@@ -86,8 +93,13 @@ export default function() {
       get granted() {
         return isConsentGranted();
       },
+      get handled() {
+        return isConsentHandled();
+      },
+
       grantConsent: grantConsent,
       withdrawConsent: withdrawConsent,
+      reset,
     };
   })();
 
