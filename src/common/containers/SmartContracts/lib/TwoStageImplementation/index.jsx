@@ -19,16 +19,12 @@ const FEATURES_LIST = [
       />,
       <FormattedMessage
         id="smartContracts.plans.stage1.left.subtitle"
-        defaultMessage="Non-Turing-complete Contracts"
+        defaultMessage="Smart Accounts"
       />,
     ],
     rightColumn: [
       <FormattedMessage
-        id="smartContracts.plans.stage1.right.title"
-        defaultMessage="RIDE language."
-      />,
-      <FormattedMessage
-        id="smartContracts.plans.stage1.right.subtitle"
+        id="smartContracts.plans.stage1.right.text"
         defaultMessage="Lightweight implementation of smart contracts via smart assets and smart accounts. Release in a testnet in Spring 2018."
       />,
     ],
@@ -42,17 +38,13 @@ const FEATURES_LIST = [
       />,
       <FormattedMessage
         id="smartContracts.plans.stage2.left.subtitle"
-        defaultMessage="Turing-complete Contracts"
+        defaultMessage="Smart Contracts"
       />,
     ],
     rightColumn: [
       <FormattedMessage
-        id="smartContracts.plans.stage2.right.title"
-        defaultMessage="RIDEON language."
-      />,
-      <FormattedMessage
-        id="smartContracts.plans.stage2.right.subtitle"
-        defaultMessage="Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the first release of smart accounts in Spring 2018 and extensive testing and feedback, Turing-complete smart contracts will follow, enabling developers to implement sophisticated logic to address almost any computational task."
+        id="smartContracts.plans.stage2.right.text"
+        defaultMessage="Decentralised applications based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the release of Smart Accounts, we'll continue smart contract development to implement sophisticated logic to address almost any computational task."
       />,
     ],
   },
@@ -78,12 +70,7 @@ const Block = ({ classes, leftColumn, rightColumn }) => (
         </Col>
         <Col xs={12} sm={8} smOffset={1}>
           {rightColumn.map((str, i) => (
-            <Typography
-              type="body"
-              inverted
-              key={i}
-              {...(i === 0 ? { weight: 600 } : {})}
-            >
+            <Typography type="body" inverted key={i}>
               {str}
             </Typography>
           ))}

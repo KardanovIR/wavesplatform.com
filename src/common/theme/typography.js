@@ -120,7 +120,7 @@ const creatyTypography = (palette, breakpoints) => {
     body: combineMobileDesktopStyles(
       base,
       {
-        fontSize: 20,
+        fontSize: 17,
         lineHeight: 1.5,
         margin: 0,
       },
