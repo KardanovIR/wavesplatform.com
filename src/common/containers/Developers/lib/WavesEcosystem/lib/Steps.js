@@ -23,9 +23,10 @@ const HowToWallet = ({ children, title }) => (
               <br />
               <Link
                 target="_blank"
-                href="https://wavesgo.com"
+                href="http://wavesgo.com"
                 textDecoration={false}
               >
+                {/* @todo change back to https */}
                 wavesgo.com
               </Link>
             </div>
