@@ -86,7 +86,7 @@ const UsefulLinks = ({ classes }) => (
               key={message.url}
               href={message.url}
               className={classes.link}
-              target="blank"
+              target="_blank"
             >
               {message.text}
             </Link>
@@ -107,7 +107,7 @@ const UsefulLinks = ({ classes }) => (
               key={message.url}
               href={message.url}
               className={classes.link}
-              target="blank"
+              target="_blank"
             >
               {message.text}
             </Link>
@@ -128,7 +128,7 @@ const UsefulLinks = ({ classes }) => (
               key={message.url}
               href={message.url}
               className={classes.link}
-              target="blank"
+              target="_blank"
             >
               {message.text}
             </Link>
