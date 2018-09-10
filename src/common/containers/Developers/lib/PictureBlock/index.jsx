@@ -114,7 +114,7 @@ const PictureBlock = ({
         {text && image && <Text text={text} />}
       </Col>
       {image && (
-        <Col xs={12} md={8}>
+        <Col xs={12} sm={7}>
           {image}
         </Col>
       )}

@@ -21,20 +21,20 @@ const WavesNgInfo = () => (
       <Typography inverted type="display1">
         <FormattedMessage
           id="developers.smart.title"
-          defaultMessage="Failsafe operation for business logic"
+          defaultMessage="Smart Contracts & Smart Accounts"
         />
       </Typography>
       <Typography inverted type="body2">
         <FormattedMessage
           id="developers.smart.subtitle"
-          defaultMessage="Outstanding functionality for implementing different types of transaction parameters."
+          defaultMessage="We are building simple, scalable, reliable and robust tools to perform secure and transparent business operations on the Waves blockchain."
         />
       </Typography>
       <Margin />
       <Typography inverted>
         <FormattedHTMLMessage
           id="developers.smart.text"
-          defaultMessage="Safe, secure and transparent business operations are already a reality. Provide the transactions with whatever conditions are required, based on a range of different parameters, including two-factor authentication, elapsed time and real-world data.<br><br>Waves blockchain is already the fastest and most user-friendly in existence. Nevertheless, we are improving our platform all the time! The next revolution from Waves is already on the horizon: smart contracts, packed with powerful features."
+          defaultMessage="We have created a new programming language, RIDE, which makes it very easy for anyone to set up a Smart Account. To bring you the sophisticated tools required for launching a dApp, we are creating Smart Contracts, which enables users to execute any set of instructions on the Waves blockchain."
         />
       </Typography>
       <Margin />
