@@ -1,14 +1,15 @@
 import React from 'react';
 import { assoc } from 'ramda';
+import cn from 'classnames';
+import injectSheet from 'react-jss';
+import { FormattedMessage } from 'react-intl';
 
 import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
-
 import ContentContainer from 'src/common/components/ContentContainer';
 import Typography from 'src/common/components/Typography';
 import Link from 'src/common/components/Link';
-import injectSheet from 'react-jss';
-import cn from 'classnames';
 import { fileUrl, FILES } from 'src/common/utils/url';
+
 const styles = theme => ({
   text: {
     marginBottom: theme.spacing.unit,
@@ -25,6 +26,16 @@ const styles = theme => ({
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     alignItems: 'center',
+    [theme.breakpoints.down('tablet')]: {
+      ['& *']: {
+        fontSize: '16px',
+      },
+    },
+    [theme.breakpoints.down('sm')]: {
+      ['& *']: {
+        fontSize: '11px',
+      },
+    },
   },
   allowAllLink: {
     color: theme.palette.gray[0],
@@ -47,26 +58,14 @@ const styles = theme => ({
       textDecoration: 'none',
     },
   },
-  manageLink: {
-    size: '70%',
-  },
+
   rightColumn: {
     flex: 1,
     display: 'flex',
     justifyContent: 'flex-end',
     textAlign: 'center',
   },
-  [theme.breakpoints.down('tablet')]: {
-    container: {
-      ['& *']: {
-        fontSize: '3vw !important',
-      },
-    },
-  },
-  blockWithTextCenter: {
-    display: 'block',
-    textAlign: 'center',
-  },
+
   snackbar: {
     boxSizing: 'border-box',
     position: 'fixed',
@@ -84,29 +83,6 @@ const styles = theme => ({
   },
   open: {
     transform: 'translateY(0%)',
-  },
-  content: {
-    position: 'relative',
-  },
-  second: {
-    background: '#486fef',
-  },
-  test: {
-    width: '100%',
-  },
-  close: {
-    position: 'absolute',
-    height: theme.spacing.unit * 3,
-    width: theme.spacing.unit * 3,
-    top: -theme.spacing.unit,
-    right: -theme.spacing.unit,
-    color: theme.palette.grayBlue[300],
-    cursor: 'pointer',
-    padding: theme.spacing.unit,
-
-    '&:hover': {
-      color: theme.palette.gray[50],
-    },
   },
 });
 
@@ -151,19 +127,23 @@ class CookiesSnackbarContainer extends React.Component {
 
 const Text = ({ classes }) => (
   <Typography inverted className={classes.text}>
-    According to our{' '}
-    <Link
-      inverted
-      noIcon
-      className={classes.policyLink}
-      target="_blank"
-      href={fileUrl(FILES.cookies_policy)}
-    >
-      Policy
-    </Link>
-    , this website uses 🍪cookies to improve functionality and performance. Some
-    cookies are essential for the operation of the website, other can be
-    disabled by this tool.
+    <FormattedMessage
+      id="cookieConsent.text"
+      defaultMessage="According to our {policy}, this website uses 🍪cookies to improve functionality and performance. Some cookies are essential for the operation of the website, other can be disabled by this tool."
+      values={{
+        policy: (
+          <Link
+            inverted
+            noIcon
+            className={classes.policyLink}
+            target="_blank"
+            href={fileUrl(FILES.cookies_policy)}
+          >
+            Policy
+          </Link>
+        ),
+      }}
+    />
   </Typography>
 );
 const Buttons = ({ classes, onAllowClick, onEssentialsOnlyClick }) => (
@@ -173,10 +153,10 @@ const Buttons = ({ classes, onAllowClick, onEssentialsOnlyClick }) => (
       className={classes.disallowLink}
       onClick={onEssentialsOnlyClick}
     >
-      DISABLE
+      <FormattedMessage id="cookieConsent.disable" defaultMessage="DISABLE" />
     </Link>
     <Link inverted className={classes.allowAllLink} onClick={onAllowClick}>
-      ALLOW ALL
+      <FormattedMessage id="cookieConsent.allow" defaultMessage="ALLOW ALL" />
     </Link>
   </div>
 );
