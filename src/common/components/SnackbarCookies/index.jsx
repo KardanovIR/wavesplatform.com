@@ -8,7 +8,7 @@ import Typography from 'src/common/components/Typography';
 import Link from 'src/common/components/Link';
 import injectSheet from 'react-jss';
 import cn from 'classnames';
-
+import { fileUrl, FILES } from 'src/common/utils/url';
 const styles = theme => ({
   text: {
     marginBottom: theme.spacing.unit,
@@ -152,7 +152,13 @@ class CookiesSnackbarContainer extends React.Component {
 const Text = ({ classes }) => (
   <Typography inverted className={classes.text}>
     According to our{' '}
-    <Link inverted className={classes.policyLink}>
+    <Link
+      inverted
+      noIcon
+      className={classes.policyLink}
+      target="_blank"
+      href={fileUrl(FILES.cookies_policy)}
+    >
       Policy
     </Link>
     , this website uses 🍪cookies to improve functionality and performance. Some
