@@ -34,6 +34,22 @@ window.CookieConsent = function CookieConsent({
       if (_essentialCookies.has(name)) {
         return;
       }
+      document.cookie =
+        name +
+        '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; location=/; domain=' +
+        document.domain;
+      document.cookie =
+        name +
+        '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; location=/; domain=.' +
+        document.domain;
+      document.cookie =
+        name +
+        '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=.' +
+        document.domain;
+      document.cookie =
+        name +
+        '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' +
+        document.domain;
       document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
     });
   }
