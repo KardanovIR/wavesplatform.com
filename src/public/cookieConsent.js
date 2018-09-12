@@ -97,14 +97,16 @@ window.CookieConsent = function CookieConsent({
   this.grantConsent = function grantConsent() {
     localStorage[consentProp] = 'true';
     processWithholdedCookies();
+    this.onGranted && this.onGranted();
   };
-
   this.withdrawConsent = function withdrawConsent() {
     clearCookies();
     localStorage[consentProp] = 'false';
+    this.onWithdrawn && this.onWithdrawn();
   };
   this.reset = function reset() {
-    return delete localStorage[consentProp];
+    delete localStorage[consentProp];
+    this.onReset && this.onReset();
   };
   CookieConsent.__instance = this;
   return this;

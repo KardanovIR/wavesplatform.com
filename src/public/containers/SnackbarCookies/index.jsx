@@ -95,6 +95,8 @@ class CookiesSnackbarContainer extends React.Component {
   };
   componentDidMount() {
     this.CookieConsentChecker = window[COOKIE_CONSENT_FIELD];
+    this.CookieConsentChecker.onReset = () => this.setState(open);
+
     if (this.CookieConsentChecker && !this.CookieConsentChecker.handled)
       this.setState(open);
   }

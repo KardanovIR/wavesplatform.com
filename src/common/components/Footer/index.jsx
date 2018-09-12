@@ -18,6 +18,10 @@ import FooterNav from './lib/FooterNav';
 import LanguageChooser from '../LanguageChooser';
 
 import url, { fileUrl, FILES } from 'src/common/utils/url';
+import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
+
+const resetConsent = () =>
+  typeof window !== undefined && window[COOKIE_CONSENT_FIELD].reset();
 
 const Footer = ({ classes, links, hideCredentials, inverted }) => (
   <div className={classes.root}>
@@ -58,6 +62,18 @@ const Footer = ({ classes, links, hideCredentials, inverted }) => (
               <FormattedMessage
                 id="form.consent.cookies"
                 defaultMessage="Cookies policy"
+              />
+            </Link>
+
+            <Link
+              onClick={resetConsent}
+              className={classes.terms}
+              textDecoration={false}
+              primary={false}
+            >
+              <FormattedMessage
+                id="cookieConsent.reset"
+                defaultMessage="Cookies settings"
               />
             </Link>
           </Col>
