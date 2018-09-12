@@ -61,7 +61,10 @@ module.exports = {
     }),
     new webpack.HashedModuleIdsPlugin(),
 
-    new AssetsWebpackPlugin({ path: path.join(__dirname, '..', 'dist'), filename: 'assets.json' }),
+    new AssetsWebpackPlugin({
+      path: path.join(__dirname, '..', 'dist'),
+      filename: 'assets.json',
+    }),
   ],
 
   devtool: 'cheap-module-source-map',

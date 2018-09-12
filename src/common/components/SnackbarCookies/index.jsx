@@ -1,25 +1,60 @@
 import React from 'react';
-import { pathEq, ifElse, assoc } from 'ramda';
+import { assoc } from 'ramda';
+
+import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
 
 import ContentContainer from 'src/common/components/ContentContainer';
 import Typography from 'src/common/components/Typography';
 import Link from 'src/common/components/Link';
-import { Col } from 'src/common/components/Grid';
 import injectSheet from 'react-jss';
 import cn from 'classnames';
 
 const styles = theme => ({
+  text: {
+    marginBottom: theme.spacing.unit,
+    textAlign: 'justify',
+    [theme.breakpoints.up('md')]: {
+      marginBottom: 0,
+    },
+  },
   container: {
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
 
     display: 'flex',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
     alignItems: 'center',
   },
+  allowAllLink: {
+    color: theme.palette.gray[0],
+    padding: '5px',
+    paddingRight: 0,
+    display: 'inline-block',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
+  disallowLink: {
+    padding: '5px',
+    display: 'inline-block',
+    marginRight: theme.spacing.unit * 2,
+  },
+  policyLink: {
+    color: theme.palette.gray[0],
+    textDecoration: 'underline',
+    '&:hover': {
+      textDecoration: 'none',
+    },
+  },
+  manageLink: {
+    size: '70%',
+  },
   rightColumn: {
+    flex: 1,
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
+    textAlign: 'center',
   },
   [theme.breakpoints.down('tablet')]: {
     container: {
@@ -45,7 +80,7 @@ const styles = theme => ({
       'transform',
       theme.transitions.durationLong
     ),
-    maxHeight: '30%',
+    maxHeight: '35%',
   },
   open: {
     transform: 'translateY(0%)',
@@ -75,37 +110,18 @@ const styles = theme => ({
   },
 });
 
-const Statuses = {
-  Light: 1,
-  Full: 2,
-};
-const isFullyOpened = pathEq(['status'], Statuses.Full);
-
-/* prettier-ignore */
-const getLinkText = ifElse(
-  isFullyOpened,
-  () => 'Manage ↑', 
-  () => 'Manage ↓'
-);
-const toggleStatus = ifElse(
-  isFullyOpened,
-  assoc('status', Statuses.Light),
-  assoc('status', Statuses.Full)
-);
 const open = assoc('open', true);
 const hide = assoc('open', false);
 
 class CookiesSnackbarContainer extends React.Component {
   state = {
-    status: Statuses.Light,
     open: false,
   };
   componentDidMount() {
-    this.CookieConsentChecker = window.CookieConsentChecker;
+    this.CookieConsentChecker = window[COOKIE_CONSENT_FIELD];
     if (this.CookieConsentChecker && !this.CookieConsentChecker.handled)
       this.setState(open);
   }
-  handleShowMoreClick = () => this.setState(toggleStatus);
   handleAllowAllClick = () => {
     this.CookieConsentChecker.grantConsent();
     this.setState(hide);
@@ -116,71 +132,46 @@ class CookiesSnackbarContainer extends React.Component {
   };
   render() {
     const { classes } = this.props;
-    const showSecondPart = isFullyOpened(this.state);
-    const linkText = getLinkText(this.state);
     return (
       <div
         className={cn(classes.snackbar, { [classes.open]: this.state.open })}
       >
-        <div className={classes.content}>
-          <FirstPart
+        <ContentContainer className={classes.container}>
+          <Text classes={classes} />
+          <Buttons
             classes={classes}
-            linkText={linkText}
-            onToggle={this.handleShowMoreClick}
             onAllowClick={this.handleAllowAllClick}
+            onEssentialsOnlyClick={this.handleEssentialsOnlyClick}
           />
-          {showSecondPart && (
-            <SecondPart
-              classes={classes}
-              onEssentialsOnlyClick={this.handleEssentialsOnlyClick}
-            />
-          )}
-        </div>
+        </ContentContainer>
       </div>
     );
   }
 }
 
-const FirstPart = ({ classes, onToggle, onAllowClick, linkText }) => (
-  <div className={cn(classes.test, classes.first)}>
-    <ContentContainer className={classes.container}>
-      <Col xs={9}>
-        <Typography inverted>
-          According to our Cookie Policy, this website uses cookies to improve
-          functionality and performance.
-          <Link inverted onClick={onToggle}>
-            {linkText}
-          </Link>
-        </Typography>
-      </Col>
-      <Col xs={3} className={classes.rightColumn}>
-        <Link inverted onClick={onAllowClick}>
-          ALLOW ALL
-        </Link>
-      </Col>
-    </ContentContainer>
-  </div>
+const Text = ({ classes }) => (
+  <Typography inverted className={classes.text}>
+    According to our{' '}
+    <Link inverted className={classes.policyLink}>
+      Policy
+    </Link>
+    , this website uses 🍪cookies to improve functionality and performance. Some
+    cookies are essential for the operation of the website, other can be
+    disabled by this tool.
+  </Typography>
 );
-const SecondPart = ({ classes, onEssentialsOnlyClick }) => (
-  <div className={cn(classes.test, classes.second)}>
-    <ContentContainer className={cn(classes.container)}>
-      <Col xs={9}>
-        <Typography inverted className={classes.second}>
-          Some cookies are essential for the operation of the website, you can
-          turn them off ONLY via your browser settings. Other cookies can be
-          disabled by this tool.
-        </Typography>
-      </Col>
-      <Col xs={3} className={classes.rightColumn}>
-        <Link
-          inverted
-          className={classes.blockWithTextCenter}
-          onClick={onEssentialsOnlyClick}
-        >
-          DISABLE
-        </Link>
-      </Col>
-    </ContentContainer>
+const Buttons = ({ classes, onAllowClick, onEssentialsOnlyClick }) => (
+  <div className={classes.rightColumn}>
+    <Link
+      inverted
+      className={classes.disallowLink}
+      onClick={onEssentialsOnlyClick}
+    >
+      DISABLE
+    </Link>
+    <Link inverted className={classes.allowAllLink} onClick={onAllowClick}>
+      ALLOW ALL
+    </Link>
   </div>
 );
 
