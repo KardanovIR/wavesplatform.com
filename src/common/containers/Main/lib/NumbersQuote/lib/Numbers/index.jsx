@@ -45,7 +45,7 @@ const NumbersMain = ({
       <ColNumber>
         <Typography type="numeral">
           &gt;
-          {/* @todo add value from postgres */}
+          {/* @todo add value from api */}
           <FormattedNumber value={800000} />
         </Typography>
         <Typography type="body">
