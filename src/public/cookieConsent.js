@@ -7,7 +7,27 @@ window.CookieConsent = function CookieConsent({
   }
   var cookiesInterceptionEnabled = false;
   var _essentialCookies = new Set(essentialCookies);
-  const deleteCookie = name => {
+  var _cookies = new Set();
+  var originalCookie =
+    Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') ||
+    Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
+
+  if (!originalCookie) throw new Error('_cookies disabled');
+  const proxyDescriptor = {
+    get: function() {
+      return originalCookie.get.call(document);
+    },
+    set: function(val) {
+      if (typeof val !== 'string' || val === '') return;
+      const cookieName = val.split('=')[0];
+
+      return cookiesInterceptionEnabled && !_essentialCookies.has(cookieName)
+        ? _cookies.add(val)
+        : originalCookie.set.call(document, val);
+    },
+  };
+
+  function deleteCookie(name) {
     // With location and precise domain
     document.cookie =
       name +
@@ -34,26 +54,8 @@ window.CookieConsent = function CookieConsent({
 
     // Without domain, without path
     document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
-  };
-  var _cookies = new Set();
-  var originalCookie =
-    Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') ||
-    Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
+  }
 
-  if (!originalCookie) throw new Error('_cookies disabled');
-  const proxyDescriptor = {
-    get: function() {
-      return originalCookie.get.call(document);
-    },
-    set: function(val) {
-      if (typeof val !== 'string' || val === '') return;
-      const cookieName = val.split('=')[0];
-
-      return cookiesInterceptionEnabled && !_essentialCookies.has(cookieName)
-        ? _cookies.add(val)
-        : originalCookie.set.call(document, val);
-    },
-  };
   function clearCookies() {
     if (!document.cookie || document.cookie === '') return;
     const cookies = document.cookie.split('; ');
