@@ -2,13 +2,13 @@ import React from 'react';
 
 import { GtmHead, GtmBody } from './Gtm';
 import Piwik from './Piwik';
-
+import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
 const Html = ({
   title,
   description,
   locale, // i18n
-	messages, // locale
-	availableLocales,
+  messages, // locale
+  availableLocales,
   content,
   initialState,
   script,
@@ -20,6 +20,7 @@ const Html = ({
   sentryEnabled,
   mailchimpEnabled,
   serverName,
+  cookieConsentScript,
 }) => (
   <html lang="en">
     <head>
@@ -40,7 +41,23 @@ const Html = ({
         property="og:image"
         content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGImage.jpg"
       />
-
+      {vendorChunk && <script type="text/javascript" src={vendorChunk} />}
+      <script src={cookieConsentScript} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+      if (window.CookieConsent) {
+        window['${COOKIE_CONSENT_FIELD}'] = new window.CookieConsent({
+          essentialCookies: ['locale', '__cfduid'],
+          consentProp: '${COOKIE_CONSENT_FIELD}'
+        });
+        if (!window['${COOKIE_CONSENT_FIELD}'].granted) {
+          window['${COOKIE_CONSENT_FIELD}'].enable();
+        }
+      }
+      `,
+        }}
+      />
       {/* sentry enable */}
       {sentryEnabled && (
         <script
@@ -89,7 +106,9 @@ const Html = ({
         dangerouslySetInnerHTML={{
           __html: `
                     window.__MESSAGES = ${JSON.stringify(messages)};
-                    window.__AVAILABLE_LOCALES = ${JSON.stringify(availableLocales)}
+                    window.__AVAILABLE_LOCALES = ${JSON.stringify(
+                      availableLocales
+                    )}
                     window.__LOCALE = ${JSON.stringify(locale)}
                 `,
         }}
@@ -111,7 +130,6 @@ const Html = ({
       {piwikEnabled && <Piwik />}
 
       <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
-      {vendorChunk && <script type="text/javascript" src={vendorChunk} />}
       <script type="text/javascript" src={script} />
     </body>
   </html>

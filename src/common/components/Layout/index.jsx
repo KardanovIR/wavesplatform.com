@@ -5,7 +5,7 @@ import Navigation from '../Navigation';
 
 import Footer from '../Footer';
 import PopupTelegram from 'src/common/containers/PopupTelegram';
-
+import SnackbarCookies from 'src/public/containers/SnackbarCookies';
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
 import injectSheet from 'react-jss';
@@ -48,6 +48,7 @@ const Layout = ({
     </div>
     {children}
     <PopupTelegram page={activeLink} />
+    <SnackbarCookies />
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (

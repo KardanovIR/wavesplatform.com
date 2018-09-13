@@ -32,6 +32,11 @@ export const FEEDBACK_FORM_SUBMIT = 'FeedbackFormSubmit';
 export const TELEGRAM_POPUP_JOIN_CLICK = 'TelegramPopup.Join.Click';
 export const TELEGRAM_POPUP_CLOSE = 'TelegramPopup.Close';
 
+// Cookies
+export const COOKIES_CONSENT_ALLOW = 'CookieConsent.Allow.Click';
+export const COOKIES_CONSENT_DISABLE = 'CookieConsent.Disable.Click';
+export const COOKIES_CONSENT_RESET = 'CookieConsent.Reset.Click';
+
 // export const GIVE_FEEDBACK_CLICK = 'GiveFeedbackClick';
 // export const GIVE_FEEDBACK_CLOSE = 'GiveFeedbackClose';
 // export const GIVE_FEEDBACK_SHOW = 'GiveFeedbackShow';
@@ -41,6 +46,11 @@ const createAC = type => meta => ({
   log: true,
   ...meta,
 });
+
+// Cookies
+export const cookiesAllowClick = createAC(COOKIES_CONSENT_ALLOW);
+export const cookiesDisableClick = createAC(COOKIES_CONSENT_DISABLE);
+export const cookiesResetClick = createAC(COOKIES_CONSENT_RESET);
 
 // our products
 export const newClientClick = createAC(ONLINE_BETA_CLIENT_CLICK);
