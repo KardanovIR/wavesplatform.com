@@ -35,12 +35,12 @@ window.CookieConsent = function CookieConsent({
     // Without domain, without path
     document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
   };
-  var Cookies = new Set();
+  var _cookies = new Set();
   var originalCookie =
     Object.getOwnPropertyDescriptor(Document.prototype, 'cookie') ||
     Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'cookie');
 
-  if (!originalCookie) throw new Error('Cookies disabled');
+  if (!originalCookie) throw new Error('_cookies disabled');
   const proxyDescriptor = {
     get: function() {
       return originalCookie.get.call(document);
@@ -50,7 +50,7 @@ window.CookieConsent = function CookieConsent({
       const cookieName = val.split('=')[0];
 
       return cookiesInterceptionEnabled && !_essentialCookies.has(cookieName)
-        ? Cookies.add(val)
+        ? _cookies.add(val)
         : originalCookie.set.call(document, val);
     },
   };
@@ -66,7 +66,7 @@ window.CookieConsent = function CookieConsent({
   }
 
   function eraseWithholdedCookies() {
-    Cookies.clear();
+    _cookies.clear();
   }
 
   function enableScript(node) {
@@ -83,7 +83,7 @@ window.CookieConsent = function CookieConsent({
   function processWithholdedCookies() {
     cookiesInterceptionEnabled = false;
     localStorage[consentProp] = true;
-    Cookies.forEach(cookie => (document.cookie = cookie));
+    _cookies.forEach(cookie => (document.cookie = cookie));
     enableScripts();
   }
 

@@ -21,7 +21,9 @@ import url, { fileUrl, FILES } from 'src/common/utils/url';
 import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
 
 const resetConsent = () =>
-  typeof window !== undefined && window[COOKIE_CONSENT_FIELD].reset();
+  typeof window !== 'undefined' &&
+  window[COOKIE_CONSENT_FIELD] &&
+  window[COOKIE_CONSENT_FIELD].reset();
 
 const Footer = ({ classes, links, hideCredentials, inverted }) => (
   <div className={classes.root}>

@@ -37,7 +37,6 @@ const Layout = ({
   activeLink,
   hideFooter,
   hideCredentials = false,
-  showCookiesSnackbar = true,
 }) => (
   <div className={classes.body}>
     <div className={classes.navigationWrapper}>
@@ -49,7 +48,7 @@ const Layout = ({
     </div>
     {children}
     <PopupTelegram page={activeLink} />
-    <SnackbarCookies show={showCookiesSnackbar} />
+    <SnackbarCookies />
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (
