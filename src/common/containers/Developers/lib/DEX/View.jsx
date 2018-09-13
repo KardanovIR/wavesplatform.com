@@ -13,10 +13,9 @@ const styles = theme => ({
     width: '100%',
     marginTop: theme.spacing.unit * 3,
     [theme.mixins.atMedia('sm')]: {
-      marginTop: 0,
+      marginTop: -4 * theme.spacing.unit,
       position: 'absolute',
       right: '-20%',
-      bottom: -30,
       width: '70%',
     },
   },

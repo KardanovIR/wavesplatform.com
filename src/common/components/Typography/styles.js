@@ -7,7 +7,7 @@ const getCutStyle = paddingDirection => ({ align, cut }) => {
     return undefined;
   }
 
-  return `${cut === true ? 20 : cut}%`;
+  return `${cut === true ? 10 : cut}%`;
 };
 
 const generateAligns = theme =>
