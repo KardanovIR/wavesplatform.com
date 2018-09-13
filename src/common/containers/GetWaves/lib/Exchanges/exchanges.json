@@ -68,5 +68,15 @@
     "logo":
       "https://wavesplatform.com/files/images/exchange_logo/indacoin-logo.svg",
     "url": "https://indacoin.com/xx_xx/change/buy-waves-with-cardusd"
+  },
+  {
+    "logo":
+      "https://wavesplatform.com/files/images/exchange_logo/okex.svg",
+    "url": "https://www.okex.com/"
+  },
+  {
+    "logo":
+      "https://wavesplatform.com/files/images/exchange_logo/huobi.svg",
+    "url": "https://www.huobi.com/"
   }
 ]
