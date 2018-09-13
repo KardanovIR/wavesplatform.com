@@ -4,6 +4,13 @@ import cn from 'classnames';
 import injectSheet from 'react-jss';
 import { FormattedMessage } from 'react-intl';
 
+import {
+  cookiesAllowClick,
+  cookiesDisableClick,
+  cookiesResetClick,
+} from 'src/public/actions';
+import { connect } from 'react-redux';
+
 import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Typography from 'src/common/components/Typography';
@@ -89,22 +96,37 @@ const styles = theme => ({
 const open = assoc('open', true);
 const hide = assoc('open', false);
 
+@connect(
+  undefined,
+  {
+    onAllowClick: cookiesAllowClick,
+    onDisableClick: cookiesDisableClick,
+    onResetClick: cookiesResetClick,
+  }
+)
 class CookiesSnackbarContainer extends React.Component {
   state = {
     open: false,
   };
+  handleResetClick = () => {
+    this.props.onResetClick();
+    this.setState(open);
+  };
+
   componentDidMount() {
     this.CookieConsentChecker = window[COOKIE_CONSENT_FIELD];
-    this.CookieConsentChecker.onReset = () => this.setState(open);
+    this.CookieConsentChecker.onReset = this.handleResetClick;
 
     if (this.CookieConsentChecker && !this.CookieConsentChecker.handled)
       this.setState(open);
   }
   handleAllowAllClick = () => {
+    this.props.onAllowClick();
     this.CookieConsentChecker.grantConsent();
     this.setState(hide);
   };
   handleEssentialsOnlyClick = () => {
+    this.props.onDisableClick();
     this.CookieConsentChecker.withdrawConsent();
     this.setState(hide);
   };
