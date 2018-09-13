@@ -13,6 +13,7 @@ import { Col, Row } from 'src/common/components/Grid';
 import TwoStageImplementation from './lib/TwoStageImplementation';
 import MainScreen from './lib/MainScreen';
 import SCFeatures from './lib/Features';
+import UsefulLinks from './lib/UsefulLinks';
 import SubscribeSection from 'src/common/containers/SubscribeSection';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 
@@ -36,19 +37,11 @@ const PageLayout = ({ onDocumentationClick, classes }) => (
       <Section top={4} bottom={4}>
         <ContentContainer>
           <Row>
-            <Col xs={12} md={6} className={classes.additionalPadding}>
+            <Col xs={12}>
               <Typography type="body2" weight={400} inverted>
                 <FormattedMessage
-                  id="smartContracts.block1.text1"
-                  defaultMessage="Safe, secure and transparent business operations are already a reality. Provide the transactions with whatever conditions are required, based on a range of different parameters, including two-factor authentication, elapsed time and real-world data."
-                />
-              </Typography>
-            </Col>
-            <Col xs={12} md={6} className={classes.additionalPadding}>
-              <Typography type="body2" weight={400} inverted>
-                <FormattedMessage
-                  id="smartContracts.block1.text2"
-                  defaultMessage="Waves blockchain is already the fastest and most user-friendly in existence. Nevertheless, we are improving our platform all the time! The next revolution from Waves is already on the horizon: smart contracts, packed with powerful features."
+                  id="smartContracts.block1.text"
+                  defaultMessage="Waves platform is building a blockchain based solutions for real-world business. We are providing smart and flexible tools that will fit for most of the business cases and able to work with real-world data."
                 />
               </Typography>
             </Col>
@@ -58,6 +51,7 @@ const PageLayout = ({ onDocumentationClick, classes }) => (
       <Section className={classes.bgBlack} top={4}>
         <ContentContainer>
           <SCFeatures />
+          <UsefulLinks />
         </ContentContainer>
       </Section>
       <Section className={classes.bgBlackNight} top={4} bottom={4}>
