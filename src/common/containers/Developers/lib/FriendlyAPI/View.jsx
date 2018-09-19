@@ -14,7 +14,7 @@ const FriendlyAPI = ({ onDocumentationClick, onClientClick, classes }) => (
     buttons={[
       <IconButton
         onClick={onDocumentationClick}
-        href="https://github.com/wavesplatform/Waves/wiki/Waves-Node-REST-API"
+        href="https://docs.wavesplatform.com/development-and-api/waves-node-rest-api.html"
         target="_blank"
         iconName="github"
         className={classes.button}
