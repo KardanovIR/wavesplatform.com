@@ -46,7 +46,7 @@ const NumbersMain = ({
         <Typography type="numeral">
           &gt;
           {/* @todo add value from api */}
-          <FormattedNumber value={800000} />
+          <FormattedNumber value={1000000} />
         </Typography>
         <Typography type="body">
           <FormattedMessage id="home.numbers.wallets" />
