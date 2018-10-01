@@ -8,10 +8,13 @@ import ContentContainer from 'src/common/components/ContentContainer';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
+import UserCases from 'src/common/components/UserCases';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
+// @todo move to common containers
 import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
+import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -23,8 +26,6 @@ import WavesNG from './lib/WavesNG';
 import IssuingTokens from './lib/IssuingTokens';
 import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
-import UserCases from '../../components/UserCases';
-import Facts from './lib/Facts';
 
 // styles
 import injectSheet from 'react-jss';
