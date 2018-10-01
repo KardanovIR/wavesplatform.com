@@ -25,13 +25,14 @@ addLocaleData([...en, ...ko, ...zh, ...ru, ...hi]);
 // Cookies
 import { CookiesProvider } from 'react-cookie';
 
+export const getInitialState = () => window.__INITIAL_STATE;
 export const getMessages = () => window.__MESSAGES || {};
 export const getLocale = () => window.__LOCALE;
 
 // run app
 function run(
   Component,
-  { callback = () => {}, reducer, initialState, epic } = {}
+  { callback = () => {}, reducer, initialState = getInitialState(), epic } = {}
 ) {
   const appNode = document.getElementById('app');
 

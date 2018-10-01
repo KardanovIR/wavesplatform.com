@@ -14,7 +14,7 @@ const logSettings = {
 };
 
 export default connect(
-  ({ pairs }) => ({ pairs }),
+  undefined,
   {
     onNewDexClick: () => newDexClick(logSettings.MainScreen),
     onNewClientClick: () => newClientClick(logSettings.GetClient),

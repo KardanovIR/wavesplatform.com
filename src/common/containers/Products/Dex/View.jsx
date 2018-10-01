@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import ContentContainer from 'src/common/components/ContentContainer';
@@ -20,7 +19,6 @@ import injectSheet from 'react-jss';
 import styles from './styles';
 
 const PageLayout = ({
-  initialState,
   classes,
   onNewDexClick,
   onClientDownload,
@@ -36,7 +34,7 @@ const PageLayout = ({
     <Wrapper>
       <Section top={4} bottom={4}>
         <ContentContainer>
-          <DEXTopPairs pairs={initialState.pairs} />
+          <DEXTopPairs />
         </ContentContainer>
       </Section>
       <Section
@@ -67,11 +65,5 @@ const PageLayout = ({
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-const App = props => (
-  <ThemeProvider>
-    <Page {...props} />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default hot(module)(App);

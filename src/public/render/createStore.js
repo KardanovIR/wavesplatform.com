@@ -15,11 +15,11 @@ import customMiddleware from 'src/public/middleware';
 import cookieConsentSnackbarReducer from 'src/public/reducers/cookieConsentSnackbar';
 
 // common initial state
-import getCommonInitialState from './getInitialState';
+import getCommonInitialState from './getCommonInitialState';
 
 const createStore = (
-  reducer = s => s,
-  initialState = () => undefined,
+  reducer = (s = null) => s,
+  initialState,
   epic = () => Observable.empty()
 ) => {
   // reducer
@@ -32,7 +32,7 @@ const createStore = (
 
   // initial state
   const appInitialState = {
-    page: initialState(),
+    page: initialState,
     common: getCommonInitialState(),
   };
 
