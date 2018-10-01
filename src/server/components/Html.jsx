@@ -2,7 +2,7 @@ import React from 'react';
 
 import { GtmHead, GtmBody } from './Gtm';
 import Piwik from './Piwik';
-import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
+
 const Html = ({
   title,
   description,
@@ -20,7 +20,6 @@ const Html = ({
   sentryEnabled,
   mailchimpEnabled,
   serverName,
-  cookieConsentScript,
 }) => (
   <html lang="en">
     <head>
@@ -42,22 +41,6 @@ const Html = ({
         content="https://s3.ca-central-1.amazonaws.com/wavesdb.com/images/OGImage.jpg"
       />
       {vendorChunk && <script type="text/javascript" src={vendorChunk} />}
-      <script src={cookieConsentScript} />
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-      if (window.CookieConsent) {
-        window['${COOKIE_CONSENT_FIELD}'] = new window.CookieConsent({
-          essentialCookies: ['locale', '__cfduid'],
-          consentProp: '${COOKIE_CONSENT_FIELD}'
-        });
-        if (!window['${COOKIE_CONSENT_FIELD}'].granted) {
-          window['${COOKIE_CONSENT_FIELD}'].enable();
-        }
-      }
-      `,
-        }}
-      />
       {/* sentry enable */}
       {sentryEnabled && (
         <script

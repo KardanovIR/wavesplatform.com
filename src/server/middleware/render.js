@@ -81,15 +81,12 @@ export const render = function({
     // script paths
     let vendorChunk;
     let script;
-    let cookieConsentScript;
 
     if (process.env.NODE_ENV === 'production') {
       // read file path fron assets
       script = ctx.state.assets[scriptName].js;
       vendorChunk = ctx.state.assets.vendor.js;
-      cookieConsentScript = ctx.state.assets.cookieConsent.js;
     } else {
-      cookieConsentScript = `/static/cookieConsent.js`;
       script =
         scriptName.indexOf('.js') > -1
           ? scriptName
@@ -102,7 +99,6 @@ export const render = function({
         description={description}
         script={script}
         vendorChunk={vendorChunk}
-        cookieConsentScript={cookieConsentScript}
         locale={ctx.locale}
         availableLocales={ctx.availableLocales}
         messages={locale[ctx.locale]}

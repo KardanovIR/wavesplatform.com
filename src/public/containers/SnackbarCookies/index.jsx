@@ -10,7 +10,8 @@ import {
   cookiesResetClick,
 } from 'src/public/actions';
 
-import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
+import { withLocalStorage } from 'src/public/hoc/localStorage';
+
 import ContentContainer from 'src/common/components/ContentContainer';
 
 import Text from './Text';
@@ -18,41 +19,59 @@ import Buttons from './Buttons';
 
 import styles from './styles';
 
-const open = assoc('open', true);
-const hide = assoc('open', false);
+const initTags = () => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'init_tags' });
+};
 
 class CookiesSnackbarContainer extends React.Component {
-  state = {
-    open: false,
-  };
-  handleResetClick = () => {
-    this.props.onResetClick();
-    this.setState(open);
-  };
+  constructor(props) {
+    super(props);
+    const intInitialValue = parseInt(props.initialValue);
+    this.state = {
+      consentGiven: isNaN(intInitialValue) ? undefined : intInitialValue,
+    };
+  }
+
+  handleResetClick = () => this.props.onResetClick();
 
   componentDidMount() {
-    this.CookieConsentChecker = window[COOKIE_CONSENT_FIELD];
-    this.CookieConsentChecker.onReset = this.handleResetClick;
-
-    if (this.CookieConsentChecker && !this.CookieConsentChecker.handled)
-      this.setState(open);
+    if (this.state.consentGiven === 1) initTags();
   }
+
   handleAllowAllClick = () => {
     this.props.onAllowClick();
-    this.CookieConsentChecker.grantConsent();
-    this.setState(hide);
+    this.props.onLocalStorageUpdate(1);
+
+    if (this.state.consentGiven !== 1) {
+      initTags();
+      this.setState({ consentGiven: 1 });
+    }
   };
+
   handleEssentialsOnlyClick = () => {
     this.props.onDisableClick();
-    this.CookieConsentChecker.withdrawConsent();
-    this.setState(hide);
+
+    const { onLocalStorageUpdate } = this.props;
+    switch (this.state.consentGiven) {
+      case 1:
+        // revoking consent — simply refresh page
+        onLocalStorageUpdate(0);
+        location.reload();
+        return;
+      case 0:
+        return;
+      case undefined:
+        onLocalStorageUpdate(0);
+        this.setState({ consentGiven: 0 });
+        return;
+    }
   };
+
   render() {
-    const { classes } = this.props;
+    const { classes, open } = this.props;
     return (
-      <div
-        className={cn(classes.snackbar, { [classes.open]: this.state.open })}
-      >
+      <div className={cn(classes.snackbar, { [classes.open]: open })}>
         <ContentContainer className={classes.container}>
           <Text classes={classes} />
           <Buttons
@@ -68,8 +87,9 @@ class CookiesSnackbarContainer extends React.Component {
 
 export default compose(
   injectSheet(styles),
+  withLocalStorage('cookieConsentGiven'),
   connect(
-    undefined,
+    s => ({ open: s.cookieConsentSnackbarOpen }),
     {
       onAllowClick: cookiesAllowClick,
       onDisableClick: cookiesDisableClick,

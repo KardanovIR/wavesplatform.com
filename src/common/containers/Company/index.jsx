@@ -1,7 +1,6 @@
 import React from 'react';
 
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import MainScreen from 'src/common/components/MainScreen';
@@ -93,12 +92,5 @@ const PageLayout = ({ classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = () => (
-  <ThemeProvider>
-    <Page />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;

@@ -11,8 +11,6 @@ export default async (ctx, next) => {
       ctx.body = err.message;
     }
 
-    // console.log(err);
-
     ctx.app.emit('error', err, ctx);
   }
 };
