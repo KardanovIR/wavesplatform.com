@@ -18,14 +18,14 @@ import FooterNav from './lib/FooterNav';
 import LanguageChooser from '../LanguageChooser';
 
 import url, { fileUrl, FILES } from 'src/common/utils/url';
-import { COOKIE_CONSENT_FIELD } from 'src/common/constants';
 
-const resetConsent = () =>
-  typeof window !== 'undefined' &&
-  window[COOKIE_CONSENT_FIELD] &&
-  window[COOKIE_CONSENT_FIELD].reset();
-
-const Footer = ({ classes, links, hideCredentials, inverted }) => (
+const Footer = ({
+  classes,
+  links,
+  hideCredentials,
+  inverted,
+  onCookieConsentReset,
+}) => (
   <div className={classes.root}>
     <footer className={classes.footer}>
       <Row className={classes.row}>
@@ -68,7 +68,7 @@ const Footer = ({ classes, links, hideCredentials, inverted }) => (
             </Link>
 
             <Link
-              onClick={resetConsent}
+              onClick={onCookieConsentReset}
               className={classes.terms}
               textDecoration={false}
               primary={false}

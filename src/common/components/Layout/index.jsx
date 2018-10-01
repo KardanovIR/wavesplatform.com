@@ -3,7 +3,7 @@ import React from 'react';
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 
-import Footer from '../Footer';
+import Footer from 'src/common/containers/Footer';
 import PopupTelegram from 'src/common/containers/PopupTelegram';
 import SnackbarCookies from 'src/public/containers/SnackbarCookies';
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
