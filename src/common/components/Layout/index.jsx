@@ -6,7 +6,7 @@ import Navigation from '../Navigation';
 
 import Footer from 'src/common/containers/Footer';
 import PopupTelegram from 'src/common/containers/PopupTelegram';
-import SnackbarCookies from 'src/public/containers/SnackbarCookies';
+import CookieConsent from 'src/public/containers/CookieConsent';
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
 
 // patching store to separate common and page-specific state
@@ -63,7 +63,7 @@ const Layout = ({
 
     {/* cookies store is common between pages */}
     <StorePatch selector={commonSelector} wrapper={identity}>
-      <SnackbarCookies />
+      <CookieConsent />
     </StorePatch>
 
     <div className={classes.ftwrapper}>

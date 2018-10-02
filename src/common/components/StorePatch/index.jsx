@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { applySelectorToStore } from 'src/common/utils/state/applySelectorToStore';
+
 const contextDefintion = { store: PropTypes.object.isRequired };
 
 class StorePatch extends React.Component {
@@ -10,14 +12,8 @@ class StorePatch extends React.Component {
   getChildContext() {
     const { selector } = this.props;
     const { store } = this.context;
-
-    const getState = () => selector(store.getState());
-
     return {
-      store: {
-        ...store,
-        getState,
-      },
+      store: applySelectorToStore(selector, store),
     };
   }
 
