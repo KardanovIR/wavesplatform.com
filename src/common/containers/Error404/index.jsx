@@ -1,9 +1,7 @@
 import React from 'react';
 
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
-// import MainScreenBackground from 'src/common/components/Background/MainScreen';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
 import Button from 'src/common/components/Button';
@@ -11,11 +9,10 @@ import Button from 'src/common/components/Button';
 import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
-import cn from 'classnames';
 
 import flexCentered from 'src/common/styles/flexCentered';
 
-const styles = theme => ({
+const styles = {
   '@global #app': {
     height: '100%',
   },
@@ -41,7 +38,7 @@ const styles = theme => ({
     borderColor: '#fff',
     color: '#002eff',
   },
-});
+};
 
 const PageLayout = ({ classes }) => (
   <Layout hideFooter>
@@ -64,12 +61,5 @@ const PageLayout = ({ classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = () => (
-  <ThemeProvider>
-    <Page />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;

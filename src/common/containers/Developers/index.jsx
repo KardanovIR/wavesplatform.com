@@ -1,11 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
-import Margin from 'src/common/components/Margin';
-import Background from 'src/common/components/Background';
 import ContentContainer from 'src/common/components/ContentContainer';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 
@@ -93,12 +90,5 @@ const PageLayout = ({ classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = () => (
-  <ThemeProvider>
-    <Page />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;
