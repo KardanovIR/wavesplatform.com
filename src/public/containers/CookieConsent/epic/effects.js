@@ -8,30 +8,26 @@ export const localStorageConsent = {
 };
 
 const ESSENTIAL_COOKIES = { locale: true, __cfduid: true };
-const deleteCookie = name => {
+const deleteCookie = (name, domain) => {
   // With location and precise domain
   document.cookie =
     name +
     '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; location=/; domain=' +
-    document.domain;
+    domain;
 
   // With location and domain
   document.cookie =
     name +
     '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; location=/; domain=.' +
-    document.domain;
+    domain;
 
   // With precise domain only (without path)
   document.cookie =
-    name +
-    '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=.' +
-    document.domain;
+    name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=.' + domain;
 
   // With domain only (without path)
   document.cookie =
-    name +
-    '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' +
-    document.domain;
+    name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + domain;
 
   // Without domain, without path
   document.cookie = name + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT;';
@@ -44,7 +40,8 @@ export const clearCookies = () => {
     if (ESSENTIAL_COOKIES[name]) {
       return;
     }
-    deleteCookie(name);
+    deleteCookie(name, document.domain);
+    deleteCookie(name, 'wavesplatform.com');
   });
 };
 
