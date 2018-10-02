@@ -44,7 +44,6 @@ const createStore = (
   );
 
   const store = createReduxStore(
-    // combine reducers here
     appReducer,
     appInitialState,
     compose(

@@ -10,7 +10,7 @@ import {
   reset,
 } from '../actions';
 
-import { localStorageConsent, initTags } from './effects';
+import { localStorageConsent, initTags, clearCookies } from './effects';
 
 const init$ = action$ =>
   action$
@@ -41,6 +41,7 @@ const essentialsOnly$ = action$ =>
     .filter(x => x !== -1)
     .do(consentWasGiven => {
       localStorageConsent.set(-1);
+      clearCookies();
       if (consentWasGiven === 1) location.reload();
     })
     .ignoreElements();

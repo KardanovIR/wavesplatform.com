@@ -17,8 +17,6 @@ import initLogger from './middleware/initLogger';
 import serveStatic from './middleware/serveStatic';
 import sniffLocale from './middleware/sniffLocale';
 
-import isProd from 'src/common/utils/isProd';
-
 const app = new Koa();
 
 app

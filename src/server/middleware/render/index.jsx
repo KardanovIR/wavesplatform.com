@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 
 import { JssProvider, SheetsRegistry } from 'react-jss';
 
-import { createStore } from 'redux';
+import { createStore } from './createStore';
 import { Provider } from 'react-redux';
 
 // i18n initialization
@@ -22,6 +22,8 @@ addLocaleData([...en, ...ko, ...zh, ...ru, ...hi]);
 import Html from 'src/server/components/Html';
 import FontInliner from 'src/server/components/FontInliner';
 
+import ThemeProvider from 'src/common/components/ThemeProvider';
+
 import isProd from 'src/common/utils/isProd';
 import checkEnvVariable from 'src/server/utils/checkEnvVariable';
 
@@ -32,7 +34,7 @@ checkEnvVariable('SERVER_NAME');
 export const render = function({
   script: scriptName,
   component: Component = 'span',
-  reducer = s => s,
+  reducer,
   title = 'Waves Platform',
   // messages = {},
   description,
@@ -41,7 +43,7 @@ export const render = function({
     // enable SSR only for production
     let RenderedComponent;
     if (process.env.NODE_ENV === 'production') {
-      RenderedComponent = <Component initialState={ctx.state.initialState} />;
+      RenderedComponent = <Component />;
     } else {
       RenderedComponent = <span />;
     }
@@ -54,17 +56,19 @@ export const render = function({
     const sheets = new SheetsRegistry();
     const content = renderToStaticMarkup(
       <JssProvider registry={sheets}>
-        <CookiesProvider cookies={ctx.request.universalCookies}>
-          <Provider store={store}>
-            <IntlProvider
-              locale={ctx.locale}
-              defaultLocale="en"
-              messages={locale[ctx.locale]}
-            >
-              {RenderedComponent}
-            </IntlProvider>
-          </Provider>
-        </CookiesProvider>
+        <Provider store={store}>
+          <IntlProvider
+            locale={ctx.locale}
+            defaultLocale="en"
+            messages={locale[ctx.locale]}
+          >
+            <ThemeProvider>
+              <CookiesProvider cookies={ctx.request.universalCookies}>
+                {RenderedComponent}
+              </CookiesProvider>
+            </ThemeProvider>
+          </IntlProvider>
+        </Provider>
       </JssProvider>
     );
 

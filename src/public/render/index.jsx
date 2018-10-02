@@ -45,11 +45,11 @@ function run(
         defaultLocale="en"
         messages={getMessages()}
       >
-        <AnchorScrollProvider>
+        <ThemeProvider>
           <CookiesProvider>
-            <ThemeProvider>{Component}</ThemeProvider>
+            <AnchorScrollProvider>{Component}</AnchorScrollProvider>
           </CookiesProvider>
-        </AnchorScrollProvider>
+        </ThemeProvider>
       </IntlProvider>
     </Provider>,
     appNode,
