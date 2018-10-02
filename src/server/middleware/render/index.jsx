@@ -111,7 +111,6 @@ export const render = function({
         style={sheets.toString()}
         initialState={ctx.state.initialState}
         gtmEnabled={isProd()}
-        piwikEnabled={isProd()}
         sentryEnabled={isProd()}
         mailchimpEnabled={isProd()}
         serverName={process.env.SERVER_NAME}

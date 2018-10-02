@@ -10,7 +10,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 const GtmHead = () => (
   <script
-    // data-cookie-managed="true"
     dangerouslySetInnerHTML={{
       __html: script,
     }}

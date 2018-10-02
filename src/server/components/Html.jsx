@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { GtmHead, GtmBody } from './Gtm';
-import Piwik from './Piwik';
 
 const Html = ({
   title,
@@ -16,7 +15,6 @@ const Html = ({
   style,
   fonts,
   gtmEnabled,
-  piwikEnabled,
   sentryEnabled,
   mailchimpEnabled,
   serverName,
@@ -110,7 +108,6 @@ const Html = ({
     <body>
       {/* GTM enable */}
       {gtmEnabled && <GtmBody />}
-      {piwikEnabled && <Piwik />}
 
       <div id="app" dangerouslySetInnerHTML={{ __html: content }} />
       <script type="text/javascript" src={script} />
