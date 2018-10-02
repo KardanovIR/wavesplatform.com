@@ -38,7 +38,7 @@ const WavesNodesMap = ({ classes }) => (
             <div className={classes.numbersWrapper}>
                 <div className={classes.number}>
                     <Typography type="numeral" tagName="span" className={classes.Int} inverted>
-                        168{' '}
+                        300{' '}
                     </Typography>
                     <Typography type="body" tagName="span" className={classes.title} inverted>
                         <FormattedMessage
