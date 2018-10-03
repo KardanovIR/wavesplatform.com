@@ -1,7 +1,7 @@
 export const localStorageConsent = {
-  set: v => (window.localStorage.consentGiven = v),
+  set: v => (window.localStorage.cookieConsentGiven = v),
   get: () => {
-    const v = parseInt(window.localStorage.consentGiven);
+    const v = parseInt(window.localStorage.cookieConsentGiven);
     if (isNaN(v)) return 0;
     else return v;
   },
