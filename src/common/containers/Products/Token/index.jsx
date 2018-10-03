@@ -9,10 +9,6 @@ import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import HowToToken from 'src/common/components/HowToToken';
 import Typography from 'src/common/components/Typography';
 import Margin from 'src/common/components/Margin';
-import UserCases from 'src/common/components/UserCases';
-
-// containers
-import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -48,13 +44,7 @@ const PageLayout = ({ classes }) => (
       </Margin>
     </Wrapper>
 
-    <UserCases />
     <Wrapper>
-      <Section top={4} bottom={4}>
-        <ContentContainer>
-          <Facts />
-        </ContentContainer>
-      </Section>
       <Section className={classes.bgBlue}>
         <ContentContainer>
           <HowToToken eventPage="ProductToken" eventSource="HowToToken" />

@@ -13,9 +13,7 @@ import Wrapper from 'src/common/components/Wrapper';
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
 // containers
-import UserCases from 'src/common/components/UserCases';
 import HowToWallet from 'src/common/components/HowToWallet';
-import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -115,16 +113,6 @@ const PageLayout = ({ classes }) => (
           </Typography>
         </ContentContainer>
       </Margin>
-
-      <ContentContainer>
-        <UserCases />
-      </ContentContainer>
-
-      <Section size={4}>
-        <ContentContainer>
-          <Facts />
-        </ContentContainer>
-      </Section>
 
       <Section top={2} bottom={4} className={classes.bgBlue}>
         <ContentContainer>
