@@ -35,13 +35,6 @@ const PageLayout = ({ classes }) => (
           <IssuingTokens />
         </ContentContainer>
       </Section>
-      <Margin top={2} bottom={6}>
-        <ContentContainer>
-          <Typography type="display3Inverted">
-            <FormattedMessage id="feedback.companiesReleased" />
-          </Typography>
-        </ContentContainer>
-      </Margin>
     </Wrapper>
 
     <Wrapper>

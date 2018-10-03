@@ -106,14 +106,6 @@ const PageLayout = ({ classes }) => (
         </AnchorScroll>
       </Section>
 
-      <Margin top={5} bottom={5}>
-        <ContentContainer>
-          <Typography type="display3" weight={600}>
-            <FormattedMessage id="feedback.companiesReleased" />
-          </Typography>
-        </ContentContainer>
-      </Margin>
-
       <Section top={2} bottom={4} className={classes.bgBlue}>
         <ContentContainer>
           <HowToToken />
