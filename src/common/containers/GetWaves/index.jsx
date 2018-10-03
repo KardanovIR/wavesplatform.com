@@ -1,7 +1,6 @@
 import React from 'react';
 
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
@@ -14,11 +13,9 @@ import Exchanges from './lib/Exchanges';
 import WalletText from './lib/WalletText';
 
 // styles
-import injectSheet from 'react-jss';
-import styles from './styles';
 import { fileUrl } from '../../utils/url';
 
-const PageLayout = ({ classes }) => (
+const PageLayout = () => (
   <Layout activeLink="get-waves">
     <BackgroundMainScreen
       type="image"
@@ -50,12 +47,5 @@ const PageLayout = ({ classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = () => (
-  <ThemeProvider>
-    <Page />
-  </ThemeProvider>
-);
-
+const App = PageLayout;
 export default App;

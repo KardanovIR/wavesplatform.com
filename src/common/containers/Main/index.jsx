@@ -1,17 +1,20 @@
 import React from 'react';
 import cx from 'classnames';
+
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Wrapper from 'src/common/components/Wrapper';
 import ContentContainer from 'src/common/components/ContentContainer';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
-import Facts from 'src/common/components/Facts';
+import UserCases from 'src/common/components/UserCases';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
+// @todo move to common containers
+import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
+import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -20,11 +23,9 @@ import WavesClient from './lib/WavesClient';
 import Wallet from '../../components/Wallet';
 import WalletText from './lib/WalletText';
 import WavesNG from './lib/WavesNG';
-import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
 import IssuingTokens from './lib/IssuingTokens';
 import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
-import UserCases from '../../components/UserCases';
 
 // styles
 import injectSheet from 'react-jss';
@@ -34,7 +35,7 @@ import styles from './styles';
 import { fileUrl } from 'src/common/utils/url';
 import { hot } from 'react-hot-loader';
 
-const PageLayout = ({ initialState, classes }) => (
+const PageLayout = ({ classes }) => (
   <Layout activeLink="home">
     <BackgroundMainScreen
       type="image"
@@ -53,7 +54,7 @@ const PageLayout = ({ initialState, classes }) => (
     <Wrapper>
       <Section top={3} bottom={2}>
         <ContentContainer>
-          <NumbersQuote dexData={initialState.dexData} />
+          <NumbersQuote />
         </ContentContainer>
       </Section>
 
@@ -103,7 +104,7 @@ const PageLayout = ({ initialState, classes }) => (
 
       <Section size={4}>
         <ContentContainer>
-          <Facts tokens={initialState.dexData.dexAssets} />
+          <Facts />
         </ContentContainer>
       </Section>
 
@@ -120,12 +121,5 @@ const PageLayout = ({ initialState, classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = props => (
-  <ThemeProvider>
-    <Page {...props} />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default hot(module)(App);

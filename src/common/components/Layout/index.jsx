@@ -1,12 +1,16 @@
 import React from 'react';
+import { identity } from 'ramda';
 
 import Wrapper from '../Wrapper';
 import Navigation from '../Navigation';
 
-import Footer from '../Footer';
+import Footer from 'src/common/containers/Footer';
 import PopupTelegram from 'src/common/containers/PopupTelegram';
-import SnackbarCookies from 'src/public/containers/SnackbarCookies';
+import CookieConsent from 'src/public/containers/CookieConsent';
 import { DESKTOP_LINKS, MOBILE_LINKS } from './links';
+
+// patching store to separate common and page-specific state
+import StorePatch from 'src/common/components/StorePatch';
 
 import injectSheet from 'react-jss';
 
@@ -30,6 +34,9 @@ const styles = theme => ({
   },
 });
 
+const pageSelector = s => s.page;
+const commonSelector = s => s.common;
+
 const Layout = ({
   children,
   classes,
@@ -46,9 +53,19 @@ const Layout = ({
         activeLink={activeLink}
       />
     </div>
-    {children}
+
+    {/* children component store is page-specific */}
+    <StorePatch selector={pageSelector} wrapper={identity}>
+      {children}
+    </StorePatch>
+
     <PopupTelegram page={activeLink} />
-    <SnackbarCookies />
+
+    {/* cookies store is common between pages */}
+    <StorePatch selector={commonSelector} wrapper={identity}>
+      <CookieConsent />
+    </StorePatch>
+
     <div className={classes.ftwrapper}>
       <Wrapper>
         {!hideFooter && (

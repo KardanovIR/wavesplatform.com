@@ -5,13 +5,12 @@ import './rxImports';
 import React from 'react';
 import { render as reactDomRender } from 'react-dom';
 
-import { createStore, applyMiddleware, compose } from 'redux';
+// redux
+import { createStore } from './createStore';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import { createEpicMiddleware } from 'redux-observable';
-import { Observable } from 'rxjs/Observable';
 
 import { AnchorScrollProvider } from 'src/public/components/AnchorScroll';
+import ThemeProvider from 'src/common/components/ThemeProvider';
 
 // i18n initialization
 import { IntlProvider, addLocaleData } from 'react-intl';
@@ -26,36 +25,18 @@ addLocaleData([...en, ...ko, ...zh, ...ru, ...hi]);
 // Cookies
 import { CookiesProvider } from 'react-cookie';
 
-// custom middleware
-import customMiddleware from './middleware';
-
-export const getInitialState = () => window.__INITIAL_STATE || {};
+export const getInitialState = () => window.__INITIAL_STATE;
 export const getMessages = () => window.__MESSAGES || {};
 export const getLocale = () => window.__LOCALE;
 
 // run app
 function run(
   Component,
-  {
-    callback = () => {},
-    reducer = s => s,
-    epic = () => Observable.empty(),
-    initialState = getInitialState(),
-  } = {}
+  { callback = () => {}, reducer, initialState = getInitialState(), epic } = {}
 ) {
   const appNode = document.getElementById('app');
 
-  // redux store
-  const store = createStore(
-    reducer,
-    initialState,
-    compose(
-      customMiddleware,
-      applyMiddleware(thunk),
-      applyMiddleware(createEpicMiddleware(epic)),
-      window.devToolsExtension ? window.devToolsExtension() : f => f
-    )
-  );
+  const store = createStore(reducer, initialState, epic);
 
   return reactDomRender(
     <Provider store={store}>
@@ -64,9 +45,11 @@ function run(
         defaultLocale="en"
         messages={getMessages()}
       >
-        <AnchorScrollProvider>
-          <CookiesProvider>{Component}</CookiesProvider>
-        </AnchorScrollProvider>
+        <ThemeProvider>
+          <CookiesProvider>
+            <AnchorScrollProvider>{Component}</AnchorScrollProvider>
+          </CookiesProvider>
+        </ThemeProvider>
       </IntlProvider>
     </Provider>,
     appNode,

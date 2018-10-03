@@ -2,22 +2,20 @@ import React from 'react';
 import cx from 'classnames';
 
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Typography from 'src/common/components/Typography';
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
-import Facts from 'src/common/components/Facts';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
-import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
-
 // containers
 import UserCases from 'src/common/components/UserCases';
 import HowToWallet from 'src/common/components/HowToWallet';
+import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -41,7 +39,7 @@ import styles from './styles';
 // url
 import { fileUrl } from 'src/common/utils/url';
 
-const PageLayout = ({ classes, initialState }) => (
+const PageLayout = ({ classes }) => (
   <Layout activeLink="product">
     <BackgroundMainScreen
       type="image"
@@ -124,7 +122,7 @@ const PageLayout = ({ classes, initialState }) => (
 
       <Section size={4}>
         <ContentContainer>
-          <Facts tokens={initialState.dexData.dexAssets} />
+          <Facts />
         </ContentContainer>
       </Section>
 
@@ -137,12 +135,5 @@ const PageLayout = ({ classes, initialState }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = props => (
-  <ThemeProvider>
-    <Page {...props} />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;

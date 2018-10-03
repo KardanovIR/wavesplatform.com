@@ -1,18 +1,16 @@
 import React from 'react';
 
 // components
-import ThemeProvider from 'src/common/components/ThemeProvider';
 import Layout from 'src/common/components/Layout';
 import Section from 'src/common/components/Section';
+import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import ContentContainer from 'src/common/components/ContentContainer';
 import Wrapper from 'src/common/components/Wrapper';
+import HowToWallet from 'src/common/components/HowToWallet';
 
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
-import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
-
 // containers
-import HowToWallet from 'src/common/components/HowToWallet';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -68,12 +66,5 @@ const PageLayout = ({ classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = props => (
-  <ThemeProvider>
-    <Page {...props} />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;

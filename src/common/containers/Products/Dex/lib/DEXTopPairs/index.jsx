@@ -1,4 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { compose, pick } from 'ramda';
+
 import Typography from 'src/common/components/Typography';
 
 import PairRow from './lib/PairRow';
@@ -99,4 +102,7 @@ DEXTopPairs.defaultProps = {
   pairs: [],
 };
 
-export default injectSheet(styles)(DEXTopPairs);
+export default compose(
+  connect(pick(['pairs'])),
+  injectSheet(styles)
+)(DEXTopPairs);

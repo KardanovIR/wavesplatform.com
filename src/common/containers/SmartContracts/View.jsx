@@ -1,5 +1,4 @@
 import React from 'react';
-import ThemeProvider from 'src/common/components/ThemeProvider';
 
 import { FormattedMessage } from 'react-intl';
 import Typography from 'src/common/components/Typography';
@@ -68,12 +67,5 @@ const PageLayout = ({ onDocumentationClick, classes }) => (
   </Layout>
 );
 
-const Page = injectSheet(styles)(PageLayout);
-
-const App = props => (
-  <ThemeProvider>
-    <Page {...props} />
-  </ThemeProvider>
-);
-
+const App = injectSheet(styles)(PageLayout);
 export default App;

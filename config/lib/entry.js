@@ -12,5 +12,4 @@ module.exports = {
   wavesNG: 'src/public/entries/wavesNG',
   mining: 'src/public/entries/mining',
   leasing: 'src/public/entries/leasing',
-  cookieConsent: 'src/public/cookieConsent',
 };

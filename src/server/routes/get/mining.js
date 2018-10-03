@@ -1,9 +1,6 @@
 import compose from 'koa-compose';
 
-import runApiRequests, {
-  getWavesTopNodes,
-  getMrtWavesPrice,
-} from 'src/server/middleware/api';
+import runApiRequests, { getMrtWavesPrice } from 'src/server/middleware/api';
 
 import { render } from 'src/server/middleware/render';
 
@@ -11,7 +8,7 @@ import Mining from 'src/common/containers/Mining';
 import reducer from 'src/common/containers/Mining/reducer';
 
 export default compose([
-  runApiRequests([getWavesTopNodes, getMrtWavesPrice]),
+  runApiRequests([getMrtWavesPrice]),
   render({
     script: 'mining',
     component: Mining,

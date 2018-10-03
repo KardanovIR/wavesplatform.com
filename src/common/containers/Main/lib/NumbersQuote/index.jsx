@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { compose, pick } from 'ramda';
 
 import Margin from 'src/common/components/Margin';
 import { Row, Col } from 'src/common/components/Grid';
@@ -34,4 +36,7 @@ const NumbersQuote = ({ classes, dexData }) => (
   </Row>
 );
 
-export default injectSheet(styles)(NumbersQuote);
+export default compose(
+  connect(pick(['dexData'])),
+  injectSheet(styles)
+)(NumbersQuote);

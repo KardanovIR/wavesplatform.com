@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { render, getInitialState } from '../render';
+import { render } from '../render';
 
 import Main from '../../common/containers/Main';
 
-render(<Main initialState={getInitialState()} />);
+render(<Main />);
 
 if (process.env.NODE_ENV === 'development') {
   if (module.hot)
