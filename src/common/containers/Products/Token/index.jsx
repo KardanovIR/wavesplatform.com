@@ -30,7 +30,7 @@ const PageLayout = ({ classes }) => (
     </BackgroundMainScreen>
 
     <Wrapper>
-      <Section top={4}>
+      <Section top={4} bottom={3}>
         <ContentContainer>
           <IssuingTokens />
         </ContentContainer>
