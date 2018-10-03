@@ -50,7 +50,7 @@
     "Waves의 블록체인은 지분증명 (PoS) 알고리즘을 사용하고 있습니다. 구성원들이 거래 수수료의 일부를 받게 되어 있습니다. ",
   "developers.description.algorithm.title": "지분증명 알고리즘",
   "developers.description.fees.text":
-    "자산 송금 최저 수수료는 0.001 WAVES입니다. 시장 주문의 고정 수수료도 0.001 WAVES입니다. 토큰 발행 비용이 1 WAVES이며, 본인이 자기 토큰을 사용하려면 수수료를 내지 않습니다. ",
+    "자산 송금 최저 수수료는 0.001 WAVES입니다. 시장 주문의 고정 수수료도 0.003 WAVES입니다. 토큰 발행 비용이 1 WAVES이며, 본인이 자기 토큰을 사용하려면 수수료를 내지 않습니다. ",
   "developers.description.fees.title": "저렴한 고정 수수료",
   "developers.description.network.text":
     "우리의 새로운 PoS 일치 알고리즘은 네트워크 대역폭을 증가시켜 초당 몇 백 거래를 가능하게 합니다. ",

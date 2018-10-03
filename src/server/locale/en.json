@@ -47,7 +47,7 @@
   "developers.cta.wavesNode": "Waves node",
   "developers.description.algorithm.text": "Waves’s blockchain uses a Proof-of-stake (PoS) algorithm, with participants being rewarded from the commission on transactions made.",
   "developers.description.algorithm.title": "Proof-of-Stake algorithm",
-  "developers.description.fees.text": "The minimum fee for the transfer of funds is 0.001 WAVES. The fixed fee for market orders is 0.001 WAVES. The price of releasing a token is 1 WAVES, and you do not pay to use your own token.",
+  "developers.description.fees.text": "The minimum fee for the transfer of funds is 0.001 WAVES. The fixed fee for market orders is 0.003 WAVES. The price of releasing a token is 1 WAVES, and you do not pay to use your own token.",
   "developers.description.fees.title": "Low, fixed transaction fees",
   "developers.description.network.text": "Our new PoS consensus algorithm enables vastly increased network bandwidth, allowing for hundreds of transactions per second.",
   "developers.description.network.title": "High network channel capacity",

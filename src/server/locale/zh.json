@@ -43,7 +43,7 @@
   "developers.cta.wavesNode": "Waves节点",
   "developers.description.algorithm.text": "Wave区块链使用了权益证明（PoS）算法，参与者从完成的交易的佣金从获得收益。",
   "developers.description.algorithm.title": "权益证明算法",
-  "developers.description.fees.text": "资金转账的最低费用为0.001WAVES。市场订单的固定费用是0.001WAVES。发行一种代币的价格是1WAVES，您可以免费使用您自己的代币。",
+  "developers.description.fees.text": "资金转账的最低费用为0.001WAVES。市场订单的固定费用是0.003WAVES。发行一种代币的价格是1WAVES，您可以免费使用您自己的代币。",
   "developers.description.fees.title": "极低的固定交易费用",
   "developers.description.network.text": "我们最新的PoS协商一致算法使网络带宽大大增加，每秒可以处理数百次交易。",
   "developers.description.network.title": "高网络信道容量",
