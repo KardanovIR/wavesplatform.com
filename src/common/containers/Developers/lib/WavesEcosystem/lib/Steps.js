@@ -56,10 +56,10 @@ const HowToWallet = ({ children, title }) => (
               <br />
               <Link
                 target="_blank"
-                href="https://wavestalk.org"
+                href="https://forum.wavesplatform.com/"
                 textDecoration={false}
               >
-                wavestalk.org
+                forum.wavesplatform.com
               </Link>
             </div>
           ),
