@@ -8,13 +8,11 @@ import ContentContainer from 'src/common/components/ContentContainer';
 import BackgroundMainScreen from 'src/common/components/Background/MainScreen';
 import Margin from 'src/common/components/Margin';
 import Section from 'src/common/components/Section';
-import UserCases from 'src/common/components/UserCases';
 
 // containers
 import SubscribeSection from 'src/common/containers/SubscribeSection';
 // @todo move to common containers
 import DEXFeatures from 'src/common/containers/Products/Dex/lib/DEXFeatures';
-import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -92,19 +90,9 @@ const PageLayout = ({ classes }) => (
         <DEXFeatures />
       </Section>
 
-      <Section top={4} className={classes.issuingTokens}>
-        <ContentContainer>
-          <IssuingTokens />
-        </ContentContainer>
-      </Section>
-
-      <ContentContainer>
-        <UserCases />
-      </ContentContainer>
-
       <Section size={4}>
         <ContentContainer>
-          <Facts />
+          <IssuingTokens />
         </ContentContainer>
       </Section>
 

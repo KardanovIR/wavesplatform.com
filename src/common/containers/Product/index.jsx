@@ -13,9 +13,7 @@ import Wrapper from 'src/common/components/Wrapper';
 import AnchorScroll from 'src/public/components/AnchorScroll';
 
 // containers
-import UserCases from 'src/common/components/UserCases';
 import HowToWallet from 'src/common/components/HowToWallet';
-import Facts from 'src/common/containers/Facts';
 
 // lib
 import MainScreen from './lib/MainScreen';
@@ -106,24 +104,6 @@ const PageLayout = ({ classes }) => (
             <IssuingTokens />
           </ContentContainer>
         </AnchorScroll>
-      </Section>
-
-      <Margin top={5} bottom={5}>
-        <ContentContainer>
-          <Typography type="display3" weight={600}>
-            <FormattedMessage id="feedback.companiesReleased" />
-          </Typography>
-        </ContentContainer>
-      </Margin>
-
-      <ContentContainer>
-        <UserCases />
-      </ContentContainer>
-
-      <Section size={4}>
-        <ContentContainer>
-          <Facts />
-        </ContentContainer>
       </Section>
 
       <Section top={2} bottom={4} className={classes.bgBlue}>
