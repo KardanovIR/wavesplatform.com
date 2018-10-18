@@ -1,4 +1,4 @@
-FROM node:9.4.0
+FROM node:10.12.0
 
 # use changes to package.json to force Docker not to use the cache
 # when we change our application's nodejs dependencies:
