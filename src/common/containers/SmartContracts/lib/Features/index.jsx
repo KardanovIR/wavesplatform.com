@@ -21,7 +21,7 @@ const MultisigWallet = () => (
       text={
         <FormattedHTMLMessage
           id="smartContracts.features.1.text"
-          defaultMessage="Two-factor authentication<br/>Cannot be controlled by one person alone<br/>The necessary parties must provide their private keys simultaneously"
+          defaultMessage="Two-factor authentication<br/>Cannot be controlled by one person alone<br/>The specified parties must all provide their private keys"
         />
       }
       inverted
@@ -67,7 +67,7 @@ const TokenFreeze = () => (
       text={
         <FormattedMessage
           id="smartContracts.features.3.text"
-          defaultMessage="Preventing buyers from selling or transferring tokens out of their address for a certain amount of time"
+          defaultMessage="Preventing buyers from selling or transferring tokens out of their address for a certain period of time"
         />
       }
       inverted

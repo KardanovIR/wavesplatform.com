@@ -25,7 +25,7 @@ const FEATURES_LIST = [
     rightColumn: [
       <FormattedMessage
         id="smartContracts.plans.stage1.right.text"
-        defaultMessage="Lightweight implementation of smart contracts via smart assets and smart accounts. Release in a testnet in Spring 2018."
+        defaultMessage="Lightweight implementation of smart contracts with limited functionality, based on the most popular and in-demand use cases."
       />,
     ],
   },
@@ -63,7 +63,7 @@ const FEATURES_LIST = [
         rightColumn: [
             <FormattedMessage
                 id="smartContracts.plans.stage3.right.text"
-                defaultMessage="Decentralised applications based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the release of Smart Accounts, we'll continue smart contract development to implement sophisticated logic to address almost any computational task."
+                defaultMessage="Decentralised applications based on Turing-complete smart contracts will be able to carry out almost any computational task on the blockchain."
             />,
         ],
     },
