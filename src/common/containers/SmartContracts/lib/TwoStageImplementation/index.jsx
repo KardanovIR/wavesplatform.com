@@ -38,16 +38,35 @@ const FEATURES_LIST = [
       />,
       <FormattedMessage
         id="smartContracts.plans.stage2.left.subtitle"
-        defaultMessage="Smart Contracts"
+        defaultMessage="Smart Assets"
       />,
     ],
     rightColumn: [
       <FormattedMessage
         id="smartContracts.plans.stage2.right.text"
-        defaultMessage="Decentralised applications based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the release of Smart Accounts, we'll continue smart contract development to implement sophisticated logic to address almost any computational task."
+        defaultMessage="A unique feature that dramatically extends token functionality, offering the ability to script token behaviour and providing the flexibility to satisfy any developer’s needs."
       />,
     ],
   },
+
+  {
+        leftColumn: [
+            <FormattedMessage
+                id="smartContracts.plans.stage3.left.title"
+                defaultMessage="Stage 3"
+            />,
+            <FormattedMessage
+                id="smartContracts.plans.stage3.left.subtitle"
+                defaultMessage="Smart Contracts"
+            />,
+        ],
+        rightColumn: [
+            <FormattedMessage
+                id="smartContracts.plans.stage3.right.text"
+                defaultMessage="Decentralised applications based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions. After the release of Smart Accounts, we'll continue smart contract development to implement sophisticated logic to address almost any computational task."
+            />,
+        ],
+    },
 ];
 
 const Block = ({ classes, leftColumn, rightColumn }) => (
@@ -92,7 +111,7 @@ const TwoStageImplementation = ({ classes }) => (
     <Typography type="display3" inverted>
       <FormattedMessage
         id="smartContracts.plans.title"
-        defaultMessage="Two-stage Implementation"
+        defaultMessage="Smart Contracts Development Plan"
       />
     </Typography>
     <Margin bottom={4} />
