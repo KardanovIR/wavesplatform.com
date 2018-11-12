@@ -346,7 +346,7 @@
   "smartContracts.features.2.title": "Atomic Swaps",
   "smartContracts.features.2.text": "Trustless exchange of cryptocurrencies hosted on different blockchains",
   "smartContracts.features.3.title": "Token Freeze",
-  "smartContracts.features.3.text": "Preventing buyers from selling or transferring tokens out of their address for a certain period of time",
+  "smartContracts.features.3.text": "Preventing buyers from selling or transferring tokens for a certain period of time",
   "smartContracts.features.4.title": "Decentralised applications",
   "smartContracts.features.4.text": "dApps based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions",
   "smartContracts.plans.title": "Smart Contracts Development Plan",

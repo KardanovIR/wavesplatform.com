@@ -67,7 +67,7 @@ const TokenFreeze = () => (
       text={
         <FormattedMessage
           id="smartContracts.features.3.text"
-          defaultMessage="Preventing buyers from selling or transferring tokens out of their address for a certain period of time"
+          defaultMessage="Preventing buyers from selling or transferring tokens for a certain period of time"
         />
       }
       inverted
