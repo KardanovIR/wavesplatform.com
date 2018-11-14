@@ -21,7 +21,7 @@ const WavesNgInfo = () => (
       <Typography inverted type="display1">
         <FormattedMessage
           id="developers.smart.title"
-          defaultMessage="Smart Contracts & Smart Accounts"
+          defaultMessage="Versatile functionality for any use case"
         />
       </Typography>
       <Typography inverted type="body2">
@@ -34,7 +34,7 @@ const WavesNgInfo = () => (
       <Typography inverted>
         <FormattedHTMLMessage
           id="developers.smart.text"
-          defaultMessage="We have created a new programming language, RIDE, which makes it very easy for anyone to set up a Smart Account. To bring you the sophisticated tools required for launching a dApp, we are creating Smart Contracts, which enables users to execute any set of instructions on the Waves blockchain."
+          defaultMessage="RIDE, our purpose-designed programming language, makes it straightforward to apply scripted conditions to both accounts and assets. We are currently creating Turing-complete smart contracts to enable the launch of fully-fledged dApps and the execution of any set of instructions on the blockchain."
         />
       </Typography>
       <Margin />

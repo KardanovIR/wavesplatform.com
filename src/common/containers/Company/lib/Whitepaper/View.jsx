@@ -28,7 +28,7 @@ const Whitepaper = ({ classes, onWhitepaperClick }) => (
 
       <Button
         onClick={onWhitepaperClick}
-        href={fileUrl('images/whitepaper_v0.pdf')}
+        href={fileUrl('whitepaper_v0.pdf')}
         target="_blank"
         secondary
       >
