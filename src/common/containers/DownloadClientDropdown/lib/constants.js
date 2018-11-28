@@ -11,19 +11,19 @@ export const OPTIONS = [
   {
     value: 'Windows',
     label: 'cta.getClient.windows',
-    link: fileUrl('WavesClient-1.0.21-win.zip'),
+    link: fileUrl('WavesClient-1.0.28-win.zip'),
     handler: HANDLERS.Windows,
   },
   {
     value: 'Mac',
     label: 'cta.getClient.mac',
-    link: fileUrl('WavesClient-1.0.21-mac.dmg'),
+    link: fileUrl('WavesClient-1.0.28-mac.dmg'),
     handler: HANDLERS.Mac,
   },
   {
     value: 'Linux',
     label: 'cta.getClient.linux',
-    link: fileUrl('WavesClient-1.0.21-linux.deb'),
+    link: fileUrl('WavesClient-1.0.28-linux.deb'),
     handler: HANDLERS.Linux,
   },
 ];
