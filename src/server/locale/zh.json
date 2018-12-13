@@ -21,6 +21,10 @@
   "company.about.text": " Waves平台是全球公共区块链平台，成立于2016年。Waves 平台的使命是通过提供共享基础设施，重塑全球企业家的DNA，提供易于使用，功能强大的工具，使得区块链让每个可从中受益的人们或是组织使用.",
   "components.buttonGetApp.title.android":"在Google Play上下载",
   "components.buttonGetApp.title.ios":"在APP STORE上下载",
+
+  "components.buttonGetApp.title.androidLink":"下载Android版本2.0.2",
+  "components.buttonGetApp.title.iosLink":"iOS版即将推出",
+
   "cta.brandingPackage": "品牌套餐",
   "cta.getClient": "下载客户端",
   "cta.getClient.windows": "Windows",
@@ -120,9 +124,9 @@
   "home.audience.organisations.title": "组织架构",
   "home.audience.traders.text": "在本地的简易客户端中安全地存储资产，同时也可以快速安全地在内置的去中心化交易平台 （DEX） 上进行交易。",
   "home.audience.traders.title": "交易者",
-  "home.issuingTokens.text.one": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。他们在Waves上发行了自己的代币：",
-  "home.issuingTokens.text.few": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。他们在Waves上发行了自己的代币：",
-  "home.issuingTokens.text.other": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。他们在Waves上发行了自己的代币：",
+  "home.issuingTokens.text.one": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。：",
+  "home.issuingTokens.text.few": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。：",
+  "home.issuingTokens.text.other": "获得自己的内部数字货币。使用区块链众筹，支付货物和服务。使用代币创建投票系统和忠诚度或折扣项目。：",
   "home.issuingTokens.title": "发行自己的代币",
   "home.joinUs.quote": "关注最新的新闻和资讯，了解Waves平台上发生的所有大事件",
   "home.joinUs.text": "Waves汇集了区块链爱好者、来自许多不同行业的项目创始人、交易者和投资者。",

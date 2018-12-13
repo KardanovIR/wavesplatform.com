@@ -21,6 +21,10 @@
   "company.about.text": "The Waves Platform is a global public blockchain platform, founded in 2016. Waves Platform’s mission is to reinvent the DNA of entrepreneurship around the world by providing a shared infrastructure, offering easy-to-use, highly functional tools to make blockchain available to every person or organisation that can benefit from it.",
   "components.buttonGetApp.title.android": "Get it on<br/>Google Play",
   "components.buttonGetApp.title.ios": "Get it on<br/>APP STORE",
+
+  "components.buttonGetApp.title.androidLink": "Download Android<br/>version 2.0.2",
+  "components.buttonGetApp.title.iosLink": "iOS version is<br/>coming soon",
+
   "cookieConsent.text": "According to our {policy}, this website uses 🍪cookies to improve functionality and performance. Some cookies are essential for the operation of the website, you can turn them off only via browser settings. Other cookies can be disabled by this tool.",
   "cookieConsent.disable": "DISABLE",
   "cookieConsent.allow": "ALLOW ALL",
