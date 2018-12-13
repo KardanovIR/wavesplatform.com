@@ -14,7 +14,7 @@ import {withLocaleCookie} from "src/public/hoc/withLocaleCookie";
 const MainScreen = ({ classes, onAndroidClientClick, onIosClientClick, getLocale }) => {
 
   const locale = getLocale();
-  const fromFile = true || locale === 'zh';
+  const fromFile = locale === 'zh';
 
   return <Row className={classes.root} alignItems="center">
     <Col xs={12} sm={8} md={6} data-anchor="mobileapp">
