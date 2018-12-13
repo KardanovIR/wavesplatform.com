@@ -59,8 +59,11 @@ const styles = theme => ({
     transform: 'none',
     '&:hover': {
       transform: 'none',
-    }
-
+    },
+    '&:disabled': {
+      opacity: 1,
+      pointerEvents: 'none',
+    },
   },
   light: {
     backgroundColor: theme.palette.blue[500],

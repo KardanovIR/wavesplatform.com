@@ -32,7 +32,7 @@ const APP_STORE_HREF = {
 };
 const GOOGLE_PLAY_HREF = {
     store: 'https://play.google.com/store/apps/details?id=com.wavesplatform.wallet',
-    link: fileUrl('WavesWalletApp2.0.2.app'),
+    link: fileUrl('WavesWallet_release_2.0.2.apk'),
 };
 
 
