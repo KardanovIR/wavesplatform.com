@@ -44,18 +44,19 @@ const AppIcon = ({ type, fromFile}) => (
     )
 );
 
-const getButtonProps = ({ fromFile, type }) => ({
-  href: (type === 'google-play' ? GOOGLE_PLAY_HREF : APP_STORE_HREF)[fromFile ? 'link' : 'store'],
-  target: "_blank",
-  grey: type === 'app-store' && fromFile,
-  disabled: type === 'app-store' && fromFile,
-  icon: <AppIcon fromFile={fromFile} type={type} />,
+const getButtonProps = ({fromFile, type, onClick}) => ({
+    href: (type === 'google-play' ? GOOGLE_PLAY_HREF : APP_STORE_HREF)[fromFile ? 'link' : 'store'],
+    target: "_blank",
+    grey: type === 'app-store' && fromFile,
+    disabled: type === 'app-store' && fromFile,
+    icon: <AppIcon fromFile={fromFile} type={type}/>,
+    onClick: () => onClick(fromFile ? 'mobile_client_download' : 'mobile_client')
 });
 
-const ButtonGetApp = ({ classes, className, type, fromFile, ...rest }) => (
+const ButtonGetApp = ({ classes, className, type, fromFile, onClick, ...rest }) => (
   <Button
       className={cn(classes.button, className)}
-      {...{...rest, ...getButtonProps({ type, fromFile })}}
+      {...{...rest, ...getButtonProps({ type, fromFile, onClick })}}
   >
     <span className={classes.text}>
       {type === 'google-play' ? (
