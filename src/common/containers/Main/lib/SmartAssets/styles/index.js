@@ -18,6 +18,20 @@ export default theme => ({
     display: 'inline-block',
   },
 
+  dots: {
+    paddingLeft: '10px',
+    marginRight: '10px',
+    fontSize: '36px',
+    verticalAlign: 'top',
+    [theme.mixins.atMedia('md')]: {
+      paddingLeft: '14px',
+      marginRight: '14px',
+      fontSize: '70px',
+    },
+  },
+
+
+
   desktopOnly: {
     display: 'none',
     [theme.mixins.atMedia('md')]: {

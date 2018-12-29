@@ -38,6 +38,7 @@ import { hot } from 'react-hot-loader';
 const PageLayout = ({ classes }) => (
   <Layout activeLink="home">
     <BackgroundMainScreen
+      minHeight={700}
       type="image"
       src={require('./img/bg.jpg')}
       srcSet={`${require('./img/bg.jpg')} 1x, ${require('./img/bg@2x.jpg')} 2x`}
@@ -52,7 +53,6 @@ const PageLayout = ({ classes }) => (
     </BackgroundMainScreen>
 
     <SmartAssets/>
-
     <Wrapper>
       <Section top={3} bottom={2}>
         <ContentContainer>

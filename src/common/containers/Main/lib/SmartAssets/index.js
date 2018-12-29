@@ -18,17 +18,17 @@ const TIME_REF = {
     SECOND: 1000
 };
 
-const Digit = ({time, text, className, isLast}) => {
-    return <div className={className} style={{minHeight: '90px'}}>
+const Digit = injectSheet(styles)(({time, text, isLast, classes}) => {
+    return <div className={classes.digest} style={{minHeight: '90px'}}>
         <div style={{ display: 'inline-block' }}>
             <div>
-                <Typography type="display5" style={{ lineHeight: '0.6' }}>
+                <Typography type="display6" style={{ lineHeight: '0.6' }}>
                     {time}
-                    {isLast ? null : <span style={{paddingLeft: '10px', marginRight: '10px'}}>:</span>}
+                    {isLast ? null : <span className={classes.dots}>:</span>}
                 </Typography>
             </div>
             <div>
-                <Typography type="body" style={{fontSize: '12px'}}>
+                <Typography type="body">
                     <FormattedPlural
                         value={time}
                         one={
@@ -51,7 +51,7 @@ const Digit = ({time, text, className, isLast}) => {
             </div>
         </div>
     </div>
-}
+});
 
 class SmartAssetsView extends React.PureComponent {
 
@@ -133,8 +133,8 @@ class SmartAssetsView extends React.PureComponent {
                                                   defaultMessage="Smart Assets will be activated in"
                                 />
                             </Typography>
-                            <Margin bottom={2}/>
-                            <div>
+                            <Margin bottom={3}/>
+                            <div style={{minWidth: '350px'}}>
                                 <Digit className={classes.digest} time={days} text='days'/>
                                 <Digit className={classes.digest} time={hours} text='hours'/>
                                 <Digit className={classes.digest} time={minutes} text='minutes'/>
