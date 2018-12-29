@@ -66,7 +66,7 @@ class SmartAssetsView extends React.PureComponent {
         const data = await fetch('https://nodes.wavesplatform.com/utils/time');
         const { system } = await data.json();
         const myTime = Date.now();
-        this.setState({ timeDiff: myTime - ( system + 3 * TIME_REF.HOUR) });
+        this.setState({ timeDiff: myTime - ( system ) });
     }
 
     updateTime() {
@@ -79,7 +79,7 @@ class SmartAssetsView extends React.PureComponent {
             return null;
         }
 
-        const time = refTime - Date.now() - this.state.timeDiff + 60 * 60 * 1000;
+        const time = refTime - Date.now() - this.state.timeDiff;
 
         if (time < 0) {
             this.setState({ showCounter: false });
