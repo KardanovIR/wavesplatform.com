@@ -24,6 +24,8 @@ import WavesNG from './lib/WavesNG';
 import IssuingTokens from './lib/IssuingTokens';
 import JoinUs from './lib/JoinUs';
 import Audience from './lib/Audience';
+import SmartAssets from './lib/SmartAssets';
+
 
 // styles
 import injectSheet from 'react-jss';
@@ -48,6 +50,8 @@ const PageLayout = ({ classes }) => (
         <MainScreen />
       </ContentContainer>
     </BackgroundMainScreen>
+
+    <SmartAssets/>
 
     <Wrapper>
       <Section top={3} bottom={2}>
