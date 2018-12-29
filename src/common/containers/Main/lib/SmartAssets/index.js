@@ -21,13 +21,13 @@ const TIME_REF = {
 const Digit = injectSheet(styles)(({time, text, isLast, classes}) => {
     return <div className={classes.digest} style={{minHeight: '90px'}}>
         <div style={{ display: 'inline-block' }}>
-            <div>
+            <div style={{ display: 'inline-block' }}>
                 <Typography type="display6" style={{ lineHeight: '0.6' }}>
                     {time}
                     {isLast ? null : <span className={classes.dots}>:</span>}
                 </Typography>
             </div>
-            <div>
+            <div >
                 <Typography type="body">
                     <FormattedPlural
                         value={time}
