@@ -73,7 +73,7 @@ class SmartAssetsView extends React.PureComponent {
         const refTime = 1546829001000;
 
         clearTimeout(this.timer);
-        this.timer = setTimeout(() => this.updateTime(), 400);
+        this.timer = setTimeout(() => this.updateTime(), 200);
 
         if (!this.state.timeDiff == null) {
             return null;
