@@ -19,10 +19,10 @@ const TIME_REF = {
 };
 
 const Digit = ({time, text, className, isLast}) => {
-    return <div className={className}>
+    return <div className={className} style={{minHeight: '90px'}}>
         <div style={{ display: 'inline-block' }}>
             <div>
-                <Typography type="display5" style={{ lineHeight: '0.6', fontSize: '80px' }}>
+                <Typography type="display5" style={{ lineHeight: '0.6' }}>
                     {time}
                     {isLast ? null : <span style={{paddingLeft: '10px', marginRight: '10px'}}>:</span>}
                 </Typography>
@@ -55,7 +55,7 @@ const Digit = ({time, text, className, isLast}) => {
 
 class SmartAssetsView extends React.PureComponent {
 
-    state = { showCounter: true,  timeDiff: 0, days: 0, hours: 0, minutes: 0, seconds: 0, initData: false };
+    state = { showCounter: true,  timeDiff: null, days: 0, hours: 0, minutes: 0, seconds: 0, initData: false };
 
     constructor(props) {
         super(props);
@@ -73,7 +73,7 @@ class SmartAssetsView extends React.PureComponent {
         const refTime = 1546829001000;
 
         clearTimeout(this.timer);
-        this.timer = setTimeout(() => this.updateTime(), 1000);
+        this.timer = setTimeout(() => this.updateTime(), 400);
 
         if (!this.state.initData) {
             return null;
@@ -113,19 +113,25 @@ class SmartAssetsView extends React.PureComponent {
                     <Row>
                         {showCounter ? null : <Col xs={11} sm={8}>
                             <Typography type="display3" className={classes.smartAssetTitle}>
-                                <FormattedMessage id="home.smartAssets.title.text"/>
+                                <FormattedMessage id="home.smartAssets.title.text"
+                                                  defaultMessage="Smart Assets feature is activated on Waves MainNet!"
+                                />
                             </Typography>
                             <Margin bottom={3}/>
                             <Button target="_blank"
                                     href='https://blog.wavesplatform.com/smart-assets-and-smart-account-trading-features-released-on-mainnet-c295ee58bb13'
                                     secondary>
-                                <FormattedMessage id="home.smartAssets.button.learn"/>
+                                <FormattedMessage id="home.smartAssets.button.learn"
+                                                  defaultMessage="Learn more"
+                                />
                             </Button>
                             <Margin bottom={4}/>
                         </Col>}
                         {!showCounter && initData ? null : <Col xs={12} sm={12}>
                             <Typography type="display2" className={classes.smartAssetNotActiveTitle}>
-                                <FormattedMessage id='home.smartAssets.activated.title'/>
+                                <FormattedMessage id='home.smartAssets.activated.title'
+                                                  defaultMessage="Smart Assets will be activated in"
+                                />
                             </Typography>
                             <Margin bottom={2}/>
                             <div>
