@@ -55,7 +55,7 @@ const Digit = ({time, text, className, isLast}) => {
 
 class SmartAssetsView extends React.PureComponent {
 
-    state = { showCounter: true,  timeDiff: 0, days: 0, hours: 0, minutes: 0, seconds: 0};
+    state = { showCounter: true,  timeDiff: 0, days: 0, hours: 0, minutes: 0, seconds: 0, initData: false };
 
     constructor(props) {
         super(props);
@@ -105,7 +105,7 @@ class SmartAssetsView extends React.PureComponent {
 
     render() {
         const { classes } = this.props;
-        const { showCounter, days, hours, minutes, seconds } = this.state;
+        const { showCounter, days, hours, minutes, seconds, initData } = this.state;
 
         return (
             <div className={classes.bgAssets}>
@@ -123,7 +123,7 @@ class SmartAssetsView extends React.PureComponent {
                             </Button>
                             <Margin bottom={4}/>
                         </Col>}
-                        {!showCounter ? null : <Col xs={12} sm={12}>
+                        {!showCounter && initData ? null : <Col xs={12} sm={12}>
                             <Typography type="display2" className={classes.smartAssetNotActiveTitle}>
                                 <FormattedMessage id='home.smartAssets.activated.title'/>
                             </Typography>
