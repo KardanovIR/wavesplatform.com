@@ -192,8 +192,8 @@
   "home.smartAssets.minutes.few": "minutes",
   "home.smartAssets.minutes.other": "minutes",
   "home.smartAssets.seconds.one": "second",
-  "home.smartAssets.seconds.few.": "seconds",
-  "home.smartAssets.seconds.other.": "seconds",
+  "home.smartAssets.seconds.few": "seconds",
+  "home.smartAssets.seconds.other": "seconds",
 
   "howToWallet.step1": "First, create an account.",
   "howToWallet.step2": "Fill your wallet with Bitcoin, Ethereum, Litecoin, Zcash, US dollars or Euros.",
