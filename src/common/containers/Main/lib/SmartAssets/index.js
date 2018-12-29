@@ -79,6 +79,11 @@ class SmartAssetsView extends React.PureComponent {
 
         const time = this.state.timeDiff - (Date.now() - this.state.myTime);
 
+        if (!time) {
+            return null;
+        }
+
+
         if (time < 0) {
             this.setState({ showCounter: false });
             clearTimeout(this.timer);
@@ -86,7 +91,7 @@ class SmartAssetsView extends React.PureComponent {
         }
 
         const days = parseInt(time / TIME_REF.DAY);
-        const hours = parseInt((time - days * TIME_REF.DAY) / TIME_REF.HOUR) || '';
+        const hours = parseInt((time - days * TIME_REF.DAY) / TIME_REF.HOUR);
         const minutes = parseInt((time - days * TIME_REF.DAY - hours * TIME_REF.HOUR) / TIME_REF.MINUTE) || '';
         const seconds = parseInt((time - days * TIME_REF.DAY - hours * TIME_REF.HOUR - minutes * TIME_REF.MINUTE ) / TIME_REF.SECOND) || '';
 
