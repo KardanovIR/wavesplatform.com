@@ -130,7 +130,7 @@ class SmartAssetsView extends React.PureComponent {
                             </Button>
                             <Margin bottom={4}/>
                         </Col>}
-                        {!showCounter && initData ? null : <Col xs={12} sm={12}>
+                        {!showCounter || !initData ? null : <Col xs={12} sm={12}>
                             <Typography type="display2" className={classes.smartAssetNotActiveTitle}>
                                 <FormattedMessage id='home.smartAssets.activated.title'
                                                   defaultMessage="Smart Assets will be activated in"
