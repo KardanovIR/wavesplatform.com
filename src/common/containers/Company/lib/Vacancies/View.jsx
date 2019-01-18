@@ -7,7 +7,7 @@ import { Row, Col } from 'src/common/components/Grid';
 import { FormattedMessage } from 'react-intl';
 import injectSheet from 'react-jss';
 import styles from './styles';
-import Button from "../Whitepaper/View";
+import Button from 'src/common/components/Button';
 
 const VacanciesContainer = ({ classes, onVacanciesClick }) => (
   <Row centered>
