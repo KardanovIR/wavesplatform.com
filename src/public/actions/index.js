@@ -37,6 +37,9 @@ export const COOKIES_CONSENT_ALLOW = 'CookieConsent.Allow.Click';
 export const COOKIES_CONSENT_DISABLE = 'CookieConsent.Disable.Click';
 export const COOKIES_CONSENT_RESET = 'CookieConsent.Reset.Click';
 
+//vacancies
+export const VACANCIES_CLICK = 'vacanciesClick';
+
 // export const GIVE_FEEDBACK_CLICK = 'GiveFeedbackClick';
 // export const GIVE_FEEDBACK_CLOSE = 'GiveFeedbackClose';
 // export const GIVE_FEEDBACK_SHOW = 'GiveFeedbackShow';
@@ -83,6 +86,9 @@ export const feedbackFormSubmit = createAC(FEEDBACK_FORM_SUBMIT);
 // telegram
 export const joinTelegramClick = createAC(TELEGRAM_POPUP_JOIN_CLICK);
 export const closeTelegramClick = createAC(TELEGRAM_POPUP_CLOSE);
+
+// vacancies
+export const vacanciesClick = createAC(VACANCIES_CLICK);
 
 // export const giveFeedbackShow = createAC(GIVE_FEEDBACK_SHOW);
 // export const giveFeedbackClick = createAC(GIVE_FEEDBACK_CLICK);
