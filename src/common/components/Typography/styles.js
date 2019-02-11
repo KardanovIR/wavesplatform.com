@@ -30,6 +30,10 @@ const styles = theme => ({
     extend: [theme.typography.body2, theme.spacing.body],
     fontWeight: ({ weight }) => weight || theme.typography.body2.fontWeight,
   },
+  display6: {
+    extend: [theme.typography.display6, theme.spacing.display6],
+    fontWeight: ({ weight }) => weight || theme.typography.display6.fontWeight,
+  },
   display5: {
     extend: [theme.typography.display5, theme.spacing.display5],
     fontWeight: ({ weight }) => weight || theme.typography.display5.fontWeight,

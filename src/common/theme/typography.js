@@ -24,6 +24,18 @@ const creatyTypography = (palette, breakpoints) => {
   };
 
   return {
+    display6: {
+        ...base,
+        ...display,
+        fontSize: 46,
+        lineHeight: 1.2,
+        fontWeight: 600,
+        margin: 0,
+
+        [breakpoints.up('md')]: {
+            fontSize: 110,
+        },
+    },
     display5: {
       ...base,
       ...display,

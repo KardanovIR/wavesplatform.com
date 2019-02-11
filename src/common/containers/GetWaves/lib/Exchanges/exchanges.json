@@ -76,7 +76,8 @@
   },
   {
     "logo":
-      "https://wavesplatform.com/files/images/exchange_logo/huobi.svg",
-    "url": "https://www.huobi.com/"
+      "https://wavesplatform.com/files/images/exchange_logo/huobi-logo.png",
+    "url": "https://www.hbg.com/",
+    "custom_class": "huobiLogo"
   }
 ]

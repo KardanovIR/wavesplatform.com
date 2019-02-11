@@ -43,6 +43,17 @@ const createSpacing = (
     ),
   },
 
+  display6: {
+    '& + $body': combineMobileDesktopStyles(
+      { marginTop: unit * 3 },
+      { marginTop: unit * 5 }
+    ),
+    '& + $body2': combineMobileDesktopStyles(
+      { marginTop: unit * 3 },
+      { marginTop: unit * 5 }
+    ),
+  },
+
   display5: {
     '& + $body': combineMobileDesktopStyles(
       { marginTop: unit * 3 },
