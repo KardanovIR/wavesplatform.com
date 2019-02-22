@@ -22,7 +22,7 @@
   "components.buttonGetApp.title.android":"在Google Play上下载",
   "components.buttonGetApp.title.ios":"在APP STORE上下载",
 
-  "components.buttonGetApp.title.androidLink":"下载Android版本2.1.1",
+  "components.buttonGetApp.title.androidLink":"下载Android版本2.2.1",
   "components.buttonGetApp.title.iosLink":"iOS版即将推出",
 
   "cta.brandingPackage": "品牌套餐",
@@ -130,7 +130,7 @@
   "home.issuingTokens.title": "发行自己的代币",
   "home.joinUs.quote": "关注最新的新闻和资讯，了解Waves平台上发生的所有大事件",
   "home.joinUs.text": "Waves汇集了区块链爱好者、来自许多不同行业的项目创始人、交易者和投资者。",
-  "home.joinUs.text2": "加入Waves官方社群",  
+  "home.joinUs.text2": "加入Waves官方社群",
   "home.main.text": "访问Waves平台的解决方案，以方便、安全地存储、交易、管理和发行您的数字资产。",
   "home.main.title": "开始<br>使用区块链",
   "home.numbers.dexVolume": "24小时DEX交易量",
