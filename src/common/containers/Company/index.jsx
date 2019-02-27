@@ -24,72 +24,74 @@ import Branding from './lib/Branding';
 import injectSheet from 'react-jss';
 import styles from './styles';
 
-import { FormattedMessage } from 'react-intl';
+import {FormattedMessage} from 'react-intl';
 
 // url
-import { fileUrl } from 'src/common/utils/url';
+import {fileUrl} from 'src/common/utils/url';
 
-const PageLayout = ({ classes }) => (
-  <Layout activeLink="company" darkFooter>
-    <MainScreenBackground
-      type="image"
-      src={require('./img/Artboard.jpg')}
-      videoSrc={fileUrl('video/blue_desktop.mp4')}
-      videoSrcMobile={fileUrl('video/blue_mobile.mp4')}
-      videoFirstFrame={require('./img/ffDesk.jpg')}
-      videoFirstFrameMobile={require('./img/ffMob.jpg')}
-    >
-      <MainScreen inverted title={<FormattedMessage id="company.title" />} />
-    </MainScreenBackground>
+const PageLayout = ({classes}) => (
+    <Layout activeLink="company" darkFooter>
+        <MainScreenBackground
+            type="image"
+            src={require('./img/Artboard.jpg')}
+            videoSrc={fileUrl('video/blue_desktop.mp4')}
+            videoSrcMobile={fileUrl('video/blue_mobile.mp4')}
+            videoFirstFrame={require('./img/ffDesk.jpg')}
+            videoFirstFrameMobile={require('./img/ffMob.jpg')}
+        >
+            <MainScreen inverted title={<FormattedMessage id="company.title"/>}/>
+        </MainScreenBackground>
 
-    {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
-    <Section top={2} bottom={2}>
-      <ContentContainer>
-        <AboutDescription />
-      </ContentContainer>
-    </Section>
-
-    <Section top={1} bottom={2}>
-      <ContentContainer>
-        <Team />
-      </ContentContainer>
-    </Section>
-
-    <Section top={1} bottom={2}>
-      <ContentContainer>
-        <Whitepaper />
-      </ContentContainer>
-    </Section>
-    {/* </Background> */}
-
-    <Section top={1} bottom={2}>
-      <ContentContainer>
-        <Media />
-      </ContentContainer>
-    </Section>
-
-    <Section top={3} bottom={2} className={classes.bgBranding}>
-      <ContentContainer>
-        <Branding />
-      </ContentContainer>
-    </Section>
-
-    <Background className={classes.bgLight} skewed={true}>
-      <Section size={4}>
-        <AnchorScroll anchor="careers">
-          <Vacancies />
-        </AnchorScroll>
-      </Section>
-    </Background>
-
-    <AnchorScroll anchor="contact">
-      <Background className={classes.bgDark} skewed={true}>
-        <Section size={4} className={classes.footerMarginCompensate}>
-          <FeedbackForm />
+        {/* <Background className={classes.bgWhitepaper} skewed={true}> */}
+        <Section top={2} bottom={2}>
+            <ContentContainer>
+                <AboutDescription/>
+            </ContentContainer>
         </Section>
-      </Background>
-    </AnchorScroll>
-  </Layout>
+
+        <Section top={1} bottom={2}>
+            <ContentContainer>
+                <Team/>
+            </ContentContainer>
+        </Section>
+
+        <Section top={1} bottom={2}>
+            <ContentContainer>
+                <Whitepaper/>
+            </ContentContainer>
+        </Section>
+        {/* </Background> */}
+
+        <Section top={1} bottom={2}>
+            <ContentContainer>
+                <Media/>
+            </ContentContainer>
+        </Section>
+
+        <Section top={3} bottom={2} className={classes.bgBranding}>
+            <ContentContainer>
+                <Branding/>
+            </ContentContainer>
+        </Section>
+
+        <Background className={classes.bgLight} skewed={true}>
+            <Section size={4}>
+                <AnchorScroll anchor="careers">
+                    <ContentContainer>
+                        <Vacancies/>
+                    </ContentContainer>
+                </AnchorScroll>
+            </Section>
+        </Background>
+
+        <AnchorScroll anchor="contact">
+            <Background className={classes.bgDark} skewed={true}>
+                <Section size={4} className={classes.footerMarginCompensate}>
+                    <FeedbackForm/>
+                </Section>
+            </Background>
+        </AnchorScroll>
+    </Layout>
 );
 
 const App = injectSheet(styles)(PageLayout);

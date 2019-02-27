@@ -28,6 +28,9 @@ const styles = theme => ({
     maxWidth: '80%',
     height: 'auto',
   },
+  huobiLogo: {
+      width: '143px'
+  },
   link: {
     display: 'block',
     opacity: 0.6,

@@ -21,7 +21,7 @@ const MultisigWallet = () => (
       text={
         <FormattedHTMLMessage
           id="smartContracts.features.1.text"
-          defaultMessage="Two-factor authentication<br/>Cannot be controlled by one person alone<br/>The necessary parties must provide their private keys simultaneously"
+          defaultMessage="Two-factor authentication<br/>Cannot be controlled by one person alone<br/>The specified parties must all provide their private keys"
         />
       }
       inverted
@@ -67,7 +67,7 @@ const TokenFreeze = () => (
       text={
         <FormattedMessage
           id="smartContracts.features.3.text"
-          defaultMessage="Preventing buyers from selling or transferring tokens out of their address for a certain amount of time"
+          defaultMessage="Preventing buyers from selling or transferring tokens for a certain period of time"
         />
       }
       inverted
@@ -91,7 +91,7 @@ const DecentralizedApps = () => (
       text={
         <FormattedMessage
           id="smartContracts.features.4.text"
-          defaultMessage="dApps based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a range of different conditions"
+          defaultMessage="dApps based on Turing-complete smart contracts will be able to undertake complex processes on the blockchain according to a wide range of different conditions"
         />
       }
       inverted

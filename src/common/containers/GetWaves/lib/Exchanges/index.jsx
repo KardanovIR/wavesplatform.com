@@ -10,6 +10,7 @@ import { FormattedMessage } from 'react-intl';
 
 import injectSheet from 'react-jss';
 import styles from './styles';
+import cl from 'classnames';
 
 import exchanges from './exchanges.json';
 
@@ -41,7 +42,7 @@ const Exchanges = ({ classes }) => (
             <div className={classes.media}>
               <img
                 src={contact.logo}
-                className={classes.logo}
+                className={cl(classes.logo, classes[contact.custom_class])}
                 alt="Exchange contact"
               />
             </div>

@@ -40,6 +40,7 @@ const styles = theme => ({
       pointerEvents: 'none',
     },
   },
+
   coloredHover: {
     '&:hover': {
       transform: 'none',
@@ -49,6 +50,20 @@ const styles = theme => ({
     backgroundColor: theme.palette.gray[1000],
     border: `1px solid ${theme.palette.gray[1000]}`,
     color: '#fff',
+  },
+  grey: {
+    backgroundColor: theme.palette.gray[200],
+    border: `1px solid ${theme.palette.gray[200]}`,
+    color: theme.palette.gray[700],
+    pointerEvents: 'none',
+    transform: 'none',
+    '&:hover': {
+      transform: 'none',
+    },
+    '&:disabled': {
+      opacity: 1,
+      pointerEvents: 'none',
+    },
   },
   light: {
     backgroundColor: theme.palette.blue[500],

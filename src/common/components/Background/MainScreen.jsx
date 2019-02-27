@@ -15,6 +15,7 @@ const styles = theme => ({
     position: 'relative',
     height: '100vh',
     width: '100%',
+    minHeight: '700px',
   },
   background: {
     position: 'absolute',
@@ -59,6 +60,7 @@ const styles = theme => ({
 });
 
 const MainScreenBackground = ({
+  minHeight,
   classes,
   children,
   className,
@@ -71,7 +73,7 @@ const MainScreenBackground = ({
   videoFirstFrameMobile,
 }) => (
   <div className={classes.wrapper}>
-    <Wrapper>
+    <Wrapper style={{minHeight}}>
       <div
         className={cn(
           classes.background,

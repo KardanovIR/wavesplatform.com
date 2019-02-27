@@ -40,7 +40,7 @@ const PageLayout = ({ onDocumentationClick, classes }) => (
               <Typography type="body2" weight={400} inverted>
                 <FormattedMessage
                   id="smartContracts.block1.text"
-                  defaultMessage="Waves platform is building a blockchain based solutions for real-world business. We are providing smart and flexible tools that will fit for most of the business cases and able to work with real-world data."
+                  defaultMessage="Waves platform is building blockchain-based solutions for enterprise applications. We provide smart and flexible tools capable of interacting with real-world data, designed to meet most business use cases."
                 />
               </Typography>
             </Col>
